@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this dataset, figures, or code, please cite it as below."
+authors:
+  - family-names: "Wang"
+    given-names: "Nianfei"
+    orcid: "https://orcid.org/0000-0002-1825-0097"
+title: "RAS-Directed Therapy in Solid Tumors: Chemistry, Biology, and Clinical Evidence (Open Reproducibility Package)"
+version: 1.0.0
+date-released: 2026-11-16
+url: "https://github.com/wangnianfei/RAS-Targeted-Therapy-Reproducibility"
+keywords:
+  - "RAS targeted therapy"
+  - "KRAS inhibitors"
+  - "Randomized controlled trials"
+  - "Solid tumors"
+  - "Drug resistance mechanisms"

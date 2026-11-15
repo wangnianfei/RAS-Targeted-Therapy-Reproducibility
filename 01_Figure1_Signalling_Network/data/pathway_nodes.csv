@@ -1,0 +1,14 @@
+Node,Category,Cellular_Location,Components,Druggable_Status
+RTKs,Receptor,Plasma membrane,"EGFR, HER2, MET, ALK, RET",Approved inhibitors
+GRB2-SOS1,GEF Complex,Cytosol / Membrane,"GRB2 adaptor, SOS1 GEF catalytic domain",SOS1 clinical inhibitors (BI 1701963)
+SHP2 (PTPN11),Phosphatase / Scaffold,Cytosol / Membrane,SHP2 allosteric phosphatase,"Allosteric inhibitors (TNO155, RMC-4630)"
+NF1 / RASA1,GAP,Plasma membrane,"Neurofibromin 1, p120GAP",Tumor suppressor loss-of-function
+KRAS-GDP (OFF),G-protein (Inactive),Inner plasma membrane,Switch I & II closed/compact,Direct OFF inhibitors (G12C/G12D/pan-KRAS)
+KRAS-GTP (ON),G-protein (Active),Inner plasma membrane,Effector-binding Switch I/II open conformation,"Tri-complex ON inhibitors (RMC-6236, RMC-6291)"
+RAF (BRAF/CRAF),Effector Cascade (MAPK),Membrane recruitment -> Cytosol,Serine/threonine kinase dimer,Pan-RAF & paradox-breaker inhibitors
+MEK1/2,Effector Cascade (MAPK),Cytoplasm,Dual-specificity tyrosine/threonine kinase,Allosteric MEK inhibitors (Trametinib)
+ERK1/2,Effector Cascade (MAPK),Cytoplasm -> Nucleus,MAP kinase terminal kinase,"ERK inhibitors, upstream negative feedback"
+PI3K (p110/p85),Effector Cascade (PI3K),Inner plasma membrane,Lipid kinase (PIP2 -> PIP3),PI3K/AKT/mTOR clinical inhibitors
+RALGDS-RAL,Effector Cascade (Ral),Membrane / Vesicles,RalA/RalB small GTPases,Vesicle trafficking & survival
+PLCepsilon,Effector Cascade (PLC),Membrane / Golgi,Phospholipase C epsilon,Second messenger signalling (IP3/DAG)
+TIAM1,Effector Cascade (Rac GEF),Membrane / Cytoskeleton,T-lymphoma invasion and metastasis 1,Actin cytoskeleton remodelling
