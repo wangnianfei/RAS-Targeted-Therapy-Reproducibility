@@ -451,8 +451,7 @@ arrow(egf_node['bottom'], (RX['rtk'], 7.8), col=ACT_COL, lw=0.50)
 
 # Add gap in lipid bilayer for high-contrast Plasma membrane badge
 gaps.append((69.0, 87.0))
-# Add gap in lipid bilayer for GAP node
-gaps.append((109.5, 124.5))
+# GAP (NF1) is a cytosolic protein recruited to juxtamembrane region, so lipid bilayer is continuous here!
 
 # Lipid bilayer rendering
 STEP = 1.36
@@ -555,20 +554,19 @@ arrow(node_sos1['right'], node_gdp['left'], col=ACT_COL, lw=0.58)
 D.text((node_sos1['right'][0] + node_gdp['left'][0]) / 2, 32.5, 'GEF exchange',
        anchor='middle', color='#1D4ED8', bold=True, size=4.8*PT, halo=True)
 
-# GAP (NF1, RASA1) - Dedicated Pill Element
-node_gap = pill(117.0, 19.5, 14.5, 4.8, 'GAP (NF1)', 'gap', border_col='#64748B')
+# GAP (NF1, RASA1) - Dedicated Cytoplasmic Pill Element (Below plasma membrane in cytosol)
+node_gap = pill(120.0, 25.6, 14.5, 4.6, 'GAP (NF1)', 'gap', border_col='#64748B')
 
-# Upper Arc: GTP -> GDP (Hydrolysis, Grey pathway)
+# Upper Arc: GTP -> GDP (Hydrolysis, Grey pathway, no redundant 10^5 text per user request)
 arrow((GTP_X - 6.0, SW_Y - 4.5), (GDP_X + 6.0, SW_Y - 4.5),
-      (GTP_X - 10.0, 25.5), (GDP_X + 10.0, 25.5), col=INH_COL, lw=0.60)
-arrow(node_gap['bottom'], (117.0, 25.5), col=ACT_COL, lw=0.50)
-D.text(125.5, 23.5, 'hydrolysis (10⁵×)', anchor='start', color=GREY, bold=True, size=4.5*PT)
+      (GTP_X - 10.0, 29.2), (GDP_X + 10.0, 29.2), col=INH_COL, lw=0.60)
+arrow(node_gap['bottom'], (120.0, 29.2), col=ACT_COL, lw=0.50)
 
 # Oncogenic Mutation Blockade Badge Element
-D.add('body', '<rect x="111.0" y="29.5" width="18.0" height="4.0" rx="1.4" '
+D.add('body', '<rect x="111.0" y="31.2" width="18.0" height="3.8" rx="1.4" '
              'fill="#FFF1F2" stroke="#E11D48" stroke-width="0.45"/>')
-D.text(120.0, 31.5, 'G12/G13/Q61 lock', anchor='middle', color='#991B1B', bold=True, size=4.8*PT)
-arrow((120.0, 29.5), (120.0, 26.2), end='tee', col=INH_COL, lw=0.55)
+D.text(120.0, 33.0, 'G12/G13/Q61 lock', anchor='middle', color='#991B1B', bold=True, size=4.8*PT)
+arrow((120.0, 31.2), (120.0, 29.6), end='tee', col=INH_COL, lw=0.55)
 
 # Lower Arc: GDP -> GTP (GEF Exchange, Blue activation cycle)
 arrow((GDP_X + 6.0, SW_Y + 4.5), (GTP_X - 6.0, SW_Y + 4.5),
@@ -585,16 +583,14 @@ marker(88.5, 56.2, 'clinical', s=0.85)
 D.text(91.0, 56.2 - FS_SM * 0.35, 'Class II: MRTX1133 (G12D)', color=INK, bold=True, size=FS_SM)
 arrow((node_gdp['cx'], 49.0), node_gdp['bottom'], end='tee', col=INH_COL, lw=0.55)
 
-# Class III & IV docked to RAS-GTP (Right side of RAS-GTP, clean 3-line layout without overlap)
-D.add('body', '<rect x="146.5" y="30.0" width="32.5" height="13.2" rx="1.8" fill="#FFFFFF" '
+# Class III & IV docked to RAS-GTP (Right side of RAS-GTP, clean 2-line layout without CYPA note per user request)
+D.add('body', '<rect x="146.5" y="30.5" width="32.5" height="10.0" rx="1.8" fill="#FFFFFF" '
              'fill-opacity="0.96" stroke="#E11D48" stroke-width="0.50" filter="url(#subtle-shadow)"/>')
-marker(149.0, 32.8, 'clinical', s=0.85)
-D.text(151.5, 32.8 - FS_SM * 0.35, 'Class III: daraxonrasib', color=INK, bold=True, size=5.5*PT)
-# Non-overlapping chaperone note
-D.text(151.5, 36.2, '(+ CYPA-dependent)', color='#7C3AED', size=4.2*PT, bold=True)
+marker(149.0, 33.2, 'clinical', s=0.85)
+D.text(151.5, 33.2 - FS_SM * 0.35, 'Class III: daraxonrasib', color=INK, bold=True, size=5.5*PT)
 
-marker(149.0, 40.2, 'clinical', s=0.85)
-D.text(151.5, 40.2 - FS_SM * 0.35, 'Class IV: ASP3082 (PROTAC)', color=INK, bold=True, size=5.5*PT)
+marker(149.0, 37.8, 'clinical', s=0.85)
+D.text(151.5, 37.8 - FS_SM * 0.35, 'Class IV: ASP3082 (PROTAC)', color=INK, bold=True, size=5.5*PT)
 arrow((146.5, node_gtp['cy']), node_gtp['right'], end='tee', col=INH_COL, lw=0.55)
 
 # ============================================================ EFFECTOR BUS ====
