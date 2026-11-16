@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Figure 1 - The RAS Signalling Network, Feedback Circuits, and Therapeutic Intervention Classes.
 
-Publication-grade medical illustration adhering to ESMO Open / Nature Reviews guidelines.
+Publication-grade medical illustration adhering to ESMO Open / Science / Nature Reviews guidelines.
 Key architectural principles:
   1. Ultra-minimalist text: Only essential protein symbols, concise drug badges, and biological outcomes.
      All extended mechanistic narratives and trial details are relocated to the figure legend.
@@ -14,7 +14,9 @@ Key architectural principles:
      - PI3K inhibitor (alpelisib, inavolisib) specifically targets PI3K (p110)
      - mTOR inhibitor (everolimus, sirolimus) specifically targets mTORC1
      - SOS1 directly catalyzes GDP/GTP nucleotide exchange on KRAS•GDP
-  6. Harmonious spatial balance: Even column distribution across 180 mm canvas without blank voids or congestion.
+  6. Density-driven layout (先下后上): Downstream effectors given expansive breathing room first,
+     and plasma membrane receptors dispersed across canvas according to downstream pathway density.
+  7. Science / Nature flagship palette: Refined mineral and jewel tones with crisp contrast.
 """
 
 import math
@@ -36,8 +38,6 @@ SYNC_DIRS = [
     "/Users/wangnianfei/Desktop/ESMO/03_数据与图表/图件",
     "/Users/wangnianfei/Desktop/ESMO/05_开源复现仓库/New_Color_Theme_Preview",
 ]
-
-# Physical dimensions (ESMO Open double-column width = 180 mm)
 W, H = 180.0, 172.0
 PT = 25.4 / 72
 FS = 7.0 * PT                             # Standard font size ~7 pt
@@ -58,13 +58,13 @@ ACT_COL = '#2563EB'      # Royal Blue for activation cascades and forward arrows
 INH_COL = '#64748B'      # Neutral Slate Grey for inhibitory T-bars and negative feedback
 MUT_COL = '#E11D48'      # Crimson accent for oncogenic mutation blockade
 
-# Functional semantic color palette (Nature Reviews Aesthetic)
+# Functional semantic color palette (Science / Nature Upgraded Palette)
 COL = {
     # Receptors (Distinct pastel identities with crisp darker borders)
     'rec_rtk': '#E0F2FE',    # EGFR / RTK: Soft sky cyan
-    'rec_int': '#FEF3C7',    # Integrin: Soft warm sand / amber
-    'rec_gpcr': '#EDE9FE',   # GPCR: Soft lavender periwinkle
-    'rec_imm': '#FFE4E6',    # Cytokine / Immune R: Soft rose coral
+    'rec_int': '#FEF3C7',    # Integrin: Soft warm champagne sand
+    'rec_gpcr': '#EDE9FE',   # GPCR: Soft heather amethyst
+    'rec_imm': '#FFE4E6',    # Cytokine / Immune R: Soft antique rose coral
     'rec': '#E0F2FE',
     
     # Upstream Adaptors (Light, luminous, readable)
@@ -76,13 +76,13 @@ COL = {
     'on': '#FFF1F2',         # KRAS-GTP (active): Soft coral rose
     'gap': '#F8FAFC',        # GAPs (NF1, RASA1): Crisp light neutral
     
-    # Effector Cascades
-    'mapk': '#2563EB',       # Column 1 MAPK (RAF, MEK, ERK): Kinase royal blue
-    'rassf': '#4338CA',      # Column 2 RASSF1A & MST1/2: Pro-apoptotic royal indigo
-    'pi3k': '#0F766E',       # Column 3 PI3K-AKT-mTOR: Deep emerald teal
+    # Effector Cascades (Rich Jewel Spectrum with Crisp White Bold Text)
+    'mapk': '#2563EB',       # Column 1 MAPK (RAF, MEK, ERK): Kinase royal cobalt blue
+    'rassf': '#4F46E5',      # Column 2 RASSF1A & MST1/2: Apoptotic royal indigo
+    'pi3k': '#0D9488',       # Column 3 PI3K-AKT-mTOR: Deep oceanic emerald teal
     'ral': '#0284C7',        # Column 4 RAL cascade: Sky azure blue
-    'other': '#D97706',      # Column 5 Cytoskeleton (RAC1, F-actin): Warm amber ochre
-    'lig': '#EA580C',        # Ligands: Warm burnt orange
+    'other': '#D97706',      # Column 5 Cytoskeleton (RAC1, F-actin): Warm golden amber
+    'lig': '#EA580C',        # Ligands: Warm burnt terracotta
     'red': '#E11D48',        # Oncogenic accents
 }
 
@@ -98,7 +98,7 @@ TC_MAP = {
     'gap': '#0F172A',        # Deep navy on light neutral
     'rec_rtk': '#0369A1',
     'rec_int': '#92400E',
-    'rec_gpcr': '#6D28D9',
+    'rec_gpcr': '#5B21B6',
     'rec_imm': '#9F1239',
     'rec': '#0F172A',
     'lig': WHITE,
@@ -280,12 +280,7 @@ def head(p, q, col, size=1.25, layer='link'):
 
 def arrow(p0, p1, c1=None, c2=None, col=None, lw=0.48, end='head', dash=None,
           layer='link', hs=1.25):
-    """Draw connecting lines between elements.
-    When col is None: defaults to ACT_COL (Blue) for forward activation,
-    and INH_COL (Grey) when end=='tee' (inhibitory T-bar).
-    When end=='tee', crossbar is offset by 0.75 mm before the destination boundary
-    so it cleanly avoids overlapping with the destination element's border stroke.
-    """
+    """Draw connecting lines between elements."""
     if col is None:
         col = INH_COL if end == 'tee' else ACT_COL
     c1 = c1 or p0
@@ -296,7 +291,6 @@ def arrow(p0, p1, c1=None, c2=None, col=None, lw=0.48, end='head', dash=None,
     if end == 'head':
         q = (p1[0] - hs * 0.7 * math.cos(ang), p1[1] - hs * 0.7 * math.sin(ang))
     elif end == 'tee':
-        # 0.75 mm crisp buffer outside the element boundary
         gap = 0.75
         q = (p1[0] - gap * math.cos(ang), p1[1] - gap * math.sin(ang))
     da = ' stroke-dasharray="%s"' % dash if dash else ''
@@ -315,30 +309,24 @@ def arrow(p0, p1, c1=None, c2=None, col=None, lw=0.48, end='head', dash=None,
 
 def marker(x, y, status, s=1.0):
     if status == 'approved':
-        # Green solid circle
         D.add('body', '<circle cx="%.2f" cy="%.2f" r="%.2f" fill="#16A34A" stroke="#15803D" stroke-width="0.30"/>'
               % (x, y, 1.10 * s))
     elif status == 'clinical':
-        # Blue solid square
         D.add('body', '<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" rx="0.30" fill="#2563EB" stroke="#1D4ED8" stroke-width="0.30"/>'
               % (x - 1.0 * s, y - 1.0 * s, 2.0 * s, 2.0 * s))
     else:
-        # Slate solid diamond
         D.add('body', '<polygon points="%.2f,%.2f %.2f,%.2f %.2f,%.2f %.2f,%.2f" fill="#64748B" stroke="#475569" stroke-width="0.30"/>'
               % (x, y - 1.20 * s, x + 1.20 * s, y, x, y + 1.20 * s, x - 1.20 * s, y))
 
 def drug_box(x, y, w, h, title, subtitle=None, status='approved', border_col=BORDER):
-    """Draw a dedicated, self-contained container card for therapeutic interventions."""
+    """Draw a dedicated container card for therapeutic interventions."""
     D.add('body', '<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" rx="1.6" '
                  'fill="#FFFFFF" fill-opacity="0.96" stroke="%s" stroke-width="0.50" filter="url(#subtle-shadow)"/>'
           % (x, y, w, h, border_col))
-    # Marker dot
     my = y + 3.8 if subtitle else y + h / 2.0
     marker(x + 2.5, my, status, s=0.85)
-    # Title
     D.text(x + 4.8, y + 2.4 if subtitle else y + h / 2.0 - FS * 0.35, title,
            bold=True, size=FS_SM, color=INK)
-    # Subtitle
     if subtitle:
         D.text(x + 4.8, y + 6.0, subtitle, color=INK_MUTED, size=4.0*PT)
     return {
@@ -350,7 +338,7 @@ def drug_box(x, y, w, h, title, subtitle=None, status='approved', border_col=BOR
     }
 
 def outcome_box(x, y, w, h, title, subtitle, bg_col, border_col, title_col):
-    """Draw a dedicated, distinct container card for cellular hallmarks/endpoints."""
+    """Draw a dedicated container card for cellular hallmarks/endpoints."""
     D.add('body', '<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" rx="1.8" '
                  'fill="%s" stroke="%s" stroke-width="0.60" filter="url(#subtle-shadow)"/>'
           % (x, y, w, h, bg_col, border_col))
@@ -375,8 +363,9 @@ D.add('bg', '<rect x="0" y="%.2f" width="180" height="%.2f" fill="url(#cyto)"/>'
       % (M, BOT_A - M))
 D.add('bg', '</g>')
 
-# Receptor positions along x-axis (Well-distributed to balance canvas, Point 1)
-RX = {'rtk': 40.0, 'int': 62.0, 'gpcr': 90.0, 'imm': 127.0}
+# Receptor positions along x-axis (Dispersed and spaced according to downstream density)
+# EGFR at 34.0, Integrin at 56.0, GPCR at 92.0, Immune R at 134.0
+RX = {'rtk': 35.0, 'int': 56.0, 'gpcr': 92.0, 'imm': 130.0}
 gaps = []
 
 def helix(x, y0, y1, w=1.2, col=None, border_col=None, layer='body'):
@@ -386,7 +375,7 @@ def helix(x, y0, y1, w=1.2, col=None, border_col=None, layer='body'):
                  'fill="%s" stroke="%s" stroke-width="0.30"/>'
            % (x - w / 2, y0, w, y1 - y0, w / 2, D.gradient(c), bc))
 
-# 1. EGFR / RTK Dimer (Nature style: Soft Sky Cyan, Point 6)
+# 1. EGFR / RTK Dimer (Nature style: Soft Sky Cyan)
 def rtk(cx):
     col = COL['rec_rtk']
     bc = '#0284C7'
@@ -401,7 +390,7 @@ def rtk(cx):
         D.text(x + s * 1.3, 30.8, 'P', anchor='middle', color='#713F12', bold=True, size=4.5*PT)
     gaps.append((cx - 3.5, cx + 3.5))
 
-# 2. Integrin Heterodimer (Nature style: Soft Warm Sand / Amber, Point 6)
+# 2. Integrin Heterodimer (Nature style: Soft Warm Champagne Sand)
 def integrin(cx):
     col = COL['rec_int']
     bc = '#D97706'
@@ -417,7 +406,7 @@ def integrin(cx):
           % pts_path(pts, False))
     gaps.append((cx - 2.5, cx + 2.5))
 
-# 3. GPCR 7-TM (Nature style: Soft Lavender Periwinkle, Point 6)
+# 3. GPCR 7-TM (Nature style: Soft Heather Amethyst)
 def gpcr(cx):
     col = COL['rec_gpcr']
     bc = '#7C3AED'
@@ -433,7 +422,7 @@ def gpcr(cx):
     body([(cx + 0.2, 12.8, 1.2, 0.9, 0)], '#FB7185', border_col='#E11D48', shadow=False)
     gaps.append((cx - 4.5, cx + 4.5))
 
-# 4. Cytokine / Immune Receptor (Nature style: Soft Rose Coral, Point 6)
+# 4. Cytokine / Immune Receptor (Nature style: Soft Antique Rose Coral)
 def immune(cx):
     col = COL['rec_imm']
     bc = '#E11D48'
@@ -457,13 +446,13 @@ D.text(RX['imm'], 2.0, 'Immune R', anchor='middle', bold=True, color='#9F1239', 
 
 # EGF Ligand Node
 egf_node = pill(RX['rtk'], 5.2, 8.5, 3.6, 'EGF', 'lig')
-# Blue forward arrow for activation (Point 5)
 arrow(egf_node['bottom'], (RX['rtk'], 7.8), col=ACT_COL, lw=0.50)
 
-# Add gap in lipid bilayer for high-contrast Plasma membrane badge (Point 4)
-gaps.append((68.0, 84.0))
+# Add gap in lipid bilayer for high-contrast Plasma membrane badge
+gaps.append((65.0, 83.0))
 # Add gap in lipid bilayer for GAP node
-gaps.append((99.0, 115.0))
+gaps.append((101.5, 116.5))
+# Immune R gap at 130.0 is handled inside immune()
 
 # Lipid bilayer rendering
 STEP = 1.36
@@ -480,56 +469,53 @@ while x < 180:
             D.add('mem', '<circle cx="%.2f" cy="%.2f" r="0.60" fill="url(#head)"/>' % (x, y))
     x += STEP
 
-# Plasma membrane badge (Point 4: High-contrast label embedded in the middle of lipid bilayer)
-D.add('body', '<rect x="68.0" y="19.1" width="16.0" height="3.8" rx="1.4" '
+# Plasma membrane badge (High-contrast label embedded in lipid bilayer)
+D.add('body', '<rect x="65.0" y="19.1" width="18.0" height="3.8" rx="1.4" '
              'fill="#FFFFFF" stroke="#64748B" stroke-width="0.45" filter="url(#subtle-shadow)"/>')
-D.text(76.0, 21.0, 'Plasma membrane', anchor='middle', color='#0F172A', bold=True, size=4.5*PT)
+D.text(74.0, 21.0, 'Plasma membrane', anchor='middle', color='#0F172A', bold=True, size=4.5*PT)
 
-# Extracellular anti-EGFR antibody callout (Cleanly spaced on left, no collision with EGFR)
-card_egfr = drug_box(8.0, 4.5, 24.0, 8.5, 'Anti-EGFR mAbs', 'cetuximab, panitumumab', 'approved', '#0284C7')
-# Grey inhibitory T-bar with 0.75 mm boundary standoff before EGFR stalk outer edge (36.0 mm)
-arrow(card_egfr['right'], (35.25, card_egfr['right'][1]), end='tee', col=INH_COL, lw=0.55)
+# Extracellular anti-EGFR antibody callout (Cleanly placed on left, no collision with EGFR)
+card_egfr = drug_box(4.2, 4.5, 23.5, 8.5, 'Anti-EGFR mAbs', 'cetuximab, panitumumab', 'approved', '#0284C7')
+arrow(card_egfr['right'], (30.25, card_egfr['right'][1]), end='tee', col=INH_COL, lw=0.55)
 
 # Top Right: Standardization Legend Box (Strictly above membrane, Point 5: Blue=Activation, Grey=Inhibition)
-D.add('bg', '<rect x="135.0" y="1.2" width="43.0" height="16.5" rx="2.0" fill="#FFFFFF" '
+D.add('bg', '<rect x="144.0" y="1.8" width="34.0" height="16.0" rx="2.0" fill="#FFFFFF" '
             'fill-opacity="0.96" stroke="#CBD5E1" stroke-width="0.45" filter="url(#subtle-shadow)"/>')
-marker(137.5, 3.1, 'approved')
-D.text(140.5, 3.1, 'Approved drug class', color=INK, size=4.5*PT, bold=True)
-marker(137.5, 6.1, 'clinical')
-D.text(140.5, 6.1, 'Clinical trials (Ph I–III)', color=INK, size=4.5*PT, bold=True)
-marker(137.5, 9.1, 'preclinical')
-D.text(140.5, 9.1, 'Preclinical / investigational', color=INK, size=4.5*PT, bold=True)
+marker(146.5, 3.6, 'approved')
+D.text(149.5, 3.6, 'Approved drug class', color=INK, size=4.2*PT, bold=True)
+marker(146.5, 6.6, 'clinical')
+D.text(149.5, 6.6, 'Clinical trials (Ph I–III)', color=INK, size=4.2*PT, bold=True)
+marker(146.5, 9.6, 'preclinical')
+D.text(149.5, 9.6, 'Preclinical / investigational', color=INK, size=4.2*PT, bold=True)
 # Activation cascade (Solid Blue Arrow)
-arrow((136.0, 12.0), (139.5, 12.0), col=ACT_COL, lw=0.60, layer='over')
-D.text(140.5, 12.0, 'Activation cascade (→)', color=ACT_COL, size=4.5*PT, bold=True)
+arrow((145.0, 12.5), (148.5, 12.5), col=ACT_COL, lw=0.60, layer='over')
+D.text(149.5, 12.5, 'Activation cascade (→)', color=ACT_COL, size=4.2*PT, bold=True)
 # Inhibition / feedback (Dashed Grey T-bar)
-arrow((136.0, 14.8), (139.5, 14.8), end='tee', col=INH_COL, lw=0.60, layer='over')
-D.text(140.5, 14.8, 'Inhibition / feedback (--|)', color=INH_COL, size=4.5*PT, bold=True)
+arrow((145.0, 15.2), (148.5, 15.2), end='tee', col=INH_COL, lw=0.60, layer='over')
+D.text(149.5, 15.2, 'Inhibition / feedback (--|)', color=INH_COL, size=4.2*PT, bold=True)
 
-# Adaptors & Upstream Modulation: GRB2 -> SHP2 -> SOS1 (Linear forward cascade, Nature style light slate)
-node_grb2 = pill(40.0, 35.0, 11.5, 5.6, 'GRB2', 'adapt')
-node_shp2 = pill(56.0, 35.0, 11.5, 5.6, 'SHP2', 'adapt')
-node_sos1 = pill(74.0, 35.0, 12.5, 6.0, 'SOS1', 'adapt')
+# Adaptors & Upstream Modulation: GRB2 -> SHP2 -> SOS1 (Spaced out to match receptors)
+node_grb2 = pill(35.0, 35.0, 11.5, 5.6, 'GRB2', 'adapt')
+node_shp2 = pill(54.0, 35.0, 11.5, 5.6, 'SHP2', 'adapt')
+node_sos1 = pill(72.0, 35.0, 13.0, 6.0, 'SOS1', 'adapt')
 
-# Blue activation arrows connecting upstream cascade (Point 5)
+# Blue activation arrows connecting upstream cascade
 arrow((RX['rtk'], 30.5), (node_grb2['cx'], node_grb2['top'][1]), col=ACT_COL, lw=0.50)
 arrow(node_grb2['right'], node_shp2['left'], col=ACT_COL, lw=0.50)
 arrow((RX['int'], 27.5), (node_shp2['cx'] + 1.0, node_shp2['top'][1]), col=ACT_COL, lw=0.50)
 arrow(node_shp2['right'], node_sos1['left'], col=ACT_COL, lw=0.50)
 
 # Upstream Inhibitors Card (SHP2 & SOS1)
-card_upstream = drug_box(48.0, 44.5, 36.0, 8.8, 'SHP2 / SOS1 inh.', 'TNO155, BI 1701963', 'clinical')
-# Grey inhibitory T-bars (Point 5)
+card_upstream = drug_box(47.0, 44.5, 33.0, 8.8, 'SHP2 / SOS1 inh.', 'TNO155, BI 1701963', 'clinical')
 arrow((node_shp2['cx'], card_upstream['top'][1]), node_shp2['bottom'], end='tee', col=INH_COL, lw=0.50)
 arrow((node_sos1['cx'], card_upstream['top'][1]), node_sos1['bottom'], end='tee', col=INH_COL, lw=0.50)
 
 # ============================================================ CENTRAL SWITCH ==
-GDP_X, GTP_X, SW_Y = 90.0, 122.0, 36.5
+GDP_X, GTP_X, SW_Y = 92.0, 126.0, 36.5
 
 def ras_node(cx, cy, col_key, nuc_txt):
     col = COL[col_key]
     tc = TC_MAP.get(col_key, INK)
-    # RAS main G-domain body (Nature style: Cool grey vs Soft rose)
     w, h = 17.0, 9.2
     bc = '#64748B' if col_key == 'off' else '#E11D48'
     fill_col = D.gradient(col)
@@ -537,7 +523,6 @@ def ras_node(cx, cy, col_key, nuc_txt):
                  'fill="%s" stroke="%s" stroke-width="0.6"/>'
           % (cx - w / 2, cy - h / 2, w, h, fill_col, bc))
     D.text(cx, cy - 1.4, 'KRAS', anchor='middle', color=tc, bold=True, size=6.8*PT)
-    # Nucleotide badge
     nw, nh = 9.2, 3.2
     nuc_bg = '#1E3A8A' if nuc_txt == 'GDP' else '#991B1B'
     nuc_fill = '#EFF6FF' if nuc_txt == 'GDP' else '#FEF2F2'
@@ -555,79 +540,78 @@ def ras_node(cx, cy, col_key, nuc_txt):
 
 node_gdp = ras_node(GDP_X, SW_Y, 'off', 'GDP')
 node_gtp = ras_node(GTP_X, SW_Y, 'on', 'GTP')
+# Blue activation arrow from Immune R to active KRAS-GTP
+arrow((RX['imm'] - 1.0, 26.5), (node_gtp['cx'] + 2.0, node_gtp['top'][1]), col=ACT_COL, lw=0.48)
 
-# SOS1 DIRECT ACTIVATION OF KRAS-GDP (Blue forward activation arrow, Point 5)
+# SOS1 DIRECT ACTIVATION OF KRAS-GDP (Blue forward activation arrow)
 arrow(node_sos1['right'], node_gdp['left'], col=ACT_COL, lw=0.58)
 D.text((node_sos1['right'][0] + node_gdp['left'][0]) / 2, 33.2, 'GEF exchange',
        anchor='middle', color='#1D4ED8', bold=True, size=4.8*PT, halo=True)
 
-# GAP (NF1, RASA1) - Dedicated Pill Element (Spaced out, no collision with Immune R, Point 1)
-node_gap = pill(106.0, 19.5, 14.5, 4.8, 'GAP (NF1)', 'gap', border_col='#64748B')
+# GAP (NF1, RASA1) - Dedicated Pill Element (Spaced out, perfectly balanced)
+node_gap = pill(109.0, 19.5, 14.5, 4.8, 'GAP (NF1)', 'gap', border_col='#64748B')
 
 # Upper Arc: GTP -> GDP (Hydrolysis, Grey pathway)
 arrow((GTP_X - 6.0, SW_Y - 4.5), (GDP_X + 6.0, SW_Y - 4.5),
       (GTP_X - 10.0, 26.5), (GDP_X + 10.0, 26.5), col=INH_COL, lw=0.60)
-# GAP stimulation arrow pointing from GAP bottom to the hydrolysis arc (Blue)
-arrow(node_gap['bottom'], (106.0, 26.5), col=ACT_COL, lw=0.50)
-D.text(113.0, 24.5, 'hydrolysis (10⁵×)', anchor='start', color=GREY, bold=True, size=4.8*PT)
+arrow(node_gap['bottom'], (109.0, 26.5), col=ACT_COL, lw=0.50)
+D.text(115.5, 24.5, 'hydrolysis (10⁵×)', anchor='start', color=GREY, bold=True, size=4.8*PT)
 
 # Oncogenic Mutation Blockade Badge Element
-D.add('body', '<rect x="96.0" y="30.5" width="20.0" height="4.0" rx="1.4" '
+D.add('body', '<rect x="99.0" y="30.5" width="20.0" height="4.0" rx="1.4" '
              'fill="#FFF1F2" stroke="#E11D48" stroke-width="0.45"/>')
-D.text(106.0, 32.5, 'G12/G13/Q61 lock', anchor='middle', color='#991B1B', bold=True, size=4.8*PT)
-# Grey inhibitory T-bar from mutation lock badge up to GAP hydrolysis arc (Point 5)
-arrow((106.0, 30.5), (106.0, 27.2), end='tee', col=INH_COL, lw=0.55)
+D.text(109.0, 32.5, 'G12/G13/Q61 lock', anchor='middle', color='#991B1B', bold=True, size=4.8*PT)
+arrow((109.0, 30.5), (109.0, 27.2), end='tee', col=INH_COL, lw=0.55)
 
 # Lower Arc: GDP -> GTP (GEF Exchange, Blue activation cycle)
 arrow((GDP_X + 6.0, SW_Y + 4.5), (GTP_X - 6.0, SW_Y + 4.5),
       (GDP_X + 10.0, 44.5), (GTP_X - 10.0, 44.5), col=ACT_COL, lw=0.60)
-D.text(106.0, 46.8, 'GDP → GTP cycle', anchor='middle', color='#2563EB', bold=True, size=4.8*PT, halo=True)
+D.text(109.0, 46.8, 'GDP → GTP cycle', anchor='middle', color='#2563EB', bold=True, size=4.8*PT, halo=True)
 
 # ============================================================ DIRECT DRUGS ====
-# Class I & II docked to RAS-GDP (Bottom of RAS-GDP, x: 72-108, y: 49.0-60.0)
-D.add('body', '<rect x="72.0" y="49.0" width="36.0" height="11.0" rx="1.8" fill="#FFFFFF" '
+# Class I & II docked to RAS-GDP (Bottom of RAS-GDP, x: 74-110, y: 49.0-60.0)
+D.add('body', '<rect x="74.0" y="49.0" width="36.0" height="11.0" rx="1.8" fill="#FFFFFF" '
              'fill-opacity="0.96" stroke="#94A3B8" stroke-width="0.50" filter="url(#subtle-shadow)"/>')
-marker(74.5, 51.8, 'approved', s=0.85)
-D.text(77.0, 51.8 - FS_SM * 0.35, 'Class I: sotorasib, adagrasib', color=INK, bold=True, size=FS_SM)
-marker(74.5, 56.5, 'clinical', s=0.85)
-D.text(77.0, 56.5 - FS_SM * 0.35, 'Class II: MRTX1133 (G12D)', color=INK, bold=True, size=FS_SM)
-# Grey inhibitory T-bar UPWARDS from Drug Box to KRAS-GDP (Point 5)
+marker(76.5, 51.8, 'approved', s=0.85)
+D.text(79.0, 51.8 - FS_SM * 0.35, 'Class I: sotorasib, adagrasib', color=INK, bold=True, size=FS_SM)
+marker(76.5, 56.5, 'clinical', s=0.85)
+D.text(79.0, 56.5 - FS_SM * 0.35, 'Class II: MRTX1133 (G12D)', color=INK, bold=True, size=FS_SM)
 arrow((node_gdp['cx'], 49.0), node_gdp['bottom'], end='tee', col=INH_COL, lw=0.55)
 
-# Class III & IV docked to RAS-GTP (Right side of RAS-GTP, x: 135-178, y: 30.5-42.5)
-D.add('body', '<rect x="135.0" y="30.5" width="43.0" height="12.0" rx="1.8" fill="#FFFFFF" '
+# Class III & IV docked to RAS-GTP (Right side of RAS-GTP, x: 138-178, y: 31.0-43.0)
+D.add('body', '<rect x="138.0" y="31.0" width="40.0" height="12.0" rx="1.8" fill="#FFFFFF" '
              'fill-opacity="0.96" stroke="#E11D48" stroke-width="0.50" filter="url(#subtle-shadow)"/>')
-marker(137.5, 33.5, 'clinical', s=0.85)
-D.text(140.0, 33.5 - FS_SM * 0.35, 'Class III: daraxonrasib', color=INK, bold=True, size=FS_SM)
+marker(140.5, 34.0, 'clinical', s=0.85)
+D.text(143.0, 34.0 - FS_SM * 0.35, 'Class III: daraxonrasib', color=INK, bold=True, size=FS_SM)
 # CYPA chaperone badge element
-D.add('body', '<rect x="168.0" y="31.8" width="8.8" height="3.5" rx="1.6" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="0.35"/>')
-D.text(172.4, 33.5, '+ CYPA', anchor='middle', color='#6D28D9', bold=True, size=4.6*PT)
+D.add('body', '<rect x="169.5" y="32.3" width="8.0" height="3.5" rx="1.6" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="0.35"/>')
+D.text(173.5, 34.0, '+ CYPA', anchor='middle', color='#6D28D9', bold=True, size=4.4*PT)
 
-marker(137.5, 38.5, 'clinical', s=0.85)
-D.text(140.0, 38.5 - FS_SM * 0.35, 'Class IV: ASP3082 (PROTAC)', color=INK, bold=True, size=FS_SM)
-# Grey inhibitory T-bar straight LEFT from Drug Box to KRAS-GTP (Point 5)
-arrow((135.0, node_gtp['cy']), node_gtp['right'], end='tee', col=INH_COL, lw=0.55)
+marker(140.5, 39.0, 'clinical', s=0.85)
+D.text(143.0, 39.0 - FS_SM * 0.35, 'Class IV: ASP3082 (PROTAC)', color=INK, bold=True, size=FS_SM)
+arrow((138.0, node_gtp['cy']), node_gtp['right'], end='tee', col=INH_COL, lw=0.55)
 
 # ============================================================ EFFECTOR BUS ====
 BUS_Y = 62.0
-BUS_X = {'mapk': 22.0, 'rassf': 62.0, 'pi3k': 84.0, 'ral': 128.0, 'cyto': 162.0}
+# Spaced out columns ensuring completely relaxed downstream breathing room
+BUS_X = {'mapk': 18.0, 'rassf': 60.0, 'pi3k': 88.0, 'ral': 132.0, 'cyto': 164.0}
 
-# Drop from active KRAS-GTP to horizontal bus (Blue activation flow, Point 5)
+# Drop from active KRAS-GTP to horizontal bus
 arrow(node_gtp['bottom'], (node_gtp['cx'], BUS_Y), end='none', col=ACT_COL, lw=0.65)
 D.text(node_gtp['cx'] - 1.5, BUS_Y - 1.2, 'effector recruitment', anchor='end', color='#1D4ED8', bold=True, size=5.5*PT)
 
-# Horizontal distribution bus spanning across the 5 functional lanes (Blue)
+# Horizontal distribution bus spanning across the 5 functional lanes
 D.add('link', '<path d="M%.2f %.2f L%.2f %.2f" stroke="%s" stroke-width="0.55"/>'
       % (BUS_X['mapk'], BUS_Y, BUS_X['cyto'], BUS_Y, ACT_COL))
 
-# Perpendicular downward branches into each effector column (Blue)
+# Perpendicular downward branches into each effector column
 for k, x in BUS_X.items():
     arrow((x, BUS_Y), (x, 67.4), col=ACT_COL, lw=0.55)
 
 # ============================================================ EFFECTOR COLUMNS =
 T1, T2, T3 = 70.5, 83.5, 96.5
 
-# Column 1: MAPK Pathway (x = 22.0)
+# Column 1: MAPK Pathway (x = 18.0)
 node_raf = pill(BUS_X['mapk'], T1, 16.0, 6.2, 'RAF', 'mapk')
 node_mek = pill(BUS_X['mapk'], T2, 14.0, 5.8, 'MEK1/2', 'mapk')
 node_erk = pill(BUS_X['mapk'], T3, 14.0, 5.8, 'ERK1/2', 'mapk')
@@ -635,17 +619,17 @@ node_erk = pill(BUS_X['mapk'], T3, 14.0, 5.8, 'ERK1/2', 'mapk')
 arrow(node_raf['bottom'], node_mek['top'], col=ACT_COL)
 arrow(node_mek['bottom'], node_erk['top'], col=ACT_COL)
 
-# MAPK drug callout cards
-card_raf_mek = drug_box(31.0, 79.5, 19.5, 8.0, 'RAF / MEK inh.', 'trametinib, encorafenib', 'approved')
+# MAPK drug callout cards (x: 26.0 - 45.5, ample clearance to Column 2)
+card_raf_mek = drug_box(26.0, 79.5, 19.5, 8.0, 'RAF / MEK inh.', 'trametinib, encorafenib', 'approved')
 arrow(card_raf_mek['left'], node_mek['right'], end='tee', col=INH_COL, lw=0.50)
 
-card_erk = drug_box(31.0, 92.5, 19.5, 8.0, 'ERK inh.', 'ulixertinib (Ph I/II)', 'clinical')
+card_erk = drug_box(26.0, 92.5, 19.5, 8.0, 'ERK inh.', 'ulixertinib (Ph I/II)', 'clinical')
 arrow(card_erk['left'], node_erk['right'], end='tee', col=INH_COL, lw=0.50)
 
-# ============================================================ NUCLEAR ENVELOPE & NUCLEAR PORE (Point 3) ====
-NCX, NCY = 22.0, 126.0
+# ============================================================ NUCLEAR ENVELOPE & NUCLEAR PORE ====
+NCX, NCY = 18.0, 126.0
 NRX, NRY = 28.0, 21.5
-PORE_X1, PORE_X2 = 18.5, 25.5
+PORE_X1, PORE_X2 = 14.5, 21.5
 PORE_Y = 104.5
 
 # Nucleoplasm base fill
@@ -654,59 +638,54 @@ D.add('bg', '<ellipse cx="%.2f" cy="%.2f" rx="%.2f" ry="%.2f" fill="url(#nuc)"/>
       % (NCX, NCY, NRX, NRY))
 
 # Double membrane nuclear envelope with open pore channel at x in [PORE_X1, PORE_X2]
-# Outer Nuclear Membrane (ONM)
 D.add('bg', '<path d="M %.2f %.2f A %.2f %.2f 0 0 0 0.0 %.2f '
-             'M %.2f %.2f A %.2f %.2f 0 0 1 50.0 %.2f" '
-             'fill="none" stroke="#8B5CF6" stroke-width="0.55"/>'
+             'M %.2f %.2f A %.2f %.2f 0 0 1 46.0 %.2f" '
+             'fill="none" stroke="#7C3AED" stroke-width="0.55"/>'
       % (PORE_X1, PORE_Y, NRX, NRY, NCY + 5.0, PORE_X2, PORE_Y, NRX, NRY, NCY + 5.0))
-# Inner Nuclear Membrane (INM)
 D.add('bg', '<path d="M %.2f %.2f A %.2f %.2f 0 0 0 0.0 %.2f '
-             'M %.2f %.2f A %.2f %.2f 0 0 1 48.5 %.2f" '
-             'fill="none" stroke="#A78BFA" stroke-width="0.45" stroke-dasharray="2.5 1.0"/>'
+             'M %.2f %.2f A %.2f %.2f 0 0 1 44.5 %.2f" '
+             'fill="none" stroke="#9333EA" stroke-width="0.45" stroke-dasharray="2.5 1.0"/>'
       % (PORE_X1, PORE_Y + 1.2, NRX - 1.2, NRY - 1.2, NCY + 5.0, PORE_X2, PORE_Y + 1.2, NRX - 1.2, NRY - 1.2, NCY + 5.0))
-# Membrane pore lips curving outer to inner membrane
-D.add('bg', '<path d="M %.2f %.2f C %.2f %.2f %.2f %.2f %.2f %.2f" fill="none" stroke="#8B5CF6" stroke-width="0.55"/>'
+D.add('bg', '<path d="M %.2f %.2f C %.2f %.2f %.2f %.2f %.2f %.2f" fill="none" stroke="#7C3AED" stroke-width="0.55"/>'
       % (PORE_X1, PORE_Y, PORE_X1 - 0.8, PORE_Y + 0.3, PORE_X1 - 0.8, PORE_Y + 0.9, PORE_X1, PORE_Y + 1.2))
-D.add('bg', '<path d="M %.2f %.2f C %.2f %.2f %.2f %.2f %.2f %.2f" fill="none" stroke="#8B5CF6" stroke-width="0.55"/>'
+D.add('bg', '<path d="M %.2f %.2f C %.2f %.2f %.2f %.2f %.2f %.2f" fill="none" stroke="#7C3AED" stroke-width="0.55"/>'
       % (PORE_X2, PORE_Y, PORE_X2 + 0.8, PORE_Y + 0.3, PORE_X2 + 0.8, PORE_Y + 0.9, PORE_X2, PORE_Y + 1.2))
 
 # Nuclear Pore Complex (NPC) nucleoporin ring scaffold subunits
-D.add('body', '<rect x="16.6" y="103.2" width="3.4" height="2.2" rx="0.9" fill="#EDE9FE" stroke="#7C3AED" stroke-width="0.35"/>')
-D.add('body', '<rect x="16.6" y="105.6" width="3.4" height="2.2" rx="0.9" fill="#EDE9FE" stroke="#7C3AED" stroke-width="0.35"/>')
-D.add('body', '<circle cx="18.3" cy="105.5" r="0.65" fill="#8B5CF6"/>')
-D.add('body', '<rect x="24.0" y="103.2" width="3.4" height="2.2" rx="0.9" fill="#EDE9FE" stroke="#7C3AED" stroke-width="0.35"/>')
-D.add('body', '<rect x="24.0" y="105.6" width="3.4" height="2.2" rx="0.9" fill="#EDE9FE" stroke="#7C3AED" stroke-width="0.35"/>')
-D.add('body', '<circle cx="25.7" cy="105.5" r="0.65" fill="#8B5CF6"/>')
+D.add('body', '<rect x="12.6" y="103.2" width="3.4" height="2.2" rx="0.9" fill="#EDE9FE" stroke="#7C3AED" stroke-width="0.35"/>')
+D.add('body', '<rect x="12.6" y="105.6" width="3.4" height="2.2" rx="0.9" fill="#EDE9FE" stroke="#7C3AED" stroke-width="0.35"/>')
+D.add('body', '<circle cx="14.3" cy="105.5" r="0.65" fill="#8B5CF6"/>')
+D.add('body', '<rect x="20.0" y="103.2" width="3.4" height="2.2" rx="0.9" fill="#EDE9FE" stroke="#7C3AED" stroke-width="0.35"/>')
+D.add('body', '<rect x="20.0" y="105.6" width="3.4" height="2.2" rx="0.9" fill="#EDE9FE" stroke="#7C3AED" stroke-width="0.35"/>')
+D.add('body', '<circle cx="21.7" cy="105.5" r="0.65" fill="#8B5CF6"/>')
 D.add('bg', '</g>')
 
-# Nuclear pore label
-D.text(29.5, 104.5, 'Nuclear pore (NPC)', color='#6D28D9', bold=True, size=4.8*PT, halo=True)
-D.text(38.0, 122.0, 'Nucleus', color='#6D28D9', bold=True, size=FS_SM, halo=True)
+D.text(25.5, 104.5, 'Nuclear pore (NPC)', color='#6D28D9', bold=True, size=4.8*PT, halo=True)
+D.text(34.0, 122.0, 'Nucleus', color='#6D28D9', bold=True, size=FS_SM, halo=True)
 
 # Translocated ERK inside Nucleus
 node_erk_nuc = pill(BUS_X['mapk'], 110.5, 11.0, 4.8, 'ERK (p)', 'mapk')
-# Blue forward arrow passing through the central NPC channel into the nucleoplasm
 arrow(node_erk['bottom'], node_erk_nuc['top'], col=ACT_COL, lw=0.55)
 
 # Outcome Box 1: Proliferation & Cell Cycle (Inside Nucleus)
-out_mapk = outcome_box(8.0, 115.5, 28.0, 8.0, 'Proliferation & Growth', 'CCND1, MYC, FOS, ELK1',
+out_mapk = outcome_box(4.5, 115.5, 27.0, 8.0, 'Proliferation & Growth', 'CCND1, MYC, FOS, ELK1',
                        '#FAF5FF', '#C084FC', '#581C87')
 arrow(node_erk_nuc['bottom'], out_mapk['top'], col=ACT_COL, lw=0.55)
 
-# Column 2: Pro-Apoptotic Branch (RASSF1A) (x = 62.0, Nature style Royal Indigo)
+# Column 2: Pro-Apoptotic Branch (RASSF1A) (x = 60.0, Nature style Royal Indigo)
 node_rassf = pill(BUS_X['rassf'], T1, 15.0, 6.0, 'RASSF1A', 'rassf')
-node_mst = pill(BUS_X['rassf'], 89.0, 13.0, 5.8, 'MST1/2', 'rassf')
+node_mst = pill(BUS_X['rassf'], 87.0, 13.0, 5.8, 'MST1/2', 'rassf')
 arrow(node_rassf['bottom'], node_mst['top'], col=ACT_COL)
 
 # Cross-talk: RAF inhibits RASSF1A (Grey inhibitory T-bar, Point 5)
 arrow(node_raf['right'], node_rassf['left'], end='tee', col=INH_COL, lw=0.50)
 
-# Outcome Box 2: Apoptosis (Shifted down to eliminate collision)
-out_rassf = outcome_box(53.5, 106.5, 17.0, 8.5, 'Apoptosis', 'MST / YAP1 / p73',
+# Outcome Box 2: Apoptosis (Shifted down, 8.0 mm clearance from MAPK drugs)
+out_rassf = outcome_box(51.0, 106.5, 18.0, 8.5, 'Apoptosis', 'MST / YAP1 / p73',
                         '#EEF2FF', '#818CF8', '#312E81')
 arrow(node_mst['bottom'], out_rassf['top'], col=ACT_COL, lw=0.55)
 
-# Column 3: PI3K-AKT-mTOR Pathway (x = 84.0, Nature style Deep Emerald Teal)
+# Column 3: PI3K-AKT-mTOR Pathway (x = 88.0, Nature style Deep Emerald Teal)
 node_pi3k = pill(BUS_X['pi3k'], T1, 16.0, 6.2, 'PI3K (p110)', 'pi3k')
 node_akt = pill(BUS_X['pi3k'], T2, 13.0, 5.8, 'AKT', 'pi3k')
 node_mtor = pill(BUS_X['pi3k'], T3, 15.0, 5.8, 'mTORC1', 'pi3k')
@@ -714,19 +693,19 @@ node_mtor = pill(BUS_X['pi3k'], T3, 15.0, 5.8, 'mTORC1', 'pi3k')
 arrow(node_pi3k['bottom'], node_akt['top'], col=ACT_COL)
 arrow(node_akt['bottom'], node_mtor['top'], col=ACT_COL)
 
-# Separate PI3K & mTOR Inhibitor Cards (Grey inhibitory T-bars, Point 5)
-card_pi3k_inh = drug_box(96.0, 66.5, 21.0, 8.0, 'PI3K inh.', 'alpelisib, inavolisib', 'approved')
+# Separate PI3K & mTOR Inhibitor Cards (x: 98.0 - 119.0)
+card_pi3k_inh = drug_box(98.0, 66.5, 21.0, 8.0, 'PI3K inh.', 'alpelisib, inavolisib', 'approved')
 arrow(card_pi3k_inh['left'], node_pi3k['right'], end='tee', col=INH_COL, lw=0.50)
 
-card_mtor_inh = drug_box(96.0, 92.5, 21.0, 8.0, 'mTOR inh.', 'everolimus, sirolimus', 'approved')
+card_mtor_inh = drug_box(98.0, 92.5, 21.0, 8.0, 'mTOR inh.', 'everolimus, sirolimus', 'approved')
 arrow(card_mtor_inh['left'], node_mtor['right'], end='tee', col=INH_COL, lw=0.50)
 
 # Outcome Box 3: Survival & Growth
-out_pi3k = outcome_box(72.5, 108.5, 23.0, 8.5, 'Survival & Growth', 'S6K1, 4E-BP1, glycolysis',
+out_pi3k = outcome_box(76.0, 108.5, 24.0, 8.5, 'Survival & Growth', 'S6K1, 4E-BP1, glycolysis',
                        '#F0FDFA', '#5EEAD4', '#0F766E')
 arrow(node_mtor['bottom'], out_pi3k['top'], col=ACT_COL, lw=0.55)
 
-# Column 4: RAL GTPases (x = 128.0, Nature style Sky Azure)
+# Column 4: RAL GTPases (x = 132.0, Nature style Sky Azure)
 node_ralgds = pill(BUS_X['ral'], T1, 15.0, 6.0, 'RALGDS', 'ral')
 node_ral = pill(BUS_X['ral'], T2, 13.0, 5.8, 'RAL-A/B', 'ral')
 node_tbk1 = pill(BUS_X['ral'], T3, 15.0, 5.8, 'TBK1 / Sec5', 'ral')
@@ -735,39 +714,36 @@ arrow(node_ralgds['bottom'], node_ral['top'], col=ACT_COL)
 arrow(node_ral['bottom'], node_tbk1['top'], col=ACT_COL)
 
 # Vesicle trafficking icons
-for k, (vx, vy, r) in enumerate(((138.5, 84.0, 1.8), (143.0, 82.8, 1.5), (147.0, 84.2, 1.3))):
+for k, (vx, vy, r) in enumerate(((141.5, 84.0, 1.8), (145.5, 82.8, 1.5), (149.0, 84.2, 1.3))):
     D.add('body', '<circle cx="%.2f" cy="%.2f" r="%.2f" fill="#EEF2F6" stroke="%s" stroke-width="0.45"/>'
           % (vx, vy, r, COL['ral']))
     D.add('body', '<circle cx="%.2f" cy="%.2f" r="0.30" fill="#2563EB"/>' % (vx, vy))
 
 # Outcome Box 4: Vesicle Trafficking
-out_ral = outcome_box(115.5, 108.5, 25.0, 8.5, 'Vesicle Trafficking', 'Exocyst & autophagy',
+out_ral = outcome_box(120.0, 108.5, 24.0, 8.5, 'Vesicle Trafficking', 'Exocyst & autophagy',
                       '#F0F9FF', '#7DD3FC', '#0284C7')
 arrow(node_tbk1['bottom'], out_ral['top'], col=ACT_COL, lw=0.55)
 
-# Column 5: Cytoskeletal Remodelling (PLCε & TIAM1, Nature style Warm Amber)
-node_plce = pill(155.0, T1, 12.0, 5.8, 'PLCε', 'other')
-node_tiam1 = pill(169.0, T1, 12.0, 5.8, 'TIAM1', 'other')
+# Column 5: Cytoskeletal Remodelling (PLCε & TIAM1, Nature style Warm Golden Amber)
+node_plce = pill(157.0, T1, 12.0, 5.8, 'PLCε', 'other')
+node_tiam1 = pill(171.0, T1, 12.0, 5.8, 'TIAM1', 'other')
 node_rac1 = pill(BUS_X['cyto'], T2, 16.0, 6.0, 'PKC / RAC1', 'other')
 
 arrow(node_plce['bottom'], (BUS_X['cyto'] - 3.0, node_rac1['top'][1]), col=ACT_COL)
 arrow(node_tiam1['bottom'], (BUS_X['cyto'] + 3.0, node_rac1['top'][1]), col=ACT_COL)
 
-# F-actin Assembly Node (REPLACING THE AMBIGUOUS 2 YELLOW WAVY LINES, Point 2)
+# F-actin Assembly Node
 node_actin = pill(BUS_X['cyto'], T3, 21.0, 5.8, 'F-actin assembly', 'other')
 arrow(node_rac1['bottom'], node_actin['top'], col=ACT_COL)
 
 # Outcome Box 5: Motility & Invasion
-out_cyto = outcome_box(149.5, 108.5, 25.0, 8.5, 'Motility & Invasion', 'Actin dynamics & migration',
+out_cyto = outcome_box(152.0, 108.5, 24.0, 8.5, 'Motility & Invasion', 'Actin dynamics & migration',
                        '#FFFBEB', '#FCD34D', '#B45309')
 arrow(node_actin['bottom'], out_cyto['top'], col=ACT_COL, lw=0.55)
 
 # ============================================================ FEEDBACK LOOP ===
-# Far-left corridor: Single clean Grey dashed line with Grey T-bars (Point 5)
-FX = 6.0
-# Leaves ERK1/2 left border
+FX = 4.5
 arrow(node_erk['left'], (FX, node_erk['cy']), end='none', col=INH_COL, dash='1.2 0.8', lw=0.6)
-# Travels along vertical corridor
 arrow((FX, node_erk['cy']), (FX, 19.5), end='none', col=INH_COL, dash='1.2 0.8', lw=0.6)
 
 # Branch 1 to RAF: From corridor straight into RAF left border
@@ -781,13 +757,12 @@ arrow((70.0, 41.5), (70.0, node_sos1['bottom'][1]), end='tee', col=INH_COL, dash
 arrow((FX, 19.5), (RX['rtk'] - 4.5, 19.5), end='tee', col=INH_COL, dash='1.2 0.8', lw=0.6)
 
 # Minimalist label along the feedback corridor
-D.text(FX + 1.8, 54.0, 'ERK negative feedback', color=INH_COL, bold=True, size=5.8*PT)
+D.text(FX + 1.6, 54.0, 'ERK negative feedback', color=INH_COL, bold=True, size=5.5*PT)
 
 # Panel a Letter
 D.text(1.0, 2.5, 'a', bold=True, size=PNs, color=INK)
 
 # ============================================================ PANEL B =========
-# Dividing hairline
 D.add('bg', '<line x1="0" y1="%.2f" x2="180" y2="%.2f" stroke="#E2E8F0" stroke-width="0.6"/>'
       % (BOT_A, BOT_A))
 
@@ -815,18 +790,15 @@ CARDS = [
 ]
 
 def icon_metabolic(x, y):
-    # Mitochondrion with cristae
     D.add('body', '<ellipse cx="%.2f" cy="%.2f" rx="9.5" ry="5.8" fill="%s" stroke="%s" stroke-width="0.75"/>'
           % (x + 12.0, y + 8.0, mix(COL['other'], WHITE, 0.85), COL['other']))
     pts = [(x + 4.5 + k * 1.5, y + 8.0 + 3.0 * math.sin(k * 1.2)) for k in range(11)]
     D.add('body', '<path d="%s" fill="none" stroke="%s" stroke-width="0.55"/>'
           % (pts_path(pts, False), mix(COL['other'], '#000000', 0.20)))
-    # Nutrient influx arrow (Blue forward activation, Point 5)
     arrow((x + 2.0, y + 2.0), (x + 6.0, y + 6.0), col=ACT_COL, lw=0.55)
     D.text(x + 1.0, y + 1.5, 'Glc/Gln', color=ACT_COL, bold=True, size=FS_XS)
 
 def icon_macro(x, y):
-    # Membrane ruffle & vesicle engulfment
     D.add('body', '<path d="M%.2f %.2f C%.2f %.2f %.2f %.2f %.2f %.2f C%.2f %.2f %.2f %.2f %.2f %.2f" '
                  'fill="none" stroke="%s" stroke-width="0.80"/>'
           % (x + 2.0, y + 12.0, x + 6.0, y + 2.0, x + 12.0, y + 1.5, x + 16.0, y + 6.0,
@@ -837,20 +809,16 @@ def icon_macro(x, y):
           % (x + 15.0, y + 9.5, COL['ral']))
 
 def icon_immune(x, y):
-    # Cancer cell expressing PD-L1 and MDSC infiltration
     D.add('body', '<circle cx="%.2f" cy="%.2f" r="6.0" fill="%s" stroke="%s" stroke-width="0.65"/>'
           % (x + 9.0, y + 8.0, mix(COL['on'], WHITE, 0.85), '#E11D48'))
     D.text(x + 9.0, y + 8.5, 'Tumor', anchor='middle', color='#991B1B', bold=True, size=FS_XS)
-    # T-cell exhaustion interaction
     D.add('body', '<circle cx="%.2f" cy="%.2f" r="4.8" fill="%s" stroke="%s" stroke-width="0.55"/>'
           % (x + 27.0, y + 8.0, '#EFF6FF', '#3B82F6'))
     D.text(x + 27.0, y + 8.5, 'T cell', anchor='middle', color='#1D4ED8', bold=True, size=FS_XS)
-    # Inhibitory immune checkpoint interaction (Grey T-bar, Point 5)
     arrow((x + 15.5, y + 8.0), (x + 21.8, y + 8.0), end='tee', col=INH_COL, lw=0.55)
     D.text(x + 18.6, y + 6.0, 'PD-L1', anchor='middle', color=INH_COL, bold=True, size=4.5*PT)
 
 def icon_senescence(x, y):
-    # Flattened, enlarged senescent morphology bypassed
     D.add('body', '<path d="M%.2f %.2f C%.2f %.2f %.2f %.2f %.2f %.2f C%.2f %.2f %.2f %.2f %.2f %.2f Z" '
                  'fill="%s" stroke="%s" stroke-width="0.75"/>'
           % (x + 2.0, y + 9.0, x + 4.0, y + 1.5, x + 25.0, y + 0.8, x + 29.0, y + 6.0,
@@ -858,7 +826,6 @@ def icon_senescence(x, y):
              mix(COL['on'], WHITE, 0.88), mix(COL['on'], WHITE, 0.25)))
     D.add('body', '<ellipse cx="%.2f" cy="%.2f" rx="4.8" ry="3.2" fill="url(#nuc)" stroke="#8B5CF6" stroke-width="0.35"/>'
           % (x + 14.0, y + 7.8))
-    # Cell cycle arrest symbol bypassed
     cx, cy, r = x + 34.5, y + 7.5, 2.4
     D.add('body', '<path d="M%.2f %.2f A%.2f %.2f 0 1 1 %.2f %.2f" fill="none" stroke="%s" stroke-width="0.50"/>'
           % (cx + r, cy, r, r, cx + r * math.cos(-1.1), cy + r * math.sin(-1.1), GREY))
@@ -869,23 +836,17 @@ def icon_senescence(x, y):
 
 ICONS = [icon_metabolic, icon_macro, icon_immune, icon_senescence]
 
-# Render Panel b Cards
 for k, (title, sub, mech, drug, status) in enumerate(CARDS):
     x = k * (CW + CG) + 1.0
-    # Background card
     D.add('bg', '<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" rx="2.2" '
                 'fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.45" filter="url(#subtle-shadow)"/>'
           % (x, BY, CW, BH))
-    # Icon
     ICONS[k](x + 1.5, BY + 2.0)
-    # Text hierarchy (ultra-clean, no paragraph walls)
     D.text(x + 2.5, BY + 20.0, title, bold=True, color=INK, size=FS)
     D.text(x + 2.5, BY + 24.5, sub, color=INK_MUTED, bold=True, size=FS_XS)
     D.text(x + 2.5, BY + 29.0, mech, color=GREY, size=FS_XS)
-    # Drug badge
     drug_box(x + 2.0, BY + 34.5, CW - 4.0, 7.5, drug, status=status)
 
-# Panel b Letter
 D.text(1.0, BY + 2.5, 'b', bold=True, size=PNs, color=INK)
 
 def main():
