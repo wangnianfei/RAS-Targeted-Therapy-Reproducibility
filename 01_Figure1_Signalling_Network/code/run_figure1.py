@@ -376,7 +376,7 @@ D.add('bg', '<rect x="0" y="%.2f" width="180" height="%.2f" fill="url(#cyto)"/>'
 D.add('bg', '</g>')
 
 # Receptor positions along x-axis (Well-distributed to balance canvas, Point 1)
-RX = {'rtk': 26.0, 'int': 48.0, 'gpcr': 78.0, 'imm': 116.0}
+RX = {'rtk': 40.0, 'int': 62.0, 'gpcr': 90.0, 'imm': 127.0}
 gaps = []
 
 def helix(x, y0, y1, w=1.2, col=None, border_col=None, layer='body'):
@@ -461,9 +461,9 @@ egf_node = pill(RX['rtk'], 5.2, 8.5, 3.6, 'EGF', 'lig')
 arrow(egf_node['bottom'], (RX['rtk'], 7.8), col=ACT_COL, lw=0.50)
 
 # Add gap in lipid bilayer for high-contrast Plasma membrane badge (Point 4)
-gaps.append((54.0, 74.0))
+gaps.append((68.0, 84.0))
 # Add gap in lipid bilayer for GAP node
-gaps.append((86.0, 102.0))
+gaps.append((99.0, 115.0))
 
 # Lipid bilayer rendering
 STEP = 1.36
@@ -481,35 +481,35 @@ while x < 180:
     x += STEP
 
 # Plasma membrane badge (Point 4: High-contrast label embedded in the middle of lipid bilayer)
-D.add('body', '<rect x="56.0" y="19.1" width="16.0" height="3.8" rx="1.4" '
+D.add('body', '<rect x="68.0" y="19.1" width="16.0" height="3.8" rx="1.4" '
              'fill="#FFFFFF" stroke="#64748B" stroke-width="0.45" filter="url(#subtle-shadow)"/>')
-D.text(64.0, 21.0, 'Plasma membrane', anchor='middle', color='#0F172A', bold=True, size=4.5*PT)
+D.text(76.0, 21.0, 'Plasma membrane', anchor='middle', color='#0F172A', bold=True, size=4.5*PT)
 
-# Extracellular anti-EGFR antibody callout
-card_egfr = drug_box(1.0, 4.5, 18.5, 8.5, 'Anti-EGFR mAbs', 'cetuximab, panitumumab', 'approved', '#0284C7')
-# Grey inhibitory T-bar with 0.7 mm boundary standoff before EGFR stalk outer edge (Point 5)
-arrow(card_egfr['right'], (21.0, card_egfr['right'][1]), end='tee', col=INH_COL, lw=0.55)
+# Extracellular anti-EGFR antibody callout (Cleanly spaced on left, no collision with EGFR)
+card_egfr = drug_box(8.0, 4.5, 24.0, 8.5, 'Anti-EGFR mAbs', 'cetuximab, panitumumab', 'approved', '#0284C7')
+# Grey inhibitory T-bar with 0.75 mm boundary standoff before EGFR stalk outer edge (36.0 mm)
+arrow(card_egfr['right'], (35.25, card_egfr['right'][1]), end='tee', col=INH_COL, lw=0.55)
 
 # Top Right: Standardization Legend Box (Strictly above membrane, Point 5: Blue=Activation, Grey=Inhibition)
-D.add('bg', '<rect x="132.0" y="1.2" width="46.0" height="16.5" rx="2.0" fill="#FFFFFF" '
+D.add('bg', '<rect x="135.0" y="1.2" width="43.0" height="16.5" rx="2.0" fill="#FFFFFF" '
             'fill-opacity="0.96" stroke="#CBD5E1" stroke-width="0.45" filter="url(#subtle-shadow)"/>')
-marker(135.0, 3.1, 'approved')
-D.text(138.0, 3.1, 'Approved drug class', color=INK, size=4.5*PT, bold=True)
-marker(135.0, 6.1, 'clinical')
-D.text(138.0, 6.1, 'Clinical trials (Ph I–III)', color=INK, size=4.5*PT, bold=True)
-marker(135.0, 9.1, 'preclinical')
-D.text(138.0, 9.1, 'Preclinical / investigational', color=INK, size=4.5*PT, bold=True)
+marker(137.5, 3.1, 'approved')
+D.text(140.5, 3.1, 'Approved drug class', color=INK, size=4.5*PT, bold=True)
+marker(137.5, 6.1, 'clinical')
+D.text(140.5, 6.1, 'Clinical trials (Ph I–III)', color=INK, size=4.5*PT, bold=True)
+marker(137.5, 9.1, 'preclinical')
+D.text(140.5, 9.1, 'Preclinical / investigational', color=INK, size=4.5*PT, bold=True)
 # Activation cascade (Solid Blue Arrow)
-arrow((133.5, 12.0), (137.0, 12.0), col=ACT_COL, lw=0.60, layer='over')
-D.text(138.0, 12.0, 'Activation cascade (→)', color=ACT_COL, size=4.5*PT, bold=True)
+arrow((136.0, 12.0), (139.5, 12.0), col=ACT_COL, lw=0.60, layer='over')
+D.text(140.5, 12.0, 'Activation cascade (→)', color=ACT_COL, size=4.5*PT, bold=True)
 # Inhibition / feedback (Dashed Grey T-bar)
-arrow((133.5, 14.8), (137.0, 14.8), end='tee', col=INH_COL, lw=0.60, layer='over')
-D.text(138.0, 14.8, 'Inhibition / feedback (--|)', color=INH_COL, size=4.5*PT, bold=True)
+arrow((136.0, 14.8), (139.5, 14.8), end='tee', col=INH_COL, lw=0.60, layer='over')
+D.text(140.5, 14.8, 'Inhibition / feedback (--|)', color=INH_COL, size=4.5*PT, bold=True)
 
 # Adaptors & Upstream Modulation: GRB2 -> SHP2 -> SOS1 (Linear forward cascade, Nature style light slate)
-node_grb2 = pill(26.0, 35.0, 11.5, 5.6, 'GRB2', 'adapt')
-node_shp2 = pill(42.0, 35.0, 11.5, 5.6, 'SHP2', 'adapt')
-node_sos1 = pill(58.0, 35.0, 12.5, 6.0, 'SOS1', 'adapt')
+node_grb2 = pill(40.0, 35.0, 11.5, 5.6, 'GRB2', 'adapt')
+node_shp2 = pill(56.0, 35.0, 11.5, 5.6, 'SHP2', 'adapt')
+node_sos1 = pill(74.0, 35.0, 12.5, 6.0, 'SOS1', 'adapt')
 
 # Blue activation arrows connecting upstream cascade (Point 5)
 arrow((RX['rtk'], 30.5), (node_grb2['cx'], node_grb2['top'][1]), col=ACT_COL, lw=0.50)
@@ -518,13 +518,13 @@ arrow((RX['int'], 27.5), (node_shp2['cx'] + 1.0, node_shp2['top'][1]), col=ACT_C
 arrow(node_shp2['right'], node_sos1['left'], col=ACT_COL, lw=0.50)
 
 # Upstream Inhibitors Card (SHP2 & SOS1)
-card_upstream = drug_box(34.0, 44.5, 34.0, 8.8, 'SHP2 / SOS1 inh.', 'TNO155, BI 1701963', 'clinical')
+card_upstream = drug_box(48.0, 44.5, 36.0, 8.8, 'SHP2 / SOS1 inh.', 'TNO155, BI 1701963', 'clinical')
 # Grey inhibitory T-bars (Point 5)
 arrow((node_shp2['cx'], card_upstream['top'][1]), node_shp2['bottom'], end='tee', col=INH_COL, lw=0.50)
-arrow((node_sos1['cx'] + 1.0, card_upstream['top'][1]), (node_sos1['cx'] + 1.0, node_sos1['bottom'][1]), end='tee', col=INH_COL, lw=0.50)
+arrow((node_sos1['cx'], card_upstream['top'][1]), node_sos1['bottom'], end='tee', col=INH_COL, lw=0.50)
 
 # ============================================================ CENTRAL SWITCH ==
-GDP_X, GTP_X, SW_Y = 78.0, 110.0, 36.5
+GDP_X, GTP_X, SW_Y = 90.0, 122.0, 36.5
 
 def ras_node(cx, cy, col_key, nuc_txt):
     col = COL[col_key]
@@ -562,51 +562,51 @@ D.text((node_sos1['right'][0] + node_gdp['left'][0]) / 2, 33.2, 'GEF exchange',
        anchor='middle', color='#1D4ED8', bold=True, size=4.8*PT, halo=True)
 
 # GAP (NF1, RASA1) - Dedicated Pill Element (Spaced out, no collision with Immune R, Point 1)
-node_gap = pill(94.0, 19.5, 14.5, 4.8, 'GAP (NF1)', 'gap', border_col='#64748B')
+node_gap = pill(106.0, 19.5, 14.5, 4.8, 'GAP (NF1)', 'gap', border_col='#64748B')
 
 # Upper Arc: GTP -> GDP (Hydrolysis, Grey pathway)
 arrow((GTP_X - 6.0, SW_Y - 4.5), (GDP_X + 6.0, SW_Y - 4.5),
       (GTP_X - 10.0, 26.5), (GDP_X + 10.0, 26.5), col=INH_COL, lw=0.60)
 # GAP stimulation arrow pointing from GAP bottom to the hydrolysis arc (Blue)
-arrow(node_gap['bottom'], (94.0, 26.5), col=ACT_COL, lw=0.50)
-D.text(99.0, 24.5, 'hydrolysis (10⁵×)', anchor='start', color=GREY, bold=True, size=4.8*PT)
+arrow(node_gap['bottom'], (106.0, 26.5), col=ACT_COL, lw=0.50)
+D.text(113.0, 24.5, 'hydrolysis (10⁵×)', anchor='start', color=GREY, bold=True, size=4.8*PT)
 
 # Oncogenic Mutation Blockade Badge Element
-D.add('body', '<rect x="84.0" y="30.5" width="20.0" height="4.0" rx="1.4" '
+D.add('body', '<rect x="96.0" y="30.5" width="20.0" height="4.0" rx="1.4" '
              'fill="#FFF1F2" stroke="#E11D48" stroke-width="0.45"/>')
-D.text(94.0, 32.5, 'G12/G13/Q61 lock', anchor='middle', color='#991B1B', bold=True, size=4.8*PT)
+D.text(106.0, 32.5, 'G12/G13/Q61 lock', anchor='middle', color='#991B1B', bold=True, size=4.8*PT)
 # Grey inhibitory T-bar from mutation lock badge up to GAP hydrolysis arc (Point 5)
-arrow((94.0, 30.5), (94.0, 27.2), end='tee', col=INH_COL, lw=0.55)
+arrow((106.0, 30.5), (106.0, 27.2), end='tee', col=INH_COL, lw=0.55)
 
 # Lower Arc: GDP -> GTP (GEF Exchange, Blue activation cycle)
 arrow((GDP_X + 6.0, SW_Y + 4.5), (GTP_X - 6.0, SW_Y + 4.5),
       (GDP_X + 10.0, 44.5), (GTP_X - 10.0, 44.5), col=ACT_COL, lw=0.60)
-D.text(94.0, 46.8, 'GDP → GTP cycle', anchor='middle', color='#2563EB', bold=True, size=4.8*PT, halo=True)
+D.text(106.0, 46.8, 'GDP → GTP cycle', anchor='middle', color='#2563EB', bold=True, size=4.8*PT, halo=True)
 
 # ============================================================ DIRECT DRUGS ====
-# Class I & II docked to RAS-GDP (Bottom of RAS-GDP, x: 64-100, y: 49.0-60.0)
-D.add('body', '<rect x="64.0" y="49.0" width="36.0" height="11.0" rx="1.8" fill="#FFFFFF" '
+# Class I & II docked to RAS-GDP (Bottom of RAS-GDP, x: 72-108, y: 49.0-60.0)
+D.add('body', '<rect x="72.0" y="49.0" width="36.0" height="11.0" rx="1.8" fill="#FFFFFF" '
              'fill-opacity="0.96" stroke="#94A3B8" stroke-width="0.50" filter="url(#subtle-shadow)"/>')
-marker(66.5, 51.8, 'approved', s=0.85)
-D.text(69.0, 51.8 - FS_SM * 0.35, 'Class I: sotorasib, adagrasib', color=INK, bold=True, size=FS_SM)
-marker(66.5, 56.5, 'clinical', s=0.85)
-D.text(69.0, 56.5 - FS_SM * 0.35, 'Class II: MRTX1133 (G12D)', color=INK, bold=True, size=FS_SM)
+marker(74.5, 51.8, 'approved', s=0.85)
+D.text(77.0, 51.8 - FS_SM * 0.35, 'Class I: sotorasib, adagrasib', color=INK, bold=True, size=FS_SM)
+marker(74.5, 56.5, 'clinical', s=0.85)
+D.text(77.0, 56.5 - FS_SM * 0.35, 'Class II: MRTX1133 (G12D)', color=INK, bold=True, size=FS_SM)
 # Grey inhibitory T-bar UPWARDS from Drug Box to KRAS-GDP (Point 5)
 arrow((node_gdp['cx'], 49.0), node_gdp['bottom'], end='tee', col=INH_COL, lw=0.55)
 
-# Class III & IV docked to RAS-GTP (Right side of RAS-GTP, x: 124-168, y: 30.5-42.5)
-D.add('body', '<rect x="124.0" y="30.5" width="44.0" height="12.0" rx="1.8" fill="#FFFFFF" '
+# Class III & IV docked to RAS-GTP (Right side of RAS-GTP, x: 135-178, y: 30.5-42.5)
+D.add('body', '<rect x="135.0" y="30.5" width="43.0" height="12.0" rx="1.8" fill="#FFFFFF" '
              'fill-opacity="0.96" stroke="#E11D48" stroke-width="0.50" filter="url(#subtle-shadow)"/>')
-marker(126.5, 33.5, 'clinical', s=0.85)
-D.text(129.0, 33.5 - FS_SM * 0.35, 'Class III: daraxonrasib', color=INK, bold=True, size=FS_SM)
+marker(137.5, 33.5, 'clinical', s=0.85)
+D.text(140.0, 33.5 - FS_SM * 0.35, 'Class III: daraxonrasib', color=INK, bold=True, size=FS_SM)
 # CYPA chaperone badge element
-D.add('body', '<rect x="157.5" y="31.8" width="8.8" height="3.5" rx="1.6" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="0.35"/>')
-D.text(161.9, 33.5, '+ CYPA', anchor='middle', color='#6D28D9', bold=True, size=4.6*PT)
+D.add('body', '<rect x="168.0" y="31.8" width="8.8" height="3.5" rx="1.6" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="0.35"/>')
+D.text(172.4, 33.5, '+ CYPA', anchor='middle', color='#6D28D9', bold=True, size=4.6*PT)
 
-marker(126.5, 38.5, 'clinical', s=0.85)
-D.text(129.0, 38.5 - FS_SM * 0.35, 'Class IV: ASP3082 (PROTAC)', color=INK, bold=True, size=FS_SM)
+marker(137.5, 38.5, 'clinical', s=0.85)
+D.text(140.0, 38.5 - FS_SM * 0.35, 'Class IV: ASP3082 (PROTAC)', color=INK, bold=True, size=FS_SM)
 # Grey inhibitory T-bar straight LEFT from Drug Box to KRAS-GTP (Point 5)
-arrow((124.0, node_gtp['cy']), node_gtp['right'], end='tee', col=INH_COL, lw=0.55)
+arrow((135.0, node_gtp['cy']), node_gtp['right'], end='tee', col=INH_COL, lw=0.55)
 
 # ============================================================ EFFECTOR BUS ====
 BUS_Y = 62.0
@@ -773,9 +773,9 @@ arrow((FX, node_erk['cy']), (FX, 19.5), end='none', col=INH_COL, dash='1.2 0.8',
 # Branch 1 to RAF: From corridor straight into RAF left border
 arrow((FX, node_raf['cy']), node_raf['left'], end='tee', col=INH_COL, dash='1.2 0.8', lw=0.6)
 
-# Branch 2 to SOS1: Under GRB2/SHP2 at y=41.5, entering left-side bottom of SOS1 at x = 54.0
-arrow((FX, 41.5), (54.0, 41.5), end='none', col=INH_COL, dash='1.2 0.8', lw=0.6)
-arrow((54.0, 41.5), (54.0, node_sos1['bottom'][1]), end='tee', col=INH_COL, dash='1.2 0.8', lw=0.6)
+# Branch 2 to SOS1: Under GRB2/SHP2 at y=41.5, entering left-side bottom of SOS1 at x = 70.0
+arrow((FX, 41.5), (70.0, 41.5), end='none', col=INH_COL, dash='1.2 0.8', lw=0.6)
+arrow((70.0, 41.5), (70.0, node_sos1['bottom'][1]), end='tee', col=INH_COL, dash='1.2 0.8', lw=0.6)
 
 # Branch 3 to EGFR: Straight into intracellular tail of EGFR
 arrow((FX, 19.5), (RX['rtk'] - 4.5, 19.5), end='tee', col=INH_COL, dash='1.2 0.8', lw=0.6)
