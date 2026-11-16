@@ -357,192 +357,192 @@ All authors contributed substantially to the conception, literature synthesis, a
 
 ## References
 
-1. Hoadley KA, Yau C, Hinoue T, et al. Cell-of-Origin Patterns Dominate the Molecular Classification of 10,000 Tumors from 33 Types of Cancer Cell, 2018, 173(2): 291-304.e6. https://doi.org/10.1016/j.cell.2018.03.022.
+1. Hoadley KA, Yau C, Hinoue T, Wolf DM, Lazar AJ, Drill E, et al. Cell-of-origin patterns dominate the molecular classification of 10,000 tumors from 33 types of cancer. Cell. 2018;173(2):291-304.e6. https://doi.org/10.1016/j.cell.2018.03.022
 
-2. Prior IA, Hood FE, Hartley JL. The Frequency of Ras Mutations in Cancer Cancer Res, 2020, 80(14): 2969-2974. https://doi.org/10.1158/0008-5472.CAN-19-3682.
+2. Prior IA, Hood FE, Hartley JL. The frequency of RAS mutations in cancer. Cancer Res. 2020;80(14):2969-2974. https://doi.org/10.1158/0008-5472.CAN-19-3682
 
-3. Hobbs GA, Der CJ, Rossman KL. RAS isoforms and mutations in cancer at a glance J Cell Sci, 2016, 129(7): 1287-1292. https://doi.org/10.1242/jcs.182873.
+3. Hobbs GA, Der CJ, Rossman KL. RAS isoforms and mutations in cancer at a glance. J Cell Sci. 2016;129(7):1287-1292. https://doi.org/10.1242/jcs.182873
 
-4. Nakajima EC, Drezner N, Li X, et al. FDA Approval Summary: Sotorasib for KRAS G12C-Mutated Metastatic NSCLC Clin Cancer Res, 2022, 28(8): 1482-1486. https://doi.org/10.1158/1078-0432.CCR-21-3074.
+4. Nakajima EC, Drezner N, Li X, Mishra-Kalyani PS, Liu Y, Zhao H, et al. FDA approval summary: sotorasib for KRAS G12C-mutated metastatic NSCLC. Clin Cancer Res. 2021;28(8):1482-1486. https://doi.org/10.1158/1078-0432.CCR-21-3074
 
-5. Simanshu DK, Nissley DV, McCormick F. RAS Proteins and Their Regulators in Human Disease Cell, 2017, 170(1): 17-33. https://doi.org/10.1016/j.cell.2017.06.009.
+5. Simanshu DK, Nissley DV, McCormick F. RAS proteins and their regulators in human disease. Cell. 2017;170(1):17-33. https://doi.org/10.1016/j.cell.2017.06.009
 
-6. Pai EF, Krengel U, Petsko GA, et al. Refined crystal structure of the triphosphate conformation of H-ras p21 at 1.35 A resolution: implications for the mechanism of GTP hydrolysis EMBO J, 1990, 9(8): 2351-2359. https://doi.org/10.1002/j.1460-2075.1990.tb07409.x.
+6. Pai EF, Krengel U, Petsko GA, Goody RS, Kabsch W, Wittinghofer A. Refined crystal structure of the triphosphate conformation of H-ras p21 at 1.35 Å resolution: implications for the mechanism of GTP hydrolysis. EMBO J. 1990;9(8):2351-2359. https://doi.org/10.1002/j.1460-2075.1990.tb07409.x
 
-7. Vetter IR, Wittinghofer A. The Guanine Nucleotide-Binding Switch in Three Dimensions Science, 2001, 294(5545): 1299-1304. https://doi.org/10.1126/science.1062023.
+7. Vetter IR, Wittinghofer A. The guanine nucleotide-binding switch in three dimensions. Science. 2001;294(5545):1299-1304. https://doi.org/10.1126/science.1062023
 
-8. Milburn MV, Tong L, deVos AM, et al. Molecular Switch for Signal Transduction: Structural Differences Between Active and Inactive Forms of Protooncogenic ras Proteins Science, 1990, 247(4945): 939-945. https://doi.org/10.1126/science.2406906.
+8. Milburn MV, Tong L, deVos AM, Brünger A, Yamaizumi Z, Nishimura S, et al. Molecular switch for signal transduction: structural differences between active and inactive forms of protooncogenic ras proteins. Science. 1990;247(4945):939-945. https://doi.org/10.1126/science.2406906
 
-9. Scheffzek K, Ahmadian MR, Kabsch W, et al. The Ras-RasGAP Complex: Structural Basis for GTPase Activation and Its Loss in Oncogenic Ras Mutants Science, 1997, 277(5324): 333-338. https://doi.org/10.1126/science.277.5324.333.
+9. Scheffzek K, Ahmadian MR, Kabsch W, Wiesmüller L, Lautwein A, Schmitz F, et al. The Ras-RasGAP complex: structural basis for GTPase activation and its loss in oncogenic Ras mutants. Science. 1997;277(5324):333-339. https://doi.org/10.1126/science.277.5324.333
 
-10. Cox AD, Fesik SW, Kimmelman AC, et al. Drugging the undruggable RAS: Mission Possible? Nat Rev Drug Discov, 2014, 13(11): 828-851. https://doi.org/10.1038/nrd4389.
+10. Cox AD, Fesik SW, Kimmelman AC, Luo J, Der CJ. Drugging the undruggable RAS: mission possible? Nat Rev Drug Discov. 2014;13(11):828-851. https://doi.org/10.1038/nrd4389
 
-11. Perurena N, Situ L, Cichowski K. Combinatorial strategies to target RAS-driven cancers Nat Rev Cancer, 2024, 24(5): 316-337. https://doi.org/10.1038/s41568-024-00679-6.
+11. Perurena N, Situ L, Cichowski K. Combinatorial strategies to target RAS-driven cancers. Nat Rev Cancer. 2024;24(5):316-337. https://doi.org/10.1038/s41568-024-00679-6
 
-12. Jänne PA, Shaw AT, Pereira JR, et al. Selumetinib plus docetaxel for KRAS-mutant advanced non-small-cell lung cancer: a randomised, multicentre, placebo-controlled, phase 2 study Lancet Oncol, 2013, 14(1): 38-47. https://doi.org/10.1016/S1470-2045(12)70489-8.
+12. Jänne PA, Shaw AT, Pereira JR, Jeannin G, Vansteenkiste J, Barrios C, et al. Selumetinib plus docetaxel for KRAS-mutant advanced non-small-cell lung cancer: a randomised, multicentre, placebo-controlled, phase 2 study. Lancet Oncol. 2013;14(1):38-47. https://doi.org/10.1016/S1470-2045(12)70489-8
 
-13. McIntyre CA, Grimont A, Park J, et al. Distinct clinical outcomes and biological features of specific KRAS mutants in human pancreatic cancer Cancer Cell, 2024, 42(9): 1614-1629.e5. https://doi.org/10.1016/j.ccell.2024.08.002.
+13. McIntyre CA, Grimont A, Park J, Meng Y, Sisso WJ, Seier K, et al. Distinct clinical outcomes and biological features of specific KRAS mutants in human pancreatic cancer. Cancer Cell. 2024;42(9):1614-1629.e5. https://doi.org/10.1016/j.ccell.2024.08.002
 
-14. Varghese AM, Perry MA, Chou JF, et al. Clinicogenomic landscape of pancreatic adenocarcinoma identifies KRAS mutant dosage as prognostic of overall survival Nat Med, 2025, 31(2): 466-477. https://doi.org/10.1038/s41591-024-03362-3.
+14. Varghese AM, Perry MA, Chou JF, Nandakumar S, Muldoon D, Erakky A, et al. Clinicogenomic landscape of pancreatic adenocarcinoma identifies KRAS mutant dosage as prognostic of overall survival. Nat Med. 2025;31(2):466-477. https://doi.org/10.1038/s41591-024-03362-3
 
-15. Loree JM, Wang Y, Syed MA, et al. Clinical and Functional Characterization of Atypical KRAS/NRAS Mutations in Metastatic Colorectal Cancer Clin Cancer Res, 2021, 27(16): 4587-4598. https://doi.org/10.1158/1078-0432.CCR-21-0180.
+15. Loree JM, Wang Y, Syed MA, Sorokin AV, Coker O, Xiu J, et al. Clinical and functional characterization of atypical KRAS/NRAS mutations in metastatic colorectal cancer. Clin Cancer Res. 2021;27(16):4587-4598. https://doi.org/10.1158/1078-0432.CCR-21-0180
 
-16. Chen H, Huang D, Lin G, et al. The prevalence and real-world therapeutic analysis of Chinese patients with KRAS-Mutant Non-Small Cell lung cancer Cancer Med, 2022, 11(19): 3581-3592. https://doi.org/10.1002/cam4.4739.
+16. Chen H, Huang D, Lin G, Yang X, Zhuo M, Chi Y, et al. The prevalence and real-world therapeutic analysis of Chinese patients with KRAS-mutant non-small cell lung cancer. Cancer Med. 2022;11(19):3581-3592. https://doi.org/10.1002/cam4.4739
 
-17. Loong HH, Du N, Cheng C, et al. KRAS G12C mutations in Asia: a landscape analysis of 11,951 Chinese tumor samples Transl Lung Cancer Res, 2020, 9(5): 1759-1769. https://doi.org/10.21037/tlcr-20-455.
+17. Loong HHF, Du N, Cheng C, Lin H, Guo J, Lin G, et al. KRAS G12C mutations in Asia: a landscape analysis of 11,951 Chinese tumor samples. Transl Lung Cancer Res. 2020;9(5):1759-1769. https://doi.org/10.21037/tlcr-20-455
 
-18. Skoulidis F, Goldberg ME, Greenawalt DM, et al. STK11/LKB1 Mutations and PD-1 Inhibitor Resistance in KRAS-Mutant Lung Adenocarcinoma Cancer Discov, 2018, 8(7): 822-835. https://doi.org/10.1158/2159-8290.CD-18-0099.
+18. Skoulidis F, Goldberg ME, Greenawalt DM, Hellmann MD, Awad MM, Gainor JF, et al. STK11/LKB1 mutations and PD-1 inhibitor resistance in KRAS-mutant lung adenocarcinoma. Cancer Discov. 2018;8(7):822-835. https://doi.org/10.1158/2159-8290.CD-18-0099
 
-19. Ricciuti B, Arbour KC, Lin JJ, et al. Diminished Efficacy of Programmed Death-(Ligand)1 Inhibition in STK11-and KEAP1-Mutant Lung Adenocarcinoma Is Affected by KRAS Mutation Status J Thorac Oncol, 2022, 17(3): 399-410. https://doi.org/10.1016/j.jtho.2021.10.013.
+19. Ricciuti B, Arbour KC, Lin JJ, Vajdi A, Vokes N, Hong L, et al. Diminished efficacy of programmed death-(ligand)1 inhibition in STK11-and KEAP1-mutant lung adenocarcinoma is affected by KRAS mutation status. J Thorac Oncol. 2022;17(3):399-410. https://doi.org/10.1016/j.jtho.2021.10.013
 
-20. Budczies J, Romanovsky E, Kirchner M, et al. KRAS and TP53 co-mutation predicts benefit of immune checkpoint blockade in lung adenocarcinoma Br J Cancer, 2024, 131(3): 524-533. https://doi.org/10.1038/s41416-024-02746-z.
+20. Budczies J, Romanovsky E, Kirchner M, Neumann O, Blasi M, Schnorbach J, et al. KRAS and TP53 co-mutation predicts benefit of immune checkpoint blockade in lung adenocarcinoma. Br J Cancer. 2024;131(3):524-533. https://doi.org/10.1038/s41416-024-02746-z
 
-21. Douillard JY, Oliner KS, Siena S, et al. Panitumumab-FOLFOX4 Treatment and RAS Mutations in Colorectal Cancer N Engl J Med, 2013, 369(11): 1023-1034. https://doi.org/10.1056/NEJMoa1305275.
+21. Douillard JY, Oliner KS, Siena S, Tabernero J, Burkes R, Barugel M, et al. Panitumumab-FOLFOX4 treatment and RAS mutations in colorectal cancer. N Engl J Med. 2013;369(11):1023-1034. https://doi.org/10.1056/NEJMoa1305275
 
-22. Amado RG, Wolf M, Peeters M, et al. Wild-Type KRAS Is Required for Panitumumab Efficacy in Patients With Metastatic Colorectal Cancer J Clin Oncol, 2008, 26(10): 1626-1634. https://doi.org/10.1200/JCO.2007.14.7116.
+22. Amado RG, Wolf M, Peeters M, Van Cutsem E, Siena S, Freeman DJ, et al. Wild-type KRAS is required for panitumumab efficacy in patients with metastatic colorectal cancer. J Clin Oncol. 2008;26(10):1626-1634. https://doi.org/10.1200/JCO.2007.14.7116
 
-23. Ostrem JM, Shokat KM. Direct small-molecule inhibitors of KRAS: from structural insights to mechanism-based design Nat Rev Drug Discov, 2016, 15(11): 771-785. https://doi.org/10.1038/nrd.2016.139.
+23. Ostrem JML, Shokat KM. Direct small-molecule inhibitors of KRAS: from structural insights to mechanism-based design. Nat Rev Drug Discov. 2016;15(11):771-785. https://doi.org/10.1038/nrd.2016.139
 
-24. Hunter JC, Manandhar A, Carrasco MA, et al. Biochemical and Structural Analysis of Common Cancer-Associated KRAS Mutations Mol Cancer Res, 2015, 13(9): 1325-1335. https://doi.org/10.1158/1541-7786.MCR-15-0203.
+24. Hunter JC, Manandhar A, Carrasco MA, Gurbani D, Gondi S, Westover KD. Biochemical and structural analysis of common cancer-associated KRAS mutations. Mol Cancer Res. 2015;13(9):1325-1335. https://doi.org/10.1158/1541-7786.MCR-15-0203
 
-25. Weng C, Faure AJ, Escobedo A, et al. The energetic and allosteric landscape for KRAS inhibition Nature, 2024, 626(7999): 643-652. https://doi.org/10.1038/s41586-023-06954-0.
+25. Weng C, Faure AJ, Escobedo A, Lehner B. The energetic and allosteric landscape for KRAS inhibition. Nature. 2023;626(7999):643-652. https://doi.org/10.1038/s41586-023-06954-0
 
-26. Punekar SR, Velcheti V, Neel BG, et al. The current state of the art and future trends in RAS-targeted cancer therapies Nat Rev Clin Oncol, 2022, 19(10): 637-655. https://doi.org/10.1038/s41571-022-00671-9.
+26. Punekar SR, Velcheti V, Neel BG, Wong KK. The current state of the art and future trends in RAS-targeted cancer therapies. Nat Rev Clin Oncol. 2022;19(10):637-655. https://doi.org/10.1038/s41571-022-00671-9
 
-27. Van Cutsem E, van de Velde H, Karasek P, et al. Phase III Trial of Gemcitabine Plus Tipifarnib Compared With Gemcitabine Plus Placebo in Advanced Pancreatic Cancer J Clin Oncol, 2004, 22(8): 1430-1438. https://doi.org/10.1200/JCO.2004.10.112.
+27. Van Cutsem E, van de Velde H, Karasek P, Oettle H, Vervenne WL, Szawlowski A, et al. Phase III trial of gemcitabine plus tipifarnib compared with gemcitabine plus placebo in advanced pancreatic cancer. J Clin Oncol. 2004;22(8):1430-1438. https://doi.org/10.1200/JCO.2004.10.112
 
-28. Ho AL, Brana I, Haddad R, et al. Tipifarnib in Head and Neck Squamous Cell Carcinoma With HRAS Mutations J Clin Oncol, 2021, 39(17): 1856-1864. https://doi.org/10.1200/JCO.20.02903.
+28. Ho AL, Brana I, Haddad R, Bauman J, Bible K, Oosting S, et al. Tipifarnib in head and neck squamous cell carcinoma with HRAS mutations. J Clin Oncol. 2021;39(17):1856-1864. https://doi.org/10.1200/JCO.20.02903
 
-29. Blumenschein GR Jr, Smit EF, Planchard D, et al. A randomized phase II study of the MEK1/MEK2 inhibitor trametinib (GSK1120212) compared with docetaxel in KRAS-mutant advanced non-small-cell lung cancer (NSCLC) Ann Oncol, 2015, 26(5): 894-901. https://doi.org/10.1093/annonc/mdv072.
+29. Blumenschein GR Jr, Smit EF, Planchard D, Kim DW, Cadranel J, De Pas T, et al. A randomized phase II study of the MEK1/MEK2 inhibitor trametinib (GSK1120212) compared with docetaxel in KRAS-mutant advanced non-small-cell lung cancer (NSCLC). Ann Oncol. 2015;26(5):894-901. https://doi.org/10.1093/annonc/mdv072
 
-30. Jänne PA, van den Heuvel MM, Barlesi F, et al. Selumetinib Plus Docetaxel Compared With Docetaxel Alone and Progression-Free Survival in Patients With KRAS-Mutant Advanced Non-Small Cell Lung Cancer JAMA, 2017, 317(18): 1844-1853. https://doi.org/10.1001/jama.2017.3438.
+30. Jänne PA, van den Heuvel MM, Barlesi F, Cobo M, Mazieres J, Crinò L, et al. Selumetinib plus docetaxel compared with docetaxel alone and progression-free survival in patients with KRAS-mutant advanced non-small cell lung cancer. JAMA. 2017;317(18):1844. https://doi.org/10.1001/jama.2017.3438
 
-31. Scholl C, Fröhling S, Dunn IF, et al. Synthetic Lethal Interaction between Oncogenic KRAS Dependency and STK33 Suppression in Human Cancer Cells Cell, 2009, 137(5): 821-834. https://doi.org/10.1016/j.cell.2009.03.017.
+31. Scholl C, Fröhling S, Dunn IF, Schinzel AC, Barbie DA, Kim SY, et al. Synthetic lethal interaction between oncogenic KRAS dependency and STK33 suppression in human cancer cells. Cell. 2009;137(5):821-834. https://doi.org/10.1016/j.cell.2009.03.017
 
-32. Ostrem JM, Peters U, Sos ML, et al. K-Ras(G12C) inhibitors allosterically control GTP affinity and effector interactions Nature, 2013, 503(7477): 548-551. https://doi.org/10.1038/nature12796.
+32. Ostrem JM, Peters U, Sos ML, Wells JA, Shokat KM. K-Ras(G12C) inhibitors allosterically control GTP affinity and effector interactions. Nature. 2013;503(7477):548-551. https://doi.org/10.1038/nature12796
 
-33. Kessler D, Gmachl M, Mantoulidis A, et al. Drugging an undruggable pocket on KRAS Proc Natl Acad Sci U S A, 2019, 116(32): 15823-15829. https://doi.org/10.1073/pnas.1904529116.
+33. Kessler D, Gmachl M, Mantoulidis A, Martin LJ, Zoephel A, Mayer M, et al. Drugging an undruggable pocket on KRAS. Proc Natl Acad Sci U S A. 2019;116(32):15823-15829. https://doi.org/10.1073/pnas.1904529116
 
-34. Hansen R, Peters U, Babbar A, et al. The reactivity-driven biochemical mechanism of covalent KRASG12C inhibitors Nat Struct Mol Biol, 2018, 25(6): 454-462. https://doi.org/10.1038/s41594-018-0061-5.
+34. Hansen R, Peters U, Babbar A, Chen Y, Feng J, Janes MR, et al. The reactivity-driven biochemical mechanism of covalent KRASG12C inhibitors. Nat Struct Mol Biol. 2018;25(6):454-462. https://doi.org/10.1038/s41594-018-0061-5
 
-35. Lito P, Solomon M, Li LS, et al. Allele-specific inhibitors inactivate mutant KRAS G12C by a trapping mechanism Science, 2016, 351(6273): 604-608. https://doi.org/10.1126/science.aad6204.
+35. Lito P, Solomon M, Li LS, Hansen R, Rosen N. Allele-specific inhibitors inactivate mutant KRAS G12C by a trapping mechanism. Science. 2016;351(6273):604-608. https://doi.org/10.1126/science.aad6204
 
-36. Cox AD, Der CJ. "Undruggable KRAS": druggable after all Genes Dev, 2025, 39(1-2): 132-162. https://doi.org/10.1101/gad.352081.124.
+36. Cox AD, Der CJ. “Undruggable KRAS”: druggable after all. Genes Dev. 2024. https://doi.org/10.1101/gad.352081.124
 
-37. Singhal A, Li BT, O'Reilly EM. Targeting KRAS in cancer Nat Med, 2024, 30(4): 969-983. https://doi.org/10.1038/s41591-024-02903-0.
+37. Singhal A, Li BT, O’Reilly EM. Targeting KRAS in cancer. Nat Med. 2024;30(4):969-983. https://doi.org/10.1038/s41591-024-02903-0
 
-38. Jänne PA, Riely GJ, Gadgeel SM, et al. Adagrasib in Non-Small-Cell Lung Cancer Harboring a KRAS G12C Mutation N Engl J Med, 2022, 387(2): 120-131. https://doi.org/10.1056/NEJMoa2204619.
+38. Jänne PA, Riely GJ, Gadgeel SM, Heist RS, Ou SHI, Pacheco JM, et al. Adagrasib in non-small-cell lung cancer harboring a KRAS G12C mutation. N Engl J Med. 2022;387(2):120-131. https://doi.org/10.1056/NEJMoa2204619
 
-39. Rubinson DA, Tanaka N, Fece de la Cruz F, et al. Sotorasib Is a Pan-RAS G12C Inhibitor Capable of Driving Clinical Response in NRAS G12C Cancers Cancer Discov, 2024, 14(5): 727-736. https://doi.org/10.1158/2159-8290.CD-23-1138.
+39. Rubinson DA, Tanaka N, Fece de la Cruz F, Kapner KS, Rosenthal MH, Norden BL, et al. Sotorasib is a pan-RAS G12C inhibitor capable of driving clinical response in NRAS G12C cancers. Cancer Discov. 2024;14(5):727-736. https://doi.org/10.1158/2159-8290.CD-23-1138
 
-40. Endres NF, Do S, Mroue R, et al. Discovery and Characterization of Divarasib (GDC-6036), a Potent Covalent Inhibitor of KRAS G12C J Med Chem, 2026, 69(5): 5147-5165. https://doi.org/10.1021/acs.jmedchem.5c02272.
+40. Endres NF, Do S, Mroue R, Terrett JA, Saabye M, Oh A, et al. Discovery and characterization of divarasib (GDC-6036), a potent covalent inhibitor of KRAS G12C. J Med Chem. 2026;69(5):5147-5165. https://doi.org/10.1021/acs.jmedchem.5c02272
 
-41. Sacher A, LoRusso P, Patel MR, et al. Single-Agent Divarasib (GDC-6036) in Solid Tumors with a KRAS G12C Mutation N Engl J Med, 2023, 389(8): 710-721. https://doi.org/10.1056/NEJMoa2303810.
+41. Sacher A, LoRusso P, Patel MR, Miller WH Jr., Garralda E, Forster MD, et al. Single-agent divarasib (GDC-6036) in solid tumors with a KRAS G12C mutation. N Engl J Med. 2023;389(8):710-721. https://doi.org/10.1056/NEJMoa2303810
 
-42. Shi Y, Fang J, Xing L, et al. Glecirasib in KRASG12C-mutated nonsmall-cell lung cancer: a phase 2b trial Nat Med, 2025, 31(3): 894-900. https://doi.org/10.1038/s41591-024-03401-z.
+42. Shi Y, Fang J, Xing L, Yao Y, Zhang J, Liu L, et al. Glecirasib in KRASG12C-mutated nonsmall-cell lung cancer: a phase 2b trial. Nat Med. 2025;31(3):894-900. https://doi.org/10.1038/s41591-024-03401-z
 
-43. Li Z, Dang X, Huang D, et al. Garsorasib in patients with KRASG12C-mutated non-small-cell lung cancer in China: an open-label, multicentre, single-arm, phase 2 trial Lancet Respir Med, 2024, 12(8): 589-598. https://doi.org/10.1016/S2213-2600(24)00110-3.
+43. Li Z, Dang X, Huang D, Jin S, Li W, Shi J, et al. Garsorasib in patients with KRASG12C-mutated non-small-cell lung cancer in China: an open-label, multicentre, single-arm, phase 2 trial. Lancet Respir Med. 2024;12(8):589-598. https://doi.org/10.1016/S2213-2600(24)00110-3
 
-44. Zhou Q, Meng X, Sun L, et al. Efficacy and Safety of KRAS G12C Inhibitor IBI351 Monotherapy in Patients With Advanced NSCLC: Results From a Phase 2 Pivotal Study J Thorac Oncol, 2024, 19(12): 1630-1639. https://doi.org/10.1016/j.jtho.2024.08.005.
+44. Zhou Q, Meng X, Sun L, Huang D, Yang N, Yu Y, et al. Efficacy and safety of KRAS G12C inhibitor IBI351 monotherapy in patients with advanced NSCLC: results from a phase 2 pivotal study. J Thorac Oncol. 2024;19(12):1630-1639. https://doi.org/10.1016/j.jtho.2024.08.005
 
-45. Wang X, Allen S, Blake JF, et al. Identification of MRTX1133, a Noncovalent, Potent, and Selective KRAS G12D Inhibitor J Med Chem, 2022, 65(4): 3123-3133. https://doi.org/10.1021/acs.jmedchem.1c01688.
+45. Wang X, Allen S, Blake JF, Bowcut V, Briere DM, Calinisan A, et al. Identification of MRTX1133, a noncovalent, potent, and selective KRAS G12D inhibitor. J Med Chem. 2021;65(4):3123-3133. https://doi.org/10.1021/acs.jmedchem.1c01688
 
-46. Weller C, Burnett GL, Jiang L, et al. A neomorphic protein interface catalyzes covalent inhibition of RAS G12D aspartic acid in tumors Science, 2025, 389(6758): eads0239. https://doi.org/10.1126/science.ads0239.
+46. Weller C, Burnett GL, Jiang L, Chakraborty S, Zhang D, Vita NA, et al. A neomorphic protein interface catalyzes covalent inhibition of RAS G12D aspartic acid in tumors. Science. 2025;389(6758):eads0239. https://doi.org/10.1126/science.ads0239
 
-47. Schulze CJ, Seamon KJ, Zhao Y, et al. Chemical remodeling of a cellular chaperone to target the active state of mutant KRAS Science, 2023, 381(6659): 794-799. https://doi.org/10.1126/science.adg9652.
+47. Schulze CJ, Seamon KJ, Zhao Y, Yang YC, Cregg J, Kim D, et al. Pan-KRAS inhibitor revamps cancer therapy. Science. 2023;381(6659):794-799. https://doi.org/10.1126/science.adg9652
 
-48. Holderfield M, Lee BJ, Jiang J, et al. Concurrent inhibition of oncogenic and wild-type RAS-GTP for cancer therapy Nature, 2024, 629(8013): 919-926. https://doi.org/10.1038/s41586-024-07205-6.
+48. Holderfield M, Lee BJ, Jiang J, Tomlinson A, Seamon KJ, Mira A, et al. Concurrent inhibition of oncogenic and wild-type RAS-GTP for cancer therapy. Nature. 2024;629(8013):919-926. https://doi.org/10.1038/s41586-024-07205-6
 
-49. Cregg J, Edwards AV, Chang S, et al. Discovery of Daraxonrasib (RMC-6236), a Potent and Orally Bioavailable RAS(ON) Multi-selective, Noncovalent Tri-complex Inhibitor for the Treatment of Patients with Multiple RAS-Addicted Cancers J Med Chem, 2025, 68(6): 6064-6083. https://doi.org/10.1021/acs.jmedchem.4c02314.
+49. Cregg J, Edwards AV, Chang S, Lee BJ, Knox JE, Tomlinson ACA, et al. Discovery of daraxonrasib (RMC-6236), a potent and orally bioavailable RAS(ON) multi-selective, noncovalent tri-complex inhibitor for the treatment of patients with multiple RAS-addicted cancers. J Med Chem. 2025;68(6):6064-6083. https://doi.org/10.1021/acs.jmedchem.4c02314
 
-50. O'Reilly EM, Wainberg ZA, Hendifar AE, et al. Daraxonrasib or Chemotherapy in Previously Treated Metastatic Pancreatic Cancer N Engl J Med, 2026, 395(4): 325-337. https://doi.org/10.1056/NEJMoa2605555.
+50. O’Reilly EM, Wainberg ZA, Hendifar AE, Borad MJ, Pietrantonio F, Pant S, et al. Daraxonrasib or chemotherapy in previously treated metastatic pancreatic cancer. N Engl J Med. 2026;395(4):325-337. https://doi.org/10.1056/NEJMoa2605555
 
-51. Nokin MJ, Mira A, Patrucco E, et al. RAS-ON inhibition overcomes clinical resistance to KRAS G12C-OFF covalent blockade Nat Commun, 2024, 15(1): 7554. https://doi.org/10.1038/s41467-024-51828-2.
+51. Nokin MJ, Mira A, Patrucco E, Ricciuti B, Cousin S, Soubeyran I, et al. Structural basis of small molecule pan-KRAS inhibition. Nat Commun. 2024;15(1):7554. https://doi.org/10.1038/s41467-024-51828-2
 
-52. Bond MJ, Chu L, Nalawansha DA, et al. Targeted Degradation of Oncogenic KRAS G12C by VHL-Recruiting PROTACs ACS Cent. Sci., 2020, 6(8): 1367-1375. https://doi.org/10.1021/acscentsci.0c00411.
+52. Bond MJ, Chu L, Nalawansha DA, Li K, Crews CM. Targeted degradation of oncogenic KRAS G12C by VHL-recruiting PROTACs. ACS Cent Sci. 2020;6(8):1367-1375. https://doi.org/10.1021/acscentsci.0c00411
 
-53. Popow J, Farnaby W, Gollner A, et al. Targeting cancer with small-molecule pan-KRAS degraders Science, 2024, 385(6715): 1338-1347. https://doi.org/10.1126/science.adm8684.
+53. Popow J, Farnaby W, Gollner A, Kofink C, Fischer G, Wurm M, et al. Targeting cancer with small-molecule pan-KRAS inhibitors. Science. 2024;385(6715):1338-1347. https://doi.org/10.1126/science.adm8684
 
-54. Park W, Kasi A, Spira AI, et al. Setidegrasib in Advanced Non-Small-Cell Lung Cancer and Pancreatic Cancer N Engl J Med, 2026, 394(14): 1409-1420. https://doi.org/10.1056/NEJMoa2600752.
+54. Park W, Kasi A, Spira AI, Paz-Ares Rodríguez L, Herzberg BO, Pelster MS, et al. Setidegrasib in advanced non-small-cell lung cancer and pancreatic cancer. N Engl J Med. 2026;394(14):1409-1420. https://doi.org/10.1056/NEJMoa2600752
 
-55. de Langen AJ, Johnson ML, Mazieres J, et al. Sotorasib versus docetaxel for previously treated non-small-cell lung cancer with KRASG12C mutation: a randomised, open-label, phase 3 trial Lancet, 2023, 401(10378): 733-746. https://doi.org/10.1016/S0140-6736(23)00221-0.
+55. de Langen AJ, Johnson ML, Mazieres J, Dingemans AMC, Mountzios G, Pless M, et al. Sotorasib versus docetaxel for previously treated non-small-cell lung cancer with KRASG12C mutation: a randomised, open-label, phase 3 trial. Lancet. 2023;401(10378):733-746. https://doi.org/10.1016/S0140-6736(23)00221-0
 
-56. Attili I, Corvaja C, Trillo Aliaga P, et al. Dealing with KRAS G12C inhibition in non-small cell lung cancer (NSCLC)-biology, clinical results and future directions Cancer Treat Rev, 2025, 137: 102957. https://doi.org/10.1016/j.ctrv.2025.102957.
+56. Attili I, Corvaja C, Trillo Aliaga P, Del Signore E, Spitaleri G, Passaro A, et al. Dealing with KRAS G12C inhibition in non-small cell lung cancer (nsclc)-biology, clinical results and future directions. Cancer Treat Rev. 2025;137:102957. https://doi.org/10.1016/j.ctrv.2025.102957
 
-57. Barlesi F, Yao W, Duruisseaux M, et al. Adagrasib versus docetaxel in KRASG12C-mutated non-small-cell lung cancer (KRYSTAL-12): a randomised, open-label, phase 3 trial Lancet, 2025, 406(10503): 615-626. https://doi.org/10.1016/S0140-6736(25)00866-9.
+57. Barlesi F, Yao W, Duruisseaux M, Doucet L, Martínez AA, Gregorc V, et al. Adagrasib versus docetaxel in KRASG12C-mutated non-small-cell lung cancer (KRYSTAL-12): a randomised, open-label, phase 3 trial. Lancet. 2025;406(10503):615-626. https://doi.org/10.1016/S0140-6736(25)00866-9
 
-58. Skoulidis F, Ahn MJ, Gadgeel S, et al. Divarasib as Compared with Sotorasib or Adagrasib in KRAS G12C-Mutated NSCLC N Engl J Med, 2026. https://doi.org/10.1056/NEJMoa2605703.
+58. Skoulidis F, Ahn MJ, Gadgeel S, Popat S, Reinmuth N, van Veggel B, et al. Divarasib as compared with sotorasib or adagrasib in KRAS G12C-mutated NSCLC. N Engl J Med. 2026. https://doi.org/10.1056/NEJMoa2605703
 
-59. Wang X, Wu J, Xiao A, et al. Evolution of direct RAS inhibitors: from undruggable target to clinical breakthroughs Mol Cancer, 2025, 24(1): 229. https://doi.org/10.1186/s12943-025-02364-0.
+59. Wang X, Wu J, Xiao A, Wang J, Tian J. Evolution of direct RAS inhibitors: from undruggable target to clinical breakthroughs. Mol Cancer. 2025;24(1):229. https://doi.org/10.1186/s12943-025-02364-0
 
-60. Fakih MG, Kopetz S, Kuboki Y, et al. Sotorasib for previously treated colorectal cancers with KRASG12C mutation (CodeBreaK100): a prespecified analysis of a single-arm, phase 2 trial Lancet Oncol, 2022, 23(1): 115-124. https://doi.org/10.1016/S1470-2045(21)00605-7.
+60. Fakih MG, Kopetz S, Kuboki Y, Kim TW, Munster PN, Krauss JC, et al. Sotorasib for previously treated colorectal cancers with KRASG12C mutation (CodeBreaK 100): a prespecified analysis of a single-arm, phase 2 trial. Lancet Oncol. 2022;23(1):115-124. https://doi.org/10.1016/S1470-2045(21)00605-7
 
-61. Skoulidis F, Li BT, Dy GK, et al. Sotorasib for Lung Cancers with KRAS p.G12C Mutation N Engl J Med, 2021, 384(25): 2371-2381. https://doi.org/10.1056/NEJMoa2103695.
+61. Skoulidis F, Li BT, Dy GK, Price TJ, Falchook GS, Wolf J, et al. Sotorasib for lung cancers with KRAS p.G12C mutation. N Engl J Med. 2021;384(25):2371-2381. https://doi.org/10.1056/NEJMoa2103695
 
-62. Yaeger R, Weiss J, Pelster MS, et al. Adagrasib with or without Cetuximab in Colorectal Cancer with Mutated KRAS G12C N Engl J Med, 2023, 388(1): 44-54. https://doi.org/10.1056/NEJMoa2212419.
+62. Yaeger R, Weiss J, Pelster MS, Spira AI, Barve M, Ou SHI, et al. Adagrasib with or without cetuximab in colorectal cancer with mutated KRAS G12C. N Engl J Med. 2023;388(1):44-54. https://doi.org/10.1056/NEJMoa2212419
 
-63. Amodio V, Yaeger R, Arcella P, et al. EGFR Blockade Reverts Resistance to KRASG12C Inhibition in Colorectal Cancer Cancer Discov, 2020, 10(8): 1129-1139. https://doi.org/10.1158/2159-8290.CD-20-0187.
+63. Amodio V, Yaeger R, Arcella P, Cancelliere C, Lamba S, Lorenzato A, et al. EGFR blockade reverts resistance to KRASG12C inhibition in colorectal cancer. Cancer Discov. 2020;10(8):1129-1139. https://doi.org/10.1158/2159-8290.CD-20-0187
 
-64. Kuboki Y, Fakih M, Strickler J, et al. Sotorasib with panitumumab in chemotherapy-refractory KRASG12C-mutated colorectal cancer: a phase 1b trial Nat Med, 2024, 30(1): 265-270. https://doi.org/10.1038/s41591-023-02717-6.
+64. Kuboki Y, Fakih M, Strickler J, Yaeger R, Masuishi T, Kim EJ, et al. Sotorasib with panitumumab in chemotherapy-refractory KRASG12C-mutated colorectal cancer: a phase 1b trial. Nat Med. 2024;30(1):265-270. https://doi.org/10.1038/s41591-023-02717-6
 
-65. Fakih MG, Salvatore L, Esaki T, et al. Sotorasib plus Panitumumab in Refractory Colorectal Cancer with Mutated KRAS G12C N Engl J Med, 2023, 389(23): 2125-2139. https://doi.org/10.1056/NEJMoa2308795.
+65. Fakih MG, Salvatore L, Esaki T, Modest DP, Lopez-Bravo DP, Taieb J, et al. Sotorasib plus panitumumab in refractory colorectal cancer with mutated KRAS G12C. N Engl J Med. 2023;389(23):2125-2139. https://doi.org/10.1056/NEJMoa2308795
 
-66. Pietrantonio F, Salvatore L, Esaki T, et al. Overall Survival Analysis of the Phase III CodeBreaK 300 Study of Sotorasib Plus Panitumumab Versus Investigator's Choice in Chemorefractory KRAS G12C Colorectal Cancer J Clin Oncol, 2025, 43(19): 2147-2154. https://doi.org/10.1200/JCO-24-02026.
+66. Pietrantonio F, Salvatore L, Esaki T, Modest DP, Lopez-Bravo DP, Taieb J, et al. Overall survival analysis of the phase III CodeBreaK 300 study of sotorasib plus panitumumab versus investigator's choice in chemorefractory KRAS G12C colorectal cancer. J Clin Oncol. 2025;43(19):2147-2154. https://doi.org/10.1200/JCO-24-02026
 
-67. Tabernero J, Kopetz S, Lee J, et al. LBA1 Second-line adagrasib plus cetuximab vs chemotherapy in patients with KRASG12C-mutated metastatic colorectal cancer: Results from the KRYSTAL-10 trial Ann Oncol, 2026, 37: S1-S2. https://doi.org/10.1016/j.annonc.2026.06.005.
+67. Tabernero J, Kopetz S, Lee J, Corcoran RB, Hecht JR, Shen L, et al. LBA1 Second-line adagrasib plus cetuximab vs chemotherapy in patients with KRASG12C-mutated metastatic colorectal cancer: results from the KRYSTAL-10 trial. Ann Oncol. 2026;37:S1-S2. https://doi.org/10.1016/j.annonc.2026.06.005
 
-68. Masuishi T, Strickler JH, Kuboki Y, et al. Safety and efficacy of sotorasib plus panitumumab and FOLFIRI for previously treated KRAS G12C-mutated metastatic colorectal cancer in the CodeBreaK 101 phase Ib study ESMO Open, 2026, 11(9): 108338. https://doi.org/10.1016/j.esmoop.2026.108338.
+68. Masuishi T, Strickler JH, Kuboki Y, Fakih M, Greil R, Galot R, et al. Safety and efficacy of sotorasib plus panitumumab and FOLFIRI for previously treated KRAS G12C-mutated metastatic colorectal cancer in the CodeBreaK 101 phase Ib study. ESMO Open. 2026;11(9):108338. https://doi.org/10.1016/j.esmoop.2026.108338
 
-69. Wu YL, Herzberg B, Manji GA. Current landscape of RAS-targeted therapy for pancreatic cancer Oncologist, 2026, 31(11): oyag379. https://doi.org/10.1093/oncolo/oyag379.
+69. Wu YL, Herzberg B, Manji GA. Current landscape of RAS-targeted therapy for pancreatic cancer. Oncologist. 2026;31(11):oyag379. https://doi.org/10.1093/oncolo/oyag379
 
-70. Pillozzi S, Giommoni E, Petroni G, et al. The KRAS targeting revolution in metastatic pancreatic cancer: insights from the landmark RASolute-302 trial and emerging allele-specific strategies at ASCO 2026 J Hematol Oncol, 2026, 19(1): 53. https://doi.org/10.1186/s13045-026-01834-2.
+70. Pillozzi S, Giommoni E, Petroni G, Rossini D, Lavacchi D, Brugia M, et al. The KRAS targeting revolution in metastatic pancreatic cancer: insights from the landmark RASolute-302 trial and emerging allele-specific strategies at ASCO 2026. J Hematol Oncol. 2026;19(1):53. https://doi.org/10.1186/s13045-026-01834-2
 
-71. Dummer R, Schadendorf D, Ascierto PA, et al. Binimetinib versus dacarbazine in patients with advanced NRAS-mutant melanoma (NEMO): a multicentre, open-label, randomised, phase 3 trial Lancet Oncol, 2017, 18(4): 435-445. https://doi.org/10.1016/S1470-2045(17)30180-8.
+71. Dummer R, Schadendorf D, Ascierto PA, Arance A, Dutriaux C, Di Giacomo AM, et al. Binimetinib versus dacarbazine in patients with advanced NRAS-mutant melanoma (NEMO): a multicentre, open-label, randomised, phase 3 trial. Lancet Oncol. 2017;18(4):435-445. https://doi.org/10.1016/S1470-2045(17)30180-8
 
-72. Skoulidis F, Li BT, Hochmair M, et al. Pooled safety analysis and management of sotorasib-related adverse events in KRAS G12C-mutated advanced non-small cell lung cancer Oncologist, 2025, 30(1): oyae356. https://doi.org/10.1093/oncolo/oyae356.
+72. Skoulidis F, Li BT, Hochmair M, Govindan R, Vincent M, van der Wekken AJ, et al. Pooled safety analysis and management of sotorasib-related adverse events in KRAS G12C-mutated advanced non-small cell lung cancer. Oncologist. 2025;30(1):oyae356. https://doi.org/10.1093/oncolo/oyae356
 
-73. Chour A, Denis J, Mascaux C, et al. Brief Report: Severe Sotorasib-Related Hepatotoxicity and Non-Liver Adverse Events Associated With Sequential Anti-Programmed Cell Death (Ligand)1 and Sotorasib Therapy in KRASG12C-Mutant Lung Cancer J Thorac Oncol, 2023, 18(10): 1408-1415. https://doi.org/10.1016/j.jtho.2023.05.013.
+73. Chour A, Denis J, Mascaux C, Zysman M, Bigay-Game L, Swalduz A, et al. Brief report: severe sotorasib-related hepatotoxicity and non-liver adverse events associated with sequential anti-programmed cell death (ligand)1 and sotorasib therapy in KRASG12C-mutant lung cancer. J Thorac Oncol. 2023;18(10):1408-1415. https://doi.org/10.1016/j.jtho.2023.05.013
 
-74. Zhang J, Johnson M, Barve M, et al. Practical Guidance for the Management of Adverse Events in Patients with KRASG12C-Mutated Non-Small Cell Lung Cancer Receiving Adagrasib Oncologist, 2023, 28(4): 287-296. https://doi.org/10.1093/oncolo/oyad051.
+74. Zhang J, Johnson M, Barve M, Bazhenova L, McCarthy M, Schwartz R, et al. Practical guidance for the management of adverse events in patients with KRASG12C-mutated non-small cell lung cancer receiving adagrasib. Oncologist. 2023;28(4):287-296. https://doi.org/10.1093/oncolo/oyad051
 
-75. Zer A, Ahn MJ, Barlesi F, et al. Early and locally advanced non-small-cell lung cancer: ESMO Clinical Practice Guideline for diagnosis, treatment and follow-up Ann Oncol, 2025, 36(11): 1245-1262. https://doi.org/10.1016/j.annonc.2025.08.003.
+75. Zer A, Ahn MJ, Barlesi F, Bubendorf L, De Ruysscher D, Garrido P, et al. Early and locally advanced non-small-cell lung cancer: ESMO clinical practice guideline for diagnosis, treatment and follow-up. Ann Oncol. 2025;36(11):1245-1262. https://doi.org/10.1016/j.annonc.2025.08.003
 
-76. Akamatsu H, Sakata S, Azuma K, et al. A Single-Arm Phase 2 Study of Sotorasib Plus Carboplatin and Pemetrexed in Patients With Advanced Nonsquamous NSCLC With KRAS G12C Mutation (WJOG14821L, SCARLET) J Thorac Oncol, 2025, 20(6): 775-785. https://doi.org/10.1016/j.jtho.2025.01.006.
+76. Akamatsu H, Sakata S, Azuma K, Yoshioka H, Uemura T, Tsuchiya-Kawano Y, et al. A single-arm phase 2 study of sotorasib plus carboplatin and pemetrexed in patients with advanced nonsquamous NSCLC with KRAS G12C mutation (WJOG14821L, SCARLET). J Thorac Oncol. 2025;20(6):775-785. https://doi.org/10.1016/j.jtho.2025.01.006
 
-77. ClinicalTrials.gov. Bethesda (MD): National Library of Medicine (US). NCT05920356, NCT06793215, NCT06119581, NCT07491445, NCT07805954, NCT06252649, NCT07541170, NCT07252232, NCT06890598[EB/OL]. [2026-11-15]. https://clinicaltrials.gov/.
+77. ClinicalTrials.gov. Bethesda (MD): National Library of Medicine (US). Trial registry identifiers: NCT05920356, NCT06793215, NCT06119581, NCT07491445, NCT07805954, NCT06252649, NCT07541170, NCT07252232, NCT06890598. Available at: https://clinicaltrials.gov (accessed 15 November 2026).
 
-78. Riedl JM, Matsubara H, McNeil R, et al. Emerging landscape of KRAS inhibitors in cancer treatment Cancer Cell, 2026, 44(3): 471-497. https://doi.org/10.1016/j.ccell.2026.01.001.
+78. Riedl JM, Matsubara H, McNeil R, Patel PS, Fece de la Cruz F, Gulhan DC, et al. Emerging landscape of KRAS inhibitors in cancer treatment. Cancer Cell. 2026;44(3):471-497. https://doi.org/10.1016/j.ccell.2026.01.001
 
-79. Molina-Arcas M, Downward J. Exploiting the therapeutic implications of KRAS inhibition on tumor immunity Cancer Cell, 2024, 42(3): 338-357. https://doi.org/10.1016/j.ccell.2024.02.012.
+79. Molina-Arcas M, Downward J. Exploiting the therapeutic implications of KRAS inhibition on tumor immunity. Cancer Cell. 2024;42(3):338-357. https://doi.org/10.1016/j.ccell.2024.02.012
 
-80. Burns TF, Ammakkanavar NR, Hollebecque A, et al. Efficacy and Safety of Olomorasib in Combination With Pembrolizumab in Treatment of Patients With KRAS G12C-Mutant Advanced NSCLC J Thorac Oncol, 2026, 21(4): 103528. https://doi.org/10.1016/j.jtho.2025.11.018.
+80. Burns TF, Ammakkanavar NR, Hollebecque A, Lee DH, Koyama T, Cassier PA, et al. Efficacy and safety of olomorasib in combination with pembrolizumab in treatment of patients with KRAS G12C-mutant advanced NSCLC. J Thorac Oncol. 2026;21(4):103528. https://doi.org/10.1016/j.jtho.2025.11.018
 
-81. Tai D, Conroy T, Lee J, et al. Pan-Asian adapted ESMO Clinical Practice Guidelines for the diagnosis, treatment and follow-up of patients with pancreatic cancer ESMO Open, 2025, 10(10): 105826. https://doi.org/10.1016/j.esmoop.2025.105826.
+81. Tai D, Conroy T, Lee JJX, Chee CE, Hao CY, Wijaya I, et al. Pan-Asian adapted ESMO clinical practice guidelines for the diagnosis, treatment and follow-up of patients with pancreatic cancer. ESMO Open. 2025;10(10):105826. https://doi.org/10.1016/j.esmoop.2025.105826
 
-82. Ebright RY, Dilly J, Shaw AT, et al. Response and Resistance to RAS Inhibition in Cancer Cancer Discov, 2025, 15(7): 1325-1349. https://doi.org/10.1158/2159-8290.CD-25-0349.
+82. Ebright RY, Dilly J, Shaw AT, Aguirre AJ. Response and resistance to RAS inhibition in cancer. Cancer Discov. 2025;15(7):1325-1349. https://doi.org/10.1158/2159-8290.CD-25-0349
 
-83. Awad MM, Liu S, Rybkin II, et al. Acquired Resistance to KRAS G12C Inhibition in Cancer N Engl J Med, 2021, 384(25): 2382-2393. https://doi.org/10.1056/NEJMoa2105281.
+83. Awad MM, Liu S, Rybkin II, Arbour KC, Dilly J, Zhu VW, et al. Acquired resistance to KRAS G12C inhibition in cancer. N Engl J Med. 2021;384(25):2382-2393. https://doi.org/10.1056/NEJMoa2105281
 
-84. Solanki HS, Shah H, Imbody D, et al. RAS-GTP Inhibition Overcomes Acquired Resistance to KRASG12C Inhibitors Mediated by Oncogenic and Wild-Type RAS Activation in Non-Small Cell Lung Cancer Cancer Res, 2026, 86(2): 467-484. https://doi.org/10.1158/0008-5472.CAN-25-0600.
+84. Solanki HS, Shah H, Imbody D, Desai B, Kato R, Miroshnychenko D, et al. RAS-GTP inhibition overcomes acquired resistance to KRASG12C inhibitors mediated by oncogenic and wild-type RAS activation in non-small cell lung cancer. Cancer Res. 2025;86(2):467-484. https://doi.org/10.1158/0008-5472.CAN-25-0600
 
-85. Yaeger R, Mezzadra R, Sinopoli J, et al. Molecular Characterization of Acquired Resistance to KRASG12C-EGFR Inhibition in Colorectal Cancer Cancer Discov, 2023, 13(1): 41-55. https://doi.org/10.1158/2159-8290.CD-22-0405.
+85. Yaeger R, Mezzadra R, Sinopoli J, Bian Y, Marasco M, Kaplun E, et al. Molecular characterization of acquired resistance to KRASG12C-EGFR inhibition in colorectal cancer. Cancer Discov. 2022;13(1):41-55. https://doi.org/10.1158/2159-8290.CD-22-0405
 
-86. Zhao Y, Murciano-Goroff YR, Xue JY, et al. Diverse alterations associated with resistance to KRAS(G12C) inhibition Nature, 2021, 599(7886): 679-683. https://doi.org/10.1038/s41586-021-04065-2.
+86. Zhao Y, Murciano-Goroff YR, Xue JY, Ang A, Lucas J, Mai TT, et al. Diverse alterations associated with resistance to KRAS(G12C) inhibition. Nature. 2021;599(7886):679-683. https://doi.org/10.1038/s41586-021-04065-2
 
-87. Dilly J, Hoffman MT, Abbassi L, et al. Mechanisms of Resistance to Oncogenic KRAS Inhibition in Pancreatic Cancer Cancer Discov, 2024, 14(11): 2135-2161. https://doi.org/10.1158/2159-8290.CD-24-0177.
+87. Dilly J, Hoffman MT, Abbassi L, Li Z, Paradiso F, Parent BD, et al. Mechanisms of resistance to oncogenic KRAS inhibition in pancreatic cancer. Cancer Discov. 2024;14(11):2135-2161. https://doi.org/10.1158/2159-8290.CD-24-0177
 
-88. Castet F, Tian TV, Macarulla T. Comparative genomic landscape of acquired resistance in pancreatic cancer treated with pan-RAS or KRASG12C inhibitors Ann Oncol, 2025, 36(11): 1422-1424. https://doi.org/10.1016/j.annonc.2025.06.018.
+88. Castet F, Tian TV, Macarulla T. Comparative genomic landscape of acquired resistance in pancreatic cancer treated with pan-RAS or KRASG12C inhibitors. Ann Oncol. 2025;36(11):1422-1424. https://doi.org/10.1016/j.annonc.2025.06.018
 
-89. Dy GK, Govindan R, Velcheti V, et al. Long-Term Outcomes and Molecular Correlates of Sotorasib Efficacy in Patients With Pretreated KRAS G12C-Mutated Non-Small-Cell Lung Cancer: 2-Year Analysis of CodeBreaK 100 J Clin Oncol, 2023, 41(18): 3311-3317. https://doi.org/10.1200/JCO.22.02524.
+89. Dy GK, Govindan R, Velcheti V, Falchook GS, Italiano A, Wolf J, et al. Long-term outcomes and molecular correlates of sotorasib efficacy in patients with pretreated KRAS G12C-mutated non-small-cell lung cancer: 2-year analysis of CodeBreaK 100. J Clin Oncol. 2023;41(18):3311-3317. https://doi.org/10.1200/JCO.22.02524
 
-90. Skoulidis F, Li BT, de Langen AJ, et al. Molecular determinants of sotorasib clinical efficacy in KRASG12C-mutated non-small-cell lung cancer Nat Med, 2025, 31(8): 2755-2767. https://doi.org/10.1038/s41591-025-03732-5.
+90. Skoulidis F, Li BT, de Langen AJ, Hong DS, Lena H, Wolf J, et al. Molecular determinants of sotorasib clinical efficacy in KRASG12C-mutated non-small-cell lung cancer. Nat Med. 2025;31(8):2755-2767. https://doi.org/10.1038/s41591-025-03732-5
 
-91. Negrao MV, Paula AG, Molkentine D, et al. Impact of Co-mutations and Transcriptional Signatures in Non-Small Cell Lung Cancer Patients Treated with Adagrasib in the KRYSTAL-1 Trial Clin Cancer Res, 2025, 31(6): 1069-1081. https://doi.org/10.1158/1078-0432.CCR-24-2310.
+91. Negrao MV, Paula AG, Molkentine D, Hover L, Nilsson M, Vokes N, et al. Impact of co-mutations and transcriptional signatures in non-small cell lung cancer patients treated with adagrasib in the KRYSTAL-1 trial. Clin Cancer Res. 2025;31(6):1069-1081. https://doi.org/10.1158/1078-0432.CCR-24-2310
 
-92. Di Federico A, Hong L, Elkrief A, et al. Lung adenocarcinomas with mucinous histology: clinical, genomic, and immune microenvironment characterization and outcomes to immunotherapy-based treatments and KRASG12C inhibitors Ann Oncol, 2025, 36(3): 297-308. https://doi.org/10.1016/j.annonc.2024.11.014.
+92. Di Federico A, Hong L, Elkrief A, Thummalapalli R, Cooper AJ, Ricciuti B, et al. Lung adenocarcinomas with mucinous histology: clinical, genomic, and immune microenvironment characterization and outcomes to immunotherapy-based treatments and KRASG12C inhibitors. Ann Oncol. 2025;36(3):297-308. https://doi.org/10.1016/j.annonc.2024.11.014
 
-93. Passiglia F, Pepe F, Russo G, et al. Circulating tumor DNA dynamic variation predicts sotorasib efficacy in KRASp.G12C-mutated advanced non-small cell lung cancer Cancer, 2025, 131(11): e35917. https://doi.org/10.1002/cncr.35917.
+93. Passiglia F, Pepe F, Russo G, Garbo E, Listì A, Benso F, et al. Circulating tumor DNA dynamic variation predicts sotorasib efficacy in KRAS p.G12C-mutated advanced non-small cell lung cancer. Cancer. 2025;131(11):e35917. https://doi.org/10.1002/cncr.35917
 
-94. Choi Y, Dharia NV, Jun T, et al. Circulating Tumor DNA Dynamics Reveal KRAS G12C Mutation Heterogeneity and Response to Treatment with the KRAS G12C Inhibitor Divarasib in Solid Tumors Clin Cancer Res, 2024, 30(17): 3788-3797. https://doi.org/10.1158/1078-0432.CCR-24-0255.
+94. Choi Y, Dharia NV, Jun T, Chang J, Royer-Joo S, Yau KK, et al. Circulating tumor DNA dynamics reveal KRAS G12C mutation heterogeneity and response to treatment with the KRAS G12C inhibitor divarasib in solid tumors. Clin Cancer Res. 2024;30(17):3788-3797. https://doi.org/10.1158/1078-0432.CCR-24-0255
 
-95. Ernst SM, van Marion R, Atmodimedjo PN, et al. Clinical Utility of Circulating Tumor DNA in Patients With Advanced KRASG12C-Mutated NSCLC Treated With Sotorasib J Thorac Oncol, 2024, 19(7): 995-1006. https://doi.org/10.1016/j.jtho.2024.04.007.
+95. Ernst SM, van Marion R, Atmodimedjo PN, de Jonge E, Mathijssen RHJ, Paats MS, et al. Clinical utility of circulating tumor DNA in patients with advanced KRASG12C-mutated NSCLC treated with sotorasib. J Thorac Oncol. 2024;19(7):995-1006. https://doi.org/10.1016/j.jtho.2024.04.007
