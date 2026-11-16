@@ -20,6 +20,7 @@ Key architectural principles:
   8. Authentic cellular and biological morphology in Panel B (tumor cell, T cell, mitochondrion, macropinocytosis).
 """
 
+import base64
 import math
 import os
 import shutil
@@ -986,14 +987,30 @@ def icon_senescence(x, y):
 
 ICONS = [icon_metabolic, icon_macro, icon_immune, icon_senescence]
 
+# Load publication-grade 3D scientific illustrations for Panel B
+ASSET_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, '..', 'assets'))
+IMG_B64 = {}
+for k, fname in enumerate(['metabolism.jpg', 'macropinocytosis.jpg', 'immune.jpg', 'senescence.jpg']):
+    fpath = os.path.join(ASSET_DIR, fname)
+    if os.path.exists(fpath):
+        with open(fpath, 'rb') as fh:
+            IMG_B64[k] = base64.b64encode(fh.read()).decode('utf-8')
+
 for k, (title, sub, mech, drug, status) in enumerate(CARDS):
     x = k * (CW + CG) + 1.0
     D.add('bg', '<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" rx="2.2" '
                 'fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.45" filter="url(#subtle-shadow)"/>'
           % (x, BY, CW, BH))
-    ICONS[k](x + 1.5, BY + 1.5)
-    D.text(x + 2.5, BY + 19.5, title, bold=True, color=INK, size=FS)
-    D.text(x + 2.5, BY + 24.0, sub, color=INK_MUTED, bold=True, size=FS_XS)
+    if k in IMG_B64:
+        # Embed publication-grade 3D scientific illustration from AI model seamlessly against white background
+        D.add('body', '<image href="data:image/jpeg;base64,%s" x="%.2f" y="%.2f" width="%.2f" height="%.2f" '
+                     'preserveAspectRatio="xMidYMid meet"/>'
+              % (IMG_B64[k], x + 1.5, BY + 1.5, CW - 3.0, 16.5))
+    else:
+        ICONS[k](x + 1.5, BY + 1.5)
+        
+    D.text(x + 2.5, BY + 19.8, title, bold=True, color=INK, size=FS)
+    D.text(x + 2.5, BY + 24.2, sub, color=INK_MUTED, bold=True, size=FS_XS)
     D.text(x + 2.5, BY + 28.5, mech, color=GREY, size=FS_XS)
     drug_box(x + 2.0, BY + 34.0, CW - 4.0, 7.5, drug, status=status)
 
