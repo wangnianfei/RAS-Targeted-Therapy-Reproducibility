@@ -3,16 +3,17 @@
 **Running Title:** RAS-targeted therapy in solid tumours  
 **Article Type:** Review Article
 
-**Authors:** Nianfei Wang, MD, PhD^[1], Chiyu Sheng, MD^[1], Jian Qi, PhD^[2,3], Shanghu Wang, MD, PhD^[4,*]
+**Authors:** Nianfei Wang, MD, PhD^[1], Chiyu Sheng, MD^[1], Jian Qi, PhD^[2,3], Shumin Shen, PhD^[4], Shanghu Wang, MD, PhD^[5,*]
 
 **Affiliations:**  
 ^1 Department of Oncology, The Second Hospital of Anhui Medical University, No. 678 Furong Road, Hefei, Anhui, 230601, China  
 ^2 Hefei Cancer Hospital of CAS, Institute of Health and Medical Technology, Hefei Institutes of Physical Science, Chinese Academy of Sciences (CAS), Hefei, Anhui, 230031, China  
 ^3 Science Island Branch, Graduate School of the University of Science and Technology of China, Hefei, Anhui, 230026, China  
-^4 Department of Radiation Therapy, Anhui Chest Hospital, No. 397 Jixi Road, Hefei, Anhui, 230026, China  
+^4 School of Life Sciences, Fudan University, No. 2005 Songhu Road, Shanghai, 200438, China  
+^5 Department of Radiation Therapy, Anhui Chest Hospital, No. 397 Jixi Road, Hefei, Anhui, 230026, China  
 
 ***Correspondence to:** Shanghu Wang, MD, PhD, Department of Radiation Therapy, Anhui Chest Hospital, No. 397 Jixi Road, Hefei, Anhui, 230026, China. Telephone: +86-551-63615120. Email: wangshanghu@mail.ustc.edu.cn  
-**Author Emails:** N. Wang: wangnianfei@ustc.edu; C. Sheng: 2445012211@stu.ahmu.edu.cn; J. Qi: qijian@mail.ustc.edu.cn; S. Wang: wangshanghu@mail.ustc.edu.cn  
+**Author Emails:** N. Wang: wangnianfei@ustc.edu; C. Sheng: 2445012211@stu.ahmu.edu.cn; J. Qi: qijian@mail.ustc.edu.cn; S. Shen: 26110700098@m.fudan.edu.cn; S. Wang: wangshanghu@mail.ustc.edu.cn  
 **Word Count (Abstract):** 190 words  
 **Word Count (Main Text):** 4,927 words (excluding title page, abstract, references, figure legends, and tables)  
 **Display Items:** 5 Figures, 2 Tables  
@@ -348,6 +349,9 @@ All data synthesised in this review were derived from peer-reviewed publications
 **Nianfei Wang:** Conceptualization, Investigation, Formal analysis, Writing - original draft, Writing - review & editing.
 **Chiyu Sheng:** Resources, Data curation, Investigation, Writing - original draft (supporting).
 **Jian Qi:** Software, Formal analysis, Data curation, Visualization, Writing - review & editing.
+**Shumin Shen:** Data curation, Investigation, Writing - original draft (supporting), Writing - review & editing.
+
+All authors contributed substantially to the conception, literature synthesis, and critical revision of this manuscript. S.W. conceptualised the overarching study framework, devised the analytical strategy, and supervised the project. N.W. led the drafting of the manuscript and performed evidence analysis. C.S. conducted systematic literature retrieval, compiled reference records, and drafted initial sections. J.Q. extracted trial data, conducted quantitative syntheses, generated high-resolution visualizations, and edited the text. S.S. contributed to clinical trial data curation, critical evidence verification, draft writing, and manuscript revision. All authors critically reviewed and approved the final manuscript and agree to be accountable for all aspects of the work.
 
 ---
 
