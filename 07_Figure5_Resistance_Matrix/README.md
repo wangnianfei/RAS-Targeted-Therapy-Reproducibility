@@ -44,19 +44,19 @@
 │   ├── mechanism_to_logic_mapping.csv      # 映射明细表
 │   └── resistance_detection_rates.csv      # NSCLC 与 CRC 耐药变异检出率
 ├── code/
-│   └── run_figure5.R              # 独立 R 绘图脚本
+│   └── run_figure5.py             # 独立 Python 绘图脚本 (400 DPI / 矢量输出)
 └── vector_figures/
     ├── Figure5_resistance_combination.pdf  # 高清矢量 PDF
     ├── Figure5_resistance_combination.svg  # 矢量 SVG
-    └── Figure5_resistance_combination.png  # 300 dpi 印刷级预览图
+    └── Figure5_resistance_combination.png  # 400 DPI 印刷级预览图
 ```
 
 ## 5. 绘图工具、软件与环境版本 (Tools & Software)
-- **语言与环境**: R 4.3+
-- **关键依赖库**: `ggplot2` >= 3.5.0, `grid`, `dplyr`
+- **语言与环境**: Python 3.9+
+- **关键依赖库**: `matplotlib` >= 3.8.0, `numpy`
 
 ## 6. 复现指令 (How to Reproduce)
 在当前目录下运行：
 ```bash
-Rscript code/run_figure5.R
+python3 code/run_figure5.py
 ```

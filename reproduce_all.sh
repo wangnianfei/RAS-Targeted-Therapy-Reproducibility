@@ -39,12 +39,8 @@ else
 fi
 
 echo ""
-echo "--- [7/7] Reproducing Figure 5: Resistance Matrix (R) ---"
-if command -v Rscript >/dev/null 2>&1; then
-    (cd "$REPO_DIR/07_Figure5_Resistance_Matrix" && Rscript code/run_figure5.R) || echo "  ! Rscript resistance matrix notice"
-else
-    echo "  ! Rscript not found in PATH; skipping R figure generation. High-res vector outputs are pre-rendered in vector_figures/."
-fi
+echo "--- [7/7] Reproducing Figure 5: Resistance Matrix ---"
+python3 "$REPO_DIR/07_Figure5_Resistance_Matrix/code/run_figure5.py"
 
 echo ""
 echo "=== Full Reproduction Complete! All vector artwork is up-to-date in vector_figures/ ==="
