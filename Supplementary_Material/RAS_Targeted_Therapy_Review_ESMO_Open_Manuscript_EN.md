@@ -1,28 +1,44 @@
 # RAS-targeted therapy in solid tumours: what the randomised trials establish and what they leave open
 
 **Running Title:** RAS-targeted therapy in solid tumours  
-**Article Type:** Review Article  
-**Author:** Nianfei Wang, MD, PhD  
-**Affiliation:** Department of Medical Oncology and Cancer Precision Medicine Laboratory, Beijing, China  
-**Correspondence:** Correspondence: Nianfei Wang, MD, PhD. Email: nianfei.wang@precision-oncology.org  
-**Word Count:** 4,820 words (excluding abstract, references, figure legends, and tables)  
-**Display Items:** 5 Figures, 2 Tables
+**Article Type:** Review Article
+
+**Authors:** Nianfei Wang, MD, PhD^[1], Chiyu Sheng, MD^[1], Jian Qi, PhD^[2,3], Shanghu Wang, MD, PhD^[4,*]
+
+**Affiliations:**  
+^1 Department of Oncology, The Second Hospital of Anhui Medical University, No. 678 Furong Road, Hefei, Anhui, 230601, China  
+^2 Hefei Cancer Hospital of CAS, Institute of Health and Medical Technology, Hefei Institutes of Physical Science, Chinese Academy of Sciences (CAS), Hefei, Anhui, 230031, China  
+^3 Science Island Branch, Graduate School of the University of Science and Technology of China, Hefei, Anhui, 230026, China  
+^4 Department of Radiation Therapy, Anhui Chest Hospital, No. 397 Jixi Road, Hefei, Anhui, 230026, China  
+
+***Correspondence to:** Shanghu Wang, MD, PhD, Department of Radiation Therapy, Anhui Chest Hospital, No. 397 Jixi Road, Hefei, Anhui, 230026, China. Telephone: +86-551-63615120. Email: wangshanghu@mail.ustc.edu.cn  
+**Author Emails:** N. Wang: wangnianfei@ustc.edu; C. Sheng: 2445012211@stu.ahmu.edu.cn; J. Qi: qijian@mail.ustc.edu.cn; S. Wang: wangshanghu@mail.ustc.edu.cn  
+**Word Count (Abstract):** 190 words  
+**Word Count (Main Text):** 4,927 words (excluding abstract, references, figure legends, and tables)  
+**Display Items:** 5 Figures, 2 Tables  
+**References:** 95 references
 
 ---
 
 ## Highlights
 
-- First-generation covalent KRAS G12C inhibitors establish reproducible gains in progression-free survival across advanced NSCLC, but post-progression crossover substantially dilutes overall survival benefits in randomised trials.
-- In metastatic colorectal cancer, rapid rebound activation of upstream EGFR mandates vertical receptor co-inhibition, yet targeted combinations face an elevated bar to displace frontline doublet chemotherapy.
-- The pan-RAS(ON) tri-complex molecular glue daraxonrasib establishes the first statistically significant overall survival doubling in pretreated metastatic pancreatic ductal adenocarcinoma.
-- Chronic cumulative low-grade toxicities, rather than acute grade >= 3 events, represent the dominant determinant of long-term adherence and therapeutic durability.
-- Overcoming heterogeneous polyclonal resistance and establishing frontline biomarker-guided stratification represent the primary imperatives for the next generation of clinical trials.
+- Direct RAS inhibitors yield robust PFS gains across phase III trials.
+- Post-progression crossover substantially dilutes overall survival benefits.
+- Vertical EGFR blockade overcomes rapid adaptive feedback in colorectal cancer.
+- Tri-complex multi-RAS(ON) inhibition doubles overall survival in PDAC.
+- Managing chronic low-grade toxicities is vital for long-term adherence.
 
 ---
 
 ## Abstract
 
-Direct pharmacological inhibition of RAS, long dismissed as an undruggable target, has entered clinical reality following the discovery of allosteric switch-II pockets and tri-complex molecular glues. This review synthesises seven pivotal phase III randomised controlled trials across advanced non-small cell lung cancer, colorectal cancer, pancreatic ductal adenocarcinoma, and NRAS-mutant melanoma. These trials consistently demonstrate meaningful gains in progression-free survival and objective response rates. However, overall survival benefits have been substantially confounded by post-progression crossover, achieving statistical significance only in studies that strictly prohibited crossover or where effective salvage therapy was unavailable. In colorectal cancer, rapid pathway reactivation through upstream receptor tyrosine kinases mandates vertical EGFR blockade, although combination regimens have yet to surpass standard second-line chemotherapy. Safety profiles are predominantly characterised by low-grade rash, diarrhoea, and transaminase elevations; while grade >= 3 adverse event rates remain comparable to or lower than cytotoxic comparators, cumulative toxicities require careful surveillance. Ongoing trials evaluating first-line combinations and adjuvant escalation will determine whether moving RAS inhibitors into earlier disease settings improves curative intent. Pre-treatment molecular stratification and counteracting polyclonal resistance represent the core priorities for the next generation of trials.
+**Background:** Direct pharmacological inhibition of RAS, long dismissed as an undruggable target, has entered clinical oncology following the discovery of allosteric switch-II pockets and tri-complex molecular glues.
+
+**Methods & Evidence Synthesis:** This review synthesises seven pivotal phase III randomised controlled trials across advanced non-small cell lung cancer, colorectal cancer, pancreatic ductal adenocarcinoma, and NRAS-mutant melanoma, tracking efficacy endpoints, crossover mechanics, and class-specific toxicities.
+
+**Key Findings:** Phase III trials consistently demonstrate meaningful gains in progression-free survival and objective response rates. However, overall survival benefits have been substantially confounded by post-progression crossover, achieving statistical significance only where crossover was strictly prohibited or where effective salvage therapy was unavailable. In colorectal cancer, rapid pathway reactivation through upstream receptor tyrosine kinases mandates vertical EGFR blockade, although targeted combinations have yet to surpass standard second-line chemotherapy. Safety profiles are dominated by low-grade rash, diarrhoea, and transaminase elevations; while grade >= 3 event rates remain comparable to cytotoxic comparators, cumulative toxicities require proactive surveillance.
+
+**Conclusions:** The frontline migration of direct RAS inhibitors and adjuvant escalation will determine whether targeting RAS improves curative intent. Overcoming polyclonal resistance and establishing pre-treatment molecular stratification represent the core priorities for next-generation trials.
 
 **Keywords:** RAS-targeted therapy; KRAS inhibitors; Randomised controlled trials; Drug resistance; Precision oncology
 
@@ -147,19 +163,22 @@ Direct pharmacological inhibition of RAS has validated decades of structural bio
 ---
 
 ## Acknowledgements
-The authors thank the trial participants, their families, and the multidisciplinary clinical and translational investigators who conducted the phase III randomised studies referenced in this review.
+The authors thank the trial participants, their families, and the multidisciplinary clinical and translational investigators who conducted the phase III randomised studies synthesised in this review.
 
 ## Funding
-This work was supported by the National Natural Science Foundation of China (Grant Nos. 82272840, 82473125) and the Clinical Precision Oncology Research Programme.
+This work was supported by the Scientific Research Project of Anhui Provincial Health Commission (Grant No. AHWJ:2025BAd20016).
 
 ## Conflict of interest statement
-The author declares no competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+The authors declare no competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
 
 ## Data availability statement
 All data synthesised in this review were derived from peer-reviewed publications and official clinical registry records (ClinicalTrials.gov). High-resolution vector figures, curated data extraction sheets, and reproducible R/Python code scripts are publicly hosted at the GitHub repository: https://github.com/wangnianfei/RAS-Targeted-Therapy-Reproducibility.
 
-## Author contributions
-N.W. conceived the review, designed the structural framework, performed literature synthesis and data extraction, generated figures and tables, and wrote the manuscript.
+## Author contributions (CRediT Statement)
+**Shanghu Wang:** Conceptualization, Methodology, Supervision, Project administration, Writing - review & editing.
+**Nianfei Wang:** Conceptualization, Investigation, Formal analysis, Writing - original draft, Writing - review & editing.
+**Chiyu Sheng:** Resources, Data curation, Investigation, Writing - original draft (supporting).
+**Jian Qi:** Software, Formal analysis, Data curation, Visualization, Writing - review & editing.
 
 ---
 
