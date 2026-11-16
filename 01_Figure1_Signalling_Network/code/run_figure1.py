@@ -500,16 +500,17 @@ node_shp2 = pill(58.0, 35.0, 11.5, 5.6, 'SHP2', 'adapt')
 node_sos1 = pill(80.0, 35.0, 13.0, 6.0, 'SOS1', 'adapt')
 
 # Blue activation arrows connecting upstream cascade
-arrow((RX['rtk'] + 1.2, 30.5), (node_grb2['cx'], node_grb2['top'][1]),
-      c1=(RX['rtk'] + 5.0, 34.0), c2=(node_grb2['cx'] - 4.0, 32.0), col=ACT_COL, lw=0.50)
+arrow((RX['rtk'] + 1.3, 30.5), node_grb2['left'],
+      c1=(RX['rtk'] + 5.5, 31.0), c2=(node_grb2['left'][0] - 4.5, 35.0),
+      col=ACT_COL, lw=0.52)
 arrow(node_grb2['right'], node_shp2['left'], col=ACT_COL, lw=0.50)
 arrow((RX['int'], 27.2), (node_shp2['cx'], node_shp2['top'][1]), col=ACT_COL, lw=0.50)
 arrow(node_shp2['right'], node_sos1['left'], col=ACT_COL, lw=0.50)
 
-# Upstream Inhibitors Card (SHP2 & SOS1)
-card_upstream = drug_box(52.0, 44.5, 34.0, 8.8, 'SHP2 / SOS1 inh.', 'TNO155, BI 1701963', 'clinical')
+# Upstream Inhibitors Card (SHP2 & SOS1) - Narrower width to avoid blocking the feedback dashed line
+card_upstream = drug_box(49.0, 44.5, 26.0, 8.8, 'SHP2 / SOS1 inh.', 'TNO155, BI 1701963', 'clinical')
 arrow((node_shp2['cx'], card_upstream['top'][1]), node_shp2['bottom'], end='tee', col=INH_COL, lw=0.50)
-arrow((node_sos1['cx'], card_upstream['top'][1]), node_sos1['bottom'], end='tee', col=INH_COL, lw=0.50)
+arrow((card_upstream['right'][0] - 2.5, card_upstream['top'][1]), (76.5, node_sos1['bottom'][1]), end='tee', col=INH_COL, lw=0.50)
 
 # ============================================================ CENTRAL SWITCH ==
 # Central switch shifted right: GDP at 104.0, GTP at 136.0 (perfect alignment under GPCR and Immune R)
