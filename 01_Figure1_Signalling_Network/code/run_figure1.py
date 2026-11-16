@@ -5,7 +5,8 @@ ESMO Open Review Standard (180mm x 172mm, Nature Reviews Cancer / Science Jewel-
 - Panel a: Python-generated vector signaling network, polished with Science/Nature aesthetics,
   zero line collisions, dedicated 'heads' layer for visible razor-sharp arrowheads and T-bars,
   horizontal and parallel inhibitor bars, zero border clipping, centered mutation badge,
-  unbroken lipid bilayer, aligned outcome baselines.
+  GAP (NF1) strictly localized to the cytosol (胞浆 / 细胞膜内侧) below the unbroken lipid bilayer,
+  aligned outcome baselines.
 - Panel b: AI-generated 4 hallmark illustrations with rich clinical annotations and drug boxes.
 """
 
@@ -488,22 +489,21 @@ D.text(153.2, 12.5, 'Activation cascade (→)', color=ACT_COL, size=4.2*PT, bold
 arrow((148.0, 15.2), (151.5, 15.2), end='tee', col=INH_COL, lw=0.55, layer='heads')
 D.text(153.2, 15.2, 'Inhibition / feedback (--|)', color=INH_COL, size=4.2*PT, bold=True)
 
-# Adaptors & Upstream Modulation: GRB2 -> SHP2 -> SOS1
-# SOS1 adjusted to cx=76.5 to give ample 10.5mm clearance to KRAS-GDP (93.5)!
-node_grb2 = pill(38.0, 35.0, 11.5, 5.6, 'GRB2', 'adapt')
-node_shp2 = pill(58.0, 35.0, 11.5, 5.6, 'SHP2', 'adapt')
-node_sos1 = pill(76.5, 35.0, 13.0, 6.0, 'SOS1', 'adapt')
+# Adaptors & Upstream Modulation: GRB2 -> SHP2 -> SOS1 (cy = 35.5)
+node_grb2 = pill(38.0, 35.5, 11.5, 5.6, 'GRB2', 'adapt')
+node_shp2 = pill(58.0, 35.5, 11.5, 5.6, 'SHP2', 'adapt')
+node_sos1 = pill(76.5, 35.5, 13.0, 6.0, 'SOS1', 'adapt')
 
 # Blue activation arrow connecting EGFR tail to LEFT of GRB2
 arrow((24.5, 30.5), (node_grb2['left'][0] - 0.2, node_grb2['left'][1]),
-      c1=(27.5, 30.5), c2=(28.5, 35.0),
+      c1=(27.5, 30.5), c2=(28.5, 35.5),
       col=ACT_COL, lw=0.52)
 arrow(node_grb2['right'], (node_shp2['left'][0] - 0.2, node_shp2['left'][1]), col=ACT_COL, lw=0.50)
 arrow((RX['int'], 27.2), (node_shp2['cx'], node_shp2['top'][1] - 0.2), col=ACT_COL, lw=0.50)
 arrow(node_shp2['right'], (node_sos1['left'][0] - 0.2, node_sos1['left'][1]), col=ACT_COL, lw=0.50)
 
-# Upstream Inhibitors Card (SHP2 & SOS1) - Width 23.0mm, centered symmetrically under SHP2 and SOS1: x 54.0 - 77.0
-card_upstream = drug_box(54.0, 44.5, 23.0, 8.5, 'SHP2 / SOS1 inh.', 'TNO155, BI 1701963', 'clinical')
+# Upstream Inhibitors Card (SHP2 & SOS1) - Width 23.0mm: x 54.0 - 77.0
+card_upstream = drug_box(54.0, 44.8, 23.0, 8.5, 'SHP2 / SOS1 inh.', 'TNO155, BI 1701963', 'clinical')
 # SHP2 vertical inhibitor tee-bar at x=58.0 with 0.5mm clearance below pill!
 arrow((node_shp2['cx'], card_upstream['top'][1]), (node_shp2['cx'], node_shp2['bottom'][1] + 0.5),
       end='tee', col=INH_COL, lw=0.50)
@@ -512,7 +512,8 @@ arrow((73.5, card_upstream['top'][1]), (73.5, node_sos1['bottom'][1] + 0.5),
       end='tee', col=INH_COL, lw=0.50, tee_angle=0.0)
 
 # ============================================================ CENTRAL SWITCH ==
-GDP_X, GTP_X, SW_Y = 102.0, 138.0, 35.5
+# Central switch placed at SW_Y = 36.8 to provide generous cytosolic clearance for GAP (NF1)!
+GDP_X, GTP_X, SW_Y = 102.0, 138.0, 36.8
 
 def ras_node(cx, cy, col_key, nuc_txt):
     col = COL[col_key]
@@ -549,54 +550,55 @@ arrow((RX['gpcr'], 26.5), (node_gdp['cx'] - 1.0, node_gdp['top'][1] - 0.2), col=
 arrow((RX['imm'], 26.5), (node_gtp['cx'], node_gtp['top'][1] - 0.2), col=ACT_COL, lw=0.48)
 
 # SOS1 DIRECT ACTIVATION OF KRAS-GDP (GEF Exchange)
-# 10.5mm clear space from x=83.0 to 93.5! Horizontal arrow unobstructed!
-arrow(node_sos1['right'], (node_gdp['left'][0] - 0.2, node_gdp['left'][1]), col=ACT_COL, lw=0.58)
-# Text placed safely ABOVE the arrow at y=31.2 with zero overlap into SOS1!
-D.text((node_sos1['right'][0] + node_gdp['left'][0]) / 2, 31.2, 'GEF exchange',
+arrow(node_sos1['right'], (node_gdp['left'][0] - 0.2, 35.5), col=ACT_COL, lw=0.58)
+D.text((node_sos1['right'][0] + node_gdp['left'][0]) / 2, 31.5, 'GEF exchange',
        anchor='middle', color='#1D4ED8', bold=True, size=4.4*PT, halo=True)
 
-# GAP (NF1) - Positioned at cx=113.5, cy=20.2 (above hydrolysis arc, clear 4.5mm drop!)
-node_gap = pill(113.5, 20.2, 13.0, 4.2, 'GAP (NF1)', 'gap', border_col='#64748B')
+# ============================================================ GAP (NF1) =======
+# BIOLOGICALLY CORRECT CYTOSOLIC LOCALIZATION (细胞膜内侧 / 胞浆):
+# Membrane inner leaflet heads end at y = 23.5.
+# GAP is placed at cy = 26.2, h = 3.8 (top at y = 24.3, clear 0.8mm cytosolic clearance below membrane!)
+node_gap = pill(113.5, 26.2, 13.0, 3.8, 'GAP (NF1)', 'gap', border_col='#64748B')
 
 # Upper Arc: GTP -> GDP (Hydrolysis, Grey pathway)
-# Connects cleanly from KRAS-GTP upper-left border to KRAS-GDP upper-right border with zero penetration!
-arrow((129.5, 32.5), (110.8, 32.5),
-      (124.0, 26.5), (116.0, 26.5), col=INH_COL, lw=0.60)
-# GAP promotes hydrolysis (Arrow clearly drops from GAP to arc at x=113.5)
-arrow(node_gap['bottom'], (113.5, 26.8), col=ACT_COL, lw=0.50)
+# Connects cleanly from KRAS-GTP upper-left border to KRAS-GDP upper-right border
+arrow((129.5, 33.5), (110.8, 33.5),
+      (124.0, 29.8), (116.0, 29.8), col=INH_COL, lw=0.60)
+# GAP promotes hydrolysis (Arrow clearly drops from GAP bottom at y=28.1 to arc at y=30.4)
+arrow(node_gap['bottom'], (113.5, 30.4), col=ACT_COL, lw=0.50)
 
-# Oncogenic Mutation Blockade Badge Element: Centered at cx=120.0, width 13.0mm (x: 113.5 - 126.5)
+# Oncogenic Mutation Blockade Badge Element: Centered at cx=120.0, cy=35.0, width 13.0mm (x: 113.5 - 126.5)
 # Generous 3.0mm clearance to KRAS-GDP (110.5) and 3.0mm clearance to KRAS-GTP (129.5)! ZERO OVERLAP!
-D.add('body', '<rect x="113.5" y="32.5" width="13.0" height="3.8" rx="1.4" '
+D.add('body', '<rect x="113.5" y="33.2" width="13.0" height="3.6" rx="1.4" '
              'fill="#FFF1F2" stroke="#E11D48" stroke-width="0.45"/>')
-D.text(120.0, 34.3, 'G12/G13/Q61 lock', anchor='middle', color='#991B1B', bold=True, size=4.1*PT)
+D.text(120.0, 35.0, 'G12/G13/Q61 lock', anchor='middle', color='#991B1B', bold=True, size=4.1*PT)
 # Vertical inhibitor line up from badge to upper arc at x=120.0, ending with clean horizontal tee-bar on arc!
-arrow((120.0, 32.5), (120.0, 27.6), end='tee', col=INH_COL, lw=0.55, tee_angle=0.0)
+arrow((120.0, 33.2), (120.0, 30.0), end='tee', col=INH_COL, lw=0.55, tee_angle=0.0)
 
 # Lower Arc: GDP -> GTP (GEF Exchange, Blue activation cycle)
-# Connects cleanly from KRAS-GDP lower-right border to KRAS-GTP lower-left border with zero penetration!
-arrow((110.5, 38.5), (129.2, 38.5),
-      (116.0, 44.5), (124.0, 44.5), col=ACT_COL, lw=0.60)
-D.text(120.0, 46.8, 'GDP → GTP cycle', anchor='middle', color='#2563EB', bold=True, size=4.8*PT, halo=True)
+# Connects cleanly from KRAS-GDP lower-right border to KRAS-GTP lower-left border
+arrow((110.5, 39.8), (129.2, 39.8),
+      (116.0, 45.2), (124.0, 45.2), col=ACT_COL, lw=0.60)
+D.text(120.0, 47.2, 'GDP → GTP cycle', anchor='middle', color='#2563EB', bold=True, size=4.8*PT, halo=True)
 
 # ============================================================ DIRECT DRUGS ====
 # Class I & II docked to RAS-GDP (Bottom of RAS-GDP, width 32.5mm: x 85.0 - 117.5)
-D.add('body', '<rect x="85.0" y="49.0" width="32.5" height="10.5" rx="1.8" fill="#FFFFFF" '
+D.add('body', '<rect x="85.0" y="49.5" width="32.5" height="10.5" rx="1.8" fill="#FFFFFF" '
              'fill-opacity="0.96" stroke="#94A3B8" stroke-width="0.50" filter="url(#subtle-shadow)"/>')
-marker(87.5, 51.6, 'approved', s=0.85)
-D.text(90.0, 51.6 - FS_SM * 0.35, 'Class I: sotorasib, adagrasib', color=INK, bold=True, size=5.4*PT)
-marker(87.5, 56.2, 'clinical', s=0.85)
-D.text(90.0, 56.2 - FS_SM * 0.35, 'Class II: MRTX1133 (G12D)', color=INK, bold=True, size=5.4*PT)
+marker(87.5, 52.1, 'approved', s=0.85)
+D.text(90.0, 52.1 - FS_SM * 0.35, 'Class I: sotorasib, adagrasib', color=INK, bold=True, size=5.4*PT)
+marker(87.5, 56.7, 'clinical', s=0.85)
+D.text(90.0, 56.7 - FS_SM * 0.35, 'Class II: MRTX1133 (G12D)', color=INK, bold=True, size=5.4*PT)
 # Inhibitor tee bar sits with 0.5mm clearance below KRAS-GDP!
-arrow((node_gdp['cx'], 49.0), (node_gdp['cx'], node_gdp['bottom'][1] + 0.5), end='tee', col=INH_COL, lw=0.55)
+arrow((node_gdp['cx'], 49.5), (node_gdp['cx'], node_gdp['bottom'][1] + 0.5), end='tee', col=INH_COL, lw=0.55)
 
 # Class III & IV docked to RAS-GTP (Right side of RAS-GTP, width 29.5mm: x 149.0 - 178.5)
-D.add('body', '<rect x="149.0" y="30.5" width="29.5" height="10.0" rx="1.8" fill="#FFFFFF" '
+D.add('body', '<rect x="149.0" y="31.8" width="29.5" height="10.0" rx="1.8" fill="#FFFFFF" '
              'fill-opacity="0.96" stroke="#E11D48" stroke-width="0.50" filter="url(#subtle-shadow)"/>')
-marker(151.5, 33.2, 'clinical', s=0.85)
-D.text(153.5, 33.2 - FS_SM * 0.35, 'Class III: daraxonrasib', color=INK, bold=True, size=5.0*PT)
-marker(151.5, 37.8, 'clinical', s=0.85)
-D.text(153.5, 37.8 - FS_SM * 0.35, 'Class IV: ASP3082 (PROTAC)', color=INK, bold=True, size=5.0*PT)
+marker(151.5, 34.5, 'clinical', s=0.85)
+D.text(153.5, 34.5 - FS_SM * 0.35, 'Class III: daraxonrasib', color=INK, bold=True, size=5.0*PT)
+marker(151.5, 39.1, 'clinical', s=0.85)
+D.text(153.5, 39.1 - FS_SM * 0.35, 'Class IV: ASP3082 (PROTAC)', color=INK, bold=True, size=5.0*PT)
 # Inhibitor tee bar sits with 0.5mm clearance right of KRAS-GTP!
 arrow((149.0, node_gtp['cy']), (node_gtp['right'][0] + 0.5, node_gtp['cy']), end='tee', col=INH_COL, lw=0.55)
 
@@ -606,19 +608,17 @@ BUS_X = {'mapk': 18.0, 'rassf': 60.0, 'pi3k': 88.0, 'ral': 132.0, 'cyto': 164.0}
 
 # Drop from active KRAS-GTP to horizontal bus
 arrow(node_gtp['bottom'], (node_gtp['cx'], BUS_Y), end='none', col=ACT_COL, lw=0.65)
-# Label placed safely on the RIGHT of the vertical drop line with anchor='start' - ZERO overlap with Class I/II box!
 D.text(node_gtp['cx'] + 1.8, 52.5, 'Effector recruitment', anchor='start', color='#1D4ED8', bold=True, size=4.8*PT, halo=True)
 
 # Horizontal distribution bus spanning across the functional lanes (from MAPK x=18.0 to TIAM1 x=171.0)
 D.add('link', '<path d="M%.2f %.2f L%.2f %.2f" stroke="%s" stroke-width="0.55"/>'
       % (BUS_X['mapk'], BUS_Y, 171.0, BUS_Y, ACT_COL))
 
-# Four direct vertical drops for Columns 1-4
 for k in ('mapk', 'rassf', 'pi3k', 'ral'):
     x = BUS_X[k]
     arrow((x, BUS_Y), (x, 66.4), col=ACT_COL, lw=0.55)
 
-# Two separate, distinct drops for Column 5 (PLCε at 157.0 and TIAM1 at 171.0) - NO DROP INTO EMPTY AIR!
+# Two separate, distinct drops for Column 5 (PLCε at 157.0 and TIAM1 at 171.0)
 arrow((157.0, BUS_Y), (157.0, 66.4), col=ACT_COL, lw=0.55)
 arrow((171.0, BUS_Y), (171.0, 66.4), col=ACT_COL, lw=0.55)
 
@@ -633,7 +633,6 @@ node_erk = pill(BUS_X['mapk'], T3, 14.0, 5.8, 'ERK1/2', 'mapk')
 arrow(node_raf['bottom'], (node_mek['top'][0], node_mek['top'][1] - 0.2), col=ACT_COL)
 arrow(node_mek['bottom'], (node_erk['top'][0], node_erk['top'][1] - 0.2), col=ACT_COL)
 
-# Column 1 Drug Cards (Spaced 3.5mm from nodes: x 28.5 - 50.5, ample margin, horizontal lines!)
 card_raf_mek = drug_box(28.5, 78.0, 22.0, 8.0, 'RAF / MEK inh.', 'trametinib, encorafenib', 'approved')
 arrow(card_raf_mek['left'], (node_mek['right'][0] + 0.5, node_mek['right'][1]), end='tee', col=INH_COL, lw=0.50)
 
@@ -650,7 +649,6 @@ D.add('bg', '<g clip-path="url(#clipA)">')
 D.add('bg', '<ellipse cx="%.2f" cy="%.2f" rx="%.2f" ry="%.2f" fill="url(#nuc)"/>'
       % (NCX, NCY, NRX, NRY))
 
-# Double membrane nuclear envelope with open pore channel
 D.add('bg', '<path d="M %.2f %.2f A %.2f %.2f 0 0 0 0.0 %.2f '
              'M %.2f %.2f A %.2f %.2f 0 0 1 46.0 %.2f" '
              'fill="none" stroke="#7C3AED" stroke-width="0.55"/>'
@@ -664,7 +662,6 @@ D.add('bg', '<path d="M %.2f %.2f C %.2f %.2f %.2f %.2f %.2f %.2f" fill="none" s
 D.add('bg', '<path d="M %.2f %.2f C %.2f %.2f %.2f %.2f %.2f %.2f" fill="none" stroke="#7C3AED" stroke-width="0.55"/>'
       % (PORE_X2, PORE_Y, PORE_X2 + 0.8, PORE_Y + 0.3, PORE_X2 + 0.8, PORE_Y + 0.9, PORE_X2, PORE_Y + 1.2))
 
-# NPC subunits
 D.add('body', '<rect x="12.6" y="98.8" width="3.4" height="2.2" rx="0.9" fill="#EDE9FE" stroke="#7C3AED" stroke-width="0.35"/>')
 D.add('body', '<rect x="12.6" y="101.2" width="3.4" height="2.2" rx="0.9" fill="#EDE9FE" stroke="#7C3AED" stroke-width="0.35"/>')
 D.add('body', '<circle cx="14.3" cy="101.1" r="0.65" fill="#8B5CF6"/>')
@@ -680,7 +677,7 @@ D.text(34.0, 116.0, 'Nucleus', color='#6D28D9', bold=True, size=FS_SM, halo=True
 node_erk_nuc = pill(BUS_X['mapk'], 105.0, 11.0, 4.8, 'ERK (p)', 'mapk')
 arrow(node_erk['bottom'], (node_erk_nuc['top'][0], node_erk_nuc['top'][1] - 0.2), col=ACT_COL, lw=0.55)
 
-# Outcome Box 1: Proliferation & Growth (Inside Nucleus at y=109.5)
+# Outcome Box 1: Proliferation & Growth
 out_mapk = outcome_box(4.5, 109.5, 27.0, 7.5, 'Proliferation & Growth', 'CCND1, MYC, FOS, ELK1',
                        '#FAF5FF', '#C084FC', '#581C87')
 arrow(node_erk_nuc['bottom'], (out_mapk['top'][0], out_mapk['top'][1] - 0.2), col=ACT_COL, lw=0.55)
@@ -689,10 +686,8 @@ arrow(node_erk_nuc['bottom'], (out_mapk['top'][0], out_mapk['top'][1] - 0.2), co
 node_rassf = pill(BUS_X['rassf'], T1, 15.0, 6.0, 'RASSF1A', 'rassf')
 node_mst = pill(BUS_X['rassf'], 86.0, 13.0, 5.8, 'MST1/2', 'rassf')
 arrow(node_rassf['bottom'], (node_mst['top'][0], node_mst['top'][1] - 0.2), col=ACT_COL)
-# RAF to RASSF1A inhibitor tee bar with 0.5mm clearance!
 arrow(node_raf['right'], (node_rassf['left'][0] - 0.5, node_rassf['left'][1]), end='tee', col=INH_COL, lw=0.50)
 
-# Aligned Cytoplasmic Outcome Boxes: All sharing baseline y = 106.5, height = 8.5!
 OUT_Y = 106.5
 OUT_H = 8.5
 
@@ -708,7 +703,6 @@ node_mtor = pill(BUS_X['pi3k'], T3, 15.0, 5.8, 'mTORC1', 'pi3k')
 arrow(node_pi3k['bottom'], (node_akt['top'][0], node_akt['top'][1] - 0.2), col=ACT_COL)
 arrow(node_akt['bottom'], (node_mtor['top'][0], node_mtor['top'][1] - 0.2), col=ACT_COL)
 
-# Column 3 Drug Cards (Spaced 4.0mm from nodes: x 100.0 - 122.5, ample margin!)
 card_pi3k_inh = drug_box(100.0, 65.5, 22.5, 8.0, 'PI3K inh.', 'alpelisib, inavolisib', 'approved')
 arrow(card_pi3k_inh['left'], (node_pi3k['right'][0] + 0.5, node_pi3k['right'][1]), end='tee', col=INH_COL, lw=0.50)
 
@@ -751,14 +745,14 @@ FX = 4.5
 arrow(node_erk['left'], (FX, node_erk['cy']), end='none', col=INH_COL, dash='1.2 0.8', lw=0.6)
 arrow((FX, node_erk['cy']), (FX, 19.5), end='none', col=INH_COL, dash='1.2 0.8', lw=0.6)
 
-# Branch 1 to RAF: vertical tee-bar with 0.5mm clearance outside RAF left!
+# Branch 1 to RAF
 arrow((FX, node_raf['cy']), (node_raf['left'][0] - 0.5, node_raf['cy']), end='tee', col=INH_COL, dash='1.2 0.8', lw=0.6)
 
-# Branch 2 to SOS1: Passing cleanly beneath card_upstream at y=56.5 to x=79.5, then vertically up to SOS1 with horizontal tee-bar!
+# Branch 2 to SOS1
 arrow((FX, 56.5), (79.5, 56.5), end='none', col=INH_COL, dash='1.2 0.8', lw=0.6)
 arrow((79.5, 56.5), (79.5, node_sos1['bottom'][1] + 0.5), end='tee', col=INH_COL, dash='1.2 0.8', lw=0.6, tee_angle=0.0)
 
-# Branch 3 to EGFR: tee-bar sits at x=15.0 with 0.7mm clearance outside EGFR stalk!
+# Branch 3 to EGFR
 arrow((FX, 19.5), (15.0, 19.5), end='tee', col=INH_COL, dash='1.2 0.8', lw=0.6)
 
 D.text(FX + 1.6, 54.0, 'ERK negative feedback', color=INH_COL, bold=True, size=5.5*PT)
@@ -806,7 +800,6 @@ for k, (title, sub, mech, drug, status) in enumerate(CARDS):
                 'fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.45" filter="url(#subtle-shadow)"/>'
           % (x, BY, CW, BH))
     
-    # Embed publication-grade 3D scientific illustration from AI model
     if k in IMG_B64:
         D.add('body', '<image href="data:image/jpeg;base64,%s" x="%.2f" y="%.2f" width="%.2f" height="19.50" '
                      'preserveAspectRatio="xMidYMid meet"/>'
