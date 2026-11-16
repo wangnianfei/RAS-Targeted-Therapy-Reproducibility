@@ -307,13 +307,13 @@ def drug_box(x, y, w, h, title, subtitle=None, status='approved', border_col=BOR
           % (x, y, w, h, border_col))
     # Marker dot
     my = y + 3.8 if subtitle else y + h / 2.0
-    marker(x + 3.2, my, status, s=0.9)
+    marker(x + 2.5, my, status, s=0.85)
     # Title
-    D.text(x + 5.6, y + 2.5 if subtitle else y + h / 2.0 - FS * 0.35, title,
+    D.text(x + 4.8, y + 2.4 if subtitle else y + h / 2.0 - FS * 0.35, title,
            bold=True, size=FS_SM, color=INK)
     # Subtitle
     if subtitle:
-        D.text(x + 5.6, y + 6.0, subtitle, color=INK_MUTED, size=FS_XS)
+        D.text(x + 4.8, y + 6.0, subtitle, color=INK_MUTED, size=4.0*PT)
     return {
         'top': (x + w / 2.0, y),
         'bottom': (x + w / 2.0, y + h),
@@ -566,7 +566,7 @@ arrow((126.0, node_gtp['cy']), node_gtp['right'], end='tee', col=INK, lw=0.55)
 # ============================================================ EFFECTOR BUS ====
 # Completely open central corridor at x = 112.0 dropping down to horizontal bus at y = 62.0!
 BUS_Y = 62.0
-BUS_X = {'mapk': 22.0, 'rassf': 56.0, 'pi3k': 84.0, 'ral': 128.0, 'cyto': 162.0}
+BUS_X = {'mapk': 22.0, 'rassf': 62.0, 'pi3k': 84.0, 'ral': 128.0, 'cyto': 162.0}
 
 # Drop from active KRAS-GTP (Passing cleanly between Class I/II at x<=102 and Class III/IV at x>=126)
 arrow(node_gtp['bottom'], (node_gtp['cx'], BUS_Y), end='none', col=INK, lw=0.65)
@@ -592,10 +592,10 @@ arrow(node_raf['bottom'], node_mek['top'], col=INK)
 arrow(node_mek['bottom'], node_erk['top'], col=INK)
 
 # MAPK drug callout cards (Dedicated element containers, centered horizontally with target nodes)
-card_raf_mek = drug_box(33.0, 79.5, 18.5, 8.0, 'RAF / MEK inh.', 'trametinib, encorafenib', 'approved')
+card_raf_mek = drug_box(31.0, 79.5, 19.5, 8.0, 'RAF / MEK inh.', 'trametinib, encorafenib', 'approved')
 arrow(card_raf_mek['left'], node_mek['right'], end='tee', col=INK, lw=0.48)
 
-card_erk = drug_box(33.0, 92.5, 18.5, 8.0, 'ERK inh.', 'ulixertinib (Ph I/II)', 'clinical')
+card_erk = drug_box(31.0, 92.5, 19.5, 8.0, 'ERK inh.', 'ulixertinib (Ph I/II)', 'clinical')
 arrow(card_erk['left'], node_erk['right'], end='tee', col=INK, lw=0.48)
 
 # Nucleus & Proliferation (Bottom of Column 1)
@@ -604,7 +604,7 @@ D.add('bg', '<g clip-path="url(#clipA)">')
 D.add('bg', '<ellipse cx="%.2f" cy="%.2f" rx="%.2f" ry="%.2f" fill="url(#nuc)" stroke="#8B5CF6" stroke-width="0.55"/>'
       % (NCX, NCY, NRX, NRY))
 D.add('bg', '</g>')
-D.text(38.0, 120.0, 'Nucleus', color='#6D28D9', bold=True, size=FS_SM)
+D.text(31.0, 108.5, 'Nucleus', color='#6D28D9', bold=True, size=FS_SM, halo=True)
 
 # Translocated ERK inside Nucleus
 node_erk_nuc = pill(BUS_X['mapk'], 107.0, 10.5, 4.8, 'ERK (p)', 'mapk')
@@ -615,16 +615,16 @@ out_mapk = outcome_box(8.0, 113.5, 28.0, 8.5, 'Proliferation & Growth', 'CCND1, 
                        '#FAF5FF', '#C084FC', '#581C87')
 arrow(node_erk_nuc['bottom'], out_mapk['top'], col='#581C87', lw=0.55)
 
-# Column 2: Pro-Apoptotic Branch (RASSF1A) (x = 56.0)
-node_rassf = pill(BUS_X['rassf'], T1, 16.0, 6.0, 'RASSF1A', 'rassf')
-node_mst = pill(BUS_X['rassf'], T2, 13.0, 5.8, 'MST1/2', 'rassf')
+# Column 2: Pro-Apoptotic Branch (RASSF1A) (x = 62.0, staggered to avoid Col 1 drug cards)
+node_rassf = pill(BUS_X['rassf'], T1, 15.0, 6.0, 'RASSF1A', 'rassf')
+node_mst = pill(BUS_X['rassf'], 89.0, 13.0, 5.8, 'MST1/2', 'rassf')
 arrow(node_rassf['bottom'], node_mst['top'], col=INK)
 
 # Cross-talk: RAF inhibits RASSF1A (Horizontal line with T-bar connecting protein elements)
 arrow(node_raf['right'], node_rassf['left'], end='tee', col='#BE123C', lw=0.48)
 
-# Outcome Box 2: Apoptosis (Dedicated Element Container)
-out_rassf = outcome_box(46.0, 96.0, 20.0, 8.5, 'Apoptosis', 'MST / YAP1 / p73',
+# Outcome Box 2: Apoptosis (Dedicated Element Container, shifted down to 106.5 to eliminate collision)
+out_rassf = outcome_box(53.5, 106.5, 17.0, 8.5, 'Apoptosis', 'MST / YAP1 / p73',
                         '#F8FAFC', '#94A3B8', '#334155')
 arrow(node_mst['bottom'], out_rassf['top'], col=INK, lw=0.55)
 
@@ -645,7 +645,7 @@ card_mtor_inh = drug_box(96.0, 92.5, 21.0, 8.0, 'mTOR inh.', 'everolimus, siroli
 arrow(card_mtor_inh['left'], node_mtor['right'], end='tee', col=INK, lw=0.48)
 
 # Outcome Box 3: Survival & Growth (Dedicated Element Container)
-out_pi3k = outcome_box(71.5, 108.0, 25.0, 8.5, 'Survival & Growth', 'S6K1, 4E-BP1, glycolysis',
+out_pi3k = outcome_box(72.5, 108.5, 23.0, 8.5, 'Survival & Growth', 'S6K1, 4E-BP1, glycolysis',
                        '#F0FDFA', '#5EEAD4', '#0F766E')
 arrow(node_mtor['bottom'], out_pi3k['top'], col='#0F766E', lw=0.55)
 
