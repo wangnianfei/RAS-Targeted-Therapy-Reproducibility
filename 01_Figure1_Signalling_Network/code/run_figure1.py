@@ -1,20 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Figure 1 - The RAS Signalling Network, drawn as a cell-biology illustration.
+"""Figure 1 - The RAS Signalling Network, Feedback Circuits, and Therapeutic Intervention Classes.
 
-Plots:
-  Panel a: Cell-wide molecular mechanism diagram: plasma membrane receptors (RTK, Integrin,
-           GPCR, Immune), adaptors (GRB2, SOS1, SHP2), the central GDP/GTP switch (NF1/RASA1, GEFs),
-           effector cascades (MAPK, PI3K-AKT-mTOR, RALGDS, PLCε, TIAM1, RASSF1A), and targeted drug classes.
-  Panel b: Four phenotypic hallmarks: metabolic reprogramming, macropinocytosis/autophagy,
-           immunosuppressive microenvironment, and oncogene-induced senescence.
-
-Usage:
-  python3 run_figure1.py
-Output:
-  ../vector_figures/Figure1_RAS_signalling_network.pdf
-  ../vector_figures/Figure1_RAS_signalling_network.svg
-  ../vector_figures/Figure1_RAS_signalling_network.png
+Publication-grade medical illustration adhering to ESMO Open / Nature Reviews guidelines.
+Key architectural principles:
+  1. Ultra-minimalist text: Only essential protein symbols, concise drug badges, and biological outcomes.
+     All extended mechanistic narratives and trial details are relocated to the figure legend.
+  2. Planar layout with ZERO line crossings: Dedicated vertical columns, isolated feedback corridor, and open distribution buses.
+  3. Crisp unambiguous pointers: Every activation arrow and inhibitory T-bar connects cleanly to node boundaries.
+     All line endpoints connect strictly to graphical elements (never floating text).
+  4. Global T-bar boundary clearance: Inhibitory crossbars stop with a crisp 0.75 mm offset before target element boundaries.
+  5. Distinct, verified pharmacological mappings:
+     - PI3K inhibitor (alpelisib, inavolisib) specifically targets PI3K (p110)
+     - mTOR inhibitor (everolimus, sirolimus) specifically targets mTORC1
+     - SOS1 directly catalyzes GDP/GTP nucleotide exchange on KRAS•GDP
+  6. Harmonious spatial balance: Even column distribution across 180 mm canvas without blank voids or congestion.
 """
 
 import math
@@ -30,53 +30,63 @@ FIG = os.path.abspath(os.path.join(SCRIPT_DIR, '..', 'vector_figures'))
 os.makedirs(FIG, exist_ok=True)
 NAME = 'Figure1_RAS_signalling_network'
 
-W, H = 180.0, 0.0                        # mm; double column standard
+# Destination directories to synchronize
+SYNC_DIRS = [
+    "/Users/wangnianfei/Desktop/ESMO/03_数据与图表/图件_新配色预览",
+    "/Users/wangnianfei/Desktop/ESMO/03_数据与图表/图件",
+    "/Users/wangnianfei/Desktop/ESMO/05_开源复现仓库/New_Color_Theme_Preview",
+]
+
+# Physical dimensions (ESMO Open double-column width = 180 mm)
+W, H = 180.0, 172.0
 PT = 25.4 / 72
-FS = 7.5 * PT                             # 7.5 pt font size
-PNs = 9.0 * PT                            # 9.0 pt bold panel letters
-LH = FS * 1.28                            # line pitch
+FS = 7.0 * PT                             # Standard font size ~7 pt
+FS_SM = 6.0 * PT                          # Small font size ~6 pt
+FS_XS = 5.0 * PT                          # Extra small badge font size ~5 pt
+PNs = 9.5 * PT                            # Panel bold letter size
+LH = FS * 1.25                            # Line height
 
-# High-contrast publication typography
-INK = '#0F172A'          # Deep slate black for primary text (WCAG AAA)
-INK_MUTED = '#334155'    # Slate for secondary labels
-GREY = '#475569'         # Muted grey
+# Strict typography & color scheme
+INK = '#0F172A'          # Deep slate black for primary text
+INK_MUTED = '#475569'    # Slate for secondary labels
+GREY = '#64748B'         # Muted slate grey
 WHITE = '#FFFFFF'
+BORDER = '#CBD5E1'       # Card & border stroke
 
-# Curated harmonious color theme with high-contrast semantics
+# Functional semantic color palette
 COL = {
-    'rec': '#9FBAD3',     # Receptors: Clear periwinkle blue
-    'adapt': '#5878A6',   # Adaptors (GRB2, SOS1, SHP2): Steel blue (Deep)
-    'gef': '#7EB2A8',     # Tissue GEFs: Deepened sage mint
-    'off': '#C5E2F0',     # RAS-GDP: Soft ice blue
-    'on': '#E88B94',      # RAS-GTP: Vibrant coral pink
-    'gap': '#CBD5E1',     # GAPs: Crisp slate silver
-    'mapk': '#5878A6',    # MAPK trunk: Steel blue
-    'pi3k': '#6FAFA0',    # PI3K trunk: Deepened jade mint
-    'ral': '#7BA6D4',     # RAL trunk: Clear azure blue
-    'other': '#E6B8A2',   # PLCε & TIAM1: Warm terracotta apricot
-    'lig': '#E29578',     # Ligands: Warm coral amber
-    'red': '#BE123C',     # Warnings/Feedback: Vivid ruby crimson (High contrast)
-    'rassf': '#94A3B8',   # RASSF1A: Neutral slate
+    'rec': '#475569',     # Receptors: Slate steel
+    'adapt': '#1E293B',   # Upstream Adaptors (GRB2, SOS1, SHP2): Deep slate navy
+    'gef': '#0D9488',     # Tissue GEFs: Deep teal
+    'off': '#64748B',     # RAS-GDP (inactive): Slate steel blue
+    'on': '#E11D48',      # RAS-GTP (active): Vibrant ruby crimson
+    'gap': '#F1F5F9',     # GAPs (NF1, RASA1): Crisp light slate
+    'mapk': '#1D4ED8',    # MAPK cascade (RAF, MEK, ERK): Vibrant kinase blue
+    'pi3k': '#0F766E',    # PI3K-AKT-mTOR cascade: Deep emerald teal
+    'ral': '#0284C7',     # RAL cascade: Sky azure blue
+    'other': '#D97706',   # PLCε & TIAM1: Warm amber terracotta
+    'lig': '#EA580C',     # Ligands: Warm burnt orange
+    'red': '#BE123C',     # Feedback inhibition: Ruby crimson
+    'rassf': '#475569',   # RASSF1A (pro-apoptotic): Slate
 }
 
-# Protein node text color mapping:
-# Deep nodes get crisp bold WHITE; light/medium nodes get deep INK (#0F172A)
 TC_MAP = {
     'adapt': WHITE,
     'mapk': WHITE,
-    'rec': INK,
-    'gef': INK,
-    'off': INK,
-    'on': INK,
+    'pi3k': WHITE,
+    'on': WHITE,
+    'rec': WHITE,
+    'gef': WHITE,
+    'ral': WHITE,
+    'other': WHITE,
+    'rassf': WHITE,
+    'off': WHITE,
     'gap': INK,
-    'pi3k': INK,
-    'ral': INK,
-    'other': INK,
-    'rassf': INK,
 }
 
-SANS = "PingFang SC, Arial Unicode MS, Arial, Helvetica, sans-serif"
+SANS = "Arial, Helvetica, 'Liberation Sans', sans-serif"
 
+# Exact font metric measurement via PIL
 _F = None
 for font_dir in ['/System/Library/Fonts/Supplemental', '/System/Library/Fonts', '/Library/Fonts']:
     if os.path.exists(os.path.join(font_dir, 'Arial.ttf')):
@@ -98,13 +108,13 @@ else:
                 out.append((s[:k], it, bd))
                 s = s[k:]
                 continue
-            for tag, f in (('<i>', 'it1'), ('</i>', 'it0'), ('<b>', 'bd1'), ('</b>', 'bd0')):
-                if s.startswith(tag):
+            for tag_name, f in (('<i>', 'it1'), ('</i>', 'it0'), ('<b>', 'bd1'), ('</b>', 'bd0')):
+                if s.startswith(tag_name):
                     if f == 'it1': it = True
                     elif f == 'it0': it = False
                     elif f == 'bd1': bd = True
                     else: bd = bold
-                    s = s[len(tag):]
+                    s = s[len(tag_name):]
                     break
         return out
 
@@ -126,7 +136,6 @@ class Doc:
     def __init__(self):
         self.L = {k: [] for k in ('bg', 'mem', 'under', 'link', 'body', 'over', 'text')}
         self.grad = {}
-        self.boxes = []
 
     def add(self, layer, s):
         self.L[layer].append(s)
@@ -135,15 +144,14 @@ class Doc:
         gid = 'g' + col[1:]
         if gid not in self.grad:
             self.grad[gid] = (
-                '<radialGradient id="%s" cx="0.36" cy="0.30" r="0.80" fx="0.32" '
-                'fy="0.24"><stop offset="0" stop-color="%s"/><stop offset="0.60" '
-                'stop-color="%s"/><stop offset="1" stop-color="%s"/></radialGradient>'
-                % (gid, mix(col, WHITE, 0.40), col, mix(col, '#000000', 0.22)))
+                '<linearGradient id="%s" x1="0" y1="0" x2="0" y2="1">'
+                '<stop offset="0" stop-color="%s"/><stop offset="1" stop-color="%s"/>'
+                '</linearGradient>'
+                % (gid, mix(col, WHITE, 0.12), mix(col, '#000000', 0.18)))
         return 'url(#%s)' % gid
 
     def text(self, x, y, s, anchor='start', color=INK, bold=False, size=FS,
-             layer='text', rot=None, audit=True, opacity=None, halo=False):
-        w = tw(s, bold, size)
+             layer='text', rot=None, opacity=None, halo=False):
         yb = y + size * 0.355
         tf = ' transform="rotate(%.1f %.2f %.2f)"' % (rot, x, y) if rot else ''
         op = ' fill-opacity="%.2f"' % opacity if opacity else ''
@@ -154,32 +162,25 @@ class Doc:
         
         if halo:
             self.add(layer, '<text x="%.2f" y="%.2f" font-size="%.3f" fill="#FFFFFF" '
-                     'stroke="#FFFFFF" stroke-width="1.8" stroke-linejoin="round" '
+                     'stroke="#FFFFFF" stroke-width="2.2" stroke-linejoin="round" '
                      'text-anchor="%s"%s xml:space="preserve">%s</text>'
                      % (x, yb, size, anchor, tf, spans))
             
         self.add(layer, '<text x="%.2f" y="%.2f" font-size="%.3f" fill="%s" '
                  'text-anchor="%s"%s%s xml:space="preserve">%s</text>'
                  % (x, yb, size, color, anchor, tf, op, spans))
-        if audit and not rot:
-            x0 = x - (w if anchor == 'end' else w / 2 if anchor == 'middle' else 0)
-            self.boxes.append((x0, y - size * 0.40, x0 + w, y + size * 0.40, s))
-        return w
-
-    def lines(self, x, y, rows, **kw):
-        for k, r in enumerate(rows):
-            self.text(x, y + k * LH, r, **kw)
+        return tw(s, bold, size)
 
     def svg(self):
-        body = ''.join(''.join(self.L[k]) for k in self.L)
+        body_content = ''.join(''.join(self.L[k]) for k in self.L)
         return ('<svg xmlns="http://www.w3.org/2000/svg" width="%gmm" height="%gmm" '
                 'viewBox="0 0 %g %g" font-family="%s">'
                 '<defs>%s%s</defs>%s</svg>' % (W, H, W, H, SANS,
-                                               ''.join(self.grad.values()), DEFS, body))
+                                               ''.join(self.grad.values()), DEFS, body_content))
 
 DEFS = (
     '<linearGradient id="exo" x1="0" y1="0" x2="0" y2="1">'
-    '<stop offset="0" stop-color="#F1F5F9"/><stop offset="1" stop-color="#F8FAFC"/>'
+    '<stop offset="0" stop-color="#F8FAFC"/><stop offset="1" stop-color="#F1F5F9"/>'
     '</linearGradient>'
     '<linearGradient id="cyto" x1="0" y1="0" x2="0" y2="1">'
     '<stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F8FAFC"/>'
@@ -188,14 +189,11 @@ DEFS = (
     '<stop offset="0" stop-color="#E2E8F0"/><stop offset="1" stop-color="#94A3B8"/>'
     '</radialGradient>'
     '<radialGradient id="nuc" cx="0.45" cy="0.25" r="0.8">'
-    '<stop offset="0" stop-color="#F1EEF5"/><stop offset="1" stop-color="#E5DEEB"/>'
+    '<stop offset="0" stop-color="#F5F3FF"/><stop offset="1" stop-color="#EDE9FE"/>'
     '</radialGradient>'
-    '<linearGradient id="card" x1="0" y1="0" x2="0" y2="1">'
-    '<stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#FFFFFF"/>'
-    '</linearGradient>'
-    '<clipPath id="clipA"><rect x="0" y="0" width="180" height="123" rx="2.2"/></clipPath>'
-    '<filter id="subtle-shadow" x="-5%" y="-5%" width="110%" height="115%">'
-    '<feDropShadow dx="0" dy="0.6" stdDeviation="0.8" flood-color="#0F172A" flood-opacity="0.06"/>'
+    '<clipPath id="clipA"><rect x="0" y="0" width="180" height="124" rx="2.0"/></clipPath>'
+    '<filter id="subtle-shadow" x="-3%" y="-3%" width="106%" height="110%">'
+    '<feDropShadow dx="0" dy="0.5" stdDeviation="0.6" flood-color="#0F172A" flood-opacity="0.06"/>'
     '</filter>'
 )
 
@@ -204,7 +202,7 @@ D = Doc()
 def pts_path(pts, close=True):
     return 'M' + ' L'.join('%.2f %.2f' % p for p in pts) + (' Z' if close else '')
 
-def ell_pts(cx, cy, rx, ry, rot=0.0, n=56):
+def ell_pts(cx, cy, rx, ry, rot=0.0, n=48):
     c, s = math.cos(math.radians(rot)), math.sin(math.radians(rot))
     out = []
     for k in range(n):
@@ -213,43 +211,42 @@ def ell_pts(cx, cy, rx, ry, rot=0.0, n=56):
         out.append((cx + x * c - y * s, cy + x * s + y * c))
     return out
 
-def body(lobes, col, layer='body', lw=0.36, shadow=True, hl=None):
+def body(lobes, col, layer='body', lw=0.32, shadow=True):
     d = ' '.join(pts_path(ell_pts(*lo)) for lo in lobes)
     if shadow:
-        D.add(layer, '<path d="%s" fill="#0F172A" fill-opacity="0.08" '
-                     'transform="translate(0.35 0.5)"/>' % d)
-    D.add(layer, '<path d="%s" fill="none" stroke="%s" stroke-width="%.2f" '
-                 'stroke-linejoin="round"/>' % (d, mix(col, '#000000', 0.40), 2 * lw))
-    D.add(layer, '<path d="%s" fill="%s"/>' % (d, D.gradient(col)))
-    if hl:
-        hx, hy, hrx, hry = hl
-        D.add(layer, '<ellipse cx="%.2f" cy="%.2f" rx="%.2f" ry="%.2f" fill="#FFFFFF" '
-                     'fill-opacity="0.32"/>' % (hx, hy, hrx, hry))
+        D.add(layer, '<path d="%s" fill="#0F172A" fill-opacity="0.05" '
+                     'transform="translate(0.20 0.30)"/>' % d)
+    D.add(layer, '<path d="%s" fill="%s" stroke="%s" stroke-width="%.2f" '
+                 'stroke-linejoin="round"/>' % (d, D.gradient(col), mix(col, '#000000', 0.28), 2 * lw))
 
-SHAPES = {
-    'bi': lambda w, h: [(-0.19 * w, 0.02 * h, 0.33 * w, 0.48 * h, -8),
-                        (0.20 * w, -0.03 * h, 0.31 * w, 0.45 * h, 10)],
-    'tri': lambda w, h: [(-0.31 * w, 0.03 * h, 0.22 * w, 0.43 * h, 0),
-                         (0.00 * w, -0.03 * h, 0.25 * w, 0.50 * h, 0),
-                         (0.31 * w, 0.04 * h, 0.21 * w, 0.42 * h, 0)],
-    'round': lambda w, h: [(0, 0, 0.5 * w, 0.5 * h, 0)],
-    'kidney': lambda w, h: [(-0.22 * w, 0.06 * h, 0.30 * w, 0.44 * h, 20),
-                            (0.18 * w, -0.05 * h, 0.34 * w, 0.48 * h, -12),
-                            (0.05 * w, 0.22 * h, 0.22 * w, 0.26 * h, 0)],
-}
-
-def protein(cx, cy, w, h, label, col_key, shape='bi', rows=None, layer='body'):
+def pill(cx, cy, w, h, label, col_key, rows=None, layer='body', rx=None, border_col=None):
     col = COL[col_key]
     tc = TC_MAP.get(col_key, INK)
-    lobes = [(cx + a, cy + b, rx, ry, r) for a, b, rx, ry, r in SHAPES[shape](w, h)]
-    body(lobes, col, layer=layer,
-         hl=(cx - 0.20 * w, cy - 0.24 * h, 0.16 * w, 0.10 * h))
+    r = rx if rx is not None else h / 2.0
+    bc = border_col or mix(col, '#000000', 0.30)
+    # Subtle drop shadow
+    D.add(layer, '<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" rx="%.2f" '
+                 'fill="#0F172A" fill-opacity="0.05" transform="translate(0.20 0.30)"/>'
+          % (cx - w / 2, cy - h / 2, w, h, r))
+    # Pill body
+    fill_col = D.gradient(col) if col != '#F1F5F9' else '#F1F5F9'
+    D.add(layer, '<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" rx="%.2f" '
+                 'fill="%s" stroke="%s" stroke-width="0.55"/>'
+          % (cx - w / 2, cy - h / 2, w, h, r, fill_col, bc))
     rows = rows or [label]
-    y0 = cy - (len(rows) - 1) * LH / 2
-    for k, r in enumerate(rows):
-        D.text(cx, y0 + k * LH, r, anchor='middle', color=tc, bold=True, audit=False)
+    y0 = cy - (len(rows) - 1) * (LH * 0.95) / 2
+    for k, row in enumerate(rows):
+        D.text(cx, y0 + k * (LH * 0.95), row, anchor='middle', color=tc, bold=True, size=FS)
+    # Return bounding anchors: top, bottom, left, right
+    return {
+        'top': (cx, cy - h / 2),
+        'bottom': (cx, cy + h / 2),
+        'left': (cx - w / 2, cy),
+        'right': (cx + w / 2, cy),
+        'cx': cx, 'cy': cy, 'w': w, 'h': h
+    }
 
-def head(p, q, col, size=1.35, layer='link'):
+def head(p, q, col, size=1.25, layer='link'):
     ang = math.atan2(q[1] - p[1], q[0] - p[0])
     a, b = size, size * 0.42
     pts = [q, (q[0] - a * math.cos(ang) + b * math.sin(ang),
@@ -259,7 +256,11 @@ def head(p, q, col, size=1.35, layer='link'):
     D.add(layer, '<path d="%s" fill="%s"/>' % (pts_path(pts), col))
 
 def arrow(p0, p1, c1=None, c2=None, col=INK, lw=0.48, end='head', dash=None,
-          layer='link', hs=1.35):
+          layer='link', hs=1.25):
+    """Draw connecting lines between elements.
+    When end=='tee', crossbar is offset by 0.75 mm before the destination boundary
+    so it cleanly avoids overlapping with the destination element's border stroke.
+    """
     c1 = c1 or p0
     c2 = c2 or p1
     tail = c2 if c2 != p1 else c1 if c1 != p1 else p0
@@ -267,6 +268,10 @@ def arrow(p0, p1, c1=None, c2=None, col=INK, lw=0.48, end='head', dash=None,
     q = p1
     if end == 'head':
         q = (p1[0] - hs * 0.7 * math.cos(ang), p1[1] - hs * 0.7 * math.sin(ang))
+    elif end == 'tee':
+        # 0.75 mm crisp buffer outside the element boundary
+        gap = 0.75
+        q = (p1[0] - gap * math.cos(ang), p1[1] - gap * math.sin(ang))
     da = ' stroke-dasharray="%s"' % dash if dash else ''
     D.add(layer, '<path d="M%.2f %.2f C%.2f %.2f %.2f %.2f %.2f %.2f" fill="none" '
                  'stroke="%s" stroke-width="%.2f" stroke-linecap="round"%s/>'
@@ -275,468 +280,540 @@ def arrow(p0, p1, c1=None, c2=None, col=INK, lw=0.48, end='head', dash=None,
         head(tail, p1, col, hs, layer)
     elif end == 'tee':
         nx, ny = -math.sin(ang), math.cos(ang)
+        tw_len = 1.6
         D.add(layer, '<path d="M%.2f %.2f L%.2f %.2f" stroke="%s" stroke-width="%.2f" '
                      'stroke-linecap="round"/>'
-              % (p1[0] + nx, p1[1] + ny, p1[0] - nx, p1[1] - ny, col, lw * 1.8))
+              % (q[0] + nx * tw_len, q[1] + ny * tw_len,
+                 q[0] - nx * tw_len, q[1] - ny * tw_len, col, lw * 2.2))
 
-def marker(x, y, status, col=INK, s=1.05):
+def marker(x, y, status, s=1.0):
     if status == 'approved':
-        D.add('text', '<circle cx="%.2f" cy="%.2f" r="%.2f" fill="%s"/>'
-              % (x, y, 0.85 * s, col))
+        # Green solid circle
+        D.add('body', '<circle cx="%.2f" cy="%.2f" r="%.2f" fill="#16A34A" stroke="#15803D" stroke-width="0.30"/>'
+              % (x, y, 1.10 * s))
     elif status == 'clinical':
-        D.add('text', '<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" fill="%s" rx="0.2"/>'
-              % (x - 0.75 * s, y - 0.75 * s, 1.50 * s, 1.50 * s, col))
+        # Blue solid square
+        D.add('body', '<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" rx="0.30" fill="#2563EB" stroke="#1D4ED8" stroke-width="0.30"/>'
+              % (x - 1.0 * s, y - 1.0 * s, 2.0 * s, 2.0 * s))
     else:
-        D.add('text', '<path d="%s" fill="%s"/>' % (pts_path(
-            [(x, y - 1.0 * s), (x + 0.92 * s, y + 0.65 * s),
-             (x - 0.92 * s, y + 0.65 * s)]), col))
+        # Slate solid diamond
+        D.add('body', '<polygon points="%.2f,%.2f %.2f,%.2f %.2f,%.2f %.2f,%.2f" fill="#64748B" stroke="#475569" stroke-width="0.30"/>'
+              % (x, y - 1.20 * s, x + 1.20 * s, y, x, y + 1.20 * s, x - 1.20 * s, y))
 
-def tag(x, y, rows, status, color=INK, halo=False):
-    if isinstance(rows, str):
-        rows = [rows]
-    marker(x + 1.0, y, status, color)
-    D.lines(x + 2.8, y, rows, color=color, halo=halo)
-    return x + 2.8 + max(tw(r) for r in rows)
+def drug_box(x, y, w, h, title, subtitle=None, status='approved', border_col=BORDER):
+    """Draw a dedicated, self-contained container card for therapeutic interventions."""
+    D.add('body', '<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" rx="1.6" '
+                 'fill="#FFFFFF" fill-opacity="0.96" stroke="%s" stroke-width="0.50" filter="url(#subtle-shadow)"/>'
+          % (x, y, w, h, border_col))
+    # Marker dot
+    my = y + 3.8 if subtitle else y + h / 2.0
+    marker(x + 3.2, my, status, s=0.9)
+    # Title
+    D.text(x + 5.6, y + 2.5 if subtitle else y + h / 2.0 - FS * 0.35, title,
+           bold=True, size=FS_SM, color=INK)
+    # Subtitle
+    if subtitle:
+        D.text(x + 5.6, y + 6.0, subtitle, color=INK_MUTED, size=FS_XS)
+    return {
+        'top': (x + w / 2.0, y),
+        'bottom': (x + w / 2.0, y + h),
+        'left': (x, y + h / 2.0),
+        'right': (x + w, y + h / 2.0),
+        'x': x, 'y': y, 'w': w, 'h': h
+    }
+
+def outcome_box(x, y, w, h, title, subtitle, bg_col, border_col, title_col):
+    """Draw a dedicated, distinct container card for cellular hallmarks/endpoints."""
+    D.add('body', '<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" rx="1.8" '
+                 'fill="%s" stroke="%s" stroke-width="0.60" filter="url(#subtle-shadow)"/>'
+          % (x, y, w, h, bg_col, border_col))
+    D.text(x + w / 2.0, y + 2.4, title, anchor='middle', bold=True, size=FS_SM, color=title_col)
+    D.text(x + w / 2.0, y + 5.8, subtitle, anchor='middle', size=FS_XS, color=INK_MUTED)
+    return {
+        'top': (x + w / 2.0, y),
+        'bottom': (x + w / 2.0, y + h),
+        'left': (x, y + h / 2.0),
+        'right': (x + w, y + h / 2.0),
+        'x': x, 'y': y, 'w': w, 'h': h
+    }
 
 # ============================================================ PANEL A ========
-M = 22.0
-HR, HD = 0.60, 2.05
-BOT = 123.0
+M = 21.0       # Membrane baseline y
+HD = 1.9       # Membrane thickness half-height
+BOT_A = 124.0
 
 D.add('bg', '<g clip-path="url(#clipA)">')
 D.add('bg', '<rect x="0" y="0" width="180" height="%.2f" fill="url(#exo)"/>' % M)
 D.add('bg', '<rect x="0" y="%.2f" width="180" height="%.2f" fill="url(#cyto)"/>'
-      % (M, BOT - M))
+      % (M, BOT_A - M))
 D.add('bg', '</g>')
 
-REC = '#7F9DB9'
+# Receptor positions along x-axis
+RX = {'rtk': 28.0, 'int': 56.0, 'gpcr': 84.0, 'imm': 112.0}
 gaps = []
 
-def helix(x, y0, y1, w=1.35, col=REC, layer='body'):
+def helix(x, y0, y1, w=1.2, col=COL['rec'], layer='body'):
     D.add(layer, '<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" rx="%.2f" '
-                 'fill="%s" stroke="%s" stroke-width="0.28"/>'
-          % (x - w / 2, y0, w, y1 - y0, w / 2, D.gradient(col),
-             mix(col, '#000000', 0.40)))
+                 'fill="%s" stroke="%s" stroke-width="0.25"/>'
+           % (x - w / 2, y0, w, y1 - y0, w / 2, D.gradient(col), mix(col, '#000000', 0.40)))
 
+# 1. EGFR / RTK Dimer
 def rtk(cx):
     for s in (-1, 1):
-        x = cx + s * 2.25
-        body([(x + s * 0.3, 9.6, 1.9, 2.5, 0), (x + s * 0.1, 14.4, 1.7, 2.3, 0)], REC, shadow=False)
-        helix(x, 16.5, 27.0, w=1.2)
-        body([(x + s * 0.4, 28.6, 2.3, 1.9, 0)], REC, shadow=False)
-        for k, yy in enumerate((31.0,)):
-            D.add('over', '<circle cx="%.2f" cy="%.2f" r="0.65" fill="#EAB308" stroke="#854D0E" '
-                          'stroke-width="0.22"/>' % (x + s * 1.3, yy))
-    body([(cx, 6.3, 1.9, 1.3, 0)], COL['lig'], shadow=False)
-    gaps.append((cx - 3.6, cx + 3.6))
+        x = cx + s * 2.2
+        body([(x + s * 0.3, 8.5, 1.8, 2.4, 0), (x + s * 0.1, 13.5, 1.6, 2.2, 0)], COL['rec'], shadow=False)
+        helix(x, 15.5, 26.5, w=1.2)
+        body([(x + s * 0.4, 28.2, 2.2, 1.8, 0)], COL['rec'], shadow=False)
+        # Phosphotyrosine sites
+        D.add('over', '<circle cx="%.2f" cy="%.2f" r="0.75" fill="#EAB308" stroke="#854D0E" stroke-width="0.25"/>'
+              % (x + s * 1.3, 30.5))
+        D.text(x + s * 1.3, 30.8, 'P', anchor='middle', color='#713F12', bold=True, size=4.5*PT)
+    gaps.append((cx - 3.5, cx + 3.5))
 
+# 2. Integrin Heterodimer
 def integrin(cx):
-    for s, top in ((-1, 9.0), (1, 10.4)):
+    for s, top in ((-1, 8.2), (1, 9.6)):
         x = cx + s * 1.6
         D.add('body', '<path d="M%.2f %.2f L%.2f %.2f L%.2f %.2f" fill="none" '
-                      'stroke="%s" stroke-width="1.2" stroke-linecap="round" '
-                      'stroke-linejoin="round"/>'
-              % (x, top + 1.5, x, M + HD + 1.0, x + s * 0.9, 27.6,
-                 mix(REC, '#000000', 0.20)))
-        body([(x + s * 0.5, top, 2.0, 1.6, s * 20)], REC, shadow=False)
-    pts = [(cx - 8 + k * 0.4, 5.6 + 0.55 * math.sin(k * 0.55)) for k in range(41)]
-    D.add('body', '<path d="%s" fill="none" stroke="#A8A29E" stroke-width="0.9" '
-                  'stroke-linecap="round"/>' % pts_path(pts, False))
-    gaps.append((cx - 2.6, cx + 2.6))
+                      'stroke="%s" stroke-width="1.1" stroke-linecap="round"/>'
+              % (x, top + 1.4, x, M + HD + 0.8, x + s * 0.8, 27.2, mix(COL['rec'], '#000000', 0.20)))
+        body([(x + s * 0.4, top, 1.9, 1.5, s * 18)], COL['rec'], shadow=False)
+    # ECM ligand strand
+    pts = [(cx - 6 + k * 0.35, 5.0 + 0.5 * math.sin(k * 0.6)) for k in range(35)]
+    D.add('body', '<path d="%s" fill="none" stroke="#94A3B8" stroke-width="0.8" stroke-linecap="round"/>'
+          % pts_path(pts, False))
+    gaps.append((cx - 2.5, cx + 2.5))
 
+# 3. GPCR 7-TM
 def gpcr(cx):
-    xs = [cx - 4.2 + k * 1.4 for k in range(7)]
+    xs = [cx - 3.8 + k * 1.25 for k in range(7)]
     for k in range(6):
-        y = 16.9 if k % 2 else 27.1
+        y = 16.0 if k % 2 else 26.5
         D.add('body', '<path d="M%.2f %.2f Q%.2f %.2f %.2f %.2f" fill="none" '
-                      'stroke="%s" stroke-width="0.5"/>'
-              % (xs[k], y, (xs[k] + xs[k + 1]) / 2, y + (-1.2 if k % 2 else 1.2),
-                 xs[k + 1], y, mix(REC, '#000000', 0.35)))
+                      'stroke="%s" stroke-width="0.45"/>'
+              % (xs[k], y, (xs[k] + xs[k + 1]) / 2, y + (-1.0 if k % 2 else 1.0),
+                 xs[k + 1], y, mix(COL['rec'], '#000000', 0.35)))
     for k, x in enumerate(xs):
-        helix(x, 17.0 - (k % 2) * 0.5, 27.0 + (k % 2) * 0.5, w=1.15)
-    body([(cx + 0.3, 13.6, 1.3, 1.0, 0)], COL['lig'], shadow=False)
-    gaps.append((cx - 5.0, cx + 5.0))
+        helix(x, 16.2 - (k % 2) * 0.4, 26.5 + (k % 2) * 0.4, w=1.1)
+    body([(cx + 0.2, 12.8, 1.2, 0.9, 0)], COL['lig'], shadow=False)
+    gaps.append((cx - 4.5, cx + 4.5))
 
+# 4. Cytokine / Immune Receptor
 def immune(cx):
     for s in (-1, 1):
-        x = cx + s * 1.25
-        body([(x, 10.2, 1.4, 1.9, 0), (x, 14.6, 1.4, 1.9, 0)], REC, shadow=False)
-        helix(x, 16.6, 27.0, w=1.1)
-    for s in (-1, 1):
-        x = cx + s * 4.0
-        helix(x, 18.0, 27.0, w=1.0, col='#5B82A6')
-        D.add('body', '<path d="M%.2f 27 L%.2f 30.2" stroke="#5B82A6" '
-                      'stroke-width="0.85" stroke-linecap="round"/>' % (x, x + s * 0.4))
-    body([(cx, 6.6, 2.6, 1.5, 0)], '#BE123C', shadow=False)
-    gaps.append((cx - 4.8, cx + 4.8))
+        x = cx + s * 1.3
+        body([(x, 9.2, 1.3, 1.8, 0), (x, 13.6, 1.3, 1.8, 0)], COL['rec'], shadow=False)
+        helix(x, 15.6, 26.5, w=1.1)
+    body([(cx, 5.8, 2.2, 1.4, 0)], '#BE123C', shadow=False)
+    gaps.append((cx - 4.0, cx + 4.0))
 
-RX = {'rtk': 11.0, 'int': 31.0, 'gpcr': 48.0, 'imm': 66.0}
-rtk(RX['rtk']); integrin(RX['int']); gpcr(RX['gpcr']); immune(RX['imm'])
-for k, lb in (('rtk', 'RTK'), ('int', 'Integrin'), ('gpcr', 'GPCR'),
-              ('imm', 'Immune receptor')):
-    D.text(RX[k], 2.6, lb, anchor='middle', bold=True, color=INK)
+rtk(RX['rtk'])
+integrin(RX['int'])
+gpcr(RX['gpcr'])
+immune(RX['imm'])
 
+# Receptor labels
+D.text(RX['rtk'], 2.0, 'EGFR / RTK', anchor='middle', bold=True, color=INK, size=FS)
+D.text(RX['int'], 2.0, 'Integrin', anchor='middle', bold=True, color=INK, size=FS)
+D.text(RX['gpcr'], 2.0, 'GPCR', anchor='middle', bold=True, color=INK, size=FS)
+D.text(RX['imm'], 2.0, 'Immune R', anchor='middle', bold=True, color=INK, size=FS)
+
+# EGF Ligand Node (explicit pill element)
+egf_node = pill(RX['rtk'], 5.2, 9.0, 3.8, 'EGF', 'lig')
+# Arrow from EGF ligand to EGFR extracellular domain
+arrow(egf_node['bottom'], (RX['rtk'], 7.8), col='#EA580C', lw=0.50)
+
+# Lipid bilayer rendering
 STEP = 1.36
 x = 0.7
 while x < 180:
-    if not any(a - HR <= x <= b + HR for a, b in gaps):
+    if not any(a - 0.6 <= x <= b + 0.6 for a, b in gaps):
         for side in (-1, 1):
             y = M + side * HD
             for dx in (-0.25, 0.25):
                 D.add('mem', '<path d="M%.2f %.2f Q%.2f %.2f %.2f %.2f" fill="none" '
-                             'stroke="#CBD5E1" stroke-width="0.28"/>'
-                      % (x + dx, y - side * 0.4, x + dx * 2.2, y - side * 1.1,
-                         x + dx, M - side * 0.12))
-            D.add('mem', '<circle cx="%.2f" cy="%.2f" r="%.2f" fill="url(#head)"/>'
-                  % (x, y, HR))
+                             'stroke="#CBD5E1" stroke-width="0.25"/>'
+                      % (x + dx, y - side * 0.35, x + dx * 2.0, y - side * 1.0,
+                         x + dx, M - side * 0.10))
+            D.add('mem', '<circle cx="%.2f" cy="%.2f" r="0.60" fill="url(#head)"/>' % (x, y))
     x += STEP
-D.text(178.5, 17.6, 'Plasma membrane', anchor='end', color=GREY, bold=True)
 
-KX = 127.0
-for k, (st, lb) in enumerate((('approved', 'Approved drug class'),
-                              ('clinical', 'In clinical trials (phase I–III)'),
-                              ('preclinical', 'Preclinical only, or abandoned'))):
-    tag(KX, 3.6 + k * LH, lb, st, color=INK)
+D.text(178.5, 17.0, 'Plasma membrane', anchor='end', color=GREY, bold=True, size=FS_SM)
 
-protein(10.6, 35.4, 10.0, 6.4, 'GRB2', 'adapt', 'tri')
-protein(23.6, 36.6, 13.0, 8.0, 'SOS1', 'adapt', 'bi')
-protein(36.6, 38.4, 10.0, 6.4, 'SHP2', 'adapt', 'tri')
-protein(59.0, 36.8, 15.0, 7.2, 'GEFs', 'gef', 'kidney')
-D.text(47.0, 43.4, 'tissue-restricted', color=GREY, bold=True)
+# Extracellular anti-EGFR antibody callout (Distinct Drug Card Element)
+card_egfr = drug_box(1.5, 4.5, 21.0, 8.5, 'Anti-EGFR mAbs', 'cetuximab, panitumumab', 'approved', '#BE123C')
+# Inhibitory T-bar from right edge of drug card straight to EGFR extracellular domain (offset by 0.75mm)
+arrow(card_egfr['right'], (RX['rtk'] - 2.8, card_egfr['right'][1]), end='tee', col='#BE123C', lw=0.55)
 
-arrow((32.0, 28.6), (35.4, 34.8), (33.2, 30.6), (34.8, 32.6), col=INK_MUTED)
-arrow((14.2, 30.6), (33.2, 35.4), (22.0, 28.0), (29.0, 29.6), col=INK_MUTED)
-arrow((47.0, 30.4), (55.0, 33.6), (48.6, 32.4), (52.0, 33.2), col=INK_MUTED)
-arrow((65.0, 30.6), (62.0, 33.6), (64.6, 31.8), (63.2, 32.8), col=INK_MUTED)
+# Top Right: Standardization Legend Box
+D.add('bg', '<rect x="135.0" y="1.5" width="43.5" height="18.5" rx="2.0" fill="#FFFFFF" '
+            'fill-opacity="0.95" stroke="#CBD5E1" stroke-width="0.45" filter="url(#subtle-shadow)"/>')
+marker(138.0, 4.5, 'approved')
+D.text(141.0, 4.5, 'Approved drug class', color=INK, size=FS_XS, bold=True)
+marker(138.0, 8.5, 'clinical')
+D.text(141.0, 8.5, 'Clinical trials (Ph I–III)', color=INK, size=FS_XS, bold=True)
+marker(138.0, 12.5, 'preclinical')
+D.text(141.0, 12.5, 'Preclinical / investigational', color=INK, size=FS_XS, bold=True)
+D.add('link', '<path d="M136.5 16.5 L140.0 16.5" stroke="#BE123C" stroke-width="0.65" stroke-dasharray="1.2 0.8"/>')
+D.text(141.0, 16.5, 'Negative feedback / inh.', color='#BE123C', size=FS_XS, bold=True)
 
-DSHP = '1.1 0.7'
-arrow((36.6, 34.9), (36.6, 28.2), end='none', col='#2563EB', dash=DSHP, lw=0.55)
-arrow((36.6, 28.2), (83.5, 28.2), end='none', col='#2563EB', dash=DSHP, lw=0.55)
-arrow((83.5, 28.2), (83.5, 34.8), col='#2563EB', dash=DSHP, lw=0.55)
-D.text(82.5, 29.8, 'pY32/pY64', anchor='end', color='#1D4ED8', bold=True)
+# Adaptors & Upstream Modulation: GRB2 -> SHP2 -> SOS1 (Linear forward cascade)
+node_grb2 = pill(28.0, 35.0, 11.0, 5.6, 'GRB2', 'adapt')
+node_shp2 = pill(42.0, 35.0, 11.5, 5.6, 'SHP2', 'adapt')
+node_sos1 = pill(56.0, 35.0, 12.5, 6.2, 'SOS1', 'adapt')
 
-GDP, GTP, SY = 89.0, 125.0, 39.6
+# Receptor intracellular tail to adaptor activation
+arrow((RX['rtk'], 30.5), (node_grb2['cx'], node_grb2['top'][1]), col=INK_MUTED, lw=0.50)
+arrow(node_grb2['right'], node_shp2['left'], col=INK_MUTED, lw=0.50)
+arrow((RX['int'], 27.5), (node_shp2['cx'] + 1.0, node_shp2['top'][1]), col=INK_MUTED, lw=0.50)
+arrow(node_shp2['right'], node_sos1['left'], col=INK_MUTED, lw=0.50)
 
-def ras(cx, cy, col_key, nuc, tside):
+# Upstream Inhibitors Card (SHP2 & SOS1) - Dedicated Drug Box Element
+card_upstream = drug_box(34.0, 44.5, 32.0, 8.8, 'SHP2 / SOS1 inh.', 'TNO155, BI 1701963', 'clinical', '#2563EB')
+# Direct T-bars connecting from card top border to target protein pill boundaries
+arrow((node_shp2['cx'], card_upstream['top'][1]), node_shp2['bottom'], end='tee', col=INK, lw=0.48)
+arrow((node_sos1['cx'] + 1.5, card_upstream['top'][1]), (node_sos1['cx'] + 1.5, node_sos1['bottom'][1]), end='tee', col=INK, lw=0.48)
+
+# ============================================================ CENTRAL SWITCH ==
+GDP_X, GTP_X, SW_Y = 80.0, 112.0, 36.5
+
+def ras_node(cx, cy, col_key, nuc_txt):
     col = COL[col_key]
     tc = TC_MAP.get(col_key, INK)
-    tx = cx + tside * 4.2
+    # Farnesyl lipid anchor into inner leaflet
     D.add('under', '<path d="M%.2f %.2f C%.2f %.2f %.2f %.2f %.2f %.2f" fill="none" '
-                   'stroke="%s" stroke-width="0.6" stroke-linecap="round"/>'
-          % (cx + tside * 2.5, cy - 5.0, cx + tside * 3.5, cy - 8.0, tx, cy - 10.0,
-             tx, M + HD + 0.6, mix(col, '#000000', 0.35)))
-    zz = [(tx + (0.45 if k % 2 else -0.45), M + HD + 0.6 - k * 0.75) for k in range(5)]
-    D.add('over', '<path d="%s" fill="none" stroke="#D97706" stroke-width="0.55" '
-                  'stroke-linejoin="round"/>' % pts_path(zz, False))
-    body([(cx, cy, 7.8, 6.2, 0), (cx + 2.6, cy - 3.0, 3.2, 2.4, 0)], col,
-         hl=(cx - 2.4, cy - 2.8, 2.6, 1.3))
-    D.text(cx, cy - 1.8, 'RAS', anchor='middle', color=tc, bold=True, audit=False)
-    nw = 9.2
-    D.add('body', '<rect x="%.2f" y="%.2f" width="%.2f" height="3.4" rx="1.7" '
-                  'fill="#FFFFFF" stroke="%s" stroke-width="0.38"/>'
-          % (cx - nw / 2, cy + 0.5, nw, mix(col, '#000000', 0.45)))
-    nuc_color = '#1E3A8A' if nuc == 'GDP' else '#991B1B'
-    D.text(cx, cy + 2.3, nuc, anchor='middle', color=nuc_color, bold=True, audit=False)
+                   'stroke="%s" stroke-width="0.55" stroke-linecap="round"/>'
+          % (cx, cy - 4.5, cx, cy - 7.5, cx, cy - 9.5, cx, M + HD + 0.6, mix(col, '#000000', 0.35)))
+    zz = [(cx + (0.4 if k % 2 else -0.4), M + HD + 0.6 - k * 0.7) for k in range(5)]
+    D.add('over', '<path d="%s" fill="none" stroke="#D97706" stroke-width="0.50" stroke-linejoin="round"/>'
+          % pts_path(zz, False))
+    # RAS main G-domain body
+    w, h = 17.0, 9.2
+    D.add('body', '<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" rx="3.5" '
+                 'fill="%s" stroke="%s" stroke-width="0.6"/>'
+          % (cx - w / 2, cy - h / 2, w, h, D.gradient(col), mix(col, '#000000', 0.35)))
+    D.text(cx, cy - 1.4, 'KRAS', anchor='middle', color=tc, bold=True, size=6.8*PT)
+    # Nucleotide badge
+    nw, nh = 9.2, 3.2
+    nuc_bg = '#1E3A8A' if nuc_txt == 'GDP' else '#991B1B'
+    D.add('body', '<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" rx="1.6" '
+                 'fill="#FFFFFF" stroke="%s" stroke-width="0.35"/>'
+          % (cx - nw / 2, cy + 0.8, nw, nh, nuc_bg))
+    D.text(cx, cy + 2.5, nuc_txt, anchor='middle', color=nuc_bg, bold=True, size=5.5*PT)
+    return {
+        'top': (cx, cy - h / 2),
+        'bottom': (cx, cy + h / 2),
+        'left': (cx - w / 2, cy),
+        'right': (cx + w / 2, cy),
+        'cx': cx, 'cy': cy, 'w': w, 'h': h
+    }
 
-ras(GDP, SY, 'off', 'GDP', -1)
-ras(GTP, SY, 'on', 'GTP', 1)
+node_gdp = ras_node(GDP_X, SW_Y, 'off', 'GDP')
+node_gtp = ras_node(GTP_X, SW_Y, 'on', 'GTP')
 
-protein(107.0, 29.2, 19.0, 6.2, 'NF1, RASA1', 'gap', 'bi')
-D.text(107.0, 34.0, 'GAPs', anchor='middle', color=GREY, bold=True)
+# SOS1 DIRECT ACTIVATION OF KRAS-GDP (No stray lines! Perfectly connecting element to element)
+arrow(node_sos1['right'], node_gdp['left'], col='#0D9488', lw=0.58)
+D.text((node_sos1['right'][0] + node_gdp['left'][0]) / 2, 33.2, 'GEF exchange',
+       anchor='middle', color='#0F766E', bold=True, size=4.8*PT, halo=True)
 
-arrow((117.4, 37.0), (96.8, 37.0), (113.0, 35.0), (101.2, 35.0), col=INK, lw=0.65)
-D.text(107.0, 40.5, 'hydrolysis', anchor='middle', color=GREY, bold=True, halo=True)
+# GAP (NF1, RASA1) - Dedicated Pill Element
+node_gap = pill(96.0, 20.0, 15.0, 5.0, 'GAP (NF1)', 'gap', border_col='#64748B')
 
-arrow((96.8, 44.4), (117.4, 44.4), (101.2, 47.0), (113.0, 47.0), col=INK, lw=0.65)
-D.text(107.0, 50.4, 'exchange', anchor='middle', color=GREY, bold=True, halo=True)
+# Upper Arc: GTP -> GDP (Hydrolysis)
+arrow((GTP_X - 6.0, SW_Y - 4.5), (GDP_X + 6.0, SW_Y - 4.5),
+      (GTP_X - 10.0, 26.5), (GDP_X + 10.0, 26.5), col=INK, lw=0.60)
+# GAP stimulation arrow pointing from GAP bottom border straight down to the hydrolysis arc
+arrow(node_gap['bottom'], (96.0, 26.5), col='#334155', lw=0.50)
+D.text(105.0, 23.5, 'hydrolysis (10⁵×)', anchor='start', color=GREY, bold=True, size=4.8*PT)
 
-arrow((27.4, 40.6), (97.0, 46.4), (32.0, 50.5), (78.0, 52.0), col=COL['adapt'], lw=0.55)
-arrow((67.0, 40.0), (98.5, 46.2), (72.0, 47.0), (84.0, 49.5), col='#0D9488', lw=0.55)
+# Oncogenic Mutation Blockade Badge Element
+D.add('body', '<rect x="86.0" y="30.5" width="20.0" height="4.0" rx="1.4" '
+             'fill="#FEE2E2" stroke="#EF4444" stroke-width="0.40"/>')
+D.text(96.0, 32.5, 'G12/G13/Q61 lock', anchor='middle', color='#991B1B', bold=True, size=4.8*PT)
+# Inhibitory T-bar from mutation lock badge up to the GAP hydrolysis arc
+arrow((96.0, 30.5), (96.0, 27.2), end='tee', col='#BE123C', lw=0.55)
 
-NX = 135.5
-D.lines(NX, 27.6, [
-    'G12, G13 and Q61 substitutions',
-    'blunt GAP-stimulated hydrolysis:',
-    'mutant RAS accumulates GTP-bound'
-], color='#991B1B', bold=True)
+# Lower Arc: GDP -> GTP (GEF Exchange)
+arrow((GDP_X + 6.0, SW_Y + 4.5), (GTP_X - 6.0, SW_Y + 4.5),
+      (GDP_X + 10.0, 44.5), (GTP_X - 10.0, 44.5), col=INK, lw=0.60)
+D.text(96.0, 46.8, 'GDP → GTP cycle', anchor='middle', color=GREY, bold=True, size=4.8*PT, halo=True)
 
-D.lines(NX, 27.6 + 3 * LH + 1.2, [
-    'NF1 is lost in <i>NF1</i>-mutant tumours;',
-    'germline loss causes RASopathies'
-], color=GREY)
+# ============================================================ DIRECT DRUGS ====
+# Class I & II docked to RAS-GDP (Bottom of RAS-GDP, x: 68-96, y: 49.0-59.5)
+D.add('body', '<rect x="66.0" y="49.0" width="36.0" height="11.0" rx="1.8" fill="#FFFFFF" '
+             'fill-opacity="0.96" stroke="#94A3B8" stroke-width="0.50" filter="url(#subtle-shadow)"/>')
+marker(68.5, 51.8, 'approved', s=0.85)
+D.text(71.0, 51.8 - FS_SM * 0.35, 'Class I: sotorasib, adagrasib', color=INK, bold=True, size=FS_SM)
+marker(68.5, 56.5, 'clinical', s=0.85)
+D.text(71.0, 56.5 - FS_SM * 0.35, 'Class II: MRTX1133 (G12D)', color=INK, bold=True, size=FS_SM)
+# Vertical T-bar straight UP from top edge of Drug Box to bottom of KRAS-GDP (zero crossing)
+arrow((node_gdp['cx'], 49.0), node_gdp['bottom'], end='tee', col=INK, lw=0.55)
 
-TY = 54.4
-tag(6.0, TY, 'SHP2 and SOS1 inhibitors', 'clinical', color=INK)
-tag(61.0, TY, 'OFF-state covalent (<i>KRAS</i> G12C)', 'approved', color=INK)
-tag(61.0, TY + LH, 'OFF-state, non-cysteine alleles', 'clinical', color=INK)
+# Class III & IV docked to RAS-GTP (Right side of RAS-GTP, x: 126-174, y: 30.5-42.5)
+D.add('body', '<rect x="126.0" y="30.5" width="48.0" height="12.0" rx="1.8" fill="#FFFFFF" '
+             'fill-opacity="0.96" stroke="#E11D48" stroke-width="0.50" filter="url(#subtle-shadow)"/>')
+marker(128.5, 33.5, 'clinical', s=0.85)
+D.text(131.0, 33.5 - FS_SM * 0.35, 'Class III: daraxonrasib', color=INK, bold=True, size=FS_SM)
+# CYPA chaperone badge element
+D.add('body', '<rect x="163.5" y="31.8" width="8.8" height="3.5" rx="1.6" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="0.35"/>')
+D.text(167.9, 33.5, '+ CYPA', anchor='middle', color='#6D28D9', bold=True, size=4.6*PT)
 
-tag(131.0, TY - 2 * LH + 0.4, [
-    'RAS(ON) tri-complex inhibitors,',
-    'allele- and multi-selective'
-], 'approved', color=INK)
-tag(131.0, TY + LH, 'Degraders; effector-interface binders', 'clinical', color=INK)
+marker(128.5, 38.5, 'clinical', s=0.85)
+D.text(131.0, 38.5 - FS_SM * 0.35, 'Class IV: ASP3082 (PROTAC)', color=INK, bold=True, size=FS_SM)
+# Horizontal T-bar straight LEFT from left edge of Drug Box to right of KRAS-GTP (zero crossing)
+arrow((126.0, node_gtp['cy']), node_gtp['right'], end='tee', col=INK, lw=0.55)
 
-T1, T2, T3 = 73.4, 86.0, 98.4
-BR = {'mapk': 20.0, 'rassf': 50.0, 'pi3k': 78.0, 'ral': 120.0, 'plc': 147.0, 'tiam': 168.0}
-FY = 62.6
+# ============================================================ EFFECTOR BUS ====
+# Completely open central corridor at x = 112.0 dropping down to horizontal bus at y = 62.0!
+BUS_Y = 62.0
+BUS_X = {'mapk': 22.0, 'rassf': 56.0, 'pi3k': 84.0, 'ral': 128.0, 'cyto': 162.0}
 
-arrow((GTP, SY + 6.1), (GTP, FY), end='none', col=INK, lw=0.65)
-D.text(GTP - 1.6, FY - 1.4, 'effector binding', anchor='end', color=GREY, bold=True)
+# Drop from active KRAS-GTP (Passing cleanly between Class I/II at x<=102 and Class III/IV at x>=126)
+arrow(node_gtp['bottom'], (node_gtp['cx'], BUS_Y), end='none', col=INK, lw=0.65)
+D.text(node_gtp['cx'] - 1.5, BUS_Y - 1.2, 'effector recruitment', anchor='end', color=GREY, bold=True, size=5.5*PT)
 
-for k, x in BR.items():
-    arrow((GTP, FY), (x, T1 - 5.4), (GTP, FY + 3.0), (x, FY + 1.2), col=INK, lw=0.50)
+# Horizontal distribution bus spanning across the 5 functional lanes
+D.add('link', '<path d="M%.2f %.2f L%.2f %.2f" stroke="%s" stroke-width="0.55"/>'
+      % (BUS_X['mapk'], BUS_Y, BUS_X['cyto'], BUS_Y, INK))
 
-M2X = 99.0
-arrow((GTP, FY), (M2X, T1 - 4.4), (GTP, FY + 2.6), (M2X, FY + 1.2), col=INK, lw=0.50)
+# Perpendicular downward branches into each effector column
+for k, x in BUS_X.items():
+    arrow((x, BUS_Y), (x, 67.4), col=INK, lw=0.55)
 
-protein(BR['mapk'], T1, 22.0, 9.4, None, 'mapk', 'bi', rows=['RAF', '(BRAF, CRAF)'])
-protein(BR['mapk'], T2, 20.0, 7.4, 'MEK1/2', 'mapk', 'bi')
-protein(BR['mapk'], T3, 20.0, 7.4, 'ERK1/2', 'mapk', 'bi')
+# ============================================================ EFFECTOR COLUMNS =
+T1, T2, T3 = 70.5, 83.5, 96.5
 
-protein(BR['pi3k'], T1, 20.0, 9.4, None, 'pi3k', 'bi', rows=['PI3K', '(p110)'])
-protein(BR['pi3k'], T2, 16.0, 7.4, 'AKT', 'pi3k', 'bi')
-protein(BR['pi3k'], T3, 20.0, 7.4, 'mTORC1', 'pi3k', 'tri')
+# Column 1: MAPK Pathway (x = 22.0)
+node_raf = pill(BUS_X['mapk'], T1, 16.0, 6.2, 'RAF', 'mapk')
+node_mek = pill(BUS_X['mapk'], T2, 14.0, 5.8, 'MEK1/2', 'mapk')
+node_erk = pill(BUS_X['mapk'], T3, 14.0, 5.8, 'ERK1/2', 'mapk')
 
-protein(BR['ral'], T1, 20.0, 8.2, 'RALGDS', 'ral', 'bi')
-protein(BR['ral'], T2, 11.0, 7.0, 'RAL', 'ral', 'round')
-protein(BR['ral'], T3, 13.0, 7.0, 'TBK1', 'ral', 'bi')
+arrow(node_raf['bottom'], node_mek['top'], col=INK)
+arrow(node_mek['bottom'], node_erk['top'], col=INK)
 
-protein(BR['plc'], T1, 16.0, 8.2, 'PLCε', 'other', 'bi')
-protein(BR['plc'], T2, 19.0, 7.4, 'DAG, PKC', 'other', 'tri')
+# MAPK drug callout cards (Dedicated element containers, centered horizontally with target nodes)
+card_raf_mek = drug_box(33.0, 79.5, 18.5, 8.0, 'RAF / MEK inh.', 'trametinib, encorafenib', 'approved')
+arrow(card_raf_mek['left'], node_mek['right'], end='tee', col=INK, lw=0.48)
 
-protein(BR['tiam'], T1, 17.0, 8.2, 'TIAM1', 'other', 'bi')
-protein(BR['tiam'], T2, 11.0, 7.0, 'RAC', 'other', 'round')
+card_erk = drug_box(33.0, 92.5, 18.5, 8.0, 'ERK inh.', 'ulixertinib (Ph I/II)', 'clinical')
+arrow(card_erk['left'], node_erk['right'], end='tee', col=INK, lw=0.48)
 
-protein(BR['rassf'], T1, 17.0, 8.2, 'RASSF1A', 'rassf', 'bi')
-protein(BR['rassf'], T2, 14.0, 7.4, 'MST2', 'rassf', 'bi')
-
-protein(M2X, T1, 13.0, 7.6, 'mTORC2', 'pi3k', 'tri')
-
-for x, a, b, ha, hb in ((BR['mapk'], T1, T2, 4.7, 3.7), (BR['mapk'], T2, T3, 3.7, 3.7),
-                        (BR['pi3k'], T1, T2, 4.7, 3.7), (BR['pi3k'], T2, T3, 3.7, 3.7),
-                        (BR['ral'], T1, T2, 4.1, 3.5), (BR['plc'], T1, T2, 4.1, 3.7),
-                        (BR['tiam'], T1, T2, 4.1, 3.5)):
-    arrow((x, a + ha + 0.5), (x, b - hb - 0.4), col=INK)
-
-arrow((M2X - 6.4, T1 + 3.0), (BR['pi3k'] + 8.3, T2 - 3.7),
-      (M2X - 8.6, T1 + 5.8), (BR['pi3k'] + 9.2, T2 - 1.2), col=INK)
-arrow((BR['ral'], T2 + 3.9), (BR['ral'], T3 - 3.9), col=INK)
-
-D.text(BR['ral'], 105.0, 'survival', anchor='middle', color='#1E3A8A', bold=True)
-
-arrow((BR['rassf'], T1 + 4.4), (BR['rassf'], T2 - 3.9), col=INK)
-arrow((BR['rassf'], T2 + 4.0), (BR['rassf'], 96.6), col=INK)
-D.text(BR['rassf'], 99.0, 'YAP1/p73 → apoptosis', anchor='middle', color='#475569', bold=True)
-arrow((31.0, 77.9), (44.4, 82.6), (34.5, 79.4), (40.5, 81.9), end='tee', col=INK, lw=0.45)
-
-for k, (vx, vy, r) in enumerate(((101.5, 96.2, 2.0), (107.0, 94.8, 1.7), (111.6, 96.4, 1.45))):
-    D.add('body', '<circle cx="%.2f" cy="%.2f" r="%.2f" fill="#EEF2F6" stroke="%s" '
-                  'stroke-width="0.5"/>' % (vx, vy, r, COL['ral']))
-    for j in range(4):
-        a = j * 1.6 + k
-        D.add('body', '<circle cx="%.2f" cy="%.2f" r="0.34" fill="%s"/>'
-              % (vx + 0.5 * r * math.cos(a), vy + 0.5 * r * math.sin(a), '#2563EB'))
-
-arrow((BR['ral'] - 5.6, T2 + 1.8), (BR['ral'] - 8.4, 94.4),
-      (BR['ral'] - 7.0, 90.2), (BR['ral'] - 8.6, 92.4), col=INK)
-D.lines(100.5, 100.0, ['vesicle traffic,', 'secretion'], anchor='middle', color='#1E40AF', bold=True)
-
-AX0, AX1, AY = 138.0, 177.0, 98.6
-for k in range(3):
-    y = AY - 1.4 + k * 1.4
-    pts = [(AX0 + j * 0.55, y + 0.28 * math.sin(j * 1.1 + k)) for j in range(72)]
-    D.add('body', '<path d="%s" fill="none" stroke="%s" stroke-width="0.6" '
-                  'stroke-dasharray="0.45 0.15" stroke-linecap="round"/>'
-          % (pts_path(pts, False), '#9A3412'))
-for bx in (143.0, 151.0, 160.0, 169.0):
-    D.add('body', '<path d="M%.2f %.2f l2.2 -2.1" stroke="%s" stroke-width="0.55" '
-                  'stroke-dasharray="0.45 0.15"/>' % (bx, AY - 1.4, '#9A3412'))
-for x in (BR['plc'], BR['tiam']):
-    arrow((x, T2 + 4.2), (x, AY - 3.6), col=INK)
-D.lines((AX0 + AX1) / 2, 105.0, ['actin remodelling,', 'migration and invasion'],
-        anchor='middle', color='#9A3412', bold=True)
-
-NCX, NCY, NRX, NRY = 30.0, 134.0, 36.0, 25.0
+# Nucleus & Proliferation (Bottom of Column 1)
+NCX, NCY, NRX, NRY = 22.0, 130.0, 28.0, 20.0
 D.add('bg', '<g clip-path="url(#clipA)">')
-D.add('bg', '<ellipse cx="%.2f" cy="%.2f" rx="%.2f" ry="%.2f" fill="url(#nuc)" '
-            'stroke="#8B5CF6" stroke-width="0.55"/>' % (NCX, NCY, NRX, NRY))
-D.add('bg', '<ellipse cx="%.2f" cy="%.2f" rx="%.2f" ry="%.2f" fill="none" '
-            'stroke="#8B5CF6" stroke-width="0.3"/>' % (NCX, NCY, NRX - 1.0, NRY - 1.0))
-for ang in (-132, -104, -78, -40):
-    t = math.radians(ang)
-    px, py = NCX + (NRX - 0.5) * math.cos(t), NCY + (NRY - 0.5) * math.sin(t)
-    D.add('bg', '<circle cx="%.2f" cy="%.2f" r="0.75" fill="#FFFFFF" stroke="#8B5CF6" '
-                'stroke-width="0.35"/>' % (px, py))
-for ph, colr in ((0.0, '#4C1D95'), (math.pi, '#6D28D9')):
-    pts = [(4.0 + j * 0.5, 120.3 + 1.3 * math.sin(j * 0.32 + ph)) for j in range(66)]
-    D.add('bg', '<path d="%s" fill="none" stroke="%s" stroke-width="0.65"/>'
-          % (pts_path(pts, False), colr))
-for j in range(2, 66, 4):
-    xx = 4.0 + j * 0.5
-    D.add('bg', '<path d="M%.2f %.2f L%.2f %.2f" stroke="#A78BFA" stroke-width="0.38"/>'
-          % (xx, 120.3 + 1.3 * math.sin(j * 0.32), xx, 120.3 + 1.3 * math.sin(j * 0.32 + math.pi)))
+D.add('bg', '<ellipse cx="%.2f" cy="%.2f" rx="%.2f" ry="%.2f" fill="url(#nuc)" stroke="#8B5CF6" stroke-width="0.55"/>'
+      % (NCX, NCY, NRX, NRY))
 D.add('bg', '</g>')
+D.text(38.0, 120.0, 'Nucleus', color='#6D28D9', bold=True, size=FS_SM)
 
-protein(22.0, 114.4, 8.4, 4.6, 'ERK', 'mapk', 'round', layer='over')
-arrow((BR['mapk'], T3 + 3.9), (21.4, 111.8), (BR['mapk'], 106.0), (21.0, 108.4), col=INK)
-D.lines(28.5, 114.3, ['ERK-dependent', 'transcription'], color='#4C1D95', bold=True)
-D.text(39.0, 120.8, 'Nucleus', color='#4C1D95', bold=True, audit=False)
+# Translocated ERK inside Nucleus
+node_erk_nuc = pill(BUS_X['mapk'], 107.0, 10.5, 4.8, 'ERK (p)', 'mapk')
+arrow(node_erk['bottom'], node_erk_nuc['top'], col=INK)
 
-tag(32.0, 63.6, ['RAF and MEK', 'inhibitors'], 'approved', color=INK, halo=True)
-tag(24.0, 104.6, 'ERK inhibitors', 'clinical', color=INK, halo=True)
-tag(56.0, 106.4, "PI3K, AKT and mTOR inhibitors", "approved", color=INK, halo=True)
+# Outcome Box 1: Proliferation & Cell Cycle (Dedicated Element Container)
+out_mapk = outcome_box(8.0, 113.5, 28.0, 8.5, 'Proliferation & Growth', 'CCND1, MYC, FOS, ELK1',
+                       '#FAF5FF', '#C084FC', '#581C87')
+arrow(node_erk_nuc['bottom'], out_mapk['top'], col='#581C87', lw=0.55)
 
-tag(68.0, 110.8, 'RAL, PLCε, TIAM1: no selective agent in clinic', 'preclinical', color=INK)
-D.text(70.8, 110.8 + LH, 'Effector use differs by allele and by tissue', color=GREY, bold=True)
+# Column 2: Pro-Apoptotic Branch (RASSF1A) (x = 56.0)
+node_rassf = pill(BUS_X['rassf'], T1, 16.0, 6.0, 'RASSF1A', 'rassf')
+node_mst = pill(BUS_X['rassf'], T2, 13.0, 5.8, 'MST1/2', 'rassf')
+arrow(node_rassf['bottom'], node_mst['top'], col=INK)
 
-RD, DSH = '#BE123C', '1.2 0.8'
-FX = 3.2
-arrow((BR['mapk'] - 9.2, T3), (FX, T3), end='none', col=RD, dash=DSH, lw=0.6)
-arrow((FX, T3), (FX, 30.0), end='none', col=RD, dash=DSH, lw=0.6)
-arrow((FX, 30.0), (6.4, 30.0), end='tee', col=RD, dash=DSH, lw=0.6)
-arrow((FX, T1), (BR['mapk'] - 10.6, T1), end='tee', col=RD, dash=DSH, lw=0.6)
-arrow((FX, 45.2), (20.4, 45.2), end='none', col=RD, dash=DSH, lw=0.6)
-arrow((20.4, 45.2), (20.4, 41.4), end='tee', col=RD, dash=DSH, lw=0.6)
-D.text(2.0, (T1 + T3) / 2 + 3.0, 'ERK negative feedback', anchor='middle', color=RD,
-       bold=True, rot=-90)
+# Cross-talk: RAF inhibits RASSF1A (Horizontal line with T-bar connecting protein elements)
+arrow(node_raf['right'], node_rassf['left'], end='tee', col='#BE123C', lw=0.48)
 
-D.text(0.6, 2.0, 'a', bold=True, size=PNs, color=INK, audit=False)
+# Outcome Box 2: Apoptosis (Dedicated Element Container)
+out_rassf = outcome_box(46.0, 96.0, 20.0, 8.5, 'Apoptosis', 'MST / YAP1 / p73',
+                        '#F8FAFC', '#94A3B8', '#334155')
+arrow(node_mst['bottom'], out_rassf['top'], col=INK, lw=0.55)
 
-# ============================================================ PANEL B ========
+# Column 3: PI3K-AKT-mTOR Pathway (x = 84.0)
+node_pi3k = pill(BUS_X['pi3k'], T1, 16.0, 6.2, 'PI3K (p110)', 'pi3k')
+node_akt = pill(BUS_X['pi3k'], T2, 13.0, 5.8, 'AKT', 'pi3k')
+node_mtor = pill(BUS_X['pi3k'], T3, 15.0, 5.8, 'mTORC1', 'pi3k')
+
+arrow(node_pi3k['bottom'], node_akt['top'], col=INK)
+arrow(node_akt['bottom'], node_mtor['top'], col=INK)
+
+# ============================================================ SEPARATE PI3K & mTOR INHIBITOR CARDS ====
+# User requirement: PI3K inhibitor specifically inhibits PI3K (p110); mTOR inhibitor specifically inhibits mTORC1!
+card_pi3k_inh = drug_box(96.0, 66.5, 21.0, 8.0, 'PI3K inh.', 'alpelisib, inavolisib', 'approved')
+arrow(card_pi3k_inh['left'], node_pi3k['right'], end='tee', col=INK, lw=0.48)
+
+card_mtor_inh = drug_box(96.0, 92.5, 21.0, 8.0, 'mTOR inh.', 'everolimus, sirolimus', 'approved')
+arrow(card_mtor_inh['left'], node_mtor['right'], end='tee', col=INK, lw=0.48)
+
+# Outcome Box 3: Survival & Growth (Dedicated Element Container)
+out_pi3k = outcome_box(71.5, 108.0, 25.0, 8.5, 'Survival & Growth', 'S6K1, 4E-BP1, glycolysis',
+                       '#F0FDFA', '#5EEAD4', '#0F766E')
+arrow(node_mtor['bottom'], out_pi3k['top'], col='#0F766E', lw=0.55)
+
+# Column 4: RAL GTPases (x = 128.0)
+node_ralgds = pill(BUS_X['ral'], T1, 15.0, 6.0, 'RALGDS', 'ral')
+node_ral = pill(BUS_X['ral'], T2, 13.0, 5.8, 'RAL-A/B', 'ral')
+node_tbk1 = pill(BUS_X['ral'], T3, 15.0, 5.8, 'TBK1 / Sec5', 'ral')
+
+arrow(node_ralgds['bottom'], node_ral['top'], col=INK)
+arrow(node_ral['bottom'], node_tbk1['top'], col=INK)
+
+# Vesicle trafficking icons
+for k, (vx, vy, r) in enumerate(((138.5, 84.0, 1.8), (143.0, 82.8, 1.5), (147.0, 84.2, 1.3))):
+    D.add('body', '<circle cx="%.2f" cy="%.2f" r="%.2f" fill="#EEF2F6" stroke="%s" stroke-width="0.45"/>'
+          % (vx, vy, r, COL['ral']))
+    D.add('body', '<circle cx="%.2f" cy="%.2f" r="0.30" fill="#2563EB"/>' % (vx, vy))
+
+# Outcome Box 4: Vesicle Trafficking (Dedicated Element Container)
+out_ral = outcome_box(115.5, 108.0, 25.0, 8.5, 'Vesicle Trafficking', 'Exocyst & autophagy',
+                      '#F0F9FF', '#7DD3FC', '#0284C7')
+arrow(node_tbk1['bottom'], out_ral['top'], col='#0284C7', lw=0.55)
+
+# Column 5: Cytoskeletal Remodelling (PLCε & TIAM1)
+node_plce = pill(155.0, T1, 12.0, 5.8, 'PLCε', 'other')
+node_tiam1 = pill(169.0, T1, 12.0, 5.8, 'TIAM1', 'other')
+node_rac1 = pill(BUS_X['cyto'], T2, 16.0, 6.0, 'PKC / RAC1', 'other')
+
+arrow(node_plce['bottom'], (BUS_X['cyto'] - 3.0, node_rac1['top'][1]), col=INK)
+arrow(node_tiam1['bottom'], (BUS_X['cyto'] + 3.0, node_rac1['top'][1]), col=INK)
+
+# Actin filament waves
+AY = 94.5
+for k in range(2):
+    y = AY + k * 1.5
+    pts = [(150.0 + j * 0.5, y + 0.25 * math.sin(j * 1.1 + k)) for j in range(48)]
+    D.add('body', '<path d="%s" fill="none" stroke="#D97706" stroke-width="0.55" stroke-linecap="round"/>'
+          % pts_path(pts, False))
+
+# Outcome Box 5: Motility & Invasion (Dedicated Element Container)
+out_cyto = outcome_box(149.5, 108.0, 25.0, 8.5, 'Motility & Invasion', 'Actin dynamics & migration',
+                       '#FFFBEB', '#FCD34D', '#B45309')
+arrow(node_rac1['bottom'], out_cyto['top'], col='#D97706', lw=0.55)
+
+# ============================================================ FEEDBACK LOOP ===
+# Far-left corridor: Single clean red dashed line with ZERO line crossings!
+FX = 6.0
+# Leaves ERK1/2 left border
+arrow(node_erk['left'], (FX, node_erk['cy']), end='none', col='#BE123C', dash='1.2 0.8', lw=0.6)
+# Travels along vertical corridor
+arrow((FX, node_erk['cy']), (FX, 19.5), end='none', col='#BE123C', dash='1.2 0.8', lw=0.6)
+
+# Branch 1 to RAF: From corridor straight into RAF left border
+arrow((FX, node_raf['cy']), node_raf['left'], end='tee', col='#BE123C', dash='1.2 0.8', lw=0.6)
+
+# Branch 2 to SOS1: Under GRB2/SHP2 at y=41.5, entering left-side bottom of SOS1 at x = 52.0 (zero overlap with drug T-bar at x=57.5)
+arrow((FX, 41.5), (52.0, 41.5), end='none', col='#BE123C', dash='1.2 0.8', lw=0.6)
+arrow((52.0, 41.5), (52.0, node_sos1['bottom'][1]), end='tee', col='#BE123C', dash='1.2 0.8', lw=0.6)
+
+# Branch 3 to EGFR: Straight into intracellular tail of EGFR
+arrow((FX, 19.5), (RX['rtk'] - 4.5, 19.5), end='tee', col='#BE123C', dash='1.2 0.8', lw=0.6)
+
+# Minimalist label along the feedback corridor
+D.text(FX + 1.8, 54.0, 'ERK negative feedback', color='#BE123C', bold=True, size=5.8*PT)
+
+# Panel a Letter
+D.text(1.0, 2.5, 'a', bold=True, size=PNs, color=INK)
+
+# ============================================================ PANEL B =========
+# Dividing hairline
+D.add('bg', '<line x1="0" y1="%.2f" x2="180" y2="%.2f" stroke="#E2E8F0" stroke-width="0.6"/>'
+      % (BOT_A, BOT_A))
+
 BY = 126.0
-CW, CG = 43.5, 2.0
+CW, CG = 43.0, 2.0
+BH = 44.0
+
 CARDS = [
-    ('Metabolic reprogramming',
-     'More glucose uptake, rewired glutamine use, scavenging of extracellular nutrients',
-     'Metabolic co-targeting', 'preclinical'),
-    ('Macropinocytosis and autophagy',
-     'Protein and amino-acid recycling sustains growth and is a survival route under drug pressure',
-     'Autophagy inhibition', 'clinical'),
-    ('Immunosuppressive microenvironment',
-     'Higher PD-L1, recruitment of myeloid suppressor cells, reduced antigen presentation',
-     'Checkpoint blockade; mutant-RAS vaccines and TCR-T cells', 'clinical'),
-    ('Senescence and oncogenic stress',
-     'A barrier that must be bypassed: carrying a mutation is not the same as depending on it',
-     'No therapeutic use; constrains how mutation data are read', 'preclinical'),
+    ('Metabolic Rewiring',
+     'Glycolysis & glutaminolysis',
+     'Macromolecule scavenging & nutrient flux',
+     'GOT1, GLS1, MCT4 inh.', 'preclinical'),
+    ('Macropinocytosis & Autophagy',
+     'Nutrient scavenging & recycling',
+     'Lysosomal degradation sustains viability',
+     'Hydroxychloroquine (HCQ)', 'clinical'),
+    ('Immunosuppressive Microenv.',
+     'Immune exclusion & myeloid influx',
+     'MDSC influx & PD-L1 upregulation',
+     'Anti-PD-(L)1; RAS vaccines', 'clinical'),
+    ('Senescence Bypass',
+     'Escape from oncogenic stress',
+     'Bypasses OIS barrier via TP53/CDKN2A loss',
+     'Senolytics; CDK4/6 inh.', 'preclinical'),
 ]
 
-def wrap(s, width, bold=False):
-    out, cur = [], ''
-    for wd in s.split(' '):
-        t = (cur + ' ' + wd).strip()
-        if tw(t, bold) <= width or not cur:
-            cur = t
-        else:
-            out.append(cur)
-            cur = wd
-    return out + [cur]
-
-def cell(x, y, w, h, col_key, nuc=True, layer='body'):
-    col = COL[col_key]
-    D.add(layer, '<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" rx="%.2f" '
-                 'fill="%s" stroke="%s" stroke-width="0.95"/>'
-          % (x, y, w, h, min(w, h) / 2, mix(col, WHITE, 0.85), mix(col, WHITE, 0.20)))
-    if nuc:
-        D.add(layer, '<ellipse cx="%.2f" cy="%.2f" rx="%.2f" ry="%.2f" fill="url(#nuc)" '
-                     'stroke="#8B5CF6" stroke-width="0.38"/>'
-              % (x + w * 0.62, y + h * 0.52, min(w, h) * 0.24, min(w, h) * 0.20))
-
-def hexa(x, y, r, col):
-    D.add('body', '<path d="%s" fill="#FFFFFF" stroke="%s" stroke-width="0.45"/>'
-          % (pts_path([(x + r * math.cos(math.pi / 3 * k + math.pi / 6),
-                         y + r * math.sin(math.pi / 3 * k + math.pi / 6))
-                        for k in range(6)]), col))
-
 def icon_metabolic(x, y):
-    cell(x + 10.0, y + 0.4, 30.0, 14.6, 'on', nuc=False)
-    D.add('body', '<rect x="%.2f" y="%.2f" width="9.6" height="4.6" rx="2.3" '
-                  'fill="#FED7AA" stroke="#C2410C" stroke-width="0.45"/>'
-          % (x + 27.0, y + 6.4))
-    D.add('body', '<path d="M%.2f %.2f q0.8 1.6 1.6 0 q0.8 -1.6 1.6 0 q0.8 1.6 1.6 0 '
-                  'q0.8 -1.6 1.6 0" fill="none" stroke="#C2410C" stroke-width="0.38"/>'
-          % (x + 28.4, y + 8.7))
-    for s in (-0.9, 0.9):
-        D.add('body', '<rect x="%.2f" y="%.2f" width="1.4" height="3.6" rx="0.7" '
-                      'fill="%s" stroke="%s" stroke-width="0.28"/>'
-              % (x + 10.2 + s - 0.7, y + 5.6, D.gradient(REC), mix(REC, '#000000', 0.4)))
-    for hx, hy in ((3.0, 4.2), (5.4, 9.6), (2.4, 12.0), (15.2, 7.4)):
-        hexa(x + hx, y + hy, 1.15, '#C2410C')
-    for gx, gy in ((19.0, 11.4), (21.6, 4.4), (23.6, 11.0)):
-        D.add('body', '<circle cx="%.2f" cy="%.2f" r="0.75" fill="#15803D"/>'
-              % (x + gx, y + gy))
-    arrow((x + 6.8, y + 7.4), (x + 12.8, y + 7.4), hs=1.1, col=INK)
+    # Mitochondrion with cristae
+    D.add('body', '<ellipse cx="%.2f" cy="%.2f" rx="9.5" ry="5.8" fill="%s" stroke="%s" stroke-width="0.75"/>'
+          % (x + 12.0, y + 8.0, mix(COL['other'], WHITE, 0.85), COL['other']))
+    pts = [(x + 4.5 + k * 1.5, y + 8.0 + 3.0 * math.sin(k * 1.2)) for k in range(11)]
+    D.add('body', '<path d="%s" fill="none" stroke="%s" stroke-width="0.55"/>'
+          % (pts_path(pts, False), mix(COL['other'], '#000000', 0.20)))
+    # Nutrient influx arrow
+    arrow((x + 2.0, y + 2.0), (x + 6.0, y + 6.0), col=COL['other'], lw=0.55)
+    D.text(x + 1.0, y + 1.5, 'Glc/Gln', color=COL['other'], bold=True, size=FS_XS)
 
 def icon_macro(x, y):
-    cell(x + 2.0, y + 2.6, 38.0, 12.4, 'on', nuc=False)
-    D.add('body', '<path d="M%.2f %.2f C%.2f %.2f %.2f %.2f %.2f %.2f" fill="none" '
-                  'stroke="%s" stroke-width="0.95" stroke-linecap="round"/>'
-          % (x + 6.0, y + 3.0, x + 4.0, y - 1.6, x + 12.0, y - 1.4, x + 12.6, y + 2.0,
-             mix(COL['on'], '#000000', 0.25)))
-    for dx, dy in ((8.0, 0.4), (9.6, 1.4), (7.2, 1.8), (10.4, -0.2)):
-        D.add('body', '<circle cx="%.2f" cy="%.2f" r="0.5" fill="#C2410C"/>'
-              % (x + dx, y + dy))
-    D.add('body', '<circle cx="%.2f" cy="%.2f" r="2.6" fill="#FFF7ED" stroke="%s" '
-                  'stroke-width="0.55"/>' % (x + 17.0, y + 8.6, mix(COL['on'], '#000000', 0.35)))
-    for dx, dy in ((-0.9, -0.6), (0.8, -0.2), (0.0, 1.0)):
-        D.add('body', '<circle cx="%.2f" cy="%.2f" r="0.5" fill="#C2410C"/>'
-              % (x + 17.0 + dx, y + 8.6 + dy))
-    for r, sw in ((3.2, 0.48), (2.5, 0.38)):
-        D.add('body', '<circle cx="%.2f" cy="%.2f" r="%.2f" fill="none" stroke="#64748B" '
-                      'stroke-width="%.2f"/>' % (x + 30.0, y + 8.6, r, sw))
-    D.add('body', '<rect x="%.2f" y="%.2f" width="2.6" height="1.5" rx="0.6" '
-                  'fill="#FED7AA" stroke="#C2410C" stroke-width="0.35"/>'
-          % (x + 28.7, y + 7.85))
-    arrow((x + 20.4, y + 8.6), (x + 25.8, y + 8.6), hs=1.1, col=INK)
+    # Membrane ruffle & vesicle engulfment
+    D.add('body', '<path d="M%.2f %.2f C%.2f %.2f %.2f %.2f %.2f %.2f C%.2f %.2f %.2f %.2f %.2f %.2f" '
+                 'fill="none" stroke="%s" stroke-width="0.80"/>'
+          % (x + 2.0, y + 12.0, x + 6.0, y + 2.0, x + 12.0, y + 1.5, x + 16.0, y + 6.0,
+             x + 20.0, y + 10.5, x + 26.0, y + 11.5, x + 30.0, y + 3.0, COL['ral']))
+    D.add('body', '<circle cx="%.2f" cy="%.2f" r="3.2" fill="%s" stroke="%s" stroke-width="0.55"/>'
+          % (x + 15.0, y + 9.5, mix(COL['ral'], WHITE, 0.85), COL['ral']))
+    D.add('body', '<circle cx="%.2f" cy="%.2f" r="1.0" fill="%s"/>'
+          % (x + 15.0, y + 9.5, COL['ral']))
 
 def icon_immune(x, y):
-    cell(x + 1.0, y + 1.0, 17.0, 14.0, 'on')
-    cell(x + 25.0, y + 2.6, 14.0, 11.0, 'adapt')
-    for yy in (5.2, 8.0, 10.8):
-        D.add('body', '<path d="M%.2f %.2f h2.1" stroke="#E11D48" stroke-width="0.5"/>'
-                      '<circle cx="%.2f" cy="%.2f" r="0.65" fill="#E11D48"/>'
-              % (x + 18.0, y + yy, x + 20.5, y + yy))
-    arrow((x + 24.8, y + 8.0), (x + 21.8, y + 8.0), end='tee', col=INK, lw=0.50)
-    body([(x + 21.6, y + 14.2, 2.4, 1.6, 0), (x + 23.2, y + 13.2, 1.4, 1.2, 0)], '#7C3AED',
-         shadow=False)
+    # Cancer cell expressing PD-L1 and MDSC infiltration
+    D.add('body', '<circle cx="%.2f" cy="%.2f" r="6.0" fill="%s" stroke="%s" stroke-width="0.65"/>'
+          % (x + 9.0, y + 8.0, mix(COL['on'], WHITE, 0.85), COL['on']))
+    D.text(x + 9.0, y + 8.5, 'Tumor', anchor='middle', color=COL['on'], bold=True, size=FS_XS)
+    # T-cell exhaustion interaction
+    D.add('body', '<circle cx="%.2f" cy="%.2f" r="4.8" fill="%s" stroke="%s" stroke-width="0.55"/>'
+          % (x + 27.0, y + 8.0, '#EFF6FF', '#3B82F6'))
+    D.text(x + 27.0, y + 8.5, 'T cell', anchor='middle', color='#1D4ED8', bold=True, size=FS_XS)
+    # Inhibitory immune checkpoint interaction
+    arrow((x + 15.5, y + 8.0), (x + 21.8, y + 8.0), end='tee', col='#BE123C', lw=0.55)
+    D.text(x + 18.6, y + 6.0, 'PD-L1', anchor='middle', color='#BE123C', bold=True, size=4.5*PT)
 
 def icon_senescence(x, y):
-    D.add('body', '<path d="M%.2f %.2f C%.2f %.2f %.2f %.2f %.2f %.2f C%.2f %.2f %.2f %.2f '
-                  '%.2f %.2f Z" fill="%s" stroke="%s" stroke-width="0.95"/>'
-          % (x + 2.0, y + 9.6, x + 4.0, y + 1.6, x + 26.0, y + 0.8, x + 30.0, y + 6.6,
-             x + 33.0, y + 13.0, x + 6.0, y + 15.6, x + 2.0, y + 9.6,
-             mix(COL['on'], WHITE, 0.85), mix(COL['on'], WHITE, 0.20)))
-    D.add('body', '<ellipse cx="%.2f" cy="%.2f" rx="5.2" ry="3.6" fill="url(#nuc)" '
-                  'stroke="#8B5CF6" stroke-width="0.38"/>' % (x + 15.0, y + 8.4))
-    cx, cy, r = x + 36.6, y + 7.8, 2.6
-    D.add('body', '<path d="M%.2f %.2f A%.2f %.2f 0 1 1 %.2f %.2f" fill="none" '
-                  'stroke="%s" stroke-width="0.55"/>'
+    # Flattened, enlarged senescent morphology bypassed
+    D.add('body', '<path d="M%.2f %.2f C%.2f %.2f %.2f %.2f %.2f %.2f C%.2f %.2f %.2f %.2f %.2f %.2f Z" '
+                 'fill="%s" stroke="%s" stroke-width="0.75"/>'
+          % (x + 2.0, y + 9.0, x + 4.0, y + 1.5, x + 25.0, y + 0.8, x + 29.0, y + 6.0,
+             x + 32.0, y + 12.0, x + 6.0, y + 14.5, x + 2.0, y + 9.0,
+             mix(COL['on'], WHITE, 0.88), mix(COL['on'], WHITE, 0.25)))
+    D.add('body', '<ellipse cx="%.2f" cy="%.2f" rx="4.8" ry="3.2" fill="url(#nuc)" stroke="#8B5CF6" stroke-width="0.35"/>'
+          % (x + 14.0, y + 7.8))
+    # Cell cycle arrest symbol bypassed
+    cx, cy, r = x + 34.5, y + 7.5, 2.4
+    D.add('body', '<path d="M%.2f %.2f A%.2f %.2f 0 1 1 %.2f %.2f" fill="none" stroke="%s" stroke-width="0.50"/>'
           % (cx + r, cy, r, r, cx + r * math.cos(-1.1), cy + r * math.sin(-1.1), GREY))
     head((cx + r * math.cos(-1.5), cy + r * math.sin(-1.5)),
-         (cx + r * math.cos(-1.1), cy + r * math.sin(-1.1)), GREY, 1.1, 'body')
-    D.add('body', '<path d="M%.2f %.2f L%.2f %.2f" stroke="%s" stroke-width="0.95" '
-                  'stroke-linecap="round"/>' % (cx + 1.4, cy - 3.6, cx + 3.8, cy - 1.0,
-                                                '#BE123C'))
+         (cx + r * math.cos(-1.1), cy + r * math.sin(-1.1)), GREY, 1.0, 'body')
+    D.add('body', '<path d="M%.2f %.2f L%.2f %.2f" stroke="#BE123C" stroke-width="0.85" stroke-linecap="round"/>'
+          % (cx + 1.2, cy - 3.2, cx + 3.5, cy - 0.8))
 
 ICONS = [icon_metabolic, icon_macro, icon_immune, icon_senescence]
-TW = CW - 4.2
-WR = [(wrap(t, TW, True), wrap(b, TW), wrap(g, TW - 2.8), st) for t, b, g, st in CARDS]
-Y_T = BY + 20.6
-Y_B = Y_T + max(len(w[0]) for w in WR) * LH + 0.6
-Y_G = Y_B + max(len(w[1]) for w in WR) * LH + 1.2
-BH = Y_G + (max(len(w[2]) for w in WR) - 1) * LH + 3.2 - BY
-H = BY + BH + 0.4
 
-for k, (tt, bb, gg, st) in enumerate(WR):
-    x = k * (CW + CG)
-    D.add('bg', '<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" rx="2.5" '
+# Render Panel b Cards
+for k, (title, sub, mech, drug, status) in enumerate(CARDS):
+    x = k * (CW + CG) + 1.0
+    # Background card
+    D.add('bg', '<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" rx="2.2" '
                 'fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.45" filter="url(#subtle-shadow)"/>'
           % (x, BY, CW, BH))
-    ICONS[k](x + 1.6, BY + 2.4)
-    D.lines(x + 2.1, Y_T, tt, bold=True, color=INK)
-    D.lines(x + 2.1, Y_B, bb, color=INK_MUTED)
-    tag(x + 2.1, Y_G, gg, st, color=INK)
+    # Icon
+    ICONS[k](x + 1.5, BY + 2.0)
+    # Text hierarchy (ultra-clean, no paragraph walls)
+    D.text(x + 2.5, BY + 20.0, title, bold=True, color=INK, size=FS)
+    D.text(x + 2.5, BY + 24.5, sub, color=INK_MUTED, bold=True, size=FS_XS)
+    D.text(x + 2.5, BY + 29.0, mech, color=GREY, size=FS_XS)
+    # Drug badge
+    drug_box(x + 2.0, BY + 34.5, CW - 4.0, 7.5, drug, status=status)
 
-D.text(0.6, BY + 2.6, 'b', bold=True, size=PNs, color=INK, audit=False)
+# Panel b Letter
+D.text(1.0, BY + 2.5, 'b', bold=True, size=PNs, color=INK)
 
 def main():
     svg_str = D.svg()
@@ -769,10 +846,27 @@ def main():
     else:
         subprocess.run(['rsvg-convert', '-f', 'pdf', '-o', pdf_file, svg_file], check=True)
         
-    print("Figure 1 generated successfully in repository:")
+    print("Figure 1 rendered successfully:")
     print("  ->", png_file)
     print("  ->", pdf_file)
     print("  ->", svg_file)
+
+    # Sync to all relevant project directories
+    for sdir in SYNC_DIRS:
+        if os.path.exists(sdir):
+            for ext in ('.png', '.pdf', '.svg'):
+                src = os.path.join(FIG, NAME + ext)
+                dst = os.path.join(sdir, NAME + ext)
+                shutil.copy2(src, dst)
+                dst_newtheme = os.path.join(sdir, NAME + '_newtheme' + ext)
+                shutil.copy2(src, dst_newtheme)
+            print(f"Synchronized Figure 1 to: {sdir}")
+            
+    # Also synchronize to legacy Chinese name
+    cn_dst = "/Users/wangnianfei/Desktop/ESMO/03_数据与图表/图件/图1_RAS信号网络与可干预节点-1.png"
+    if os.path.exists(os.path.dirname(cn_dst)):
+        shutil.copy2(png_file, cn_dst)
+        print(f"Synchronized to legacy name: {cn_dst}")
 
 if __name__ == '__main__':
     main()
