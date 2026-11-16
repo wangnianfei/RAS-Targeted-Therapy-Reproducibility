@@ -33,6 +33,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
+import shutil
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.abspath(os.path.join(SCRIPT_DIR, '..', 'data'))
@@ -108,7 +109,54 @@ def axes(fig, x_mm, y_mm, w_mm, h_mm):
 def GI(gene):
     return r'$\it{' + gene + '}$'
 
-def main():
+
+CT_CN = {
+    'Pancreatic Cancer': '胰腺导管腺癌',
+    'Colorectal Cancer': '结直肠癌',
+    'Non-Small Cell Lung Cancer': '非小细胞肺癌',
+    'Appendiceal Cancer': '阑尾腺癌',
+    'Endometrial Cancer': '子宫内膜癌',
+    'Small Bowel Cancer': '小肠腺癌',
+    'Cholangiocarcinoma': '胆管癌',
+    'Ovarian Cancer': '卵巢癌',
+    'Cervical Cancer': '宫颈癌',
+    'Bladder Cancer': '膀胱尿路上皮癌',
+    'Melanoma': '皮肤黑色素瘤',
+    'Esophagogastric Cancer': '食管胃腺癌',
+    'Breast Cancer': '乳腺癌',
+    'Prostate Cancer': '前列腺癌',
+    'Glioma': '脑胶质瘤',
+    'Thyroid Cancer': '甲状腺癌',
+    'Head and Neck Cancer': '头颈鳞癌',
+    'Salivary Gland Cancer': '涎腺肿瘤',
+    'Mature B-Cell Neoplasms': '成熟B细胞肿瘤',
+    'Renal Cell Carcinoma': '肾细胞癌',
+    'Small Cell Lung Cancer': '小细胞肺癌',
+    'Soft Tissue Sarcoma': '软组织肉瘤',
+    'Bone Cancer': '骨肉瘤',
+    'Cancer of Unknown Primary': '原发灶不明癌',
+    'Gastrointestinal Neuroendocrine Tumor': '胃肠神经内分泌肿瘤',
+    'Gastrointestinal Stromal Tumor': '胃肠间质瘤',
+    'Germ Cell Tumor': '生殖细胞肿瘤',
+    'Peripheral Nervous System': '周围神经系统肿瘤',
+    'Skin Cancer, Non-Melanoma': '非黑色素瘤皮肤癌',
+    'Hepatobiliary Cancer': '肝胆恶性肿瘤',
+}
+
+SYNC_DIRS = [
+    "/Users/wangnianfei/Desktop/ESMO/03_数据与图表/图件_新配色预览",
+    "/Users/wangnianfei/Desktop/ESMO/03_数据与图表/图件",
+    "/Users/wangnianfei/Desktop/ESMO/05_开源复现仓库/New_Color_Theme_Preview",
+]
+
+def run_figure2_pipeline(lang='en'):
+    plt.rcParams['font.family'] = 'sans-serif'
+    if lang == 'cn':
+        plt.rcParams['font.sans-serif'] = ['PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Arial Unicode MS', 'DejaVu Sans']
+    else:
+        plt.rcParams['font.sans-serif'] = ['Arial', 'Helvetica', 'DejaVu Sans']
+    plt.rcParams['axes.unicode_minus'] = False
+
     muts = json.load(open(os.path.join(DATA, 'cbioportal_mutations.json')))
     ct = json.load(open(os.path.join(DATA, 'cbioportal_sample_cancertype.json')))
     comp = collections.defaultdict(collections.Counter)
@@ -121,13 +169,12 @@ def main():
     byct_path = os.path.join(DATA, 'cancer_type_kras_alleles.csv')
     BYCT = list(csv.DictReader(open(byct_path, encoding='utf-8')))
 
-    # Layout geometry specifications
     NA, NB, PITCH, BAR = 16, 10, 4.1, 2.9
-    BOT = 2.5        # Bottom margin (mm)
-    XAX = 9.5        # Height allocated for x-axis ticks and labels (mm)
-    GAP = 11.5       # Gap between panel a and panels b/c (mm)
-    TOP = 4.5        # Top margin (mm)
-    LEGH = 7.5       # Legend height (mm)
+    BOT = 2.5
+    XAX = 9.5
+    GAP = 11.5
+    TOP = 4.5
+    LEGH = 7.5
     HA, HB = NA * PITCH, NB * PITCH
     H = BOT + XAX + HB + GAP + XAX + HA + LEGH + TOP
 
@@ -158,7 +205,7 @@ def main():
     def lab(r):
         return '%.0f%% (%s/%s)' % (float(r['freq_pct']), r['n_mut_samples'], r['n_samples'])
 
-    OFF = 1.3  # Text offset from bar end in mm
+    OFF = 1.3
 
     def fit_xlim(rows, w_mm):
         return max(float(r['freq_pct']) * w_mm / (w_mm - OFF - text_mm([lab(r)]) - 2.0) for r in rows)
@@ -173,17 +220,20 @@ def main():
         ax.set_xticks(range(0, last + 1, step))
         ax.spines['bottom'].set_bounds(0, last)
 
-    # -------------------------------------------------------------
-    # Panel a: Pan-cancer KRAS mutation frequencies and allele shares
-    # -------------------------------------------------------------
+    # Panel a
     LEFT = 4.5
     PADL = 2.0
     ks = sorted([r for r in BYCT if r['gene'] == 'KRAS'],
                 key=lambda r: -float(r['freq_pct']))[:NA][::-1]
-    labA = [r['cancer_type'] for r in ks]
+    
+    if lang == 'cn':
+        labA = [CT_CN.get(r['cancer_type'], r['cancer_type']) for r in ks]
+    else:
+        labA = [r['cancer_type'] for r in ks]
+
     xa = LEFT + text_mm(labA) + PADL
     ya = BOT + XAX + HB + GAP + XAX
-    RM = 3.0  # Right margin (mm)
+    RM = 3.0
     wa = W2 - RM - xa
     axA = axes(fig, xa, ya, wa, HA)
     XMAX_A = fit_xlim(ks, wa)
@@ -202,52 +252,55 @@ def main():
         value(axA, f, i, r, XMAX_A, wa)
 
     ticks(axA, XMAX_A, 10)
-    style(axA, NA, labA, GI('KRAS') + '-mutant samples (%)')
+    xlab_a = (GI('KRAS') + ' 突变样本比例 (%)') if lang == 'cn' else (GI('KRAS') + '-mutant samples (%)')
+    style(axA, NA, labA, xlab_a)
 
-    # Panel a Legend with refined jewel-tone chips
+    keys_display = [('其他' if k == 'Other' and lang == 'cn' else k) for k in KEYS]
     legend_handles = [
-        Rectangle((0, 0), 1, 1, fc=c, ec='#475569', lw=0.4, label=k)
-        for k, c in zip(KEYS, PAL)
+        Rectangle((0, 0), 1, 1, fc=c, ec='#475569', lw=0.4, label=k_disp)
+        for k_disp, c in zip(keys_display, PAL)
     ]
+    lg_title = '等位基因:' if lang == 'cn' else 'Allele:'
     lg = fig.legend(
         handles=legend_handles,
         loc='lower left',
         ncol=len(KEYS),
         fontsize=T,
         borderpad=0,
-        handlelength=1.2,
-        handleheight=0.85,
-        columnspacing=1.0,
+        handlelength=1.1,
+        handleheight=0.8,
+        columnspacing=0.75,
         frameon=False,
-        bbox_to_anchor=((xa + 13.0) / W2, (ya + HA + 1.2) / H)
+        bbox_to_anchor=((xa + (11.0 if lang == 'cn' else 12.0)) / W2, (ya + HA + 1.2) / H)
     )
 
-    fig.text(xa / W2, (ya + HA + 2.0) / H, 'Allele:',
+    fig.text(xa / W2, (ya + HA + 2.0) / H, lg_title,
              fontsize=T, ha='left', va='center', fontweight='bold', color=INK_DARK)
     
     fig.text(LEFT / W2, (ya + HA + LEGH + 1.0) / H, 'a', fontsize=PN,
              fontweight='bold', ha='left', va='bottom', color=INK_DARK)
     
-    # Cohort annotation on top-right
-    fig.text((W2 - RM) / W2, (ya + HA + 2.0) / H, 'MSK-IMPACT cohort (n = 10,945)',
+    cohort_txt = 'MSK-IMPACT 临床测序队列 (n = 10,945)' if lang == 'cn' else 'MSK-IMPACT cohort (n = 10,945)'
+    fig.text((W2 - RM) / W2, (ya + HA + 2.0) / H, cohort_txt,
              fontsize=T_SM, ha='right', va='center', fontstyle='italic', color=INK_MUTED)
 
-    # -------------------------------------------------------------
-    # Panels b & c: NRAS and HRAS
-    # Separate horizontally with dedicated gutters
-    # -------------------------------------------------------------
+    # Panels b & c
     nras_rows = sorted([r for r in BYCT if r['gene'] == 'NRAS'],
                        key=lambda r: -float(r['freq_pct']))[:NB][::-1]
     hras_rows = sorted([r for r in BYCT if r['gene'] == 'HRAS'],
                        key=lambda r: -float(r['freq_pct']))[:NB][::-1]
 
-    lab_nras = [r['cancer_type'] for r in nras_rows]
-    lab_hras = [r['cancer_type'] for r in hras_rows]
+    if lang == 'cn':
+        lab_nras = [CT_CN.get(r['cancer_type'], r['cancer_type']) for r in nras_rows]
+        lab_hras = [CT_CN.get(r['cancer_type'], r['cancer_type']) for r in hras_rows]
+    else:
+        lab_nras = [r['cancer_type'] for r in nras_rows]
+        lab_hras = [r['cancer_type'] for r in hras_rows]
 
     w_label_b = text_mm(lab_nras)
     w_label_c = text_mm(lab_hras)
 
-    GUTTER = 10.0   # Clear physical separation between Panel B and C
+    GUTTER = 10.0
     TOTAL_PLOT_W = W2 - LEFT - RM - GUTTER - w_label_b - w_label_c - (PADL * 2)
     wb = TOTAL_PLOT_W / 2.0
 
@@ -255,7 +308,7 @@ def main():
     x0_c = xb_b + wb + GUTTER
     xb_c = x0_c + w_label_c + PADL
 
-    # Panel b: NRAS (Deep Prussian Navy)
+    # Panel b: NRAS
     axB = axes(fig, xb_b, BOT + XAX, wb, HB)
     X_B = fit_xlim(nras_rows, wb)
     axB.barh(range(NB), [float(r['freq_pct']) for r in nras_rows],
@@ -263,11 +316,12 @@ def main():
     for i, r in enumerate(nras_rows):
         value(axB, float(r['freq_pct']), i, r, X_B, wb)
     ticks(axB, X_B, 5)
-    style(axB, NB, lab_nras, GI('NRAS') + '-mutant samples (%)')
+    xlab_b = (GI('NRAS') + ' 突变样本比例 (%)') if lang == 'cn' else (GI('NRAS') + '-mutant samples (%)')
+    style(axB, NB, lab_nras, xlab_b)
     fig.text(LEFT / W2, (BOT + XAX + HB + 2.5) / H, 'b', fontsize=PN,
              fontweight='bold', ha='left', va='bottom', color=INK_DARK)
 
-    # Panel c: HRAS (Oceanic Deep Teal)
+    # Panel c: HRAS
     axC = axes(fig, xb_c, BOT + XAX, wb, HB)
     X_C = fit_xlim(hras_rows, wb)
     axC.barh(range(NB), [float(r['freq_pct']) for r in hras_rows],
@@ -275,23 +329,45 @@ def main():
     for i, r in enumerate(hras_rows):
         value(axC, float(r['freq_pct']), i, r, X_C, wb)
     ticks(axC, X_C, 1)
-    style(axC, NB, lab_hras, GI('HRAS') + '-mutant samples (%)')
+    xlab_c = (GI('HRAS') + ' 突变样本比例 (%)') if lang == 'cn' else (GI('HRAS') + '-mutant samples (%)')
+    style(axC, NB, lab_hras, xlab_c)
     fig.text(x0_c / W2, (BOT + XAX + HB + 2.5) / H, 'c', fontsize=PN,
              fontweight='bold', ha='left', va='bottom', color=INK_DARK)
 
-    stem = 'Figure2_cancer_type_distribution'
-    pdf_out = os.path.join(FIG, stem + '.pdf')
-    svg_out = os.path.join(FIG, stem + '.svg')
-    png_out = os.path.join(FIG, stem + '.png')
+    suffixes = ['_EN'] if lang == 'en' else ['_CN', '_中文版']
+    if lang == 'en':
+        suffixes.append('')
 
-    fig.savefig(pdf_out, format='pdf', dpi=400)
-    fig.savefig(svg_out, format='svg')
-    fig.savefig(png_out, format='png', dpi=400)
+    for suf in suffixes:
+        if suf == '_中文版':
+            stem = 'Figure2_泛癌种突变图谱_中文版'
+        else:
+            stem = 'Figure2_cancer_type_distribution' + suf
+            
+        pdf_out = os.path.join(FIG, stem + '.pdf')
+        svg_out = os.path.join(FIG, stem + '.svg')
+        png_out = os.path.join(FIG, stem + '.png')
+
+        fig.savefig(pdf_out, format='pdf', dpi=400)
+        fig.savefig(svg_out, format='svg')
+        fig.savefig(png_out, format='png', dpi=400)
+        print(f"Figure 2 [{lang} - {suf}] generated:")
+        print("  ->", pdf_out)
+        print("  ->", svg_out)
+        print("  ->", png_out)
+
+        for sdir in SYNC_DIRS:
+            if os.path.exists(sdir):
+                for ext in ('.png', '.pdf', '.svg'):
+                    shutil.copy2(os.path.join(FIG, stem + ext), os.path.join(sdir, stem + ext))
+                print(f"Synchronized Figure 2 [{stem}] to:", sdir)
+
     plt.close(fig)
-    print("Figure 2 successfully generated at 400 DPI:")
-    print("  ->", pdf_out)
-    print("  ->", svg_out)
-    print("  ->", png_out)
+
+def main():
+    import shutil
+    for lang in ('en', 'cn'):
+        run_figure2_pipeline(lang=lang)
 
 if __name__ == '__main__':
     main()

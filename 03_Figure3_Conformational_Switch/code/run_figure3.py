@@ -115,7 +115,22 @@ def devcurve(p1_id, c1, p2_id, c2, excl=((25, 45), (55, 76))):
     rms = float(np.sqrt((np.linalg.norm((R @ (P - cp).T).T + cq - Q, axis=1) ** 2).mean()))
     return com, d, rms
 
-def main():
+
+SYNC_DIRS = [
+    "/Users/wangnianfei/Desktop/ESMO/03_数据与图表/图件_新配色预览",
+    "/Users/wangnianfei/Desktop/ESMO/03_数据与图表/图件",
+    "/Users/wangnianfei/Desktop/ESMO/05_开源复现仓库/New_Color_Theme_Preview",
+]
+import shutil
+
+def run_figure3_pipeline(lang='en'):
+    plt.rcParams['font.family'] = 'sans-serif'
+    if lang == 'cn':
+        plt.rcParams['font.sans-serif'] = ['PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Arial Unicode MS', 'DejaVu Sans']
+    else:
+        plt.rcParams['font.sans-serif'] = ['Arial', 'Helvetica', 'DejaVu Sans']
+    plt.rcParams['axes.unicode_minus'] = False
+
     LEFT = 0.5
     PH, GAPY, BOT, TOP = 40.0, 10.0, 10.5, 8.0
     H = BOT + 2 * PH + GAPY + TOP
@@ -124,10 +139,22 @@ def main():
     XC = XA + WA + 6.0
     WC = W2 - XC
 
-    pairs = [
-        (('4OBE', 'B'), ('5VQ2', 'A'), 'KRAS–GDP (4OBE) vs KRAS–GTP (5VQ2)', C['h']),
-        (('4LDJ', 'A'), ('6OIM', 'A'), 'KRAS(G12C)–GDP (4LDJ) vs KRAS(G12C)–sotorasib (6OIM)', C['sw2'])
-    ]
+    if lang == 'cn':
+        pairs = [
+            (('4OBE', 'B'), ('5VQ2', 'A'), 'KRAS–GDP (4OBE) 与 KRAS–GTP (5VQ2)', C['h']),
+            (('4LDJ', 'A'), ('6OIM', 'A'), 'KRAS(G12C)–GDP (4LDJ) 与 KRAS(G12C)–sotorasib (6OIM)', C['sw2'])
+        ]
+        reg_list = [('P-环', 10, 17, C['ploop']),
+                    ('开关 I', 30, 38, C['sw1']),
+                    ('开关 II', 60, 76, C['sw2'])]
+    else:
+        pairs = [
+            (('4OBE', 'B'), ('5VQ2', 'A'), 'KRAS–GDP (4OBE) vs KRAS–GTP (5VQ2)', C['h']),
+            (('4LDJ', 'A'), ('6OIM', 'A'), 'KRAS(G12C)–GDP (4LDJ) vs KRAS(G12C)–sotorasib (6OIM)', C['sw2'])
+        ]
+        reg_list = [('P-loop', 10, 17, C['ploop']),
+                    ('switch I', 30, 38, C['sw1']),
+                    ('switch II', 60, 76, C['sw2'])]
 
     export_shifts = {}
 
@@ -139,23 +166,28 @@ def main():
         
         ax.fill_between(com, 0, d, color=col, alpha=0.30, lw=0)
         ax.plot(com, d, color=col, lw=1.4)
-        for nm, lo, hi, cc in REG:
+        for nm, lo, hi, cc in reg_list:
             ax.axvspan(lo, hi, color=cc, alpha=0.18, zorder=0, lw=0)
             ax.text((lo + hi) / 2, max(d) * 1.17, nm, ha='center',
                     va='bottom', fontsize=T, color=cc)
         ax.set_xlim(1, 170)
         ax.set_ylim(0, max(d) * 1.32)
-        ax.set_ylabel('Cα deviation (Å)', fontsize=T, labelpad=2)
+        
+        ylab = 'Cα 原子位移 (Å)' if lang == 'cn' else 'Cα deviation (Å)'
+        ax.set_ylabel(ylab, fontsize=T, labelpad=2)
         ax.yaxis.set_label_coords(-(XA - LEFT - 0.3) / WA, 0.5)
         ax.yaxis.label.set_va('top')
         ax.text(1.0, 1.03, ttl, transform=ax.transAxes, ha='right',
                 va='bottom', fontsize=T, color=C['ink'])
-        ax.text(1.0, 0.80, 'Core-region RMSD = %.2f Å' % rms,
+        
+        rmsd_txt = '核心区骨架 RMSD = %.2f Å' % rms if lang == 'cn' else 'Core-region RMSD = %.2f Å' % rms
+        ax.text(1.0, 0.80, rmsd_txt,
                 transform=ax.transAxes, ha='right', va='top',
                 fontsize=T, color=C['grey'])
         ax.set_xticks([1, 25, 50, 75, 100, 125, 150, 170])
         if i == 1:
-            ax.set_xlabel('Residue number', fontsize=T, labelpad=1.5)
+            xlab = '氨基酸残基序号' if lang == 'cn' else 'Residue number'
+            ax.set_xlabel(xlab, fontsize=T, labelpad=1.5)
         ax.tick_params(labelsize=T, pad=1.5, width=0.6, length=2.2)
         for s_ in ('top', 'right'):
             ax.spines[s_].set_visible(False)
@@ -164,31 +196,39 @@ def main():
         fig.text(LEFT / W2, (y + PH + 3.0) / H, 'ab'[i], fontsize=PN,
                  fontweight='bold', ha='left', va='bottom')
 
-    # Export CSV data
-    all_res = sorted(set(list(export_shifts["4OBE_vs_5VQ2"].keys()) + list(export_shifts["4LDJ_vs_6OIM"].keys())))
-    csv_out = os.path.join(DATA, 'ca_distance_shifts.csv')
-    with open(csv_out, 'w', newline='', encoding='utf-8') as f:
-        writer = csv.writer(f)
-        writer.writerow(['Residue', 'Region', 'Dev_4OBE_GDP_vs_5VQ2_GTP_Angstrom', 'Dev_4LDJ_GDP_vs_6OIM_Sotorasib_Angstrom'])
-        for r in all_res:
-            reg_name = 'Core'
-            if 10 <= r <= 17: reg_name = 'P-loop'
-            elif 30 <= r <= 38: reg_name = 'switch I'
-            elif 60 <= r <= 76: reg_name = 'switch II'
-            elif 116 <= r <= 119: reg_name = 'G4'
-            elif 145 <= r <= 147: reg_name = 'G5'
-            d1 = export_shifts["4OBE_vs_5VQ2"].get(r, '')
-            d2 = export_shifts["4LDJ_vs_6OIM"].get(r, '')
-            writer.writerow([r, reg_name, f"{d1:.3f}" if d1 != '' else '', f"{d2:.3f}" if d2 != '' else ''])
+    # Export CSV data if en
+    if lang == 'en':
+        all_res = sorted(set(list(export_shifts["4OBE_vs_5VQ2"].keys()) + list(export_shifts["4LDJ_vs_6OIM"].keys())))
+        csv_out = os.path.join(DATA, 'ca_distance_shifts.csv')
+        with open(csv_out, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.writer(f)
+            writer.writerow(['Residue', 'Region', 'Dev_4OBE_GDP_vs_5VQ2_GTP_Angstrom', 'Dev_4LDJ_GDP_vs_6OIM_Sotorasib_Angstrom'])
+            for r in all_res:
+                reg_name = 'Core'
+                if 10 <= r <= 17: reg_name = 'P-loop'
+                elif 30 <= r <= 38: reg_name = 'switch I'
+                elif 60 <= r <= 76: reg_name = 'switch II'
+                elif 116 <= r <= 119: reg_name = 'G4'
+                elif 145 <= r <= 147: reg_name = 'G5'
+                d1 = export_shifts["4OBE_vs_5VQ2"].get(r, '')
+                d2 = export_shifts["4LDJ_vs_6OIM"].get(r, '')
+                writer.writerow([r, reg_name, f"{d1:.3f}" if d1 != '' else '', f"{d2:.3f}" if d2 != '' else ''])
 
     # Panel C
-    SEGS = [('P-loop', C['ploop']), ('switch I', C['sw1']),
-            ('switch II', C['sw2']), ('G4', C['g4']), ('G5', C['g5'])]
+    if lang == 'cn':
+        SEGS = [('P-环', C['ploop']), ('开关 I', C['sw1']),
+                ('开关 II', C['sw2']), ('G4区', C['g4']), ('G5区', C['g5'])]
+        lig_labels = ['GDP', 'Sotorasib (AMG 510)', 'Mg$^{2+}$', 'Cys12 (共价结合位点)']
+    else:
+        SEGS = [('P-loop', C['ploop']), ('switch I', C['sw1']),
+                ('switch II', C['sw2']), ('G4', C['g4']), ('G5', C['g5'])]
+        lig_labels = ['GDP', 'Sotorasib (AMG 510)', 'Mg$^{2+}$', 'Cys12 (covalent site)']
+
     seg_h = [plt.Line2D([], [], color=c, lw=2.6, label=n) for n, c in SEGS]
-    lig_h = [plt.Line2D([], [], marker='o', ls='', color='#355070', ms=3.5, label='GDP'),
-             plt.Line2D([], [], marker='o', ls='', color=C['sw2'], ms=3.5, label='Sotorasib (AMG 510)'),
-             plt.Line2D([], [], marker='o', ls='', color=C['ploop'], ms=4, label='Mg$^{2+}$'),
-             plt.Line2D([], [], marker='o', ls='', color=C['hot'], ms=4.5, mec='k', mew=0.3, label='Cys12 (covalent site)')]
+    lig_h = [plt.Line2D([], [], marker='o', ls='', color='#355070', ms=3.5, label=lig_labels[0]),
+             plt.Line2D([], [], marker='o', ls='', color=C['sw2'], ms=3.5, label=lig_labels[1]),
+             plt.Line2D([], [], marker='o', ls='', color=C['ploop'], ms=4, label=lig_labels[2]),
+             plt.Line2D([], [], marker='o', ls='', color=C['hot'], ms=4.5, mec='k', mew=0.3, label=lig_labels[3])]
     
     render = os.path.join(DATA, '_panelC_6OIM.png')
     LGH = 17.0
@@ -211,29 +251,48 @@ def main():
         L1 = lgax.legend(handles=seg_h, loc='upper left', fontsize=T,
                          handlelength=1.4, handletextpad=0.5, labelspacing=0.3,
                          borderpad=0, borderaxespad=0, frameon=False,
-                         bbox_to_anchor=(0.08, 1.0))
+                         bbox_to_anchor=(0.04, 1.0))
         lgax.add_artist(L1)
         lgax.legend(handles=lig_h, loc='upper left', fontsize=T,
                     handlelength=1.0, handletextpad=0.5, labelspacing=0.3,
                     borderpad=0, borderaxespad=0, frameon=False,
-                    bbox_to_anchor=(0.44, 1.0))
+                    bbox_to_anchor=((0.40 if lang == 'cn' else 0.44), 1.0))
         fig.text((XC - 3.5) / W2, (H - TOP + 3.0) / H, 'c', fontsize=PN,
                  fontweight='bold', ha='left', va='bottom')
 
-    stem = 'Figure3_conformational_switch'
-    pdf_out = os.path.join(FIG, stem + '.pdf')
-    svg_out = os.path.join(FIG, stem + '.svg')
-    png_out = os.path.join(FIG, stem + '.png')
+    suffixes = ['_EN'] if lang == 'en' else ['_CN', '_中文版']
+    if lang == 'en':
+        suffixes.append('')
 
-    fig.savefig(pdf_out, format='pdf', dpi=300)
-    fig.savefig(svg_out, format='svg')
-    fig.savefig(png_out, format='png', dpi=300)
+    for suf in suffixes:
+        if suf == '_中文版':
+            stem = 'Figure3_构象开关与变构口袋_中文版'
+        else:
+            stem = 'Figure3_conformational_switch' + suf
+            
+        pdf_out = os.path.join(FIG, stem + '.pdf')
+        svg_out = os.path.join(FIG, stem + '.svg')
+        png_out = os.path.join(FIG, stem + '.png')
+
+        fig.savefig(pdf_out, format='pdf', dpi=400)
+        fig.savefig(svg_out, format='svg')
+        fig.savefig(png_out, format='png', dpi=400)
+        print(f"Figure 3 [{lang} - {suf}] generated:")
+        print("  ->", pdf_out)
+        print("  ->", svg_out)
+        print("  ->", png_out)
+
+        for sdir in SYNC_DIRS:
+            if os.path.exists(sdir):
+                for ext in ('.png', '.pdf', '.svg'):
+                    shutil.copy2(os.path.join(FIG, stem + ext), os.path.join(sdir, stem + ext))
+                print(f"Synchronized Figure 3 [{stem}] to:", sdir)
+
     plt.close(fig)
-    print("Figure 3 successfully generated:")
-    print("  ->", pdf_out)
-    print("  ->", svg_out)
-    print("  ->", png_out)
-    print("  -> ca_distance_shifts.csv exported.")
+
+def main():
+    for lang in ('en', 'cn'):
+        run_figure3_pipeline(lang=lang)
 
 if __name__ == '__main__':
     main()
