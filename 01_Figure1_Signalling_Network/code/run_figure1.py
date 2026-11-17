@@ -901,6 +901,12 @@ def main():
                 
             subprocess.run(['/opt/homebrew/bin/rsvg-convert', '--dpi-x', '400', '--dpi-y', '400', '-b', 'white',
                             '-o', png_file, svg_file], check=True)
+            try:
+                from PIL import Image
+                _im = Image.open(png_file)
+                _im.save(png_file, dpi=(400, 400))
+            except Exception as _e:
+                pass
                             
             if os.path.exists(CHROME):
                 tmp = tempfile.mkdtemp()
