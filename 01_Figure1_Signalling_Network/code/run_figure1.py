@@ -43,32 +43,32 @@ WHITE = '#FFFFFF'
 BORDER = '#CBD5E1'       # Card & border stroke
 
 # Primary signalling line colors (Nature Standard: Blue = Activation, Grey = Inhibition)
-ACT_COL = '#2563EB'      # Royal Blue for activation cascades and forward arrows
+ACT_COL = '#1F3A5F'      # Deep Prussian Navy for activation cascades and forward arrows (Fig 4 Primary Anchor)
 INH_COL = '#64748B'      # Neutral Slate Grey for inhibitory T-bars and negative feedback
-MUT_COL = '#E11D48'      # Crimson accent for oncogenic mutation blockade
+MUT_COL = '#A63A2E'      # Brick Ruby / Coral accent for oncogenic mutation blockade (Fig 3 Switch-I & Fig 4 Anchor)
 
-# Functional semantic color palette (Science / Nature Upgraded Palette)
+# Functional semantic color palette (Harmonized Jewel-Tone Palette)
 COL = {
-    'rec_rtk': '#E0F2FE',    # EGFR / RTK: Soft sky cyan
-    'rec_int': '#FEF3C7',    # Integrin: Soft warm champagne sand
-    'rec_gpcr': '#EDE9FE',   # GPCR: Soft heather amethyst
-    'rec_imm': '#FFE4E6',    # Cytokine / Immune R: Soft antique rose coral
-    'rec': '#E0F2FE',
+    'rec_rtk': '#EBF1F6',    # EGFR / RTK: Soft Prussian ice
+    'rec_int': '#FAF4E8',    # Integrin: Soft warm champagne
+    'rec_gpcr': '#F4F0F7',   # GPCR: Soft heather amethyst
+    'rec_imm': '#FDF0EE',    # Cytokine / Immune R: Soft brick rose
+    'rec': '#EBF1F6',
     
     'adapt': '#F8FAFC',      # GRB2, SHP2, SOS1: Luminous slate
-    'gef': '#0D9488',        # Tissue GEFs: Deep teal
+    'gef': '#2A6F6F',        # Tissue GEFs: Deep oceanic teal (Fig 3 & Fig 4)
     
     'off': '#F1F5F9',        # KRAS-GDP (inactive): Cool light grey-slate
-    'on': '#FFF1F2',         # KRAS-GTP (active): Soft coral rose
+    'on': '#FDF0EE',         # KRAS-GTP (active): Soft coral rose
     'gap': '#F8FAFC',        # GAPs (NF1, RASA1): Crisp light neutral
     
-    'mapk': '#2563EB',       # Column 1 MAPK (RAF, MEK, ERK): Kinase royal cobalt blue
-    'rassf': '#4F46E5',      # Column 2 RASSF1A & MST1/2: Apoptotic royal indigo
-    'pi3k': '#0D9488',       # Column 3 PI3K-AKT-mTOR: Deep oceanic emerald teal
-    'ral': '#0284C7',        # Column 4 RAL cascade: Sky azure blue
-    'other': '#D97706',      # Column 5 Cytoskeleton (RAC1, F-actin): Warm golden amber
-    'lig': '#EA580C',        # Ligands: Warm burnt terracotta
-    'red': '#E11D48',        # Oncogenic accents
+    'mapk': '#1F3A5F',       # Column 1 MAPK (RAF, MEK, ERK): Deep Prussian Navy
+    'rassf': '#5E4B8B',      # Column 2 RASSF1A & MST1/2: Muted academic amethyst
+    'pi3k': '#2A6F6F',       # Column 3 PI3K-AKT-mTOR: Oceanic Deep Teal
+    'ral': '#3E6B89',        # Column 4 RAL cascade: Cadet/Steel Navy
+    'other': '#B47226',      # Column 5 Cytoskeleton (RAC1, F-actin): Warm golden amber
+    'lig': '#C97A24',        # Ligands: Warm amber-terracotta
+    'red': '#A63A2E',        # Oncogenic accents: Brick Ruby
 }
 
 TC_MAP = {
@@ -78,14 +78,14 @@ TC_MAP = {
     'rassf': WHITE,
     'ral': WHITE,
     'other': WHITE,
-    'on': '#991B1B',
+    'on': '#8B251B',
     'off': '#334155',
     'gap': '#0F172A',
-    'rec': '#0369A1',
-    'rec_rtk': '#0369A1',
-    'rec_int': '#92400E',
-    'rec_gpcr': '#6D28D9',
-    'rec_imm': '#9F1239',
+    'rec': '#1F3A5F',
+    'rec_rtk': '#1F3A5F',
+    'rec_int': '#8A5800',
+    'rec_gpcr': '#5E4B8B',
+    'rec_imm': '#A63A2E',
     'lig': WHITE,
 }
 
@@ -323,9 +323,9 @@ def arrow(p0, p1, c1=None, c2=None, col=None, lw=0.48, end='head', dash=None,
 
 def marker(x, y, status, s=1.0):
     cfg = {
-        'approved': ('#16A34A', '#15803D', 'circle'),
-        'clinical': ('#2563EB', '#1D4ED8', 'rect'),
-        'preclinical': ('#64748B', '#475569', 'diamond'),
+        'approved': ('#1B6A45', '#14532D', 'circle'),      # Forest Green
+        'clinical': ('#1F3A5F', '#142944', 'rect'),        # Deep Prussian Navy (Fig 4 & Fig 3 Anchor)
+        'preclinical': ('#64748B', '#475569', 'diamond'),  # Slate Grey
     }
     fill, stroke, shape = cfg.get(status, ('#64748B', '#475569', 'circle'))
     if shape == 'circle':
@@ -362,7 +362,7 @@ def drug_box(x, y, w, h, title, subtitle=None, status='approved', border_col=BOR
 def outcome_box(x, y, w, h, title, subtitle, bg_col, border_col, title_col):
     D.add('body', '<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" rx="2.0" '
                   'fill="%s" stroke="%s" stroke-width="0.55" filter="url(#subtle-shadow)"/>'
-          % (x, y, w, h, bg_col, border_col))
+                  % (x, y, w, h, bg_col, border_col))
     D.text(x + w / 2.0, y + 3.2, title, anchor='middle', bold=True, size=FS_SM, color=title_col)
     D.text(x + w / 2.0, y + 6.8, subtitle, anchor='middle', size=FS_SUB, color=INK_MUTED)
     return {
@@ -383,7 +383,7 @@ def helix(x, y0, y1, w=1.2, col=None, border_col=None, layer='body'):
 # Receptors
 def rtk(cx):
     col = COL['rec_rtk']
-    bc = '#0284C7'
+    bc = '#1F3A5F'
     for s in (-1, 1):
         x = cx + s * 2.2
         body([(x + s * 0.3, 8.5, 1.8, 2.4, 0), (x + s * 0.1, 13.5, 1.6, 2.2, 0)], col, border_col=bc, shadow=False)
@@ -396,7 +396,7 @@ def rtk(cx):
 
 def integrin(cx):
     col = COL['rec_int']
-    bc = '#D97706'
+    bc = '#B47226'
     for s, top in ((-1, 8.2), (1, 9.6)):
         x = cx + s * 1.6
         D.add('body', '<path d="M%.2f %.2f L%.2f %.2f L%.2f %.2f" fill="none" '
@@ -410,7 +410,7 @@ def integrin(cx):
 
 def gpcr(cx):
     col = COL['rec_gpcr']
-    bc = '#7C3AED'
+    bc = '#5E4B8B'
     xs = [cx - 3.8 + k * 1.25 for k in range(7)]
     for k in range(6):
         y = 16.0 if k % 2 else 26.5
@@ -420,17 +420,17 @@ def gpcr(cx):
                  xs[k + 1], y, bc))
     for k, x in enumerate(xs):
         helix(x, 16.2 - (k % 2) * 0.4, 26.5 + (k % 2) * 0.4, w=1.1, col=col, border_col=bc)
-    body([(cx + 0.2, 12.8, 1.2, 0.9, 0)], '#FB7185', border_col='#E11D48', shadow=False)
+    body([(cx + 0.2, 12.8, 1.2, 0.9, 0)], '#D8CBE8', border_col='#5E4B8B', shadow=False)
     gaps.append((cx - 5.0, cx + 5.0))
 
 def immune(cx):
     col = COL['rec_imm']
-    bc = '#E11D48'
+    bc = '#A63A2E'
     for s in (-1, 1):
         x = cx + s * 1.3
         body([(x, 9.2, 1.3, 1.8, 0), (x, 13.6, 1.3, 1.8, 0)], col, border_col=bc, shadow=False)
         helix(x, 15.6, 26.5, w=1.1, col=col, border_col=bc)
-    body([(cx, 5.8, 2.2, 1.4, 0)], '#E11D48', border_col='#9F1239', shadow=False)
+    body([(cx, 5.8, 2.2, 1.4, 0)], '#A63A2E', border_col='#8B251B', shadow=False)
     gaps.append((cx - 4.5, cx + 4.5))
 
 
@@ -438,15 +438,15 @@ def ras_node(cx, cy, col_key, nuc_txt):
     col = COL.get(col_key, '#F1F5F9')
     tc = TC_MAP.get(col_key, INK)
     w, h = 17.0, 9.2
-    bc = '#64748B' if col_key in ('off', 'ras_gdp') else '#E11D48'
+    bc = '#64748B' if col_key in ('off', 'ras_gdp') else '#A63A2E'
     fill_col = D.gradient(col)
     D.add('body', '<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" rx="3.5" '
                  'fill="%s" stroke="%s" stroke-width="0.6"/>'
           % (cx - w / 2, cy - h / 2, w, h, fill_col, bc))
     D.text(cx, cy - 1.4, 'KRAS', anchor='middle', color=tc, bold=True, size=6.8*PT)
     nw, nh = 9.2, 3.2
-    nuc_bg = '#1E3A8A' if col_key in ('on', 'ras_gtp') else '#475569'
-    nuc_fill = '#DBEAFE' if col_key in ('on', 'ras_gtp') else '#F1F5F9'
+    nuc_bg = '#8B251B' if col_key in ('on', 'ras_gtp') else '#475569'
+    nuc_fill = '#FDF0EE' if col_key in ('on', 'ras_gtp') else '#F1F5F9'
     D.add('body', '<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" rx="1.6" '
                  'fill="%s" stroke="%s" stroke-width="0.35"/>'
           % (cx - nw / 2, cy + 0.8, nw, nh, nuc_fill, nuc_bg))
@@ -470,15 +470,15 @@ def build_figure1_svg(lang='en'):
 
     # Distinct matching receptor labels
     if lang == 'cn':
-        D.text(RX['rtk'], 2.0, 'RTK受体 (EGFR)', anchor='middle', bold=True, color='#0369A1', size=FS)
-        D.text(RX['int'], 2.0, '整合素受体', anchor='middle', bold=True, color='#92400E', size=FS)
-        D.text(RX['gpcr'], 2.0, 'GPCR受体', anchor='middle', bold=True, color='#6D28D9', size=FS)
-        D.text(RX['imm'], 2.0, '细胞因子受体', anchor='middle', bold=True, color='#9F1239', size=FS)
+        D.text(RX['rtk'], 2.0, 'RTK受体 (EGFR)', anchor='middle', bold=True, color='#1F3A5F', size=FS)
+        D.text(RX['int'], 2.0, '整合素受体', anchor='middle', bold=True, color='#8A5800', size=FS)
+        D.text(RX['gpcr'], 2.0, 'GPCR受体', anchor='middle', bold=True, color='#5E4B8B', size=FS)
+        D.text(RX['imm'], 2.0, '细胞因子受体', anchor='middle', bold=True, color='#A63A2E', size=FS)
     else:
-        D.text(RX['rtk'], 2.0, 'EGFR / RTK', anchor='middle', bold=True, color='#0369A1', size=FS)
-        D.text(RX['int'], 2.0, 'Integrin', anchor='middle', bold=True, color='#92400E', size=FS)
-        D.text(RX['gpcr'], 2.0, 'GPCR', anchor='middle', bold=True, color='#6D28D9', size=FS)
-        D.text(RX['imm'], 2.0, 'Immune R', anchor='middle', bold=True, color='#9F1239', size=FS)
+        D.text(RX['rtk'], 2.0, 'EGFR / RTK', anchor='middle', bold=True, color='#1F3A5F', size=FS)
+        D.text(RX['int'], 2.0, 'Integrin', anchor='middle', bold=True, color='#8A5800', size=FS)
+        D.text(RX['gpcr'], 2.0, 'GPCR', anchor='middle', bold=True, color='#5E4B8B', size=FS)
+        D.text(RX['imm'], 2.0, 'Immune R', anchor='middle', bold=True, color='#A63A2E', size=FS)
 
     # EGF Ligand Node
     egf_node = pill(RX['rtk'], 5.2, 8.5, 3.6, 'EGF', 'lig')
@@ -518,9 +518,9 @@ def build_figure1_svg(lang='en'):
 
     # Extracellular anti-EGFR antibody callout (placed between EGFR x=20 and Integrin x=58, width 26.5mm: x 27.2 - 53.7)
     if lang == 'cn':
-        card_egfr = drug_box(27.2, 4.2, 26.5, 8.5, '抗EGFR单抗', '西妥昔单抗, 帕尼单抗', 'approved', '#0284C7')
+        card_egfr = drug_box(27.2, 4.2, 26.5, 8.5, '抗EGFR单抗', '西妥昔单抗, 帕尼单抗', 'approved', '#1F3A5F')
     else:
-        card_egfr = drug_box(27.2, 4.2, 26.5, 8.5, 'Anti-EGFR mAbs', 'cetuximab, panitumumab', 'approved', '#0284C7')
+        card_egfr = drug_box(27.2, 4.2, 26.5, 8.5, 'Anti-EGFR mAbs', 'cetuximab, panitumumab', 'approved', '#1F3A5F')
     # Inhibitor tee bar sits cleanly at x=25.0 outside EGFR lobe with zero overlap!
     arrow(card_egfr['left'], (25.0, card_egfr['left'][1]), end='tee', col=INH_COL, lw=0.55, size=1.1)
 
@@ -584,10 +584,10 @@ def build_figure1_svg(lang='en'):
     arrow(node_sos1['right'], (node_gdp['left'][0] - 0.2, 35.5), col=ACT_COL, lw=0.58)
     if lang == 'cn':
         D.text((node_sos1['right'][0] + node_gdp['left'][0]) / 2, 31.5, 'GEF核苷酸交换',
-               anchor='middle', color='#1D4ED8', bold=True, size=4.5*PT, halo=True)
+               anchor='middle', color='#1F3A5F', bold=True, size=4.5*PT, halo=True)
     else:
         D.text((node_sos1['right'][0] + node_gdp['left'][0]) / 2, 31.5, 'GEF exchange',
-               anchor='middle', color='#1D4ED8', bold=True, size=4.5*PT, halo=True)
+               anchor='middle', color='#1F3A5F', bold=True, size=4.5*PT, halo=True)
 
     # GAP (NF1) Cytosolic localization - shifted to cx=117.0 for perfect clearance from GPCR loops
     node_gap = pill(117.0, 26.2, 12.5, 3.8, 'GAP (NF1)', 'gap', border_col='#64748B')
@@ -600,21 +600,21 @@ def build_figure1_svg(lang='en'):
     # Oncogenic Mutation Blockade Badge Element: Centered at cx=120.0, cy=35.0, width 14.5mm (x: 112.75 - 127.25)
     # Generous 2.25mm clearance to KRAS-GDP (110.5) and 2.25mm to KRAS-GTP (129.5)! ZERO OVERLAP!
     D.add('body', '<rect x="112.75" y="33.2" width="14.5" height="3.6" rx="1.4" '
-                  'fill="#FFF1F2" stroke="#E11D48" stroke-width="0.45"/>')
+                  'fill="#FDF0EE" stroke="#A63A2E" stroke-width="0.45"/>')
     if lang == 'cn':
-        D.text(120.0, 35.0, 'G12/G13/Q61 突变锁死', anchor='middle', color='#991B1B', bold=True, size=4.0*PT)
+        D.text(120.0, 35.0, 'G12/G13/Q61 突变锁死', anchor='middle', color='#8B251B', bold=True, size=4.0*PT)
     else:
-        D.text(120.0, 35.0, 'G12/G13/Q61 lock', anchor='middle', color='#991B1B', bold=True, size=4.1*PT)
+        D.text(120.0, 35.0, 'G12/G13/Q61 lock', anchor='middle', color='#8B251B', bold=True, size=4.1*PT)
     # Vertical inhibitor line UP from badge top to upper arc: does NOT cross text!
-    arrow((120.0, 33.2), (120.0, 29.8), end='tee', col='#991B1B', lw=0.60, size=1.1, tee_angle=0.0)
+    arrow((120.0, 33.2), (120.0, 29.8), end='tee', col='#8B251B', lw=0.60, size=1.1, tee_angle=0.0)
 
     # Lower Arc: GDP -> GTP (GEF Exchange cycle)
     arrow((110.5, 39.8), (129.5, 39.8), c1=(116.0, 45.2), c2=(124.0, 45.2),
           col=ACT_COL, lw=0.60, end='head', size=0.9, layer='heads')
     if lang == 'cn':
-        D.text(120.0, 47.2, 'GDP ⇌ GTP 循环', anchor='middle', color='#2563EB', bold=True, size=4.6*PT, halo=True)
+        D.text(120.0, 47.2, 'GDP ⇌ GTP 循环', anchor='middle', color='#1F3A5F', bold=True, size=4.6*PT, halo=True)
     else:
-        D.text(120.0, 47.2, 'GDP → GTP cycle', anchor='middle', color='#2563EB', bold=True, size=4.6*PT, halo=True)
+        D.text(120.0, 47.2, 'GDP → GTP cycle', anchor='middle', color='#1F3A5F', bold=True, size=4.6*PT, halo=True)
 
     # Direct Inhibitors
     D.add('body', '<rect x="87.0" y="47.5" width="31.0" height="11.5" rx="1.8" '
@@ -645,9 +645,9 @@ def build_figure1_svg(lang='en'):
     BUS_Y = 57.5
     arrow((node_gtp['cx'], node_gtp['bottom'][1]), (node_gtp['cx'], BUS_Y), col=ACT_COL, lw=0.85, size=0.9)
     if lang == 'cn':
-        D.text(node_gtp['cx'] + 1.8, 52.5, '招募效应蛋白', anchor='start', color='#1D4ED8', bold=True, size=4.8*PT, halo=True)
+        D.text(node_gtp['cx'] + 1.8, 52.5, '招募效应蛋白', anchor='start', color='#1F3A5F', bold=True, size=4.8*PT, halo=True)
     else:
-        D.text(node_gtp['cx'] + 1.8, 52.5, 'Effector recruitment', anchor='start', color='#1D4ED8', bold=True, size=4.8*PT, halo=True)
+        D.text(node_gtp['cx'] + 1.8, 52.5, 'Effector recruitment', anchor='start', color='#1F3A5F', bold=True, size=4.8*PT, halo=True)
 
     BUS_X = {'mapk': 18.0, 'rassf': 60.0, 'pi3k': 88.0, 'ral': 132.0, 'cyto': 164.0}
     arrow((node_gtp['cx'], BUS_Y), (BUS_X['mapk'], BUS_Y), col=ACT_COL, lw=0.70)
@@ -678,15 +678,15 @@ def build_figure1_svg(lang='en'):
     # Nucleus boundary
     D.add('body', '<path d="M 2.0 99.0 C 15.0 97.0, 35.0 98.0, 48.0 102.0 '
                   'C 47.0 114.0, 44.0 117.0, 42.0 118.0 L 2.0 118.0 Z" '
-                  'fill="#EDE9FE" fill-opacity="0.55" stroke="#8B5CF6" stroke-width="0.75" stroke-dasharray="2.5,1.5"/>')
+                  'fill="#F6F3FA" fill-opacity="0.65" stroke="#7D68A8" stroke-width="0.75" stroke-dasharray="2.5,1.5"/>')
     for y_npc in (100.5, 102.5, 104.5):
-        D.add('body', '<rect x="42.5" y="%.2f" width="2.2" height="1.0" rx="0.5" fill="#7C3AED" stroke="#5B21B6" stroke-width="0.25"/>' % y_npc)
+        D.add('body', '<rect x="42.5" y="%.2f" width="2.2" height="1.0" rx="0.5" fill="#5E4B8B" stroke="#453569" stroke-width="0.25"/>' % y_npc)
     if lang == 'cn':
-        D.text(25.5, 100.5, '核孔复合体 (NPC)', color='#6D28D9', bold=True, size=4.5*PT, halo=True)
-        D.text(34.0, 116.0, '细胞核', color='#6D28D9', bold=True, size=FS_SM, halo=True)
+        D.text(25.5, 100.5, '核孔复合体 (NPC)', color='#5E4B8B', bold=True, size=4.5*PT, halo=True)
+        D.text(34.0, 116.0, '细胞核', color='#5E4B8B', bold=True, size=FS_SM, halo=True)
     else:
-        D.text(25.5, 100.5, 'Nuclear pore (NPC)', color='#6D28D9', bold=True, size=4.5*PT, halo=True)
-        D.text(34.0, 116.0, 'Nucleus', color='#6D28D9', bold=True, size=FS_SM, halo=True)
+        D.text(25.5, 100.5, 'Nuclear pore (NPC)', color='#5E4B8B', bold=True, size=4.5*PT, halo=True)
+        D.text(34.0, 116.0, 'Nucleus', color='#5E4B8B', bold=True, size=FS_SM, halo=True)
 
     node_erk_nuc = pill(BUS_X['mapk'], 105.0, 11.0, 4.8, 'ERK (p)', 'mapk')
     arrow(node_erk['bottom'], node_erk_nuc['top'], col=ACT_COL, lw=0.60)
@@ -694,10 +694,10 @@ def build_figure1_svg(lang='en'):
 
     if lang == 'cn':
         out_mapk = outcome_box(4.5, 109.5, 27.0, 7.5, '细胞增殖与周期进程', 'CCND1, MYC, FOS, ELK1',
-                               '#EFF6FF', '#93C5FD', '#1D4ED8')
+                               '#EEF3F8', '#B0C4DE', '#1F3A5F')
     else:
         out_mapk = outcome_box(4.5, 109.5, 27.0, 7.5, 'Proliferation & Growth', 'CCND1, MYC, FOS, ELK1',
-                               '#EFF6FF', '#93C5FD', '#1D4ED8')
+                               '#EEF3F8', '#B0C4DE', '#1F3A5F')
     arrow((BUS_X['mapk'], node_erk_nuc['bottom'][1]), (BUS_X['mapk'], out_mapk['top'][1] - 0.2), col=ACT_COL, lw=0.55)
 
     # 2. RASSF1A
@@ -707,10 +707,10 @@ def build_figure1_svg(lang='en'):
     arrow(node_rassf['bottom'], node_mst['top'], col=ACT_COL, lw=0.55)
     if lang == 'cn':
         out_rassf = outcome_box(50.5, OUT_Y, 19.0, OUT_H, '促凋亡与抑癌', 'MST / YAP1 / p73',
-                                '#FDF2F8', '#F472B6', '#BE185D')
+                                '#F7F4FA', '#D8CFE5', '#5E4B8B')
     else:
         out_rassf = outcome_box(50.5, OUT_Y, 19.0, OUT_H, 'Apoptosis', 'MST / YAP1 / p73',
-                                '#FDF2F8', '#F472B6', '#BE185D')
+                                '#F7F4FA', '#D8CFE5', '#5E4B8B')
     arrow(node_mst['bottom'], out_rassf['top'], col=ACT_COL, lw=0.55)
 
     # 3. PI3K
@@ -734,10 +734,10 @@ def build_figure1_svg(lang='en'):
 
     if lang == 'cn':
         out_pi3k = outcome_box(76.0, OUT_Y, 24.0, OUT_H, '存活促进与代谢合成', 'S6K1, 4E-BP1, 糖酵解',
-                               '#F0FDF4', '#86EFAC', '#15803D')
+                               '#EDF5F5', '#A3CECE', '#2A6F6F')
     else:
         out_pi3k = outcome_box(76.0, OUT_Y, 24.0, OUT_H, 'Survival & Growth', 'S6K1, 4E-BP1, glycolysis',
-                               '#F0FDF4', '#86EFAC', '#15803D')
+                               '#EDF5F5', '#A3CECE', '#2A6F6F')
     arrow(node_mtor['bottom'], out_pi3k['top'], col=ACT_COL, lw=0.60)
 
     # 4. RAL
@@ -749,10 +749,10 @@ def build_figure1_svg(lang='en'):
     arrow(node_ral['bottom'], node_tbk1['top'], col=ACT_COL, lw=0.55)
     if lang == 'cn':
         out_ral = outcome_box(120.0, OUT_Y, 24.0, OUT_H, '囊泡运输与极性', '外泌小体与自噬调控',
-                              '#FFFBEB', '#FCD34D', '#B45309')
+                              '#F0F4F8', '#AFC1D0', '#3E6B89')
     else:
         out_ral = outcome_box(120.0, OUT_Y, 24.0, OUT_H, 'Vesicle Trafficking', 'Exocyst & autophagy',
-                              '#FFFBEB', '#FCD34D', '#B45309')
+                              '#F0F4F8', '#AFC1D0', '#3E6B89')
     arrow(node_tbk1['bottom'], out_ral['top'], col=ACT_COL, lw=0.55)
 
     # 5. Cytoskeletal / PLC
@@ -767,10 +767,10 @@ def build_figure1_svg(lang='en'):
     arrow(node_rac1['bottom'], node_actin['top'], col=ACT_COL, lw=0.55)
     if lang == 'cn':
         out_cyto = outcome_box(152.0, OUT_Y, 24.0, OUT_H, '骨架动力学与侵袭', '肌动蛋白动力学与迁移',
-                               '#F5F3FF', '#C4B5FD', '#6D28D9')
+                               '#FAF4E8', '#E2D3B8', '#8A5800')
     else:
         out_cyto = outcome_box(152.0, OUT_Y, 24.0, OUT_H, 'Motility & Invasion', 'Actin dynamics & migration',
-                               '#F5F3FF', '#C4B5FD', '#6D28D9')
+                               '#FAF4E8', '#E2D3B8', '#8A5800')
     arrow(node_actin['bottom'], out_cyto['top'], col=ACT_COL, lw=0.55)
 
     # ERK Negative Feedback Loop (clean left-hand orthogonal routing)

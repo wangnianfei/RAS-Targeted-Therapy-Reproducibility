@@ -39,24 +39,24 @@ INK = '#0F172A'
 INK_MUTED = '#475569'
 GREY = '#64748B'
 
-# Unified Jewel-Tone Group Palette (Harmonized with Fig 1 & Fig 4)
+# Unified Jewel-Tone Group Palette (Harmonized with Fig 1, 3 & 4)
 GRP_COLORS = {
     'genetic': {
         'main': '#1F3A5F',       # Deep Prussian Navy (Fig 4 Primary Anchor)
-        'light': '#F1F5F9',
-        'border': '#CBD5E1',
+        'light': '#EBF1F6',      # Warm, elegant navy tint
+        'border': '#B8C9D9',
         'label': 'GENOMIC ALTERATIONS'
     },
     'nongenetic': {
         'main': '#A63A2E',       # Deep Brick Ruby Crimson (Fig 4 Secondary Anchor)
-        'light': '#FFF1F2',
-        'border': '#FECDD3',
+        'light': '#FDF0EE',      # Warm, elegant brick rose tint
+        'border': '#EFC5C0',
         'label': 'PHENOTYPIC & LINEAGE PLASTICITY'
     },
     'carrier': {
         'main': '#2A6F6F',       # Oceanic Deep Teal (Fig 4 Biomarker & Fig 1 PI3K)
-        'light': '#F0FDFA',
-        'border': '#99F6E4',
+        'light': '#EBF4F4',      # Warm, elegant oceanic teal tint
+        'border': '#B2D6D6',
         'label': 'ORGANELLE & METABOLIC REWIRING'
     }
 }
@@ -68,8 +68,8 @@ LOGICS = [
         'subtitle': 'Same pathway clamp',
         'metric': 'ORR 71% (1L)',
         'source': 'Zhong 2026',
-        'color': '#2563EB',      # Cobalt Royal Blue (Fig 1 MAPK)
-        'bg': '#EFF6FF'
+        'color': '#1F3A5F',      # Prussian Navy (Harmonized with Fig 1 MAPK & Fig 4)
+        'bg': '#EBF1F6'
     },
     {
         'num': '2',
@@ -77,8 +77,8 @@ LOGICS = [
         'subtitle': 'Parallel bypass switch',
         'metric': 'PFS 5.6 vs 2.2 mo',
         'source': 'Fakih 2023',
-        'color': '#0D9488',      # Teal Emerald (Fig 1 PI3K)
-        'bg': '#F0FDFA'
+        'color': '#2A6F6F',      # Oceanic Deep Teal (Harmonized with Fig 1 PI3K & Fig 4)
+        'bg': '#EBF4F4'
     },
     {
         'num': '3',
@@ -86,8 +86,8 @@ LOGICS = [
         'subtitle': 'Effector engagement',
         'metric': 'Durability, not ORR',
         'source': 'Chour 2023',
-        'color': '#E11D48',      # Crimson Accent (Fig 1 Immune)
-        'bg': '#FFF1F2'
+        'color': '#A63A2E',      # Brick Ruby / Coral (Harmonized with Fig 1 Immune & Fig 4)
+        'bg': '#FDF0EE'
     },
     {
         'num': '4',
@@ -95,8 +95,8 @@ LOGICS = [
         'subtitle': 'Survival switch',
         'metric': 'ORR 82% (n=33)',
         'source': 'Song 2026',
-        'color': '#7C3AED',      # Deep Violet (Fig 1 Apoptosis)
-        'bg': '#F5F3FF'
+        'color': '#5E4B8B',      # Muted Academic Amethyst (Harmonized with Fig 1 Apoptosis)
+        'bg': '#F4F0F7'
     },
     {
         'num': '5',
@@ -104,8 +104,8 @@ LOGICS = [
         'subtitle': 'Off-axis cell kill',
         'metric': 'ORR 88.9%',
         'source': 'Akamatsu 2025',
-        'color': '#D97706',      # Warm Golden Amber (Fig 1/4)
-        'bg': '#FFFBEB'
+        'color': '#B47226',      # Warm Golden Amber (Harmonized with Fig 1 Cytoskeleton & Fig 4)
+        'bg': '#FAF4E8'
     }
 ]
 
@@ -186,11 +186,11 @@ def run_figure5_pipeline(lang='en'):
 
     if lang == 'cn':
         logics_data = [
-            {'num': '1', 'title': '垂直联合', 'subtitle': '同通路双重阻断', 'metric': 'ORR 71% (一线)', 'color': '#2563EB', 'bg': '#EFF6FF'},
-            {'num': '2', 'title': '水平联合', 'subtitle': '并行旁路开关切断', 'metric': 'PFS 5.6 对 2.2月', 'color': '#0D9488', 'bg': '#F0FDFA'},
-            {'num': '3', 'title': '免疫联合', 'subtitle': '效应细胞募集与重塑', 'metric': '持久应答, 延缓耐药', 'color': '#E11D48', 'bg': '#FFF1F2'},
-            {'num': '4', 'title': '状态与应激', 'subtitle': '细胞应激稳态瓦解', 'metric': 'ORR 82% (n=33)', 'color': '#7C3AED', 'bg': '#F5F3FF'},
-            {'num': '5', 'title': '细胞毒化疗', 'subtitle': '离轴合成致死杀伤', 'metric': 'ORR 88.9%', 'color': '#D97706', 'bg': '#FFFBEB'},
+            {'num': '1', 'title': '垂直联合', 'subtitle': '同通路双重阻断', 'metric': 'ORR 71% (一线)', 'color': '#1F3A5F', 'bg': '#EBF1F6'},
+            {'num': '2', 'title': '水平联合', 'subtitle': '并行旁路开关切断', 'metric': 'PFS 5.6 对 2.2月', 'color': '#2A6F6F', 'bg': '#EBF4F4'},
+            {'num': '3', 'title': '免疫联合', 'subtitle': '效应细胞募集与重塑', 'metric': '持久应答, 延缓耐药', 'color': '#A63A2E', 'bg': '#FDF0EE'},
+            {'num': '4', 'title': '状态与应激', 'subtitle': '细胞应激稳态瓦解', 'metric': 'ORR 82% (n=33)', 'color': '#5E4B8B', 'bg': '#F4F0F7'},
+            {'num': '5', 'title': '细胞毒化疗', 'subtitle': '离轴合成致死杀伤', 'metric': 'ORR 88.9%', 'color': '#B47226', 'bg': '#FAF4E8'},
         ]
     else:
         logics_data = LOGICS
@@ -245,6 +245,15 @@ def run_figure5_pipeline(lang='en'):
         rows_data = ROWS
         grp_labels = {k: v['label'] for k, v in GRP_COLORS.items()}
 
+    # Active cell jewel palettes mapped to column logic
+    ACTIVE_CELL_CFG = {
+        1: {'bg': '#EBF1F6', 'bd': '#1F3A5F', 'tc': '#0F243E'},  # Logic 1: Prussian Navy
+        2: {'bg': '#EBF4F4', 'bd': '#2A6F6F', 'tc': '#144545'},  # Logic 2: Oceanic Deep Teal
+        3: {'bg': '#FDF0EE', 'bd': '#A63A2E', 'tc': '#7A2219'},  # Logic 3: Brick Ruby
+        4: {'bg': '#F4F0F7', 'bd': '#5E4B8B', 'tc': '#3D2D63'},  # Logic 4: Academic Amethyst
+        5: {'bg': '#FAF4E8', 'bd': '#B47226', 'tc': '#784710'},  # Logic 5: Warm Golden Amber
+    }
+
     for grp_key, row_title, row_sub, cells in rows_data:
         # Group header if new group
         if grp_key != current_grp:
@@ -252,7 +261,7 @@ def run_figure5_pipeline(lang='en'):
             gcfg = GRP_COLORS[grp_key]
             y_curr -= (group_bar_h + 1.2)
             draw_pill(ax, X_ROW_LABEL, y_curr, W - X_ROW_LABEL - 3.5, group_bar_h,
-                      bg=gcfg['light'], border=gcfg['border'], lw=0.45, r=1.0)
+                      bg=gcfg['light'], border=gcfg['border'], lw=0.55, r=1.0)
             ax.text(X_ROW_LABEL + 3.0, y_curr + group_bar_h / 2.0, grp_labels[grp_key],
                     fontsize=T_XS + 0.3, fontweight='bold', color=gcfg['main'], va='center', zorder=5)
             y_curr -= 1.0
@@ -269,18 +278,21 @@ def run_figure5_pipeline(lang='en'):
             cx = X_MATRIX_START + (ci - 1) * CW
             if ci in cells:
                 status, label = cells[ci]
-                bg = '#EFF6FF' if status == 'direct' else '#FEF3C7'
-                bd = '#2563EB' if status == 'direct' else '#D97706'
-                tc = '#1E3A8A' if status == 'direct' else '#78350F'
+                if status == 'direct':
+                    cfg = ACTIVE_CELL_CFG.get(ci, {'bg': '#EBF1F6', 'bd': '#1F3A5F', 'tc': '#0F243E'})
+                    bg, bd, tc = cfg['bg'], cfg['bd'], cfg['tc']
+                else: # partial resistance bypass
+                    bg, bd, tc = '#FAF4E8', '#C9A227', '#8A5800'
                 draw_pill(ax, cx + GAP/2 + 0.6, y_curr + 0.8, CW - GAP - 1.2, row_height - 1.6,
-                          bg=bg, border=bd, lw=0.5, r=1.2)
+                          bg=bg, border=bd, lw=0.6, r=1.2)
                 ax.text(cx + CW/2, y_curr + row_height / 2.0, label,
                         fontsize=T_XS, fontweight='bold', color=tc, ha='center', va='center', zorder=5)
             else:
+                # Warm ivory neutral empty cell (eliminates cold pale sterile cast)
                 draw_pill(ax, cx + GAP/2 + 0.6, y_curr + 0.8, CW - GAP - 1.2, row_height - 1.6,
-                          bg='#F8FAFC', border='#E2E8F0', lw=0.35, r=1.2)
+                          bg='#FAF9F6', border='#E8E6DF', lw=0.40, r=1.2)
                 ax.text(cx + CW/2, y_curr + row_height / 2.0, '—',
-                        fontsize=T_SM, color='#94A3B8', ha='center', va='center', zorder=5)
+                        fontsize=T_SM, color='#A8A29E', ha='center', va='center', zorder=5)
         y_curr -= 0.6
 
     # -------------------------------------------------------------
@@ -296,22 +308,22 @@ def run_figure5_pipeline(lang='en'):
     y_b_box = y_b_top - hb_box - 4.5
     w_box = (W - 3.5 * 2 - 8.0) / 2.0
 
-    # Box 1: NSCLC Monotherapy
-    draw_pill(ax, 3.5, y_b_box, w_box, hb_box, bg='#F8FAFC', border='#CBD5E1', lw=0.55, r=2.0)
+    # Box 1: NSCLC Monotherapy (Warm academic card with Prussian Navy accent)
+    draw_pill(ax, 3.5, y_b_box, w_box, hb_box, bg='#FAF9F7', border='#CBD5E1', lw=0.55, r=2.0)
     b1_t = '非小细胞肺癌 单药治疗 (CodeBreaK / KRYSTAL)' if lang == 'cn' else 'NSCLC Monotherapy (CodeBreaK / KRYSTAL)'
     b1_s = '45% (17/38) 检出获得性耐药改变' if lang == 'cn' else '45% (17/38) acquired alterations detected'
     b1_sub = '主要包括 S-IIP 口袋突变 (Y96D, R68S, H95D) 与旁路激活' if lang == 'cn' else 'Switch-II pocket mutations (Y96D, R68S, H95D) & bypass activation'
     ax.text(6.0, y_b_box + hb_box - 3.2, b1_t, fontsize=T_SM + 0.2, fontweight='bold', color='#1E293B', va='top')
-    ax.text(6.0, y_b_box + hb_box - 7.5, b1_s, fontsize=T_SM, fontweight='bold', color='#2563EB', va='top')
+    ax.text(6.0, y_b_box + hb_box - 7.5, b1_s, fontsize=T_SM, fontweight='bold', color='#1F3A5F', va='top')
     ax.text(6.0, y_b_box + 2.8, b1_sub, fontsize=T_XS, color=INK_MUTED, va='bottom')
 
-    # Box 2: CRC Vertical Doublet
-    draw_pill(ax, 3.5 + w_box + 8.0, y_b_box, w_box, hb_box, bg='#F8FAFC', border='#CBD5E1', lw=0.55, r=2.0)
+    # Box 2: CRC Vertical Doublet (Warm academic card with Brick Ruby accent)
+    draw_pill(ax, 3.5 + w_box + 8.0, y_b_box, w_box, hb_box, bg='#FAF9F7', border='#CBD5E1', lw=0.55, r=2.0)
     b2_t = '结直肠癌 垂直双靶治疗 (CodeBreaK 300 / KRYSTAL-10)' if lang == 'cn' else 'CRC Vertical Doublet (CodeBreaK 300 / KRYSTAL-10)'
     b2_s = '74% (25/34) 检出复合多克隆耐药改变' if lang == 'cn' else '74% (25/34) polyclonal resistance alterations'
     b2_sub = '以 RTK/下游激酶突变与旁路激活为主 (多克隆复合突变)' if lang == 'cn' else 'High prevalence of RTK/MAPK reactivation & polyclonal alterations'
     ax.text(3.5 + w_box + 10.5, y_b_box + hb_box - 3.2, b2_t, fontsize=T_SM + 0.2, fontweight='bold', color='#1E293B', va='top')
-    ax.text(3.5 + w_box + 10.5, y_b_box + hb_box - 7.5, b2_s, fontsize=T_SM, fontweight='bold', color='#D97706', va='top')
+    ax.text(3.5 + w_box + 10.5, y_b_box + hb_box - 7.5, b2_s, fontsize=T_SM, fontweight='bold', color='#A63A2E', va='top')
     ax.text(3.5 + w_box + 10.5, y_b_box + 2.8, b2_sub, fontsize=T_XS, color=INK_MUTED, va='bottom')
 
     suffixes = ['_EN'] if lang == 'en' else ['_CN', '_中文版']
