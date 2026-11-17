@@ -1,10 +1,66 @@
-import os, sys, shutil
+import os, sys, shutil, math, base64
 from PIL import Image, ImageDraw, ImageFont
 
 SRC_IMG = '/Users/wangnianfei/Desktop/ESMO/05_开源复现仓库/06_Figure4_Global_Trial_Landscape/vector_figures/Figure4_trial_atlas.png'
-im = Image.open(SRC_IMG).convert('RGB')
-w, h = im.size
-draw = ImageDraw.Draw(im)
+base_im = Image.open(SRC_IMG).convert('RGB')
+w, h = base_im.size
+
+xc, yc = 530.5, 1721.4
+R_out = 512.8
+BLUE = (31, 58, 95)
+RED = (166, 58, 46)
+WHITE = (255, 255, 255)
+INK = (26, 26, 26)
+
+# -------------------------------------------------------------------------
+# Step 1: Base geometric restoration of the dark blue wedge
+# -------------------------------------------------------------------------
+# Restore the dark blue wedge and clear all text in the white space up to x=1245
+for y in range(1950, 2085):
+    for x in range(850, 1245):
+        ang = math.degrees(math.atan2(y - yc, x - xc))
+        r = math.hypot(x - xc, y - yc)
+        sec_color = BLUE if ang >= 28.85 else RED
+        if r >= R_out + 1.2:
+            base_im.putpixel((x, y), WHITE)
+        elif 26.0 <= ang <= 55.5:
+            if r <= R_out - 1.2:
+                base_im.putpixel((x, y), sec_color)
+            else:
+                alpha = (R_out + 1.2 - r) / 2.4
+                c = (
+                    int(round(alpha * sec_color[0] + (1 - alpha) * WHITE[0])),
+                    int(round(alpha * sec_color[1] + (1 - alpha) * WHITE[1])),
+                    int(round(alpha * sec_color[2] + (1 - alpha) * WHITE[2]))
+                )
+                base_im.putpixel((x, y), c)
+
+# -------------------------------------------------------------------------
+# Step 2: English Version
+# -------------------------------------------------------------------------
+im_en = base_im.copy()
+draw_en = ImageDraw.Draw(im_en)
+f_en28 = ImageFont.truetype('/System/Library/Fonts/Supplemental/Arial.ttf', 28)
+
+text_ha = "Histology-agnostic"
+text_num = "152"
+bbox_ha = f_en28.getbbox(text_ha)
+w_ha = bbox_ha[2] - bbox_ha[0]
+bbox_num = f_en28.getbbox(text_num)
+w_num = bbox_num[2] - bbox_num[0]
+
+# Placed cleanly in the white corridor: x=985 has 25px clearance from ring, 31px from legend
+x_ha = 985
+y_ha = 1995
+draw_en.text((x_ha, y_ha), text_ha, fill=INK, font=f_en28)
+x_num = x_ha + (w_ha - w_num) / 2
+draw_en.text((x_num, y_ha + 38), text_num, fill=INK, font=f_en28)
+
+# -------------------------------------------------------------------------
+# Step 3: Chinese Version
+# -------------------------------------------------------------------------
+im_cn = base_im.copy()
+draw_cn = ImageDraw.Draw(im_cn)
 
 FONT_PATH = '/System/Library/Fonts/Hiragino Sans GB.ttc'
 if not os.path.exists(FONT_PATH):
@@ -14,11 +70,16 @@ def get_font(size, bold=False):
     idx = 1 if bold else 0
     return ImageFont.truetype(FONT_PATH, size, index=idx)
 
-INK = '#1A1A1A'
-WHITE = '#FFFFFF'
+def cover_box(box):
+    draw_cn.rectangle(box, fill=WHITE)
 
-def cover_and_text(box, text, font, color=INK, align='left', line_spacing=4):
-    draw.rectangle(box, fill=WHITE)
+def cover_circle_safe_box(box):
+    for y in range(box[1], box[3]):
+        for x in range(box[0], box[2]):
+            if math.hypot(x - xc, y - yc) > R_out + 1.2:
+                im_cn.putpixel((x, y), WHITE)
+
+def render_text(box, text, font, color=INK, align='left', line_spacing=4):
     lines = text.split('\n')
     line_heights = [font.getbbox(l)[3] - font.getbbox(l)[1] for l in lines]
     total_h = sum(line_heights) + (len(lines) - 1) * line_spacing
@@ -32,122 +93,213 @@ def cover_and_text(box, text, font, color=INK, align='left', line_spacing=4):
             cur_x = box[2] - lw
         else:
             cur_x = box[0]
-        draw.text((cur_x, cur_y), line, fill=color, font=font)
+        draw_cn.text((cur_x, cur_y), line, fill=color, font=font)
         cur_y += line_heights[i] + line_spacing
 
-f_ctry = get_font(22, bold=False)
-f_ctry_b = get_font(22, bold=True)
-
-# 1. Panel a: Map Legend Title
+# Map Legend Title
 f_leg_t = get_font(22, bold=True)
-cover_and_text((5, 700, 160, 765), "试验中心分布\n(含 ≥1 个中心)", f_leg_t, align='left')
+cover_box((5, 700, 155, 765))
+render_text((5, 700, 155, 765), "试验中心分布\n(含 ≥1 个中心)", f_leg_t, align='left')
 
-# 2. Panel a: Countries
-# Canada 112: (736, 62, 891, 83)
-cover_and_text((730, 60, 905, 87), "加拿大 112", f_ctry_b, align='left')
-# Germany 122: (955, 70, 1131, 97)
-cover_and_text((950, 68, 1140, 99), "德国 122", f_ctry_b, align='left')
-# UK 101: (729, 169, 820, 190)
-cover_and_text((725, 166, 830, 193), "英国 101", f_ctry_b, align='left')
-# France 154: (680, 260, 824, 274)
-cover_and_text((675, 255, 830, 278), "法国 154", f_ctry_b, align='left')
-# Spain 189: (694, 344, 824, 371)
-cover_and_text((688, 340, 830, 374), "西班牙 189", f_ctry_b, align='left')
-# Italy 155: (990, 421, 1097, 447)
-cover_and_text((980, 417, 1105, 450), "意大利 155", f_ctry_b, align='left')
-# USA 644: (92, 428, 207, 449)
-cover_and_text((88, 425, 220, 452), "美国 644", f_ctry_b, align='left')
-# China 256: (1287, 266, 1420, 287)
-cover_and_text((1280, 262, 1430, 290), "中国 256", f_ctry_b, align='left')
-# Japan 82: (1822, 291, 1940, 317)
-cover_and_text((1815, 287, 1945, 320), "日本 82", f_ctry_b, align='left')
-# South Korea 120: (1749, 466, 1967, 480)
-cover_and_text((1740, 462, 1975, 484), "韩国 120", f_ctry_b, align='left')
-# Australia 127: (1643, 984, 1814, 1005)
-cover_and_text((1635, 980, 1825, 1009), "澳大利亚 127", f_ctry_b, align='left')
+# Map Countries (exact ink bboxes with safe margins)
+f_ctry_b = get_font(22, bold=True)
+cover_box((730, 58, 900, 86))
+render_text((730, 58, 900, 86), "加拿大 112", f_ctry_b, align='left')
 
-# 3. Panel b: Tumour Ring Labels
+cover_box((950, 66, 1138, 100))
+render_text((950, 66, 1138, 100), "德国 122", f_ctry_b, align='left')
+
+cover_box((724, 165, 825, 193))
+render_text((724, 165, 825, 193), "英国 101", f_ctry_b, align='left')
+
+cover_box((674, 249, 828, 277))
+render_text((674, 249, 828, 277), "法国 154", f_ctry_b, align='left')
+
+cover_box((689, 340, 828, 374))
+render_text((689, 340, 828, 374), "西班牙 189", f_ctry_b, align='left')
+
+cover_box((985, 417, 1102, 450))
+render_text((985, 417, 1102, 450), "意大利 155", f_ctry_b, align='left')
+
+cover_box((87, 424, 212, 452))
+render_text((87, 424, 212, 452), "美国 644", f_ctry_b, align='left')
+
+cover_box((1282, 264, 1424, 292))
+render_text((1282, 264, 1424, 292), "中国 256", f_ctry_b, align='left')
+
+cover_box((1817, 287, 1945, 320))
+render_text((1817, 287, 1945, 320), "日本 82", f_ctry_b, align='left')
+
+cover_box((1743, 462, 1972, 490))
+render_text((1743, 462, 1972, 490), "韩国 120", f_ctry_b, align='left')
+
+cover_box((1638, 980, 1819, 1008))
+render_text((1638, 980, 1819, 1008), "澳大利亚 127", f_ctry_b, align='left')
+
+# Panel b Tumour Sector Labels (guarded by circle boundary)
 f_ring = get_font(23, bold=False)
-# Haematologic 59: (551, 1131, 760, 1193)
-cover_and_text((540, 1125, 770, 1198), "血液肿瘤\n59", f_ring, align='center')
-# Pancreatic 77: (786, 1227, 947, 1300)
-cover_and_text((775, 1220, 955, 1305), "胰腺癌\n77", f_ring, align='center')
-# NSCLC 149: (950, 1511, 1130, 1600)
-cover_and_text((945, 1505, 1140, 1605), "非小细胞肺癌\n149", f_ring, align='left')
-# Histology-agnostic 152: (850, 2000, 1061, 2111)
-cover_and_text((845, 1995, 1140, 2115), "组织不可知型\n152", f_ring, align='left')
-# Multi-tumour 200: (520, 2258, 710, 2320)
-cover_and_text((510, 2250, 720, 2325), "多癌种/实体瘤\n200", f_ring, align='center')
-# Other 248: (1, 2000, 85, 2053)
-cover_and_text((0, 1990, 100, 2060), "其他癌种\n248", f_ring, align='center')
-# Colorectal 297: (75, 1260, 227, 1322)
-cover_and_text((70, 1255, 235, 1328), "结直肠癌\n297", f_ring, align='center')
+cover_circle_safe_box((545, 1120, 770, 1200))
+render_text((545, 1120, 770, 1200), "血液肿瘤\n59", f_ring, align='center')
 
-# 4. Panel b: Legends
+cover_circle_safe_box((780, 1220, 952, 1292))
+render_text((780, 1220, 952, 1292), "胰腺癌\n77", f_ring, align='center')
+
+cover_circle_safe_box((1012, 1505, 1140, 1580))
+render_text((1035, 1505, 1180, 1580), "非小细胞肺癌\n149", f_ring, align='left')
+
+# Histology-agnostic in Chinese: centered in white space
+render_text((980, 1995, 1150, 2075), "组织不可知型\n152", f_ring, align='center')
+
+cover_circle_safe_box((515, 2252, 715, 2325))
+render_text((515, 2252, 715, 2325), "多癌种/实体瘤\n200", f_ring, align='center')
+
+cover_circle_safe_box((0, 1985, 90, 2058))
+render_text((0, 1985, 90, 2058), "其他癌种\n248", f_ring, align='center')
+
+cover_circle_safe_box((70, 1255, 230, 1327))
+render_text((70, 1255, 230, 1327), "结直肠癌\n297", f_ring, align='center')
+
+# Panel b Legend Headers & Items
 f_lh = get_font(25, bold=True)
 f_li = get_font(21, bold=False)
 
-# Headers
-# Header RAS: (1213, 1244, 1377, 1250) -> wait, header is around y=1240-1280
-cover_and_text((1205, 1235, 1420, 1275), "RAS 相关性分类", f_lh, align='left')
-cover_and_text((1645, 1235, 1850, 1275), "临床分期", f_lh, align='left')
-cover_and_text((1205, 1790, 1420, 1830), "申办方性质", f_lh, align='left')
-cover_and_text((1645, 1790, 1850, 1830), "试验状态", f_lh, align='left')
+cover_box((1205, 1238, 1425, 1275))
+render_text((1205, 1238, 1425, 1275), "RAS 相关性分类", f_lh, align='left')
 
-# RAS relation items: (1300, 1300, 1509, 1360), (1320, 1421, 1520, 1451)...
-cover_and_text((1305, 1320, 1530, 1348), "直接靶向 RAS", f_li, align='left')
-cover_and_text((1305, 1420, 1530, 1448), "RAS 调控因子", f_li, align='left')
-cover_and_text((1305, 1520, 1600, 1548), "生物标志物筛选", f_li, align='left')
-cover_and_text((1305, 1620, 1550, 1648), "试验提及 RAS", f_li, align='left')
+cover_box((1645, 1238, 1765, 1275))
+render_text((1645, 1238, 1765, 1275), "临床分期", f_lh, align='left')
+
+cover_box((1205, 1775, 1360, 1818))
+render_text((1205, 1775, 1360, 1818), "申办方性质", f_lh, align='left')
+
+cover_box((1645, 1775, 1765, 1812))
+render_text((1645, 1775, 1765, 1812), "试验状态", f_lh, align='left')
+
+# RAS relation items
+cover_box((1315, 1315, 1515, 1352))
+render_text((1315, 1315, 1515, 1352), "直接靶向 RAS", f_li, align='left')
+
+cover_box((1315, 1415, 1525, 1452))
+render_text((1315, 1415, 1525, 1452), "RAS 调控因子", f_li, align='left')
+
+cover_box((1315, 1518, 1595, 1550))
+render_text((1315, 1518, 1595, 1550), "生物标志物筛选", f_li, align='left')
+
+cover_box((1315, 1620, 1545, 1650))
+render_text((1315, 1620, 1545, 1650), "试验提及 RAS", f_li, align='left')
 
 # Phase items
-cover_and_text((1750, 1320, 1870, 1348), "早期 I 期", f_li, align='left')
-cover_and_text((1750, 1420, 1850, 1448), "I 期", f_li, align='left')
-cover_and_text((1750, 1520, 1850, 1548), "II 期", f_li, align='left')
-cover_and_text((1750, 1620, 1850, 1648), "III 期", f_li, align='left')
+cover_box((1755, 1315, 1835, 1348))
+render_text((1755, 1315, 1835, 1348), "早期 I 期", f_li, align='left')
+
+cover_box((1755, 1415, 1820, 1448))
+render_text((1755, 1415, 1820, 1448), "I 期", f_li, align='left')
+
+cover_box((1755, 1518, 1820, 1550))
+render_text((1755, 1518, 1820, 1550), "II 期", f_li, align='left')
+
+cover_box((1755, 1620, 1820, 1650))
+render_text((1755, 1620, 1820, 1650), "III 期", f_li, align='left')
 
 # Sponsor items
-cover_and_text((1305, 1870, 1450, 1898), "医药企业", f_li, align='left')
-cover_and_text((1305, 1950, 1500, 1978), "学术机构/其他", f_li, align='left')
-cover_and_text((1305, 2030, 1450, 2058), "美国 NIH", f_li, align='left')
-cover_and_text((1305, 2110, 1520, 2138), "临床试验协作网", f_li, align='left')
-cover_and_text((1305, 2190, 1450, 2218), "政府机构", f_li, align='left')
+cover_box((1315, 1850, 1435, 1882))
+render_text((1315, 1850, 1435, 1882), "医药企业", f_li, align='left')
+
+cover_box((1315, 1930, 1405, 1956))
+render_text((1315, 1930, 1405, 1956), "学术机构/其他", f_li, align='left')
+
+cover_box((1315, 2010, 1375, 2035))
+render_text((1315, 2010, 1375, 2035), "美国 NIH", f_li, align='left')
+
+cover_box((1315, 2090, 1440, 2116))
+render_text((1315, 2090, 1440, 2116), "临床试验协作网", f_li, align='left')
+
+cover_box((1315, 2170, 1380, 2195))
+render_text((1315, 2170, 1380, 2195), "政府机构", f_li, align='left')
 
 # Status items
-cover_and_text((1750, 1870, 1880, 1898), "已完成", f_li, align='left')
-cover_and_text((1750, 1950, 1920, 1978), "招募/进行中", f_li, align='left')
-cover_and_text((1750, 2030, 1880, 2058), "尚未招募", f_li, align='left')
-cover_and_text((1750, 2110, 1880, 2138), "提前终止", f_li, align='left')
-cover_and_text((1750, 2190, 1880, 2218), "其他/未知", f_li, align='left')
+cover_box((1755, 1850, 1915, 1882))
+render_text((1755, 1850, 1915, 1882), "已完成", f_li, align='left')
 
-# 5. Panel c
+cover_box((1755, 1930, 1885, 1962))
+render_text((1755, 1930, 1885, 1962), "招募/进行中", f_li, align='left')
+
+cover_box((1755, 2010, 1952, 2042))
+render_text((1755, 2010, 1952, 2042), "尚未招募", f_li, align='left')
+
+cover_box((1755, 2090, 1955, 2122))
+render_text((1755, 2090, 1955, 2122), "提前终止", f_li, align='left')
+
+cover_box((1755, 2170, 1955, 2195))
+render_text((1755, 2170, 1955, 2195), "其他/未知", f_li, align='left')
+
+# Panel c Timeline
 f_c_ann = get_font(21, bold=False)
-cover_and_text((1680, 2375, 1960, 2415), "统计截至 2026年10月", f_c_ann, align='right')
+cover_box((1740, 2400, 1950, 2432))
+render_text((1740, 2400, 1950, 2432), "统计截至 2026年10月", f_c_ann, align='right')
 
 f_c_axis = get_font(24, bold=False)
-cover_and_text((880, 2955, 1200, 3005), "首次注册年份", f_c_axis, align='center')
+cover_box((920, 2815, 1190, 2850))
+render_text((920, 2815, 1190, 2850), "首次注册年份", f_c_axis, align='center')
 
 # Y axis: 'Trials per year'
-draw.rectangle((0, 2400, 40, 2750), fill=WHITE)
-txt_img = Image.new('RGBA', (350, 40), (255, 255, 255, 0))
+cover_box((0, 2450, 32, 2690))
+txt_img = Image.new('RGBA', (350, 30), (255, 255, 255, 0))
 txt_draw = ImageDraw.Draw(txt_img)
-txt_draw.text((0, 2), "年注册试验数 (项)", fill=INK, font=f_c_axis)
+f_c_y = get_font(21, bold=False)
+txt_draw.text((0, 2), "年注册试验数 (项)", fill=INK, font=f_c_y)
 rotated = txt_img.rotate(90, expand=True)
-im.paste(rotated, (2, 2410), rotated)
+im_cn.paste(rotated, (4, 2465), rotated)
 
-# Save Chinese Outputs
+# -------------------------------------------------------------------------
+# Step 4: Save and Synchronize
+# -------------------------------------------------------------------------
 FIG_DIR = '/Users/wangnianfei/Desktop/ESMO/05_开源复现仓库/06_Figure4_Global_Trial_Landscape/vector_figures'
+
+def save_svg(png_path, svg_path):
+    with open(png_path, "rb") as image_file:
+        encoded_string = base64.b64encode(image_file.read()).decode('utf-8')
+    svg_content = f"""<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='481.89pt' height='684.86pt' viewBox='0 0 481.89 684.86'>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<image width='481.89' height='684.86' x='0' y='0' preserveAspectRatio='none' xlink:href='data:image/png;base64,{encoded_string}'/>
+</svg>"""
+    with open(svg_path, 'w', encoding='utf-8') as f:
+        f.write(svg_content)
+
+# English outputs
+out_en_png = os.path.join(FIG_DIR, 'Figure4_trial_atlas_EN.png')
+out_en_pdf = os.path.join(FIG_DIR, 'Figure4_trial_atlas_EN.pdf')
+out_en_svg = os.path.join(FIG_DIR, 'Figure4_trial_atlas_EN.svg')
+
+im_en.save(out_en_png, dpi=(400, 400))
+im_en.save(out_en_pdf, 'PDF', resolution=400)
+save_svg(out_en_png, out_en_svg)
+
+# Legacy aliases for EN
+shutil.copy2(out_en_png, os.path.join(FIG_DIR, 'Figure4_trial_atlas.png'))
+shutil.copy2(out_en_pdf, os.path.join(FIG_DIR, 'Figure4_trial_atlas.pdf'))
+shutil.copy2(out_en_svg, os.path.join(FIG_DIR, 'Figure4_trial_atlas.svg'))
+
+# Chinese outputs
 out_cn_png = os.path.join(FIG_DIR, 'Figure4_trial_atlas_CN.png')
 out_cn_pdf = os.path.join(FIG_DIR, 'Figure4_trial_atlas_CN.pdf')
+out_cn_svg = os.path.join(FIG_DIR, 'Figure4_trial_atlas_CN.svg')
 out_cn_alias_png = os.path.join(FIG_DIR, 'Figure4_全球临床试验全景_中文版.png')
 out_cn_alias_pdf = os.path.join(FIG_DIR, 'Figure4_全球临床试验全景_中文版.pdf')
+out_cn_alias_svg = os.path.join(FIG_DIR, 'Figure4_全球临床试验全景_中文版.svg')
 
-im.save(out_cn_png, dpi=(400, 400))
-im.save(out_cn_pdf, 'PDF', resolution=400)
+im_cn.save(out_cn_png, dpi=(400, 400))
+im_cn.save(out_cn_pdf, 'PDF', resolution=400)
+save_svg(out_cn_png, out_cn_svg)
+
 shutil.copy2(out_cn_png, out_cn_alias_png)
 shutil.copy2(out_cn_pdf, out_cn_alias_pdf)
-print('Successfully generated Figure 4 CN PNG & PDF!')
+shutil.copy2(out_cn_svg, out_cn_alias_svg)
 
+print('Successfully generated Figure 4 EN and CN suite!')
+
+# Synchronize across directories
 SYNC_DIRS = [
     "/Users/wangnianfei/Desktop/ESMO/03_数据与图表/图件_新配色预览",
     "/Users/wangnianfei/Desktop/ESMO/03_数据与图表/图件",
@@ -156,7 +308,9 @@ SYNC_DIRS = [
 
 for sdir in SYNC_DIRS:
     if os.path.exists(sdir):
-        for f in [out_cn_png, out_cn_pdf, out_cn_alias_png, out_cn_alias_pdf]:
+        for f in [out_en_png, out_en_pdf, out_en_svg,
+                  out_cn_png, out_cn_pdf, out_cn_svg,
+                  out_cn_alias_png, out_cn_alias_pdf, out_cn_alias_svg]:
             shutil.copy2(f, os.path.join(sdir, os.path.basename(f)))
         print('Synchronized to:', sdir)
 
