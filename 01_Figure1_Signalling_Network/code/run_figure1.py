@@ -185,9 +185,6 @@ D = SVGDoc()
 
 # Filters & Gradients
 D.defs.append('''
-<filter id="subtle-shadow" x="-5%" y="-5%" width="115%" height="120%">
-  <feDropShadow dx="0" dy="0.4" stdDeviation="0.5" flood-color="#0F172A" flood-opacity="0.08"/>
-</filter>
 <linearGradient id="head" x1="0" y1="0" x2="0" y2="1">
   <stop offset="0%" stop-color="#E2E8F0"/>
   <stop offset="100%" stop-color="#94A3B8"/>
@@ -240,15 +237,14 @@ def ell_pts(cx, cy, rx, ry, rot=0.0, n=36):
         pts.append((cx + px * cr - py * sr, cy + px * sr + py * cr))
     return pts
 
-def body(lobes, col, layer='body', lw=0.32, shadow=True, border_col=None):
+def body(lobes, col, layer='body', lw=0.32, shadow=False, border_col=None):
     pts = []
     for l in lobes:
         pts.extend(ell_pts(l[0], l[1], l[2], l[3], l[4]))
     bc = border_col or mix(col, '#000000', 0.40)
-    sh = ' filter="url(#subtle-shadow)"' if shadow else ''
     fill_col = D.gradient(col)
-    D.add(layer, '<path d="%s" fill="%s" stroke="%s" stroke-width="%.2f"%s/>'
-          % (pts_path(pts, True), fill_col, bc, lw, sh))
+    D.add(layer, '<path d="%s" fill="%s" stroke="%s" stroke-width="%.2f"/>'
+          % (pts_path(pts, True), fill_col, bc, lw))
 
 def pill(cx, cy, w, h, label, col_key, layer='body', rx=None, border_col=None, text_col=None):
     col = COL[col_key]
@@ -257,7 +253,7 @@ def pill(cx, cy, w, h, label, col_key, layer='body', rx=None, border_col=None, t
     r = rx if rx is not None else h / 2.0
     fill_col = D.gradient(col)
     D.add(layer, '<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" rx="%.2f" '
-                 'fill="%s" stroke="%s" stroke-width="0.48" filter="url(#subtle-shadow)"/>'
+                 'fill="%s" stroke="%s" stroke-width="0.48"/>'
           % (cx - w / 2, cy - h / 2, w, h, r, fill_col, bc))
     D.text(cx, cy + FS * 0.32, label, anchor='middle', color=tc, bold=True, size=FS)
     return {
@@ -340,8 +336,8 @@ def marker(x, y, status, s=1.0):
 
 def drug_box(x, y, w, h, title, subtitle=None, status='approved', border_col=BORDER):
     D.add('body', '<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" rx="1.8" '
-                  'fill="#FFFFFF" fill-opacity="0.96" stroke="%s" stroke-width="0.45" '
-                  'filter="url(#subtle-shadow)"/>' % (x, y, w, h, border_col))
+                  'fill="#FFFFFF" fill-opacity="0.96" stroke="%s" stroke-width="0.45"/>'
+                  % (x, y, w, h, border_col))
     mx = x + 2.5
     my = y + (h / 2.0 if subtitle is None else 2.6)
     marker(mx, my, status, s=0.8)
@@ -361,7 +357,7 @@ def drug_box(x, y, w, h, title, subtitle=None, status='approved', border_col=BOR
 
 def outcome_box(x, y, w, h, title, subtitle, bg_col, border_col, title_col):
     D.add('body', '<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" rx="2.0" '
-                  'fill="%s" stroke="%s" stroke-width="0.55" filter="url(#subtle-shadow)"/>'
+                  'fill="%s" stroke="%s" stroke-width="0.55"/>'
                   % (x, y, w, h, bg_col, border_col))
     D.text(x + w / 2.0, y + 3.2, title, anchor='middle', bold=True, size=FS_SM, color=title_col)
     D.text(x + w / 2.0, y + 6.8, subtitle, anchor='middle', size=FS_SUB, color=INK_MUTED)
@@ -508,7 +504,7 @@ def build_figure1_svg(lang='en'):
 
     # Plasma membrane label: floating cleanly above the bilayer in extracellular space
     D.add('body', '<rect x="70.0" y="14.2" width="18.0" height="3.6" rx="1.4" '
-                 'fill="#FFFFFF" stroke="#64748B" stroke-width="0.45" filter="url(#subtle-shadow)"/>')
+                 'fill="#FFFFFF" stroke="#64748B" stroke-width="0.45"/>')
     if lang == 'cn':
         D.text(79.0, 16.0, '细胞膜', anchor='middle', color='#0F172A', bold=True, size=4.5*PT)
     else:
@@ -526,7 +522,7 @@ def build_figure1_svg(lang='en'):
 
     # Legend annotations in top right
     D.add('bg', '<rect x="147.0" y="1.8" width="32.0" height="16.0" rx="2.0" fill="#FFFFFF" '
-                'fill-opacity="0.96" stroke="#CBD5E1" stroke-width="0.45" filter="url(#subtle-shadow)"/>')
+                'fill-opacity="0.96" stroke="#CBD5E1" stroke-width="0.45"/>')
     marker(149.5, 3.6, 'approved')
     marker(149.5, 6.6, 'clinical')
     marker(149.5, 9.6, 'preclinical')
@@ -618,7 +614,7 @@ def build_figure1_svg(lang='en'):
 
     # Direct Inhibitors
     D.add('body', '<rect x="87.0" y="47.5" width="31.0" height="11.5" rx="1.8" '
-                  'fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.45" filter="url(#subtle-shadow)"/>')
+                  'fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.45"/>')
     marker(88.8, 51.5, 'approved')
     marker(88.8, 56.1, 'clinical')
     if lang == 'cn':
@@ -630,7 +626,7 @@ def build_figure1_svg(lang='en'):
     arrow((102.0, 47.5), (node_gdp['cx'], node_gdp['bottom'][1] + 0.3), end='tee', col=INH_COL, lw=0.55, size=1.1, tee_angle=0.0)
 
     D.add('body', '<rect x="150.0" y="30.0" width="28.5" height="11.5" rx="1.8" '
-                  'fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.45" filter="url(#subtle-shadow)"/>')
+                  'fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.45"/>')
     marker(151.5, 34.0, 'approved')
     marker(151.5, 38.6, 'preclinical')
     if lang == 'cn':
@@ -858,13 +854,13 @@ def build_figure1_svg(lang='en'):
     for k, (title, sub, mech, drug, status) in enumerate(CARDS):
         x = k * (CW + CG) + 1.0
         D.add('bg', '<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" rx="2.2" '
-                    'fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.45" filter="url(#subtle-shadow)"/>'
+                    'fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.45"/>'
               % (x, BY, CW, BH))
         
         if k in IMG_B64:
-            D.add('body', '<image href="data:image/jpeg;base64,%s" x="%.2f" y="%.2f" width="%.2f" height="19.50" '
+            D.add('body', '<image xlink:href="data:image/jpeg;base64,%s" href="data:image/jpeg;base64,%s" x="%.2f" y="%.2f" width="%.2f" height="19.50" '
                          'preserveAspectRatio="xMidYMid meet"/>'
-                  % (IMG_B64[k], x + 1.2, BY + 1.5, CW - 2.4))
+                  % (IMG_B64[k], IMG_B64[k], x + 1.2, BY + 1.5, CW - 2.4))
             
         ty = BY + 22.8
         D.text(x + 2.5, ty, title, bold=True, color=INK, size=FS)
