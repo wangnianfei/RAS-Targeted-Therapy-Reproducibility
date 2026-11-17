@@ -12,8 +12,9 @@ suppressPackageStartupMessages({
 })
 
 root <- commandArgs(trailingOnly = TRUE)[1]
-if (is.na(root)) root <- "."   # run from the RAS临床试验注册分析 directory
-DATA <- file.path(root, "数据"); FIG <- file.path(root, "figures")
+if (is.na(root)) root <- "."
+DATA <- if (dir.exists(file.path(root, "数据"))) file.path(root, "数据") else file.path(root, "data")
+FIG <- file.path(root, "figures")
 dir.create(FIG, showWarnings = FALSE)
 mm <- function(x) x / 25.4
 

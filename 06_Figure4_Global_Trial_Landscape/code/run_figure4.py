@@ -4,57 +4,17 @@ from PIL import Image, ImageDraw, ImageFont
 SRC_IMG = '/Users/wangnianfei/Desktop/ESMO/05_开源复现仓库/06_Figure4_Global_Trial_Landscape/vector_figures/Figure4_trial_atlas.png'
 base_im = Image.open(SRC_IMG).convert('RGB')
 w, h = base_im.size
-
-xc, yc = 530.5, 1721.4
-R_out = 512.8
-BLUE = (31, 58, 95)
-RED = (166, 58, 46)
 WHITE = (255, 255, 255)
 INK = (26, 26, 26)
+xc, yc = 530.5, 1721.4
+R_out = 512.8
 
 # -------------------------------------------------------------------------
-# Step 1: Base geometric restoration of the dark blue wedge
+# Step 1: English Version
 # -------------------------------------------------------------------------
-# Restore the dark blue wedge and clear all text in the white space up to x=1245
-for y in range(1950, 2085):
-    for x in range(850, 1245):
-        ang = math.degrees(math.atan2(y - yc, x - xc))
-        r = math.hypot(x - xc, y - yc)
-        sec_color = BLUE if ang >= 28.85 else RED
-        if r >= R_out + 1.2:
-            base_im.putpixel((x, y), WHITE)
-        elif 26.0 <= ang <= 55.5:
-            if r <= R_out - 1.2:
-                base_im.putpixel((x, y), sec_color)
-            else:
-                alpha = (R_out + 1.2 - r) / 2.4
-                c = (
-                    int(round(alpha * sec_color[0] + (1 - alpha) * WHITE[0])),
-                    int(round(alpha * sec_color[1] + (1 - alpha) * WHITE[1])),
-                    int(round(alpha * sec_color[2] + (1 - alpha) * WHITE[2]))
-                )
-                base_im.putpixel((x, y), c)
-
-# -------------------------------------------------------------------------
-# Step 2: English Version
-# -------------------------------------------------------------------------
+# The base image is rendered directly by R (fig2_trial_atlas.R) with optimal
+# multi-line radial label clearance. im_en preserves 100% native vector raster.
 im_en = base_im.copy()
-draw_en = ImageDraw.Draw(im_en)
-f_en28 = ImageFont.truetype('/System/Library/Fonts/Supplemental/Arial.ttf', 28)
-
-text_ha = "Histology-agnostic"
-text_num = "152"
-bbox_ha = f_en28.getbbox(text_ha)
-w_ha = bbox_ha[2] - bbox_ha[0]
-bbox_num = f_en28.getbbox(text_num)
-w_num = bbox_num[2] - bbox_num[0]
-
-# Placed cleanly in the white corridor: x=985 has 25px clearance from ring, 31px from legend
-x_ha = 985
-y_ha = 1995
-draw_en.text((x_ha, y_ha), text_ha, fill=INK, font=f_en28)
-x_num = x_ha + (w_ha - w_num) / 2
-draw_en.text((x_num, y_ha + 38), text_num, fill=INK, font=f_en28)
 
 # -------------------------------------------------------------------------
 # Step 3: Chinese Version
@@ -147,8 +107,9 @@ render_text((780, 1220, 952, 1292), "胰腺癌\n77", f_ring, align='center')
 cover_circle_safe_box((1012, 1505, 1140, 1580))
 render_text((1035, 1505, 1180, 1580), "非小细胞肺癌\n149", f_ring, align='left')
 
-# Histology-agnostic in Chinese: centered in white space
-render_text((980, 1995, 1150, 2075), "组织不可知型\n152", f_ring, align='center')
+# Histology-agnostic in Chinese: cleanly covers English label in white margin
+cover_circle_safe_box((980, 1890, 1160, 2100))
+render_text((980, 1890, 1160, 2100), "组织不可知型\n152", f_ring, align='center')
 
 cover_circle_safe_box((515, 2252, 715, 2325))
 render_text((515, 2252, 715, 2325), "多癌种/实体瘤\n200", f_ring, align='center')

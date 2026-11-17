@@ -27,9 +27,11 @@ suppressPackageStartupMessages({
 
 root <- commandArgs(trailingOnly = TRUE)[1]
 if (is.na(root)) root <- "."
-if (!dir.exists(file.path(root, "数据")))
-  stop("run from the project root or pass it as the first argument")
-DATA <- file.path(root, "数据"); FIG <- file.path(root, "figures")
+DATA <- if (dir.exists(file.path(root, "数据"))) file.path(root, "数据") else file.path(root, "data")
+FIG <- file.path(root, "figures")
+VEC_FIG <- file.path(root, "vector_figures")
+dir.create(FIG, showWarnings = FALSE)
+dir.create(VEC_FIG, showWarnings = FALSE)
 mm <- function(x) x / 25.4
 
 # ---- house style -----------------------------------------------------------
@@ -45,7 +47,12 @@ PAL <- c(
   "Stopped early" = "#A63A2E", "Other/unknown" = "#6E241C")
 
 # ---- data ------------------------------------------------------------------
-d <- read_csv(file.path(DATA, "表1_临床试验总表.csv"), show_col_types = FALSE)
+tbl_path <- if (file.exists(file.path(DATA, "表1_临床试验总表.csv"))) {
+  file.path(DATA, "表1_临床试验总表.csv")
+} else {
+  file.path(DATA, "trials_1182.csv")
+}
+d <- read_csv(tbl_path, show_col_types = FALSE)
 
 tumour_block <- function(x) {
   parts <- str_split(str_trim(x), ";")[[1]]
@@ -97,6 +104,14 @@ blocks <- d2 %>% group_by(tumour) %>% summarise(n = n(), .groups = "drop") %>%
 d2 <- d2 %>% left_join(blocks %>% select(tumour, start), by = "tumour") %>%
   mutate(x = start + within - 1)
 
+# Position adjustments for clean radial label clearance
+blocks <- blocks %>%
+  mutate(
+    lbl = ifelse(tumour == "Histology-agnostic", paste0("Histology-\nagnostic\n", n), paste0(tumour, "\n", n)),
+    y_pos = ifelse(tumour == "Histology-agnostic", 5.48, 5.12),
+    x_pos = ifelse(tumour == "Histology-agnostic", mid - 10, mid)
+  )
+
 tracks <- tribble(~var, ~ymin, ~ymax,
                   "tier", 3.35, 4.60, "phase", 2.60, 3.18,
                   "sponsor", 1.80, 2.43, "status", 1.00, 1.63)
@@ -110,7 +125,7 @@ ring_plot <- function() {
   ggplot(long) +
     geom_rect(aes(xmin = x - 0.5, xmax = x + 0.5, ymin = ymin, ymax = ymax, fill = cat),
               colour = NA) +
-    geom_text(data = blocks, aes(x = mid, y = 5.12, label = paste0(tumour, "\n", n)),
+    geom_text(data = blocks, aes(x = x_pos, y = y_pos, label = lbl),
               size = sp(FS), lineheight = .88, colour = INK, family = "Arial") +
     coord_polar(theta = "x", start = 0, direction = -1, clip = "off") +
     scale_fill_manual(values = PAL, guide = "none") +
@@ -172,12 +187,15 @@ save_png <- function(p, f, w, h)
   ggsave(file.path(tmp, f), p, width = w, height = h, units = "mm", dpi = 600,
          bg = "white", type = "cairo")
 
-save_png(ring_plot(),  "ring.png", 136, 136)
+save_png(ring_plot(),  "ring.png", 155, 136)
 save_png(key_plot(),   "key.png",   68,  78)
 save_png(timeline_plot(), "line.png", 170, 40)
-if (!file.exists(file.path(FIG, "FigurePanel_a_world_map.png")))
-  stop("panel a missing: run 脚本/03_figures_country.R first")
-map <- png::readPNG(file.path(FIG, "FigurePanel_a_world_map.png"))
+map_path <- file.path(FIG, "FigurePanel_a_world_map.png")
+if (!file.exists(map_path)) {
+  message("Building panel a world map...")
+  system2("/usr/local/bin/Rscript", c(file.path(root, "code/fig2_world_map.R"), root))
+}
+map <- png::readPNG(map_path)
 
 trim <- function(f, pad) {
   img <- png::readPNG(file.path(tmp, f)); if (length(dim(img)) == 2) img <- array(img, c(dim(img), 3))
@@ -212,8 +230,12 @@ for (dev in devices) {
   f <- file.path(FIG, paste0("Figure_RAS_trial_atlas.", dev))
   if (dev == "pdf") ggsave(f, fig, width = W, height = H, units = "mm", bg = "white", device = cairo_pdf)
   if (dev == "svg") ggsave(f, fig, width = W, height = H, units = "mm", bg = "white", device = svglite::svglite)
-  if (dev == "png") ggsave(f, fig, width = W, height = H, units = "mm", dpi = 600, bg = "white", type = "cairo")
+  if (dev == "png") ggsave(f, fig, width = W, height = H, units = "mm", dpi = 300, bg = "white", type = "cairo")
   cat(sprintf("  -> %-46s %3.0f x %3.1f mm\n", basename(f), W, H))
+  
+  # Also sync to vector_figures for EN edition
+  file.copy(f, file.path(VEC_FIG, paste0("Figure4_trial_atlas_EN.", dev)), overwrite = TRUE)
+  file.copy(f, file.path(VEC_FIG, paste0("Figure4_trial_atlas.", dev)), overwrite = TRUE)
 }
 unlink(tmp, recursive = TRUE)
 
