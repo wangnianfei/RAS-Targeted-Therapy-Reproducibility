@@ -120,4 +120,4 @@ EMA CHMP (2026-10-15) | Regular approval (first regular approval for multi-RAS i
 
 [Insert Supplementary Figure S1 here: Supplementary_Figure1_Resistance_Mechanism_Combination_Decision_Matrix.png]
 
-**Panel a**, Functional decision matrix mapping 9 acquired resistance mechanisms across 3 functional classes against 5 clinical combination logics. Blue squares denote direct biological sensitivity; grey squares indicate partial or context-dependent activity; white cells signify absence of demonstrated clinical activity. **Panel b**, Clinical detection rates of acquired resistance alterations in paired plasma versus tissue cohorts in pretreated NSCLC and metastatic CRC.
+**Panel A**, Functional decision matrix mapping 9 acquired resistance mechanisms across 3 functional classes against 5 clinical combination logics. Blue squares denote direct biological sensitivity; grey squares indicate partial or context-dependent activity; white cells signify absence of demonstrated clinical activity. **Panel B**, Clinical detection rates of acquired resistance alterations in paired plasma versus tissue cohorts in pretreated NSCLC and metastatic CRC.

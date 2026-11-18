@@ -5,26 +5,32 @@
 
 Dear Professor André and Members of the Editorial Board,
 
-On behalf of all authors, I am pleased to submit our comprehensive review manuscript entitled "Targeting RAS in solid tumours: from molecular switch dynamics and resistance networks to randomised clinical trial landscapes" for consideration for publication as a Review Article in ESMO Open.
+On behalf of all authors, I am pleased to submit our comprehensive review entitled "Targeting RAS in solid tumours: from molecular switch dynamics and resistance networks to randomised clinical trial landscapes" for consideration for publication as a Review Article in ESMO Open.
 
-Background and Clinical Context: The oncogenic GTPase RAS, mutated in nearly 25% of all human cancers, was long considered undruggable. The clinical validation of covalent switch-II pocket inhibitors (sotorasib and adagrasib) marked a historic milestone in precision oncology. However, the subsequent emergence of multi-allelic acquired resistance, disappointing monotherapy response rates in colorectal and pancreatic cancers, and recent interpretive impasses in pivotal phase III randomized trials have revealed deep complexities in targeted RAS pharmacology.
+### Clinical Urgency and Rationale (Why Now?)
 
-Distinctive Contributions of this Review: Rather than providing a purely descriptive catalog of molecules, our manuscript delivers an integrated, mechanistic, and methodologically rigorous synthesis spanning four complementary domains: (1) Biophysical switch dynamics and medicinal chemistry across covalent GDP-bound switch-II pocket inhibitors, state-specific multi-RAS(ON) tri-complex molecular glues (daraxonrasib), and non-covalent pan-RAS inhibitors; (2) Pan-cancer genomics and co-mutation stratification, establishing distinct microenvironmental archetypes driven by concurrent STK11 (immune-cold) and KEAP1 (ferroptotic/antioxidant resistance) alterations; (3) Rigorous methodological synthesis of 7 pivotal phase III randomized controlled trials (CodeBreaK 200, KRYSTAL-12, Krascendo 1, CodeBreaK 300, KRYSTAL-10, RASolute 302, and NEMO), deploying a quantitative meta-regression that explains the discordance between progression-free survival (PFS) gains and overall survival (OS) dilution as a mathematical function of post-progression crossover; and (4) Comprehensive multi-omic acquired resistance networks and rational combination algorithms mapped across 1,182 active clinical trials worldwide.
+Targeted RAS oncology has reached a transformative historical inflection point. For four decades, RAS mutations were considered clinically undruggable. While first-generation covalent KRAS G12C inhibitors established initial proof of principle, the field has recently undergone an unprecedented data expansion, with 1,182 clinical trials active worldwide. Most decisively, oncology has just witnessed a landmark therapeutic breakthrough: the pivotal phase III RASolute 302 trial in metastatic pancreatic ductal adenocarcinoma (PDAC), where the first-in-class multi-RAS(ON) tri-complex molecular glue daraxonrasib (RMC-6236) demonstrated an unprecedented overall survival advantage over chemotherapy (median OS 13.2 vs 6.7 months, HR 0.40, P < 0.0001; median PFS 7.4 vs 3.6 months, HR 0.42; confirmed ORR 38.0% vs 12.0%). This marks the first targeted therapy in history to achieve definitive overall survival superiority in unselected RAS-mutant advanced pancreatic cancer, shattering decades of therapeutic nihilism and radically altering the clinical oncology landscape.
 
-Scope and Word Count Rationale: The pure narrative text of our manuscript comprises 6,146 words. While standard reviews in ESMO Open typically target ~5,000 words, our expanded scope reflects the necessity of providing exhaustive clinical pharmacology data across 7 randomized phase III trials and formal statistical counterfactual causal survival adjustment models (RPSFTM, two-stage AFT, MSM-IPTW). This level of depth directly serves ESMO's clinical oncology readership facing daily treatment decisions and trial design challenges.
+Concurrently, readouts across six other phase III randomized trials (including Krascendo 1, CodeBreaK 200/300, and KRYSTAL-10/12) have revealed acute regulatory and clinical controversies, specifically regarding post-progression crossover that dilutes overall survival endpoints and divides major health authorities (FDA ODAC versus EMA). At this pivotal juncture, practicing oncologists urgently need an authoritative, causal-evidence-based synthesis to navigate expanding treatment options and trial interpretations.
 
-Compliance and Artwork Standards: All 5 main-text figures have been rigorously produced at 180 mm double-column width, 500 DPI resolution, and TrueType Arial lettering according to Elsevier artwork specifications. The sole centerpiece table (Table 1) has been formatted to fit cleanly on a single landscape page with complete abbreviation legends. In addition, three comprehensive Supplementary Tables (S1-S3) and Supplementary Figure S1 provide extended reference datasets without cluttering the primary narrative.
+### Distinctive Innovations of this Review
 
-Mandatory Disclosures: This manuscript represents original work and is not under consideration for publication elsewhere. All authors have approved the final manuscript and agree with its submission to ESMO Open. Potential conflicts of interest have been transparently declared in the manuscript. All relevant data and R visualization scripts are deposited in an open-source public repository.
+1. Definitive Phase III Evidence and Causal Crossover Modeling: We synthesize seven pivotal phase III randomized trials, integrating quantitative meta-regression and counterfactual causal inference models (RPSFTM, two-stage AFT) to mathematically resolve the discordance between robust progression-free survival gains and crossover-diluted overall survival.
 
-Thank you very much for your time and consideration of our work. We look forward to hearing from you regarding peer review.
+2. From Structural Switch Biophysics to Resistance Networks: We connect atomic-level switch mechanisms (OFF-state pocket capture versus ON-state chaperone-assisted molecular glues) directly to a global trial atlas of 1,182 studies and an actionable decision matrix for overcoming secondary on-target mutations, RTK feedback reactivation, and STK11/KEAP1-mediated resistance.
+
+### Compliance and Mandatory Declarations
+
+The manuscript has been tailored specifically to ESMO Open specifications, accompanied by 5 high-resolution figures (500 DPI, 180 mm double-column width, TrueType Arial lettering), a standalone centerpiece table (Table 1), and a 4-page Supplementary Appendix.
+
+This manuscript represents original work and is not under consideration elsewhere. All authors have approved the final submission. We have no conflicts of interest to disclose beyond those stated in the manuscript. All code and analytical datasets are deposited in a public open-source repository.
+
+Thank you very much for your time, consideration, and editorial guidance. We look forward to hearing from you regarding peer review.
 
 Sincerely yours,
 
 Shanghu Wang, MD, PhD
-Department of Radiation Therapy
-Anhui Chest Hospital
+Department of Radiation Therapy, Anhui Chest Hospital
 No. 397 Jixi Road, Hefei, Anhui 230026, China
-Email: wangshanghu@mail.ustc.edu.cn
-Telephone: +86-551-63615120
+Email: wangshanghu@mail.ustc.edu.cn | Telephone: +86-551-63615120
 
