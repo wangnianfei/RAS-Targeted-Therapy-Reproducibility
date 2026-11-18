@@ -41,7 +41,7 @@
 ## 3. 数据来源、检索策略与截止日期 (Data Sources & Cut-off Dates)
 - **数据来源**: ClinicalTrials.gov, PubMed, ASCO/ESMO/AACR 官网口头报告，《新英格兰医学杂志》(NEJM)、《柳叶刀》(Lancet)、《临床肿瘤学杂志》(JCO) 正文发表论文。
 - **检索策略**: `("RAS" OR "KRAS" OR "NRAS") AND ("Phase 3" OR "randomized controlled trial") AND ("solid tumors" OR "NSCLC" OR "colorectal" OR "pancreatic" OR "melanoma")`。
-- **数据截止日期**: **2026年10月31日**。
+- **数据与文献检索截止日期**: **2026年11月18日**。
 
 ## 4. 文件结构 (Files in this Folder)
 ```text

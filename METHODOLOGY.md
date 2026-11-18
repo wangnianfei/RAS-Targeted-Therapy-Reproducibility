@@ -11,15 +11,15 @@
 
 | 序号 / 编号 | 图表名称 | 对应正文章节 | 原始数据来源 (Data Source) | 数据检索策略与入选标准 | 数据截止日期 | 核心工具与软件版本 |
 |:---|:---|:---|:---|:---|:---|:---|
-| **图 1 (Figure 1)** | RAS信号网络与可干预节点 | Section 2.1 (P274) | 权威文献系统综述与 FDA/NMPA 靶点库 | 提取受体输入、GEF/GAP调控、5大效应通路及负反馈环路；标注获批与在研靶点 | 2026年10月 | Python 3.10+, Matplotlib 3.8.0, PIL 10.0+, rsvg-convert 2.58+ |
+| **图 1 (Figure 1)** | RAS信号网络与可干预节点 | Section 2.1 (P274) | 权威文献系统综述与 FDA/NMPA 靶点库 | 提取受体输入、GEF/GAP调控、5大效应通路及负反馈环路；标注获批与在研靶点 | 2026年11月18日 | Python 3.10+, Matplotlib 3.8.0, PIL 10.0+, rsvg-convert 2.58+ |
 | **图 2 (Figure 2)** | RAS突变的泛癌种分布 | Section 2.2 (P288) | MSK-IMPACT 泛癌种临床测序队列 (PMID: 28481359) | cBioPortal REST API v2 提取 10,945 例晚期实体瘤数据；严格限定非同义/非沉默点突变；分母为该癌种测序总样本数；单样本多突变计1次；排除样本数 <10 的肿瘤 | 队列冻结版本 (无后续更新) | Python 3.10+, Matplotlib 3.8.0, NumPy 1.26.0 |
 | **图 3 (Figure 3)** | 核苷酸状态与药物结合引起的构象位移 | Section 3.1 (P318) | RCSB Protein Data Bank (PDB): 4OBE, 5VQ2, 4LDJ, 6OIM | 提取高分辨率（≤2.2 Å）单体 Cα 坐标；基于核心 G-domain（残基 1–166，剔除 Switch I/II）进行最小二乘法三维刚体叠合；计算各残基 Cα 欧氏距离位移 | PDB 库沉积版本 | Python 3.10+, NumPy, Matplotlib, PyMOL 2.5.0 (600 dpi 光线追踪渲染) |
-| **表 1 (Table 1)** | RAS抑制剂分类、结合构象与研发阶段 | Section 3.2 (P415) | FDA Orange Book, NMPA CDE, EMA 公示, ClinicalTrials.gov, 药企年报 | 系统梳理四代代表性药物（第1代至第4代RAS抑制剂、降解剂及FTase抑制剂共12种）；提取靶点、构象、分期与监管状态 | 2026年10月31日 | Python 3.10+, Markdown, CSV, python-docx 1.1.2 |
-| **表 2 (Table 2)** | 靶向RAS通路的7项关键III期随机对照临床试验汇总 | Section 4.0 (P460) | PubMed, ClinicalTrials.gov, ASCO, ESMO, AACR, NEJM, Lancet, JCO | 检索式: `("RAS" OR "KRAS" OR "NRAS") AND ("Phase 3" OR "randomized") AND ("solid tumors" OR "NSCLC" OR "colorectal" OR "pancreatic" OR "melanoma")`；严格提取7项关键III期RCTs（CodeBreaK 200, KRYSTAL-12, Krascendo 1, CodeBreaK 300, KRYSTAL-10, RASolute 302, NEMO）的人群、样本量、对照组、交叉方案、随访、PFS、OS、ORR及≥3级AEs | 2026年10月31日 | Python 3.10+, Markdown, CSV, python-docx 1.1.2 |
-| **图 4 (Figure 4)** | RAS相关肿瘤试验全球格局 | Section 5.1 (P519) | ClinicalTrials.gov REST API v2 (`/api/v2/studies`) | 检索获得 3,210 条记录，经两轮人工独立双盲筛查：排除非肿瘤学适应证（如心血管RAAS系统 1,907 项、RASopathy 19 项、非肿瘤疾病 38 项）、非I–III期（54 项）、IV期（10 项），最终纳入 1,182 项临床试验；按靶向层级、分期、申办方及 72 国地理分布结构化归类 | 2026年10月20日快照 (API 执行: 2026-11-05) | R 4.3.0+, ggplot2 3.5.0, sf 1.0-16, rnaturalearth 1.0.1, circlize 0.4.16, grid, dplyr |
-| **图 5 (Figure 5)** | 耐药机制与联合策略的对应矩阵 | Section 5.2 (P543) | 顶刊耐药临床队列文献 (Awad 2021, Yaeger 2023, Bekaii-Saab 2024) | 双盲专家评阅提取法：提取 9 类耐药机制与 5 类干预逻辑的对应关系（直接有效、部分有效、无明显活性）；提取 NSCLC 单药与 CRC 双靶治疗后耐药基因变异检出率（45% vs 74%） | 2026年10月 | R 4.3.0+, ggplot2 3.5.0, grid, dplyr |
-| **附图 1 (Supp Fig 1)** | KRAS结构特征与同工型差异 | Supplementary | RCSB PDB (4OBE) 与 UniProt (P01116, P01111, P01112) | 全局两两比对算法（Match +1, Mismatch 0, Gap -1）；比对 G-domain (1–166) 与高变区 (HVR, 167–189) 残基差异；高亮碱性残基簇与脂质修饰位点 | 2026年10月 | Python 3.10+, PyMOL 2.5.0 |
-| **附图 2 (Supp Fig 2)** | RAS靶向药物研发阶段泳道图 | Supplementary | 60 种临床化合物库与 1,182 项试验关联库 | 归纳 6 大化学型在各临床阶段的分布泳道及突变等位基因覆盖度 | 2026年10月 | R 4.3.0+, ggplot2 3.5.0 |
+| **表 1 (Table 1)** | RAS抑制剂分类、结合构象与研发阶段 | Section 3.2 (P415) | FDA Orange Book, NMPA CDE, EMA 公示, ClinicalTrials.gov, 药企年报 | 系统梳理四代代表性药物（第1代至第4代RAS抑制剂、降解剂及FTase抑制剂共12种）；提取靶点、构象、分期与监管状态 | 2026年11月18日 | Python 3.10+, Markdown, CSV, python-docx 1.1.2 |
+| **表 2 (Table 2)** | 靶向RAS通路的7项关键III期随机对照临床试验汇总 | Section 4.0 (P460) | PubMed, ClinicalTrials.gov, ASCO, ESMO, AACR, NEJM, Lancet, JCO | 检索式: `("RAS" OR "KRAS" OR "NRAS") AND ("Phase 3" OR "randomized") AND ("solid tumors" OR "NSCLC" OR "colorectal" OR "pancreatic" OR "melanoma")`；严格提取7项关键III期RCTs（CodeBreaK 200, KRYSTAL-12, Krascendo 1, CodeBreaK 300, KRYSTAL-10, RASolute 302, NEMO）的人群、样本量、对照组、交叉方案、随访、PFS、OS、ORR及≥3级AEs | 2026年11月18日 | Python 3.10+, Markdown, CSV, python-docx 1.1.2 |
+| **图 4 (Figure 4)** | RAS相关肿瘤试验全球格局 | Section 5.1 (P519) | ClinicalTrials.gov REST API v2 (`/api/v2/studies`) | 检索获得 3,210 条记录，经两轮人工独立双盲筛查：排除非肿瘤学适应证（如心血管RAAS系统 1,907 项、RASopathy 19 项、非肿瘤疾病 38 项）、非I–III期（54 项）、IV期（10 项），最终纳入 1,182 项临床试验；按靶向层级、分期、申办方及 72 国地理分布结构化归类 | 2026年11月18日快照 (检索执行: 2026-11-18) | R 4.3.0+, ggplot2 3.5.0, sf 1.0-16, rnaturalearth 1.0.1, circlize 0.4.16, grid, dplyr |
+| **图 5 (Figure 5)** | 耐药机制与联合策略的对应矩阵 | Section 5.2 (P543) | 顶刊耐药临床队列文献 (Awad 2021, Yaeger 2023, Bekaii-Saab 2024) | 双盲专家评阅提取法：提取 9 类耐药机制与 5 类干预逻辑的对应关系（直接有效、部分有效、无明显活性）；提取 NSCLC 单药与 CRC 双靶治疗后耐药基因变异检出率（45% vs 74%） | 2026年11月18日 | R 4.3.0+, ggplot2 3.5.0, grid, dplyr |
+| **附图 1 (Supp Fig 1)** | KRAS结构特征与同工型差异 | Supplementary | RCSB PDB (4OBE) 与 UniProt (P01116, P01111, P01112) | 全局两两比对算法（Match +1, Mismatch 0, Gap -1）；比对 G-domain (1–166) 与高变区 (HVR, 167–189) 残基差异；高亮碱性残基簇与脂质修饰位点 | 2026年11月18日 | Python 3.10+, PyMOL 2.5.0 |
+| **附图 2 (Supp Fig 2)** | RAS靶向药物研发阶段泳道图 | Supplementary | 60 种临床化合物库与 1,182 项试验关联库 | 归纳 6 大化学型在各临床阶段的分布泳道及突变等位基因覆盖度 | 2026年11月18日 | R 4.3.0+, ggplot2 3.5.0 |
 | **附图 3 (Supp Fig 3)** | 三种RAS基因的氨基酸位点突变图谱 | Supplementary | MSK-IMPACT 2017 队列 (10,945 例) | 统计 KRAS (1,670 突变)、NRAS (252 突变)、HRAS (101 突变) 密码子非同义突变频数与百分比 | 队列冻结版本 | Python 3.10+, Matplotlib 3.8.0 |
 
 ---
@@ -37,7 +37,7 @@
 
 ### 2. ClinicalTrials.gov 全球临床试验数据库检索策略 (Figure 4)
 - **数据接口**: ClinicalTrials.gov REST API v2 (`/api/v2/studies`)。
-- **快照时间**: **2026年10月20日** (检索执行日期: 2026-11-05)。
+- **快照与检索截止时间**: **2026年11月18日** (检索与数据冻结执行日期: 2026-11-18)。
 - **初始检索式**:
   ```text
   ("RAS" OR "KRAS" OR "NRAS" OR "HRAS" OR "G12C" OR "G12D" OR "G12V" OR "G12R" OR "G13D" OR "Q61H" OR "Q61L" OR "Q61R" OR "Q61K")

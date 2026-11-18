@@ -34,7 +34,7 @@
   4. ClinicalTrials.gov 注册数据库;
   5. 国际顶级肿瘤学会议（ASCO, ESMO, AACR）官方口头报告与核心期刊论文。
 - **检索式与入选准则**: 检索式为 `("RAS" OR "KRAS" OR "NRAS" OR "HRAS") AND ("inhibitor" OR "degrader" OR "tri-complex")`。严格筛选具有明确化学结构式、公布详尽 I–III 期临床药代/疗效读数且具代表性的化合物。
-- **数据截止日期**: **2026年10月31日**。
+- **数据与监管案卷检索截止日期**: **2026年11月18日**。
 
 ## 4. 文件结构 (Files in this Folder)
 ```text

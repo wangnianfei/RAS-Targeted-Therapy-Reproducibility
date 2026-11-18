@@ -69,6 +69,8 @@ Preclinical | • Bifunctional PROTACs or molecular glues recruiting E3 ubiquiti
 • Induces 26S proteasomal degradation, eliminating both catalytic GTPase flux and non-catalytic scaffolding hubs
 • Sustained pathway shutdown across high baseline GTPase flux and secondary switch mutations |
 
+*Abbreviations: 2L, second-line; CNS, central nervous system; CRBN, cereblon; CYPA, cyclophilin A; EMA, European Medicines Agency; FDA, US Food and Drug Administration; HR, hazard ratio; NMPA, National Medical Products Administration; ORR, objective response rate; OS, overall survival; PDAC, pancreatic ductal adenocarcinoma; PFS, progression-free survival; PROTAC, proteolysis-targeting chimera; RTK, receptor tyrosine kinase; S-IIP, switch-II pocket; VHL, von Hippel-Lindau. Database, pipeline registry, and regulatory dossier search cut-off date: 18 November 2026.*
+
 ---
 
 ## Supplementary Table S2 | Global regulatory approvals, indications, and post-marketing confirmatory trial trajectories for RAS-directed therapies
@@ -100,6 +102,8 @@ EMA CHMP (2026-10-15) | Regular approval (first regular approval for multi-RAS i
 *(Withdrawn Indication)* | Advanced *KRAS* G12C metastatic colorectal cancer, 2L | FDA (Accelerated approval 2024-06-21;
 **Withdrawn 2026-09-01**) | Accelerated approval based on single-arm ORR (KRYSTAL-1, 34.0%) | Confirmatory phase III KRYSTAL-10 (N=430): median PFS 6.9 vs 5.6 mo (HR 0.69, P=0.0028 by investigator review; HR 0.89 by BICR); median OS 13.8 vs 14.2 mo (HR 0.94, P=0.62) | **Accelerated approval formally withdrawn**; confirmatory study failed to demonstrate superiority over standard chemotherapy doublet plus bevacizumab |
 
+*Note: Regulatory dossiers and clinical trial registry status updated through 18 November 2026. Regulatory categories: FDA regular approval reflects verified clinical benefit; accelerated approval (FDA) and conditional approval (EMA, NMPA, PMDA) require post-marketing confirmatory evidence. Of clinical and regulatory significance, adagrasib plus cetuximab was granted FDA accelerated approval on June 21, 2024 for pretreated KRAS G12C metastatic colorectal cancer, but this approval was formally withdrawn on September 1, 2026 after the randomised phase III KRYSTAL-10 trial failed to confirm superiority over standard chemotherapy plus bevacizumab. Abbreviations: CHMP, Committee for Medicinal Products for Human Use; CRL, Complete Response Letter; EMA, European Medicines Agency; FDA, US Food and Drug Administration; HR, hazard ratio; IRC, independent review committee; IRRC, independent review and reporting committee; mCRC, metastatic colorectal cancer; NMPA, National Medical Products Administration (China); NSCLC, non-small cell lung cancer; ODAC, Oncologic Drugs Advisory Committee; ORR, objective response rate; OS, overall survival; PDAC, pancreatic ductal adenocarcinoma; PFS, progression-free survival; PMDA, Pharmaceuticals and Medical Devices Agency (Japan).*
+
 ---
 
 ## Supplementary Table S3 | Mechanistic matrix of acquired resistance patterns, functional pathways, and rational combination counterstrategies in direct RAS-targeted therapy
@@ -113,6 +117,8 @@ EMA CHMP (2026-10-15) | Regular approval (first regular approval for multi-RAS i
 | Parallel survival pathway bypass activation | PIK3CA oncogenic mutations, PTEN genomic loss | Constitutive PI3K-AKT-mTOR metabolic and anti-apoptotic survival signalling | 5%–10% in refractory cohorts | Direct RAS inhibitor plus alpha-selective PI3K inhibitor or pan-AKT inhibitor | Sotorasib + alpelisib; adagrasib + capivasertib |
 | Epigenetic & metabolic intrinsic resistance | STK11 loss (STING silencing), KEAP1 loss (NRF2/SLC7A11 antioxidant hyperactivation) | Immune-cold microenvironment devoid of cytotoxic T cells; resistance to oxidative stress and ferroptosis | STK11: 20%–30%; KEAP1: 15%–20% in KRAS-mutant NSCLC | Next-generation 2nd-gen inhibitors plus chemotherapy, anti-PD-1, or glutaminase/xCT-targeting agents | Divarasib/olomorasib + chemo-immunotherapy; telaglenastat combinations |
 | Non-genetic lineage plasticity & histologic shift | Neuroendocrine differentiation (small-cell transformation), Epithelial-to-mesenchymal transition (EMT) | Complete loss of luminal epithelial identity and loss of biological addiction to KRAS oncogene | 3%–5% under prolonged covalent G12C selective pressure (frequently with TP53/RB1 co-loss) | Switch to platinum-etoposide chemotherapy; epigenetic reprogramming with EZH2 or LSD1 inhibitors | Carboplatin + etoposide + atezolizumab; tazemetostat |
+
+*Literature and resistance cohort extraction cut-off date: 18 November 2026. Abbreviations: ctDNA, circulating tumour DNA; CRC, colorectal cancer; EMT, epithelial-to-mesenchymal transition; MAPK, mitogen-activated protein kinase; NSCLC, non-small cell lung cancer; PROTAC, proteolysis-targeting chimera; RTK, receptor tyrosine kinase.*
 
 ---
 

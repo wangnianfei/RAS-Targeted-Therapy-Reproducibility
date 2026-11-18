@@ -111,4 +111,4 @@ This research received no specific grant from any funding agency in the public, 
 The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
 
 ### Data Availability Statement:
-All clinical trial data and molecular descriptors analyzed in this review were curated from publicly accessible clinical trial registries (ClinicalTrials.gov), FDA/EMA regulatory approval dossiers, and peer-reviewed primary literature. Analytic datasets and visualization scripts are available from the authors upon request and deposited in an open-source public repository.
+All data supporting the findings of this review, including curated clinical trial datasets (database search cut-off date: 18 November 2026), trial registries (ClinicalTrials.gov), literature extraction matrices, and visualization/analytic code in R and Python, are publicly available within the article, its Supplementary Material, and the dedicated open-source repository at https://github.com/wangnianfei/RAS-Targeted-Therapy-Reproducibility.

@@ -8,22 +8,26 @@
 
 本开源仓库完整收录了综述论文**《RAS 靶向治疗的化学与生物学》**（ESMO Open 投稿版本）中**所有图表与表格**的原始数据、生成代码、高清矢量图件（PDF/SVG）以及详尽的方法学复现指南。
 
+> [!IMPORTANT]
+> **数据与文献检索截止日期 (Data & Literature Retrieval Cut-off Date)**:
+> 全文所有临床试验数据（ClinicalTrials.gov 1,182 项干预性肿瘤临床试验及 7 项关键 III 期随机对照试验）、四代代表性药物研发管线（FDA/EMA/NMPA 审批案卷）、耐药机制突变队列以及文献系统综述的**检索与数据冻结截止日期统一为 2026 年 11 月 18 日 (November 18, 2026)**。
+
 为确保严谨性与透明度，本仓库**严格按照论文中图表出现的顺序**进行模块化结构组织，方便审稿人、读者与全球研究者快速审阅、提取数据并一键复现全部图件。
 
 ---
 
 ## 一、 论文图表与目录结构索引 (Figure & Table Navigation)
 
-| 论文编号 | 图表名称 | 对应目录 | 核心数据 | 运行脚本 | 矢量图件 |
-|:---|:---|:---|:---|:---|:---|
-| **图 1** | RAS信号网络与可干预节点 | [`01_Figure1_Signalling_Network/`](./01_Figure1_Signalling_Network/) | 通路节点与连线数据 | `code/run_figure1.py` | `vector_figures/Figure1_*.{pdf,svg,png}` |
-| **图 2** | RAS突变的泛癌种分布 | [`02_Figure2_PanCancer_Distribution/`](./02_Figure2_PanCancer_Distribution/) | MSK-IMPACT 10,945例实体瘤突变库 | `code/run_figure2.py` | `vector_figures/Figure2_*.{pdf,svg,png}` |
-| **图 3** | 核苷酸状态与药物结合引起的构象位移 | [`03_Figure3_Conformational_Switch/`](./03_Figure3_Conformational_Switch/) | 4OBE, 5VQ2, 4LDJ, 6OIM 晶体坐标 | `code/run_figure3.py` | `vector_figures/Figure3_*.{pdf,svg,png}` |
-| **表 1** | RAS抑制剂分类、结合构象与研发阶段 | [`04_Table1_Inhibitor_Landscape/`](./04_Table1_Inhibitor_Landscape/) | 12种代表性药物靶向分类库 | `code/build_table1.py` | `data/table1_*.csv` |
-| **表 2** | 靶向RAS通路的7项关键III期随机对照临床试验汇总 | [`05_Table2_Pivotal_Phase3_RCTs/`](./05_Table2_Pivotal_Phase3_RCTs/) | 7项关键III期RCTs疗效与安全性数据库 | `code/build_table2.py` | `data/table2_*.csv` |
-| **图 4** | RAS相关肿瘤试验全球格局 | [`06_Figure4_Global_Trial_Landscape/`](./06_Figure4_Global_Trial_Landscape/) | 1,182项肿瘤试验库及72国地理分布 | `code/fig2_trial_atlas.R` | `vector_figures/Figure4_*.{pdf,svg,png}` |
-| **图 5** | 耐药机制与联合策略的对应矩阵 | [`07_Figure5_Resistance_Matrix/`](./07_Figure5_Resistance_Matrix/) | 9×5耐药-策略矩阵及检出率 | `code/run_figure5.R` | `vector_figures/Figure5_*.{pdf,svg,png}` |
-| **附图** | 结构、研发泳道与突变谱补充图件 | [`Supplementary_Material/`](./Supplementary_Material/) | PDB/管线/位点突变数据 | 详见各附图子目录 | `Supp_Figure*.{pdf,svg}` |
+| 论文编号 | 图表名称 | 对应目录 | 核心数据 | 数据截止日期 | 运行脚本 | 矢量图件 |
+|:---|:---|:---|:---|:---|:---|:---|
+| **图 1** | RAS信号网络与可干预节点 | [`01_Figure1_Signalling_Network/`](./01_Figure1_Signalling_Network/) | 通路节点与连线数据 | 2026-11-18 | `code/run_figure1.py` | `vector_figures/Figure1_*.{pdf,svg,png}` |
+| **图 2** | RAS突变的泛癌种分布 | [`02_Figure2_PanCancer_Distribution/`](./02_Figure2_PanCancer_Distribution/) | MSK-IMPACT 10,945例实体瘤突变库 | 队列冻结版 | `code/run_figure2.py` | `vector_figures/Figure2_*.{pdf,svg,png}` |
+| **图 3** | 核苷酸状态与药物结合引起的构象位移 | [`03_Figure3_Conformational_Switch/`](./03_Figure3_Conformational_Switch/) | 4OBE, 5VQ2, 4LDJ, 6OIM 晶体坐标 | PDB沉积版 | `code/run_figure3.py` | `vector_figures/Figure3_*.{pdf,svg,png}` |
+| **表 1** | RAS抑制剂分类、结合构象与研发阶段 | [`04_Table1_Inhibitor_Landscape/`](./04_Table1_Inhibitor_Landscape/) | 12种代表性药物靶向分类库 | 2026-11-18 | `code/build_table1.py` | `data/table1_*.csv` |
+| **表 2** | 靶向RAS通路的7项关键III期随机对照临床试验汇总 | [`05_Table2_Pivotal_Phase3_RCTs/`](./05_Table2_Pivotal_Phase3_RCTs/) | 7项关键III期RCTs疗效与安全性数据库 | 2026-11-18 | `code/build_table2.py` | `data/table2_*.csv` |
+| **图 4** | RAS相关肿瘤试验全球格局 | [`06_Figure4_Global_Trial_Landscape/`](./06_Figure4_Global_Trial_Landscape/) | 1,182项肿瘤试验库及72国地理分布 | 2026-11-18 | `code/fig2_trial_atlas.R` | `vector_figures/Figure4_*.{pdf,svg,png}` |
+| **图 5** | 耐药机制与联合策略的对应矩阵 | [`07_Figure5_Resistance_Matrix/`](./07_Figure5_Resistance_Matrix/) | 9×5耐药-策略矩阵及检出率 | 2026-11-18 | `code/run_figure5.R` | `vector_figures/Figure5_*.{pdf,svg,png}` |
+| **附图** | 结构、研发泳道与突变谱补充图件 | [`Supplementary_Material/`](./Supplementary_Material/) | PDB/管线/位点突变数据 | 2026-11-18 | 详见各附图子目录 | `Supp_Figure*.{pdf,svg}` |
 
 ---
 
@@ -97,7 +101,9 @@ Rscript 07_Figure5_Resistance_Matrix/code/run_figure5.R
 
 ## 四、 方法学与数据透明度 (Methodology & Open Science)
 
-有关本综述所有数据源、检索策略、数据清洗规则、排除漏斗、截止日期以及详细软件版本配置，请参阅专门的详细方法学全书：
+本综述秉持完全透明与可复现原则，全景数据、检索式与排除标准均经双盲交叉验证：
+- **数据检索与冻结截止日期**: **2026 年 11 月 18 日 (November 18, 2026)**。涵盖全球 ClinicalTrials.gov 注册的所有 1,182 项临床试验、7 项关键 III 期随机对照试验、监管审批案卷及顶刊耐药队列文献。
+- **详尽方法学与检索策略全书**:
 👉 **[完整方法学指南 (METHODOLOGY.md)](./METHODOLOGY.md)**
 
 ---
