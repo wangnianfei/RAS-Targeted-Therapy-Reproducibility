@@ -7,25 +7,29 @@ Dear Professor André and Members of the Editorial Board,
 
 On behalf of all authors, I am pleased to submit our comprehensive review entitled "Targeting RAS in solid tumours: from molecular switch dynamics and resistance networks to randomised clinical trial landscapes" for consideration for publication as a Review Article in ESMO Open.
 
-### Clinical Urgency and Rationale (Why Now?)
+### Clinical Timing and Urgency: Why Now?
 
-Targeted RAS oncology has reached a transformative historical inflection point. For four decades, RAS mutations were considered clinically undruggable. While first-generation covalent KRAS G12C inhibitors established initial proof of principle, the field has recently undergone an unprecedented data expansion, with 1,182 clinical trials active worldwide. Most decisively, oncology has just witnessed a landmark therapeutic breakthrough: the pivotal phase III RASolute 302 trial in metastatic pancreatic ductal adenocarcinoma (PDAC), where the first-in-class multi-RAS(ON) tri-complex molecular glue daraxonrasib (RMC-6236) demonstrated an unprecedented overall survival advantage over chemotherapy (median OS 13.2 vs 6.7 months, HR 0.40, P < 0.0001; median PFS 7.4 vs 3.6 months, HR 0.42; confirmed ORR 38.0% vs 12.0%). This marks the first targeted therapy in history to achieve definitive overall survival superiority in unselected RAS-mutant advanced pancreatic cancer, shattering decades of therapeutic nihilism and radically altering the clinical oncology landscape.
+Targeted RAS oncology has reached a defining historical inflection point. Long considered the quintessential undruggable target, RAS has not only yielded to direct pharmacological inhibition, but has recently achieved a landmark therapeutic breakthrough in pancreatic cancer, historically the most lethal, intractable, and treatment-resistant of all human solid tumours. Around the globe, diverse classes of direct RAS inhibitors are expanding rapidly, advancing beyond refractory later-line settings into frontline combination regimens and perioperative adjuvant trials. At this transformative juncture, practicing oncologists and clinical trialists urgently require an authoritative, evidence-grounded framework to navigate expanding treatment paradigms.
 
-Concurrently, readouts across six other phase III randomized trials (including Krascendo 1, CodeBreaK 200/300, and KRYSTAL-10/12) have revealed acute regulatory and clinical controversies, specifically regarding post-progression crossover that dilutes overall survival endpoints and divides major health authorities (FDA ODAC versus EMA). At this pivotal juncture, practicing oncologists urgently need an authoritative, causal-evidence-based synthesis to navigate expanding treatment options and trial interpretations.
+### Distinctive Scope: Advancing Beyond Prior Literature
 
-### Distinctive Innovations of this Review
+Earlier reviews published in this journal and related oncology literature were inevitably constrained by the nascent state of the field. Typically confined to single tumour types (such as pretreated non-small cell lung cancer or metastatic colorectal cancer) and reliant on early single-arm phase I/II cohorts, prior syntheses could only offer preliminary response observations and descriptive pathway biology. In contrast, our review captures the broader pan-cancer horizon where direct RAS targeting has breached historical anatomical boundaries and diversified into multi-RAS, pan-KRAS, and active-state molecular glue paradigms.
 
-1. Definitive Phase III Evidence and Causal Crossover Modeling: We synthesize seven pivotal phase III randomized trials, integrating quantitative meta-regression and counterfactual causal inference models (RPSFTM, two-stage AFT) to mathematically resolve the discordance between robust progression-free survival gains and crossover-diluted overall survival.
+### Core Innovations and Practical Guidance
 
-2. From Structural Switch Biophysics to Resistance Networks: We connect atomic-level switch mechanisms (OFF-state pocket capture versus ON-state chaperone-assisted molecular glues) directly to a global trial atlas of 1,182 studies and an actionable decision matrix for overcoming secondary on-target mutations, RTK feedback reactivation, and STK11/KEAP1-mediated resistance.
+Anchored on seven pivotal phase III randomised controlled trials, our review moves beyond cataloguing whether trial endpoints were technically positive or negative, extracting essential lessons for clinical oncology and trial design:
+
+1. Methodological Lessons and Trial Caveats: We dissect the critical trade-offs between progression-free survival gains and overall survival endpoints, evaluating how post-progression crossover and trial design architectures impact regulatory decisions and clinical translation.
+
+2. Actionable Solutions for Acquired Resistance: We map multi-convergent resistance pathways across tumour lineages to define rational, biology-directed combination strategies that counteract both on-target mutations and adaptive feedback signaling.
+
+3. Strategic Foresight for Frontline and Adjuvant Settings: We translate biophysical switch dynamics into realistic expectations for ongoing frontline and curative-intent adjuvant studies, providing tangible guidance on what future trials must anticipate in real-world clinical application.
 
 ### Compliance and Mandatory Declarations
 
-The manuscript has been tailored specifically to ESMO Open specifications, accompanied by 5 high-resolution figures (500 DPI, 180 mm double-column width, TrueType Arial lettering), a standalone centerpiece table (Table 1), and a 4-page Supplementary Appendix.
+This manuscript conforms strictly to ESMO Open guidelines. The work is original, has not been published previously, and is not under consideration elsewhere. All authors have reviewed and approved the submission. No competing financial interests exist beyond those disclosed in the text. All code and analytical datasets are deposited in a public open-source repository.
 
-This manuscript represents original work and is not under consideration elsewhere. All authors have approved the final submission. We have no conflicts of interest to disclose beyond those stated in the manuscript. All code and analytical datasets are deposited in a public open-source repository.
-
-Thank you very much for your time, consideration, and editorial guidance. We look forward to hearing from you regarding peer review.
+Thank you very much for your time, consideration, and editorial guidance. We look forward to your assessment.
 
 Sincerely yours,
 
