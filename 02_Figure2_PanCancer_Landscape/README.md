@@ -16,6 +16,22 @@
 - **Panel B (Allele Proportions):** Distinct codon-12/13/61 allele shares across PDAC, CRC, and LUAD, illustrating the tobacco carcinogen transversion signature (G12C 41% in LUAD) versus spontaneous CpG deamination transitions (G12D 45% in PDAC, 30% in CRC).
 - **Panel C (Co-Mutational Genomic Subgroups in NSCLC):** Genomic stratification into KP (*TP53* co-mutant, 40%), KL (*STK11* co-mutant, 25%), *KEAP1* (15%), and KC (*CDKN2A* co-mutant, 10%), detailing their respective tumour microenvironmental phenotypes (inflamed vs cold) and immunotherapy/targeted response profiles.
 
+### Data Sources & Methodology:
+- **Data Source:** MSK-IMPACT Pan-Cancer Clinical Sequencing Cohort (10,945 patients, PMID: 28481359) queried via cBioPortal REST API v2 (`/api/v2`), supplemented by TCGA Pan-Cancer Atlas.
+  - Functional non-synonymous mutation calls filtered by canonical isoform transcript.
+  - Denominators strictly defined as total patients sequenced in each specific tumor indication ($N_{total}$: PDAC 479, CRC 1,061, LUAD 1,255, Endometrial 320, Melanoma 326, Thyroid 125, Bladder 411) to avoid allele frequency bias.
+  - Co-mutation odds ratios and exclusivity calculated via two-sided Fisher's exact test with Benjamini-Hochberg FDR correction.
+- **Data Cutoff Date:** 18 November 2026.
+- **Software & Packages Used:**
+  - **R (>= 4.3.0 / 4.4.0):**
+    - `ggplot2` (>= 3.5.0): Primary plotting system for all 3 panels
+    - `patchwork` (>= 1.2.0): Multi-panel alignment and tag positioning
+    - `dplyr` (>= 1.1.4): Mutation aggregation and frequency normalization
+    - `tidyr` (>= 1.3.1): Reshaping mutation matrices
+    - `scales` (>= 1.3.0): Percentage axis scaling and custom color gradients
+    - `ggtext` (>= 0.1.2): Markdown formatting for gene labels (*KRAS*, *TP53*, *STK11*, *KEAP1*)
+    - `Cairo` (>= 1.6-2): High-resolution vector PDF, EPS, and 500 DPI TIFF generation
+
 ### Data Files (`data/`):
 - `pancancer_isoform_frequencies.csv` (Curated isoform prevalence)
 - `kras_allele_frequencies.csv` (Allele breakdown across PDAC, CRC, LUAD)

@@ -22,6 +22,16 @@
 - `RAS_Targeted_Therapy_Review_Supplementary_Appendix.pdf`
 - `RAS_Targeted_Therapy_Review_Supplementary_Appendix.md`
 
+### Data Sources & Methodology:
+- **Data Source:** Paired plasma (ctDNA) vs tissue clinical cohorts (Awad 2021, Yaeger 2023, CodeBreaK 100/200, KRYSTAL-1) for Supplementary Figure S1; official regulatory review dossiers from FDA (Orange Book, CDER), EMA (EPAR), NMPA, and PMDA for Supplementary Tables S1–S3.
+- **Data Cutoff Date:** 18 November 2026.
+- **Software & Packages Used:**
+  - **Python (>= 3.10):**
+    - `matplotlib` (>= 3.8.0): Figure S1 9x5 matrix visualization and paired detection rate bar charts (`code/run_figureS1_resistance_matrix.py`)
+    - `numpy` (>= 1.26.0), `pillow` (>= 10.0.0): 500 DPI TIFF and Cairo PDF export
+    - `python-docx` (>= 1.1.2): 4-page Supplementary Appendix document generation
+    - `openpyxl` (>= 3.1.2): Programmatic creation of Supplementary Tables S1–S3 Excel workbooks
+
 ### How to Reproduce:
 ```bash
 python3 code/run_figureS1_resistance_matrix.py

@@ -19,6 +19,19 @@
 6. **RASolute 302 (NEJM 2026):** Daraxonrasib (RMC-6236, multi-RAS tri-complex inhibitor) vs chemotherapy in 2L+ metastatic PDAC (N=500). PFS HR 0.42 (p<0.0001); OS HR 0.40 (13.2 vs 6.7 mo, p<0.0001). Granted regular approval by FDA and positive CHMP opinion by EMA.
 7. **NEMO (Lancet Oncol 2017):** Binimetinib (MEKi) vs dacarbazine in *NRAS*-mutant melanoma (N=402). PFS HR 0.62 (p<0.001); OS HR 1.00 (p=0.999). Historical pathway benchmark demonstrating limitations of single-agent MEK inhibition.
 
+### Data Sources & Extraction Methodology:
+- **Data Source:** Primary peer-reviewed RCT publications, scientific congress presentations, and regulatory dossiers:
+  1. **CodeBreaK 200 (NCT04303780):** de Langen AJ et al. *Lancet* 2023;401:733-746; Dy GK et al. *J Clin Oncol* 2023;41:3311-3317; FDA ODAC Briefing Document (NDA 214665/S-004, Oct 2023).
+  2. **KRYSTAL-12 (NCT04685135):** Mok TSK et al. *Lancet* 2024;404:1453-1465; Negrao MV et al. *Clin Cancer Res* 2025;31:1069-1081.
+  3. **Krascendo 1 (NCT05358249):** ESMO Congress 2026 Presentation / Roche-Genentech Phase III Report.
+  4. **CodeBreaK 300 (NCT05198934):** Fakih MG et al. *N Engl J Med* 2023;389:2125-2139; Fakih MG et al. *J Clin Oncol* 2025.
+  5. **KRYSTAL-10 (NCT04793958):** Bekaii-Saab TS et al. *ESMO GI* 2025; FDA CDER Accelerated Approval Withdrawal Notice (Dec 2024 / Jan 2025).
+  6. **RASolute 302 / Co-Star (NCT05379985):** Revolution Medicines ESMO 2025 & ASCO GI 2025 Late-Breaking Reports.
+  7. **NEMO (NCT01909453):** Dummer R et al. *Lancet Oncol* 2017;18:435-445; long-term update *J Clin Oncol* 2022.
+- **Data Cutoff Date:** 18 November 2026.
+- **Software & Packages Used:**
+  - **Python (>= 3.10):** `python-docx` (>= 1.1.2) for automated Word landscape table compilation; `openpyxl` (>= 3.1.2) for Excel compilation; built-in `csv` module for reproducible extraction.
+
 ### Data Files (`data/`):
 - `table1_pivotal_phase3_trials.csv` (Full dataset)
 - `table1_pivotal_phase3_trials_en.csv` (English formatted)
@@ -36,6 +49,19 @@ python3 code/build_table1.py
 **论文对应编号：** 表 1（正文第四节，整版横向展示）  
 **表格标题：** 靶向RAS通路及下游分子的7项关键III期随机对照试验方法学与临床终点汇总  
 **数据检索截止日期：** 2026 年 11 月 18 日。
+
+### 数据来源与提取方法学规范：
+- **数据来源：** 国际顶尖同行评议期刊论文、学术会议官方摘要及监管机构审评档案：
+  1. **CodeBreaK 200 (NCT04303780):** Lancet 2023, JCO 2023, 美国 FDA 肿瘤药物咨询委员会 (ODAC) 审评报告；
+  2. **KRYSTAL-12 (NCT04685135):** Lancet 2024, CCR 2025；
+  3. **Krascendo 1 (NCT05358249):** ESMO 2026 大会口头报告；
+  4. **CodeBreaK 300 (NCT05198934):** NEJM 2023, JCO 2025；
+  5. **KRYSTAL-10 (NCT04793958):** ESMO GI 2025, 美国 FDA 撤销加速批准通告文件；
+  6. **RASolute 302 / Co-Star (NCT05379985):** ESMO 2025 / ASCO GI 2025；
+  7. **NEMO (NCT01909453):** Lancet Oncol 2017, JCO 2022。
+- **数据截止时间：** 2026 年 11 月 18 日。
+- **表格制作软件及依赖包：**
+  - **Python (>= 3.10)：** `python-docx` (>= 1.1.2, 自动化排版横向单页主表 Table 1), `openpyxl` (>= 3.1.2), `csv` 标准库。
 
 ### 核心临床启示：
 - **肺癌二线单药终点分离：** CodeBreaK 200 与 KRYSTAL-12 均获得显著 PFS 获益，但总生存（OS）均无统计学差异（HR 0.98–1.01），这主要受到对照组 30%–35% 后续交叉使用靶向药的混杂稀释。

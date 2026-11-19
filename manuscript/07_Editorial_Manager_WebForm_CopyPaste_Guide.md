@@ -46,7 +46,7 @@ Conclusions: Advancing direct inhibitors into frontline therapy, stratifying pat
 ## 3. Keywords (5 indexing terms)
 
 ```
-RAS-targeted therapy; KRAS inhibitors; Randomised controlled trials; Drug resistance; Precision oncology
+KRAS inhibitors; Non-small cell lung cancer; Pancreatic adenocarcinoma; Colorectal cancer; Drug resistance
 ```
 
 ---
@@ -65,12 +65,12 @@ RAS-targeted therapy; KRAS inhibitors; Randomised controlled trials; Drug resist
 
 1. **Nianfei Wang, MD, PhD** (First Author)
    - Email: wangnianfei@ustc.edu
-   - Affiliation: Department of Oncology, The Second Hospital of Anhui Medical University, Hefei, Anhui 230026, China
+   - Affiliation: Department of Oncology, The Second Affiliated Hospital of Anhui Medical University, Hefei, Anhui 230026, China
    - CRediT: Conceptualization, Formal analysis, Visualization, Writing – original draft.
 
 2. **Chiyu Sheng, MD** (Co-Author)
    - Email: 2445012211@stu.ahmu.edu.cn
-   - Affiliation: Department of Oncology, The Second Hospital of Anhui Medical University, Hefei, Anhui 230026, China
+   - Affiliation: Department of Oncology, The Second Affiliated Hospital of Anhui Medical University, Hefei, Anhui 230026, China
    - CRediT: Data curation, Investigation, Validation.
 
 3. **Jian Qi, PhD** (Co-Author)
@@ -105,7 +105,7 @@ RAS-targeted therapy; KRAS inhibitors; Randomised controlled trials; Drug resist
 ## 7. Mandatory Disclosures (Ready to Paste)
 
 ### Funding:
-This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors.
+This work was supported by the Scientific Research Project of Anhui Provincial Health Commission (Grant No. AHWJ:2025BAd20016).
 
 ### Declaration of Competing Interests:
 The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.

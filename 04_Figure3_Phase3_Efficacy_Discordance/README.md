@@ -16,6 +16,22 @@
 - **Panel B (Overall Survival Forest Plot):** Striking divergence in OS outcomes. Second-line NSCLC monotherapies show hazard ratios clustered near unity (1.01 and 0.98), whereas RASolute 302 in PDAC exhibits an unconfounded OS benefit (HR 0.40, 95% CI 0.31–0.52, p < 0.0001).
 - **Panel C (Crossover Confounding Meta-Regression):** Linear regression correlating control-arm effective crossover rate to observed OS hazard ratio across direct RAS trials ($R^2 = 0.88, p = 0.005$). Trials with restricted crossover (<5%, RASolute 302, Krascendo 1) achieved clean OS benefit, while trials with high crossover (30%–35%, CodeBreaK 200, KRYSTAL-12) diluted the observed OS HR toward 1.0.
 
+### Data Sources & Methodology:
+- **Data Source:** Primary efficacy endpoints from the 7 pivotal phase III RCTs database:
+  - Blinded Independent Central Review (BICR) PFS hazard ratios, 95% confidence intervals, and p-values
+  - Overall survival hazard ratios and 95% confidence intervals
+  - Post-progression effective crossover percentages (%) to direct RAS or targeted therapies in the control arm
+  - Weighted least squares (WLS) linear meta-regression model ($R^2 = 0.88, p = 0.005$) quantifying crossover dilution.
+- **Data Cutoff Date:** 18 November 2026.
+- **Software & Packages Used:**
+  - **R (>= 4.3.0 / 4.4.0):**
+    - `ggplot2` (>= 3.5.0): Multi-tier forest plot and scatterplot regression visualization
+    - `patchwork` (>= 1.2.0): Alignment of Forest plots (Panels A & B) with meta-regression (Panel C)
+    - `ggrepel` (>= 0.9.5): Repulsive label positioning ensuring zero trial label overlap
+    - `scales` (>= 1.3.0): Logarithmic transformation for Hazard Ratios and percentage scaling
+    - `dplyr` (>= 1.1.4): Statistical calculation of confidence limits and error bars
+  - **Python (>= 3.10):** `scipy.stats` (>= 1.12.0) for independent verification of weighted linear regression coefficients.
+
 ### Data Files (`data/`):
 - `phase3_rct_outcomes_crossover.csv` (Trial IDs, hazard ratios, 95% CIs, p-values, crossover percentages)
 

@@ -6,7 +6,7 @@
 **Authors:** Nianfei Wang, MD, PhD^[1], Chiyu Sheng, MD^[1], Jian Qi, PhD^[2,3], Shumin Shen, PhD^[4], Shanghu Wang, MD, PhD^[5,*]
 
 **Affiliations:**  
-^1 Department of Oncology, The Second Hospital of Anhui Medical University, No. 678 Furong Road, Hefei, Anhui, 230601, China  
+^1 Department of Oncology, The Second Affiliated Hospital of Anhui Medical University, No. 678 Furong Road, Hefei, Anhui, 230601, China  
 ^2 Hefei Cancer Hospital of CAS, Institute of Health and Medical Technology, Hefei Institutes of Physical Science, Chinese Academy of Sciences (CAS), Hefei, Anhui, 230031, China  
 ^3 Science Island Branch, Graduate School of the University of Science and Technology of China, Hefei, Anhui, 230026, China  
 ^4 School of Life Sciences, Fudan University, No. 2005 Songhu Road, Shanghai, 200438, China  
@@ -41,7 +41,7 @@
 
 **Conclusions:** Advancing direct inhibitors into frontline therapy, stratifying patients by co-mutation status, and combining direct inhibitors with upstream or downstream pathway blockers represent key strategies to extend treatment benefit in RAS-driven cancers.
 
-**Keywords:** RAS-targeted therapy; KRAS inhibitors; Randomised controlled trials; Drug resistance; Precision oncology
+**Keywords:** KRAS inhibitors; Non-small cell lung cancer; Pancreatic adenocarcinoma; Colorectal cancer; Drug resistance
 
 ---
 
@@ -369,7 +369,7 @@ The authors thank members of the thoracic, gastrointestinal, and molecular oncol
 
 # Funding
 
-This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.
+This work was supported by the Scientific Research Project of Anhui Provincial Health Commission (Grant No. AHWJ:2025BAd20016).
 
 # Declaration of Competing Interests
 

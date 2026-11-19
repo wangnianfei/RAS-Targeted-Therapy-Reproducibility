@@ -16,6 +16,22 @@
 - **Panel B (Drug Modalities & Regimen Strategy):** Comparison of direct G12C inhibitors (192 trials), G12D inhibitors (68 trials), multi-RAS(ON) / pan-RAS inhibitors (54 trials), indirect pathway modulators (SOS1/SHP2, 72 trials), and RAS vaccines/TCR-T therapies (42 trials), highlighting the pronounced shift from monotherapy to rational combination regimens (>60% in development).
 - **Panel C (Geographic Distribution & Strategic Focus):** Analysis of global trial registrations across North America (198 trials), East Asia (162 trials), Europe (78 trials), and Multinational consortia (54 trials), defining their regional specialization.
 
+### Data Sources & Methodology:
+- **Data Source:** ClinicalTrials.gov REST API v2 (`/api/v2/studies`).
+  - Search query retrieved 3,210 initial interventional oncology trial records.
+  - Two-round independent manual double-blind curation excluded 2,028 non-qualifying records (1,907 renin-angiotensin cardiovascular studies, 38 non-malignant indications, 19 non-malignant RASopathies, 54 non-evaluable phases, 10 Phase IV post-marketing studies).
+  - 1,182 unique interventional trials met all inclusion criteria across 72 countries.
+- **Data Cutoff Date:** 18 November 2026 snapshot.
+- **Software & Packages Used:**
+  - **Python (>= 3.10):** `requests` (>= 2.31.0) for API JSON payload retrieval; `collections` & `csv` for multi-tier qualification pipelines (`code/fig2_fetch_ctgov.py`, `code/fig2_curate.py`).
+  - **R (>= 4.3.0 / 4.4.0):**
+    - `ggplot2` (>= 3.5.0): Primary plotting system for funnels, modality breakdowns, and bar charts
+    - `patchwork` (>= 1.2.0): 4-panel comprehensive figure composition
+    - `dplyr` (>= 1.1.4): Cross-tabulation of phases, drug targets, and countries
+    - `scales` (>= 1.3.0): Logarithmic and integer trial count axes
+    - `cowplot` (>= 1.1.3): Complex graphical composition with geographic insets
+    - `readr` (>= 2.1.5): Tabular parsing of trial metadata
+
 ### Data Files (`data/`):
 - `trials_1182.csv` (Complete ClinicalTrials.gov dataset, frozen 18 November 2026)
 - `trial_geographic_summary.csv` (Regional breakdown)

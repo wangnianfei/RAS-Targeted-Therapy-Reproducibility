@@ -1,4 +1,4 @@
-# RAS-Targeted Therapy in Solid Tumours: What the Randomised Trials Establish and What They Leave Open
+# Targeting RAS in Solid Tumours: From Molecular Switch Dynamics and Resistance Networks to Randomised Clinical Trial Landscapes
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -9,7 +9,13 @@
 
 > **Official Open-Science & Reproducibility Repository**  
 > Supporting the Review Manuscript submitted to ***ESMO Open*** (Elsevier / ESMO).  
-> **Authors:** Nianfei Wang, MD, PhD; Chiyu Sheng, MD; Jian Qi, PhD; Shumin Shen, PhD; Shanghu Wang, MD, PhD*.  
+> **Authors:** Nianfei Wang, MD, PhD¹; Chiyu Sheng, MD¹; Jian Qi, PhD²,³; Shumin Shen, PhD⁴; Shanghu Wang, MD, PhD⁵*.  
+> ¹ *Department of Oncology, The Second Affiliated Hospital of Anhui Medical University, Hefei, China*  
+> ² *Hefei Cancer Hospital of CAS, Hefei Institutes of Physical Science, CAS, Hefei, China*  
+> ³ *Science Island Branch, Graduate School of USTC, Hefei, China*  
+> ⁴ *School of Life Sciences, Fudan University, Shanghai, China*  
+> ⁵ *Department of Radiation Therapy, Anhui Chest Hospital, Hefei, China*  
+> **Funding:** Supported by the Scientific Research Project of Anhui Provincial Health Commission (Grant No. AHWJ:2025BAd20016).  
 > **Repository Language:** [English (Default)](./README.md) | [中文说明文档](./README_CN.md)
 
 ---
@@ -69,6 +75,49 @@ All figures and tables in this repository are strictly structured to match the o
 </div>
 
 ---
+
+---
+
+## 🔬 Methodology, Data Provenance & Software Environment
+
+> For full, exhaustive methodology details, search protocols, PRISMA screening funnels, and statistical formulas, please refer to [**`METHODOLOGY.md`**](./METHODOLOGY.md).
+
+### 1. Data Cutoff & Freeze Date
+- **Uniform Data Cutoff Date:** **18 November 2026**
+- All 1,182 oncology trials from ClinicalTrials.gov, the 7 pivotal Phase III RCTs, worldwide regulatory filings (FDA, EMA, NMPA, PMDA), and published resistance cohorts are frozen as of 18 November 2026.
+
+### 2. Data Sources for Display Items
+| Display Item | Primary Data Source | Retrieval & Inclusion Protocol | Key Variables / Extracted Metrics |
+|:---|:---|:---|:---|
+| **Figure 1** | **RCSB Protein Data Bank (PDB)** | High-resolution crystal structures (≤2.2 Å): 4OBE, 5VQ2, 4LDJ, 6OIM, 6RMX, 7RPZ, 8T3B | Cα backbone coordinates (residues 1–166), RMSD, Switch-I/II loop displacements |
+| **Figure 2** | **MSK-IMPACT Cohort (n=10,945)** | cBioPortal REST API v2 (`/api/v2`), TCGA Pan-Cancer Atlas | Functional non-synonymous mutations, denominator = total patients sequenced per cancer |
+| **Table 1** | **7 Pivotal Phase III RCTs** | Peer-reviewed publications (Lancet, NEJM, JCO), ESMO/ASCO abstracts, FDA ODAC files | Trial design, line of therapy, BICR PFS HR, OS HR, 95% CIs, crossover rate, Grade ≥3 TRAEs |
+| **Figure 3** | **Phase III Efficacy Synthesis** | Clinical endpoints database from 7 pivotal RCTs | Forest plots of PFS/OS HRs, WLS linear meta-regression ($R^2 = 0.88, p = 0.005$) |
+| **Figure 4** | **ClinicalTrials.gov REST API v2** | 3,210 initial hits -> 2-round double-blind curation -> 1,182 included oncology trials | Clinical phase funnel, molecular targets (G12C/G12D/pan-RAS), geographic sites (72 nations) |
+| **Figure 5** | **Acquired Resistance Literature** | Published resistance cohorts (Awad 2021, Yaeger 2023, Bekaii-Saab 2024, Negrao 2025) | Switch-II mutations, RTK loops (EGFR/MET/AXL/HER2), MAPK/PI3K bypass, SCLC transformation |
+| **Fig S1 / Tab S1–S3** | **Paired ctDNA Cohorts & Regulatory Dossiers** | Paired plasma/tissue studies; FDA Orange Book, EMA EPAR, NMPA CDE, PMDA filings | 9x5 Strategy decision matrix, 4 inhibitor generations, regulatory approvals & withdrawals |
+
+### 3. Software Environment & Core Packages Used
+- **R Environment (R >= 4.3.0 / 4.4.0):**
+  - `ggplot2` (>= 3.5.0): Primary grammar-of-graphics engine for Figures 2, 3, and 4.
+  - `patchwork` (>= 1.2.0): Multi-panel alignment and figure tagging (A, B, C, D).
+  - `dplyr` (>= 1.1.4) & `tidyr` (>= 1.3.1): Tidy data wrangling, pivoting, and grouping.
+  - `scales` (>= 1.3.0): Logarithmic transformation, percent scales, scientific formatting.
+  - `ggtext` (>= 0.1.2): Markdown/HTML rendering for gene italics (*KRAS*, *TP53*, *STK11*).
+  - `ggrepel` (>= 0.9.5): Repulsive label positioning ensuring zero text collision in scatterplots.
+  - `cowplot` (>= 1.1.3): Canvas layout composition and nested graphic grobs.
+  - `Cairo` (>= 1.6-2): High-fidelity vector rendering for publication PDF and EPS.
+- **Python Environment (Python >= 3.10):**
+  - `matplotlib` (>= 3.8.0): 2D scientific plotting engine for Figures 1, 5, and Supplementary Figure S1.
+  - `numpy` (>= 1.26.0): High-performance numerical matrix operations and Cα displacement vectors.
+  - `scipy` (>= 1.12.0): Weighted least squares (WLS) regression and statistical inference.
+  - `pillow` (`PIL`, >= 10.0.0): 500 DPI metadata injection and LZW TIFF export.
+  - `requests` (>= 2.31.0): ClinicalTrials.gov REST API v2 programmatic communication.
+  - `python-docx` (>= 1.1.2): Programmatic Word manuscript and landscape table compilation.
+  - `openpyxl` (>= 3.1.2): Excel workbook compilation for supplementary tables.
+- **Specialized Molecular & Imaging Tools:**
+  - **PyMOL (>= 2.5.0):** 600 DPI ray-traced molecular surfaces with ambient occlusion (Figure 1 Panel C).
+  - **ImageMagick (>= 7.1.1):** Lanczos windowed filtering for 500 DPI print-ready TIFFs.
 
 ## ⚡ Quick Start: One-Click Full Reproduction
 

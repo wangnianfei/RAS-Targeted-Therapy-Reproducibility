@@ -1,4 +1,4 @@
-# RAS靶向治疗综述：随机试验确立了什么，又留下了什么开放问题？
+# 实体瘤RAS靶向治疗：从分子开关动力学、耐药网络到随机临床试验全景
 ## 原始数据、生成代码与出版级高清矢量图件开源复现仓库
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
@@ -9,9 +9,15 @@
 [![DPI: 500 印刷级](https://img.shields.io/badge/分辨率-500_DPI_TIFF_%26_矢量PDF-success.svg)](#)
 
 > **官方开源复现仓库 (Official Open-Science & Reproducibility Repository)**  
-> 论文标题：*RAS-targeted therapy in solid tumours: what the randomised trials establish and what they leave open*（实体瘤RAS靶向治疗：随机临床试验确立了什么，又留下了什么开放问题）  
-> 投稿期刊：***ESMO Open***（欧洲肿瘤内科学会官方期刊，Elsevier 出版）  
-> **作者团队：** 王年飞，盛池雨，齐健，沈淑敏，王尚虎*（通讯作者）  
+> 论文标题：*Targeting RAS in solid tumours: from molecular switch dynamics and resistance networks to randomised clinical trial landscapes*（实体瘤RAS靶向治疗：从分子开关动力学、耐药网络到随机临床试验全景）  
+> 投稿期刊：***ESMO Open***（欧洲肿瘤内科学会官方期刊，Elsevier 出版，官方投稿文件：`RAS_Targeted_Therapy_Review_ESMO_Open_Manuscript_EN.docx`）  
+> **作者团队：** 王念飞 (MD, PhD)¹，盛驰宇 (MD)¹，齐健 (PhD)²'³，沈舒敏 (PhD)⁴，王尚虎 (MD, PhD)⁵*（通讯作者）  
+> ¹ *安徽医科大学第二附属医院肿瘤科，合肥*  
+> ² *中国科学院合肥物质科学研究院健康与医学技术研究所合肥肿瘤医院，合肥*  
+> ³ *中国科学技术大学研究生院科学岛分院，合肥*  
+> ⁴ *复旦大学生命科学学院，上海*  
+> ⁵ *安徽省胸科医院放疗科，合肥*  
+> **基金资助：** 本研究由安徽省卫生健康科研项目（项目编号：AHWJ:2025BAd20016）资助。  
 > **文档语言：** [English (英文原版)](./README.md) | [中文说明文档 (当前页面)](./README_CN.md)
 
 ---

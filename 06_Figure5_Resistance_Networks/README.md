@@ -20,6 +20,19 @@
 6. **Phenotypic Lineage Plasticity (3%–5%):** Small-cell neuroendocrine histological transformation and epithelial-to-mesenchymal transition (EMT) with biallelic *TP53*/*RB1* co-inactivation, requiring chemo-immunotherapy rescue.
 7. **ctDNA Kinetics:** Early molecular clearance at C2D1 as an actionable surrogate marker (ORR ~80% vs <10%, HR < 0.35), providing a 2–4 month lead time prior to radiographic progression.
 
+### Data Sources & Methodology:
+- **Data Source:** High-impact peer-reviewed resistance cohorts and translational genomics studies:
+  - Awad MM et al. *N Engl J Med* 2021;384:2382-2393 (KRAS G12C resistance spectrum)
+  - Yaeger R et al. *Nature* 2023;616:783-794 (CRC acquired resistance and polyclonal dynamics)
+  - Bekaii-Saab TS et al. *ESMO GI* 2024/2025 (KRYSTAL-10 resistance profiles)
+  - Negrao MV et al. *Clin Cancer Res* 2025;31:1069-1081 (Transcriptional and co-mutational resistance in NSCLC)
+  - Dy GK et al. *J Clin Oncol* 2023;41:3311-3317 (CodeBreaK 100 2-year ctDNA molecular correlates).
+- **Data Cutoff Date:** 18 November 2026.
+- **Software & Packages Used:**
+  - **Python (>= 3.10):** `matplotlib` (>= 3.8.0), `numpy` (>= 1.26.0), `pillow` (>= 10.0.0)
+  - **ImageMagick (>= 7.1.1):** Lanczos resampling filter, 500 DPI LZW TIFF packaging, color space preservation
+  - **Vector Pipeline:** Intact extracellular receptor domains (MET, AXL, EGFR, HER2) rendered in scalable vector geometry.
+
 ### Data Files (`data/`):
 - `resistance_alterations_pathways.csv` (Curated alteration classes and frequencies)
 - `resistance_combination_targets.csv` (Targeted rescue combination partners)

@@ -13,7 +13,7 @@ authors:
   - family-names: "Wang"
     given-names: "Shanghu"
     orcid: "https://orcid.org/0000-0002-9905-182X"
-title: "RAS-targeted therapy in solid tumours: what the randomised trials establish and what they leave open"
+title: "Targeting RAS in solid tumours: from molecular switch dynamics and resistance networks to randomised clinical trial landscapes"
 version: 2.0.0
 date-released: 2026-11-19
 url: "https://github.com/wangnianfei/RAS-Targeted-Therapy-Reproducibility"
@@ -40,6 +40,6 @@ preferred-citation:
       given-names: "Shumin"
     - family-names: "Wang"
       given-names: "Shanghu"
-  title: "RAS-targeted therapy in solid tumours: what the randomised trials establish and what they leave open"
+  title: "Targeting RAS in solid tumours: from molecular switch dynamics and resistance networks to randomised clinical trial landscapes"
   journal: "ESMO Open"
   year: 2026
