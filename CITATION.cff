@@ -3,7 +3,7 @@ message: "If you use this dataset, figures, or code, please cite it as below."
 authors:
   - family-names: "Wang"
     given-names: "Nianfei"
-    orcid: "https://orcid.org/0000-0002-1825-0097"
+    orcid: "https://orcid.org/0009-0004-8087-4150"
   - family-names: "Sheng"
     given-names: "Chiyu"
   - family-names: "Qi"
@@ -12,7 +12,6 @@ authors:
     given-names: "Shumin"
   - family-names: "Wang"
     given-names: "Shanghu"
-    orcid: "https://orcid.org/0000-0002-9905-182X"
 title: "Targeting RAS in solid tumours: from molecular switch dynamics and resistance networks to randomised clinical trial landscapes"
 version: 2.0.0
 date-released: 2026-11-19
@@ -23,7 +22,6 @@ keywords:
   - "Randomised controlled trials"
   - "Precision oncology"
   - "Drug resistance"
-  - "ctDNA dynamics"
   - "Pancreatic cancer"
   - "Non-small cell lung cancer"
   - "Colorectal cancer"
@@ -32,6 +30,7 @@ preferred-citation:
   authors:
     - family-names: "Wang"
       given-names: "Nianfei"
+      orcid: "https://orcid.org/0009-0004-8087-4150"
     - family-names: "Sheng"
       given-names: "Chiyu"
     - family-names: "Qi"

@@ -1,7 +1,0 @@
-alteration_class,specific_mutations,frequency_pct,biochemical_mechanism,combination_partners
-On-target Switch-II,KRAS Y96C/D H95D/Q/R R68S A59S/T,15-25%,"Steric block of covalent binding / cavity remodelling","Multi-RAS(ON) (daraxonrasib), pan-KRAS, PROTACs"
-Upstream RTK Reactivation,MET focal amp; HER2 amp; EGFR hyperactivation,10-15%,"ERK feedback release, SOS1 nucleotide exchange","METi (capmatinib/tepotinib), EGFRi, HER2 ADCs"
-Signaling Hub Hyperactivation,PTPN11 (SHP2); SOS1 upregulation,15-20%,"Feedback GTP loading across WT and mutant RAS","SHP2i (TNO155), SOS1i (BI 1701963)"
-Downstream MAPK Bypass,BRAF V600E; CRAF fusions; NRAS Q61K; MAP2K1,8-12%,"Autonomous MAPK flux bypassing RAS inhibition","Paradox-breaking RAFi, MEKi, ERKi"
-Parallel Survival Pathways,PIK3CA mutations; PTEN genomic loss,5-10%,"Constitutive PI3K/AKT survival and glycolysis","PI3Kαi (alpelisib), pan-AKTi (capivasertib)"
-Phenotypic Plasticity,Small-cell neuroendocrine / EMT (TP53/RB1 co-loss),3-5%,"Lineage switch and loss of KRAS driver dependency","Platinum-etoposide chemo, epigenetic therapies"

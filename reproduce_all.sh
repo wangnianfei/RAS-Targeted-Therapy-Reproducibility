@@ -1,81 +1,46 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# One-Click Automated Reproduction Script for ESMO Open Review Artwork & Tables
-# "RAS-targeted therapy in solid tumours: what the randomised trials establish
-#  and what they leave open"
+# Reproduce all figures and tables of
+# "Targeting RAS in solid tumours: from molecular switch dynamics and resistance
+#  networks to randomised clinical trial landscapes" (submitted to ESMO Open)
+#
+# Requirements: Python >= 3.10 with matplotlib; R >= 4.3 with ggplot2, patchwork,
+# dplyr, tidyr, scales, ggtext, ragg; PyMOL (open-source, `pymol` on PATH);
+# ImageMagick 7 (`magick` on PATH). Data cut-off: 18 November 2026.
 # ==============================================================================
-
-set -e
+set -euo pipefail
 
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-echo "=============================================================================="
-echo " Starting Full Automated Reproduction of ESMO Open Review Artwork & Tables"
-echo " Working directory: $REPO_DIR"
-echo " Retrieval and Data Freeze Cut-off Date: 18 November 2026"
-echo "=============================================================================="
+PY="${PYTHON:-python3}"
+cd "$REPO_DIR"
 
-# Detect Python runner
-if command -v uv >/dev/null 2>&1; then
-    PY_CMD="uv run --with matplotlib --with pillow --with numpy python3"
-elif [ -x "/Users/wangnianfei/.local/bin/uv" ]; then
-    PY_CMD="/Users/wangnianfei/.local/bin/uv run --with matplotlib --with pillow --with numpy python3"
-else
-    PY_CMD="python3"
-fi
-echo "Using Python execution environment: $PY_CMD"
+need() { command -v "$1" >/dev/null 2>&1 || { echo "Missing required tool: $1" >&2; exit 1; }; }
+need "$PY"; need Rscript; need pymol; need magick
 
-# Check Rscript
-if command -v Rscript >/dev/null 2>&1; then
-    R_CMD="Rscript"
-    echo "Using R execution environment: $(which Rscript)"
-else
-    echo "WARNING: Rscript not found in PATH! R-based figures will be skipped."
-    R_CMD=""
-fi
+echo "[1/8] Figure 1: PyMOL renders of PDB 6OIM and 9BG6, then panel composition"
+(cd 01_Figure1_Structural_Mechanisms && pymol -cq code/render_figure1_pymol.py)
+"$PY" 01_Figure1_Structural_Mechanisms/code/run_figure1.py
 
-echo ""
-echo "--- [1/7] Reproducing Figure 1: Biophysical Nucleotide Cycling & Structural Paradigms ---"
-$PY_CMD "$REPO_DIR/01_Figure1_Structural_Mechanisms/code/run_figure1.py"
+echo "[2/8] Figure 2: derive prevalence and allele tables from the MSK-IMPACT cBioPortal export"
+"$PY" 02_Figure2_PanCancer_Landscape/code/derive_figure2_data.py
+Rscript 02_Figure2_PanCancer_Landscape/code/run_figure2.R
 
-echo ""
-echo "--- [2/7] Reproducing Figure 2: Pan-Cancer Genomic Landscape & Co-Mutations ---"
-if [ -n "$R_CMD" ]; then
-    $R_CMD "$REPO_DIR/02_Figure2_PanCancer_Landscape/code/run_figure2.R"
-else
-    echo "Skipping Rscript for Figure 2."
-fi
+echo "[3/8] Table 1: export the seven phase III trials to Markdown"
+"$PY" 03_Table1_Pivotal_Phase3_RCTs/code/build_table1.py >/dev/null
 
-echo ""
-echo "--- [3/7] Verifying Table 1: Methodological Architecture & Clinical Endpoints Across 7 Phase III RCTs ---"
-$PY_CMD "$REPO_DIR/03_Table1_Pivotal_Phase3_RCTs/code/build_table1.py"
+echo "[4/8] Figure 3: PFS and OS forest plots"
+Rscript 04_Figure3_Phase3_Efficacy_Discordance/code/run_figure3_forest.R
 
-echo ""
-echo "--- [4/7] Reproducing Figure 3: Phase III RCT Efficacy Synthesis & Crossover Meta-Regression ---"
-if [ -n "$R_CMD" ]; then
-    $R_CMD "$REPO_DIR/04_Figure3_Phase3_Efficacy_Discordance/code/run_figure3_forest_regression.R"
-else
-    echo "Skipping Rscript for Figure 3."
-fi
+echo "[5/8] Figure 4: registered trials of directly RAS-targeted agents"
+Rscript 05_Figure4_Global_Trial_Landscape/code/run_figure4_trial_landscape.R
 
-echo ""
-echo "--- [5/7] Reproducing Figure 4: Global Landscape & Geography of 1,182 RAS Clinical Trials ---"
-if [ -n "$R_CMD" ]; then
-    $R_CMD "$REPO_DIR/05_Figure4_Global_Trial_Landscape/code/run_figure4_trial_landscape.R"
-else
-    echo "Skipping Rscript for Figure 4."
-fi
+echo "[6/8] Figure 5: resistance schematic"
+"$PY" 06_Figure5_Resistance_Networks/code/run_figure5.py
 
-echo ""
-echo "--- [6/7] Validating Figure 5: Comprehensive Acquired Resistance Networks & Combinations ---"
-$PY_CMD "$REPO_DIR/06_Figure5_Resistance_Networks/code/run_figure5.py"
+echo "[7/8] Supplementary Figure S1"
+"$PY" 07_Supplementary_Material/code/run_figureS1_resistance_matrix.py
 
-echo ""
-echo "--- [7/7] Reproducing Supplementary Figure S1 & Validating Tables S1-S3 ---"
-$PY_CMD "$REPO_DIR/07_Supplementary_Material/code/run_figureS1_resistance_matrix.py"
-$PY_CMD "$REPO_DIR/07_Supplementary_Material/code/build_supplementary_tables.py"
+echo "[8/8] Supplementary Tables S1 and S3 (print from data files)"
+"$PY" 07_Supplementary_Material/code/build_supplementary_tables.py >/dev/null
 
-echo ""
-echo "=============================================================================="
-echo " Full Reproduction Complete! All publication figures (Fig1-Fig5, FigS1) and"
-echo " tables (Table 1, Tables S1-S3) are synchronized and verified."
-echo "=============================================================================="
+echo "Done. Outputs are in each folder's figures/ (and 03_Table1_Pivotal_Phase3_RCTs/data/)."

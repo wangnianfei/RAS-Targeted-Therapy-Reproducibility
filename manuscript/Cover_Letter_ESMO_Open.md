@@ -1,36 +1,34 @@
-# Cover Letter to the Editor-in-Chief
+**COVER LETTER TO THE EDITOR-IN-CHIEF**
 
-**Journal:** *ESMO Open*  
-**Date:** 19 November 2026
+*Journal: ESMO Open \| Date: 19 November 2026*
 
-Dear Professor André and Members of the Editorial Board,
+Dear Editor-in-Chief and Members of the Editorial Board,
 
 On behalf of all authors, I am pleased to submit our Review Article entitled "Targeting RAS in solid tumours: from molecular switch dynamics and resistance networks to randomised clinical trial landscapes" for consideration for publication in ESMO Open.
 
-### Clinical Inflection: Why Now and How This Review Differs
+**Why this review now**
 
-Targeted RAS oncology has reached a defining clinical inflection point over the past two years (2024–2026), expanding rapidly from early proof-of-concept phase I/II trials to mature phase III randomised controlled trials (RCTs) and frontline registrations. While ESMO Open and related literature previously published valuable overviews of RAS biology, earlier syntheses predated mature randomised trial data and were predominantly confined to pretreated non-small cell lung cancer. Most critically, they lacked the landmark clinical breakthroughs achieved across the last 24 months in pancreatic ductal adenocarcinoma (PDAC)—a malignancy where KRAS alterations drive >90% of cases and were historically deemed intractable. The recent clinical maturation of active-state multi-RAS(ON) inhibitors and pan-KRAS molecular glues (such as RMC-6236, doubling median overall survival in PDAC) signals a transformative pan-cancer paradigm shift that urgently demands an up-to-date, authoritative synthesis.
+Over the past two years, direct RAS inhibition has moved from early-phase trials to phase III evidence across several tumour types. Earlier reviews were written before most of these randomised data were available and focused mainly on pretreated non-small cell lung cancer. Since then, the multi-RAS(ON) inhibitor daraxonrasib has roughly doubled median overall survival compared with chemotherapy in previously treated pancreatic cancer, divarasib has improved overall survival over first-generation KRAS G12C inhibitors in non-small cell lung cancer, and adagrasib plus cetuximab failed to improve survival over chemotherapy in colorectal cancer, after which its US accelerated approval was withdrawn.
 
-### Core Scientific Innovations: Beyond Descriptive Data Compilation
+**What the review contributes**
 
-Rather than passively cataloguing clinical trial endpoints, our review provides a rigorous, integrative synthesis with three distinct innovations:
+The review offers three things beyond a summary of trial endpoints:
 
-1. Methodological Innovation in Evidence Synthesis (Dissecting PFS vs OS Discrepancies): We provide an in-depth comparative critique across seven pivotal phase III RCTs (exemplified by CodeBreaK 200, KRYSTAL-12, and KRYSTAL-10). Uniquely, we deconstruct the clinical dissociation between progression-free survival (PFS) gains and overall survival (OS) outcomes, quantitatively evaluating how high-rate post-progression crossover and downstream salvage therapies attenuate survival hazard ratios. This provides trialists and regulatory bodies with an objective methodological framework for future trial endpoint selection.
+> 1\. Progression-free versus overall survival: we compare the designs and results of seven phase III randomised trials and discuss why gains in progression-free survival translated into an overall survival benefit in some trials but not in others, including the roles of crossover and subsequent therapy, and how future trials can pre-specify crossover adjustment.
+>
+> 2\. Biology behind the clinical results: we relate trial outcomes to mechanism (EGFR feedback in colorectal cancer, STK11 and KEAP1 co-mutations, and the acquired resistance alterations documented in patients) and point out where published data are easily over-interpreted.
+>
+> 3\. A reproducible trial landscape and outlook: we classify 1,182 ClinicalTrials.gov records, 358 of which test a directly RAS-targeted agent, with data and code in a public repository, and outline priorities: inhibitors for non-G12C alleles, first-line and perioperative trials, and combinations matched to resistance mechanisms.
 
-2. Mechanistic Literature Interpretation and Clinical Caveats: Moving beyond reciting response rates and adverse event profiles, we interrogate the biological drivers of clinical failure and response heterogeneity. We alert clinicians to critical caveats when interpreting published data: explaining why monotherapy falters in colorectal cancer due to rapid EGFR-mediated bypass rebound, dissecting how co-occurring mutations (STK11, KEAP1) blunt clinical efficacy, and cautioning against conflating secondary switch-II pocket gatekeeper mutations with histologic lineage transformation upon disease progression.
+**Declarations**
 
-3. Forward-Looking Strategic Roadmap: We chart actionable prospective paradigms for the evolving RAS landscape: delineating the clinical rationale for front-line treatment migration (advancing from refractory salvage monotherapies into first-line combinations and perioperative curative settings), and defining biology-grounded strategies (pan-RAS/multi-RAS(ON) molecular glues, allele-specific degraders, and rational vertical/horizontal dual blockade) to forestall multi-convergent resistance networks.
-
-### Compliance and Mandatory Disclosures
-
-This manuscript conforms strictly to ESMO Open editorial guidelines. It is original, has not been published previously, and is not under consideration elsewhere. All five authors have contributed substantively and approved this submission. The authors declare no competing interests. In accordance with Elsevier publishing policy, transparent disclosure of generative AI assistance (used strictly for data analysis, visualization, and English language editing and polishing under full author verification and accountability) is provided. All analytical code and curated clinical trial datasets (search cut-off: 18 November 2026) are openly accessible at https://github.com/wangnianfei/RAS-Targeted-Therapy-Reproducibility.
+This manuscript is original, has not been published previously and is not under consideration elsewhere. All five authors contributed to the work and approved the submission. The authors declare no competing interests. The work was supported by the Scientific Research Project of Anhui Provincial Health Commission (Grant No. AHWJ:2025BAd20016). The use of generative AI tools (DeepSeek, Gemini and Claude) for reference checking, analysis code and language editing is disclosed in the manuscript; no figure image was generated by AI. All analysis code and curated trial data (search cut-off 18 November 2026) are available at https://github.com/wangnianfei/RAS-Targeted-Therapy-Reproducibility.
 
 Thank you very much for your time, consideration, and editorial guidance. We look forward to your assessment.
 
-Sincerely yours,
+**Sincerely yours,**
 
-Shanghu Wang, MD, PhD
-Department of Radiation Therapy, Anhui Chest Hospital
-No. 397 Jixi Road, Hefei, Anhui 230026, China
-Email: wangshanghu@mail.ustc.edu.cn | Telephone: +86-551-63615120
-
+Shanghu Wang, MD, PhD\
+Department of Radiation Therapy, Anhui Chest Hospital\
+No. 397 Jixi Road, Hefei, Anhui 230026, China\
+Email: wangshanghu@mail.ustc.edu.cn

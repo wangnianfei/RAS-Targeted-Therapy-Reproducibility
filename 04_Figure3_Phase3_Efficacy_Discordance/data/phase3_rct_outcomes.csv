@@ -1,0 +1,8 @@
+trial_id,setting,n_pts,pfs_hr,pfs_low,pfs_high,os_hr,os_low,os_high,os_note,source
+CodeBreaK 200,"NSCLC, 2L+ (vs docetaxel)",345,0.66,0.51,0.86,1.01,0.77,1.33,,"de Langen, Lancet 2023 (doi:10.1016/S0140-6736(23)00221-0)"
+KRYSTAL-12,"NSCLC, 2L+ (vs docetaxel)",453,0.58,0.45,0.76,,,,"OS immature at primary report","Barlesi, Lancet 2025 (doi:10.1016/S0140-6736(25)00866-9)"
+Krascendo 1,"NSCLC, 2L+ (vs sotorasib/adagrasib)",338,0.58,0.44,0.76,0.56,0.41,0.78,,"Skoulidis, NEJM 2026 (doi:10.1056/NEJMoa2605703); OS at first interim analysis"
+CodeBreaK 300,"mCRC, 3L+ (vs TAS-102/regorafenib)",160,0.49,0.30,0.80,0.70,0.41,1.18,,"Fakih, NEJM 2023; Pietrantonio, JCO 2025 (960 mg arm)"
+KRYSTAL-10,"mCRC, 2L (vs FOLFIRI/mFOLFOX6)",461,0.89,0.71,1.13,0.83,0.67,1.03,,"Tabernero, Ann Oncol 2026 LBA1 (ESMO GI 2026)"
+RASolute 302,"mPDAC, 2L+ (vs chemotherapy)",500,0.49,0.38,0.64,0.40,0.30,0.53,,"O'Reilly, NEJM 2026 (doi:10.1056/NEJMoa2605555); overall population, first interim analysis"
+NEMO (MEKi),"Melanoma, 1-2L (vs dacarbazine)",402,0.62,0.47,0.80,1.00,0.75,1.33,,"Dummer, Lancet Oncol 2017 (doi:10.1016/S1470-2045(17)30180-8)"

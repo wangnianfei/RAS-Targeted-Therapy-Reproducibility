@@ -1,8 +1,8 @@
-cancer_type,KRAS,NRAS,HRAS
-Pancreatic (PDAC),91.2,1.0,0.4
-Colorectal (CRC),44.5,4.2,0.8
-Lung (LUAD),32.4,0.8,0.3
-Endometrial,19.7,3.8,0.9
-Melanoma,1.9,25.5,2.7
-Thyroid,3.0,16.0,3.5
-Bladder,6.9,1.2,4.5
+cancer_type,n_samples,KRAS,NRAS,HRAS
+Pancreatic (PDAC),502,73.5,0.6,0.4
+Colorectal (CRC),1007,43.1,4.1,0.8
+NSCLC,1668,26.9,1.1,0.3
+Endometrial,218,19.3,2.8,0.9
+Melanoma,365,1.9,21.4,2.7
+Thyroid,231,3.0,16.0,3.5
+Bladder,423,6.6,1.9,4.3

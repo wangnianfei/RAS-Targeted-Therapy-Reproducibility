@@ -1,76 +1,31 @@
-# Global Academic Dissemination & Social Media Thread: "RAS-Targeted Therapy in Solid Tumours"
+# Social media thread (template — post after acceptance)
 
-**Target Platforms:** X (Twitter), LinkedIn, ResearchGate, Doximity, Institutional News  
-**Title:** RAS-targeted therapy in solid tumours: what the randomised trials establish and what they leave open  
-**Journal:** *ESMO Open* (2026)  
-**Authors:** Nianfei Wang, Chiyu Sheng, Jian Qi, Shumin Shen, Shanghu Wang*  
-**Repository:** https://github.com/wangnianfei/RAS-Targeted-Therapy-Reproducibility
+**Article:** Targeting RAS in solid tumours: from molecular switch dynamics and resistance networks to randomised clinical trial landscapes (*ESMO Open*, submitted)
+**Authors:** Nianfei Wang, Chiyu Sheng, Jian Qi, Shumin Shen, Shanghu Wang*
+**Data and code:** https://github.com/wangnianfei/RAS-Targeted-Therapy-Reproducibility
 
----
-
-## 🧵 X (Twitter) Academic Thread Template (8 Tweets)
-
-### Tweet 1 (Hook & Core Headline) 🚨
-Breaking the "undruggable" dogma: RAS-targeted therapies have achieved regulatory approvals across solid tumours, but what do the phase III randomised trials actually prove—and where do the paradoxes lie? 
-
-Read our comprehensive synthesis in @ESMOOpen, with 100% open-source data & code:
-🔗 https://github.com/wangnianfei/RAS-Targeted-Therapy-Reproducibility
-#OncTwitter #CancerResearch #NSCLC #CRC #PancreaticCancer [Attach: Fig1.png]
+Replace `[DOI]` with the article link once published. All numbers below are from the manuscript.
 
 ---
 
-### Tweet 2 (Biophysical Switch & 4 Drug Generations) 🧬
-From molecular switches to pocket trapping: We review 4 generations of direct RAS modulators:
-1️⃣ Class I: Switch-II covalent OFF-state (sotorasib, adagrasib, divarasib)
-2️⃣ Class II: Non-covalent OFF-state (MRTX1133)
-3️⃣ Class III: Multi-RAS(ON) tri-complex glues recruiting CYPA (daraxonrasib)
-4️⃣ Class IV: PROTAC degraders (ASP3082)
-[Attach: Fig1.png]
+**1/8** RAS was called undruggable for four decades. Our review in @ESMOOpen asks what seven phase III trials of RAS-pathway inhibitors have actually shown — and what they have not. Data and code are open. [DOI] #OncTwitter #NSCLC #CRCSM #PancreaticCancer
+
+**2/8** Two drug classes now reach patients: covalent inhibitors that trap inactive KRAS G12C in the switch-II pocket (sotorasib, adagrasib, divarasib) and tri-complex inhibitors that bind active RAS together with cyclophilin A (daraxonrasib). [Fig 1: PDB 6OIM and 9BG6]
+
+**3/8** Response rates improved in all seven trials and PFS in six. Overall survival is the harder test: it improved with divarasib vs sotorasib/adagrasib in pretreated KRAS G12C NSCLC (Krascendo 1, HR 0.56, interim) and with daraxonrasib vs chemotherapy in pancreatic cancer (RASolute 302, median 13.2 vs 6.7 mo, HR 0.40, interim).
+
+**4/8** Sotorasib did not improve OS over docetaxel (CodeBreaK 200, HR 1.01); 26% of the docetaxel arm crossed over to sotorasib, which complicates the comparison. OS for adagrasib in KRYSTAL-12 was immature at the primary report.
+
+**5/8** Colorectal cancer needs EGFR co-blockade. Sotorasib + panitumumab improved PFS in refractory disease (CodeBreaK 300), but adagrasib + cetuximab did not beat second-line chemotherapy on PFS or OS (KRYSTAL-10), and the FDA withdrew that indication on 1 Sep 2026. [Fig 3]
+
+**6/8** Of 1,182 RAS-related interventional oncology trials on ClinicalTrials.gov, 358 test a directly RAS-targeted agent: 220 involve KRAS G12C inhibitors, 52 G12D inhibitors, 39 vaccines/TCR-T, 33 multi-RAS(ON) or pan-RAS inhibitors. [Fig 4]
+
+**7/8** Resistance is diverse. After adagrasib, 17/38 patients had a putative mechanism: secondary KRAS mutations, RTK and MAPK bypass, and squamous transformation (2/9 lung adenocarcinomas with paired biopsies). [Fig 5]
+
+**8/8** Next steps: inhibitors for non-G12C alleles, first-line and perioperative trials, combinations matched to resistance, and trials that pre-specify how crossover will be handled. Every figure is reproducible from our repository. #OpenScience
 
 ---
 
-### Tweet 3 (Pan-Cancer Genomic Landscape) 📊
-Not all RAS mutations are created equal!
-• Lung adenocarcinoma (LUAD): Distinct G>T transversion signature -> G12C accounts for 41%
-• Pancreas (PDAC): G12D (45%) & G12V (32%) dominate
-• Melanoma: NRAS codon 61 (80% of RAS alterations)
-Co-mutations dictate destiny: KP (TP53, inflamed) vs KL (STK11, cold).
-[Attach: Fig2.png]
+## LinkedIn post (template)
 
----
-
-### Tweet 4 (The PFS vs OS Discordance Paradox) ⚖️
-Why did 2L NSCLC trials (CodeBreaK 200 & KRYSTAL-12) show significant PFS gains (HR 0.58-0.66) but ZERO OS difference (HR 0.98-1.01)?
-Meta-regression reveals: 30%-35% effective crossover in control arms prolonged control survival, diluting OS HR toward 1.0!
-[Attach: Fig3.png]
-
----
-
-### Tweet 5 (Lessons from Colorectal Cancer: KRYSTAL-10) 🚪
-A cautionary tale for precision oncology: KRYSTAL-10 failed to confirm adagrasib + cetuximab superiority over chemotherapy + bevacizumab in 2L mCRC, leading to FDA withdrawal of accelerated approval on Sept 1, 2026.
-Conclusion: Chemo-free doublet regimens cannot replace backbone chemotherapy in 2L CRC due to 74% polyclonal escape.
-
----
-
-### Tweet 6 (The PDAC Breakthrough: RASolute 302) 🏆
-The true triumph of multi-RAS inhibition: In metastatic pancreatic cancer (RASolute 302, NEJM 2026), daraxonrasib (RMC-6236) DOUBLED median overall survival (13.2 vs 6.7 mo; HR 0.40, p < 0.0001).
-With no salvage crossover to confound data, PFS translated cleanly into unprecedented survival gains!
-
----
-
-### Tweet 7 (Acquired Resistance & Preemptive ctDNA Window) 🔍
-Acquired resistance is polyclonal and multifaceted:
-• On-target Switch-II (Y96, H95, R68, A59)
-• Upstream RTK feedback (MET/HER2 amp)
-• Downstream MAPK bypass (BRAF, MEK1)
-• Small-cell / EMT lineage shifts
-Crucially: Longitudinal ctDNA captures emerging resistance 2 to 4 MONTHS prior to RECIST radiographic progression!
-[Attach: Fig5.png]
-
----
-
-### Tweet 8 (Open Science & Reproducibility) 🌐
-Science must be transparent and verifiable.
-We have open-sourced all 5 figures, 1 table, 4-page supplementary appendix, 1,182 trial records, and reproduction scripts in Python and R.
-Check out the repository, star, and reproduce with 1 click:
-👉 https://github.com/wangnianfei/RAS-Targeted-Therapy-Reproducibility
+Our review of direct RAS inhibition in solid tumours has been accepted in *ESMO Open* [DOI]. We compare seven phase III trials and separate what they establish from what remains open: response rates and PFS improved broadly, whereas overall survival improved in two trials — divarasib versus first-generation G12C inhibitors in NSCLC and daraxonrasib versus chemotherapy in pancreatic cancer. We also classify 1,182 registered trials and summarise documented resistance mechanisms. Data and code for every figure: https://github.com/wangnianfei/RAS-Targeted-Therapy-Reproducibility

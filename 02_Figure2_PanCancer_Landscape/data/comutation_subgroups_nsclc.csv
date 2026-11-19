@@ -1,5 +1,0 @@
-subgroup,gene,freq_pct,tme_biology,clinical_implications
-KP,TP53,40,"High TMB, inflamed TME, robust PD-(L)1 sensitivity","Favourable ICI + chemo; standard G12Ci response"
-KL,STK11,25,"STING/T-cell cold, suppressed PD-L1, IO refractory","Poor ICI response; consider G12Ci + anti-CTLA4/chemo"
-KEAP1,KEAP1,15,"NRF2-driven ferroptosis & metabolic resistance","Multi-agent chemo/targeted synergy required"
-KC,CDKN2A,10,"Accelerated cell cycle transit & CDKN2A loss","CDK4/6 co-inhibition rational combination"
