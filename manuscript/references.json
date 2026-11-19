@@ -41,12 +41,12 @@
   },
   {
     "id": 9,
-    "text": "Jänne PA, Riely GJ, Gadgeel SM, Heist RS, Ou SHI, Pacheco JM, et al. Adagrasib in non-small-cell lung cancer harboring a KRAS G12C mutation. N Engl J Med. 2022;387(2):120-131. https://doi.org/10.1056/NEJMoa2204619",
+    "text": "Jänne PA, Riely GJ, Gadgeel SM, Heist RS, Ou SI, Pacheco JM, et al. Adagrasib in non-small-cell lung cancer harboring a KRASG12C mutation. N Engl J Med. 2022;387(2):120-131. https://doi.org/10.1056/NEJMoa2204619",
     "doi": "10.1056/NEJMoa2204619"
   },
   {
     "id": 10,
-    "text": "Sacher A, LoRusso P, Patel MR, Miller WH Jr., Garralda E, Forster MD, et al. Single-agent divarasib (GDC-6036) in solid tumors with a KRAS G12C mutation. N Engl J Med. 2023;389(8):710-721. https://doi.org/10.1056/NEJMoa2303810",
+    "text": "Sacher A, LoRusso P, Patel MR, Miller WH Jr, Garralda E, Forster MD, et al. Single-agent divarasib (GDC-6036) in solid tumors with a KRAS G12C mutation. N Engl J Med. 2023;389(8):710-721. https://doi.org/10.1056/NEJMoa2303810",
     "doi": "10.1056/NEJMoa2303810"
   },
   {
@@ -56,7 +56,7 @@
   },
   {
     "id": 12,
-    "text": "Wang X, Allen S, Blake JF, Bowcut V, Briere DM, Calinisan A, et al. Identification of MRTX1133, a noncovalent, potent, and selective KRAS G12D inhibitor. J Med Chem. 2022;65(4):3123-3133. https://doi.org/10.1021/acs.jmedchem.1c01688",
+    "text": "Wang X, Allen S, Blake JF, Bowcut V, Briere DM, Calinisan A, et al. Identification of MRTX1133, a noncovalent, potent, and selective KRASG12D inhibitor. J Med Chem. 2022;65(4):3123-3133. https://doi.org/10.1021/acs.jmedchem.1c01688",
     "doi": "10.1021/acs.jmedchem.1c01688"
   },
   {
@@ -96,7 +96,7 @@
   },
   {
     "id": 20,
-    "text": "Scheffzek K, Ahmadian MR, Kabsch W, Wiesmüller L, Lautwein A, Schmitz F, et al. The Ras-RasGAP complex: structural basis for GTPase activation and its loss in oncogenic Ras mutants. Science. 1997;277(5324):333-339. https://doi.org/10.1126/science.277.5324.333",
+    "text": "Scheffzek K, Ahmadian MR, Kabsch W, Wiesmüller L, Lautwein A, Schmitz F, et al. The Ras-RasGAP complex: structural basis for GTPase activation and its loss in oncogenic Ras mutants. Science. 1997;277(5324):333-338. https://doi.org/10.1126/science.277.5324.333",
     "doi": "10.1126/science.277.5324.333"
   },
   {
@@ -156,12 +156,12 @@
   },
   {
     "id": 32,
-    "text": "Loong HHF, Du N, Cheng C, Lin H, Guo J, Lin G, et al. KRAS G12C mutations in Asia: a landscape analysis of 11,951 Chinese tumor samples. Transl Lung Cancer Res. 2020;9(5):1759-1769. https://doi.org/10.21037/tlcr-20-455",
+    "text": "Loong HH, Du N, Cheng C, Lin H, Guo J, Lin G, et al. KRAS G12C mutations in Asia: a landscape analysis of 11,951 Chinese tumor samples. Transl Lung Cancer Res. 2020;9(5):1759-1769. https://doi.org/10.21037/tlcr-20-455",
     "doi": "10.21037/tlcr-20-455"
   },
   {
     "id": 33,
-    "text": "Ricciuti B, Alessi JV, Elkrief A, Wang X, Cortellini A, Li YY, et al. Dissecting the clinicopathologic, genomic, and immunophenotypic correlates of KRASG12D mutated non-small cell lung cancer. Ann Oncol. 2022;33(10):1029-1040. https://doi.org/10.1016/j.annonc.2022.07.005",
+    "text": "Ricciuti B, Alessi JV, Elkrief A, Wang X, Cortellini A, Li YY, et al. Dissecting the clinicopathologic, genomic, and immunophenotypic correlates of KRASG12D-mutated non-small-cell lung cancer. Ann Oncol. 2022;33(10):1029-1040. https://doi.org/10.1016/j.annonc.2022.07.005",
     "doi": "10.1016/j.annonc.2022.07.005"
   },
   {
@@ -181,7 +181,7 @@
   },
   {
     "id": 37,
-    "text": "Ricciuti B, Arbour KC, Lin JJ, Vajdi A, Vokes N, Hong L, et al. Diminished efficacy of programmed death-(ligand)1 inhibition in STK11-and KEAP1-mutant lung adenocarcinoma is affected by KRAS mutation status. J Thorac Oncol. 2022;17(3):399-410. https://doi.org/10.1016/j.jtho.2021.10.013",
+    "text": "Ricciuti B, Arbour KC, Lin JJ, Vajdi A, Vokes N, Hong L, et al. Diminished efficacy of programmed death-(ligand)1 inhibition in STK11- and KEAP1-mutant lung adenocarcinoma is affected by KRAS mutation status. J Thorac Oncol. 2022;17(3):399-410. https://doi.org/10.1016/j.jtho.2021.10.013",
     "doi": "10.1016/j.jtho.2021.10.013"
   },
   {
@@ -201,7 +201,7 @@
   },
   {
     "id": 41,
-    "text": "Ostrem JML, Shokat KM. Direct small-molecule inhibitors of KRAS: from structural insights to mechanism-based design. Nat Rev Drug Discov. 2016;15(11):771-785. https://doi.org/10.1038/nrd.2016.139",
+    "text": "Ostrem JM, Shokat KM. Direct small-molecule inhibitors of KRAS: from structural insights to mechanism-based design. Nat Rev Drug Discov. 2016;15(11):771-785. https://doi.org/10.1038/nrd.2016.139",
     "doi": "10.1038/nrd.2016.139"
   },
   {
@@ -221,7 +221,7 @@
   },
   {
     "id": 45,
-    "text": "Jänne PA, van den Heuvel MM, Barlesi F, Cobo M, Mazieres J, Crinò L, et al. Selumetinib plus docetaxel compared with docetaxel alone and progression-free survival in patients with KRAS-mutant advanced non-small cell lung cancer. JAMA. 2017;317(18):1844-1853. https://doi.org/10.1001/jama.2017.3438",
+    "text": "Jänne PA, van den Heuvel MM, Barlesi F, Cobo M, Mazieres J, Crinò L, et al. Selumetinib plus docetaxel compared with docetaxel alone and progression-free survival in patients with KRAS-mutant advanced non-small cell lung cancer: the SELECT-1 randomized clinical trial. JAMA. 2017;317(18):1844-1853. https://doi.org/10.1001/jama.2017.3438",
     "doi": "10.1001/jama.2017.3438"
   },
   {
@@ -241,7 +241,7 @@
   },
   {
     "id": 49,
-    "text": "Awad MM, Liu S, Rybkin II, Arbour KC, Dilly J, Zhu VW, et al. Acquired resistance to KRAS G12C inhibition in cancer. N Engl J Med. 2021;384(25):2382-2393. https://doi.org/10.1056/NEJMoa2105281",
+    "text": "Awad MM, Liu S, Rybkin II, Arbour KC, Dilly J, Zhu VW, et al. Acquired resistance to KRASG12C inhibition in cancer. N Engl J Med. 2021;384(25):2382-2393. https://doi.org/10.1056/NEJMoa2105281",
     "doi": "10.1056/NEJMoa2105281"
   },
   {
@@ -291,7 +291,7 @@
   },
   {
     "id": 59,
-    "text": "de Langen AJ, Johnson ML, Mazieres J, Dingemans AMC, Mountzios G, Pless M, et al. Sotorasib versus docetaxel for previously treated non-small-cell lung cancer with KRASG12C mutation: a randomised, open-label, phase 3 trial. Lancet. 2023;401(10378):733-746. https://doi.org/10.1016/S0140-6736(23)00221-0",
+    "text": "de Langen AJ, Johnson ML, Mazieres J, Dingemans AC, Mountzios G, Pless M, et al. Sotorasib versus docetaxel for previously treated non-small-cell lung cancer with KRASG12C mutation: a randomised, open-label, phase 3 trial. Lancet. 2023;401(10378):733-746. https://doi.org/10.1016/S0140-6736(23)00221-0",
     "doi": "10.1016/S0140-6736(23)00221-0"
   },
   {
@@ -311,7 +311,7 @@
   },
   {
     "id": 63,
-    "text": "Tabernero J, Kopetz S, Lee J, Corcoran RB, Hecht JR, Shen L, et al. LBA1 Second-line adagrasib plus cetuximab vs chemotherapy in patients with KRASG12C-mutated metastatic colorectal cancer: results from the KRYSTAL-10 trial. Ann Oncol. 2026;37:S1-S2. https://doi.org/10.1016/j.annonc.2026.06.005",
+    "text": "Tabernero J, Kopetz S, Lee J, Corcoran RB, Hecht JR, Shen L, et al. LBA1 Second-line adagrasib plus cetuximab vs chemotherapy in patients with KRASG12C-mutated metastatic colorectal cancer: results from the KRYSTAL-10 trial. Ann Oncol. 2026;37(Suppl 1):S1-S2. https://doi.org/10.1016/j.annonc.2026.06.005",
     "doi": "10.1016/j.annonc.2026.06.005"
   },
   {
@@ -326,7 +326,7 @@
   },
   {
     "id": 66,
-    "text": "National Institute for Health and Care Excellence. Adagrasib for previously treated KRAS G12C mutation-positive advanced non-small-cell lung cancer: draft guidance consultation [ID6339]. London: NICE; 2025. Available at: https://www.nice.org.uk/consultations/2949/1/committee-discussion (accessed 20 November 2026). Appraisal terminated 2 July 2025 (TA1076): https://www.nice.org.uk/guidance/ta1076",
+    "text": "National Institute for Health and Care Excellence. Adagrasib for previously treated KRAS G12C mutation-positive advanced non-small-cell lung cancer [ID6339]: draft guidance consultation, committee discussion. London: NICE; 2025. Available at: https://www.nice.org.uk/consultations/2949/1/committee-discussion (accessed 20 November 2026).",
     "doi": null
   },
   {
@@ -336,7 +336,7 @@
   },
   {
     "id": 68,
-    "text": "Attili I, Corvaja C, Trillo Aliaga P, Del Signore E, Spitaleri G, Passaro A, et al. Dealing with KRAS G12C inhibition in non-small cell lung cancer (nsclc)-biology, clinical results and future directions. Cancer Treat Rev. 2025;137:102957. https://doi.org/10.1016/j.ctrv.2025.102957",
+    "text": "Attili I, Corvaja C, Trillo Aliaga P, Del Signore E, Spitaleri G, Passaro A, et al. Dealing with KRAS G12C inhibition in non-small cell lung cancer (NSCLC) - biology, clinical results and future directions. Cancer Treat Rev. 2025;137:102957. https://doi.org/10.1016/j.ctrv.2025.102957",
     "doi": "10.1016/j.ctrv.2025.102957"
   },
   {
@@ -346,7 +346,7 @@
   },
   {
     "id": 70,
-    "text": "Yaeger R, Weiss J, Pelster MS, Spira AI, Barve M, Ou SHI, et al. Adagrasib with or without cetuximab in colorectal cancer with mutated KRAS G12C. N Engl J Med. 2023;388(1):44-54. https://doi.org/10.1056/NEJMoa2212419",
+    "text": "Yaeger R, Weiss J, Pelster MS, Spira AI, Barve M, Ou SI, et al. Adagrasib with or without cetuximab in colorectal cancer with mutated KRAS G12C. N Engl J Med. 2023;388(1):44-54. https://doi.org/10.1056/NEJMoa2212419",
     "doi": "10.1056/NEJMoa2212419"
   },
   {
@@ -401,7 +401,7 @@
   },
   {
     "id": 81,
-    "text": "Zhou Q, Meng X, Sun L, Huang D, Yang N, Yu Y, et al. Efficacy and safety of KRAS G12C inhibitor IBI351 monotherapy in patients with advanced NSCLC: results from a phase 2 pivotal study. J Thorac Oncol. 2024;19(12):1630-1639. https://doi.org/10.1016/j.jtho.2024.08.005",
+    "text": "Zhou Q, Meng X, Sun L, Huang D, Yang N, Yu Y, et al. Efficacy and safety of KRASG12C inhibitor IBI351 monotherapy in patients with advanced NSCLC: results from a phase 2 pivotal study. J Thorac Oncol. 2024;19(12):1630-1639. https://doi.org/10.1016/j.jtho.2024.08.005",
     "doi": "10.1016/j.jtho.2024.08.005"
   },
   {
@@ -451,7 +451,7 @@
   },
   {
     "id": 91,
-    "text": "Bond MJ, Chu L, Nalawansha DA, Li K, Crews CM. Targeted degradation of oncogenic KRAS G12C by VHL-recruiting PROTACs. ACS Cent Sci. 2020;6(8):1367-1375. https://doi.org/10.1021/acscentsci.0c00411",
+    "text": "Bond MJ, Chu L, Nalawansha DA, Li K, Crews CM. Targeted degradation of oncogenic KRASG12C by VHL-recruiting PROTACs. ACS Cent Sci. 2020;6(8):1367-1375. https://doi.org/10.1021/acscentsci.0c00411",
     "doi": "10.1021/acscentsci.0c00411"
   },
   {
@@ -466,7 +466,7 @@
   },
   {
     "id": 94,
-    "text": "Dingemans AMC, Syrigos K, Livi L, Paulus A, Kim SW, Chen Y, et al. Intracranial activity of sotorasib vs docetaxel in pretreated KRAS G12C-mutated advanced non-small cell lung cancer from a global, phase 3, randomized controlled trial. Lung Cancer. 2025;207:108683. https://doi.org/10.1016/j.lungcan.2025.108683",
+    "text": "Dingemans AC, Syrigos K, Livi L, Paulus A, Kim SW, Chen Y, et al. Intracranial activity of sotorasib vs docetaxel in pretreated KRAS G12C-mutated advanced non-small cell lung cancer from a global, phase 3, randomized controlled trial. Lung Cancer. 2025;207:108683. https://doi.org/10.1016/j.lungcan.2025.108683",
     "doi": "10.1016/j.lungcan.2025.108683"
   },
   {
@@ -496,7 +496,7 @@
   },
   {
     "id": 100,
-    "text": "Pant S, Wainberg ZA, Weekes CD, Furqan M, Huffman BM, Uronis HE, et al. Lymph-node-targeted, mKRAS-specific amphiphile vaccine in pancreatic and colorectal cancer: the phase 1 AMPLIFY-201 trial. Nat Med. 2024;30(2):531-542. https://doi.org/10.1038/s41591-023-02760-3",
+    "text": "Pant S, Wainberg ZA, Weekes CD, Furqan M, Kasi PM, Devoe CE, et al. Lymph-node-targeted, mKRAS-specific amphiphile vaccine in pancreatic and colorectal cancer: the phase 1 AMPLIFY-201 trial. Nat Med. 2024;30(2):531-542. https://doi.org/10.1038/s41591-023-02760-3",
     "doi": "10.1038/s41591-023-02760-3"
   },
   {
@@ -511,7 +511,7 @@
   },
   {
     "id": 103,
-    "text": "Watson JL, Juergens D, Bennett NR, Trippe BL, Yim J, Eisenach HE, et al. De novo design of protein structure and function with RFdiffusion. Nature. 2023;620(8001):1089-1100. https://doi.org/10.1038/s41586-023-06415-8",
+    "text": "Watson JL, Juergens D, Bennett NR, Trippe BL, Yim J, Eisenach HE, et al. De novo design of protein structure and function with RFdiffusion. Nature. 2023;620(7976):1089-1100. https://doi.org/10.1038/s41586-023-06415-8",
     "doi": "10.1038/s41586-023-06415-8"
   }
 ]

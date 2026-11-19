@@ -64,10 +64,10 @@
 <p>Approved (NMPA)</p>
 <p>Approved (NMPA)</p>
 <p>Phase I (completed)</p></td>
-<td><p>• Covalent adduct with Cys12; requires residual GTP hydrolysis to reach the GDP-bound state [5,6]</p>
+<td><p>• Covalent adduct with Cys12; requires intrinsic GTP hydrolysis to reach the GDP-bound state [5,6]</p>
 <p>• H95D/Q/R mutations confer resistance to adagrasib but not to sotorasib in vitro [49]</p>
 <p>• Divarasib was designed for higher potency and selectivity than first-generation inhibitors [10,51]</p>
-<p>• Adagrasib has a longer half-life and intracranial activity [9,50]</p></td>
+<p>• Adagrasib penetrates the central nervous system and has intracranial activity [50]</p></td>
 </tr>
 <tr>
 <td><p>Class II</p>
@@ -85,7 +85,7 @@
 <td><p>Phase I (terminated; formulation challenges)</p>
 <p>Preclinical</p>
 <p>Phase I (completed)</p></td>
-<td><p>• Sub-nanomolar affinity for GDP-bound KRAS G12D; preclinical activity in pancreatic and colorectal models [12]</p>
+<td><p>• Sub-nanomolar affinity for GDP-bound KRAS G12D; efficacy in a KRAS G12D-mutant xenograft model [12]</p>
 <p>• BI-2852 binds a switch I/II pocket and is not allele-selective [53]</p>
 <p>• Target occupancy depends on sustained drug exposure</p></td>
 </tr>

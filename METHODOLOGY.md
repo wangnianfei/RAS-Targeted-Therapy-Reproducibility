@@ -9,9 +9,9 @@ This file describes how each figure and table of the review was produced. Every 
 
 ## Figure 2 — RAS mutation prevalence and KRAS alleles
 
-- **Data:** MSK-IMPACT clinical sequencing cohort (Zehir et al., *Nat Med* 2017; 10,945 tumour samples), exported from cBioPortal (`data/cbioportal_mutations.json`, `data/cbioportal_sample_cancertype.json`).
+- **Data:** MSK-IMPACT clinical sequencing cohort (Zehir et al., *Nat Med* 2017; 10,945 tumour samples), exported from cBioPortal (`data/cbioportal_mutations.json`, `data/cbioportal_sample_cancertype.json`, `data/cbioportal_sample_cancertype_detailed.json`).
 - **Method:** `code/derive_figure2_data.py` counts samples with at least one *KRAS*, *NRAS* or *HRAS* **missense** mutation in seven tumour types (denominator: all sequenced samples of that type) and the distribution of KRAS missense mutations by allele (G12C, G12D, G12V, G12R, G13D, any Q61, other) in pancreatic cancer, colorectal cancer and NSCLC. Output: `pancancer_isoform_frequencies.csv`, `kras_allele_frequencies.csv`. `code/run_figure2.R` draws the two panels.
-- **Note:** tissue-based panel sequencing gives a lower *KRAS* prevalence in pancreatic cancer (73.5%) than the ~90% usually quoted, probably because of low tumour cellularity; the manuscript states this.
+- **Note:** pancreatic cancer is restricted to pancreatic adenocarcinoma (384 samples; *KRAS* 90.4%, matching the 90% reported by Zehir et al.). Earlier versions used the whole pancreatic group (502 samples, including neuroendocrine and acinar-cell tumours) and showed 73.5%, which the text wrongly attributed to low tumour cellularity. The cohort-wide RAS missense rate (17.8%) is written to `cohort_ras_rates.csv`; the TCGA PanCancer Atlas rate quoted in Section 2.2 (10.7% of 10,967 samples) comes from `code/tcga_ras_rate.py`.
 
 ## Table 1 — seven phase III trials
 

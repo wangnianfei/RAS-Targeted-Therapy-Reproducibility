@@ -11,7 +11,7 @@
 ^5 Department of Radiation Therapy, Anhui Chest Hospital, Hefei, China
 
 *\*Correspondence: Shanghu Wang, MD, PhD. Email: wangshanghu@mail.ustc.edu.cn  
-Word Count: Abstract 250 words \| Main Text 6,364 words (excluding abstract, tables, figure legends and references) \| 5 Figures, 1 Table, 103 References*
+Word Count: Abstract 250 words \| Main Text 6,444 words (excluding abstract, tables, figure legends and references) \| 5 Figures, 1 Table, 103 References*
 
 **要点**
 
@@ -91,7 +91,7 @@ RAS 基因激活突变是人类肿瘤最常见的致癌驱动事件之一：约 
 
 **2.1 GTP 酶二元循环与激活的结构基础**
 
-RAS 蛋白作为二元分子开关，受鸟嘌呤核苷酸交换因子（GEF）和 GTP 酶激活蛋白（GAP）调控。人类 RAS 家族包括三个基因（*KRAS*、*NRAS* 和 *HRAS*），编码高度保守的 21 kDa 小 GTP 酶 \[2\]。各亚型均含催化 G 结构域（第 1–166 位残基）及柔性 C 端高变区，后者经 CAAX 介导的法尼基化与羧甲基化锚定于质膜 \[2\]。G 结构域含两个动态环区，即开关 I（第 30–38 位残基）和开关 II（第 59–76 位残基），决定核苷酸结合与效应蛋白结合（图 1a）\[17\]。生理状态下，SOS1 与 SOS2 催化鸟苷二磷酸（GDP）解离，使胞内丰富的鸟苷三磷酸（GTP）迅速结合，诱导出与下游效应蛋白结合的刚性闭合构象 \[2,18,19\]。相反，NF1 等 GAP 通过将"精氨酸指"插入催化位点，使内在 GTP 水解加速五个数量级以上（&gt;10^5 倍），恢复失活的 GDP 结合态 \[20\]。第 12、13 或 61 位密码子的致癌错义突变在空间上阻碍 GAP 插入并消除内在 GTP 水解，使蛋白持续处于 GTP 结合的致癌状态。
+RAS 蛋白作为二元分子开关，受鸟嘌呤核苷酸交换因子（GEF）和 GTP 酶激活蛋白（GAP）调控。人类 RAS 家族包括三个基因（*KRAS*、*NRAS* 和 *HRAS*），编码高度保守的 21 kDa 小 GTP 酶 \[2\]。各亚型均含催化 G 结构域（第 1–166 位残基）及柔性 C 端高变区，后者经 CAAX 介导的法尼基化与羧甲基化锚定于质膜 \[2,4\]。G 结构域含两个动态环区，即开关 I（第 30–38 位残基）和开关 II（第 60–76 位残基），决定核苷酸结合与效应蛋白结合（图 1a）\[3,17\]。生理状态下，SOS1 与 SOS2 催化鸟苷二磷酸（GDP）解离，使胞内丰富的鸟苷三磷酸（GTP）迅速结合，诱导出与下游效应蛋白结合的刚性闭合构象 \[2,18,19\]。相反，NF1 等 GAP 通过将"精氨酸指"插入催化位点，使内在 GTP 水解加速约五个数量级（约 10^5 倍），恢复失活的 GDP 结合态 \[20\]。第 12、13 或 61 位密码子的致癌错义突变损害 GAP 介导的 GTP 水解，使突变蛋白累积于活性 GTP 结合态 \[20\]。
 
 活性 GTP 结合态 RAS 主要经 RAF–MEK–ERK（MAPK）和 PI3K–AKT–mTOR 级联传递信号，次要效应蛋白包括 RALGDS、PLCε 及促凋亡的 RASSF1A \[2,3,21\]。生理状态下，活化的 ERK 磷酸化上游受体酪氨酸激酶、SOS1 和 CRAF，形成强效负反馈环以抑制通路活性 \[21,22\]。抑制 RAS 或其效应蛋白会解除这一反馈，导致 EGFR、MET 和 HER2 等受体酪氨酸激酶（RTK）反弹激活，进而促进耐药（见 5.2 节）\[22,23\]。
 
@@ -105,11 +105,11 @@ CYPA，亲环素 A；GDP，鸟苷二磷酸；GMPPNP，鸟苷 5′-\[β,γ-亚氨
 
 **2.2 实体瘤中的分子流行病学与等位基因特异性分布**
 
-观察到的 RAS 突变频率随临床分期、数据库构成及组织取样时间而异。在癌症基因组图谱（TCGA）涵盖 32 种癌症的 10,967 例手术切除原发肿瘤中，RAS 总突变率为 10.7% \[24\]；而针对晚期或转移性实体瘤的临床测序 panel 一致报告 17%–22% 的总突变率，反映了 RAS 驱动肿瘤的侵袭性生物学行为与转移倾向 \[1,25\]。三种亚型中，*KRAS* 约占全部 RAS 改变的 75%，其次为 *NRAS*（17%）和 *HRAS*（8%）\[1\]。
+观察到的 RAS 突变频率随临床分期、数据库构成及组织取样时间而异。在 TCGA 泛癌图谱中，来自 32 项研究、以未经治疗原发肿瘤为主的 10,967 份样本中有 10.7% 携带 KRAS、NRAS 或 HRAS 突变（基于泛癌图谱数据的 cBioPortal 查询 \[24\]）。汇总多个突变数据库的估计更高，约为 19%–25% 的肿瘤 \[1,25\]；在 MSK-IMPACT 晚期肿瘤临床测序队列的 10,945 份样本中，17.8% 携带 RAS 错义突变 \[26\]。这些估计的差异主要源于各数据集所含的瘤种构成 \[1\]。三种亚型中，KRAS 约占 RAS 突变肿瘤的 75%，其次为 NRAS（17%）和 HRAS（7%）\[1\]。
 
-RAS 突变的器官分布既反映组织特异性表达模式，也反映不同突变等位基因的生化特性。*KRAS* 改变以消化道与肺腺癌为主，约见于 90% 的胰腺导管腺癌、45%–50% 的结直肠癌和 30%–35% 的肺腺癌 \[1,25\]；在一个大型组织临床测序队列中，胰腺癌的相应频率较低（73.5%），可能与胰腺标本肿瘤细胞含量低有关（图 2a）\[26\]。*NRAS* 突变主要见于皮肤黑色素瘤（20%–25%）、急性髓系白血病（10%–15%）和甲状腺癌 \[1,25\]。*HRAS* 突变总体较少（1%–2%），但富集于头颈部鳞状细胞癌、膀胱尿路上皮癌和涎腺肿瘤 \[1,27\]。第 12、13 位密码子突变通过空间位阻破坏 GAP 结合界面，而第 61 位密码子突变直接扰乱 GTP 水解所需的催化水分子，导致更高的基础 GTP 负载和更强的致癌能力。
+RAS 突变的器官分布既反映组织特异性表达模式，也反映不同突变等位基因的生化特性。*KRAS* 改变以消化道与肺腺癌为主，约见于 90% 的胰腺导管腺癌、45%–50% 的结直肠癌和 30%–35% 的肺腺癌 \[1,25\]；MSK-IMPACT 队列中的频率与之相近（胰腺导管腺癌 90.4%、结直肠癌 43.1%、NSCLC 26.9%；图 2a）\[26\]。*NRAS 突变主要见于皮肤黑色素瘤（约 17%）、急性髓系白血病（约 14%）和甲状腺癌 \[1,25\]。HRAS* 突变总体较少（1%–2%），但富集于头颈部鳞状细胞癌、膀胱尿路上皮癌和涎腺肿瘤 \[1,27\]。第 12、13 位密码子突变通过空间位阻破坏 GAP 结合界面，而第 61 位密码子突变直接扰乱 GTP 水解所需的催化水分子。
 
-不同肿瘤的等位基因分布差异显著，受组织谱系生物学与环境暴露影响。在胰腺导管腺癌中，KRAS G12D 约占突变的 40%，其次为 G12V（32%）、G12R（16%），G12C 罕见（1%–2%）（图 2b）\[28,29\]。结直肠癌同样以 G12D（30%）和 G12V（23%）为主，G12C 约占 8%–10% \[1,30\]。相比之下，非小细胞肺癌具有独特的烟草致癌物特征（G→T 颠换），使 G12C 成为最主要的变异（约占 *KRAS* 突变的 40%），其次为 G12V（18%）和 G12D（14%）\[1,31–33\]。皮肤黑色素瘤中，*NRAS* 第 61 位密码子突变（以 Q61R 和 Q61K 为主）约占全部 RAS 改变的 80%，*KRAS* 与 *HRAS* 很少突变 \[1,25\]。
+不同肿瘤的等位基因分布差异显著，受组织谱系生物学与环境暴露影响。在胰腺导管腺癌中，KRAS G12D 约占 KRAS 突变的 41%，其次为 G12V（约 32%）和 G12R（13%–16%），G12C 罕见（约 2%）（图 2b）\[26,28,29\]。在转移性结直肠癌中，KRAS 第 2 外显子突变见于 37.8% 的患者，扩展 RAS 突变和非典型 RAS 突变另分别占 9.5% 和 1.2% \[30\]；在 KRAS 错义突变中以 G12D（28%）、G12V（20%）和 G13D（17%）为主，G12C 约占 7%（约占全部结直肠癌的 3%）（图 2b）\[26\]。相比之下，在非小细胞肺癌中，烟草致癌物引起的 G→T 颠换使 G12C 成为最常见的变异 \[1\]，在西方和中国队列中约占 KRAS 突变的 30%–43%，其次为 G12V 和 G12D（各约 13%–19%）（图 2b）\[26,31–33\]。皮肤黑色素瘤中，RAS 突变以 NRAS 为主，KRAS 与 HRAS 很少突变 \[1\]。
 
 共存改变进一步增加了生物学与临床异质性。在 *KRAS* 突变 NSCLC 中，常见共突变包括 *TP53*（约 40%）、*STK11*（约 30%）和 *KEAP1*（20%–25%），据此可划分不同亚组 \[34,35\]。*KRAS* 与 *TP53* 共突变（KP）的肿瘤往往肿瘤突变负荷高、免疫浸润丰富，对免疫检查点抑制剂较敏感 \[34,36\]。*KRAS* 与 *STK11* 共突变（KL）的肿瘤表现为 STING 沉默、免疫"冷"微环境及对抗 PD-(L)1 单药的原发耐药 \[35,37,38\]。*KEAP1* 缺失常与 *STK11* 缺失共存，可激活 NRF2，并与 KRAS G12C 抑制剂获益期缩短相关 \[39,40\]。
 
@@ -117,7 +117,7 @@ RAS 突变的器官分布既反映组织特异性表达模式，也反映不同�
 
 **图 2. 临床测序队列中的 RAS 突变率与 KRAS 等位基因谱。**
 
-数据来自 MSK-IMPACT 队列（10,945 份晚期肿瘤患者样本）\[26\]，经 cBioPortal 获取，仅统计错义突变。**a，** 七种肿瘤中携带 *KRAS*、*NRAS* 或 *HRAS* 错义突变的样本比例（样本数：胰腺癌 502、结直肠癌 1,007、NSCLC 1,668、子宫内膜癌 218、黑色素瘤 365、甲状腺癌 231、膀胱癌 423）。组织 panel 测序低估了胰腺癌的 *KRAS* 突变率，文献报道通常约为 90% \[1,25\]。**b，** 胰腺癌（373 个突变）、结直肠癌（443 个）和 NSCLC（456 个）中 KRAS 错义突变的等位基因分布；Q61X 包括所有第 61 位密码子置换。数据与代码见研究仓库。
+数据来自 MSK-IMPACT 队列（10,945 份晚期肿瘤患者样本）\[26\]，经 cBioPortal 获取，仅统计错义突变。**a，** 七种肿瘤中携带 *KRAS*、*NRAS* 或 *HRAS* 错义突变的样本比例（样本数：胰腺导管腺癌 384、结直肠癌 1,007、NSCLC 1,668、子宫内膜癌 218、黑色素瘤 365、甲状腺癌 231、膀胱癌 423）。**b， 胰腺导管腺癌（351 个突变）**、结直肠癌（443 个）和 NSCLC（456 个）中 KRAS 错义突变的等位基因分布；Q61X 包括所有第 61 位密码子置换。数据与代码见研究仓库。
 
 CRC，结直肠癌；NSCLC，非小细胞肺癌；PDAC，胰腺导管腺癌。
 
@@ -125,19 +125,19 @@ CRC，结直肠癌；NSCLC，非小细胞肺癌；PDAC，胰腺导管腺癌。
 
 **3.1 通过发现开关 II 口袋突破"不可成药"范式**
 
-数十年来，直接靶向 RAS 受制于三个生物物理障碍。第一，RAS 与 GDP、GTP 的结合亲和力极高，解离常数处于皮摩尔级（Kd ~10^-11 至 10^-12 M），而胞内 GTP 浓度很高（0.1–0.5 mM）\[3,41\]。这使常规小分子无法在活性位点进行竞争性抑制，与竞争微摩尔亲和力 ATP 的蛋白激酶抑制剂形成鲜明对比 \[41\]。第二，RAS G 结构域表面异常光滑而刚性，缺乏可成药酶活性位点常见的深疏水裂隙 \[3,41\]。第三，活性 GTP 结合态与失活 GDP 结合态的结构差异主要局限于两个动态开关区，靶向失活态的化合物必须与迅速为蛋白重新装载 GTP 的交换因子竞争 \[6\]。
+数十年来，直接靶向 RAS 受制于三个生物物理障碍。第一，RAS 以皮摩尔级亲和力结合 GDP 和 GTP，而胞内 GDP、GTP 浓度处于毫摩尔级 \[3,41\]。这使常规小分子无法在活性位点进行竞争性抑制，与竞争微摩尔亲和力 ATP 的蛋白激酶抑制剂形成鲜明对比 \[3,41\]。第二，RAS G 结构域表面异常光滑而刚性，缺乏可成药酶活性位点常见的深疏水裂隙 \[3,41\]。第三，活性 GTP 结合态与失活 GDP 结合态的结构差异主要局限于两个动态开关区，靶向失活态的化合物必须与迅速为蛋白重新装载 GTP 的交换因子竞争 \[6\]。
 
 绕开直接核苷酸竞争的早期策略未能带来有意义的临床获益。法尼基转移酶抑制剂（如 tipifarnib）试图阻断翻译后 CAAX 脂质修饰、使 RAS 脱离细胞膜；然而 KRAS 和 NRAS 可经香叶基香叶基转移酶 I 进行替代性异戊二烯化，在临床试验中逃逸了抑制 \[3,42\]。同样，以单药抑制下游效应激酶（RAF、MEK、ERK 或 PI3K）疗效有限，且受制于快速的反馈性通路再激活及抑制正常组织必需信号所致的剂量限制性毒性 \[43–45\]。
 
-2013 年开关 II 变构口袋的发现使直接抑制 RAS 成为可能。Ostrem 与 Shokat 解析了 GDP 结合态 KRAS(G12C) 的晶体结构，揭示开关 II 与中央 β 折叠（β1–β3）之间存在一个诱导性浅疏水空腔（即 S-IIP），该空腔在活性 GTP 结合态 RAS 中不存在（图 1a）\[5\]。变构小分子占据开关 II 口袋后，将开关 I 与开关 II 锁定于失活构象，使核苷酸交换平衡偏向 GDP 结合态并消除效应蛋白结合 \[5,46\]。关键在于，G12D 或 G12V 等致癌突变消除了内在 GTP 水解，而 KRAS(G12C) 中的突变半胱氨酸保留了残余的内在 GTP 酶活性，使蛋白能循环经过短暂的 GDP 结合态，从而被 S-IIP 小分子共价捕获 \[6,47\]。
+2013 年开关 II 变构口袋的发现使直接抑制 RAS 成为可能。Ostrem 与 Shokat 解析了 GDP 结合态 KRAS(G12C) 的晶体结构，揭示开关 II 与中央 β 折叠（β1–β3）之间存在一个诱导性浅疏水空腔（即 S-IIP），该空腔在活性 GTP 结合态 RAS 中不存在（图 1a）\[5\]。变构小分子占据开关 II 口袋后，将开关 I 与开关 II 锁定于失活构象，使核苷酸交换平衡偏向 GDP 结合态并消除效应蛋白结合 \[5,46\]。关键在于，KRAS(G12C) 保留了接近野生型 KRAS 的内在 GTP 酶活性，而 G12V 等其他常见突变保留得少得多，因此 KRAS(G12C) 会循环经过 GDP 结合态，从而被 S-IIP 小分子共价捕获 \[6,47\]。
 
 **3.2 当代直接 RAS 抑制剂的四类作用机制**
 
-第一类为专门针对 KRAS(G12C) 设计的等位基因特异性 GDP 结合态（OFF 态）共价抑制剂（图 1a，详见附表 S1）。sotorasib 与 adagrasib 均结合于开关 II 口袋并与突变的 Cys12 形成共价加合物，但二者化学骨架与口袋结合方式不同 \[48,49\]。sotorasib 具有丙烯酰胺取代的喹唑啉酮核心，伸入由 His95、Tyr96 和 Gln99 围成的诱导性亚口袋，但不与 His95 形成强的直接相互作用 \[49\]。因此，His95 位二次突变（如 H95D、H95Q 或 H95R）一般不影响 sotorasib 结合，而 adagrasib 与 His95 和 Tyr96 均形成直接氢键与范德华接触 \[49\]。adagrasib 的终末消除半衰期也明显更长（约 23 小时，sotorasib 约 5 小时），分布容积更大，且已证实可透过血脑屏障并具有持久的颅内活性 \[9,50\]。
+第一类为专门针对 KRAS(G12C) 设计的等位基因特异性 GDP 结合态（OFF 态）共价抑制剂（图 1a，详见附表 S1）。sotorasib 与 adagrasib 均结合于开关 II 口袋并与突变的 Cys12 形成共价加合物，但二者与口袋的结合方式不同 \[48,49\]。晶体结构显示，Arg68 和 Tyr96 与两种药物均有较强相互作用，而 His95 与 adagrasib 直接接触，与 sotorasib 的相互作用可能较弱 \[49\]。因此，His95 位二次突变（如 H95D、H95Q 或 H95R）对 adagrasib 结合的破坏大于对 sotorasib 结合的破坏 \[49\]。adagrasib 还可进入中枢神经系统，并在未经治疗的脑转移患者中显示颅内活性 \[50\]。
 
 第二代共价 G12C 抑制剂旨在提高效力、选择性和组织分布（附表 S1）。例如，divarasib 的体外效力为 sotorasib 和 adagrasib 的 5–20 倍，选择性最高达 50 倍 \[10,51\]，且共价结合更快，可在更低浓度下抑制 ERK 磷酸化 \[51\]。此外，olomorasib 在首次人体研究中对未经治疗的活动性脑转移产生了颅内缓解；由于中枢神经系统是常见的进展部位，这一发现具有临床意义 \[52\]。
 
-第二类为非共价抑制剂，可将直接抑制拓展至缺乏反应性半胱氨酸的 G12C 以外等位基因（附表 S1）。*KRAS* G12D 是人类肿瘤中最常见的致癌变异，其天冬氨酸残基的羧基侧链缺乏半胱氨酸那样的亲核性，无法采用常规丙烯酰胺类共价连接 \[12\]。MRTX1133 等早期非共价抑制剂通过与 Asp12 及周围残基形成紧密的离子键、氢键和盐桥网络占据开关 II 口袋 \[12\]。MRTX1133 对 GDP 结合态 KRAS(G12D) 具有亚纳摩尔级亲和力，并在胰腺癌和结直肠癌临床前模型中显示选择性抗肿瘤活性 \[12\]。BI-2852 等其他非共价化合物结合开关 I 与开关 II 之间的口袋，不具等位基因选择性 \[53\]。但由于非共价抑制剂不形成不可逆加合物，其靶点占有率持续依赖于全身药物暴露，因此需要持续的药代动力学覆盖以防通路迅速再激活。
+第二类为非共价抑制剂，可将直接抑制拓展至缺乏反应性半胱氨酸的 G12C 以外等位基因（附表 S1）。*KRAS* G12D 是人类肿瘤中最常见的致癌变异，其天冬氨酸残基的羧基侧链缺乏半胱氨酸那样的亲核性，无法采用常规丙烯酰胺类共价连接 \[12\]。MRTX1133 等早期非共价抑制剂通过与 Asp12 及周围残基形成紧密的离子键、氢键和盐桥网络占据开关 II 口袋 \[12\]。MRTX1133 对 GDP 结合态 KRAS(G12D) 具有亚纳摩尔级亲和力，并在 KRAS G12D 突变异种移植模型中显示疗效 \[12\]。BI-2852 等其他非共价化合物结合开关 I 与开关 II 之间的口袋，不具等位基因选择性 \[53\]。但由于非共价抑制剂不形成不可逆加合物，其靶点占有率持续依赖于全身药物暴露，因此需要持续的药代动力学覆盖以防通路迅速再激活。
 
 第三类为靶向活性 GTP 结合态（ON 态）构象的三元复合物抑制剂（图 1b，附表 S1）。这些小分子先与丰富的伴侣蛋白亲环素 A（CYPA）结合形成复合界面，药物–CYPA 复合物再结合于 GTP 结合态 RAS 的开关 I 与开关 II 旁，在无需置换 GTP 的情况下从空间上阻断效应蛋白（如 RAF）结合 \[13,54\]。daraxonrasib（RMC-6236）及其临床前类似物 RMC-7977 以非共价方式结合；由于结合界面高度保守，二者可抑制多种活性 RAS 亚型（KRAS、NRAS 和 HRAS）、多种第 12、13 位密码子变异以及野生型 RAS \[13,55\]。突变选择性三元复合物抑制剂还会与突变残基形成共价键：elironrasib（RMC-6291）作用于 KRAS G12C 的 Cys12 \[54\]，zoldonrasib（RMC-9805）作用于 KRAS G12D 的 Asp12，该残基无法以常规丙烯酰胺化学靶向 \[56\]。由于 multi-RAS 选择性抑制剂也会抑制正常组织中的野生型 RAS 活性，其治疗窗取决于审慎的剂量选择 \[55\]。
 
@@ -346,7 +346,7 @@ CRC，结直肠癌；NSCLC，非小细胞肺癌；PDAC，胰腺导管腺癌。
 
 III 期 KRYSTAL-12 试验在 453 例经治 *KRAS* G12C NSCLC 患者中比较了 adagrasib 与多西他赛，证实了直接 G12C 抑制的临床活性（表 1、图 3a）\[60\]。adagrasib 较多西他赛显著改善 PFS（中位 5.5 vs 3.8 个月；HR 0.58，95% CI 0.45–0.76；p &lt; 0.0001）。adagrasib 组 ORR 为 31.9%，多西他赛组为 9.2%（比值比 4.68；p &lt; 0.0001），中位缓解持续时间分别为 8.3 个月和 5.4 个月。
 
-KRYSTAL-12 的总生存数据在首次报告时尚不成熟 \[60\]，截至本综述检索截止日期仍未发表最终总生存分析。应 FDA 要求修订方案后，多西他赛组患者可在疾病进展时交叉接受 adagrasib，约 29% 的患者实际交叉 \[66\]，这可能削弱最终的生存差异。adagrasib 还具有颅内活性，与其在临床前模型中可透过血脑屏障一致 \[50\]。在 II 期 KRYSTAL-1 试验中，adagrasib 单药在未经治疗的中枢神经系统转移患者中颅内 ORR 为 42%（95% CI 20.3%–66.5%），中位颅内 PFS 为 5.4 个月 \[9,50\]，对脑转移的处理具有参考价值 \[68\]。
+KRYSTAL-12 的总生存数据在首次报告时尚不成熟 \[60\]，截至本综述检索截止日期仍未发表最终总生存分析。应 FDA 要求修订方案后，多西他赛组患者可在疾病进展时交叉接受 adagrasib，约 29% 的患者实际交叉 \[66\]，这可能削弱最终的生存差异。adagrasib 还具有颅内活性，与其在临床前模型中可透过血脑屏障一致 \[50\]。在 KRYSTAL-1 试验的 Ib 期队列中，adagrasib 单药在未经治疗的中枢神经系统转移患者中颅内 ORR 为 42%（95% CI 20.3%–66.5%），中位颅内 PFS 为 5.4 个月 \[50\]，对脑转移的处理具有参考价值 \[68\]。
 
 随机 III 期 Krascendo 1 试验首次对直接 RAS 抑制剂进行了头对头比较。该试验在 338 例经治 *KRAS* G12C 突变晚期 NSCLC 患者中，比较了第二代共价抑制剂 divarasib（400 mg 每日一次）与研究者选择的第一代 KRAS G12C 抑制剂（sotorasib 或 adagrasib）（167 vs 171 例；对照组 156 例接受 sotorasib，15 例接受 adagrasib）（表 1、图 3）\[61\]。divarasib 设计上与开关 II 口袋更契合，体外效力约为第一代化合物的 5–20 倍 \[10,51\]。divarasib 达到主要终点，经盲态独立中心评审的 PFS 显著延长（中位 9.8 vs 5.7 个月；HR 0.58，95% CI 0.44–0.76；p &lt; 0.001），确认的 ORR 提高（58.4% vs 32.3%），中位缓解持续时间更长（11.9 vs 6.9 个月）\[61\]。在首次期中分析中，divarasib 还显著延长了总生存期（中位 17.7 vs 12.0 个月；HR 0.56，95% CI 0.41–0.78；p &lt; 0.001），3–4 级治疗相关不良事件更少（24.6% vs 34.5%）\[61\]。这些结果与"更深、更持久的靶点抑制改善临床结局"的假说一致，但该试验并非为检验此机制而设计。由于对照组接受的是有效的 KRAS G12C 抑制剂而非多西他赛，其生存获益不能外推至与化疗的比较。
 
@@ -390,7 +390,7 @@ III 期 RASolute 302 试验在转移性胰腺导管腺癌中为 multi-RAS(ON) �
 
 注册试验的设计已根据早期研究的方法学教训不断演进。早期 III 期试验（如 CodeBreaK 200）采用以多西他赛为有效对照的传统两臂随机设计，引入了开放标签导致的脱落偏倚，并允许进展后交叉，从而模糊了 OS 终点 \[59\]。较新的试验限制了进展后交叉，例如 RASolute 302 不允许交叉 \[58\]。此外，部分 III 期试验（如 KRYSTAL-10 和 RASolute 302）采用 PFS 和 OS 双主要终点，体现了监管机构对生存验证的期望 \[58,63\]。
 
-监管审批路径的地区差异影响直接 RAS 抑制剂在全球的可及性（附表 S2）。sotorasib 和 adagrasib 先后获得美国 FDA 加速批准和欧洲药品管理局（EMA）有条件上市许可，但在确证性试验结果公布后监管走向出现分歧。2023 年 10 月肿瘤药物咨询委员会会议后，FDA 未授予 sotorasib 完全批准；而在欧盟，其有条件上市许可于 2024 年 11 月获续期，并在产品信息中加入 CodeBreaK 200 结果 \[79\]。在中国，国家药品监督管理局（NMPA）在附条件批准框架下批准了 garsorasib、fulzerasib 和 glecirasib 等国产 G12C 抑制剂，反映了快速的药物研发与独特的商业生态 \[11,80,81\]。
+监管审批路径的地区差异影响直接 RAS 抑制剂在全球的可及性（附表 S2）。sotorasib 和 adagrasib 先后获得美国 FDA 加速批准和欧洲药品管理局（EMA）有条件上市许可，但在确证性试验结果公布后监管走向出现分歧。2023 年 10 月肿瘤药物咨询委员会会议后，FDA 未授予 sotorasib 完全批准；而在欧盟，其有条件上市许可于 2024 年 11 月获续期，并在产品信息中加入 CodeBreaK 200 结果 \[79\]。在中国，国家药品监督管理局（NMPA）附条件批准了 garsorasib、fulzerasib（IBI351）和 glecirasib 等国产 G12C 抑制剂，各自以经治 NSCLC 中的单臂 II 期试验为依据 \[11,80,81\]。
 
 在 367 项直接靶向 RAS 的试验中，产业界为 256 项（69.8%）的主要申办方，并主导了全部 43 项 2/3 期或 3 期试验。学术中心、协作组和政府机构主导其余 111 项（30.2%），其中 54 项为 2 期或更后期试验，71 项检验 KRAS G12C 抑制剂。
 
@@ -404,9 +404,9 @@ RAS(ON)，活性 GTP 结合态 RAS；SHP2，含 Src 同源区 2 结构域的磷�
 
 **5.2 获得性耐药机制与多模式应对策略**
 
-获得性耐药限制了直接 RAS 抑制的疗效持续时间，单药试验的中位缓解持续时间很少超过 6–11 个月 \[59,60,62\]。对基线与进展时配对样本的基因组分析显示，耐药源于靶内 *KRAS* 改变、旁路通路再激活和组织学改变（图 5，附表 S3/附图 S1）\[49,82–85\]。在 38 例 adagrasib 获得性耐药患者中，4 例（11%）检出开关 II 口袋突变（R68S、H95D/Q/R 和 Y96C），7 例检出任一获得性 *KRAS* 改变，这些突变直接影响药物结合（图 5）\[49\]；在 43 例接受 sotorasib 治疗的患者中，27 例出现治疗中新发改变，涉及 *KRAS*、*NRAS*、*BRAF*、*EGFR* 和 *FGFR2* 等 \[83\]。adagrasib 深入诱导性亚口袋，与 His95 形成直接氢键和芳香相互作用；因此 His95 位二次突变（包括 H95D、H95Q 和 H95R）破坏 adagrasib 结合，在体外导致对 adagrasib 而非 sotorasib 的耐药，与 sotorasib–His95 相互作用较弱一致 \[49\]。然而，每例临床 H95 突变均伴随其他预期对两药均耐药的改变，因此这种不对称性本身不足以支持从 adagrasib 换用 sotorasib \[49\]。相比之下，Y96C 对 adagrasib 和 sotorasib 均耐药，adagrasib 治疗后也有 Y96D 突变的报道 \[49\]。R68S 同样对两药耐药；深度突变扫描还发现口袋外增强核苷酸交换的突变（如 G13D、A59S 和 A146P），其所致耐药程度较轻 \[49\]。
+获得性耐药限制了直接 RAS 抑制的疗效持续时间，单药试验的中位缓解持续时间很少超过 6–11 个月 \[59,60,62\]。对基线与进展时配对样本的基因组分析显示，耐药源于靶内 *KRAS* 改变、旁路通路再激活和组织学改变（图 5，附表 S3/附图 S1）\[49,82–85\]。在 38 例 adagrasib 获得性耐药患者中，4 例（11%）检出开关 II 口袋突变（R68S、H95D/Q/R 和 Y96C），9 例检出获得性 KRAS 突变或扩增，这些突变直接影响药物结合（图 5）\[49\]；在 43 例接受 sotorasib 治疗的患者中，27 例出现治疗中新发改变，涉及 *KRAS*、*NRAS*、*BRAF*、*EGFR* 和 *FGFR2* 等 \[83\]。adagrasib 深入诱导性亚口袋，与 His95 形成直接氢键和芳香相互作用；因此 His95 位二次突变（包括 H95D、H95Q 和 H95R）破坏 adagrasib 结合，在体外导致对 adagrasib 而非 sotorasib 的耐药，与 sotorasib–His95 相互作用较弱一致 \[49\]。然而，每例临床 H95 突变均伴随其他预期对两药均耐药的改变，因此这种不对称性本身不足以支持从 adagrasib 换用 sotorasib \[49\]。相比之下，Y96C 对 adagrasib 和 sotorasib 均耐药，adagrasib 治疗后也有 Y96D 突变的报道 \[49\]。R68S 同样对两药耐药；深度突变扫描还发现口袋外增强核苷酸交换的突变（如 G13D、A59S 和 A146P），其所致耐药程度较轻 \[49\]。
 
-靶外机制通过平行或下游通路恢复信号，绕过 RAS 抑制（图 5）\[49,82,83\]。KRAS 上游的获得性改变包括 *MET* 扩增（在 38 例中有 2 例为唯一检出机制）以及涉及 *ALK*、*RET*、*BRAF*、*RAF1* 和 *FGFR3* 的致癌融合 \[49\]；sotorasib 治疗后出现了 *EGFR* 和 *FGFR2* 改变 \[83\]。在 MAPK 级联下游，获得性 *BRAF* V600E、*NRAS* Q61K 和 *MAP2K1*（MEK1）突变（K57N、K57T 及框内缺失）可不依赖 KRAS G12C 重新激活 ERK 信号 \[49\]；sotorasib 治疗后亦观察到 *NRAS*、*BRAF* 和 *MRAS* 热点突变 \[83\]。总体而言，adagrasib 治疗后 38 例中有 14 例（37%）检出 *KRAS* 以外的 RTK–RAS 通路改变 \[49\]。此外，9 例有配对活检的肺腺癌患者中 2 例发生向鳞状细胞癌的组织学转化，且未发现可识别的基因组机制，提示非遗传性谱系改变可降低对 KRAS 的依赖 \[49\]。
+靶外机制通过平行或下游通路恢复信号，绕过 RAS 抑制（图 5）\[49,82,83\]。KRAS 上游的获得性改变包括 *MET* 扩增（在 38 例中有 2 例为唯一检出机制）以及涉及 *ALK*、*RET*、*BRAF*、*RAF1* 和 *FGFR3* 的致癌融合 \[49\]；sotorasib 治疗后出现了 *EGFR* 和 *FGFR2* 改变 \[83\]。在 MAPK 级联下游，获得性 *BRAF* V600E、*NRAS* Q61K 和 *MAP2K1*（MEK1）突变（K57N、K57T 及框内缺失）可不依赖 KRAS G12C 重新激活 ERK 信号 \[49\]；sotorasib 治疗后亦观察到 *NRAS*、*BRAF* 和 *MRAS* 热点突变 \[83\]。总体而言，adagrasib 治疗后 38 例中有 14 例（37%）检出 *KRAS* 以外的 RTK–RAS 通路改变 \[49\]。此外，进展时再次组织活检的 10 例患者（其中 9 例为 NSCLC）中有 2 例发生由腺癌向鳞状细胞癌的组织学转化，且未发现可识别的基因组机制，提示非遗传性谱系改变可降低对 KRAS 的依赖 \[49\]。
 
 <img src="media/image5.png" style="width:6.4in;height:4.26667in" />
 
@@ -430,9 +430,9 @@ CRC，结直肠癌；EGFR，表皮生长因子受体；GEF，鸟嘌呤核苷酸�
 
 RAS 靶向治疗的未来进展取决于扩大抑制范围、延长抑制持续时间的化学生物学进步。第一，针对非 G12C 等位基因的抑制剂是优先方向，因为在 RAS 突变肿瘤中 KRAS G12D、G12V 和 G12R 远比 G12C 常见 \[1,28\]。daraxonrasib 在胰腺癌中的结果表明，multi-RAS(ON) 三元复合物抑制剂无需共价连接半胱氨酸即可在多种 *KRAS* 突变中带来有临床意义的生存改善 \[58\]。第二，同时靶向突变型和野生型 RAS 的 pan-RAS 抑制剂有望解决未被靶向的同源蛋白介导的代偿性反馈，前提是能通过选择性给药方案或肿瘤特异性递送维持治疗指数 \[55,57\]。第三，招募 E3 泛素连接酶、诱导 RAS 癌蛋白经蛋白酶体降解的靶向蛋白降解剂（PROTAC 和分子胶；第 3.2 节）是另一种可能同时消除该蛋白催化与支架功能的模式 \[91,92\]。
 
-将直接 RAS 抑制剂从二线、三线推向一线治疗，是改善患者结局最直接的机会。在晚期 NSCLC 中，正在进行的 III 期试验评估 sotorasib（NCT05920356）、adagrasib（KRYSTAL-7，NCT04613596）及第二代 G12C 抑制剂 divarasib（Krascendo 2，NCT06793215）和 olomorasib（SUNRAY-01，NCT06119581）联合铂类双药化疗或抗 PD-(L)1 免疫治疗用于一线治疗 \[78,93\]。早期联合使用或可延缓耐药，但尚未得到证实。试验需处理重叠毒性，特别是共价 G12C 抑制剂与检查点抑制剂联合时观察到的肝毒性 \[75,77\]，并确保靶向联合方案较标准化疗–免疫治疗带来有意义的生存获益。
+将直接 RAS 抑制剂从二线、三线推向一线治疗，是改善患者结局最直接的机会。在晚期 NSCLC 中，正在进行的 III 期试验评估 sotorasib（NCT05920356）、adagrasib（KRYSTAL-7，NCT04613596）及第二代 G12C 抑制剂 divarasib（Krascendo 2，NCT06793215）和 olomorasib（SUNRAY-01，NCT06119581）联合铂类双药化疗或抗 PD-(L)1 免疫治疗用于一线治疗，其基础是这些联合方案的 I 期和 II 期数据 \[78,93\]。早期联合使用或可延缓耐药，但尚未得到证实。试验需处理重叠毒性，特别是共价 G12C 抑制剂与检查点抑制剂联合时观察到的肝毒性 \[75,77\]，并确保靶向联合方案较标准化疗–免疫治疗带来有意义的生存获益。
 
-优化中枢神经系统（CNS）渗透对直接 RAS 抑制剂至关重要，尤其是在 30%–40% 患者病程中会发生脑转移的 NSCLC 中 \[50\]。adagrasib 在经治的活动性脑转移患者中显示出有临床意义的颅内活性和持久的 CNS 疾病控制 \[50\]；在 CodeBreaK 200 的事后分析中，对于已治疗且稳定的脑转移患者，sotorasib 较多西他赛延长了 CNS 无进展生存期（中位 9.6 vs 4.5 个月；HR 0.43，95% CI 0.20–0.92）\[94\]。olomorasib 在未经治疗的脑转移中显示颅内缓解 \[52\]，颅内缓解率和缓解持续时间是 III 期 SUNRAY-01 试验（NCT06119581）的次要终点。实现持久的 CNS 疾病控制，是直接 RAS 抑制剂成为全面系统治疗的关键。
+优化中枢神经系统（CNS）渗透对直接 RAS 抑制剂至关重要，尤其是在 NSCLC 中：27%–42% 的 KRAS G12C 突变患者在诊断时已有 CNS 转移 \[50\]。adagrasib 在未经治疗的 CNS 转移患者中显示出有临床意义的颅内活性和持久的 CNS 疾病控制 \[50\]；在 CodeBreaK 200 的事后分析中，对于已治疗且稳定的脑转移患者，sotorasib 较多西他赛延长了 CNS 无进展生存期（中位 9.6 vs 4.5 个月；HR 0.43，95% CI 0.20–0.92）\[94\]。olomorasib 在未经治疗的脑转移中显示颅内缓解 \[52\]，颅内缓解率和缓解持续时间是 III 期 SUNRAY-01 试验（NCT06119581）的次要终点。实现持久的 CNS 疾病控制，是直接 RAS 抑制剂成为全面系统治疗的关键。
 
 **6.2 临床试验设计与交叉用药混杂的处理**
 
@@ -444,11 +444,11 @@ RAS 靶向治疗的未来进展取决于扩大抑制范围、延长抑制持续�
 
 **6.3 全球实施与转化展望**
 
-全面的分子检测是现代 RAS 靶向肿瘤诊疗的基础。指南推荐在晚期肿瘤诊断时采用广泛的二代测序（NGS）panel，同时评估 *KRAS*、*NRAS* 和 *HRAS* 的具体突变以及 *TP53*、*STK11*、*KEAP1* 和 *MET* 的共存改变 \[95–98\]。在组织 NGS 之外加做血浆 ctDNA 检测可缩短报告时间，并可能反映肿瘤异质性 \[88,90\]。随着等位基因特异性和 pan-RAS 抑制剂增多，检测报告需注明具体等位基因及相关共突变，而不仅是 *KRAS* 突变状态。
+全面的分子检测是现代 RAS 靶向肿瘤诊疗的基础。在证实 KRAS 和 NRAS 突变预示抗 EGFR 抗体无效之后，扩展 RAS 检测成为转移性结直肠癌的标准 \[95,96\]；ESMO 指南推荐在胰腺癌 \[97\] 和 NSCLC（包括可切除疾病）\[98\] 中进行分子检测。广泛的二代测序（NGS）panel 还可检出 STK11、KEAP1 和 TP53 等共存改变，这些改变与 KRAS G12C 抑制剂的疗效相关（第 2.2 节）\[39,40\]。在组织 NGS 之外加做血浆 ctDNA 检测可缩短报告时间，并可能反映肿瘤异质性 \[88,90\]。随着等位基因特异性和 pan-RAS 抑制剂增多，检测报告需注明具体等位基因及相关共突变，而不仅是 *KRAS* 突变状态。
 
 直接 RAS 抑制剂的临床获益在全球分布仍不均衡。与高收入国家相比，新型靶向抗肿瘤药物在低收入和中低收入国家的可获得性低得多，且更多依赖自付 \[99\]；直接靶向 RAS 药物的注册试验也集中在北美、东亚和欧洲（图 4c）。分级定价、许可协议、更简便的诊断检测（如针对常见等位基因的数字液滴 PCR）以及在代表性不足地区开展试验，有助于改善可及性。
 
-除小分子催化抑制剂和降解剂外，针对致癌 RAS 的其他治疗模式也在发展之中，包括：在切除后疾病中可诱导功能性 T 细胞扩增的淋巴结靶向两亲性突变 KRAS 多肽疫苗（如 AMPLIFY 平台）\[100\]；针对突变 KRAS 新表位设计的过继性新抗原 T 细胞受体（TCR）基因与细胞疗法 \[101,102\]；以及 RFdiffusion 等可从头设计结合困难蛋白表面的结合蛋白的生成式蛋白质设计方法 \[103\]。
+除小分子催化抑制剂和降解剂外，针对致癌 RAS 的其他治疗模式也在发展之中，包括：在根治性治疗后存在微小残留病灶的患者中可诱导突变 KRAS 特异性 T 细胞应答的淋巴结靶向两亲性突变 KRAS 多肽疫苗（如 AMPLIFY 平台）\[100\]；针对突变 KRAS 新表位设计的过继性新抗原 T 细胞受体（TCR）基因与细胞疗法 \[101,102\]；以及 RFdiffusion 等可从头设计结合困难蛋白表面的结合蛋白的生成式蛋白质设计方法 \[103\]。
 
 **写作过程中生成式人工智能及人工智能辅助技术的声明**
 
@@ -492,13 +492,13 @@ N.W.：构思、方法学、形式分析、数据整理、可视化、初稿撰�
 
 **8.** Skoulidis F, Li BT, Dy GK, Price TJ, Falchook GS, Wolf J, et al. Sotorasib for lung cancers with KRAS p.G12C mutation. N Engl J Med. 2021;384(25):2371-2381. https://doi.org/10.1056/NEJMoa2103695
 
-**9.** Jänne PA, Riely GJ, Gadgeel SM, Heist RS, Ou SHI, Pacheco JM, et al. Adagrasib in non-small-cell lung cancer harboring a KRAS G12C mutation. N Engl J Med. 2022;387(2):120-131. https://doi.org/10.1056/NEJMoa2204619
+9\. Jänne PA, Riely GJ, Gadgeel SM, Heist RS, Ou SI, Pacheco JM, et al. Adagrasib in non-small-cell lung cancer harboring a KRASG12C mutation. N Engl J Med. 2022;387(2):120-131. https://doi.org/10.1056/NEJMoa2204619
 
-**10.** Sacher A, LoRusso P, Patel MR, Miller WH Jr., Garralda E, Forster MD, et al. Single-agent divarasib (GDC-6036) in solid tumors with a KRAS G12C mutation. N Engl J Med. 2023;389(8):710-721. https://doi.org/10.1056/NEJMoa2303810
+10\. Sacher A, LoRusso P, Patel MR, Miller WH Jr, Garralda E, Forster MD, et al. Single-agent divarasib (GDC-6036) in solid tumors with a KRAS G12C mutation. N Engl J Med. 2023;389(8):710-721. https://doi.org/10.1056/NEJMoa2303810
 
 **11.** Shi Y, Fang J, Xing L, Yao Y, Zhang J, Liu L, et al. Glecirasib in KRASG12C-mutated nonsmall-cell lung cancer: a phase 2b trial. Nat Med. 2025;31(3):894-900. https://doi.org/10.1038/s41591-024-03401-z
 
-**12.** Wang X, Allen S, Blake JF, Bowcut V, Briere DM, Calinisan A, et al. Identification of MRTX1133, a noncovalent, potent, and selective KRAS G12D inhibitor. J Med Chem. 2022;65(4):3123-3133. https://doi.org/10.1021/acs.jmedchem.1c01688
+12\. Wang X, Allen S, Blake JF, Bowcut V, Briere DM, Calinisan A, et al. Identification of MRTX1133, a noncovalent, potent, and selective KRASG12D inhibitor. J Med Chem. 2022;65(4):3123-3133. https://doi.org/10.1021/acs.jmedchem.1c01688
 
 **13.** Cregg J, Edwards AV, Chang S, Lee BJ, Knox JE, Tomlinson ACA, et al. Discovery of daraxonrasib (RMC-6236), a potent and orally bioavailable RAS(ON) multi-selective, noncovalent tri-complex inhibitor for the treatment of patients with multiple RAS-addicted cancers. J Med Chem. 2025;68(6):6064-6083. https://doi.org/10.1021/acs.jmedchem.4c02314
 
@@ -514,7 +514,7 @@ N.W.：构思、方法学、形式分析、数据整理、可视化、初稿撰�
 
 **19.** Milburn MV, Tong L, deVos AM, Brünger A, Yamaizumi Z, Nishimura S, et al. Molecular switch for signal transduction: structural differences between active and inactive forms of protooncogenic ras proteins. Science. 1990;247(4945):939-945. https://doi.org/10.1126/science.2406906
 
-**20.** Scheffzek K, Ahmadian MR, Kabsch W, Wiesmüller L, Lautwein A, Schmitz F, et al. The Ras-RasGAP complex: structural basis for GTPase activation and its loss in oncogenic Ras mutants. Science. 1997;277(5324):333-339. https://doi.org/10.1126/science.277.5324.333
+20\. Scheffzek K, Ahmadian MR, Kabsch W, Wiesmüller L, Lautwein A, Schmitz F, et al. The Ras-RasGAP complex: structural basis for GTPase activation and its loss in oncogenic Ras mutants. Science. 1997;277(5324):333-338. https://doi.org/10.1126/science.277.5324.333
 
 **21.** Perurena N, Situ L, Cichowski K. Combinatorial strategies to target RAS-driven cancers. Nat Rev Cancer. 2024;24(5):316-337. https://doi.org/10.1038/s41568-024-00679-6
 
@@ -538,9 +538,9 @@ N.W.：构思、方法学、形式分析、数据整理、可视化、初稿撰�
 
 **31.** Chen H, Huang D, Lin G, Yang X, Zhuo M, Chi Y, et al. The prevalence and real-world therapeutic analysis of Chinese patients with KRAS-mutant non-small cell lung cancer. Cancer Med. 2022;11(19):3581-3592. https://doi.org/10.1002/cam4.4739
 
-**32.** Loong HHF, Du N, Cheng C, Lin H, Guo J, Lin G, et al. KRAS G12C mutations in Asia: a landscape analysis of 11,951 Chinese tumor samples. Transl Lung Cancer Res. 2020;9(5):1759-1769. https://doi.org/10.21037/tlcr-20-455
+32\. Loong HH, Du N, Cheng C, Lin H, Guo J, Lin G, et al. KRAS G12C mutations in Asia: a landscape analysis of 11,951 Chinese tumor samples. Transl Lung Cancer Res. 2020;9(5):1759-1769. https://doi.org/10.21037/tlcr-20-455
 
-**33.** Ricciuti B, Alessi JV, Elkrief A, Wang X, Cortellini A, Li YY, et al. Dissecting the clinicopathologic, genomic, and immunophenotypic correlates of KRASG12D mutated non-small cell lung cancer. Ann Oncol. 2022;33(10):1029-1040. https://doi.org/10.1016/j.annonc.2022.07.005
+33\. Ricciuti B, Alessi JV, Elkrief A, Wang X, Cortellini A, Li YY, et al. Dissecting the clinicopathologic, genomic, and immunophenotypic correlates of KRASG12D-mutated non-small-cell lung cancer. Ann Oncol. 2022;33(10):1029-1040. https://doi.org/10.1016/j.annonc.2022.07.005
 
 **34.** Skoulidis F, Byers LA, Diao L, Papadimitrakopoulou VA, Tong P, Izzo J, et al. Co-occurring genomic alterations define major subsets of KRAS-mutant lung adenocarcinoma with distinct biology, immune profiles, and therapeutic vulnerabilities. Cancer Discov. 2015;5(8):860-877. https://doi.org/10.1158/2159-8290.CD-14-1236
 
@@ -548,7 +548,7 @@ N.W.：构思、方法学、形式分析、数据整理、可视化、初稿撰�
 
 **36.** Budczies J, Romanovsky E, Kirchner M, Neumann O, Blasi M, Schnorbach J, et al. KRAS and TP53 co-mutation predicts benefit of immune checkpoint blockade in lung adenocarcinoma. Br J Cancer. 2024;131(3):524-533. https://doi.org/10.1038/s41416-024-02746-z
 
-**37.** Ricciuti B, Arbour KC, Lin JJ, Vajdi A, Vokes N, Hong L, et al. Diminished efficacy of programmed death-(ligand)1 inhibition in STK11-and KEAP1-mutant lung adenocarcinoma is affected by KRAS mutation status. J Thorac Oncol. 2022;17(3):399-410. https://doi.org/10.1016/j.jtho.2021.10.013
+37\. Ricciuti B, Arbour KC, Lin JJ, Vajdi A, Vokes N, Hong L, et al. Diminished efficacy of programmed death-(ligand)1 inhibition in STK11- and KEAP1-mutant lung adenocarcinoma is affected by KRAS mutation status. J Thorac Oncol. 2022;17(3):399-410. https://doi.org/10.1016/j.jtho.2021.10.013
 
 **38.** Molina-Arcas M, Downward J. Exploiting the therapeutic implications of KRAS inhibition on tumor immunity. Cancer Cell. 2024;42(3):338-357. https://doi.org/10.1016/j.ccell.2024.02.012
 
@@ -556,7 +556,7 @@ N.W.：构思、方法学、形式分析、数据整理、可视化、初稿撰�
 
 **40.** Negrao MV, Paula AG, Molkentine D, Hover L, Nilsson M, Vokes N, et al. Impact of co-mutations and transcriptional signatures in non-small cell lung cancer patients treated with adagrasib in the KRYSTAL-1 trial. Clin Cancer Res. 2025;31(6):1069-1081. https://doi.org/10.1158/1078-0432.CCR-24-2310
 
-**41.** Ostrem JML, Shokat KM. Direct small-molecule inhibitors of KRAS: from structural insights to mechanism-based design. Nat Rev Drug Discov. 2016;15(11):771-785. https://doi.org/10.1038/nrd.2016.139
+41\. Ostrem JM, Shokat KM. Direct small-molecule inhibitors of KRAS: from structural insights to mechanism-based design. Nat Rev Drug Discov. 2016;15(11):771-785. https://doi.org/10.1038/nrd.2016.139
 
 **42.** Van Cutsem E, van de Velde H, Karasek P, Oettle H, Vervenne WL, Szawlowski A, et al. Phase III trial of gemcitabine plus tipifarnib compared with gemcitabine plus placebo in advanced pancreatic cancer. J Clin Oncol. 2004;22(8):1430-1438. https://doi.org/10.1200/JCO.2004.10.112
 
@@ -564,7 +564,7 @@ N.W.：构思、方法学、形式分析、数据整理、可视化、初稿撰�
 
 **44.** Blumenschein GR Jr, Smit EF, Planchard D, Kim DW, Cadranel J, De Pas T, et al. A randomized phase II study of the MEK1/MEK2 inhibitor trametinib (GSK1120212) compared with docetaxel in KRAS-mutant advanced non-small-cell lung cancer (NSCLC). Ann Oncol. 2015;26(5):894-901. https://doi.org/10.1093/annonc/mdv072
 
-**45.** Jänne PA, van den Heuvel MM, Barlesi F, Cobo M, Mazieres J, Crinò L, et al. Selumetinib plus docetaxel compared with docetaxel alone and progression-free survival in patients with KRAS-mutant advanced non-small cell lung cancer. JAMA. 2017;317(18):1844-1853. https://doi.org/10.1001/jama.2017.3438
+45\. Jänne PA, van den Heuvel MM, Barlesi F, Cobo M, Mazieres J, Crinò L, et al. Selumetinib plus docetaxel compared with docetaxel alone and progression-free survival in patients with KRAS-mutant advanced non-small cell lung cancer: the SELECT-1 randomized clinical trial. JAMA. 2017;317(18):1844-1853. https://doi.org/10.1001/jama.2017.3438
 
 **46.** Hansen R, Peters U, Babbar A, Chen Y, Feng J, Janes MR, et al. The reactivity-driven biochemical mechanism of covalent KRASG12C inhibitors. Nat Struct Mol Biol. 2018;25(6):454-462. https://doi.org/10.1038/s41594-018-0061-5
 
@@ -572,7 +572,7 @@ N.W.：构思、方法学、形式分析、数据整理、可视化、初稿撰�
 
 **48.** Singhal A, Li BT, O’Reilly EM. Targeting KRAS in cancer. Nat Med. 2024;30(4):969-983. https://doi.org/10.1038/s41591-024-02903-0
 
-**49.** Awad MM, Liu S, Rybkin II, Arbour KC, Dilly J, Zhu VW, et al. Acquired resistance to KRAS G12C inhibition in cancer. N Engl J Med. 2021;384(25):2382-2393. https://doi.org/10.1056/NEJMoa2105281
+49\. Awad MM, Liu S, Rybkin II, Arbour KC, Dilly J, Zhu VW, et al. Acquired resistance to KRASG12C inhibition in cancer. N Engl J Med. 2021;384(25):2382-2393. https://doi.org/10.1056/NEJMoa2105281
 
 **50.** Negrao MV, Spira AI, Heist RS, Jänne PA, Pacheco JM, Weiss J, et al. Intracranial efficacy of adagrasib in patients from the KRYSTAL-1 trial with KRASG12C-mutated non-small-cell lung cancer who have untreated CNS metastases. J Clin Oncol. 2023;41(28):4472-4477. https://doi.org/10.1200/JCO.23.00046
 
@@ -592,7 +592,7 @@ N.W.：构思、方法学、形式分析、数据整理、可视化、初稿撰�
 
 **58.** O’Reilly EM, Wainberg ZA, Hendifar AE, Borad MJ, Pietrantonio F, Pant S, et al. Daraxonrasib or chemotherapy in previously treated metastatic pancreatic cancer. N Engl J Med. 2026;395(4):325-337. https://doi.org/10.1056/NEJMoa2605555
 
-**59.** de Langen AJ, Johnson ML, Mazieres J, Dingemans AMC, Mountzios G, Pless M, et al. Sotorasib versus docetaxel for previously treated non-small-cell lung cancer with KRASG12C mutation: a randomised, open-label, phase 3 trial. Lancet. 2023;401(10378):733-746. https://doi.org/10.1016/S0140-6736(23)00221-0
+59\. de Langen AJ, Johnson ML, Mazieres J, Dingemans AC, Mountzios G, Pless M, et al. Sotorasib versus docetaxel for previously treated non-small-cell lung cancer with KRASG12C mutation: a randomised, open-label, phase 3 trial. Lancet. 2023;401(10378):733-746. https://doi.org/10.1016/S0140-6736(23)00221-0
 
 **60.** Barlesi F, Yao W, Duruisseaux M, Doucet L, Martínez AA, Gregorc V, et al. Adagrasib versus docetaxel in KRASG12C-mutated non-small-cell lung cancer (KRYSTAL-12): a randomised, open-label, phase 3 trial. Lancet. 2025;406(10503):615-626. https://doi.org/10.1016/S0140-6736(25)00866-9
 
@@ -600,21 +600,21 @@ N.W.：构思、方法学、形式分析、数据整理、可视化、初稿撰�
 
 **62.** Fakih MG, Salvatore L, Esaki T, Modest DP, Lopez-Bravo DP, Taieb J, et al. Sotorasib plus panitumumab in refractory colorectal cancer with mutated KRAS G12C. N Engl J Med. 2023;389(23):2125-2139. https://doi.org/10.1056/NEJMoa2308795
 
-**63.** Tabernero J, Kopetz S, Lee J, Corcoran RB, Hecht JR, Shen L, et al. LBA1 Second-line adagrasib plus cetuximab vs chemotherapy in patients with KRASG12C-mutated metastatic colorectal cancer: results from the KRYSTAL-10 trial. Ann Oncol. 2026;37:S1-S2. https://doi.org/10.1016/j.annonc.2026.06.005
+63\. Tabernero J, Kopetz S, Lee J, Corcoran RB, Hecht JR, Shen L, et al. LBA1 Second-line adagrasib plus cetuximab vs chemotherapy in patients with KRASG12C-mutated metastatic colorectal cancer: results from the KRYSTAL-10 trial. Ann Oncol. 2026;37(Suppl 1):S1-S2. https://doi.org/10.1016/j.annonc.2026.06.005
 
 **64.** Dummer R, Schadendorf D, Ascierto PA, Arance A, Dutriaux C, Di Giacomo AM, et al. Binimetinib versus dacarbazine in patients with advanced NRAS-mutant melanoma (NEMO): a multicentre, open-label, randomised, phase 3 trial. Lancet Oncol. 2017;18(4):435-445. https://doi.org/10.1016/S1470-2045(17)30180-8
 
 **65.** Alharbi M, Awidi M, Dy GK. CodeBreak 200: study limitations, and future directions. Transl Cancer Res. 2024;13(1):15-21. https://doi.org/10.21037/tcr-23-1477
 
-**66.** National Institute for Health and Care Excellence. Adagrasib for previously treated KRAS G12C mutation-positive advanced non-small-cell lung cancer: draft guidance consultation \[ID6339\]. London: NICE; 2025. Available at: https://www.nice.org.uk/consultations/2949/1/committee-discussion (accessed 20 November 2026). Appraisal terminated 2 July 2025 (TA1076): https://www.nice.org.uk/guidance/ta1076
+66\. National Institute for Health and Care Excellence. Adagrasib for previously treated KRAS G12C mutation-positive advanced non-small-cell lung cancer \[ID6339\]: draft guidance consultation, committee discussion. London: NICE; 2025. Available at: https://www.nice.org.uk/consultations/2949/1/committee-discussion (accessed 20 November 2026).
 
 **67.** Pietrantonio F, Salvatore L, Esaki T, Modest DP, Lopez-Bravo DP, Taieb J, et al. Overall survival analysis of the phase III CodeBreaK 300 study of sotorasib plus panitumumab versus investigator's choice in chemorefractory KRAS G12C colorectal cancer. J Clin Oncol. 2025;43(19):2147-2154. https://doi.org/10.1200/JCO-24-02026
 
-**68.** Attili I, Corvaja C, Trillo Aliaga P, Del Signore E, Spitaleri G, Passaro A, et al. Dealing with KRAS G12C inhibition in non-small cell lung cancer (nsclc)-biology, clinical results and future directions. Cancer Treat Rev. 2025;137:102957. https://doi.org/10.1016/j.ctrv.2025.102957
+68\. Attili I, Corvaja C, Trillo Aliaga P, Del Signore E, Spitaleri G, Passaro A, et al. Dealing with KRAS G12C inhibition in non-small cell lung cancer (NSCLC) - biology, clinical results and future directions. Cancer Treat Rev. 2025;137:102957. https://doi.org/10.1016/j.ctrv.2025.102957
 
 **69.** Fakih MG, Kopetz S, Kuboki Y, Kim TW, Munster PN, Krauss JC, et al. Sotorasib for previously treated colorectal cancers with KRASG12C mutation (CodeBreaK 100): a prespecified analysis of a single-arm, phase 2 trial. Lancet Oncol. 2022;23(1):115-124. https://doi.org/10.1016/S1470-2045(21)00605-7
 
-**70.** Yaeger R, Weiss J, Pelster MS, Spira AI, Barve M, Ou SHI, et al. Adagrasib with or without cetuximab in colorectal cancer with mutated KRAS G12C. N Engl J Med. 2023;388(1):44-54. https://doi.org/10.1056/NEJMoa2212419
+70\. Yaeger R, Weiss J, Pelster MS, Spira AI, Barve M, Ou SI, et al. Adagrasib with or without cetuximab in colorectal cancer with mutated KRAS G12C. N Engl J Med. 2023;388(1):44-54. https://doi.org/10.1056/NEJMoa2212419
 
 **71.** Kuboki Y, Fakih M, Strickler J, Yaeger R, Masuishi T, Kim EJ, et al. Sotorasib with panitumumab in chemotherapy-refractory KRASG12C-mutated colorectal cancer: a phase 1b trial. Nat Med. 2024;30(1):265-270. https://doi.org/10.1038/s41591-023-02717-6
 
@@ -636,7 +636,7 @@ N.W.：构思、方法学、形式分析、数据整理、可视化、初稿撰�
 
 **80.** Li Z, Dang X, Huang D, Jin S, Li W, Shi J, et al. Garsorasib in patients with KRASG12C-mutated non-small-cell lung cancer in China: an open-label, multicentre, single-arm, phase 2 trial. Lancet Respir Med. 2024;12(8):589-598. https://doi.org/10.1016/S2213-2600(24)00110-3
 
-**81.** Zhou Q, Meng X, Sun L, Huang D, Yang N, Yu Y, et al. Efficacy and safety of KRAS G12C inhibitor IBI351 monotherapy in patients with advanced NSCLC: results from a phase 2 pivotal study. J Thorac Oncol. 2024;19(12):1630-1639. https://doi.org/10.1016/j.jtho.2024.08.005
+81\. Zhou Q, Meng X, Sun L, Huang D, Yang N, Yu Y, et al. Efficacy and safety of KRASG12C inhibitor IBI351 monotherapy in patients with advanced NSCLC: results from a phase 2 pivotal study. J Thorac Oncol. 2024;19(12):1630-1639. https://doi.org/10.1016/j.jtho.2024.08.005
 
 **82.** Yaeger R, Mezzadra R, Sinopoli J, Bian Y, Marasco M, Kaplun E, et al. Molecular characterization of acquired resistance to KRASG12C-EGFR inhibition in colorectal cancer. Cancer Discov. 2023;13(1):41-55. https://doi.org/10.1158/2159-8290.CD-22-0405
 
@@ -656,13 +656,13 @@ N.W.：构思、方法学、形式分析、数据整理、可视化、初稿撰�
 
 **90.** Ernst SM, van Marion R, Atmodimedjo PN, de Jonge E, Mathijssen RHJ, Paats MS, et al. Clinical utility of circulating tumor DNA in patients with advanced KRASG12C-mutated NSCLC treated with sotorasib. J Thorac Oncol. 2024;19(7):995-1006. https://doi.org/10.1016/j.jtho.2024.04.007
 
-**91.** Bond MJ, Chu L, Nalawansha DA, Li K, Crews CM. Targeted degradation of oncogenic KRAS G12C by VHL-recruiting PROTACs. ACS Cent Sci. 2020;6(8):1367-1375. https://doi.org/10.1021/acscentsci.0c00411
+91\. Bond MJ, Chu L, Nalawansha DA, Li K, Crews CM. Targeted degradation of oncogenic KRASG12C by VHL-recruiting PROTACs. ACS Cent Sci. 2020;6(8):1367-1375. https://doi.org/10.1021/acscentsci.0c00411
 
 **92.** Park W, Kasi A, Spira AI, Paz-Ares Rodríguez L, Herzberg BO, Pelster MS, et al. Setidegrasib in advanced non-small-cell lung cancer and pancreatic cancer. N Engl J Med. 2026;394(14):1409-1420. https://doi.org/10.1056/NEJMoa2600752
 
 **93.** Akamatsu H, Sakata S, Azuma K, Yoshioka H, Uemura T, Tsuchiya-Kawano Y, et al. A single-arm phase 2 study of sotorasib plus carboplatin and pemetrexed in patients with advanced nonsquamous NSCLC with KRAS G12C mutation (WJOG14821L, SCARLET). J Thorac Oncol. 2025;20(6):775-785. https://doi.org/10.1016/j.jtho.2025.01.006
 
-**94.** Dingemans AMC, Syrigos K, Livi L, Paulus A, Kim SW, Chen Y, et al. Intracranial activity of sotorasib vs docetaxel in pretreated KRAS G12C-mutated advanced non-small cell lung cancer from a global, phase 3, randomized controlled trial. Lung Cancer. 2025;207:108683. https://doi.org/10.1016/j.lungcan.2025.108683
+94\. Dingemans AC, Syrigos K, Livi L, Paulus A, Kim SW, Chen Y, et al. Intracranial activity of sotorasib vs docetaxel in pretreated KRAS G12C-mutated advanced non-small cell lung cancer from a global, phase 3, randomized controlled trial. Lung Cancer. 2025;207:108683. https://doi.org/10.1016/j.lungcan.2025.108683
 
 **95.** Douillard JY, Oliner KS, Siena S, Tabernero J, Burkes R, Barugel M, et al. Panitumumab-FOLFOX4 treatment and RAS mutations in colorectal cancer. N Engl J Med. 2013;369(11):1023-1034. https://doi.org/10.1056/NEJMoa1305275
 
@@ -674,10 +674,10 @@ N.W.：构思、方法学、形式分析、数据整理、可视化、初稿撰�
 
 **99.** Cherny NI, Sullivan R, Torode J, Saar M, Eniu A. ESMO International Consortium Study on the availability, out-of-pocket costs and accessibility of antineoplastic medicines in countries outside of Europe. Ann Oncol. 2017;28(11):2633-2647. https://doi.org/10.1093/annonc/mdx521
 
-**100.** Pant S, Wainberg ZA, Weekes CD, Furqan M, Huffman BM, Uronis HE, et al. Lymph-node-targeted, mKRAS-specific amphiphile vaccine in pancreatic and colorectal cancer: the phase 1 AMPLIFY-201 trial. Nat Med. 2024;30(2):531-542. https://doi.org/10.1038/s41591-023-02760-3
+100\. Pant S, Wainberg ZA, Weekes CD, Furqan M, Kasi PM, Devoe CE, et al. Lymph-node-targeted, mKRAS-specific amphiphile vaccine in pancreatic and colorectal cancer: the phase 1 AMPLIFY-201 trial. Nat Med. 2024;30(2):531-542. https://doi.org/10.1038/s41591-023-02760-3
 
 **101.** Leidner R, Sanjuan Silva N, Huang H, Sprott D, Zheng C, Shih YP, et al. Neoantigen T-cell receptor gene therapy in pancreatic cancer. N Engl J Med. 2022;386(22):2112-2119. https://doi.org/10.1056/NEJMoa2119662
 
 **102.** Tran E, Robbins PF, Lu YC, Prickett TD, Gartner JJ, Jia L, et al. T-cell transfer therapy targeting mutant KRAS in cancer. N Engl J Med. 2016;375(23):2255-2262. https://doi.org/10.1056/NEJMoa1609279
 
-**103.** Watson JL, Juergens D, Bennett NR, Trippe BL, Yim J, Eisenach HE, et al. De novo design of protein structure and function with RFdiffusion. Nature. 2023;620(8001):1089-1100. https://doi.org/10.1038/s41586-023-06415-8
+103\. Watson JL, Juergens D, Bennett NR, Trippe BL, Yim J, Eisenach HE, et al. De novo design of protein structure and function with RFdiffusion. Nature. 2023;620(7976):1089-1100. https://doi.org/10.1038/s41586-023-06415-8
