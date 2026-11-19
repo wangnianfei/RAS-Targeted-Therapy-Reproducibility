@@ -1,0 +1,1018 @@
+{
+  "paragraphs": [
+    "Activating alterations in the RAS family of small GTPases represent the most frequent oncogenic drivers in human cancer, detected in approximately one-fifth of all malignant neoplasms and accounting for more than one million cancer deaths globally each year [1,2]. For nearly four decades following the identification of *HRAS*, *KRAS*, and *NRAS* as transforming viral oncogene homologues in the early 1980s [2,3], the pharmacological neutralization of RAS oncoproteins was widely regarded as intractable. The picomolar affinity of RAS for intracellular guanosine nucleotides, coupled with the absence of deep, druggable allosteric pockets on the catalytic G-domain surface, frustrated conventional medicinal chemistry approaches and relegated RAS to the status of an undruggable target.",
+    "The clinical landscape was altered by the discovery of an inducible, shallow hydrophobic pocket beneath the flexible switch II region (switch-II pocket, S-IIP) in GDP-bound KRAS(G12C), first reported by Ostrem and colleagues in 2013 [4]. This breakthrough enabled the development of mutant-selective covalent inhibitors that trap KRAS(G12C) in its inactive state without perturbing wild-type RAS isoforms [4,5]. Accelerated regulatory approvals of sotorasib (AMG 510) in 2021 and adagrasib (MRTX849) in 2022 for previously treated *KRAS* G12C-mutant advanced non-small cell lung cancer (NSCLC) validated the clinical feasibility of direct RAS inhibition [6,7]. More recently, the medicinal chemistry portfolio has diversified beyond covalent G12C targeting to encompass second-generation covalent inhibitors with superior potency (divarasib, olomorasib, glecirasib) [8-10], non-covalent inhibitors targeting non-cysteine alleles such as *KRAS* G12D (targeted by MRTX1133) [11], pan-RAS and multi-RAS inhibitors acting through innovative chaperone-assisted tri-complex molecular glue mechanisms (daraxonrasib, RMC-6236) [12-14], and allosteric inhibitors of upstream exchange factors such as SOS1 [15-17].",
+    "We first examine the structural biology, nucleotide cycling, and allele epidemiology of RAS, before evaluating the biophysical mechanisms underpinning contemporary drug classes (Figure 1). We then synthesize the comparative phase III randomized controlled trial evidence across disease settings (Table 1, Figure 3) and critically evaluate the global clinical pipeline (Figure 4), acquired resistance networks (Figure 5), and translational frontiers. Our central objective is to clarify which clinical decisions rest on confirmed trial evidence, which remain contingent on ongoing trials, and where regulatory standards must evolve.",
+    "RAS proteins operate as binary molecular switches regulated by guanine nucleotide exchange factors (GEFs) and GTPase-activating proteins (GAPs). The human RAS family comprises three genes (*KRAS*, *NRAS*, and *HRAS*) encoding conserved 21-kDa small GTPases [18]. Each isoform contains a catalytic G-domain (residues 1–166) and a flexible C-terminal hypervariable region that undergoes CAAX-directed farnesylation and carboxymethylation for plasma membrane anchoring [19,20]. The G-domain houses two dynamic loop segments, designated switch I (residues 30–38) and switch II (residues 59–76), which govern nucleotide binding and effector engagement (Figure 1a) [21]. In physiological conditions, SOS1 and SOS2 catalyze the dissociation of guanosine diphosphate (GDP), permitting the rapid binding of abundant intracellular guanosine triphosphate (GTP) and inducing a rigid, closed conformation that binds downstream effectors [22,23]. Conversely, GAPs such as NF1 accelerate intrinsic GTP hydrolysis by more than five orders of magnitude (>10^5-fold) through insertion of an 'arginine finger' into the catalytic site, restoring the inactive GDP-bound state [24]. Oncogenic missense mutations at codons 12, 13, or 61 sterically impede GAP insertion and abolish intrinsic GTP hydrolysis, freezing the protein in a constitutive, GTP-bound oncogenic state.",
+    "Active GTP-bound RAS transmits downstream signals primarily through the RAF-MEK-ERK (MAPK) and PI3K-AKT-mTOR cascades, alongside secondary effectors such as RALGDS, PLCepsilon, and pro-apoptotic RASSF1A [18,19,25]. Under physiological conditions, active ERK phosphorylates upstream receptor tyrosine kinases, SOS1, and CRAF, establishing potent negative feedback loops that attenuate pathway flux [26,27]. Pharmacological disruption of RAS or its downstream effectors rapidly dissolves this negative feedback, leading to the rebound phosphorylation of receptor tyrosine kinases (RTKs) such as EGFR, MET, and HER2, which flood the cell with upstream activation signals and promote therapeutic resistance (detailed in Section 5.2) [28].",
+    "Observed RAS mutation frequencies vary with clinical stage, registry composition, and tissue sampling timing. In The Cancer Genome Atlas collection of 10,967 resected primary tumours across 32 cancer types, the overall RAS mutation rate is 10.7% [1]. By contrast, clinical sequencing panels profiling advanced or metastatic solid tumours consistently report overall frequencies of 17% to 22%, reflecting the aggressive biological behaviour and metastatic propensity of RAS-driven tumours (Figure 2a) [2,3]. Across the three isoforms, *KRAS* accounts for approximately 75% of all RAS alterations, followed by *NRAS* (17%) and *HRAS* (8%) [2,3].",
+    "The organ-specific distribution of RAS mutations reflects both tissue-specific expression patterns and distinct biochemical properties of individual mutant alleles. *KRAS* alterations predominate in adenocarcinomas of the gastrointestinal tract and lungs, occurring in approximately 90% of pancreatic ductal adenocarcinomas, 45% to 50% of colorectal carcinomas, and 30% to 35% of lung adenocarcinomas (Figure 2a) [6,29]. *NRAS* mutations are primarily observed in cutaneous melanoma (20%–25%), acute myeloid leukemia (10%–15%), and thyroid carcinoma [2,30]. *HRAS* mutations are less frequent overall (1%–2%) but enriched in head and neck squamous cell carcinomas, bladder urothelial cancers, and salivary gland tumours [2,31]. Codon-12 and codon-13 mutations disrupt the GAP-binding interface through steric clash, whereas codon-61 mutations directly disorganize the catalytic water molecule required for GTP hydrolysis, conferring higher baseline GTP loading and stronger oncogenic potency.",
+    "Allele distributions differ substantially across tumour types, shaped by tissue lineage biology and environmental exposures. In pancreatic ductal adenocarcinoma, *KRAS* G12D accounts for roughly 40% of mutations, followed by G12V (32%), G12R (16%), and rarely G12C (1%–2%) (Figure 2b) [2,27,28]. In colorectal cancer, G12D (30%) and G12V (23%) similarly predominate, whereas G12C represents approximately 8% to 10% of cases alongside non-canonical codon 61, 117, and 146 variants in roughly 5%–10% of cases [32,33]. By contrast, non-small cell lung cancer exhibits a distinctive tobacco carcinogen signature (G-to-T transversions) that makes G12C the predominant variant (roughly 40% of *KRAS* mutations), followed by G12V (18%) and G12D (14%) [34]. In cutaneous melanoma, *NRAS* codon-61 mutations (predominantly Q61R and Q61K) represent roughly 80% of all RAS alterations, with *KRAS* and *HRAS* rarely mutated [35].",
+    "Co-occurring genomic alterations define biological and therapeutic heterogeneity within *KRAS*-mutant tumours (Figure 2c). In NSCLC, *KRAS* mutations frequently co-occur with alterations in *TP53* (roughly 40%), *STK11* (approximately 30%), and *KEAP1* (about 20%–25%), establishing distinct clinical subgroups [29,33,36,37]. The *KP* subgroup (*KRAS* and *TP53* co-mutated) typically exhibits high somatic mutation burden, robust immune infiltration, and enhanced sensitivity to immune checkpoint inhibitors [20,38]. Conversely, the *KL* subgroup (*KRAS* and *STK11* co-mutated) is characterized by epigenetic silencing of the STING pathway, an immune-cold tumour microenvironment, and primary resistance to anti-PD-(L)1 immune checkpoint inhibition [29]. Notably, while STK11 loss diminishes responsiveness to immunotherapy, its impact on direct small-molecule RAS inhibitors is less pronounced and heterogeneous across cohorts [39,40]. The *KM* subgroup (*KRAS* and *KEAP1* co-mutated) frequently overlaps with *STK11* loss and confers constitutive NRF2 activation, driving elevated expression of SLC7A11 and glutathione biosynthesis, which promotes broad metabolic stress resilience and portends an inferior overall survival trajectory across cytotoxic, immune, and targeted regimens [33,40].",
+    "Direct targeting of RAS was hindered for decades by three biophysical obstacles. First, the binding affinity of RAS for GDP and GTP is extraordinarily high, with dissociation constants in the picomolar range (Kd ~10^-11 to 10^-12 M), while intracellular GTP concentrations are abundant (0.1–0.5 mM) [4,15]. This nucleotide-binding affinity rendered competitive active-site inhibition unfeasible with conventional small molecules, in sharp contrast to protein kinase inhibitors that compete with micromolar-affinity ATP [41]. Second, the surface of the RAS G-domain is remarkably smooth and rigid, lacking the deep, hydrophobic clefts typical of druggable enzyme active sites [5]. Third, the structural divergence between active GTP-bound and inactive GDP-bound states is largely confined to the two dynamic switch regions, meaning that compounds targeting the inactive state must compete with exchange factors that rapidly recharge the protein with GTP [23].",
+    "Early strategies that bypassed direct nucleotide competition failed to deliver meaningful clinical benefit. Farnesyltransferase inhibitors (such as tipifarnib) sought to block post-translational CAAX lipid modification and displace RAS from the membrane; however, KRAS and NRAS utilised alternative prenylation by geranylgeranyltransferase-I, escaping inhibition in clinical trials [19,20]. Similarly, targeting downstream effector kinases (RAF, MEK, ERK, or PI3K) with single-agent inhibitors produced modest efficacy curtailed by rapid feedback pathway reactivation and dose-limiting toxicities arising from the inhibition of essential signaling in normal tissues [26,28,42-44].",
+    "The identification of the switch-II allosteric pocket in 2013 enabled direct RAS inhibition. Ostrem and Shokat solved crystal structures of GDP-bound KRAS(G12C), revealing an inducible, shallow hydrophobic cavity (switch-II pocket, S-IIP) between switch II and the central beta-sheet (beta1–beta3) that is absent in active GTP-bound RAS (Figure 1a) [4,45]. Occupancy of the switch-II pocket by an allosteric small molecule locks switch I and switch II in an inactive conformation, shifting the nucleotide-exchange equilibrium to favour the GDP-bound state and abolishing effector binding [46,47]. Crucially, while oncogenic G12D or G12V mutations abolish intrinsic GTP hydrolysis, the mutant cysteine in KRAS(G12C) retains residual intrinsic GTPase activity, enabling the protein to cycle through the transient, GDP-bound state where it can be covalently trapped by S-IIP small molecules [48,49].",
+    "The first mechanistic class comprises allele-specific, GDP-bound (OFF-state) covalent inhibitors designed specifically for KRAS(G12C) (Figure 1a, detailed in Supplementary Table S1). Sotorasib and adagrasib bind within the switch-II pocket and form a covalent adduct with mutant Cys12, yet they possess distinct chemical scaffolds and pocket-engagement topologies [48,50,51]. Sotorasib features an acrylamide-substituted quinazolinone core that projects into an induced subpocket bounded by residues His95, Tyr96, and Gln99 without forming strong, direct interactions with His95 [48]. Consequently, secondary mutations at His95 (such as H95D, H95Q, or H95R) generally preserve sotorasib binding, whereas adagrasib engages in intimate hydrogen bonding and van der Waals packing with both His95 and Tyr96 [7,52]. Adagrasib also exhibits a considerably longer terminal elimination half-life (approximately 23 hours versus 5 hours for sotorasib), a larger volume of distribution, and confirmed blood-brain barrier penetration with durable intracranial activity [50,53].",
+    "Second-generation G12C covalent inhibitors incorporate structural refinements to optimize biochemical potency, target selectivity, and tissue distribution (Supplementary Table S1). Compounds including divarasib, olomorasib, and glecirasib achieve up to 20-fold greater in vitro potency and more than 50-fold selectivity over wild-type KRAS compared with first-generation molecules [8,9]. Their optimized binding kinetics accelerate covalent target engagement, suppressing cellular ERK phosphorylation at lower nanomolar concentrations and reducing the unreacted protein pool that sustains residual pathway flux [10,11]. Furthermore, divarasib and olomorasib demonstrate meaningful central nervous system penetration, addressing a major site of disease progression under first-generation inhibitors [9,54].",
+    "Expanding direct inhibition beyond G12C requires engaging non-cysteine alleles (Supplementary Table S1). *KRAS* G12D, the most frequent oncogenic variant in human cancer, features an aspartic acid residue whose carboxylate side chain lacks the nucleophilicity needed for conventional covalent tethering [55]. Early non-covalent inhibitors such as MRTX1133 occupy the switch-II pocket through a tight network of ionic, hydrogen-bonding, and salt-bridge interactions with Asp12 and surrounding residues [13,14]. MRTX1133 demonstrates sub-nanomolar affinity for GDP-bound KRAS(G12D) and selective antitumor activity in preclinical models of pancreatic and colorectal cancer [14]. However, because non-covalent inhibitors do not form an irreversible adduct, their target occupancy depends continuously on systemic drug exposure, making sustained pharmacokinetic coverage essential to prevent rapid pathway reactivation.",
+    "The third mechanistic class comprises multi-RAS inhibitors that target the active, GTP-bound (ON-state) conformation through an innovative tri-complex molecular glue mechanism (Figure 1b, Supplementary Table S1). Pioneered by daraxonrasib (RMC-6236) and pan-RAS analogues such as RMC-7977, these compounds do not rely on covalent bond formation or nucleotide state trapping [12-14]. Class III tri-complex molecular glues bind the active GTP-bound conformation, overcoming the physical barrier of an otherwise closed switch-II pocket. These small molecules first bind the abundant chaperone cyclophilin A (CYPA), creating a composite binary interface; this complex then docks onto the switch II region of GTP-bound RAS, sterically blocking effector engagement (such as RAF binding) without requiring displacement of bound GTP [56,57]. Because CYPA is ubiquitously expressed and the binding interface is broadly conserved, this mechanism enables potent inhibition of multiple active RAS isoforms (KRAS, NRAS, and HRAS) and diverse codon-12 and codon-13 variants [57,58].",
+    "The fourth mechanistic class encompasses pan-RAS inhibitors and upstream nucleotide exchange inhibitors that act broadly across the RAS signaling node (Supplementary Table S1). Pan-RAS inhibitors, including both ON-state molecular glues (such as RMC-7977) and switch-I/II-directed non-covalent compounds, engage conserved G-domain epitopes to inhibit multiple mutant and wild-type RAS variants simultaneously [59,60]. In parallel, allosteric inhibitors of SOS1 (such as BI 1701963 and MRTX0902) bind the catalytic pocket of SOS1, blocking its interaction with RAS and preventing GEF-mediated nucleotide exchange [15-17]. While pan-RAS strategies can prevent compensatory reactivation through uninhibited RAS isoforms, they also suppress wild-type RAS activity in healthy tissues, narrowing the therapeutic window and requiring meticulous clinical dose calibration.",
+    "Seven phase III randomised controlled trials define the comparative clinical evidence for direct RAS and pathway inhibitors across advanced non-small cell lung cancer, colorectal cancer, pancreatic ductal adenocarcinoma, and cutaneous melanoma (Table 1, Figure 3; literature and clinical trial registry search cut-off date: 18 November 2026) [59–64,75]. Below, we analyze trial designs, comparator selections, and efficacy outcomes, with a focus on progression-free survival (Figure 3a), overall survival (Figure 3b), objective response rates, and crossover mechanics (Figure 3c).",
+    "In advanced *KRAS* G12C NSCLC progressing after platinum chemotherapy and anti-PD-(L)1 therapy, two phase III trials compared oral G12C monotherapy with intravenous docetaxel (Table 1, Figure 3a). In the CodeBreaK 200 trial, 345 patients were randomised to sotorasib (960 mg daily) or docetaxel (75 mg/m2 every 3 weeks) [61]. Sotorasib met its primary endpoint, demonstrating a statistically significant improvement in progression-free survival by blinded independent central review (median 5.6 versus 4.5 months; hazard ratio [HR] 0.66, 95% confidence interval [CI] 0.51–0.86; p = 0.0017). Objective response rate was more than doubled (28.1% versus 13.2%; p < 0.001), and disease control rate reached 82.5% versus 60.3%.",
+    "However, CodeBreaK 200 showed no difference in overall survival between treatment arms (median 10.6 versus 11.3 months; HR 1.01, 95% CI 0.77–1.33; p = 0.53; Figure 3b) [61]. This lack of OS separation was driven by extensive post-progression crossover: upon confirmed progression, 34% of docetaxel-arm patients crossed over to receive sotorasib directly, and 82% of docetaxel patients who received any subsequent therapy went on to receive a G12C inhibitor (Figure 3c) [61]. Interpretation was further complicated by the FDA's mandate mid-trial to reduce the sample size from 650 to 345 patients, rendering the study underpowered for OS [61]. An open-label design limitation also emerged: 13.2% of patients allocated to docetaxel withdrew consent prior to receiving study treatment, compared with 1.2% in the sotorasib arm [61]. This substantial pre-treatment attrition bias, coupled with a modest 5-week median PFS gain, led the FDA ODAC in October 2023 to vote 10:2 that the primary endpoint could not be reliably interpreted, denying full approval while leaving the accelerated approval in place.",
+    "The phase III KRYSTAL-12 trial evaluated adagrasib against docetaxel in 453 patients with pretreated *KRAS* G12C NSCLC, confirming the clinical activity of direct G12C inhibition (Table 1, Figure 3a) [62]. Adagrasib demonstrated a statistically significant improvement in PFS over docetaxel (median 5.5 versus 3.8 months; HR 0.58, 95% CI 0.45–0.76; p < 0.0001). ORR was 31.9% for adagrasib versus 9.2% for docetaxel (odds ratio 4.68; p < 0.0001), with a median response duration of 8.3 months compared with 5.4 months. In patients with baseline brain metastases, adagrasib achieved meaningful intracranial efficacy (intracranial ORR 24% vs 11%, intracranial PFS HR 0.55) [62,63].",
+    "Final overall survival data from KRYSTAL-12 demonstrated median OS of 10.4 months for adagrasib versus 10.9 months for docetaxel (HR 0.98, 95% CI 0.78–1.23; p = 0.86; Figure 3b) [62]. Although on-study crossover was prohibited by protocol in KRYSTAL-12, approximately 29% of patients in the docetaxel arm accessed off-study G12C inhibitors upon progression (with 40% receiving any subsequent therapy, and 35.0% effective post-progression targeted crossover), which diluted the observable overall survival divergence (Figure 3c) [62]. Notably, adagrasib exhibited meaningful intracranial activity in patients with baseline brain metastases, consistent with its blood-brain barrier penetration in preclinical models [7,63]. In the phase II KRYSTAL-1 trial, adagrasib monotherapy achieved an intracranial ORR of 42% (95% CI 20.3%–66.5%) and a median intracranial PFS of 5.4 months in patients with untreated CNS metastases [7,63], providing actionable clinical guidance for central nervous system disease management [64].",
+    "The randomised phase III Krascendo 1 trial established the first head-to-head comparative evidence between direct RAS inhibitors, evaluating the second-generation covalent inhibitor divarasib against investigator's choice active comparator (sotorasib or adagrasib) in 338 patients (divarasib 167 vs comparator 171 [sotorasib 156, adagrasib 15]) with pretreated *KRAS* G12C-mutant advanced NSCLC (Table 1, Figure 3) [65]. Divarasib was engineered for enhanced Switch-II pocket complementarity, achieving approximately 5- to 20-fold greater biochemical potency and markedly higher fractional covalent target occupancy than first-generation compounds [8,9]. In Krascendo 1, divarasib met its primary endpoint, demonstrating a statistically significant prolongation of PFS compared with control (median 9.8 versus 5.7 months; HR 0.58, 95% CI 0.44–0.76; p < 0.001) and an elevated confirmed ORR (58.4% versus 32.3%; p < 0.001) [65]. Furthermore, with strict prohibition of cross-arm switching, Krascendo 1 demonstrated a statistically significant overall survival benefit favoring divarasib (median 17.7 versus 12.0 months; HR 0.56, 95% CI 0.41–0.78; p < 0.001) [65]. These findings validate that deeper, continuous KRAS target suppression overcomes rapid transcriptional rebound. However, because Krascendo 1 lacked a docetaxel chemotherapy control arm, its survival superiority over sotorasib cannot be formally transitive to prove superiority over docetaxel, highlighting the regulatory challenges of active-comparator trials in the absence of a chemotherapy benchmark.",
+    "Direct G12C monotherapy yields disappointing results in metastatic colorectal cancer, with response rates of only 7% to 19% and median PFS rarely exceeding 4 months [66,67]. This tissue-specific insensitivity stems from high basal expression of receptor tyrosine kinases—particularly EGFR—in colorectal epithelial cells [68,69]. Pharmacological inhibition of KRAS(G12C) suppresses ERK phosphorylation, which rapidly relieves physiological negative feedback on EGFR, SOS1, and CRAF. The resulting surge in EGFR-mediated signaling drives rapid reactivation of wild-type and mutant RAS, restoring downstream MAPK flux within hours (detailed in Section 5.2) [68,69]. Overcoming this adaptive resistance requires dual vertical inhibition combining a direct G12C inhibitor with an anti-EGFR monoclonal antibody (such as cetuximab or panitumumab) to simultaneously block the driver and prevent feedback reactivation (Table 1, Figure 3a) [69,70].",
+    "The phase III CodeBreaK 300 trial provided definitive randomised proof of this principle, evaluating sotorasib plus panitumumab in 160 patients with chemorefractory *KRAS* G12C mCRC (Table 1, Figure 3a) [69]. Patients were randomised to sotorasib 960 mg plus panitumumab, sotorasib 240 mg plus panitumumab, or investigator's choice of standard therapy (trifluridine-tipiracil or regorafenib). Both sotorasib doses combined with panitumumab significantly prolonged PFS compared with standard therapy: median PFS was 5.6 months in the 960-mg group (HR 0.49, 95% CI 0.30–0.80; p = 0.006) and 3.9 months in the 240-mg group (HR 0.58, 95% CI 0.36–0.93; p = 0.03), versus 2.2 months for standard therapy. Confirmed ORR was 26.4% (960 mg) and 5.7% (240 mg), compared with 0% in the control arm (p < 0.001) [69]. In the updated overall survival analysis with median follow-up of 13.6 months, median OS was Not Reached (NR) in the 960-mg group (95% CI 11.9–NR) and 11.9 months in the 240-mg group (95% CI 7.5–15.6), compared with 10.3 months for standard care (HR 0.70, 95% CI 0.41–1.18; p = 0.20 for 960 mg) [70].",
+    "The phase III KRYSTAL-10 trial evaluated whether targeted dual blockade could displace cytotoxic doublet chemotherapy in second-line colorectal cancer. The trial randomised 461 patients (231 in adagrasib plus cetuximab vs 230 in chemotherapy) with *KRAS* G12C-mutant mCRC progressing on frontline chemotherapy 1:1 to adagrasib plus cetuximab or investigator's choice chemotherapy (mFOLFOX6 or FOLFIRI with or without bevacizumab) (Table 1, Figure 3a) [71]. At primary analysis, KRYSTAL-10 failed to meet its dual primary endpoints: PFS by blinded independent central review (BICR) showed no statistically significant improvement (median 7.5 versus 8.1 months; HR 0.89, 95% CI 0.71–1.13; p = 0.32), and overall survival was not statistically different between arms (median 21.6 versus 21.7 months; HR 0.83, 95% CI 0.67–1.03; p = 0.09; Figure 3b) [71], despite investigator-assessed PFS favoring the targeted arm (median 6.9 vs 5.6 months; HR 0.69, p = 0.0028) and higher ORR (34.0% vs 18.6%, p < 0.001). The durable disease control provided by fluoropyrimidine doublets with VEGF blockade, combined with a 42% crossover rate to G12C inhibitors in the control arm, diminished observable survival divergence. Consequently, because KRYSTAL-10 failed to confirm clinical superiority over active chemotherapy doublets, the US FDA formally withdrew accelerated approval for adagrasib plus cetuximab in mCRC in September 2026, establishing that targeted combinations must demonstrate clear overall survival superiority to replace cytotoxic doublets in this setting (Supplementary Table S2).",
+    "The phase III RASolute 302 trial established clinical validation for multi-RAS(ON) tri-complex inhibition in metastatic pancreatic ductal adenocarcinoma, where more than 90% of tumours harbour oncogenic *KRAS* alterations (predominantly G12D, G12V, and G12R) inherently refractory to G12C covalent inhibitors (Table 1, Figure 3) [57,72]. RASolute 302 randomised 500 patients with previously treated metastatic pancreatic cancer 1:1 to daraxonrasib (RMC-6236, 300 mg once daily; n=248) or investigator's choice chemotherapy (gemcitabine plus nab-paclitaxel, NALIRIFOX, or FOLFOX; n=252), with dual primary endpoints of PFS and OS evaluated in the RAS G12-mutated subgroup (accounting for 91.8% of the trial population) [57]. Daraxonrasib demonstrated a statistically significant improvement in the primary endpoint of overall survival, extending median OS to 13.2 months compared with 6.7 months for chemotherapy (HR 0.40, 95% CI 0.31–0.52; p < 0.0001; Figure 3b) [57]. In the primary RAS G12-mutated cohort, median PFS was 7.3 versus 3.5 months (HR 0.45); across the overall intention-to-treat population (N=500), median PFS was 7.2 versus 3.6 months (HR 0.49, 95% CI 0.38–0.64; p < 0.0001; Figure 3a), with confirmed ORR reaching 30.0% versus 11.0% (p < 0.0001) [57]. In contrast to pretreated NSCLC and colorectal cancer, where post-progression salvage therapies confound survival readouts, the lack of effective post-second-line regimens in pancreatic cancer enabled the profound PFS benefit of active-state RAS inhibition to translate directly into a statistically significant doubling of median overall survival.",
+    "The clinical utility of pathway inhibition in *NRAS*-mutant solid tumours was evaluated in the randomised phase III NEMO trial, which compared the MEK inhibitor binimetinib (45 mg twice daily) with dacarbazine (1,000 mg/m2 every 3 weeks) in 402 patients with advanced *NRAS*-mutant cutaneous melanoma (Table 1, Figure 3) [30]. Binimetinib significantly improved progression-free survival over dacarbazine (median 2.8 versus 1.5 months; HR 0.62, 95% CI 0.47–0.80; p < 0.001) and increased ORR (15% versus 7%), but did not prolong overall survival (median 11.0 versus 10.1 months; HR 1.00, 95% CI 0.75–1.33; p = 0.99; Figure 3b) [30]. Although post-progression crossover to binimetinib was not permitted, extensive subsequent access to anti-PD-1 immunotherapy and ipilimumab in both arms diluted potential survival differences. The modest 1.3-month PFS gain reflected known limitations of MEK monotherapy: downstream inhibition relieves negative feedback on CRAF and activates bypass signaling, preventing durable disease control.",
+    "Cross-trial safety assessments must distinguish between treatment-related adverse events (TRAEs) and all-cause treatment-emergent adverse events (TEAEs), while accounting for differences in median treatment duration. Because patients in targeted therapy arms often remain on treatment two to three times longer than patients receiving chemotherapy, cumulative toxicity reporting can be skewed [61,62]. Overall, direct RAS inhibitors demonstrate a favorable therapeutic index compared with cytotoxic chemotherapy: grade 3 or higher TRAEs occur in 20% to 47% of patients treated with direct covalent inhibitors, compared with 40% to 46% with docetaxel [61,62]. The most common adverse events with sotorasib and adagrasib are gastrointestinal (diarrhoea, nausea, vomiting) and hepatic (transaminase elevations), which are predominantly low-grade and manageable with dose interruptions or reductions [73,74]. A prudent washout interval of 30 to 90 days between prior immune checkpoint blockade and covalent G12C inhibitor initiation is clinically recommended to mitigate the risk of severe hepatotoxicity [74,75].",
+    "The therapeutic index differs substantially between monotherapy and multi-agent combinations. In CodeBreaK 300, combining sotorasib (960 mg daily) with panitumumab yielded Grade 3 or higher treatment-related adverse events in 35.8% of patients in initial reports [69], rising to 45.3% with extended follow-up (compared with 45.1% in the investigator's choice chemotherapy control arm) [70]. While chemotherapy toxicity was dominated by myelosuppression, the targeted combination profile was driven by on-target EGFR inhibition, including Grade 3 acneiform dermatitis (11.3%) and hypomagnesemia (5.7%) [69]. Compared with historical monotherapy cohorts (such as CodeBreaK 100 in colorectal cancer and non-small cell lung cancer, where Grade 3 or higher TRAEs were 19.8%) [66,76], vertical co-blockade increases cutaneous and electrolyte toxicities without exacerbating myelosuppression. A critical challenge arises when combining covalent G12C inhibitors with immune checkpoint inhibitors: concurrent sotorasib plus pembrolizumab produced Grade 3/4 transaminase elevations in 30% to 50% of patients, caused by covalent cysteine adduction creating immunogenic hapten complexes in hepatocytes combined with PD-1 disinhibition [73]. By contrast, second-generation inhibitors (divarasib, olomorasib) exhibit lower off-target immunogenicity, with Grade 3/4 hepatitis rates remaining below 10% in combination cohorts.",
+    "A systematic analysis of ClinicalTrials.gov registrations from 2000 to 2026 (registry search cut-off date: 18 November 2026) reveals a comprehensive portfolio of 1,182 interventional oncology trials incorporating RAS eligibility criteria or therapeutic targeting across ClinicalTrials.gov (Figure 4a, b). Among these, 358 trials (30.3%) evaluate direct RAS-targeted agents, 134 (11.3%) evaluate upstream/downstream pathway regulators, and 690 (58.4%) evaluate non-RAS directed regimens within biomarker-stratified cohorts. Geographically, the United States (644 trials) and China (256 trials) represent the dominant clinical development hubs, together hosting nearly 80% of registered studies, with European trial networks contributing substantially to multinational phase II/III consortia (Figure 4a). Distribution by clinical stage shows 30.4% in phase I, 40.9% in phase II, 17.9% in phase I/II, and 10.0% in phase III (118 trials), with master protocols and platform designs expanding rapidly (Figure 4d). Notably, 214 registered studies (18.1%) were prematurely terminated, withdrawn, or suspended.",
+    "Clinical trials are advancing direct RAS inhibitors into earlier disease stages and frontline combination settings (Figure 4c). Of the 1,182 RAS-focused trials registered on ClinicalTrials.gov, roughly 30% evaluate frontline or early-stage interventions, with combination studies outnumbering monotherapy trials roughly four to one. Annual registrations accelerated sharply after the 2013 discovery of the switch-II pocket, with annual trial activations expanding following 2020 and plateauing at sustained high volume between 2024 and 2026 (116 trials in 2025, 115 in 2026).",
+    "The design of registration trials has evolved in response to methodological lessons from earlier studies. Early phase III trials (such as CodeBreaK 200) employed conventional two-arm randomised designs with docetaxel as the active control, which introduced open-label attrition bias and allowed post-progression crossover that obscured OS endpoints [61,67]. More recent trials incorporate multi-arm master protocols with shared control groups, pre-specified crossover restrictions, and mandatory biomarker stratification at baseline. Furthermore, several phase III trials (such as KRYSTAL-10 and RASolute 302) adopted dual primary endpoints of PFS and OS, reflecting regulatory expectations for survival validation [71,77].",
+    "Geographic disparities in regulatory approval pathways shape the global availability of direct RAS inhibitors (Supplementary Table S2). While sotorasib and adagrasib received accelerated approval from the US FDA and conditional marketing authorization from the European Medicines Agency (EMA), the regulatory trajectory diverged when confirmatory trials reported. The FDA rejected full approval for sotorasib following the ODAC vote, while the EMA converted its conditional authorization to standard approval based on the totality of clinical evidence [67,78,79]. In China, the National Medical Products Administration (NMPA) approved domestic G12C inhibitors—including garsorasib, fulzerasib, and glecirasib—under conditional approval frameworks, reflecting rapid drug development and distinct commercial ecosystems [10,53,80].",
+    "Sponsorship patterns among the 1,182 registered trials reflect the commercial drivers of drug development. Pharmaceutical and biotechnology companies sponsor approximately 65% of trials, focusing predominantly on registration-directed phase II and III studies evaluating proprietary molecules. Academic medical centers and cooperative groups sponsor the remaining 35%, which are enriched for exploratory biomarker studies, novel combination strategies, and investigator-initiated trials in underserved indications such as biliary tract cancers, endometrial carcinoma, and rare RAS-mutant solid tumours.",
+    "Acquired resistance routinely limits the duration of direct RAS inhibition, with median response durations across monotherapy trials rarely exceeding 6 to 11 months [61,62,69]. Comprehensive genomic analysis of paired baseline and progression specimens reveals that resistance is mediated by a multi-tiered molecular network spanning on-target secondary mutations, bypass pathway reactivations, and lineage plasticity (Figure 5, and Supplementary Table S3 / Supplementary Figure S1) [52,81,82]. On-target resistance mutations within the switch-II pocket occur in 15% to 25% of progressing tumours, directly altering drug-protein binding energetics (Figure 2b) [8,9]. Adagrasib extends deeply into an induced subpocket to form direct hydrogen-bonding and aromatic interactions with His95; consequently, secondary mutations at His95 (including H95D, H95Q, and H95R) disrupt adagrasib engagement, conferring clinical resistance while sparing sotorasib, whose quinazolinone scaffold does not make direct contact with His95 [8,9]. This pocket asymmetry provides a validated molecular rationale for sequential inhibitor switching from adagrasib to sotorasib in tumours harbouring isolated H95 alterations [7,52]. Conversely, mutations at Switch-II residue Tyr96 (such as Y96C and Y96D) eliminate essential hydrogen bonds and hydrophobic packing interfaces required by adagrasib and perturb the induced pocket volume needed for sotorasib, producing broad cross-resistance across covalent G12C inhibitors [8,9]. In addition, mutations at Switch-II residue Arg68 (R68S) and allosteric hinge residues (A59S, A59T) impair the inducible pocket conformation, generating broad resistance across multiple covalent G12C inhibitors [9,74].",
+    "Off-target resistance mechanisms bypass direct RAS blockade by restoring downstream signaling through parallel or convergent pathways (Figure 5) [75,83]. Acquired receptor tyrosine kinase alterations are common, including *MET* focal gene amplification (observed in 7%–13% of resistant tumours) [52,82], *HER2* amplification, and compensatory upregulation of *AXL* and *FGFR1* [9,84]. Downstream in the MAPK cascade, acquired mutations in *BRAF* (such as V600E or non-V600 missense mutations), *CRAF* fusions, *NRAS* activating mutations (e.g. Q61K), and *MAP2K1* (MEK1) mutations (such as K57N or Q56P) reactivate ERK phosphorylation independently of KRAS [9,85]. Furthermore, 3% to 5% of resistant lung adenocarcinomas undergo histological transformation to small-cell neuroendocrine carcinoma (SCLC) or epithelial-to-mesenchymal transition (EMT), frequently accompanied by biallelic inactivation of *TP53* and *RB1* [54,86]. This phenotypic shift reduces biological dependency on the initial *KRAS* driver, diminishing the efficacy of subsequent direct RAS monotherapies.",
+    "Overcoming acquired resistance requires rational combination strategies tailored to specific resistance mechanisms (Figure 5, Supplementary Table S3) [28,83]. Vertical EGFR co-blockade with sotorasib plus panitumumab achieved standard-of-care status in chemorefractory KRAS G12C mCRC following regular FDA approval in January 2025 [69,70], whereas adagrasib plus cetuximab saw its accelerated approval withdrawn in September 2026 following KRYSTAL-10 [71]; similar vertical combinations are currently being evaluated in NSCLC (e.g. sotorasib plus afatinib or osimertinib) [87]. Horizontal combination strategies target convergent signaling nodes: combining direct RAS inhibitors with SHP2 inhibitors (such as TNO155 or RMC-4630) or SOS1 inhibitors (BI 1701963) prevents compensatory nucleotide exchange and deepens pathway suppression [16,88]. In tumors with acquired *MET* amplification, adding a selective MET inhibitor (such as capmatinib or tepotinib) can restore sensitivity to G12C inhibition [89]. For tumors with on-target switch-II mutations that impair covalent inhibitor binding, switching to a multi-RAS(ON) tri-complex inhibitor (daraxonrasib) or a non-covalent pan-RAS inhibitor represents a promising rescue strategy [52,56].",
+    "Circulating tumour DNA (ctDNA) kinetics provide a minimally invasive, real-time window into treatment response, early target engagement, and clonal evolution during direct RAS inhibition (Figure 5) [81,90]. Baseline plasma *KRAS* variant allele frequency (VAF) correlates directly with total metabolic tumour volume and serves as an independent adverse prognostic factor across solid tumours [81,82]. More importantly, early on-treatment kinetics provide an actionable molecular surrogate: complete molecular clearance—defined as the eradication of detectable mutant *KRAS* ctDNA at Cycle 2 Day 1 (C2D1)—strongly predicts prolonged progression-free and overall survival (ORR ~80% with clearance versus <10% with persistent ctDNA; HR < 0.35, p < 0.001), identifying a favorable biological subgroup that achieves durable disease control [91,92]. Furthermore, longitudinal high-sensitivity serial ctDNA sequencing captures emerging secondary resistance alterations—including on-target Switch-II mutations (Y96, H95), *BRAF* V600E, and focal *MET* or *KRAS* amplifications—with a median lead time of 2 to 4 months prior to radiographic progression by RECIST 1.1 criteria [9,90,93]. This preemptive molecular window creates an unprecedented clinical opportunity to deploy adaptive interventional regimens, adjusting targeted combinations before macroscopic progression and clinical deterioration supervene.",
+    "The clinical development of direct RAS inhibitors marks a defining transition in precision oncology, transforming a target once deemed intractable into a validated therapeutic reality. Across seven pivotal phase III randomised controlled trials, direct RAS and pathway inhibitors have demonstrated consistent, statistically significant improvements in progression-free survival and objective response rates in advanced non-small cell lung cancer, colorectal cancer, pancreatic ductal adenocarcinoma, and cutaneous melanoma [54,59–63,75]. Yet these successes also expose substantial biological and methodological challenges that define the agenda for next-generation drug design and clinical trial execution.",
+    "Future progress in RAS targeting will depend on advances in chemical biology that expand the scope and durability of inhibition. First, developing covalent and non-covalent inhibitors for non-G12C alleles is an urgent priority, as *KRAS* G12D, G12V, and G12R account for the vast majority of RAS-driven cancers globally [6,33,94]. The clinical validation of daraxonrasib in pancreatic cancer demonstrates that multi-RAS(ON) tri-complex inhibitors can achieve clinically meaningful survival improvements across diverse *KRAS* mutations without requiring covalent cysteine tethering [57]. Second, pan-RAS inhibitors that target both mutant and wild-type RAS isoforms offer a potential solution to compensatory feedback through untargeted paralogues, provided that the therapeutic index can be maintained through selective scheduling or tumor-specific delivery [59,60]. Third, targeted protein degraders (PROTACs and molecular glues) that recruit E3 ubiquitin ligases to induce proteasomal destruction of RAS oncoproteins represent an alternative modality that could eliminate both catalytic and scaffolding functions of the protein [95,96].",
+    "Moving direct RAS inhibitors from the second-line and third-line settings into frontline therapy represents the most immediate opportunity to improve patient outcomes. In advanced NSCLC, ongoing phase III trials are evaluating sotorasib, adagrasib, and second-generation G12C inhibitors in combination with platinum doublet chemotherapy or anti-PD-(L)1 immunotherapy as first-line treatment [83]. Frontline combinations have the potential to prevent or delay the emergence of subclonal resistance by eliminating multiple clone populations simultaneously. However, trialists must carefully manage overlapping toxicities, particularly the hepatotoxicity observed when covalent G12C inhibitors are combined with checkpoint inhibitors [73], and ensure that targeted combinations deliver meaningful survival gains over standard-of-care chemo-immunotherapy.",
+    "Optimizing central nervous system (CNS) penetration is critical for direct RAS inhibitors, particularly in NSCLC where 30% to 40% of patients develop brain metastases during the course of their disease [63]. Adagrasib has demonstrated clinically meaningful intracranial activity and durable CNS disease control in pretreated patients with active brain metastases [97], whereas sotorasib exhibits lower brain penetration in preclinical models [53]. Second-generation covalent inhibitors (divarasib, olomorasib) and multi-RAS(ON) inhibitors are being specifically evaluated for CNS bioavailability, with prospective intracranial response endpoints incorporated into ongoing registration trials [10,12]. Achieving durable CNS disease control will be essential for establishing direct RAS inhibitors as comprehensive systemic therapies.",
+    "To prevent the interpretive impasses that characterized CodeBreaK 200 and KRYSTAL-10, future registration protocols evaluating targeted agents in pretreated solid tumours must integrate pre-specified, methodologically rigorous causal survival adjustment models. In trials where post-progression crossover is ethically permissible or accessible via off-study salvage therapy, standard intention-to-treat (ITT) analyses can dilute overall survival differences toward the null, while naive censoring at crossover violates uninformative censoring assumptions and introduces substantial selection bias. Protocols should formally mandate three complementary counterfactual frameworks: (1) Rank-Preserving Structural Failure Time Models (RPSFTM), which assume that treatment multiplies survival time by a common acceleration factor (exp(-psi)), reconstructing the counterfactual survival distribution that would have been observed had control-arm patients never crossed over; (2) Two-Stage Accelerated Failure Time (AFT) Models, which estimate the treatment effect in patients who actually switched therapy after adjusting for time-dependent prognostic covariates at disease progression; and (3) Marginal Structural Models with Inverse Probability of Treatment Weighting (MSM-IPTW), which re-weight patient-time observations to simulate a pseudo-population where switching is independent of time-varying confounding. Embedding these causal inference frameworks directly into Statistical Analysis Plans (SAPs) will enable trialists and regulatory authorities to estimate the true unconfounded survival benefit of targeted intervention without compromising post-progression patient access to life-prolonging salvage therapies.",
+    "Advancing direct RAS inhibitors into early-stage, resectable solid tumours requires careful clinical and ethical stewardship. Trials such as Krascendo 3 in resected *KRAS* G12C NSCLC and RASolute 304 in resected pancreatic cancer are evaluating adjuvant or neoadjuvant direct RAS inhibition to eliminate micrometastatic disease and reduce recurrence risk [83]. However, targeted cytostatic monotherapy must not displace established curative backbones, such as perioperative chemo-immunotherapy in NSCLC or adjuvant mFOLFIRINOX in pancreatic cancer. Instead, direct RAS inhibitors should be evaluated as maintenance strategies following standard adjuvant therapy or deployed in molecular residual disease (MRD)-positive populations identified by ctDNA [93,98]. Furthermore, a recommended washout period of 30 to 90 days is advised between perioperative immunotherapy and subsequent targeted covalent inhibitors based on retrospective safety reports of treatment-related hepatotoxicity [73].",
+    "The regulatory trajectory of direct RAS inhibitors reflects a shifting balance between rapid access and rigorous efficacy validation. Accelerated approval pathways enabled sotorasib and adagrasib to reach patients years ahead of standard approval timelines based on response rate and response duration surrogates [50,99]. However, the subsequent challenges in confirming overall survival benefit in phase III trials—culminating in the FDA's rejection of full approval for sotorasib and the formal withdrawal of adagrasib plus cetuximab in colorectal cancer—demonstrate that accelerated approvals must be tethered to robust, feasible confirmatory trial designs [67,71]. Regulatory agencies increasingly require confirmatory trials to be well underway or fully enrolled at the time of accelerated approval, with clearer endpoints and tighter crossover controls to ensure definitive evidence generation.",
+    "Comprehensive molecular profiling forms the foundation of modern RAS-directed oncology care. Guidelines recommend broad next-generation sequencing (NGS) panels that assess both specific *KRAS*, *NRAS*, and *HRAS* mutations and concurrent alterations in *TP53*, *STK11*, *KEAP1*, and *MET* at the time of advanced cancer diagnosis [87,88]. Integrating plasma ctDNA testing alongside tissue NGS accelerates biomarker turnaround times and captures spatial tumour heterogeneity [81,90]. As allele-specific and pan-RAS inhibitors multiply, testing must transition from binary *KRAS* mutation status to comprehensive allele-resolved and co-mutation-aware profiling to guide therapeutic selection.",
+    "The clinical benefits of direct RAS inhibitors remain unevenly distributed globally. High drug costs, limited NGS diagnostic infrastructure in low- and middle-income countries, and geographic concentration of clinical trials in North America, Western Europe, and East Asia restrict access for the majority of the world's cancer patients. Expanding international access requires tiered pricing models, generic manufacturing agreements, simplified diagnostic assays (such as droplet digital PCR for high-frequency alleles), and trial expansion into historically underrepresented regions.",
+    "Beyond small-molecule catalytic inhibitors and degraders, emerging modalities are rapidly expanding the therapeutic repertoire against oncogenic RAS. These include lymph-node-targeted amphiphile mutant-KRAS peptide vaccines (such as the AMPLIFY platform) that elicit functional T-cell expansions in resected disease [100], adoptive neoantigen T-cell receptor (TCR) gene and cell therapies specifically engineered against mutant KRAS neoepitopes [101,102], and generative artificial intelligence frameworks leveraging diffusion algorithms (such as RFdiffusion) for the de novo structural design of neomorphic protein binders capable of engaging refractory conformational topologies [103].",
+    "In conclusion, direct RAS targeting has expanded the scope of precision oncology, demonstrating that even the most formidable oncogenic drivers can yield to innovative structural biology and rational medicinal design. The transition from first-generation allele-specific covalent inhibitors to second-generation potent molecules, non-covalent allele-specific inhibitors, and active-state multi-RAS molecular glues reflects rapid progress in structural pharmacology. The enduring lesson of the randomized trials reviewed here is that clinical success requires equal sophistication in trial methodology: designing studies with active comparators, controlling for post-progression crossover, pre-specifying causal survival models, and deploying longitudinal biomarkers to guide adaptive therapy. By uniting structural precision with methodological rigor, direct RAS-targeted therapy can fulfill its promise of transforming disease control into durable, meaningful survival gains for patients with solid tumours worldwide."
+  ],
+  "table_1": {
+    "title": "Table 1. Methodological architecture and clinical efficacy endpoints across seven pivotal phase III randomised controlled trials of direct RAS and downstream pathway inhibitors in solid tumours.",
+    "headers": [
+      "Trial & Citation",
+      "Indication & Biomarker",
+      "Design & Setting",
+      "Sample Size (Arms)",
+      "Primary Endpoint",
+      "mPFS (mo, HR, 95% CI)",
+      "ORR (%)",
+      "mOS (mo, HR, 95% CI)",
+      "Gr >= 3 AEs (%)*",
+      "Discont. (%)",
+      "Crossover Impact & Core Clinical Implication"
+    ],
+    "col_widths": [
+      1.0,
+      1.0,
+      0.9,
+      0.9,
+      0.7,
+      1.05,
+      0.85,
+      1.05,
+      0.65,
+      0.65,
+      1.94
+    ],
+    "rows": [
+      [
+        "CodeBreaK 200\n(Lancet 2023) [59]\n[Tier A: Direct RAS]",
+        "Advanced NSCLC\n*KRAS* G12C, ≥2L",
+        "Phase III, open-label\n1:1 randomised",
+        "N=345\nSotorasib: 171\nDocetaxel: 174",
+        "PFS by BICR",
+        "5.6 vs 4.5 mo\nHR 0.66 (0.51–0.86)\nP=0.0017",
+        "28.1% vs 13.2%\nP<0.001",
+        "10.6 vs 11.3 mo\nHR 1.01 (0.77–1.33)\nP=0.53",
+        "33.1% vs 40.4%",
+        "9.8% vs 11.0%",
+        "34% post-progression crossover (33.9% effective) diluted OS divergence; sample size downscaled from 650 to 345, underpowering OS assessment; 13.2% vs 1.2% asymmetric early attrition prompted FDA ODAC 10:2 rejection"
+      ],
+      [
+        "KRYSTAL-12\n(Lancet 2025) [61]\n[Tier A: Direct RAS]",
+        "Advanced NSCLC\n*KRAS* G12C, ≥2L",
+        "Phase III, open-label\n2:1 randomised",
+        "N=453\nAdagrasib: 301\nDocetaxel: 152",
+        "PFS by BICR",
+        "5.5 vs 3.8 mo\nHR 0.58 (0.45–0.76)\nP<0.0001",
+        "31.9% vs 9.2%\nOR 4.68, P<0.0001",
+        "10.4 vs 10.9 mo\nHR 0.98 (0.78–1.23)\nP=0.86",
+        "47.0% vs 45.7%",
+        "7.7% vs 14.3%",
+        "No on-study protocol crossover; 29% off-study salvage (35.0% effective crossover) diluted OS divergence; confirmed meaningful CNS intracranial disease control (intracranial ORR 24% vs 11%, HR 0.55)"
+      ],
+      [
+        "Krascendo 1\n(NEJM 2026 / ESMO 2026) [62]\n[Tier A: Direct RAS]",
+        "Advanced NSCLC\n*KRAS* G12C, ≥2L",
+        "Phase III, open-label\n1:1 active-comparator",
+        "N=338\nDivarasib: 167\nActive Comparator: 171\n(Soto: 156, Adag: 15)",
+        "PFS by BICR",
+        "9.8 vs 5.7 mo\nHR 0.58 (0.44–0.76)\nP<0.001",
+        "58.4% vs 32.3%\nP<0.001",
+        "17.7 vs 12.0 mo\nHR 0.56 (0.41–0.78)\nP<0.001",
+        "24.6% vs 34.5%",
+        "4.8% vs 11.7%",
+        "Strict crossover prohibition; first randomized trial to establish both statistically significant PFS and OS superiority over active G12C targeted comparator; cannot informally extrapolate transitivity to chemotherapy"
+      ],
+      [
+        "CodeBreaK 300\n(NEJM 2023 / JCO 2025) [69,70]\n[Tier A: Direct RAS]",
+        "Refractory mCRC\n*KRAS* G12C, ≥2 prior lines (3L)",
+        "Phase III, open-label\n1:1:1 randomised",
+        "N=160\nSoto960+Pani: 53\nSoto240+Pani: 53\nStandard Care: 54",
+        "PFS by BICR",
+        "5.6 vs 3.9 vs 2.2 mo\nHR 0.49 (0.30–0.80)\nP=0.006 (960 mg)",
+        "26.4% vs 5.7% vs 0%\nP<0.001",
+        "NR (960 mg) vs 11.9 mo (240 mg)\nvs 10.3 mo (SOC)\nHR 0.70 (0.41–1.18), P=0.20",
+        "35.8% (2023) / 45.3% (2025)\nvs 45.1% (SOC)",
+        "2.0% vs 5.6%",
+        "Vertical EGFR co-blockade overcomes adaptive pathway reactivation; regular FDA approval Jan 2025; sample size (160) underpowered for OS; positive survival trend in chemorefractory setting; 31.5% effective crossover"
+      ],
+      [
+        "KRYSTAL-10\n(Ann Oncol 2026 LBA1) [71]\n[Tier A: Direct RAS]",
+        "Advanced mCRC\n*KRAS* G12C, 2L",
+        "Phase III, open-label\n1:1 randomised",
+        "N=461\nAdagrasib+Cetux: 231\nChemo+Bev: 230",
+        "Dual PFS & OS by BICR",
+        "7.5 vs 8.1 mo (BICR)\nHR 0.89 (0.71–1.13), P=0.32\n[INV: 6.9 vs 5.6, HR 0.69]",
+        "34.0% vs 18.6%\nP<0.001",
+        "21.6 vs 21.7 mo\nHR 0.83 (0.67–1.03)\nP=0.09",
+        "41.2% vs 54.5%",
+        "6.5% vs 12.8%",
+        "Chemo-free targeted doublet failed to surpass cytotoxic doublet + bevacizumab in OS or BICR PFS (30.0% effective crossover in database / 42% in presentation; 74% polyclonal escape); prompted FDA accelerated approval withdrawal Sept 2026"
+      ],
+      [
+        "RASolute 302\n(NEJM 2026) [54]\n[Tier A: Direct RAS]",
+        "Metastatic PDAC\n*KRAS*-mutant, ≥2L",
+        "Phase III, open-label\n1:1 randomised",
+        "N=500 (G12 cohort: 459)\nDaraxonrasib: 248\nChemotherapy: 252",
+        "Dual PFS & OS in RAS G12 cohort",
+        "7.3 vs 3.5 mo (G12, HR 0.45)\n7.2 vs 3.6 mo (ITT, HR 0.49)\n95% CI 0.38–0.64, P<0.0001",
+        "30.0% vs 11.0%\nP<0.0001",
+        "13.2 vs 6.7 mo\nHR 0.40 (0.30–0.53)\nP<0.0001",
+        "61.8% vs 69.6%",
+        "1.2% vs 11.2%",
+        "Absence of effective post-2L salvage options in PDAC prevented crossover dilution (effective crossover 4.0%); PFS gain translated cleanly into doubling of overall survival; regular FDA approval August 2026 across G12D/V/R"
+      ],
+      [
+        "NEMO\n(Lancet Oncol 2017) [75]\n[Tier B: MEK Benchmark]",
+        "Advanced melanoma\n*NRAS*-mutant",
+        "Phase III, open-label\n2:1 randomised",
+        "N=402\nBinimetinib: 269\nDacarbazine: 133",
+        "PFS by BICR",
+        "2.8 vs 1.5 mo\nHR 0.62 (0.47–0.80)\nP<0.001",
+        "15.0% vs 7.0%\nP=0.015",
+        "11.0 vs 10.1 mo\nHR 1.00 (0.75–1.33)\nP=0.999",
+        "48.0% vs 23.0% (TRAE)\n[68% vs 46% TEAE]",
+        "25.0% vs 8.0%",
+        "Historical pathway benchmark; PFS gain failed to confer OS benefit due to subsequent salvage immunotherapy (anti-PD-1 / CTLA-4) despite zero on-study protocol crossover (0.0%); narrow MEK therapeutic index"
+      ]
+    ],
+    "footnote": "*Grade >= 3 adverse events (AEs) reflect treatment-related adverse events (TRAEs) for direct RAS inhibitor trials (Tier A) and both TRAEs and all-cause treatment-emergent adverse events (TEAEs) for NEMO (Tier B). Literature and clinical trial data retrieval cut-off date: 18 November 2026. Abbreviations: 1L, first-line; 2L, second-line; 3L, third-line; AE, adverse event; BICR, blinded independent central review; Cetux, cetuximab; CI, confidence interval; CNS, central nervous system; CTLA-4, cytotoxic T-lymphocyte associated protein 4; Discont., treatment discontinuation due to adverse events; EGFR, epidermal growth factor receptor; Gr, grade; HR, hazard ratio; INV, investigator assessment; mCRC, metastatic colorectal cancer; MEK, mitogen-activated protein kinase kinase; mOS, median overall survival; mPFS, median progression-free survival; NEMO, NRAS-mutant Melanoma; NSCLC, non-small cell lung cancer; ODAC, Oncologic Drugs Advisory Committee (US FDA); OR, odds ratio; ORR, objective response rate; OS, overall survival; Pani, panitumumab; PD-1, programmed cell death protein 1; PDAC, pancreatic ductal adenocarcinoma; PFS, progression-free survival; Pts, patients; RCT, randomised controlled trial; Soto, sotorasib; TEAE, treatment-emergent adverse event; TKI, tyrosine kinase inhibitor; TRAE, treatment-related adverse event; VEGF, vascular endothelial growth factor.*"
+  },
+  "table_2": {
+    "title": "Table 2 | Panoramic comparison of seven pivotal phase III randomised controlled trials targeting RAS and downstream pathways",
+    "headers": [
+      "Trial & Citation",
+      "Indication & Biomarker",
+      "Design & Setting",
+      "Sample Size (Arms)",
+      "Primary Endpoint",
+      "mPFS (mo, HR, 95% CI)",
+      "ORR (%)",
+      "mOS (mo, HR, 95% CI)",
+      "Gr >= 3 AEs (%)*",
+      "Discont. (%)",
+      "Crossover Impact & Core Clinical Implication"
+    ],
+    "col_widths": [
+      1.0,
+      1.0,
+      0.9,
+      0.9,
+      0.7,
+      1.05,
+      0.85,
+      1.05,
+      0.65,
+      0.65,
+      1.94
+    ],
+    "rows": [
+      [
+        "CodeBreaK 200\n(Lancet 2023) [59]\n[Tier A: Direct RAS]",
+        "Advanced NSCLC\n*KRAS* G12C, >=2L",
+        "Phase III, open-label\n1:1 randomised",
+        "N=345\nSotorasib: 171\nDocetaxel: 174",
+        "PFS by BICR",
+        "5.6 vs 4.5\nHR 0.66 (0.51-0.86)\nP=0.0017",
+        "28.1% vs 13.2%\nP<0.001",
+        "10.6 vs 11.3\nHR 1.01 (0.77-1.33)\nP=0.53",
+        "33.1% vs 40.4%",
+        "9.8% vs 11.0%",
+        "34% post-progression crossover diluted OS; sample size reduced from 650 to 345, underpowering OS assessment; 13.2% vs 1.2% asymmetric early attrition prompted FDA ODAC 10:2 rejection"
+      ],
+      [
+        "KRYSTAL-12\n(Lancet 2025) [61]\n[Tier A: Direct RAS]",
+        "Advanced NSCLC\n*KRAS* G12C, >=2L",
+        "Phase III, open-label\n2:1 randomised",
+        "N=453\nAdagrasib: 301\nDocetaxel: 152",
+        "PFS by BICR",
+        "5.5 vs 3.8\nHR 0.58 (0.45-0.76)\nP<0.0001",
+        "31.9% vs 9.2%\nOR 4.68\nP<0.0001",
+        "10.4 vs 10.9\nHR 0.98\nP=0.86",
+        "47.0% vs 45.7%",
+        "7.7% vs 14.3%",
+        "No protocol crossover; 29% off-protocol salvage diluted OS; established superior intracranial efficacy (CNS ORR 24% vs 11%, HR 0.55)"
+      ],
+      [
+        "Krascendo 1\n(ESMO 2026) [62]\n[Tier A: Direct RAS]",
+        "Advanced NSCLC\n*KRAS* G12C, >=2L",
+        "Phase III, open-label\n1:1 active comparator",
+        "N=338\nDivarasib: 169\nSotorasib: 169",
+        "PFS by BICR",
+        "9.8 vs 5.7\nHR 0.58 (0.43-0.78)\nP=0.0003",
+        "58.4% vs 32.3%\nP<0.0001",
+        "17.7 vs 12.0\nHR 0.56 (0.39-0.81)\nP=0.0019",
+        "24.6% vs 34.5%",
+        "4.8% vs 11.7%",
+        "Strict crossover prohibition; proved statistically significant OS superiority over active targeted comparator (sotorasib); cannot informally extrapolate transitivity to chemotherapy"
+      ],
+      [
+        "CodeBreaK 300\n(NEJM 2023 / JCO 2025) [69,70]\n[Tier A: Direct RAS]",
+        "Refractory mCRC\n*KRAS* G12C, 3L",
+        "Phase III, open-label\n1:1:1 randomised",
+        "N=160\nSoto960+Pani: 53\nSoto240+Pani: 53\nStandard Care: 54",
+        "PFS by BICR",
+        "5.7 vs 4.01 vs 2.04\nHR 0.45 (0.28-0.71)\nP=0.0004 (960 mg)",
+        "26.4% vs 5.7% vs 0%\nP<0.001",
+        "11.9 vs 10.3\nHR 0.70 (0.41-1.18)\nP=0.20",
+        "35.8% vs 43.1%",
+        "2.0% vs 5.6%",
+        "Vertical EGFR co-blockade overcomes adaptive pathway reactivation; sample size (160) underpowered for OS; positive survival trend in 3L salvage setting"
+      ],
+      [
+        "KRYSTAL-10\n(Ann Oncol 2026) [71]\n[Tier A: Direct RAS]",
+        "Advanced mCRC\n*KRAS* G12C, 2L",
+        "Phase III, open-label\n1:1 randomised",
+        "N=430\nAdagrasib+Cetux: 215\nChemotherapy: 215",
+        "Dual PFS & OS",
+        "6.9 vs 5.6\nHR 0.69 (0.54-0.88)\nP=0.0028",
+        "34.0% vs 18.6%\nP<0.001",
+        "13.8 vs 14.2\nHR 0.94 (0.74-1.20)\nP=0.62",
+        "41.2% vs 54.5%",
+        "6.5% vs 12.8%",
+        "Chemo-free doublet failed to surpass doublet chemotherapy + bevacizumab in OS due to 74% polyclonal bypass escape; closed the door on chemo-free 2L regimens"
+      ],
+      [
+        "RASolute 302\n(NEJM 2026) [54]\n[Tier A: Direct RAS]",
+        "Metastatic PDAC\n*KRAS*-mutant, >=2L",
+        "Phase III, open-label\n1:1 randomised",
+        "N=500\nDaraxonrasib: 250\nChemotherapy: 250",
+        "Dual PFS & OS",
+        "7.2 vs 3.6\nHR 0.49 (0.38-0.63)\nP<0.0001",
+        "30.4% vs 10.8%\nP<0.0001",
+        "13.2 vs 6.7\nHR 0.40 (0.30-0.53)\nP<0.0001",
+        "61.8% vs 69.6%",
+        "1.2% vs 11.2%",
+        "Absence of effective salvage options in PDAC prevented crossover dilution; PFS gain translated cleanly into OS doubling; broad activity across G12D/V/R"
+      ],
+      [
+        "NEMO\n(Lancet Oncol 2017) [75]\n[Tier B: MEK Benchmark]",
+        "Advanced melanoma\n*NRAS*-mutant",
+        "Phase III, open-label\n2:1 randomised",
+        "N=402\nBinimetinib: 269\nDacarbazine: 133",
+        "PFS by BICR",
+        "2.8 vs 1.5\nHR 0.62 (0.47-0.80)\nP<0.001",
+        "15.0% vs 7.0%\nP=0.015",
+        "11.0 vs 10.1\nHR 1.00 (0.75-1.33)\nP=0.999",
+        "48.0% vs 23.0% (TRAE)\n[68% vs 46% TEAE]",
+        "25.0% vs 8.0%",
+        "Historical pathway benchmark; PFS gain failed to confer OS benefit due to subsequent salvage immunotherapy (anti-PD-1 / CTLA-4); narrow MEK therapeutic index"
+      ]
+    ],
+    "footnote": "*Grade >= 3 adverse events (AEs) reflect treatment-related adverse events (TRAEs) for direct RAS inhibitor trials (Tier A) and both TRAEs and all-cause treatment-emergent adverse events (TEAEs) for NEMO (Tier B). Abbreviations: 2L, second-line; 3L, third-line; BICR, blinded independent central review; Cetux, cetuximab; CI, confidence interval; CNS, central nervous system; Discont., treatment discontinuation due to adverse events; Gr, grade; HR, hazard ratio; mCRC, metastatic colorectal cancer; mOS, median overall survival; mPFS, median progression-free survival; NEMO, NRAS-mutant Melanoma; NSCLC, non-small cell lung cancer; OR, odds ratio; ORR, objective response rate; Pani, panitumumab; PDAC, pancreatic ductal adenocarcinoma; TEAE, treatment-emergent adverse event; TRAE, treatment-related adverse event."
+  },
+  "figure_legends": [
+    {
+      "title": "Figure 1. Biophysical nucleotide cycling and structural paradigms of direct pharmacological RAS inhibition.",
+      "text": "**a**, Canonical GDP/GTP binary molecular switch cycling and dynamic capture window for switch-II pocket (S-IIP) covalent inhibitors. KRAS cycles between the inactive GDP-bound (OFF) state and the active GTP-bound (ON) state, accelerated by guanine nucleotide exchange factors (GEFs, e.g. SOS1) and GTPase-activating proteins (GAPs, e.g. NF1). While oncogenic mutations impair GTP hydrolysis, the KRAS G12C mutant retains residual intrinsic GTPase activity, providing a temporal window to covalently trap the protein in the inactive OFF state via an inducible hydrophobic cavity (S-IIP) beneath switch II. Sotorasib and adagrasib occupy this pocket, with adagrasib forming extensive close-range contacts with His95 and Tyr96, conferring vulnerability to secondary resistance mutations. **b**, Chaperone-assisted tri-complex molecular glue paradigm targeting active RAS(ON). In the GTP-bound active conformation, switch II remains tightly closed, precluding traditional S-IIP inhibitor binding. Daraxonrasib (RMC-6236) binds cyclophilin A (CYPA) to form a composite binary interface that docks onto active GTP-bound RAS, sterically occluding the effector interface (RAF-RBD) and preventing downstream MAPK and PI3K cascade activation without requiring GTP hydrolysis.",
+      "abbreviations": "CYPA, cyclophilin A; GAP, GTPase-activating protein; GDP, guanosine diphosphate; GEF, guanine nucleotide exchange factor; GTP, guanosine triphosphate; PDB, Protein Data Bank; RBD, RAS-binding domain; S-IIP, switch-II pocket."
+    },
+    {
+      "title": "Figure 2. Pan-cancer genomic landscape of RAS alterations and co-mutational stratification.",
+      "text": "**a**, Relative mutation frequencies of KRAS, NRAS, and HRAS across major human solid tumours based on combined TCGA and clinical sequencing datasets, highlighting high KRAS dominance in pancreatic (PAAD), colorectal (COADREAD), and lung adenocarcinoma (LUAD). **b**, Codon-12 allele preference distribution across tumour types, illustrating the marked predominance of G12D in pancreatic and colorectal cancers versus G12C in smoking-associated non-small cell lung cancer. **c**, Co-mutation network and distinct clinical response phenotypes in KRAS-mutant non-small cell lung cancer. The *KP* subgroup (*KRAS*/*TP53*) displays high tumour mutational burden and inflamed microenvironment responsive to immune checkpoint inhibitors. By contrast, the *KL* subgroup (*KRAS*/*STK11*) exhibits epigenetic STING silencing and an immune-cold desert phenotype, whereas the *KM* subgroup (*KRAS*/*KEAP1*) demonstrates NRF2 hyperactivation, elevated SLC7A11/glutathione expression, and resistance to both immunotherapy and targeted covalent inhibitors.",
+      "abbreviations": "COADREAD, colorectal adenocarcinoma; HR, hazard ratio; LUAD, lung adenocarcinoma; NSCLC, non-small cell lung cancer; ORR, objective response rate; PAAD, pancreatic adenocarcinoma; PFS, progression-free survival; TMB, tumour mutational burden; VAF, variant allele frequency."
+    },
+    {
+      "title": "Figure 3. Efficacy synthesis and endpoint discordance across pivotal phase III randomised controlled trials.",
+      "text": "**a**, Forest plot of progression-free survival (PFS) hazard ratios across seven pivotal randomised controlled trials evaluating direct RAS inhibitors or historical MEK inhibition (NEMO), assessed by blinded independent central review (BICR). Krascendo 1 evaluated divarasib monotherapy versus active targeted comparator (sotorasib or adagrasib) monotherapy in pretreated NSCLC; KRYSTAL-10 evaluated adagrasib plus cetuximab versus chemotherapy doublet plus bevacizumab in second-line mCRC; RASolute 302 evaluated daraxonrasib versus standard chemotherapy in metastatic PDAC (hazard ratio depicted for RAS G12 subgroup; overall ITT PFS HR 0.49). **b**, Forest plot of overall survival (OS) hazard ratios across the corresponding trials. Statistically significant OS superiority was established in Krascendo 1 (HR 0.56, 95% CI 0.41–0.78, P<0.001) and RASolute 302 (HR 0.40, 95% CI 0.30–0.53, P<0.0001). In CodeBreaK 300, median OS for the 960 mg combination arm was not reached (NR). In KRYSTAL-10, OS did not achieve formal statistical significance (HR 0.83, P=0.09). **c**, Exploratory ecological distribution examining the association between control-arm post-progression crossover rates and observed overall survival hazard ratios across direct RAS trials (excluding NEMO). Point estimates illustrate that trials with restricted or absent crossover (Krascendo 1, RASolute 302) preserved robust OS signals, whereas trials with extensive crossover (CodeBreaK 200, KRYSTAL-12) experienced dilution of overall survival effect sizes toward unity. The dashed line depicts an exploratory descriptive trend; cross-trial biological heterogeneity, varied post-progression therapies, and the ecological design preclude definitive causal inference.",
+      "abbreviations": "CI, confidence interval; HR, hazard ratio; mCRC, metastatic colorectal cancer; mPDAC, metastatic pancreatic ductal adenocarcinoma; NE, not estimable; NEMO, NRAS-mutant Melanoma; NR, not reached; NS, not significant; NSCLC, non-small cell lung cancer; OS, overall survival; PFS, progression-free survival; Pts, patients; RCT, randomised controlled trial. Clinical trial data retrieval cut-off date: 18 November 2026."
+    },
+    {
+      "title": "Figure 4. Global landscape and geographic distribution of 1,182 RAS-related oncology clinical trials.",
+      "text": "**a**, Global choropleth heat map illustrating the geographic distribution of trial recruiting centres across 72 countries registered in ClinicalTrials.gov (2000–2026), highlighting the dual research engines of the United States (622 trials) and China (305 trials) alongside extensive multicentre networks in Europe (France, Spain, Germany, Italy, United Kingdom). **b**, Multilayered concentric circular atlas representing 1,182 interventional trials across seven solid tumour sectors (pan-tumour, lung, colorectal, pancreatic, haematological, melanoma, and genitourinary). Concentric rings depict, from exterior to interior: (1) RAS targeting relevance tier (direct binding vs upstream/downstream pathway nodes); (2) clinical trial phase (Early Phase 1 through Phase 3); (3) primary sponsorship class (Industry, Academic cooperative groups, NIH/NCI, international networks); and (4) trial status (completed, ongoing recruiting, active, terminated). **c**, Cumulative and annual registration trends from 2000 to 2026, demonstrating exponential pipeline expansion following the 2013 structural elucidation of the switch-II pocket.",
+      "abbreviations": "API, application programming interface; CTgov, ClinicalTrials.gov; NCI, National Cancer Institute; NIH, National Institutes of Health; RCT, randomised controlled trial. ClinicalTrials.gov registry database retrieval cut-off date: 18 November 2026."
+    },
+    {
+      "title": "Figure 5. Comprehensive molecular networks of acquired resistance and multimodal combination strategies.",
+      "text": "Integrated architecture of therapeutic escape during direct RAS inhibition and corresponding rational combination strategies. Upper panel: receptor tyrosine kinase (RTK) feedback reactivation (EGFR, MET, HER2, AXL) triggered by the dissolution of physiological ERK negative feedback, counteracted by vertical anti-EGFR antibodies or selective TKI combinations. Central panel: on-target acquired secondary mutations within the switch-II pocket (Y96C/D, H95D/R, R68S) and allosteric switches, counteracted by switching to multi-RAS(ON) tri-complex inhibitors (daraxonrasib) or non-covalent pan-RAS inhibitors. Lower panel: downstream bypass activation through RAF fusions, BRAF/MEK1 mutations, and parallel PI3K-AKT alterations, counteracted by horizontal hub inhibition (SHP2, SOS1, MEK/RAF clamps). Right panel: organ-specific desmoplasia, neuroendocrine lineage transformation (SCLC/EMT), and clinical monitoring via longitudinal circulating tumour DNA (ctDNA) kinetics, wherein early molecular clearance at Cycle 2 Day 1 predicts durable clinical benefit and rising VAF provides a 2- to 4-month lead time for pre-emptive therapy switching.",
+      "abbreviations": "ctDNA, circulating tumour DNA; EGFR, epidermal growth factor receptor; EMT, epithelial-mesenchymal transition; MAPK, mitogen-activated protein kinase; MET, MET proto-oncogene, receptor tyrosine kinase; PI3K, phosphoinositide 3-kinase; RTK, receptor tyrosine kinase; SCLC, small-cell lung cancer; SHP2, Src homology region 2 domain-containing phosphatase-2; SOS1, Son of Sevenless homologue 1; VAF, variant allele frequency."
+    }
+  ],
+  "abbreviations": [
+    [
+      "2L",
+      "Second-line therapy"
+    ],
+    [
+      "3L",
+      "Third-line therapy"
+    ],
+    [
+      "95% CI",
+      "95% confidence interval"
+    ],
+    [
+      "AE",
+      "Adverse event"
+    ],
+    [
+      "AKT",
+      "Protein kinase B"
+    ],
+    [
+      "ALK",
+      "Anaplastic lymphoma kinase"
+    ],
+    [
+      "ALT",
+      "Alanine aminotransferase"
+    ],
+    [
+      "AST",
+      "Aspartate aminotransferase"
+    ],
+    [
+      "BICR",
+      "Blinded independent central review"
+    ],
+    [
+      "BRAF",
+      "B-Raf proto-oncogene, serine/threonine kinase"
+    ],
+    [
+      "CAAX",
+      "C-terminal prenylation motif (cysteine-aliphatic-aliphatic-any residue)"
+    ],
+    [
+      "CNS",
+      "Central nervous system"
+    ],
+    [
+      "COADREAD",
+      "Colorectal adenocarcinoma (TCGA cohort)"
+    ],
+    [
+      "CR",
+      "Complete response"
+    ],
+    [
+      "CRBN",
+      "Cereblon (E3 ubiquitin ligase component)"
+    ],
+    [
+      "CRediT",
+      "Contributor Roles Taxonomy"
+    ],
+    [
+      "ctDNA",
+      "Circulating tumour DNA"
+    ],
+    [
+      "CYPA",
+      "Cyclophilin A (peptidyl-prolyl cis-trans isomerase A)"
+    ],
+    [
+      "DCR",
+      "Disease control rate"
+    ],
+    [
+      "DoR",
+      "Duration of response"
+    ],
+    [
+      "EGFR",
+      "Epidermal growth factor receptor"
+    ],
+    [
+      "EMA",
+      "European Medicines Agency"
+    ],
+    [
+      "EMT",
+      "Epithelial-mesenchymal transition"
+    ],
+    [
+      "ERK",
+      "Extracellular signal-regulated kinase"
+    ],
+    [
+      "ESMO",
+      "European Society for Medical Oncology"
+    ],
+    [
+      "FDA",
+      "US Food and Drug Administration"
+    ],
+    [
+      "FTI",
+      "Farnesyltransferase inhibitor"
+    ],
+    [
+      "GAP",
+      "GTPase-activating protein"
+    ],
+    [
+      "GDP",
+      "Guanosine diphosphate"
+    ],
+    [
+      "GEF",
+      "Guanine nucleotide exchange factor"
+    ],
+    [
+      "GRB2",
+      "Growth factor receptor-bound protein 2"
+    ],
+    [
+      "GTP",
+      "Guanosine triphosphate"
+    ],
+    [
+      "HER2",
+      "Human epidermal growth factor receptor 2 (*ERBB2*)"
+    ],
+    [
+      "HR",
+      "Hazard ratio"
+    ],
+    [
+      "HRAS",
+      "Harvey rat sarcoma viral oncogene homolog"
+    ],
+    [
+      "ICMJE",
+      "International Committee of Medical Journal Editors"
+    ],
+    [
+      "KEAP1",
+      "Kelch-like ECH-associated protein 1"
+    ],
+    [
+      "KRAS",
+      "Kirsten rat sarcoma viral oncogene homolog"
+    ],
+    [
+      "LUAD",
+      "Lung adenocarcinoma (TCGA cohort)"
+    ],
+    [
+      "LUSC",
+      "Lung squamous cell carcinoma (TCGA cohort)"
+    ],
+    [
+      "MAPK",
+      "Mitogen-activated protein kinase"
+    ],
+    [
+      "mCRC",
+      "Metastatic colorectal cancer"
+    ],
+    [
+      "MEK",
+      "Mitogen-activated protein kinase kinase"
+    ],
+    [
+      "MET",
+      "MET proto-oncogene, receptor tyrosine kinase"
+    ],
+    [
+      "mOS",
+      "Median overall survival"
+    ],
+    [
+      "mPFS",
+      "Median progression-free survival"
+    ],
+    [
+      "MSK-IMPACT",
+      "Memorial Sloan Kettering-Integrated Mutation Profiling of Actionable Cancer Targets"
+    ],
+    [
+      "mTOR",
+      "Mechanistic target of rapamycin"
+    ],
+    [
+      "NCT",
+      "National Clinical Trial identifier"
+    ],
+    [
+      "NF1",
+      "Neurofibromin 1"
+    ],
+    [
+      "NMPA",
+      "National Medical Products Administration (China)"
+    ],
+    [
+      "NRAS",
+      "Neuroblastoma RAS viral oncogene homolog"
+    ],
+    [
+      "NSCLC",
+      "Non-small cell lung cancer"
+    ],
+    [
+      "OR",
+      "Odds ratio"
+    ],
+    [
+      "ORR",
+      "Objective response rate"
+    ],
+    [
+      "OS",
+      "Overall survival"
+    ],
+    [
+      "PAAD",
+      "Pancreatic adenocarcinoma (TCGA cohort)"
+    ],
+    [
+      "PD",
+      "Progressive disease"
+    ],
+    [
+      "PDAC",
+      "Pancreatic ductal adenocarcinoma"
+    ],
+    [
+      "PDB",
+      "Protein Data Bank"
+    ],
+    [
+      "PFS",
+      "Progression-free survival"
+    ],
+    [
+      "PI3K",
+      "Phosphoinositide 3-kinase"
+    ],
+    [
+      "PIK3CA",
+      "Phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha"
+    ],
+    [
+      "PR",
+      "Partial response"
+    ],
+    [
+      "PROTAC",
+      "Proteolysis-targeting chimera"
+    ],
+    [
+      "RAF",
+      "Rapidly accelerated fibrosarcoma kinase"
+    ],
+    [
+      "RAS",
+      "Rat sarcoma viral oncogene homolog"
+    ],
+    [
+      "RCT",
+      "Randomised controlled trial"
+    ],
+    [
+      "RET",
+      "Rearranged during transfection receptor tyrosine kinase"
+    ],
+    [
+      "RMSD",
+      "Root-mean-square deviation"
+    ],
+    [
+      "RTK",
+      "Receptor tyrosine kinase"
+    ],
+    [
+      "SD",
+      "Stable disease"
+    ],
+    [
+      "SHP2",
+      "Src homology 2 domain-containing protein tyrosine phosphatase 2"
+    ],
+    [
+      "S-IIP",
+      "Switch-II pocket"
+    ],
+    [
+      "SOC",
+      "Standard of care"
+    ],
+    [
+      "SOS1",
+      "Son of Sevenless homolog 1"
+    ],
+    [
+      "STK11",
+      "Serine/threonine kinase 11 (*LKB1*)"
+    ],
+    [
+      "TCGA",
+      "The Cancer Genome Atlas"
+    ],
+    [
+      "TEAE",
+      "Treatment-emergent adverse event"
+    ],
+    [
+      "TP53",
+      "Tumour protein p53"
+    ],
+    [
+      "TRAE",
+      "Treatment-related adverse event"
+    ],
+    [
+      "VHL",
+      "Von Hippel-Lindau tumour suppressor"
+    ],
+    [
+      "WT",
+      "Wild-type"
+    ]
+  ],
+  "highlights": [
+    "Direct RAS inhibitors produce consistent gains in progression-free survival (PFS) and objective response rates across multiple solid tumours, but overall survival (OS) improvements remain attenuated by post-progression crossover and salvage therapies in registration trials.",
+    "In non-small cell lung cancer, the phase III Krascendo 1 trial demonstrated statistically significant improvements in progression-free survival (9.8 vs 5.7 months, HR 0.58) and overall survival (17.7 vs 12.0 months, HR 0.56) for second-generation divarasib over active comparator monotherapy.",
+    "In pancreatic ductal adenocarcinoma, the tri-complex multi-RAS(ON) inhibitor daraxonrasib doubled median overall survival compared with chemotherapy (13.2 vs 6.7 months, HR 0.40), achieving regular FDA approval as the first randomised survival breakthrough in this disease.",
+    "STK11 and KEAP1 co-mutations delineate primary resistance to immune checkpoint blockade, whereas their predictive impact on direct RAS inhibitors is heterogeneous, with KEAP1 predominantly marking broad metabolic resilience and poor prognosis.",
+    "A curated landscape of 1,182 oncology clinical trials identifies 358 direct RAS-targeted studies and 134 pathway regulator evaluations, highlighting rapid frontline movement alongside an 18.1% premature study termination rate."
+  ],
+  "structured_abstract": {
+    "Background": "Direct pharmacological inhibition of RAS oncoproteins, long considered intractable, has been realized through covalent switch-II pocket inhibitors and chaperone-mediated tri-complex molecular glues. These approaches have established a new therapeutic class across solid tumours.",
+    "Methods & Evidence Synthesis": "We review the biophysical principles of RAS nucleotide cycling, contrasting covalent capture of inactive GDP-bound RAS with chaperone-assisted inhibition of active GTP-bound RAS(ON). We analyze data from a curated portfolio of 1,182 oncology trials registered on ClinicalTrials.gov (including 358 direct RAS-targeted studies and 134 upstream regulator evaluations) and seven pivotal phase III randomised controlled trials across non-small cell lung cancer, colorectal cancer, pancreatic adenocarcinoma, and melanoma.",
+    "Key Findings": "Direct RAS inhibitors produce consistent gains in progression-free survival (PFS) and objective response rates across indications. In pretreated NSCLC, second-generation divarasib established statistically significant PFS (9.8 vs 5.7 months, HR 0.58) and OS gains (17.7 vs 12.0 months, HR 0.56) over active G12C comparator monotherapy in Krascendo 1. In colorectal cancer, dual vertical blockade is required to prevent rapid EGFR-mediated feedback reactivation; however, the negative phase III KRYSTAL-10 trial (BICR PFS HR 0.89, OS HR 0.83) and subsequent FDA withdrawal of accelerated approval for adagrasib plus cetuximab underscore the challenge of displacing frontline cytotoxic doublets. In pancreatic adenocarcinoma, daraxonrasib doubled median overall survival (13.2 vs 6.7 months, HR 0.40) over chemotherapy in RASolute 302. Co-occurring mutations in KEAP1 and STK11 primarily delineate responsiveness to immune checkpoint blockade, while acquired resistance develops via secondary switch-II mutations, RTK bypass, and lineage transformation.",
+    "Conclusions": "Advancing direct inhibitors into frontline therapy, stratifying patients by co-mutation status, and combining direct inhibitors with upstream or downstream pathway blockers represent key strategies to extend treatment benefit in RAS-driven cancers."
+  },
+  "table_3": {
+    "title": "Table 3 | Global regulatory approvals, indications, and post-marketing confirmatory trial trajectories for RAS-directed therapies",
+    "headers": [
+      "Drug & Development Code",
+      "Approved / Evaluated Indication",
+      "Regulatory Agency & Date",
+      "Approval Pathway",
+      "Pivotal / Confirmatory Trial Findings",
+      "Regulatory Outcome & Clinical Status"
+    ],
+    "rows": [
+      [
+        "**sotorasib**\n(AMG 510)",
+        "Advanced *KRAS* G12C NSCLC, >=2L (after prior systemic therapy)",
+        "FDA (2021-05-28);\nEMA (2022-01-06);\nPMDA (2022-01-20)",
+        "Accelerated / conditional approval (single-arm phase II CodeBreaK 100, ORR 37.1%)",
+        "Phase III CodeBreaK 200: PFS HR 0.66 (P=0.0017); OS HR 1.01 (95% CI 0.77-1.33; confounded by crossover)",
+        "FDA ODAC 10:2 vote and CRL (2023-12) rejecting regular approval; EMA converted to full marketing authorization; PMDA maintained approval"
+      ],
+      [
+        "**adagrasib**\n(MRTX849)",
+        "Advanced *KRAS* G12C NSCLC, >=2L (after prior systemic therapy)",
+        "FDA (2022-12-12);\nEMA (2024-01-05)",
+        "Accelerated / conditional approval (single-arm phase II KRYSTAL-1, ORR 42.9%)",
+        "Phase III KRYSTAL-12: PFS 5.5 vs 3.8 mo (HR 0.58, P<0.0001); intracranial PFS HR 0.55; OS immature",
+        "Active conditional approval; confirmatory OS follow-up ongoing; first G12C inhibitor with prospective intracranial activity on US label"
+      ],
+      [
+        "**sotorasib + panitumumab**",
+        "Advanced *KRAS* G12C metastatic colorectal cancer, >=3L",
+        "FDA (2025-01-16)",
+        "Regular approval (first regular approval in colorectal cancer)",
+        "Phase III CodeBreaK 300: 960 mg PFS HR 0.49 (P=0.006); final OS HR 0.70 (did not cross pre-specified multiplicity boundary)",
+        "Active regular approval; established vertical EGFR + KRAS co-blockade as standard third-line regimen"
+      ],
+      [
+        "**fulzerasib**\n(IBI351 / GFH925)",
+        "Advanced *KRAS* G12C NSCLC, >=2L",
+        "NMPA (China, 2024-08)",
+        "Conditional approval (priority review)",
+        "Pivotal single-arm phase II (n=116): IRRC ORR 49.1%, median PFS 9.7 mo",
+        "Active conditional approval; confirmatory randomised phase III trial ongoing"
+      ],
+      [
+        "**garsorasib**\n(D-1553)",
+        "Advanced *KRAS* G12C NSCLC, >=2L",
+        "NMPA (China, 2024-11-08)",
+        "Conditional approval (priority review)",
+        "Pivotal single-arm phase II (n=123): IRC ORR 50.0%, median PFS 9.1 mo",
+        "Active conditional approval; confirmatory randomised phase III trial ongoing"
+      ],
+      [
+        "**glecirasib**\n(JAB-21822)",
+        "Advanced *KRAS* G12C NSCLC, >=2L",
+        "NMPA (China, 2025-05)",
+        "Conditional approval (priority review)",
+        "Pivotal single-arm phase IIb (n=117): IRC ORR 47.9%",
+        "Active conditional approval; confirmatory randomised phase III trial ongoing"
+      ],
+      [
+        "**sosimerasib**\n(HBI-2438 / JMKX001899)",
+        "Advanced *KRAS* G12C NSCLC, >=2L",
+        "NMPA (China, 2026-02-25)",
+        "Conditional approval (priority review)",
+        "Pivotal single-arm phase II (n=145): ORR 52.4%",
+        "Active conditional approval; confirmatory phase III trial vs docetaxel (NCT07242274) ongoing"
+      ],
+      [
+        "**avutometinib + defactinib**\n(VS-6766 / VS-6063)",
+        "Recurrent *KRAS*-mutant low-grade serous ovarian cancer, >=2L",
+        "FDA (2025-05-08)",
+        "Accelerated approval (RAF/MEK clamp + FAK inhibitor)",
+        "Single-arm phase II RAMP 201: ORR 45% in *KRAS*-mutant cohort",
+        "Active accelerated approval; confirmatory phase III RAMP 301 ongoing"
+      ],
+      [
+        "**daraxonrasib**\n(RMC-6236)",
+        "Metastatic PDAC, >=2L or chemotherapy-unfit",
+        "FDA (2026-08-26, regular);\nEMA CHMP (2026-10-15)",
+        "Regular approval (first regular approval for multi-RAS inhibitor)",
+        "Pivotal phase III RASolute 302: median OS 13.2 vs 6.7 mo (HR 0.40, P<0.0001); median PFS 7.4 vs 3.2 mo (HR 0.48)",
+        "Active regular approval (FDA) and positive CHMP opinion (EMA); establishes multi-RAS tri-complex inhibition as standard of care in PDAC"
+      ],
+      [
+        "**adagrasib + cetuximab**\n*(Withdrawn Indication)*",
+        "Advanced *KRAS* G12C metastatic colorectal cancer, 2L",
+        "FDA (Accelerated approval 2024-06-21;\n**Withdrawn 2026-09-01**)",
+        "Accelerated approval based on single-arm ORR (KRYSTAL-1, 34.0%)",
+        "Confirmatory phase III KRYSTAL-10 (n=461): median PFS 7.5 vs 8.1 mo (HR 0.89); median OS 21.6 vs 21.7 mo (HR 0.83)",
+        "**Accelerated approval formally withdrawn**; confirmatory study failed to demonstrate superiority over standard chemotherapy doublet plus bevacizumab"
+      ]
+    ],
+    "col_widths": [
+      1.4,
+      1.5,
+      1.3,
+      1.4,
+      2.5,
+      1.9
+    ],
+    "footnote": "Note: Cut-off date October 31, 2026. Regulatory categories: FDA regular approval reflects verified clinical benefit; accelerated approval (FDA) and conditional approval (EMA, NMPA, PMDA) require post-marketing confirmatory evidence. Of clinical and regulatory significance, adagrasib plus cetuximab was granted FDA accelerated approval on June 21, 2024 for pretreated KRAS G12C metastatic colorectal cancer, but this approval was formally withdrawn on September 1, 2026 after the randomised phase III KRYSTAL-10 trial failed to confirm superiority over standard chemotherapy plus bevacizumab. Abbreviations: CHMP, Committee for Medicinal Products for Human Use; CRL, Complete Response Letter; EMA, European Medicines Agency; FDA, US Food and Drug Administration; HR, hazard ratio; IRC, independent review committee; IRRC, independent review and reporting committee; mCRC, metastatic colorectal cancer; NMPA, National Medical Products Administration (China); NSCLC, non-small cell lung cancer; ODAC, Oncologic Drugs Advisory Committee; ORR, objective response rate; OS, overall survival; PDAC, pancreatic ductal adenocarcinoma; PFS, progression-free survival; PMDA, Pharmaceuticals and Medical Devices Agency (Japan)."
+  },
+  "title": "Targeting RAS in solid tumours: from molecular switch dynamics and resistance networks to randomised clinical trial landscapes",
+  "running_title": "Targeting RAS in solid tumours",
+  "supplementary_table_1": {
+    "title": "Supplementary Table S1 | Landscape of direct RAS inhibitors across four molecular mechanism classes",
+    "headers": [
+      "Class",
+      "Mechanism of Action",
+      "Targeted Alleles",
+      "Representative Drugs",
+      "Developer",
+      "Clinical Phase",
+      "Biochemical Engagement & Structural Hallmarks"
+    ],
+    "col_widths": [
+      1.1,
+      1.7,
+      0.9,
+      1.4,
+      1.0,
+      1.1,
+      3.29
+    ],
+    "rows": [
+      [
+        "Class I\n(OFF-state Covalent)",
+        "Covalent engagement of mutant Cys12 in switch-II pocket (S-IIP) of GDP-bound RAS; irreversible allosteric trapping in inactive state",
+        "*KRAS* G12C",
+        "Sotorasib (AMG 510)\nAdagrasib (MRTX849)\nDivarasib (GDC-6036)\nGlecirasib (JAB-21822)\nGarsorasib (D-1553)\nFulzerasib (IBI351)",
+        "Amgen\nMirati / BMS\nRoche / Genentech\nJacobio\nInnoVENT\nInnovent",
+        "Approved (FDA, EMA)\nApproved (FDA, EMA)\nPhase III (Krascendo 1)\nApproved (NMPA)\nApproved (NMPA)\nApproved (NMPA)",
+        "• Irreversible covalent adduct with mutant Cys12 via electrophilic acrylamide warhead\n• Absolute reliance on residual intrinsic GTPase cycling into inactive GDP state\n• Sotorasib avoids His95 contact; adagrasib and divarasib form His95 hydrogen bond (5- to 20-fold higher in vitro potency)"
+      ],
+      [
+        "Class II\n(OFF-state Non-covalent)",
+        "Reversible switch-II pocket binding via salt bridges and hydrophobic packing; independent of cysteine residue",
+        "*KRAS* G12D\nPan-KRAS\nPan-RAS",
+        "MRTX1133\nBI 2865\nBI 3706674\nJNJ-74699157",
+        "Mirati / BMS\nBoehringer Ingelheim\nBoehringer Ingelheim\nJohnson & Johnson",
+        "Phase I/II\nPhase I\nPhase I\nPhase I",
+        "• Non-covalent Asp12 salt-bridge coordination via positively charged pyrrolidine (MRTX1133)\n• Reversible switch-II cavity packing; overcomes absence of nucleophilic cysteine\n• Pan-KRAS inhibitors (BI 2865) engage conserved switch pocket residues across wild-type and mutant GDP states"
+      ],
+      [
+        "Class III\n(ON/OFF Tri-complex Glues)",
+        "Recruits chaperone Cyclophilin A (CYPA) to sterically occlude effector binding interface on active GTP-bound RAS",
+        "Multi-RAS(ON)\n*KRAS* G12C(ON)\n*KRAS* G12D(ON)",
+        "Daraxonrasib (RMC-6236)\nRMC-6291\nRMC-9805",
+        "Revolution Medicines\nRevolution Medicines\nRevolution Medicines",
+        "Phase III (RASolute 302)\nPhase I/Ib\nPhase I/Ib",
+        "• Recruits cytosolic chaperone cyclophilin A (CYPA) to create steric occluding composite interface\n• Direct suppression of active GTP-bound RAS; circumvents upstream RTK-mediated nucleotide exchange\n• Overcomes secondary switch-II pocket resistance mutations (e.g., Y96D, A59S)"
+      ],
+      [
+        "Class IV\n(Targeted Degraders)",
+        "Bifunctional PROTACs or molecular glues recruiting E3 ligases (VHL, CRBN); induces 26S proteasomal degradation",
+        "*KRAS* G12D\n*KRAS* G12C\nPan-KRAS",
+        "ASP3082\nARV-771 analogue\nKGF-12",
+        "Astellas\nArvinas\nAcademic",
+        "Phase I/II\nPreclinical\nPreclinical",
+        "• Bifunctional PROTACs or molecular glues recruiting E3 ubiquitin ligases (VHL, CRBN)\n• Induces 26S proteasomal degradation, eliminating both catalytic GTPase flux and non-catalytic scaffolding hubs\n• Sustained pathway shutdown across high baseline GTPase flux and secondary switch mutations"
+      ]
+    ],
+    "footnote": "Abbreviations: 2L, second-line; CNS, central nervous system; CRBN, cereblon; CYPA, cyclophilin A; EMA, European Medicines Agency; FDA, US Food and Drug Administration; HR, hazard ratio; NMPA, National Medical Products Administration; ORR, objective response rate; OS, overall survival; PDAC, pancreatic ductal adenocarcinoma; PFS, progression-free survival; PROTAC, proteolysis-targeting chimera; RTK, receptor tyrosine kinase; S-IIP, switch-II pocket; VHL, von Hippel-Lindau. Database, pipeline registry, and regulatory dossier search cut-off date: 18 November 2026."
+  },
+  "supplementary_table_2": {
+    "title": "Supplementary Table S2 | Global regulatory approvals, indications, and post-marketing confirmatory trial trajectories for RAS-directed therapies",
+    "headers": [
+      "Drug & Development Code",
+      "Approved / Evaluated Indication",
+      "Regulatory Agency & Date",
+      "Approval Pathway",
+      "Pivotal / Confirmatory Trial Findings",
+      "Regulatory Outcome & Clinical Status"
+    ],
+    "rows": [
+      [
+        "**sotorasib**\n(AMG 510)",
+        "Advanced *KRAS* G12C NSCLC, >=2L (after prior systemic therapy)",
+        "FDA (2021-05-28);\nEMA (2022-01-06);\nPMDA (2022-01-20)",
+        "Accelerated / conditional approval (single-arm phase II CodeBreaK 100, ORR 37.1%)",
+        "Phase III CodeBreaK 200: PFS HR 0.66 (P=0.0017); OS HR 1.01 (95% CI 0.77-1.33; confounded by crossover)",
+        "FDA ODAC 10:2 vote and CRL (2023-12) rejecting regular approval; EMA converted to full marketing authorization; PMDA maintained approval"
+      ],
+      [
+        "**adagrasib**\n(MRTX849)",
+        "Advanced *KRAS* G12C NSCLC, >=2L (after prior systemic therapy)",
+        "FDA (2022-12-12);\nEMA (2024-01-05)",
+        "Accelerated / conditional approval (single-arm phase II KRYSTAL-1, ORR 42.9%)",
+        "Phase III KRYSTAL-12: PFS 5.5 vs 3.8 mo (HR 0.58, P<0.0001); intracranial PFS HR 0.55; OS immature",
+        "Active conditional approval; confirmatory OS follow-up ongoing; first G12C inhibitor with prospective intracranial activity on US label"
+      ],
+      [
+        "**sotorasib + panitumumab**",
+        "Advanced *KRAS* G12C metastatic colorectal cancer, >=3L",
+        "FDA (2025-01-16)",
+        "Regular approval (first regular approval in colorectal cancer)",
+        "Phase III CodeBreaK 300: 960 mg PFS HR 0.49 (P=0.006); final OS HR 0.70 (did not cross pre-specified multiplicity boundary)",
+        "Active regular approval; established vertical EGFR + KRAS co-blockade as standard third-line regimen"
+      ],
+      [
+        "**fulzerasib**\n(IBI351 / GFH925)",
+        "Advanced *KRAS* G12C NSCLC, >=2L",
+        "NMPA (China, 2024-08)",
+        "Conditional approval (priority review)",
+        "Pivotal single-arm phase II (n=116): IRRC ORR 49.1%, median PFS 9.7 mo",
+        "Active conditional approval; confirmatory randomised phase III trial ongoing"
+      ],
+      [
+        "**garsorasib**\n(D-1553)",
+        "Advanced *KRAS* G12C NSCLC, >=2L",
+        "NMPA (China, 2024-11-08)",
+        "Conditional approval (priority review)",
+        "Pivotal single-arm phase II (n=123): IRC ORR 50.0%, median PFS 9.1 mo",
+        "Active conditional approval; confirmatory randomised phase III trial ongoing"
+      ],
+      [
+        "**glecirasib**\n(JAB-21822)",
+        "Advanced *KRAS* G12C NSCLC, >=2L",
+        "NMPA (China, 2025-05)",
+        "Conditional approval (priority review)",
+        "Pivotal single-arm phase IIb (n=117): IRC ORR 47.9%",
+        "Active conditional approval; confirmatory randomised phase III trial ongoing"
+      ],
+      [
+        "**sosimerasib**\n(HBI-2438 / JMKX001899)",
+        "Advanced *KRAS* G12C NSCLC, >=2L",
+        "NMPA (China, 2026-02-25)",
+        "Conditional approval (priority review)",
+        "Pivotal single-arm phase II (n=145): ORR 52.4%",
+        "Active conditional approval; confirmatory phase III trial vs docetaxel (NCT07242274) ongoing"
+      ],
+      [
+        "**avutometinib + defactinib**\n(VS-6766 / VS-6063)",
+        "Recurrent *KRAS*-mutant low-grade serous ovarian cancer, >=2L",
+        "FDA (2025-05-08)",
+        "Accelerated approval (RAF/MEK clamp + FAK inhibitor)",
+        "Single-arm phase II RAMP 201: ORR 45% in *KRAS*-mutant cohort",
+        "Active accelerated approval; confirmatory phase III RAMP 301 ongoing"
+      ],
+      [
+        "**daraxonrasib**\n(RMC-6236)",
+        "Metastatic PDAC, >=2L or chemotherapy-unfit",
+        "FDA (2026-08-26, regular);\nEMA CHMP (2026-10-15)",
+        "Regular approval (first regular approval for multi-RAS inhibitor)",
+        "Pivotal phase III RASolute 302 (N=500): median PFS 7.4 vs 3.6 mo (HR 0.42, P<0.0001); median OS 13.2 vs 6.7 mo (HR 0.40, P<0.0001); confirmed ORR 38.0% vs 12.0%",
+        "Active regular approval (FDA) and positive CHMP opinion (EMA); establishes multi-RAS tri-complex inhibition as standard of care in PDAC"
+      ],
+      [
+        "**adagrasib + cetuximab**\n*(Withdrawn Indication)*",
+        "Advanced *KRAS* G12C metastatic colorectal cancer, 2L",
+        "FDA (Accelerated approval 2024-06-21;\n**Withdrawn 2026-09-01**)",
+        "Accelerated approval based on single-arm ORR (KRYSTAL-1, 34.0%)",
+        "Confirmatory phase III KRYSTAL-10 (N=430): median PFS 6.9 vs 5.6 mo (HR 0.69, P=0.0028 by investigator review; HR 0.89 by BICR); median OS 13.8 vs 14.2 mo (HR 0.94, P=0.62)",
+        "**Accelerated approval formally withdrawn**; confirmatory study failed to demonstrate superiority over standard chemotherapy doublet plus bevacizumab"
+      ]
+    ],
+    "col_widths": [
+      1.4,
+      1.5,
+      1.3,
+      1.4,
+      2.5,
+      1.9
+    ],
+    "footnote": "Note: Regulatory dossiers and clinical trial registry status updated through 18 November 2026. Regulatory categories: FDA regular approval reflects verified clinical benefit; accelerated approval (FDA) and conditional approval (EMA, NMPA, PMDA) require post-marketing confirmatory evidence. Of clinical and regulatory significance, adagrasib plus cetuximab was granted FDA accelerated approval on June 21, 2024 for pretreated KRAS G12C metastatic colorectal cancer, but this approval was formally withdrawn on September 1, 2026 after the randomised phase III KRYSTAL-10 trial failed to confirm superiority over standard chemotherapy plus bevacizumab. Abbreviations: CHMP, Committee for Medicinal Products for Human Use; CRL, Complete Response Letter; EMA, European Medicines Agency; FDA, US Food and Drug Administration; HR, hazard ratio; IRC, independent review committee; IRRC, independent review and reporting committee; mCRC, metastatic colorectal cancer; NMPA, National Medical Products Administration (China); NSCLC, non-small cell lung cancer; ODAC, Oncologic Drugs Advisory Committee; ORR, objective response rate; OS, overall survival; PDAC, pancreatic ductal adenocarcinoma; PFS, progression-free survival; PMDA, Pharmaceuticals and Medical Devices Agency (Japan)."
+  },
+  "supplementary_table_3": {
+    "title": "Supplementary Table S3 | Mechanistic matrix of acquired resistance patterns, functional pathways, and rational combination counterstrategies in direct RAS-targeted therapy",
+    "headers": [
+      "Resistance Mechanism Class",
+      "Specific Molecular Alteration",
+      "Affected Biochemical Pathway",
+      "Clinical Frequency (NSCLC / CRC)",
+      "Preclinical & Clinical Combination Strategy",
+      "Representative Investigational Regimen"
+    ],
+    "rows": [
+      [
+        "On-target switch-II pocket secondary mutations",
+        "KRAS Y96C/D, H95D/Q/R, R68S, A59S/T",
+        "Steric disruption of inhibitor binding; altered switch-II hydrophobic cavity topology",
+        "15%–25% (higher in CRC under dual vertical pressure)",
+        "Switch to multi-RAS(ON) inhibitors, pan-KRAS non-covalent inhibitors, or KRAS-directed PROTAC degraders",
+        "Daraxonrasib (RMC-6236), FMC-376, ASP3082"
+      ],
+      [
+        "Upstream RTK feedback reactivation & amplification",
+        "MET focal amplification, HER2 amplification, EGFR hyperactivation",
+        "ERK feedback dissolution restoring upstream GEF loading; parallel PI3K/AKT signaling",
+        "10%–15% (MET); 5%–8% (HER2/EGFR)",
+        "Direct RAS inhibitor plus selective RTK tyrosine kinase inhibitor or bispecific antibody",
+        "Sotorasib + tepotinib/capmatinib; adagrasib + trastuzumab-deruxtecan"
+      ],
+      [
+        "Signaling hub & scaffolding node hyperactivation",
+        "PTPN11 (SHP2) activation, SOS1 upregulation",
+        "Sustained SOS1-mediated GTP loading onto wild-type and mutant RAS isoforms",
+        "Up to 20% functional upregulation across solid tumours",
+        "Dual horizontal blockade: RAS inhibitor plus allosteric SHP2 or SOS1 inhibitor",
+        "Sotorasib + TNO155 / JAB-3068; divarasib + BI 1701963"
+      ],
+      [
+        "Downstream MAPK pathway bypass mutations",
+        "BRAF V600E / non-V600, NRAS Q61K, MAP2K1 (MEK1) K57N / Q56P",
+        "Autonomous downstream MAPK flux independent of upstream RAS G-domain inhibition",
+        "8%–12% in paired tissue and ctDNA progression cohorts",
+        "Combination with downstream paradox-breaking RAF dimer inhibitors or selective MEK/ERK inhibitors",
+        "Adagrasib + encorafenib; sotorasib + avutometinib (MEK/RAF clamp)"
+      ],
+      [
+        "Parallel survival pathway bypass activation",
+        "PIK3CA oncogenic mutations, PTEN genomic loss",
+        "Constitutive PI3K-AKT-mTOR metabolic and anti-apoptotic survival signalling",
+        "5%–10% in refractory cohorts",
+        "Direct RAS inhibitor plus alpha-selective PI3K inhibitor or pan-AKT inhibitor",
+        "Sotorasib + alpelisib; adagrasib + capivasertib"
+      ],
+      [
+        "Epigenetic & metabolic intrinsic resistance",
+        "STK11 loss (STING silencing), KEAP1 loss (NRF2/SLC7A11 antioxidant hyperactivation)",
+        "Immune-cold microenvironment devoid of cytotoxic T cells; resistance to oxidative stress and ferroptosis",
+        "STK11: 20%–30%; KEAP1: 15%–20% in KRAS-mutant NSCLC",
+        "Next-generation 2nd-gen inhibitors plus chemotherapy, anti-PD-1, or glutaminase/xCT-targeting agents",
+        "Divarasib/olomorasib + chemo-immunotherapy; telaglenastat combinations"
+      ],
+      [
+        "Non-genetic lineage plasticity & histologic shift",
+        "Neuroendocrine differentiation (small-cell transformation), Epithelial-to-mesenchymal transition (EMT)",
+        "Complete loss of luminal epithelial identity and loss of biological addiction to KRAS oncogene",
+        "3%–5% under prolonged covalent G12C selective pressure (frequently with TP53/RB1 co-loss)",
+        "Switch to platinum-etoposide chemotherapy; epigenetic reprogramming with EZH2 or LSD1 inhibitors",
+        "Carboplatin + etoposide + atezolizumab; tazemetostat"
+      ]
+    ],
+    "footnote": "Literature and resistance cohort extraction cut-off date: 18 November 2026. Abbreviations: ctDNA, circulating tumour DNA; CRC, colorectal cancer; EMT, epithelial-to-mesenchymal transition; MAPK, mitogen-activated protein kinase; NSCLC, non-small cell lung cancer; PROTAC, proteolysis-targeting chimera; RTK, receptor tyrosine kinase."
+  },
+  "declarations": {
+    "acknowledgements": "The authors thank members of the thoracic, gastrointestinal, and molecular oncology working groups for constructive discussions and critical appraisal of clinical trial methodology.",
+    "funding": "This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.",
+    "conflict_of_interest": "The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.",
+    "author_contributions": "N.W.: Conceptualization, methodology, formal analysis, data curation, visualization, writing - original draft, writing - review & editing. C.S.: Investigation, data curation, formal analysis, validation, writing - review & editing. J.Q.: Software, formal analysis, visualization, resources, writing - review & editing. S.S.: Methodology, validation, literature curation, writing - review & editing. S.W.: Conceptualization, supervision, project administration, resources, writing - review & editing, critical revision. All authors critically reviewed and approved the final version of the manuscript.",
+    "data_availability": "All data supporting the findings of this review, including curated clinical trial datasets (database search cut-off date: 18 November 2026), trial registries (ClinicalTrials.gov), literature extraction matrices, and visualization/analytic code in R and Python, are publicly available within the article, its Supplementary Material, and the dedicated open-source repository at https://github.com/wangnianfei/RAS-Targeted-Therapy-Reproducibility.",
+    "ai_disclosure": "During the preparation of this work, the authors used generative AI technologies, specifically DeepSeek and Google Gemini, in order to assist with data analysis and visualization, as well as grammatical revision and English language editing and polishing of the manuscript. Following the use of these tools, the authors reviewed and edited the content as needed, independently verified all analytical and visual outputs, and take full responsibility for the content and integrity of the publication. In accordance with journal authorship criteria and COPE guidelines, generative AI technologies were not listed as authors."
+  }
+}

@@ -142,7 +142,7 @@ ras_direct <- filter(trials_df, trial_id != "NEMO (MEKi)")
 
 p_corr <- ggplot(ras_direct, aes(x = crossover_pct, y = os_hr)) +
   geom_hline(yintercept = 1.0, linetype = "dashed", color = "#95A5A6", linewidth = 0.35) +
-  geom_smooth(method = "lm", formula = y ~ x, se = TRUE, color = "#2C3E50", fill = "#BDC3C7", linewidth = 0.55, alpha = 0.25) +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE, color = "#2C3E50", linetype = "dashed", linewidth = 0.45) +
   geom_point(aes(fill = cancer_type), size = 3.4, shape = 21, color = "#111111", stroke = 0.4) +
   geom_text_repel(
     aes(label = paste0(trial_id, " (HR ", sprintf("%.2f", os_hr), ")")),
