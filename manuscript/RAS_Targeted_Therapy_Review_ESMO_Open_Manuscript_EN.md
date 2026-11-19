@@ -11,7 +11,7 @@
 ^5 Department of Radiation Therapy, Anhui Chest Hospital, Hefei, China
 
 *\*Correspondence: Shanghu Wang, MD, PhD. Email: wangshanghu@mail.ustc.edu.cn\
-Word Count: Abstract 245 words \| Main Text 6,168 words \| 5 Figures, 1 Table, 104 References*
+Word Count: Abstract 245 words \| Main Text 6,226 words \| 5 Figures, 1 Table, 104 References*
 
 **Highlights**
 
@@ -23,7 +23,7 @@ Word Count: Abstract 245 words \| Main Text 6,168 words \| 5 Figures, 1 Table, 1
 
 - Crossover may have diluted OS differences in pretreated KRAS G12C NSCLC trials.
 
-- Resistance arises via secondary KRAS mutations, RTK/MAPK bypass and histology.
+- Resistance: secondary KRAS mutations, RTK/MAPK bypass, histological transformation.
 
 **Abstract**
 

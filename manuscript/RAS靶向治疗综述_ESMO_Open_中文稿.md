@@ -11,7 +11,7 @@
 ^5 Department of Radiation Therapy, Anhui Chest Hospital, Hefei, China
 
 *\*Correspondence: Shanghu Wang, MD, PhD. Email: wangshanghu@mail.ustc.edu.cn\
-Word Count: Abstract 245 words \| Main Text 6,168 words \| 5 Figures, 1 Table, 104 References*
+Word Count: Abstract 245 words \| Main Text 6,226 words \| 5 Figures, 1 Table, 104 References*
 
 **要点**
 

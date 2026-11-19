@@ -10,4 +10,4 @@
 
 - Crossover may have diluted OS differences in pretreated KRAS G12C NSCLC trials.
 
-- Resistance arises via secondary KRAS mutations, RTK/MAPK bypass and histology.
+- Resistance: secondary KRAS mutations, RTK/MAPK bypass, histological transformation.
