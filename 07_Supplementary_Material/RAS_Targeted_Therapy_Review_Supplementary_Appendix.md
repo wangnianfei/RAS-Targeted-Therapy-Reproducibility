@@ -4,7 +4,7 @@
 
 *Journal: ESMO Open \| Article Type: Review Article Supplementary Appendix*
 
-**Supplementary Table S1 \| Direct RAS inhibitors by mechanistic class (main-text Section 3.2) and targeted RAS degraders**
+**Supplementary Table S1 \| Direct RAS inhibitors and degraders by mechanistic class (main-text Section 3.2), with SOS1 inhibitors for comparison**
 
 <table style="width:99%;">
 <colgroup>
@@ -71,66 +71,53 @@
 </tr>
 <tr>
 <td><p>Class II</p>
-<p>(OFF-state, non-covalent, non-G12C)</p></td>
-<td><p>Reversible switch-II pocket binding without a reactive cysteine, through ionic and hydrogen-bond interactions with Asp12</p></td>
-<td><p><em>KRAS</em> G12D</p></td>
-<td><p>MRTX1133</p></td>
-<td><p>Mirati / Bristol Myers Squibb</p></td>
-<td><p>Phase I (terminated; formulation challenges)</p></td>
+<p>(non-covalent pocket binders)</p></td>
+<td><p>Reversible binding to the switch-II pocket (allele-selective) or to a pocket between switch I and switch II (not allele-selective), without covalent tethering</p></td>
+<td><p><em>KRAS</em> G12D</p>
+<p><em>KRAS</em> (switch I/II pocket)</p>
+<p>Pan-KRAS</p></td>
+<td><p>MRTX1133</p>
+<p>BI-2852</p>
+<p>BI 3706674</p></td>
+<td><p>Mirati / Bristol Myers Squibb</p>
+<p>Boehringer Ingelheim</p>
+<p>Boehringer Ingelheim</p></td>
+<td><p>Phase I (terminated; formulation challenges)</p>
+<p>Preclinical</p>
+<p>Phase I (completed)</p></td>
 <td><p>• Sub-nanomolar affinity for GDP-bound KRAS G12D; preclinical activity in pancreatic and colorectal models [12]</p>
+<p>• BI-2852 binds a switch I/II pocket and is not allele-selective [53]</p>
 <p>• Target occupancy depends on sustained drug exposure</p></td>
 </tr>
 <tr>
 <td><p>Class III</p>
 <p>(RAS(ON) tri-complex)</p></td>
-<td><p>Drug binds cyclophilin A (CYPA); the drug–CYPA complex binds GTP-bound RAS and blocks effector binding</p></td>
+<td><p>Drug binds cyclophilin A (CYPA); the drug–CYPA complex binds GTP-bound RAS next to switch I and switch II and blocks effector binding</p></td>
 <td><p>Multi-RAS(ON)</p>
+<p>RAS(ON), multiple isoforms</p>
 <p><em>KRAS</em> G12C(ON)</p>
 <p><em>KRAS</em> G12D(ON)</p></td>
 <td><p>Daraxonrasib (RMC-6236)</p>
+<p>RMC-7977</p>
 <p>Elironrasib (RMC-6291)</p>
 <p>Zoldonrasib (RMC-9805)</p></td>
 <td><p>Revolution Medicines</p>
 <p>Revolution Medicines</p>
+<p>Revolution Medicines</p>
 <p>Revolution Medicines</p></td>
 <td><p>Approved (FDA, 2026)</p>
+<p>Preclinical</p>
 <p>Phase I/II</p>
 <p>Phase III</p></td>
-<td><p>• Acts on the active state without displacing GTP [13,55]</p>
-<p>• Elironrasib and zoldonrasib also form a covalent bond with Cys12 or Asp12 [53,55]</p>
-<p>• RAS(ON) inhibition overcame resistance due to increased KRAS-GTP loading in preclinical models [87]</p></td>
+<td><p>• Acts on the active state without displacing GTP [13,54]</p>
+<p>• Daraxonrasib and RMC-7977 bind non-covalently and also inhibit wild-type RAS, which may narrow the therapeutic window [13,55]</p>
+<p>• Elironrasib and zoldonrasib also form a covalent bond with Cys12 or Asp12 [54,56]</p>
+<p>• RAS(ON) inhibition overcame resistance due to increased KRAS-GTP loading in preclinical models [86]</p></td>
 </tr>
 <tr>
 <td><p>Class IV</p>
-<p>(pan-RAS, pan-KRAS and SOS1)</p></td>
-<td><p>Inhibition of several RAS isoforms or alleles, or of SOS1-mediated nucleotide exchange</p></td>
-<td><p>RAS(ON), multiple isoforms</p>
-<p><em>KRAS</em> (switch I/II pocket)</p>
-<p><em>KRAS</em> (wild-type amplified)</p>
-<p>SOS1</p>
-<p>SOS1</p></td>
-<td><p>RMC-7977</p>
-<p>BI-2852</p>
-<p>BI 3706674</p>
-<p>BI 1701963</p>
-<p>MRTX0902</p></td>
-<td><p>Revolution Medicines</p>
-<p>Boehringer Ingelheim</p>
-<p>Boehringer Ingelheim</p>
-<p>Boehringer Ingelheim</p>
-<p>Mirati / Bristol Myers Squibb</p></td>
-<td><p>Preclinical</p>
-<p>Preclinical</p>
-<p>Phase I (completed)</p>
-<p>Phase I</p>
-<p>Phase I (terminated)</p></td>
-<td><p>• Inhibit mutant and wild-type RAS, which may narrow the therapeutic window [54,56]</p>
-<p>• SOS1 inhibitors block GEF-mediated nucleotide exchange [15,16]</p></td>
-</tr>
-<tr>
-<td><p>Targeted degraders</p>
-<p>(emerging modality; Section 6.1)</p></td>
-<td><p>Heterobifunctional molecules that recruit an E3 ubiquitin ligase and induce proteasomal degradation of KRAS</p></td>
+<p>(targeted degraders)</p></td>
+<td><p>Heterobifunctional molecules that bind KRAS and recruit an E3 ubiquitin ligase, inducing proteasomal degradation of KRAS</p></td>
 <td><p><em>KRAS</em> G12D</p>
 <p><em>KRAS</em> G12D</p>
 <p><em>KRAS</em> G12C</p>
@@ -147,9 +134,23 @@
 <p>Phase I/II</p>
 <p>Preclinical</p>
 <p>Preclinical</p></td>
-<td><p>• LC-2 and ACBI3 recruit the VHL E3 ligase [57,92]</p>
+<td><p>• LC-2 and ACBI3 recruit the VHL E3 ligase [57,91]</p>
 <p>• Degradation gave more sustained pathway suppression than inhibition in preclinical models [57]</p>
-<p>• Clinical activity of setidegrasib in NSCLC and pancreatic cancer [93]</p></td>
+<p>• Clinical activity of setidegrasib in NSCLC and pancreatic cancer [92]</p></td>
+</tr>
+<tr>
+<td><p>For comparison: SOS1 inhibitors</p>
+<p>(act upstream of RAS; not direct RAS inhibitors)</p></td>
+<td><p>Bind the catalytic pocket of SOS1 and block GEF-mediated nucleotide exchange on RAS</p></td>
+<td><p>SOS1</p>
+<p>SOS1</p></td>
+<td><p>BI 1701963</p>
+<p>MRTX0902</p></td>
+<td><p>Boehringer Ingelheim</p>
+<p>Mirati / Bristol Myers Squibb</p></td>
+<td><p>Phase I</p>
+<p>Phase I (terminated)</p></td>
+<td><p>• Developed mainly as combination partners for direct RAS inhibitors (main-text Section 5.3) [15,16]</p></td>
 </tr>
 </tbody>
 </table>
@@ -201,7 +202,7 @@
 </tr>
 <tr>
 <td><p><strong>sotorasib + panitumumab</strong></p></td>
-<td><p>Advanced <em>KRAS</em> G12C metastatic colorectal cancer, &gt;=3L</p></td>
+<td><p>Advanced KRAS G12C metastatic colorectal cancer, &gt;=2L (chemorefractory)</p></td>
 <td><p>FDA (2025-01-16)</p></td>
 <td><p>Regular approval (first regular approval in colorectal cancer)</p></td>
 <td><p>Phase III CodeBreaK 300: 960 mg PFS HR 0.49 (P=0.006); final OS HR 0.70 (did not cross pre-specified multiplicity boundary)</p></td>
@@ -270,18 +271,18 @@
 <p><strong>Withdrawn 2026-09-01</strong>)</p></td>
 <td><p>Accelerated approval based on single-arm ORR (KRYSTAL-1, 34.0%)</p></td>
 <td><p>Confirmatory phase III KRYSTAL-10 (N=461; 231 vs 230): median PFS by BICR 7.5 vs 8.1 mo (HR 0.89, 95% CI 0.71–1.13, P=0.32); median OS 21.6 vs 21.7 mo (HR 0.83, 95% CI 0.67–1.03, P=0.09); ORR 47% vs 16%; neither dual primary endpoint met</p></td>
-<td><p><strong>Accelerated approval formally withdrawn</strong>; confirmatory study failed to demonstrate superiority over second-line FOLFIRI or mFOLFOX6 with or without a VEGF/VEGFR inhibitor</p></td>
+<td><p><strong>Accelerated-approval indication withdrawn at the sponsor's request; confirmatory study</strong> failed to demonstrate superiority over second-line FOLFIRI or mFOLFOX6 with or without a VEGF/VEGFR inhibitor</p></td>
 </tr>
 </tbody>
 </table>
 
-*Note: Regulatory dossiers and clinical trial registry status updated through 18 November 2026. Regulatory categories: FDA regular approval reflects verified clinical benefit; accelerated approval (FDA) and conditional approval (EMA, NMPA, PMDA) require post-marketing confirmatory evidence. Of clinical and regulatory significance, adagrasib plus cetuximab was granted FDA accelerated approval on June 21, 2024 for pretreated KRAS G12C metastatic colorectal cancer, but this approval was formally withdrawn on September 1, 2026 after the randomised phase III KRYSTAL-10 trial failed to confirm superiority over second-line chemotherapy (FOLFIRI or mFOLFOX6 with or without a VEGF/VEGFR inhibitor) for either PFS or OS. Abbreviations: CHMP, Committee for Medicinal Products for Human Use; CRL, Complete Response Letter; EMA, European Medicines Agency; FDA, US Food and Drug Administration; HR, hazard ratio; IRC, independent review committee; IRRC, independent review and reporting committee; mCRC, metastatic colorectal cancer; NMPA, National Medical Products Administration (China); NSCLC, non-small cell lung cancer; ODAC, Oncologic Drugs Advisory Committee; ORR, objective response rate; OS, overall survival; PDAC, pancreatic ductal adenocarcinoma; PFS, progression-free survival; PMDA, Pharmaceuticals and Medical Devices Agency (Japan).*
+*Note: Regulatory dossiers and clinical trial registry status updated through 18 November 2026. Regulatory categories: FDA regular approval reflects verified clinical benefit; accelerated approval (FDA) and conditional approval (EMA, NMPA, PMDA) require post-marketing confirmatory evidence. Of clinical and regulatory significance, adagrasib plus cetuximab was granted FDA accelerated approval on June 21, 2024 for pretreated KRAS G12C metastatic colorectal cancer, but this indication was withdrawn at the sponsor's request on September 1, 2026, after the randomised phase III KRYSTAL-10 trial failed to confirm superiority over second-line chemotherapy (FOLFIRI or mFOLFOX6 with or without a VEGF/VEGFR inhibitor) for either PFS or OS. Abbreviations: CHMP, Committee for Medicinal Products for Human Use; CRL, Complete Response Letter; EMA, European Medicines Agency; FDA, US Food and Drug Administration; HR, hazard ratio; IRC, independent review committee; IRRC, independent review and reporting committee; mCRC, metastatic colorectal cancer; NMPA, National Medical Products Administration (China); NSCLC, non-small cell lung cancer; ODAC, Oncologic Drugs Advisory Committee; ORR, objective response rate; OS, overall survival; PDAC, pancreatic ductal adenocarcinoma; PFS, progression-free survival; PMDA, Pharmaceuticals and Medical Devices Agency (Japan).*
 
 **Supplementary Table S3 \| Mechanisms of resistance to KRAS G12C inhibitors, reported frequencies, and corresponding combination or switching strategies**
 
 | **Resistance class** | **Alterations reported \[main-text reference\]** | **Effect on signalling** | **Frequency in clinical cohorts** | **Strategy** | **Registered regimens with a direct RAS inhibitor (examples)** |
-|----|----|----|----|----|----|
-| On-target *KRAS* alterations | Switch-II pocket: R68S, H95D/Q/R, Y96C; second-site G12D/R/V/W, G13D, Q61H; *KRAS* G12C amplification \[49\] | Block drug binding or increase the GTP-bound fraction of KRAS \[49\] | After adagrasib: switch-II pocket 4/38 (11%); any acquired *KRAS* alteration 7/38 \[49\] | Switch to a RAS(ON) inhibitor \[87\]; H95 mutants remain sensitive to sotorasib in vitro \[49\] | Elironrasib ± daraxonrasib (NCT05462717, NCT06128551) |
+|------------|------------|------------|------------|------------|------------|
+| On-target *KRAS* alterations | Switch-II pocket: R68S, H95D/Q/R, Y96C; second-site G12D/R/V/W, G13D, Q61H; *KRAS* G12C amplification \[49\] | Block drug binding or increase the GTP-bound fraction of KRAS \[49\] | After adagrasib: switch-II pocket 4/38 (11%); any acquired *KRAS* alteration 7/38 \[49\] | Switch to a RAS(ON) inhibitor \[86\]; H95 mutants remain sensitive to sotorasib in vitro \[49\] | Elironrasib ± daraxonrasib (NCT05462717, NCT06128551) |
 | Upstream RTK reactivation | *MET* amplification; *ALK*, *RET*, *BRAF*, *RAF1* and *FGFR3* fusions \[49\]; *EGFR* and *FGFR2* alterations \[83\]; adaptive EGFR feedback in CRC \[23\] | Restores RAS-GTP loading upstream of KRAS | *MET* amplification as sole mechanism 2/38; fusions in 3/10 CRC \[49\] | Add an EGFR antibody (CRC) or an RTK inhibitor | Sotorasib + panitumumab (CodeBreaK 300) \[62\]; adagrasib + cetuximab (KRYSTAL-10) \[63\] |
 | SHP2/SOS1-mediated nucleotide exchange | No genomic alteration; adaptive reactivation of wild-type and G12C KRAS | Renewed GDP-to-GTP exchange \[15,16\] | Adaptive; no genomic frequency | Add an SHP2 or SOS1 inhibitor | Sotorasib + RMC-4630 (NCT05054725); adagrasib + TNO155 (NCT04330664); JDQ443 + TNO155 (NCT04699188); adagrasib + BI 1701963 (NCT04975256, terminated) |
 | Downstream MAPK bypass | *NRAS* Q61K, *BRAF* V600E and *MAP2K1* mutations; *BRAF* and *RAF1* fusions \[49\]; *NRAS*, *BRAF* and *MRAS* hotspot mutations \[83\] | ERK reactivation independent of KRAS G12C | RTK–RAS pathway alterations other than *KRAS* (rows 2 and 4): 14/38 (37%) \[49\]; any treatment-emergent alteration after sotorasib 27/43 \[83\] | Add a RAF, MEK or ERK inhibitor \[83\] | Sotorasib + trametinib (CodeBreaK 101, NCT04185883); sotorasib + avutometinib ± defactinib (NCT05074810) |

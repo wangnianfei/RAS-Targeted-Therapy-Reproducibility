@@ -1,19 +1,122 @@
-# Table 2　Approved drugs, indications and regulatory routes
+<!-- Copy of Supplementary Table S2 as it appears in the appendix (data cut-off 18 November 2026). -->
 
-<!-- English translation of 表二_获批药物与适应证、监管路径.md (hand-maintained; numbers in the table rows are checked against the Chinese table by 脚本/02_tables_en.py --check). -->
+**Supplementary Table S2 \| Global regulatory approvals, indications, and post-marketing confirmatory trial trajectories for RAS-directed therapies**
 
-> Placed after §5.5. Narrow table.
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr>
+<th><p><strong>Drug &amp; Development Code</strong></p></th>
+<th><p><strong>Approved / Evaluated Indication</strong></p></th>
+<th><p><strong>Regulatory Agency &amp; Date</strong></p></th>
+<th><p><strong>Approval Pathway</strong></p></th>
+<th><p><strong>Pivotal / Confirmatory Trial Findings</strong></p></th>
+<th><p><strong>Regulatory Outcome &amp; Clinical Status</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p><strong>sotorasib</strong></p>
+<p>(AMG 510)</p></td>
+<td><p>Advanced <em>KRAS</em> G12C NSCLC, &gt;=2L (after prior systemic therapy)</p></td>
+<td><p>FDA (2021-05-28);</p>
+<p>EMA (2022-01-06);</p>
+<p>PMDA (2022-01-20)</p></td>
+<td><p>Accelerated / conditional approval (single-arm phase II CodeBreaK 100, ORR 37.1%)</p></td>
+<td><p>Phase III CodeBreaK 200: PFS HR 0.66 (P=0.0017); OS HR 1.01 (95% CI 0.77-1.33; confounded by crossover)</p></td>
+<td><p>FDA ODAC 10:2 vote and CRL (2023-12) rejecting regular approval; EMA converted to full marketing authorization; PMDA maintained approval</p></td>
+</tr>
+<tr>
+<td><p><strong>adagrasib</strong></p>
+<p>(MRTX849)</p></td>
+<td><p>Advanced <em>KRAS</em> G12C NSCLC, &gt;=2L (after prior systemic therapy)</p></td>
+<td><p>FDA (2022-12-12);</p>
+<p>EMA (2024-01-05)</p></td>
+<td><p>Accelerated / conditional approval (single-arm phase II KRYSTAL-1, ORR 42.9%)</p></td>
+<td><p>Phase III KRYSTAL-12: PFS 5.5 vs 3.8 mo (HR 0.58, P&lt;0.0001); intracranial PFS HR 0.55; OS immature</p></td>
+<td><p>Active conditional approval; confirmatory OS follow-up ongoing; first G12C inhibitor with prospective intracranial activity on US label</p></td>
+</tr>
+<tr>
+<td><p><strong>sotorasib + panitumumab</strong></p></td>
+<td><p>Advanced KRAS G12C metastatic colorectal cancer, &gt;=2L (chemorefractory)</p></td>
+<td><p>FDA (2025-01-16)</p></td>
+<td><p>Regular approval (first regular approval in colorectal cancer)</p></td>
+<td><p>Phase III CodeBreaK 300: 960 mg PFS HR 0.49 (P=0.006); final OS HR 0.70 (did not cross pre-specified multiplicity boundary)</p></td>
+<td><p>Active regular approval; established vertical EGFR + KRAS co-blockade as standard third-line regimen</p></td>
+</tr>
+<tr>
+<td><p><strong>fulzerasib</strong></p>
+<p>(IBI351 / GFH925)</p></td>
+<td><p>Advanced <em>KRAS</em> G12C NSCLC, &gt;=2L</p></td>
+<td><p>NMPA (China, 2024-08)</p></td>
+<td><p>Conditional approval (priority review)</p></td>
+<td><p>Pivotal single-arm phase II (n=116): IRRC ORR 49.1%, median PFS 9.7 mo</p></td>
+<td><p>Active conditional approval; confirmatory randomised phase III trial ongoing</p></td>
+</tr>
+<tr>
+<td><p><strong>garsorasib</strong></p>
+<p>(D-1553)</p></td>
+<td><p>Advanced <em>KRAS</em> G12C NSCLC, &gt;=2L</p></td>
+<td><p>NMPA (China, 2024-11-08)</p></td>
+<td><p>Conditional approval (priority review)</p></td>
+<td><p>Pivotal single-arm phase II (n=123): IRC ORR 50.0%, median PFS 9.1 mo</p></td>
+<td><p>Active conditional approval; confirmatory randomised phase III trial ongoing</p></td>
+</tr>
+<tr>
+<td><p><strong>glecirasib</strong></p>
+<p>(JAB-21822)</p></td>
+<td><p>Advanced <em>KRAS</em> G12C NSCLC, &gt;=2L</p></td>
+<td><p>NMPA (China, 2025-05)</p></td>
+<td><p>Conditional approval (priority review)</p></td>
+<td><p>Pivotal single-arm phase IIb (n=117): IRC ORR 47.9%</p></td>
+<td><p>Active conditional approval; confirmatory randomised phase III trial ongoing</p></td>
+</tr>
+<tr>
+<td><p><strong>sosimerasib</strong></p>
+<p>(HBI-2438 / JMKX001899)</p></td>
+<td><p>Advanced <em>KRAS</em> G12C NSCLC, &gt;=2L</p></td>
+<td><p>NMPA (China, 2026-02-25)</p></td>
+<td><p>Conditional approval (priority review)</p></td>
+<td><p>Pivotal single-arm phase II (n=145): ORR 52.4%</p></td>
+<td><p>Active conditional approval; confirmatory phase III trial vs docetaxel (NCT07242274) ongoing</p></td>
+</tr>
+<tr>
+<td><p><strong>avutometinib + defactinib</strong></p>
+<p>(VS-6766 / VS-6063)</p></td>
+<td><p>Recurrent <em>KRAS</em>-mutant low-grade serous ovarian cancer, &gt;=2L</p></td>
+<td><p>FDA (2025-05-08)</p></td>
+<td><p>Accelerated approval (RAF/MEK clamp + FAK inhibitor)</p></td>
+<td><p>Single-arm phase II RAMP 201: ORR 45% in <em>KRAS</em>-mutant cohort</p></td>
+<td><p>Active accelerated approval; confirmatory phase III RAMP 301 ongoing</p></td>
+</tr>
+<tr>
+<td><p><strong>daraxonrasib</strong></p>
+<p>(RMC-6236)</p></td>
+<td><p>Metastatic PDAC, &gt;=2L or chemotherapy-unfit</p></td>
+<td><p>FDA (2026-08-26, regular);</p>
+<p>EMA CHMP (2026-10-15)</p></td>
+<td><p>Regular approval (first regular approval for multi-RAS inhibitor)</p></td>
+<td><p>Pivotal phase III RASolute 302 (N=500; 248 vs 252), first interim analysis: median OS 13.2 vs 6.7 mo (HR 0.40, 95% CI 0.30–0.53, P&lt;0.001; RAS G12 population 13.2 vs 6.6 mo, HR 0.40); median PFS 7.2 vs 3.6 mo (HR 0.49, 95% CI 0.38–0.64, P&lt;0.001; RAS G12 population HR 0.45); ORR 31.6% vs 11.2%</p></td>
+<td><p>Active regular approval (FDA) and positive CHMP opinion (EMA); establishes multi-RAS tri-complex inhibition as standard of care in PDAC</p></td>
+</tr>
+<tr>
+<td><p><strong>adagrasib + cetuximab</strong></p>
+<p><em>(Withdrawn Indication)</em></p></td>
+<td><p>Advanced <em>KRAS</em> G12C metastatic colorectal cancer, 2L</p></td>
+<td><p>FDA (Accelerated approval 2024-06-21;</p>
+<p><strong>Withdrawn 2026-09-01</strong>)</p></td>
+<td><p>Accelerated approval based on single-arm ORR (KRYSTAL-1, 34.0%)</p></td>
+<td><p>Confirmatory phase III KRYSTAL-10 (N=461; 231 vs 230): median PFS by BICR 7.5 vs 8.1 mo (HR 0.89, 95% CI 0.71–1.13, P=0.32); median OS 21.6 vs 21.7 mo (HR 0.83, 95% CI 0.67–1.03, P=0.09); ORR 47% vs 16%; neither dual primary endpoint met</p></td>
+<td><p><strong>Accelerated-approval indication withdrawn at the sponsor's request; confirmatory study</strong> failed to demonstrate superiority over second-line FOLFIRI or mFOLFOX6 with or without a VEGF/VEGFR inhibitor</p></td>
+</tr>
+</tbody>
+</table>
 
-| Drug (code) | Indication | Agency, date | Approval route | Confirmatory study | Section |
-|---|---|---|---|---|---|
-| sotorasib (AMG 510) | Advanced *KRAS* G12C NSCLC, previously treated | FDA, 2021; **EMA, 2022-01-06 (conditional)**; **PMDA, 2022-01-20**<sup>a</sup> | **Accelerated approval** (single-arm ORR 37.1%<sup>b</sup>, 46/124); post-marketing requirement: dose-optimisation study | CodeBreaK 200: PFS HR 0.66 (0.51–0.86); **no OS benefit** (HR 1.01, crossover permitted) | 4.2 / 5.1 / 5.5 |
-| adagrasib (MRTX849) | Advanced *KRAS* G12C NSCLC **after at least one prior systemic therapy** (FDA-approved test required) | FDA, **2022-12-12**; **EMA, 2024-01-05 (conditional)**; PMDA: not in the list<sup>a</sup> | **Accelerated approval** (FDA 2022-12-12; based on ORR and DOR, with a confirmatory obligation) | KRYSTAL-12: PFS 5.5 vs 3.8 months (HR 0.58, 0.45–0.76); OS immature | 4.7 / 5.1 |
-| sotorasib **+ panitumumab** | *KRAS* G12C metastatic colorectal cancer, after fluoropyrimidine / oxaliplatin / irinotecan | FDA, **2025-01-16** | **Regular approval** (the approval letter contains no accelerated-approval clause) | CodeBreaK 300: PFS the only primary end point, not powered for OS (n=160) | 5.2 |
-| fulzerasib (IBI351) | Advanced *KRAS* G12C NSCLC | NMPA, **2024-08** | Single-arm response rate (equivalent in standing to FDA accelerated approval) | Confirmatory obligation; public documents do not state the end point or design<sup>c</sup> | 4.7 / 5.1 |
-| garsorasib (D-1553) | Advanced *KRAS* G12C NSCLC | NMPA, **2024-11-08** | Single-arm response rate (phase 2, n=123, IRC-confirmed ORR 50%) | Confirmatory obligation; public documents do not state the end point or design<sup>c</sup> | 4.7 / 5.1 |
-| glecirasib (JAB-21822) | Advanced *KRAS* G12C NSCLC | NMPA, **2025-05** | Single-arm response rate (phase 2b, n=117, IRC-confirmed ORR 47.9%) | Confirmatory obligation; public documents do not state the end point or design<sup>c</sup> | 4.2 / 4.7 |
-| **sosimerasib (HBI-2438 / JMKX001899)** | Adults with advanced *KRAS* G12C NSCLC after at least one systemic therapy | NMPA, **2026-02-25** (announced 2026-02-28) | **Conditional approval** (priority review; single-arm phase 2, n=145, ORR 52.4%; assessment method not stated in the source) | Not stated in the announcement<sup>c</sup>; registered phase 3 NCT07242274 (monotherapy vs docetaxel) | 4.7 |
-| **avutometinib + defactinib (VS-6766 / VS-6063)**<sup>d</sup> | *KRAS*-mutated **recurrent low-grade serous ovarian cancer**, after prior systemic therapy | FDA, **2025-05-08** | **Accelerated approval** (single-arm ORR, RAMP 201) | RAMP 301 (phase 3) | 4.1 |
-| **daraxonrasib (RMC-6236)** | **Metastatic pancreatic ductal adenocarcinoma**, after first-line therapy or when multi-agent systemic therapy is unsuitable | FDA, **2026-08-26**; EMA: CHMP positive opinion **2026-10-15**, European Commission decision pending<sup>e</sup> | **Regular approval** (wording of the approval letter; randomised, dual primary end points, no crossover) | RASolute 302 is itself the confirmatory evidence: OS 13.2 vs 6.7 months (HR 0.40, 0.30–0.54) | 4.7 / 5.3 |
-
-Note: Cut-off 2026-10-20; approval types checked to 2026-10-31; rows by indication (7 single agents, 2 combination regimens); adagrasib + cetuximab received FDA accelerated approval (2024-06-21, *KRAS* G12C metastatic colorectal cancer after fluoropyrimidine / oxaliplatin / irinotecan) and was withdrawn on 2026-09-01 after the confirmatory phase 3 KRYSTAL-10 failed to verify benefit, so it is not listed (see §5.2); regular approval only for sotorasib + panitumumab and daraxonrasib, the others accelerated or conditional approval on single-arm response rates; <sup>a</sup>EMA and PMDA from their public lists; adagrasib absent from the PMDA list, not proof of non-approval; <sup>b</sup>from the paper, 36% in Figure 10 from the FDA review; <sup>c</sup>confirmatory end points and designs mostly not stated in NMPA public documents; <sup>d</sup>no direct RAS binding, included for an indication defined by *KRAS* mutation; <sup>e</sup>positive CHMP opinion only, not yet an EU approval. Abbreviations: IRC, independent review committee; ORR, objective response rate; PFS, progression-free survival; OS, overall survival; HR, hazard ratio; DOR, duration of response; NSCLC, non-small-cell lung cancer; CHMP, Committee for Medicinal Products for Human Use.
+*Note: Regulatory dossiers and clinical trial registry status updated through 18 November 2026. Regulatory categories: FDA regular approval reflects verified clinical benefit; accelerated approval (FDA) and conditional approval (EMA, NMPA, PMDA) require post-marketing confirmatory evidence. Of clinical and regulatory significance, adagrasib plus cetuximab was granted FDA accelerated approval on June 21, 2024 for pretreated KRAS G12C metastatic colorectal cancer, but this indication was withdrawn at the sponsor's request on September 1, 2026, after the randomised phase III KRYSTAL-10 trial failed to confirm superiority over second-line chemotherapy (FOLFIRI or mFOLFOX6 with or without a VEGF/VEGFR inhibitor) for either PFS or OS. Abbreviations: CHMP, Committee for Medicinal Products for Human Use; CRL, Complete Response Letter; EMA, European Medicines Agency; FDA, US Food and Drug Administration; HR, hazard ratio; IRC, independent review committee; IRRC, independent review and reporting committee; mCRC, metastatic colorectal cancer; NMPA, National Medical Products Administration (China); NSCLC, non-small cell lung cancer; ODAC, Oncologic Drugs Advisory Committee; ORR, objective response rate; OS, overall survival; PDAC, pancreatic ductal adenocarcinoma; PFS, progression-free survival; PMDA, Pharmaceuticals and Medical Devices Agency (Japan).*

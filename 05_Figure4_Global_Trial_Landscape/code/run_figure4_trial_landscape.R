@@ -3,7 +3,9 @@
 # Figure 4: Global Clinical Trial Landscape of RAS-Targeted Therapies
 # Production Script for ESMO Open
 # Strictly 180.0 mm double-column width, 125.0 mm height, TrueType Arial font
-# Panel tags (A, B, C). Revised: all panels computed from trials_1182.csv (ras_tier == "RAS-targeted", n = 358);
+# Panel tags (A, B, C). All panels computed from trials_curated.csv (output of
+# apply_classification_corrections.py): ras_tier == "RAS-targeted", excluding trials that enrol only
+# patients with haematological malignancies (n = 367);
 # panel C region counts derived from site countries (a trial counts once in each region with >=1 site).
 # ==============================================================================
 
@@ -42,9 +44,10 @@ theme_esmo_tight <- function(base_size = 7.0) {
     )
 }
 
-data_file <- file.path(data_dir, "trials_1182.csv")
+data_file <- file.path(data_dir, "trials_curated.csv")
 trials <- read.csv(data_file, stringsAsFactors = FALSE)
-targeted <- trials %>% filter(ras_tier == "RAS-targeted")
+targeted <- trials %>% filter(ras_tier == "RAS-targeted", tumour_group != "Haematologic malignancy")
+cat("Analysis set n =", nrow(targeted), "\n")
 targeted <- targeted %>%
   mutate(phase_clean = case_when(
     phase %in% c("Phase 1", "Early Phase 1") ~ "Phase 1",

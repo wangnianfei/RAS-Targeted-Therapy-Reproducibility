@@ -1,0 +1,139 @@
+nct_id,field,old_value,new_value,reason
+NCT07874880,ras_tier,RAS-targeted,RAS-biomarker-selected,MTX-531 is a dual EGFR/PI3K inhibitor (registry intervention description); matched only because 'pan-RAS' appears among keywords/conditions
+NCT07562152,ras_tier,RAS-targeted,RAS-mentioned,Atebimetinib (IMM-1-104) is a MEK inhibitor (INN stem -metinib); no RAS-directed intervention
+NCT06962254,ras_tier,RAS-targeted,RAS-biomarker-selected,Imatinib plus trametinib (BCR-ABL and MEK inhibitors) in KRAS-mutant tumours; no RAS-directed intervention
+NCT05786924,ras_tier,RAS-targeted,RAS-biomarker-selected,S241656 (BDTX-4933) is a RAF inhibitor (registry intervention description); matched only because conditions list 'acquired resistance to KRAS G12C inhibitor'
+NCT05585320,ras_tier,RAS-targeted,RAS-biomarker-selected,IMM-1-104 (atebimetinib) is a MEK inhibitor; matched only because 'pan-RAS' appears among keywords
+NCT06208124,ras_tier,RAS-targeted,RAS-biomarker-selected,IMM-6-415 (envometinib) is a MEK inhibitor; matched only because 'pan-RAS' appears among keywords
+NCT05327010,ras_tier,RAS-targeted,RAS-biomarker-selected,ZEN-3694 (BET inhibitor) plus talazoparib (PARP inhibitor); no RAS-directed intervention
+NCT04775862,ras_tier,RAS-targeted,RAS-biomarker-selected,Anti-EGFR rechallenge guided by cfDNA RAS status; no RAS-directed intervention
+NCT07874880,target_class,pan-RAS / multi-selective RAS(ON),Not RAS-directed,follows tier correction
+NCT07562152,target_class,pan-RAS / multi-selective RAS(ON),Not RAS-directed,follows tier correction
+NCT06962254,target_class,KRAS G12C,Not RAS-directed,follows tier correction
+NCT05786924,target_class,KRAS G12C,Not RAS-directed,follows tier correction
+NCT05585320,target_class,pan-RAS / multi-selective RAS(ON),Not RAS-directed,follows tier correction
+NCT06208124,target_class,pan-RAS / multi-selective RAS(ON),Not RAS-directed,follows tier correction
+NCT05327010,target_class,KRAS G12C,Not RAS-directed,follows tier correction
+NCT04775862,target_class,KRAS G12C,Not RAS-directed,follows tier correction
+NCT07819838,target_class,KRAS G12C; pan-RAS / multi-selective RAS(ON),pan-RAS / multi-selective RAS(ON),Intervention is daraxonrasib; 'KRAS G12C' came from eligibility text
+NCT06983743,target_class,KRAS G12C,pan-RAS / multi-selective RAS(ON),ERAS-0015 is a pan-RAS(ON) cyclophilin A molecular glue (sponsor description)
+NCT07303465,target_class,pan-RAS / multi-selective RAS(ON),KRAS G12D/other codon 12-13,RNK08954 is a KRAS G12D inhibitor (registry summary: KRAS G12D PDAC)
+NCT07610798,target_class,KRAS G12D/other codon 12-13; pan-RAS / multi-selective RAS(ON),KRAS G12D/other codon 12-13,INV-8989 targets KRAS G12D (registry summary)
+NCT07207707,target_class,KRAS G12D/other codon 12-13; pan-RAS / multi-selective RAS(ON),KRAS G12D/other codon 12-13,KQB548 (BAY 3771249) is a KRAS G12D inhibitor (registry summary)
+NCT07686445,target_class,KRAS G12C; pan-RAS / multi-selective RAS(ON),pan-RAS / multi-selective RAS(ON),AN4035 is a CEACAM5-targeted conjugate with a pan-RAS(ON) inhibitor payload (registry intervention description)
+NCT06218914,target_class,pan-RAS / multi-selective RAS(ON),RAS vaccine / immunotherapy,NT-112 and AZD0240 are KRAS G12D-specific TCR-engineered T cells (registry intervention description)
+NCT07854249,exclude,,yes,Not conducted in patients with cancer: INCB161734 PK in renal impairment
+NCT07853040,exclude,,yes,Not conducted in patients with cancer: INCB161734 PK in hepatic impairment
+NCT07814404,exclude,,yes,Not conducted in patients with cancer: INCB161734 mass balance in healthy participants
+NCT07439250,exclude,,yes,Not conducted in patients with cancer: olomorasib in healthy participants
+NCT07222098,exclude,,yes,Not conducted in patients with cancer: calderasib drug interaction in healthy participants
+NCT07219550,exclude,,yes,Not conducted in patients with cancer: calderasib PK in hepatic impairment and healthy volunteers
+NCT07137689,exclude,,yes,Not conducted in patients with cancer: olomorasib PK in renal impairment
+NCT07124013,exclude,,yes,Not conducted in patients with cancer: olomorasib in healthy Japanese participants
+NCT06980909,exclude,,yes,Not conducted in patients with cancer: QLC1101 food effect in healthy subjects
+NCT06942741,exclude,,yes,Not conducted in patients with cancer: calderasib formulation/food effect in healthy participants
+NCT06814119,exclude,,yes,Not conducted in patients with cancer: calderasib PK in renal impairment
+NCT06719557,exclude,,yes,Not conducted in patients with cancer: calderasib drug interaction in healthy participants
+NCT06719128,exclude,,yes,Not conducted in patients with cancer: olomorasib PK in hepatic impairment
+NCT06687759,exclude,,yes,Not conducted in patients with cancer: calderasib ADME in healthy participants
+NCT06677957,exclude,,yes,Not conducted in patients with cancer: divarasib drug interaction in healthy participants
+NCT06619314,exclude,,yes,Not conducted in patients with cancer: calderasib food/PPI effect in healthy participants
+NCT06111521,exclude,,yes,Not conducted in patients with cancer: olomorasib drug interaction in healthy participants
+NCT05924152,exclude,,yes,Not conducted in patients with cancer: adagrasib drug interaction in healthy adults
+NCT05578859,exclude,,yes,Not conducted in patients with cancer: sotorasib ADME in healthy subjects
+NCT05045638,exclude,,yes,Not conducted in patients with cancer: sotorasib-rosuvastatin interaction in healthy participants
+NCT04887064,exclude,,yes,Not conducted in patients with cancer: sotorasib PK in hepatic impairment
+NCT05541159,exclude,,yes,Not conducted in patients with cancer: TNO155 PK in renal impairment
+NCT05490030,exclude,,yes,Not conducted in patients with cancer: TNO155 PK in hepatic impairment
+NCT00985322,exclude,,yes,"Not an oncology trial: ACE inhibitors in haemodialysis (RAS = renin-angiotensin system; matched on ""non-RAS inhibitor"")"
+NCT05510323,exclude,,yes,Not an oncology trial: IgA nephropathy
+NCT04541043,exclude,,yes,Not an oncology trial: IgA nephropathy
+NCT04219007,exclude,,yes,Not an oncology trial: short stature (vosoritide)
+NCT02968641,exclude,,yes,Not an oncology trial: chronic hepatitis D (lonafarnib)
+NCT02527707,exclude,,yes,Not an oncology trial: chronic hepatitis D (lonafarnib)
+NCT07549646,exclude,,yes,Not an oncology trial: RAS/MAPK-pathway vascular anomalies (non-malignant)
+NCT00021541,exclude,,yes,Not an oncology trial: NF1 plexiform neurofibroma (non-malignant RASopathy)
+NCT04006301,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: JNJ-74699157 (ARS-3248), covalent KRAS G12C inhibitor (Table S1)"
+NCT04006301,target_class,Not RAS-directed,KRAS G12C,follows tier correction
+NCT04165031,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: LY3499446, KRAS G12C inhibitor; trial restricted to KRAS G12C"
+NCT04165031,target_class,Not RAS-directed,KRAS G12C,follows tier correction
+NCT06117371,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: BEBT-607, KRAS G12C inhibitor (NCI Drug Dictionary)"
+NCT06117371,target_class,Not RAS-directed,KRAS G12C,follows tier correction
+NCT06720987,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: KQB365, KRAS-mutant inhibitor (NCI Drug Dictionary); trial restricted to KRAS G12C/G12S"
+NCT06720987,target_class,Not RAS-directed,KRAS G12C,follows tier correction
+NCT07542704,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: KQB368, KRAS-mutant inhibitor (sponsor pipeline); trial restricted to KRAS G12C"
+NCT07542704,target_class,Not RAS-directed,KRAS G12C,follows tier correction
+NCT07859085,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: GDC-7035 (RO7782493), KRAS G12D inhibitor"
+NCT07859085,target_class,Not RAS-directed,KRAS G12D/other codon 12-13,follows tier correction
+NCT06586515,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: LY3962673, first-in-human trial restricted to KRAS G12D"
+NCT06586515,target_class,Not RAS-directed,KRAS G12D/other codon 12-13,follows tier correction
+NCT07134998,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: HRS-6093, first-in-human trial restricted to KRAS G12D"
+NCT07134998,target_class,Not RAS-directed,KRAS G12D/other codon 12-13,follows tier correction
+NCT07624214,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: LT-010391, first-in-human trial restricted to KRAS G12D"
+NCT07624214,target_class,Not RAS-directed,KRAS G12D/other codon 12-13,follows tier correction
+NCT06797336,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: PT0253, first-in-human trial restricted to KRAS G12D"
+NCT06797336,target_class,Not RAS-directed,KRAS G12D/other codon 12-13,follows tier correction
+NCT06818812,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: INCB186748, first-in-human trial restricted to KRAS G12D"
+NCT06818812,target_class,Not RAS-directed,KRAS G12D/other codon 12-13,follows tier correction
+NCT07535112,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: BAY 3771249 (KQB548), KRAS G12D inhibitor"
+NCT07535112,target_class,Not RAS-directed,KRAS G12D/other codon 12-13,follows tier correction
+NCT06667544,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: RNK08954, KRAS G12D inhibitor"
+NCT06667544,target_class,Not RAS-directed,KRAS G12D/other codon 12-13,follows tier correction
+NCT07441174,ras_tier,RAS-biomarker-selected,RAS-targeted,RAS-directed agent not in the name list: RNK08954 (KRAS G12D inhibitor) plus IN10018
+NCT07441174,target_class,Not RAS-directed,KRAS G12D/other codon 12-13,follows tier correction
+NCT06599502,ras_tier,RAS-mentioned,RAS-targeted,"RAS-directed agent not in the name list: AZD0022, oral KRAS G12D inhibitor (registry intervention description)"
+NCT06599502,target_class,Not RAS-directed,KRAS G12D/other codon 12-13,follows tier correction
+NCT07189949,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: HRS-2329, oral pan-RAS inhibitor (registry description in NCT07736612)"
+NCT07189949,target_class,Not RAS-directed,pan-RAS / multi-selective RAS(ON),follows tier correction
+NCT06835569,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: ALTA3263, pan-KRAS ON/OFF inhibitor (sponsor description)"
+NCT06835569,target_class,Not RAS-directed,pan-RAS / multi-selective RAS(ON),follows tier correction
+NCT07094113,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: AMG 410, non-covalent pan-KRAS inhibitor"
+NCT07094113,target_class,Not RAS-directed,pan-RAS / multi-selective RAS(ON),follows tier correction
+NCT07204340,ras_tier,RAS-mentioned,RAS-targeted,"RAS-directed agent not in the name list: TLN-372, pan-KRAS inhibitor"
+NCT07204340,target_class,Not RAS-directed,pan-RAS / multi-selective RAS(ON),follows tier correction
+NCT06056024,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: BI 3706674, pan-KRAS inhibitor (Table S1)"
+NCT06056024,target_class,Not RAS-directed,pan-RAS / multi-selective RAS(ON),follows tier correction
+NCT07584226,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: RLY-8161, NRAS-selective inhibitor (registry intervention description)"
+NCT07584226,target_class,Not RAS-directed,"RAS-directed, allele not specified",follows tier correction
+NCT06364696,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: ASP4396, agent directed against mutant KRAS (registry summary)"
+NCT06364696,target_class,Not RAS-directed,"RAS-directed, allele not specified",follows tier correction
+NCT05933668,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: YK0901, KRAS G12V-specific TCR-T (registry description)"
+NCT05933668,target_class,Not RAS-directed,RAS vaccine / immunotherapy,follows tier correction
+NCT06043713,ras_tier,RAS-biomarker-selected,RAS-targeted,RAS-directed agent not in the name list: FH-A11KRASG12V-TCR T cells (registry description)
+NCT06043713,target_class,Not RAS-directed,RAS vaccine / immunotherapy,follows tier correction
+NCT06478251,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: NW-301V/NW-301D, KRAS G12V/G12D TCR-T (registry description)"
+NCT06478251,target_class,Not RAS-directed,RAS vaccine / immunotherapy,follows tier correction
+NCT06484556,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: NW-301V/NW-301D, KRAS G12V/G12D TCR-T (registry description)"
+NCT06484556,target_class,Not RAS-directed,RAS vaccine / immunotherapy,follows tier correction
+NCT06484790,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: NW-301V/NW-301D, KRAS G12V/G12D TCR-T (registry description)"
+NCT06484790,target_class,Not RAS-directed,RAS vaccine / immunotherapy,follows tier correction
+NCT07474168,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: NW-301VT, KRAS G12V TCR-T (registry description)"
+NCT07474168,target_class,Not RAS-directed,RAS vaccine / immunotherapy,follows tier correction
+NCT07875920,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: NW-301V, KRAS G12V TCR-T (registry description)"
+NCT07875920,target_class,Not RAS-directed,RAS vaccine / immunotherapy,follows tier correction
+NCT06487377,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: IX001, KRAS-mutation TCR-T (registry description)"
+NCT06487377,target_class,Not RAS-directed,RAS vaccine / immunotherapy,follows tier correction
+NCT06898385,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: IX001, KRAS G12V TCR-T (registry description)"
+NCT06898385,target_class,Not RAS-directed,RAS vaccine / immunotherapy,follows tier correction
+NCT06545201,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: RE001, KRAS G12V-directed T cells (registry description)"
+NCT06545201,target_class,Not RAS-directed,RAS vaccine / immunotherapy,follows tier correction
+NCT06546150,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: RE002, KRAS G12D-directed T cells (registry description)"
+NCT06546150,target_class,Not RAS-directed,RAS vaccine / immunotherapy,follows tier correction
+NCT06577532,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: ABO2102, mutant-KRAS mRNA vaccine (registry description)"
+NCT06577532,target_class,Not RAS-directed,RAS vaccine / immunotherapy,follows tier correction
+NCT07455617,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: ABO2102, mutant-KRAS mRNA vaccine (registry description)"
+NCT07455617,target_class,Not RAS-directed,RAS vaccine / immunotherapy,follows tier correction
+NCT06707896,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: TCR1020-CD8, mutant-KRAS TCR T cells (registry description)"
+NCT06707896,target_class,Not RAS-directed,RAS vaccine / immunotherapy,follows tier correction
+NCT07594067,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: TCR1188-ABC, mutant-KRAS TCR T cells (registry description)"
+NCT07594067,target_class,Not RAS-directed,RAS vaccine / immunotherapy,follows tier correction
+NCT07342738,ras_tier,RAS-biomarker-selected,RAS-targeted,RAS-directed agent not in the name list: KRAS-mutation TCR-T (registry description)
+NCT07342738,target_class,Not RAS-directed,RAS vaccine / immunotherapy,follows tier correction
+NCT06496373,ras_tier,RAS-biomarker-selected,RAS-targeted,RAS-directed agent not in the name list: fixed neoantigen mRNA vaccine encoding KRAS G12D/G12V/G12R (registry description)
+NCT06496373,target_class,Not RAS-directed,RAS vaccine / immunotherapy,follows tier correction
+NCT06105021,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: AFNT-211, KRAS G12V TCR-T (registry description)"
+NCT06105021,target_class,Not RAS-directed,RAS vaccine / immunotherapy,follows tier correction
+NCT07650357,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not in the name list: CLSP-5282, KRAS G12V T-cell engager (registry description)"
+NCT07650357,target_class,Not RAS-directed,RAS vaccine / immunotherapy,follows tier correction
+NCT05954871,ras_tier,RAS-mentioned,RAS-regulator-targeted,GDC-1971 (migoprotafib) is a SHP2 inhibitor
+NCT05954871,target_class,Not RAS-directed,SHP2,follows tier correction

@@ -8,7 +8,7 @@ On behalf of all authors, I am pleased to submit our Review Article entitled "Ta
 
 **Why this review now**
 
-Over the past two years, direct RAS inhibition has moved from early-phase trials to phase III evidence across several tumour types. Earlier reviews were written before most of these randomised data were available and focused mainly on pretreated non-small cell lung cancer. Since then, the multi-RAS(ON) inhibitor daraxonrasib has roughly doubled median overall survival compared with chemotherapy in previously treated pancreatic cancer, divarasib has improved overall survival over first-generation KRAS G12C inhibitors in non-small cell lung cancer, and adagrasib plus cetuximab failed to improve survival over chemotherapy in colorectal cancer, after which its US accelerated approval was withdrawn.
+Over the past two years, direct RAS inhibition has moved from early-phase trials to phase III evidence across several tumour types. Earlier reviews were written before most of these randomised data were available and focused mainly on pretreated non-small cell lung cancer. Since then, the multi-RAS(ON) inhibitor daraxonrasib has roughly doubled median overall survival compared with chemotherapy in previously treated pancreatic cancer, divarasib has improved overall survival over first-generation KRAS G12C inhibitors in non-small cell lung cancer, and adagrasib plus cetuximab failed to improve survival over chemotherapy in colorectal cancer, after which its US accelerated approval was withdrawn at the sponsor\'s request.
 
 **What the review contributes**
 
@@ -18,7 +18,7 @@ The review offers three things beyond a summary of trial endpoints:
 >
 > 2\. Biology behind the clinical results: we relate trial outcomes to mechanism (EGFR feedback in colorectal cancer, STK11 and KEAP1 co-mutations, and the acquired resistance alterations documented in patients) and point out where published data are easily over-interpreted.
 >
-> 3\. A reproducible trial landscape and outlook: we classify 1,182 ClinicalTrials.gov records, 358 of which test a directly RAS-targeted agent, with data and code in a public repository, and outline priorities: inhibitors for non-G12C alleles, first-line and perioperative trials, and combinations matched to resistance mechanisms.
+> 3\. A reproducible trial landscape and outlook: we classify 1,182 ClinicalTrials.gov records and, after record-level review, identify 367 trials of directly RAS-targeted agents in solid tumours, with data and code in a public repository, and outline priorities: inhibitors for non-G12C alleles, first-line and perioperative trials, and combinations matched to resistance mechanisms.
 
 **Declarations**
 

@@ -22,7 +22,9 @@ def style_kras(sel):
 
 cmd.load(os.path.join(D, '6OIM.pdb'), 's6oim'); cmd.remove('s6oim and (solvent or hydro)')
 cmd.load(os.path.join(D, '9BG6.cif'), 's9bg6'); cmd.remove('s9bg6 and (solvent or hydro)')
-cmd.remove('s9bg6 and chain B+D')   # keep one tri-complex: KRAS chain A + CypA chain C
+# The asymmetric unit holds two tri-complexes: KRAS A + CypA/drug D and KRAS B + CypA/drug C
+# (drug contacts KRAS switch I P34-I36 and switch II A59-M67; A-C and B-D are crystal contacts).
+cmd.remove('s9bg6 and chain B+C')   # keep one functional tri-complex: KRAS chain A + CypA chain D
 cmd.super('s9bg6 and chain A and name CA and resi 1-166', 's6oim and name CA and resi 1-166')
 cmd.hide('everything')
 
@@ -41,8 +43,8 @@ cmd.disable('s9bg6'); cmd.ray(1500, 1500); cmd.png(os.path.join(OUT, '_fig1a_6OI
 # panel b (same view)
 cmd.disable('s6oim'); cmd.enable('s9bg6'); cmd.hide('everything', 's9bg6')
 style_kras('s9bg6 and chain A and polymer')
-cmd.show('cartoon', 's9bg6 and chain C and polymer'); cmd.color('c_cypa', 's9bg6 and chain C and polymer')
-cmd.show('surface', 's9bg6 and chain C and polymer'); cmd.set('transparency', 0.82); cmd.set('surface_color', 'c_cypa')
+cmd.show('cartoon', 's9bg6 and chain D and polymer'); cmd.color('c_cypa', 's9bg6 and chain D and polymer')
+cmd.show('surface', 's9bg6 and chain D and polymer'); cmd.set('transparency', 0.82); cmd.set('surface_color', 'c_cypa')
 cmd.show('sticks', 's9bg6 and resn A1AHB'); cmd.set('stick_radius', 0.34, 's9bg6 and resn A1AHB'); cmd.set('stick_transparency', 0); cmd.color('c_drug', 's9bg6 and resn A1AHB and elem C')
 cmd.show('sticks', 's9bg6 and resn GNP'); cmd.color('c_nuc', 's9bg6 and resn GNP and elem C')
 cmd.show('spheres', 's9bg6 and resn MG'); cmd.util.cnc('s9bg6')

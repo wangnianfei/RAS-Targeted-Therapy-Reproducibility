@@ -16,8 +16,8 @@ Data and code for every figure and table in the review submitted to *ESMO Open*.
 - RAS-pathway inhibitors improved the objective response rate in all seven phase III trials reviewed and progression-free survival (PFS) in six.
 - Overall survival (OS) was improved by divarasib over sotorasib or adagrasib in pretreated *KRAS* G12C NSCLC (Krascendo 1; HR 0.56, interim) and by daraxonrasib over chemotherapy in previously treated pancreatic cancer (RASolute 302; median 13.2 vs 6.7 months, HR 0.40, interim).
 - Sotorasib did not improve OS over docetaxel (CodeBreaK 200; HR 1.01), a comparison complicated by crossover; OS for adagrasib in KRYSTAL-12 was immature at the primary report.
-- In colorectal cancer, sotorasib plus panitumumab improved PFS in refractory disease (CodeBreaK 300), whereas adagrasib plus cetuximab did not improve PFS or OS over second-line chemotherapy (KRYSTAL-10); the US FDA withdrew that accelerated-approval indication on 1 September 2026.
-- Of 1,182 RAS-related interventional oncology trials on ClinicalTrials.gov, 358 test a directly RAS-targeted agent.
+- In colorectal cancer, sotorasib plus panitumumab improved PFS in refractory disease (CodeBreaK 300), whereas adagrasib plus cetuximab did not improve PFS or OS over second-line chemotherapy (KRYSTAL-10); that accelerated-approval indication was withdrawn at the sponsor's request on 1 September 2026.
+- Of 1,151 RAS-related interventional oncology trials on ClinicalTrials.gov retained after record-level review, 367 test a directly RAS-targeted agent in solid tumours.
 
 ## Figures and tables
 
@@ -27,7 +27,7 @@ Data and code for every figure and table in the review submitted to *ESMO Open*.
 | Figure 2 | RAS mutation prevalence in seven tumour types and KRAS allele spectrum in PDAC, CRC and NSCLC | [`02_Figure2_PanCancer_Landscape`](./02_Figure2_PanCancer_Landscape/) | `derive_figure2_data.py`, `run_figure2.R` | MSK-IMPACT via cBioPortal |
 | Table 1 | Design and outcomes of seven phase III trials | [`03_Table1_Pivotal_Phase3_RCTs`](./03_Table1_Pivotal_Phase3_RCTs/) | `build_table1.py` | Table extracted from the manuscript |
 | Figure 3 | Forest plots of PFS and OS hazard ratios in the seven trials | [`04_Figure3_Phase3_Efficacy_Discordance`](./04_Figure3_Phase3_Efficacy_Discordance/) | `run_figure3_forest.R` | `phase3_rct_outcomes.csv` (source per row) |
-| Figure 4 | The 358 directly RAS-targeted trials by phase, drug class and region | [`05_Figure4_Global_Trial_Landscape`](./05_Figure4_Global_Trial_Landscape/) | `run_figure4_trial_landscape.R` | `trials_1182.csv` |
+| Figure 4 | The 367 directly RAS-targeted trials in solid tumours by phase, drug class and region | [`05_Figure4_Global_Trial_Landscape`](./05_Figure4_Global_Trial_Landscape/) | `apply_classification_corrections.py`, `run_figure4_trial_landscape.R` | `trials_1182.csv` + `classification_corrections.csv` → `trials_curated.csv` |
 | Figure 5 | Acquired resistance to KRAS G12C inhibitors and matching strategies (schematic) | [`06_Figure5_Resistance_Networks`](./06_Figure5_Resistance_Networks/) | — (drawn in graphics software) | Awad et al. 2021; Amodio et al. 2020 |
 | Figure S1, Tables S1–S3 | Resistance classes × strategies; inhibitor landscape; regulatory approvals; resistance mechanisms | [`07_Supplementary_Material`](./07_Supplementary_Material/) | `run_figureS1_resistance_matrix.py`, `build_supplementary_tables.py` | `tableS1_*.csv`, `tableS3_*.csv` |
 
@@ -54,7 +54,7 @@ bash reproduce_all.sh                     # set PYTHON=/path/to/python to choose
 02_Figure2_PanCancer_Landscape/         Figure 2 (cBioPortal export, derived tables)
 03_Table1_Pivotal_Phase3_RCTs/          Table 1 (CSV and Markdown)
 04_Figure3_Phase3_Efficacy_Discordance/ Figure 3 (forest plots)
-05_Figure4_Global_Trial_Landscape/      Figure 4 (1,182-trial dataset, harvest/curation scripts)
+05_Figure4_Global_Trial_Landscape/      Figure 4 (trial dataset, curation, record-level corrections)
 06_Figure5_Resistance_Networks/         Figure 5 (schematic)
 07_Supplementary_Material/              Figure S1, Tables S1–S3, Supplementary Appendix
 manuscript/                             Submitted manuscript, cover letter, highlights
