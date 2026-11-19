@@ -4,13 +4,42 @@ authors:
   - family-names: "Wang"
     given-names: "Nianfei"
     orcid: "https://orcid.org/0000-0002-1825-0097"
-title: "RAS-Directed Therapy in Solid Tumors: Chemistry, Biology, and Clinical Evidence (Open Reproducibility Package)"
-version: 1.0.0
-date-released: 2026-11-16
+  - family-names: "Sheng"
+    given-names: "Chiyu"
+  - family-names: "Qi"
+    given-names: "Jian"
+  - family-names: "Shen"
+    given-names: "Shumin"
+  - family-names: "Wang"
+    given-names: "Shanghu"
+    orcid: "https://orcid.org/0000-0002-9905-182X"
+title: "RAS-targeted therapy in solid tumours: what the randomised trials establish and what they leave open"
+version: 2.0.0
+date-released: 2026-11-19
 url: "https://github.com/wangnianfei/RAS-Targeted-Therapy-Reproducibility"
 keywords:
-  - "RAS targeted therapy"
+  - "RAS-targeted therapy"
   - "KRAS inhibitors"
-  - "Randomized controlled trials"
-  - "Solid tumors"
-  - "Drug resistance mechanisms"
+  - "Randomised controlled trials"
+  - "Precision oncology"
+  - "Drug resistance"
+  - "ctDNA dynamics"
+  - "Pancreatic cancer"
+  - "Non-small cell lung cancer"
+  - "Colorectal cancer"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Wang"
+      given-names: "Nianfei"
+    - family-names: "Sheng"
+      given-names: "Chiyu"
+    - family-names: "Qi"
+      given-names: "Jian"
+    - family-names: "Shen"
+      given-names: "Shumin"
+    - family-names: "Wang"
+      given-names: "Shanghu"
+  title: "RAS-targeted therapy in solid tumours: what the randomised trials establish and what they leave open"
+  journal: "ESMO Open"
+  year: 2026

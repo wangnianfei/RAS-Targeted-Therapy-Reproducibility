@@ -1,32 +1,30 @@
 # Methodology, Data Sources, and Software Specifications
 # 《RAS靶向治疗综述》方法学、数据来源、检索策略与软件环境全景指南
 
-本综述旨在为全球肿瘤学同道提供一份客观、详实、可精确复现的 RAS 靶向治疗临床与转化研究全景指引。为践行国际最高学术透明度准则（Nature Portfolio, Cell Press, ESMO Open），本研究将所有图表的原始数据、分析流程、绘图脚本与高分辨率矢量图件全部开源公开。
+本综述旨在为全球肿瘤学同道提供一份客观、详实、可精确复现的 RAS 靶向治疗临床与转化研究全景指引。为践行国际最高学术透明度准则（Nature Portfolio, Cell Press, ESMO Open），本研究将论文中涉及的所有图表的原始数据、分析流程、绘图脚本与出版级高分辨率图件全部开源公开。
 
-本文档系统汇总全篇综述中**所有图表按论文出现顺序**的数据来源、检索策略、排除规则、数据截止日期及所使用的软件与计算环境。
+本文档系统汇总全篇投稿论文（ESMO Open Submission）中**所有 5 幅主图、1 张主表及补充附图附表**的数据来源、检索策略、排除规则、数据冻结截止日期及所使用的软件与计算环境。
 
 ---
 
-## 一、 图表全景方法学汇总表 (Methodology Matrix)
+## 一、 论文图表与方法学全景对照表 (Methodology Matrix)
 
-| 序号 / 编号 | 图表名称 | 对应正文章节 | 原始数据来源 (Data Source) | 数据检索策略与入选标准 | 数据截止日期 | 核心工具与软件版本 |
-|:---|:---|:---|:---|:---|:---|:---|
-| **图 1 (Figure 1)** | RAS信号网络与可干预节点 | Section 2.1 (P274) | 权威文献系统综述与 FDA/NMPA 靶点库 | 提取受体输入、GEF/GAP调控、5大效应通路及负反馈环路；标注获批与在研靶点 | 2026年11月18日 | Python 3.10+, Matplotlib 3.8.0, PIL 10.0+, rsvg-convert 2.58+ |
-| **图 2 (Figure 2)** | RAS突变的泛癌种分布 | Section 2.2 (P288) | MSK-IMPACT 泛癌种临床测序队列 (PMID: 28481359) | cBioPortal REST API v2 提取 10,945 例晚期实体瘤数据；严格限定非同义/非沉默点突变；分母为该癌种测序总样本数；单样本多突变计1次；排除样本数 <10 的肿瘤 | 队列冻结版本 (无后续更新) | Python 3.10+, Matplotlib 3.8.0, NumPy 1.26.0 |
-| **图 3 (Figure 3)** | 核苷酸状态与药物结合引起的构象位移 | Section 3.1 (P318) | RCSB Protein Data Bank (PDB): 4OBE, 5VQ2, 4LDJ, 6OIM | 提取高分辨率（≤2.2 Å）单体 Cα 坐标；基于核心 G-domain（残基 1–166，剔除 Switch I/II）进行最小二乘法三维刚体叠合；计算各残基 Cα 欧氏距离位移 | PDB 库沉积版本 | Python 3.10+, NumPy, Matplotlib, PyMOL 2.5.0 (600 dpi 光线追踪渲染) |
-| **表 1 (Table 1)** | RAS抑制剂分类、结合构象与研发阶段 | Section 3.2 (P415) | FDA Orange Book, NMPA CDE, EMA 公示, ClinicalTrials.gov, 药企年报 | 系统梳理四代代表性药物（第1代至第4代RAS抑制剂、降解剂及FTase抑制剂共12种）；提取靶点、构象、分期与监管状态 | 2026年11月18日 | Python 3.10+, Markdown, CSV, python-docx 1.1.2 |
-| **表 2 (Table 2)** | 靶向RAS通路的7项关键III期随机对照临床试验汇总 | Section 4.0 (P460) | PubMed, ClinicalTrials.gov, ASCO, ESMO, AACR, NEJM, Lancet, JCO | 检索式: `("RAS" OR "KRAS" OR "NRAS") AND ("Phase 3" OR "randomized") AND ("solid tumors" OR "NSCLC" OR "colorectal" OR "pancreatic" OR "melanoma")`；严格提取7项关键III期RCTs（CodeBreaK 200, KRYSTAL-12, Krascendo 1, CodeBreaK 300, KRYSTAL-10, RASolute 302, NEMO）的人群、样本量、对照组、交叉方案、随访、PFS、OS、ORR及≥3级AEs | 2026年11月18日 | Python 3.10+, Markdown, CSV, python-docx 1.1.2 |
-| **图 4 (Figure 4)** | RAS相关肿瘤试验全球格局 | Section 5.1 (P519) | ClinicalTrials.gov REST API v2 (`/api/v2/studies`) | 检索获得 3,210 条记录，经两轮人工独立双盲筛查：排除非肿瘤学适应证（如心血管RAAS系统 1,907 项、RASopathy 19 项、非肿瘤疾病 38 项）、非I–III期（54 项）、IV期（10 项），最终纳入 1,182 项临床试验；按靶向层级、分期、申办方及 72 国地理分布结构化归类 | 2026年11月18日快照 (检索执行: 2026-11-18) | R 4.3.0+, ggplot2 3.5.0, sf 1.0-16, rnaturalearth 1.0.1, circlize 0.4.16, grid, dplyr |
-| **图 5 (Figure 5)** | 耐药机制与联合策略的对应矩阵 | Section 5.2 (P543) | 顶刊耐药临床队列文献 (Awad 2021, Yaeger 2023, Bekaii-Saab 2024) | 双盲专家评阅提取法：提取 9 类耐药机制与 5 类干预逻辑的对应关系（直接有效、部分有效、无明显活性）；提取 NSCLC 单药与 CRC 双靶治疗后耐药基因变异检出率（45% vs 74%） | 2026年11月18日 | R 4.3.0+, ggplot2 3.5.0, grid, dplyr |
-| **附图 1 (Supp Fig 1)** | KRAS结构特征与同工型差异 | Supplementary | RCSB PDB (4OBE) 与 UniProt (P01116, P01111, P01112) | 全局两两比对算法（Match +1, Mismatch 0, Gap -1）；比对 G-domain (1–166) 与高变区 (HVR, 167–189) 残基差异；高亮碱性残基簇与脂质修饰位点 | 2026年11月18日 | Python 3.10+, PyMOL 2.5.0 |
-| **附图 2 (Supp Fig 2)** | RAS靶向药物研发阶段泳道图 | Supplementary | 60 种临床化合物库与 1,182 项试验关联库 | 归纳 6 大化学型在各临床阶段的分布泳道及突变等位基因覆盖度 | 2026年11月18日 | R 4.3.0+, ggplot2 3.5.0 |
-| **附图 3 (Supp Fig 3)** | 三种RAS基因的氨基酸位点突变图谱 | Supplementary | MSK-IMPACT 2017 队列 (10,945 例) | 统计 KRAS (1,670 突变)、NRAS (252 突变)、HRAS (101 突变) 密码子非同义突变频数与百分比 | 队列冻结版本 | Python 3.10+, Matplotlib 3.8.0 |
+| 论文编号 | 图表名称 | 对应正文章节 | 原始数据来源 (Data Source) | 数据检索策略与入选标准 | 数据截止日期 | 核心工具与软件环境 | 对应目录 |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| **图 1 (Figure 1)** | **RAS核苷酸循环与直接靶向抑制模式** | Section 2 | RCSB PDB: 4OBE, 5VQ2, 4LDJ, 6OIM | 提取高分辨率（≤2.2 Å）单体 Cα 坐标；基于核心 G-domain（残基 1–166）进行三维刚体叠合；计算各残基 Cα 欧氏距离位移；提取 4 大代际抑制剂构象特征 | PDB 沉积版 | Python 3.10+, NumPy, Matplotlib, PyMOL 2.5 (600 dpi 光线追踪表面) | `01_Figure1_Structural_Mechanisms/` |
+| **图 2 (Figure 2)** | **RAS突变的泛癌种图谱与共突变分层** | Section 3 | MSK-IMPACT 泛癌种临床测序队列 (10,945 例, PMID: 28481359) | cBioPortal REST API v2 提取晚期实体瘤数据；严格限定非同义/非沉默点突变；分母为该肿瘤测序总样本数；提炼 7 大肿瘤 prevalence、G>T 吸烟颠换指纹及 KP/KL/KEAP1/KC 亚型微环境与治疗 | 队列冻结版 | R 4.3+, ggplot2 3.5, patchwork, scales, ggtext | `02_Figure2_PanCancer_Landscape/` |
+| **表 1 (Table 1)** | **7项关键III期RCT方法学与临床终点汇总** | Section 4 | PubMed, ClinicalTrials.gov, ASCO, ESMO, AACR, NEJM, Lancet, JCO | 严格系统性提取 7 项关键 III 期 RCTs（CodeBreaK 200, KRYSTAL-12, Krascendo 1, CodeBreaK 300, KRYSTAL-10, RASolute 302, NEMO）的试验人群、样本量、对照组、交叉方案、随访时间、PFS、OS、ORR、≥3级AEs 及停药率 | 2026年11月18日 | Python 3.10+, Markdown, CSV, python-docx 1.1 | `03_Table1_Pivotal_Phase3_RCTs/` |
+| **图 3 (Figure 3)** | **III期RCT疗效综合与交叉用药元回归** | Section 4 | 7项关键III期RCT临床终点数据库 | 提取 PFS 与 OS 风险比（HR）及 95% 置信区间；构建以对照组后线交叉靶向用药比例为自变量、观察到的 OS HR 为因变量的定量线性元回归模型 ($R^2=0.88, p=0.005$) | 2026年11月18日 | R 4.3+, ggplot2, patchwork, ggrepel, scales | `04_Figure3_Phase3_Efficacy_Discordance/` |
+| **图 4 (Figure 4)** | **1,182项全球RAS临床试验全景图谱** | Section 5 | ClinicalTrials.gov REST API v2 (`/api/v2/studies`) | 检索获得 3,210 条原始记录，经两轮人工独立双盲筛查：排除心血管 RAAS（1,907 项）、RASopathy（19 项）、非恶性肿瘤（38 项）、非I–III期（54 项）、IV期（10 项），严格纳入 1,182 项试验；按分期漏斗、分子类型、单药 vs 联合及全球 72 国地理分布结构化归类 | 2026年11月18日快照 (检索执行: 2026-11-18) | R 4.3+, ggplot2, patchwork, dplyr, scales | `05_Figure4_Global_Trial_Landscape/` |
+| **图 5 (Figure 5)** | **获得性耐药分子网络与多维度联合策略** | Section 6 | 顶刊耐药临床队列文献 (Awad 2021, Yaeger 2023, Bekaii-Saab 2024, JCO 2025) | 梳理靶内 Switch-II 继发突变（Y96, H95, R68, A59）、上游 RTK 反馈扩增（MET/HER2/AXL/EGFR）、下游 MAPK 旁路（BRAF/CRAF/MEK1）、表型可塑性及液体活检 ctDNA 早期清除与提前预警窗口；保留完整胞外受体结构域 | 2026年11月18日 | Python 3.10+, ImageMagick 7.1, Lanczos 重采样, R Cairo PDF | `06_Figure5_Resistance_Networks/` |
+| **附图 S1 (Fig S1)** | **9种耐药机制与5大联合逻辑决策矩阵** | Supplementary Appendix | 配对组织与液体活检耐药队列 | 建立 9 类耐药变异与 5 大联合治疗逻辑（垂直通路、水平旁路、免疫调节、状态应激与动态 ctDNA 监测）的功能对应矩阵；对比 NSCLC 与 CRC 配对血浆与组织检出率 | 2026年11月18日 | Python 3.10+, Matplotlib, Cairo PDF, ImageMagick (500 DPI) | `07_Supplementary_Material/` |
+| **附表 S1–S3** | **四代抑制剂、全球批准案卷与耐药干预** | Supplementary Appendix | FDA Orange Book, EMA CHMP, NMPA CDE, PMDA 公示 | 梳理四代代表性药物结合构象与分期（表S1）；四大监管机构批准案卷与上市后确证性试验轨迹（表S2，含 KRYSTAL-10 撤销全记录）；耐药机制受累生化通路与前瞻性补救方案（表S3） | 2026年11月18日 | Python 3.10+, Markdown, CSV, python-docx | `07_Supplementary_Material/` |
 
 ---
 
 ## 二、 详细数据检索策略与方法学规范
 
-### 1. MSK-IMPACT 临床测序队列提取方法 (Figure 2 & Supp Fig 3)
+### 1. MSK-IMPACT 泛癌种临床测序队列提取方法 (Figure 2)
 - **数据来源**: 纪念斯隆-凯特琳癌症中心（MSK）前瞻性临床测序队列 `msk_impact_2017`（PMID: 28481359）。
 - **检索接口**: cBioPortal REST API v2。
 - **提取字段**: 样本编号 (`sample_id`)、癌种主类别 (`cancer_type`)、基因符号 (`Hugo_Symbol`)、氨基酸改变 (`HGVSp_Short`)、突变类型 (`Variant_Classification`) 及等位基因突变深度。
@@ -59,72 +57,19 @@
   - `Biomarker-selected` (639 项): RAS 突变或野生型状态作为入组筛选、分层或排除标准，但干预药物非直接针对 RAS 通路（如抗 EGFR 单抗限野生型入组、化疗/免疫分层研究）；
   - `RAS-mentioned` (51 项): 试验方案提及 RAS 但不属于上述三类。
 
-### 3. PDB 结构坐标提取与最小二乘拟合算法 (Figure 3 & Supp Fig 1)
-- **晶体学数据来源**: RCSB Protein Data Bank。
-- **纳入结构号**:
-  - PDB 4OBE: 野生型 KRAS-GDP 复合物晶体，高分辨率 1.24 Å；
-  - PDB 5VQ2: KRAS-GTP (GppNHp 类似物) 活性态晶体；
-  - PDB 4LDJ: KRAS(G12C)-GDP 载脂对照晶体；
-  - PDB 6OIM: KRAS(G12C)-Sotorasib (AMG 510) 共价复合物晶体（2.20 Å）。
-- **刚体三维空间叠合算法 (Kabsch 算法)**:
-  为精确衡量变构位移，避免高柔性环区的构象形变干扰全局对齐，对齐基准严格限定为**核心 G 结构域刚体骨架**：
-  $$\min_{R, \mathbf{t}} \sum_{i \in 	ext{Core}} \| R \mathbf{x}_{1,i} + \mathbf{t} - \mathbf{x}_{2,i} \|^2$$
-  其中 $	ext{Core} = \{ r \in [1, 166] \mid r 
-otin [25, 45] \cup [55, 76] \}$（剔除 Switch I 与 Switch II 区域）。
-  对齐后，计算全长各残基 Cα 欧氏距离位移：$d_i = \| R(\mathbf{x}_{1,i} - \mathbf{c}_1) + \mathbf{c}_2 - \mathbf{x}_{2,i} \|$。
-
-### 4. 关键 III 期 RCT 数据提取与交叉治疗稀释分析 (Table 2)
-- **文献与数据来源**: PubMed 数据库检索、ClinicalTrials.gov 官方终点更新、各大国际肿瘤学大会口头报告（ASCO, ESMO, AACR）及正式发表全文。
-- **检索式**: `("RAS" OR "KRAS" OR "NRAS") AND ("Phase 3" OR "randomized controlled trial") AND ("solid tumors" OR "NSCLC" OR "colorectal" OR "pancreatic" OR "melanoma")`。
-- **重点统计指标**: 意向治疗人群（ITT）样本量、对照组方案、方案允许交叉治疗比例、盲态独立中心评估（BICR）的中位 PFS 及风险比（HR, 95% CI, P值）、中位 OS 及风险比（HR, 95% CI, P值）、客观缓解率（ORR）及 $\ge$3 级不良事件（AEs）发生率。
-- **关于 OS 终点去偶联的方法学解读**:
-  在二线 NSCLC 试验中（CodeBreaK 200 与 KRYSTAL-12），PFS 与 ORR 均表现出统计学显著优效（HR 分别为 0.66 与 0.58），但 OS 曲线出现重合（HR 分别为 1.01 与 0.99）。方法学分析确认：对照组患者在疾病进展后接受交叉方案使用 G12C 抑制剂的比例分别达到 34% 与 39%，后续有效靶向治疗对对照组的生存期产生了显著延展效应，从而稀释了初始随机化分组的 OS 差异。相比之下，Krascendo 1 采用阳性对照（头对头比较 Divarasib 与 Sotorasib/Adagrasib）以及 RASolute 302（PDAC 严格禁止交叉治疗），均顺利实现了 PFS 与 OS 的双重显著获益（HR 分别为 0.56 与 0.40）。
-
-### 5. 耐药机制矩阵文献提取与双盲评定准则 (Figure 5)
-- **文献队列**: 国际公认的晚期 NSCLC 与 CRC 靶向后继发耐药大样本转化研究（Awad et al., NEJM 2021; Yaeger et al., NEJM 2023; Bekaii-Saab et al., Nat Med 2024）。
-- **双盲评定方法**:
-  由两名具有十年以上肿瘤分子生物学经验的副高级专家对 9 类耐药机制与 5 类前沿联合治疗策略进行交叉打分：
-  - **直接有效 (Direct)**: 具有明确的体内外前临床数据或早期临床试验读数，能特异性克服该耐药变异；
-  - **部分有效 (Partial)**: 仅在特定突变亚型或特定组织微环境中显示出抗肿瘤活性；
-  - **无明显活性/不对应 (None)**: 机制上无法阻断该变异或已有临床数据证明耐药。
-  初始评定一致率达到 96%，分歧项经复核原始论文中的体外激酶活化实验及细胞活力曲线后仲裁解决。
+### 3. III 期 RCT 元回归模型构建规范 (Figure 3)
+- **纳入研究**: 7 项完成并在经同行评议期刊发表或国际顶级肿瘤学术会议（ASCO/ESMO/AACR）正式报告的 III 期随机对照试验。
+- **终点参数**: 盲态独立中心阅片委员会（BICR）评估的无进展生存期（PFS）风险比（HR）、总生存期（OS）风险比及 95% 置信区间。
+- **交叉率定义**: 对照组患者疾病进展后实际交叉接受靶向药物治疗的比例（Effective Crossover Rate, %）。
+- **回归模型**: 采用加权普通最小二乘法（WLS），样本量平方根作为权重，检验交叉率与 OS HR 的线性相关性（$y = eta_0 + eta_1 x + \epsilon$）。结果证实二者具有高度显著正相关性（$R^2 = 0.88, p = 0.005$），解释了肺癌二线单药试验中 PFS 获益无法转化为 OS 获益的方法学根源。
 
 ---
 
-## 三、 计算环境与开源依赖包版本规范
+## 三、 出版级图像排版规范 (Artwork Production Standards)
 
-### 1. Python 运行环境
-- **Python**: 3.10.x / 3.11.x / 3.12.x / 3.14.x
-- **核心依赖包**:
-  - `matplotlib` >= 3.8.0（高分辨率矢量排版与图形渲染）
-  - `numpy` >= 1.26.0（矩阵计算与刚体空间拟合）
-  - `pillow` (PIL) >= 10.0.0（图像高保真处理）
-  - `requests` >= 2.31.0（API 检索与下载）
-  - `python-docx` >= 1.1.2（稿件自动化排版与样式渲染）
-
-### 2. R 运行环境
-- **R**: >= 4.3.0
-- **核心 CRAN / Bioconductor 依赖包**:
-  - `ggplot2` >= 3.5.0
-  - `sf` >= 1.0-16
-  - `rnaturalearth` >= 1.0.1
-  - `circlize` >= 0.4.16
-  - `dplyr` >= 1.1.4
-  - `tidyr` >= 1.3.1
-  - `cowplot` >= 1.1.3
-  - `scales` >= 1.3.0
-
-### 3. 结构生物学与矢量渲染辅助工具
-- **PyMOL**: 2.5.0+（用于高分辨率光线追踪分子表面渲染，脚本在 `code/render_panelC_pymol.pml`）
-- **rsvg-convert**: 2.58+（用于 SVG 矢量图像与 PDF 印刷版格式转换）
-- **Headless Google Chrome**: 用于将高精度 SVG 矢量以 A4 物理毫米尺寸无损打印为嵌入字体矢量的 PDF。
-
----
-
-## 四、 数据可用性与代码共享声明 (Data & Code Availability)
-
-本研究所有数据与代码均完全开源，无任何专有私有算法封装：
-- **代码仓库**: [GitHub 托管公开仓库]
-- **数据许可协议**: Creative Commons Attribution 4.0 International (CC BY 4.0)
-- **代码许可协议**: MIT License
-- **学术引用规范**: 如在后续研究中复用本仓库的数据、脚本或矢量图件，请按 `CITATION.cff` 规范标明引用来源。
+1. **版心尺寸标准**: 全文所有主图（Fig 1–5）与附图（Fig S1）统一采用国际顶级期刊（ESMO Open / Elsevier）标准的 **180.0 mm 双栏通栏宽（Double-Column Width）** 设计。
+2. **字体与排版统一**: 全局统一为 TrueType Arial 字体；面板标签统一采用大写粗体（**A**, **B**, **C**），字号 8.5–9.5 pt；正文标注统一为 6.2–7.2 pt；保证全图 **零文字重叠碰撞（Zero Text Collision）**。
+3. **输出格式与分辨率**:
+   - **500 DPI TIFF**: 采用 LZW 无损压缩算法，严格保证印刷级出版精度（像素宽 3,543 px）；
+   - **纯矢量 Cairo PDF / EPS**: 保持所有文本为纯字符状态（非轮廓化），方便编辑排版与检索；
+   - **高清晰 PNG**: 方便网页端快速审阅与学术交流。

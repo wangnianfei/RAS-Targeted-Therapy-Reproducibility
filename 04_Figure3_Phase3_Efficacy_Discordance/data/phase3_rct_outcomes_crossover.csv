@@ -1,0 +1,8 @@
+trial_id,disease,n_pts,pfs_hr,pfs_low,pfs_high,pfs_pval,os_hr,os_low,os_high,os_pval,crossover_pct,cancer_type
+CodeBreaK 200,NSCLC (2L+),345,0.66,0.51,0.86,p = 0.002,1.01,0.77,1.33,p = 0.95,33.9,NSCLC
+KRYSTAL-12,NSCLC (2L+),453,0.58,0.45,0.76,p < 0.0001,0.98,0.78,1.23,p = 0.85 (NS),35.0,NSCLC
+Krascendo 1,NSCLC (1-3L),338,0.58,0.44,0.76,p < 0.001,0.56,0.41,0.78,p < 0.001,0.0,NSCLC
+CodeBreaK 300,mCRC (3L+),160,0.49,0.30,0.80,p = 0.006,0.70,0.41,1.18,p = 0.20,31.5,CRC
+KRYSTAL-10,mCRC (2L),461,0.89,0.71,1.13,p = 0.32,0.83,0.67,1.03,p = 0.09,30.0,CRC
+RASolute 302,mPDAC (2L+),500,0.49,0.38,0.64,p < 0.0001,0.40,0.30,0.53,p < 0.0001,4.0,PDAC
+NEMO (MEKi),Melanoma (1-2L),402,0.62,0.47,0.80,p < 0.001,1.00,0.75,1.33,p = 0.999,0.0,Melanoma
