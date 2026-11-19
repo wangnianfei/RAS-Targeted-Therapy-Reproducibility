@@ -39,4 +39,4 @@ adagrasib 耐药的 38 例患者中，17 例检出可能机制：开关 II 口�
 
 ---
 
-**开源复现**：图 1 由 PDB 结构经 PyMOL 渲染，图 2 来自 MSK-IMPACT 数据，图 3–5 与附图 S1 均由脚本生成，`reproduce_all.sh` 一键复现。所有图件均非 AI 生成。
+**开源复现**：图 1 由 PDB 结构经 PyMOL 渲染，图 2 来自 MSK-IMPACT 数据，图 3、图 4 与附图 S1 由脚本生成，`reproduce_all.sh` 一键复现；图 5 为作者绘制的示意图，借助 AI 工具修改。

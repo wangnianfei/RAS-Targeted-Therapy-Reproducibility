@@ -27,7 +27,7 @@
 | 图 5 | KRAS G12C 抑制剂获得性耐药与对应策略示意图 | `06_Figure5_Resistance_Networks` |
 | 附图 S1、附表 S1–S3 | 耐药类别×策略矩阵；抑制剂一览；监管审批；耐药机制 | `07_Supplementary_Material` |
 
-所有图件均由脚本根据数据或结构坐标绘制，没有 AI 生成的图像。各目录 README 写明数据来源与细节，方法见 [`METHODOLOGY.md`](./METHODOLOGY.md)。
+图 1–4 与附图 S1 由脚本根据数据或结构坐标绘制；图 5 为作者用绘图软件绘制、借助 AI 工具修改的示意图，不由代码生成。各目录 README 写明数据来源与细节，方法见 [`METHODOLOGY.md`](./METHODOLOGY.md)。
 
 ## 复现
 
