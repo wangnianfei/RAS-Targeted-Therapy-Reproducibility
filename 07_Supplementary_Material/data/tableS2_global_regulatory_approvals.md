@@ -31,7 +31,7 @@
 <p>PMDA (2022-01-20)</p></td>
 <td><p>Accelerated / conditional approval (single-arm phase II CodeBreaK 100, ORR 37.1% [8])</p></td>
 <td><p>Phase III CodeBreaK 200: PFS HR 0.66 (P=0.0017); OS HR 1.01 (95% CI 0.77-1.33; confounded by crossover) [60,66]</p></td>
-<td><p>FDA ODAC 10:2 vote and CRL (2023-12) rejecting regular approval; EMA conditional marketing authorisation renewed (2024-11); PMDA maintained approval [66,80]</p></td>
+<td><p>FDA ODAC 10:2 vote (2023-10) [S1,S2] and CRL (2023-12) rejecting regular approval [S3]; EMA conditional marketing authorisation renewed (2024-11); PMDA maintained approval [66,80]</p></td>
 </tr>
 <tr>
 <td><p><strong>adagrasib</strong></p>
@@ -66,7 +66,7 @@
 <td><p>Advanced <em>KRAS</em> G12C NSCLC, ≥2L</p></td>
 <td><p>NMPA (China, 2024-11-08)</p></td>
 <td><p>Conditional approval (priority review)</p></td>
-<td><p>Pivotal single-arm phase II (n=123): IRC ORR 50.0%, median PFS 9.1 mo [81]</p></td>
+<td><p>Pivotal single-arm phase II (n=123): IRC ORR 50% (61/123) [81]</p></td>
 <td><p>Active conditional approval; confirmatory randomised phase III trial ongoing</p></td>
 </tr>
 <tr>
@@ -84,7 +84,7 @@
 <td><p>Recurrent <em>KRAS</em>-mutant low-grade serous ovarian cancer, ≥2L</p></td>
 <td><p>FDA (2025-05-08)</p></td>
 <td><p>Accelerated approval (RAF/MEK clamp + FAK inhibitor)</p></td>
-<td><p>Single-arm phase II RAMP 201: ORR 44% in <em>KRAS</em>-mutant cohort [S1]</p></td>
+<td><p>Single-arm phase II RAMP 201: ORR 44% in <em>KRAS</em>-mutant cohort [S4]</p></td>
 <td><p>Active accelerated approval; confirmatory phase III RAMP 301 ongoing</p></td>
 </tr>
 <tr>
@@ -92,7 +92,7 @@
 <p>(RMC-6236)</p></td>
 <td><p>Metastatic PDAC, ≥2L (FDA, EC) or unfit for multi-agent chemotherapy (FDA)</p></td>
 <td><p>FDA (2026-08-26, regular);</p>
-<p>EC (November 2026) [S2,S3]</p></td>
+<p>EC (November 2026) [S5,S6]</p></td>
 <td><p>Regular approval (first regular approval for multi-RAS inhibitor)</p></td>
 <td><p>Pivotal phase III RASolute 302 (N=500; 248 vs 252), first interim analysis: median OS 13.2 vs 6.7 mo (HR 0.40, 95% CI 0.30–0.53, P&lt;0.001; <em>RAS</em> G12 population 13.2 vs 6.6 mo, HR 0.40); median PFS 7.2 vs 3.6 mo (HR 0.49, 95% CI 0.38–0.64, P&lt;0.001; <em>RAS</em> G12 population HR 0.45); ORR 31.6% vs 11.2% [59]</p></td>
 <td><p>Active regular approval (FDA); EU marketing authorisation (EC, November 2026) after a positive CHMP opinion (October 2026); establishes multi-RAS tri-complex inhibition as standard of care in PDAC</p></td>
@@ -110,4 +110,4 @@
 </tbody>
 </table>
 
-*Note: Regulatory dossiers and clinical trial registry status updated through 18 November 2026. Regulatory categories: FDA regular approval reflects verified clinical benefit; accelerated approval (FDA) and conditional approval (EMA, NMPA, PMDA) require post-marketing confirmatory evidence. Of clinical and regulatory significance, adagrasib plus cetuximab was granted FDA accelerated approval on June 21, 2024 for pretreated KRAS G12C metastatic colorectal cancer, but this indication was withdrawn at the sponsor\'s request on September 1, 2026, after the randomised phase III KRYSTAL-10 trial failed to confirm superiority over second-line chemotherapy (FOLFIRI or mFOLFOX6 with or without a VEGF/VEGFR inhibitor) for either PFS or OS. Numbers in square brackets refer to the reference list of the main article; S-numbers refer to the supplementary references at the end of this appendix. Abbreviations: CHMP, Committee for Medicinal Products for Human Use; EC, European Commission; CRL, Complete Response Letter; EMA, European Medicines Agency; FDA, US Food and Drug Administration; HR, hazard ratio; IRC, independent review committee; IRRC, independent review and reporting committee; mCRC, metastatic colorectal cancer; NMPA, National Medical Products Administration (China); NSCLC, non-small cell lung cancer; ODAC, Oncologic Drugs Advisory Committee; ORR, objective response rate; OS, overall survival; PDAC, pancreatic ductal adenocarcinoma; PFS, progression-free survival; PMDA, Pharmaceuticals and Medical Devices Agency (Japan).*
+*Note: Regulatory dossiers and clinical trial registry status updated through 18 November 2026. Regulatory categories: FDA regular approval reflects verified clinical benefit; accelerated approval (FDA) and conditional approval (EMA, NMPA, PMDA) require post-marketing confirmatory evidence. Of clinical and regulatory significance, adagrasib plus cetuximab was granted FDA accelerated approval on 21 June 2024 for pretreated KRAS G12C metastatic colorectal cancer, but this indication was withdrawn at the sponsor\'s request on 1 September 2026, after the randomised phase III KRYSTAL-10 trial failed to confirm superiority over second-line chemotherapy (FOLFIRI or mFOLFOX6 with or without a VEGF/VEGFR inhibitor) for either PFS or OS. Numbers in square brackets refer to the reference list of the main article; S-numbers refer to the supplementary references at the end of this appendix. Abbreviations: CHMP, Committee for Medicinal Products for Human Use; EC, European Commission; CRL, Complete Response Letter; EMA, European Medicines Agency; FDA, US Food and Drug Administration; HR, hazard ratio; IRC, independent review committee; IRRC, independent review and reporting committee; mCRC, metastatic colorectal cancer; NMPA, National Medical Products Administration (China); NSCLC, non-small cell lung cancer; ODAC, Oncologic Drugs Advisory Committee; ORR, objective response rate; OS, overall survival; PDAC, pancreatic ductal adenocarcinoma; PFS, progression-free survival; PMDA, Pharmaceuticals and Medical Devices Agency (Japan).*

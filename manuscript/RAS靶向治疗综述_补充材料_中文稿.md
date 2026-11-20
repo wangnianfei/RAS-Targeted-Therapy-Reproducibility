@@ -188,7 +188,7 @@
 <p>PMDA (2022-01-20)</p></td>
 <td><p>加速批准／有条件批准（单臂 II 期 CodeBreaK 100，ORR 37.1% [8]）</p></td>
 <td><p>III 期 CodeBreaK 200：PFS HR 0.66（P=0.0017）；OS HR 1.01（95% CI 0.77-1.33；受交叉用药干扰）[60,66]</p></td>
-<td><p>FDA ODAC 以 10:2 投票，FDA 发出完全回复函（2023-12），未予完全批准；EMA 有条件上市许可续期（2024-11）；PMDA 维持批准 [66,80]</p></td>
+<td><p>FDA ODAC 以 10:2 投票（2023-10）[S1,S2]，FDA 发出完全回复函（2023-12），未予完全批准 [S3]；EMA 有条件上市许可续期（2024-11）；PMDA 维持批准 [66,80]</p></td>
 </tr>
 <tr>
 <td><p><strong>adagrasib</strong></p>
@@ -223,7 +223,7 @@
 <td><p>晚期 <em>KRAS</em> G12C 突变 NSCLC，≥2L</p></td>
 <td><p>NMPA（中国，2024-11-08）</p></td>
 <td><p>有条件批准（优先审评）</p></td>
-<td><p>关键单臂 II 期（n=123）：IRC 评估 ORR 50.0%，中位 PFS 9.1 个月 [81]</p></td>
+<td><p>关键单臂 II 期（n=123）：IRC 评估 ORR 50%（61/123）[81]</p></td>
 <td><p>有条件批准有效；确证性随机 III 期试验进行中</p></td>
 </tr>
 <tr>
@@ -241,7 +241,7 @@
 <td><p>复发性 <em>KRAS</em> 突变低级别浆液性卵巢癌，≥2L</p></td>
 <td><p>FDA (2025-05-08)</p></td>
 <td><p>加速批准（RAF/MEK 钳夹抑制剂 + FAK 抑制剂）</p></td>
-<td><p>单臂 II 期 RAMP 201：<em>KRAS</em> 突变队列 ORR 44% [S1]</p></td>
+<td><p>单臂 II 期 RAMP 201：<em>KRAS</em> 突变队列 ORR 44% [S4]</p></td>
 <td><p>加速批准有效；确证性 III 期 RAMP 301 进行中</p></td>
 </tr>
 <tr>
@@ -249,7 +249,7 @@
 <p>(RMC-6236)</p></td>
 <td><p>转移性 PDAC，≥2L（FDA、EC）或不适合多药联合化疗（FDA）</p></td>
 <td><p>FDA（2026-08-26，常规批准）；</p>
-<p>EC（2026 年 11 月）[S2,S3]</p></td>
+<p>EC（2026 年 11 月）[S5,S6]</p></td>
 <td><p>常规批准（multi-RAS 抑制剂的首个常规批准）</p></td>
 <td><p>关键 III 期 RASolute 302（N=500；248 vs 252），首次期中分析：中位 OS 13.2 vs 6.7 个月（HR 0.40，95% CI 0.30–0.53，P&lt;0.001；<em>RAS</em> G12 人群 13.2 vs 6.6 个月，HR 0.40）；中位 PFS 7.2 vs 3.6 个月（HR 0.49，95% CI 0.38–0.64，P&lt;0.001；<em>RAS</em> G12 人群 HR 0.45）；ORR 31.6% vs 11.2% [59]</p></td>
 <td><p>常规批准有效（FDA）；经 CHMP 积极意见（2026 年 10 月）后获欧盟上市许可（EC，2026 年 11 月）；确立 multi-RAS 三元复合物抑制为 PDAC 的标准治疗</p></td>
@@ -287,11 +287,11 @@
 
 <img src="media/image1.png" style="width:5.7in;height:3.32379in" />
 
-**a，** 定性矩阵，将附表 S3 的七类耐药机制（行）与六种联合或换药策略（列）对应。深色单元格为附表 S3 中各类别所列策略；斜线单元格为正文第 5.3 节讨论的另一策略。该矩阵是对本综述的归纳，不代表新数据。**b，** adagrasib 单药治疗后具有推定耐药机制的患者（n = 38；27 例 NSCLC、10 例结直肠癌、1 例阑尾癌）：至少一种机制 17/38（45%）；多种机制同时存在 7/38（18%）；鳞状转化见于 10 例在进展时有重复组织活检的患者中的 2 例（其中 9 例为 NSCLC）（Awad et al., N Engl J Med 2021;384:2382–2393）。
+**a，** 定性矩阵，将附表 S3 的七类耐药机制（行）与六种联合或换药策略（列）对应。深色单元格为附表 S3 中各类别所列策略；斜线单元格为正文第 5.3 节讨论的另一策略。该矩阵是对本综述的归纳，不代表新数据。**b，** adagrasib 单药治疗后具有推定耐药机制的患者（n = 38；27 例 NSCLC、10 例结直肠癌、1 例阑尾癌）：至少一种机制 17/38（45%）；多种机制同时存在 7/38（18%）；鳞状转化见于 10 例在进展时有重复组织活检的患者中的 2 例（其中 9 例为 NSCLC）\[50\]。
 
 **补充方法与结果 \| 直接靶向 RAS 药物的注册临床试验（正文第 5.1 节）**
 
-我们检索 ClinicalTrials.gov（检索截止日期：2026 年 11 月 18 日）中提及 *RAS* 基因或 RAS 靶向药物的干预性肿瘤试验，共获得 1,182 条首次登记于 2000—2026 年的记录。每条记录先按明确规则判定其与 RAS 的关系，再分两轮对照注册的干预措施描述逐条复核；注册信息未说明机制时，参考申办方或 NCI 药物词典的描述。复核剔除 31 条并非在癌症患者中开展的肿瘤试验（23 项健康受试者或器官功能不全受试者的药代动力学研究，8 项非肿瘤研究，包括因缩写 RAS 被检出的肾素–血管紧张素系统研究），并更正 80 项试验的分类；全部判定及理由列于研究代码库。仅当至少一项注册干预措施直接作用于 RAS 蛋白或其转录本时，试验才计为直接靶向 RAS：包括等位基因选择性、多选择性或 pan-RAS 抑制剂与降解剂、RAS 靶向偶联药物、RAS 小干扰 RNA，以及针对突变 RAS 的疫苗、T 细胞受体疗法或 T 细胞衔接器。作用于 RAS 上游（SHP2、SOS1 或法尼基转移酶）或下游（RAF、MEK 或 ERK）的抑制剂试验，除非同时登记了直接 RAS 抑制剂，否则不计为靶向 RAS；17 项多抗原疫苗方案试验（RAS 抗原仅为多个组分之一，且未按 *RAS* 突变筛选患者）亦不计入。其余 1,151 项试验中，355 项（30.8%）检验直接靶向 RAS 的药物，129 项检验 SHP2、SOS1 或法尼基转移酶等 RAS 调控因子的抑制剂，605 项按 *RAS* 状态筛选或分层患者但未使用 RAS 靶向药物，62 项仅提及 RAS。以下分析针对实体瘤患者中的 353 项直接靶向 RAS 的试验；2 项在血液系统恶性肿瘤患者中开展的疫苗试验被排除，且没有任何直接靶向 RAS 的试验同时纳入实体瘤与血液系统恶性肿瘤患者。其中 136 项（38.5%）为 1 期，88 项（24.9%）为 1/2 期，86 项（24.4%）为 2 期，43 项（12.2%）为 2/3 期或 3 期（附图 S2a）。KRAS G12C 抑制剂是最常见的药物类别（201 项），其次为 KRAS G12D 抑制剂（60 项）、RAS 疫苗、T 细胞受体疗法或 T 细胞衔接器（40 项）以及 multi-RAS(ON) 或 pan-RAS 抑制剂（39 项）（附图 S2b）。美国有至少一个中心的试验 198 项（56.1%），中国大陆 152 项（43.1%）；分别有 94 项和 110 项试验完全在这两个国家内开展。按地区划分，202 项试验在北美设有中心，188 项在东亚，93 项在欧洲，80 项在其他地区；119 项（33.7%）为多国试验（附图 S2c）。一项试验可登记多种肿瘤类型：组织学不限的晚期实体瘤见于 153 项（43.3%），非小细胞肺癌 151 项（42.8%），胰腺癌 104 项（29.5%），结直肠癌 82 项（23.2%）。
+我们检索 ClinicalTrials.gov（检索截止日期：2026 年 11 月 18 日）中提及 *RAS* 基因或 RAS 靶向药物的干预性肿瘤试验，共获得 1,182 条首次登记于 2000—2026 年的记录。每条记录先按明确规则判定其与 RAS 的关系，再分两轮对照注册的干预措施描述逐条复核；注册信息未说明机制时，参考申办方或 NCI 药物词典的描述。复核剔除 31 条并非在癌症患者中开展的肿瘤试验（23 项健康受试者或器官功能不全受试者的药代动力学研究，8 项非肿瘤研究，包括因缩写 RAS 被检出的肾素–血管紧张素系统研究），并更正 80 项试验的分类；全部判定及理由列于研究代码库。仅当至少一项注册干预措施直接作用于 RAS 蛋白或其转录本时，试验才计为直接靶向 RAS：包括等位基因选择性、多选择性或 pan-RAS 抑制剂与降解剂、RAS 靶向偶联药物、RAS 小干扰 RNA，以及针对突变 RAS 的疫苗、T 细胞受体疗法或 T 细胞衔接器。作用于 RAS 上游（SHP2、SOS1 或法尼基转移酶）或下游（RAF、MEK 或 ERK）的抑制剂试验，除非同时登记了直接 RAS 抑制剂，否则不计为靶向 RAS；17 项多抗原疫苗方案试验（RAS 抗原仅为多个组分之一，且未按 *RAS* 突变筛选患者）亦不计入。其余 1,151 项试验中，355 项（30.8%）检验直接靶向 RAS 的药物，129 项检验 SHP2、SOS1 或法尼基转移酶等 RAS 调控因子的抑制剂，605 项按 *RAS* 状态筛选或分层患者但未使用 RAS 靶向药物，62 项仅提及 RAS。以下分析针对实体瘤患者中的 353 项直接靶向 RAS 的试验；2 项在血液系统恶性肿瘤患者中开展的疫苗试验被排除，且没有任何直接靶向 RAS 的试验同时纳入实体瘤与血液系统恶性肿瘤患者。其中 136 项（38.5%）为 1 期，88 项（24.9%）为 1/2 期，86 项（24.4%）为 2 期，43 项（12.2%）为 2/3 期或 3 期（附图 S2a）。KRAS G12C 抑制剂是最常见的药物类别（201 项），其次为 KRAS G12D 抑制剂（60 项）、RAS 疫苗、T 细胞受体疗法或 T 细胞衔接器（40 项）以及 multi-RAS(ON) 或 pan-RAS 抑制剂（39 项）（附图 S2b）。美国有至少一个中心的试验 198 项（56.1%），中国大陆 152 项（43.1%）；分别有 94 项和 110 项试验完全在这两个国家内开展。试验中心分布于 65 个国家或地区。按地区划分，202 项试验在北美设有中心，188 项在东亚，93 项在欧洲，80 项在其他地区；119 项（33.7%）为多国试验（附图 S2c）。一项试验可登记多种肿瘤类型：组织学不限的晚期实体瘤见于 153 项（43.3%），非小细胞肺癌 151 项（42.8%），胰腺癌 104 项（29.5%），结直肠癌 82 项（23.2%）。
 
 自 2013 年开关 II 口袋被描述以来 \[5\]，注册活动已向直接 RAS 抑制剂转移。在首次登记于 2018 年以前的 RAS 相关记录中，实体瘤直接靶向 RAS 试验占 484 项中的 11 项（2.3%），2021—2023 年占 210 项中的 107 项（51.0%），2024—2026 年占 313 项中的 212 项（67.7%）；353 项直接靶向 RAS 的试验中有 319 项（90.4%）首次登记于 2021 年或之后。这些试验大多数（242 项；68.6%）登记了一种以上干预措施。由于注册的干预措施包括对照组药物，该比例高估了检验联合方案的试验数量。
 
@@ -303,12 +303,18 @@
 
 在从 ClinicalTrials.gov 检索并经逐条复核保留的 1,151 项 RAS 相关干预性肿瘤试验中，图中展示实体瘤患者中 353 项直接靶向 RAS 的试验；按 *RAS* 状态筛选患者但未使用 RAS 靶向药物的试验（n = 605）、靶向 SHP2、SOS1 或法尼基转移酶等 RAS 调控因子的试验（n = 129）、仅提及 RAS 的试验（n = 62），以及 2 项在血液系统恶性肿瘤中开展的 RAS 靶向试验均被排除。**a，** 按分期统计的试验（1 期含 4 项早期 1 期试验；2/3 期或 3 期一栏含 3 项 2/3 期试验）。**b，** 按主要药物类别统计的试验，并按是否登记一种以上干预措施拆分（注册干预措施可能包括对照组药物，因此该拆分不等于联合方案的数量）；涉及多个类别的试验按 KRAS G12C \> KRAS G12D \> multi-RAS(ON)/pan-RAS \> 疫苗/TCR-T 的顺序归类，13 项其他或未明确的 RAS 靶向药物试验未显示。**c，** 各国家或地区至少设有一个中心的试验数（地图）及试验最多的 12 个国家或地区；一项试验在其设有中心的每个国家或地区各计一次，20 项试验未列出中心。地区合计中，一项试验在其设有中心的每个地区各计一次（104 项试验跨越多个地区）。北美包括美国、加拿大和波多黎各；东亚包括中国大陆、日本、韩国、中国台湾和中国香港；欧洲包括土耳其、俄罗斯、乌克兰和格鲁吉亚；其他地区包括大洋洲、拉丁美洲、南亚与东南亚、中东和非洲。数据与代码见研究代码库。
 
-RAS(ON)，GTP 结合的活性 RAS；SHP2，含 Src 同源区 2 结构域的磷酸酶 2；SOS1，Son of Sevenless 同源物 1；TCR-T，T 细胞受体工程化 T 细胞（该栏另含 1 种 T 细胞衔接器）。ClinicalTrials.gov 检索截止日期：2026 年 11 月 18 日。
+RAS(ON)，GTP 结合的活性 RAS；SHP2，含 Src 同源 2 结构域的蛋白酪氨酸磷酸酶 2；SOS1，Son of Sevenless 同源物 1；TCR-T，T 细胞受体工程化 T 细胞（该栏另含 1 种 T 细胞衔接器）。ClinicalTrials.gov 检索截止日期：2026 年 11 月 18 日。
 
 **补充参考文献**
 
-S1. Banerjee SN, Van Nieuwenhuysen E, Aghajanian C, D'Hondt V, Monk BJ, Clamp A, et al. Efficacy and safety of avutometinib ± defactinib in recurrent low-grade serous ovarian cancer: primary analysis of ENGOT-OV60/GOG-3052/RAMP 201. J Clin Oncol. 2025;43(25):2782-2792. https://doi.org/10.1200/JCO-25-00112
+S1. US Food and Drug Administration. Sotorasib for KRAS G12C mutated locally advanced or metastatic nonsquamous non-small cell lung cancer: FDA presentation to the Oncologic Drugs Advisory Committee, 5 October 2023. Silver Spring (MD): FDA; 2023. Available at: https://www.fda.gov/media/172756/download (accessed 20 November 2026)
 
-S2. European Medicines Agency. Rasonque (daraxonrasib): CHMP positive opinion, 15 October 2026. Amsterdam: EMA; 2026. Available at: https://www.ema.europa.eu/en/medicines/human/EPAR/rasonque (accessed 20 November 2026)
+S2. Ryan C. FDA panel votes that phase 3 PFS data for sotorasib in KRAS G12C+ advanced NSCLC cannot be reliably interpreted. OncLive. 5 October 2023. Available at: https://www.onclive.com/view/fda-panel-votes-that-phase-3-pfs-data-for-sotorasib-in-kras-g12c-advanced-nsclc-cannot-be-reliably-interpreted (accessed 20 November 2026)
 
-S3. Kret R. Daraxonrasib gains EC approval in previously treated metastatic pancreatic cancer. OncLive. 16 November 2026. Available at: https://www.onclive.com/view/daraxonrasib-gains-ec-approval-in-previously-treated-metastatic-pancreatic-cancer (accessed 20 November 2026)
+S3. Amgen. Amgen provides regulatory update on status of LUMAKRAS (sotorasib) \[press release\]. Thousand Oaks (CA): Amgen; 26 December 2023. Available at: https://www.biospace.com/amgen-provides-regulatory-update-on-status-of-lumakras-sotorasib (accessed 20 November 2026)
+
+S4. Banerjee SN, Van Nieuwenhuysen E, Aghajanian C, D'Hondt V, Monk BJ, Clamp A, et al. Efficacy and safety of avutometinib ± defactinib in recurrent low-grade serous ovarian cancer: primary analysis of ENGOT-OV60/GOG-3052/RAMP 201. J Clin Oncol. 2025;43(25):2782-2792. https://doi.org/10.1200/JCO-25-00112
+
+S5. European Medicines Agency. Rasonque (daraxonrasib): CHMP positive opinion, 15 October 2026. Amsterdam: EMA; 2026. Available at: https://www.ema.europa.eu/en/medicines/human/EPAR/rasonque (accessed 20 November 2026)
+
+S6. Kret R. Daraxonrasib gains EC approval in previously treated metastatic pancreatic cancer. OncLive. 16 November 2026. Available at: https://www.onclive.com/view/daraxonrasib-gains-ec-approval-in-previously-treated-metastatic-pancreatic-cancer (accessed 20 November 2026)
