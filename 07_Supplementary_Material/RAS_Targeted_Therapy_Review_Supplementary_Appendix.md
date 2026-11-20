@@ -188,7 +188,7 @@
 <p>PMDA (2022-01-20)</p></td>
 <td><p>Accelerated / conditional approval (single-arm phase II CodeBreaK 100, ORR 37.1%)</p></td>
 <td><p>Phase III CodeBreaK 200: PFS HR 0.66 (P=0.0017); OS HR 1.01 (95% CI 0.77-1.33; confounded by crossover)</p></td>
-<td><p>FDA ODAC 10:2 vote and CRL (2023-12) rejecting regular approval; EMA converted to full marketing authorization; PMDA maintained approval</p></td>
+<td><p>FDA ODAC 10:2 vote and CRL (2023-12) rejecting regular approval; EMA conditional marketing authorisation renewed (2024-11); PMDA maintained approval</p></td>
 </tr>
 <tr>
 <td><p><strong>adagrasib</strong></p>
