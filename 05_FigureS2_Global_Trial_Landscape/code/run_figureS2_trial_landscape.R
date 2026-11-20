@@ -132,8 +132,8 @@ p_b <- ggplot(modality_counts, aes(y = modality, x = n, fill = strategy)) +
   geom_text(data = tot, aes(y = modality, x = total, label = total), inherit.aes = FALSE, hjust = -0.25, size = pt(7),
             family = "Arial", colour = ink, fontface = "bold") +
   scale_fill_manual(values = c("Monotherapy" = "#1F3F73", "Combination Regimen" = "#8FB3DE"),
-                    breaks = c("Monotherapy", "Combination Regimen"),
-                    labels = c("1 registered intervention", "≥ 2 registered interventions")) +
+                    breaks = c("Combination Regimen", "Monotherapy"),   # legend order = stacking order (left to right)
+                    labels = c("≥ 2 registered interventions", "1 registered intervention")) +
   scale_y_discrete(labels = lab_mod) +
   scale_x_continuous(limits = c(0, 225), expand = c(0, 0)) +
   guides(fill = guide_legend(nrow = 1, keywidth = unit(3, "mm"), keyheight = unit(3, "mm"))) +
@@ -168,6 +168,7 @@ reg_lab <- data.frame(
 
 top <- head(by_country, 12)
 top$lab <- ifelse(top$country == "Turkey (Türkiye)", "Türkiye", top$country)
+top$lab <- ifelse(top$lab == "China", "Mainland China", top$lab)   # as in the text; Taiwan and Hong Kong are counted separately
 
 p_map <- ggplot(world, aes(long, lat, group = group)) +
   geom_polygon(aes(fill = bin), colour = "white", linewidth = 0.08) +

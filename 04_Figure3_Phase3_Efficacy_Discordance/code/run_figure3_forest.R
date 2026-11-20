@@ -3,6 +3,7 @@
 # Figure 3: PFS and OS hazard ratios across seven phase III RCTs (descriptive forest plots)
 # Production Script for ESMO Open. 180 mm x 92 mm, Arial, smallest text 6.5 pt.
 # Round 19: no panel letters; each block is headed by its endpoint.
+# Round 20: key note shortened so that it no longer runs into the left axis label in the vector PDF.
 # Round 18 redesign: one table-forest. Each trial is one row; the PFS and OS blocks sit side by side and share the
 # trial, setting and n columns. Colour = tumour type; filled square = 95% CI excludes 1, open = includes 1;
 # square area proportional to n. No pooled estimate. Drawn in a single coordinate system (x in mm) so that
@@ -95,7 +96,7 @@ p <- ggplot() +
   annotate("point", x = c(3.5, 31), y = axis_y - 0.32, shape = 22, size = 2.6, stroke = 0.8, colour = ink, fill = c(ink, "white")) +
   annotate("text", x = c(5.5, 33), y = axis_y - 0.32, label = c("95% CI excludes 1", "includes 1"), hjust = 0,
            size = pt(6.5), family = "Arial", colour = ink) +
-  annotate("text", x = 3.2, y = axis_y - 0.72, label = "Square area proportional to n; HR on log scale", hjust = 0,
+  annotate("text", x = 3.2, y = axis_y - 0.72, label = "Square area proportional to n", hjust = 0,
            size = pt(6.5), family = "Arial", colour = grey) +
   scale_x_continuous(limits = c(0, 180), expand = c(0, 0)) +
   scale_y_continuous(limits = c(axis_y - 0.95, top + 1.4), expand = c(0, 0)) +

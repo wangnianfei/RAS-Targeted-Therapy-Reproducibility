@@ -4,10 +4,10 @@
 
 - Direct RAS inhibitors now target both inactive (OFF) and active (ON) RAS.
 
-- Phase III trials show OS gains with RAS inhibitors in pretreated *KRAS* G12C-mutant NSCLC and in pancreatic cancer.
+- Divarasib in NSCLC and daraxonrasib in pancreatic cancer improved OS in phase III.
 
-- Phase III trials are now moving RAS inhibitors into first-line and adjuvant treatment.
+- Phase III trials now test RAS inhibitors as first-line and adjuvant treatment.
 
-- Crossover may have diluted OS differences in pretreated *KRAS* G12C-mutant NSCLC trials.
+- Crossover may have diluted OS differences in pretreated *KRAS* G12C-mutant NSCLC.
 
-- Resistance: secondary *KRAS* mutations, RTK/MAPK bypass, histological transformation.
+- Resistance involves new *KRAS* mutations, RTK/MAPK bypass and histological change.

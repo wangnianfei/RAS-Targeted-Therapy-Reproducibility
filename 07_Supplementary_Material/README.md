@@ -2,7 +2,7 @@
 
 | Item | Content | Source file |
 |:---|:---|:---|
-| Figure S1 | **a,** seven resistance classes of Table S3 × six strategies (qualitative summary); **b,** 17/38 patients with ≥1 putative mechanism, 7/38 with multiple, 2/10 patients with a repeat tissue biopsy showing squamous transformation after adagrasib (Awad et al. 2021); both panels in the navy of Supplementary Figure S2 | `code/run_figureS1_resistance_matrix.py` → `figures/FigS1.*` |
+| Figure S1 | **a,** seven resistance classes of Table S3 × six strategies (qualitative summary; each filled cell reads as the strategy listed in Table S3); **b,** 17/38 patients with ≥1 putative mechanism, 7/38 with multiple, 2/10 patients with a repeat tissue biopsy showing squamous transformation after adagrasib (Awad et al. 2021); both panels in the navy of Supplementary Figure S2 | `code/run_figureS1_resistance_matrix.py` → `figures/FigS1.*` |
 | Supplementary Methods and Results, Figure S2 | Search, record-level review and full results of the ClinicalTrials.gov analysis (moved from main-text Section 5.1 and former Figure 4) | [`../05_FigureS2_Global_Trial_Landscape`](../05_FigureS2_Global_Trial_Landscape/) |
 | Table S1 | Direct RAS inhibitors by mechanistic class (Section 3.2) and targeted degraders: target, developer, status on 18 November 2026 | `data/tableS1_direct_ras_inhibitors.csv` |
 | Table S2 | Regulatory approvals and confirmatory-trial outcomes | `data/tableS2_global_regulatory_approvals.md` |

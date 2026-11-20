@@ -22,12 +22,14 @@ FIG = os.path.abspath(os.path.join(HERE, '..', 'figures')); os.makedirs(FIG, exi
 plt.rcParams.update({'font.family': 'sans-serif', 'font.sans-serif': ['Arial', 'Helvetica', 'DejaVu Sans'],
                      'pdf.fonttype': 42, 'ps.fonttype': 42, 'font.size': 6.5})
 
-ROWS = ['On-target KRAS\nalterations', 'Upstream RTK reactivation\n(MET, EGFR, RTK fusions)',
+ROWS = ['On-target KRAS\nalterations', 'Upstream reactivation\n(MET, EGFR, fusions, NF1)',
         'SHP2/SOS1-mediated\nnucleotide exchange', 'Downstream MAPK bypass\n(NRAS, BRAF, MAP2K1)',
         'PI3K-AKT bypass\n(PTEN loss of function)', 'STK11 / KEAP1\nco-mutation (baseline)',
         'Lineage plasticity\n(squamous transformation)']
-COLS = ['RAS(ON), pan-RAS\ninhibitor or degrader', 'RTK antibody\nor TKI', 'SHP2 or SOS1\ninhibitor',
-        'RAF, MEK or ERK\ninhibitor', 'PI3K or AKT\ninhibitor', 'Chemotherapy\n± immunotherapy']
+COLS = ['Switch to a\nRAS(ON) inhibitor', 'RTK antibody\nor TKI', 'SHP2 or SOS1\ninhibitor',
+        'RAF, MEK or ERK\ninhibitor', 'PI3K, AKT or\nmTOR inhibitor', 'Immunotherapy and/or\nchemotherapy']
+# In-cell notes so that each filled cell reads exactly as the strategy in Supplementary Table S3 (round 20)
+NOTES = {(5, 5): 'with a direct\nRAS inhibitor', (6, 5): 'histology-\ndirected'}
 # One palette for both panels, shared with Supplementary Figure S2: navy = filled cells and bars
 NAVY, LIGHT, EMPTY = '#1F3F73', '#C6D7EE', '#F1F3F6'
 PRIMARY = {(0, 0), (1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (6, 5)}
@@ -41,6 +43,8 @@ for i in range(nr):
         y = nr - 1 - i
         if (i, j) in PRIMARY:
             ax.add_patch(Rectangle((j, y), 1, 1, facecolor=NAVY, edgecolor='white', lw=1.2))
+            if (i, j) in NOTES:
+                ax.text(j + 0.5, y + 0.5, NOTES[(i, j)], ha='center', va='center', fontsize=5.8, color='white', linespacing=1.1)
         elif (i, j) in SECONDARY:
             ax.add_patch(Rectangle((j, y), 1, 1, facecolor=LIGHT, edgecolor='white', lw=1.2, hatch='////'))
         else:

@@ -22,7 +22,7 @@ for k, (fn, tag, title) in enumerate([
     ax = fig.add_axes([0.005 + k * 0.5, 0.15, 0.49, 0.78]); ax.imshow(plt.imread(os.path.join(D, 'trim' + fn))); ax.axis('off')
     fig.text(0.01 + k * 0.5, 0.97, tag, fontsize=10, fontweight='bold', va='top')
     fig.text(0.035 + k * 0.5, 0.965, title, fontsize=6.8, va='top')
-key = [('#1F3A5F', 'P-loop (residues 10–17)'), ('#E89E33', 'Switch I (30–38)'), ('#C73845', 'Switch II (59–76)'),
+key = [('#1F3A5F', 'P-loop (residues 10–17)'), ('#E89E33', 'Switch I (30–38)'), ('#C73845', 'Switch II (60–76)'),
        ('#DBE0E6', 'KRAS G domain'), ('#94339E', 'Inhibitor (sotorasib / daraxonrasib)'), ('#4D6B8C', 'Nucleotide (GDP / GMPPNP)'),
        ('#F2CC26', 'Cys12 (panel a)'), ('#808080', 'H95, Y96, Q99 side chains (panel a)'), ('#52A094', 'Cyclophilin A (panel b)'), ('#7FE01A', r'Mg$^{2+}$ ion')]
 fig.legend(handles=[Patch(facecolor=c, edgecolor='#888888', lw=0.3, label=l) for c, l in key], loc='lower center',

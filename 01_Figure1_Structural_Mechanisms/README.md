@@ -1,6 +1,6 @@
 # Figure 1 — Experimental structures of the two principal classes of direct KRAS inhibitors
 
-**a,** KRAS(G12C) covalently bound to sotorasib in the switch-II pocket (PDB 6OIM). **b,** Tri-complex of daraxonrasib (RMC-6236), cyclophilin A and GMPPNP-bound KRAS(G12V) (PDB 9BG6). KRAS in **b** is superposed onto KRAS in **a**.
+**a,** KRAS(G12C) covalently bound to sotorasib in the switch-II pocket (PDB 6OIM; Canon et al., *Nature* 2019, reference 21 of the manuscript). Switch II is coloured and labelled as residues 60–76, as in the text. **b,** Tri-complex of daraxonrasib (RMC-6236), cyclophilin A and GMPPNP-bound KRAS(G12V) (PDB 9BG6). KRAS in **b** is superposed onto KRAS in **a**.
 
 | File | Role |
 |:---|:---|

@@ -2,7 +2,7 @@
 
 | File | Content |
 |:---|:---|
-| `RAS_Targeted_Therapy_Review_ESMO_Open_Manuscript_EN.docx` / `.md` | Submitted manuscript (103 references) |
+| `RAS_Targeted_Therapy_Review_ESMO_Open_Manuscript_EN.docx` / `.md` | Submitted manuscript (104 references) |
 | `Cover_Letter_ESMO_Open.docx` / `.md` | Cover letter |
 | `Highlights.docx` / `.md` | Highlights (five, each ≤ 125 characters) |
 | `RAS靶向治疗综述_ESMO_Open_中文稿.docx` / `.md` | Chinese version of the length-revised manuscript (references kept in English); the title page, abbreviation table and formatting still follow the first submission |

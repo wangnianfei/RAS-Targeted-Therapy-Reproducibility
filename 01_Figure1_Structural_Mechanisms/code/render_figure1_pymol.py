@@ -18,7 +18,7 @@ cmd.set_color('c_cypa', [0.32, 0.62, 0.58]); cmd.set_color('c_cys', [0.95, 0.80,
 def style_kras(sel):
     cmd.show('cartoon', sel); cmd.color('c_core', sel)
     cmd.color('c_ploop', f'{sel} and resi 10-17'); cmd.color('c_sw1', f'{sel} and resi 30-38')
-    cmd.color('c_sw2', f'{sel} and resi 59-76')
+    cmd.color('c_sw2', f'{sel} and resi 60-76')   # switch II as in the main text (Cox et al. 2014)
 
 cmd.load(os.path.join(D, '6OIM.pdb'), 's6oim'); cmd.remove('s6oim and (solvent or hydro)')
 cmd.load(os.path.join(D, '9BG6.cif'), 's9bg6'); cmd.remove('s9bg6 and (solvent or hydro)')
