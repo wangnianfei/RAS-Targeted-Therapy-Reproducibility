@@ -12,7 +12,7 @@
 
 **\*Corresponding author:** Shanghu Wang, MD, PhD, Department of Radiation Therapy, Anhui Chest Hospital, No. 397 Jixi Road, Hefei, Anhui 230026, China. E-mail: wangshanghu@mail.ustc.edu.cn
 
-**Word count:** abstract 266 words; main text 4,497 words (Introduction to Conclusions, excluding title page, abstract, tables, declarations and references); figure legends 502 words. Display items: 4 figures and 1 table. References: 104.
+**Word count:** abstract 266 words; main text 4,491 words (Introduction to Conclusions, excluding title page, abstract, tables, declarations and references); figure legends 502 words. Display items: 4 figures and 1 table. References: 104.
 
 **Highlights**
 
@@ -44,7 +44,7 @@ Gene symbols are italicised and protein symbols are set in roman type (for examp
 
 1L/2L, first line/second line; AE, adverse event; AKT, AKT serine/threonine kinase (protein kinase B); *ALK*, ALK receptor tyrosine kinase; BICR, blinded independent central review; *BRAF*/BRAF, B-Raf proto-oncogene, serine/threonine kinase; CAAX, C-terminal cysteine–aliphatic–aliphatic–any amino acid motif; CI, confidence interval; CNS, central nervous system; COPE, Committee on Publication Ethics; CRAF, Raf-1 proto-oncogene, serine/threonine kinase (encoded by *RAF1*); CRC, colorectal cancer; ctDNA, circulating tumour DNA; CYPA, cyclophilin A; *EGFR*/EGFR, epidermal growth factor receptor; ERK, extracellular signal-regulated kinase; ESMO, European Society for Medical Oncology; FDA, US Food and Drug Administration; *FGFR2*/*FGFR3*, fibroblast growth factor receptor 2/3; FOLFIRI, folinic acid, fluorouracil and irinotecan; GAP, GTPase-activating protein; GDP, guanosine diphosphate; GEF, guanine nucleotide exchange factor; GTP, guanosine triphosphate; HER2, erb-b2 receptor tyrosine kinase 2 (encoded by *ERBB2*); HR, hazard ratio; *HRAS*/HRAS, HRas proto-oncogene, GTPase; *KEAP1*, kelch like ECH associated protein 1; KL, *KRAS*- and *STK11*-co-mutated; KP, *KRAS*- and *TP53*-co-mutated; *KRAS*/KRAS, KRas proto-oncogene, GTPase; *MAP2K1*, mitogen-activated protein kinase kinase 1 (protein MEK1); MAPK, mitogen-activated protein kinase; mCRC, metastatic colorectal cancer; MEK, mitogen-activated protein kinase kinase; *MET*/MET, MET proto-oncogene, receptor tyrosine kinase; mFOLFOX6, modified folinic acid, fluorouracil and oxaliplatin; mOS, median overall survival; mPFS, median progression-free survival; MSK-IMPACT, Memorial Sloan Kettering–Integrated Mutation Profiling of Actionable Cancer Targets; mTOR, mechanistic target of rapamycin; NCT, ClinicalTrials.gov identifier; *NF1*/NF1, neurofibromin 1; NRF2, nuclear factor erythroid 2-related factor 2 (encoded by *NFE2L2*); *NRAS*/NRAS, NRAS proto-oncogene, GTPase; NSCLC, non-small cell lung cancer; ODAC, Oncologic Drugs Advisory Committee; OR, odds ratio; ORR, objective response rate; OS, overall survival; PD-1, programmed cell death protein 1; PD-(L)1, PD-1 or programmed death-ligand 1; PDAC, pancreatic ductal adenocarcinoma; PDB, Protein Data Bank; PFS, progression-free survival; PI3K, phosphoinositide 3-kinase; PROTAC, proteolysis-targeting chimera; RAF, rapidly accelerated fibrosarcoma kinase; *RAS*/RAS, rat sarcoma virus oncogene family (*KRAS*, *NRAS* and *HRAS*); RAS(ON), active, GTP-bound RAS; *RET*, ret proto-oncogene; RTK, receptor tyrosine kinase; S-IIP, switch-II pocket; SHP2, Src homology 2 domain-containing protein tyrosine phosphatase 2 (encoded by *PTPN11*); SOS1/SOS2, son of sevenless homolog 1/2; STING, stimulator of interferon genes; *STK11*, serine/threonine kinase 11 (protein LKB1); TCGA, The Cancer Genome Atlas; TKI, tyrosine kinase inhibitor; *TP53*, tumor protein p53; TRAE, treatment-related adverse event; VEGF, vascular endothelial growth factor; VEGFR, vascular endothelial growth factor receptor.
 
-**1. Introduction: direct RAS targeting in solid tumours**
+**1. Introduction**
 
 Activating mutations in *RAS* genes are among the most common oncogenic drivers in human cancer: about 19% of patients with cancer carry a *RAS* mutation, corresponding to roughly 3.4 million new cases a year worldwide \[1\]. For nearly four decades after *HRAS*, *KRAS* and *NRAS* were identified as transforming oncogenes in the early 1980s \[2–4\], RAS proteins were considered undruggable.
 
@@ -60,7 +60,7 @@ RAS proteins are binary molecular switches regulated by guanine nucleotide excha
 
 Active RAS signals mainly through the RAF–MEK–ERK (MAPK) and PI3K–AKT–mTOR cascades \[2,3,21\]. ERK phosphorylates upstream receptor tyrosine kinases, SOS1 and CRAF, creating negative feedback that attenuates pathway flux \[21,22\]; inhibiting RAS or its effectors relieves this feedback and reactivates receptor tyrosine kinases (RTKs) such as EGFR, MET and HER2, which promotes resistance (Section 5.2) \[22,23\].
 
-<img src="media/image1.png" style="width:6.4in;height:3.4845in" />
+<img src="media/image1.svg" style="width:6.4in;height:3.4845in" />
 
 **Figure 1. Experimental structures of the two principal classes of direct KRAS inhibitors.**
 
@@ -78,7 +78,7 @@ Allele spectra differ across tumour types (Figure 2b). In pancreatic ductal aden
 
 Co-occurring alterations add heterogeneity. In *KRAS*-mutant NSCLC, co-mutations in *TP53* (about 40%), *STK11* (about 30%) and *KEAP1* (20%–25%) define distinct subgroups \[35,36\]. Tumours with co-mutated *KRAS* and *TP53* (KP) tend to have a high tumour mutational burden, immune infiltration and sensitivity to immune checkpoint inhibitors \[35,37\], whereas tumours with co-mutated *KRAS* and *STK11* (KL) show STING silencing, an immune-cold microenvironment and primary resistance to anti-PD-(L)1 monotherapy \[36,38,39\]. *KEAP1* loss, which often co-occurs with *STK11* loss, activates NRF2 and is associated with shorter benefit from KRAS G12C inhibitors \[40,41\].
 
-<img src="media/image2.png" style="width:6.4in;height:2.9155in" />
+<img src="media/image2.svg" style="width:6.4in;height:2.9155in" />
 
 **Figure 2. *RAS* mutation prevalence and *KRAS* allele spectrum in a clinical sequencing cohort.**
 
@@ -292,7 +292,7 @@ In KRYSTAL-12, adagrasib also improved PFS over docetaxel in 453 patients (media
 
 Krascendo 1 provided the first head-to-head comparison between direct RAS inhibitors: 338 patients with previously treated *KRAS* G12C-mutant advanced NSCLC were randomised to divarasib or to investigator's choice of sotorasib (156 control patients) or adagrasib (15) (Table 1, Figure 3) \[62\]. Divarasib improved PFS by BICR (median 9.8 versus 5.7 months; HR 0.58, 95% CI 0.44–0.76) and the confirmed ORR (58.4% versus 32.3%) and, at the planned interim analysis, OS (median 17.7 versus 12.0 months; HR 0.56, 95% CI 0.41–0.78), with fewer grade 3 or 4 treatment-related adverse events (24.6% versus 34.5%) \[62\]. These results are consistent with the hypothesis that deeper and more sustained target inhibition improves outcomes, although the trial was not designed to test this mechanism. Because the control arm received an active KRAS G12C inhibitor rather than docetaxel, the survival advantage cannot be extrapolated to a comparison with chemotherapy.
 
-<img src="media/image3.png" style="width:6.4in;height:3.27135in" />
+<img src="media/image3.svg" style="width:6.4in;height:3.69766in" />
 
 **Figure 3. Progression-free and overall survival hazard ratios across seven phase III randomised controlled trials.**
 
@@ -336,11 +336,11 @@ Acquired resistance limits the duration of direct RAS inhibition, with median re
 
 Off-target mechanisms restore signalling through parallel or downstream pathways (Figure 4) \[50,83,84\]. After adagrasib, they included *MET* amplification, the only identified mechanism in 2 of 38 patients, oncogenic fusions involving *ALK*, *RET*, *BRAF*, *RAF1* and *FGFR3*, and acquired *BRAF* V600E, *NRAS* Q61K and *MAP2K1* mutations that reactivate ERK signalling independently of KRAS G12C \[50\]. After sotorasib, *EGFR* and *FGFR2* alterations and *NRAS* and *BRAF* hotspot mutations emerged \[84\]. Overall, RTK–RAS pathway alterations other than in *KRAS* were found in 14 of 38 patients (37%) after adagrasib \[50\]. In addition, 2 of the 10 patients with a repeat tissue biopsy at progression (9 of whom had NSCLC) showed transformation from adenocarcinoma to squamous cell carcinoma without an identifiable genomic mechanism, suggesting that non-genetic lineage changes can reduce dependence on KRAS \[50\].
 
-<img src="media/image4.png" style="width:6.4in;height:4.26727in" />
+<img src="media/image4.svg" style="width:6.4in;height:4.26727in" />
 
 **Figure 4. Acquired resistance to KRAS G12C inhibitors and corresponding combination or switching strategies.**
 
-Centre, the RTK–SHP2–SOS1–KRAS–RAF–MEK–ERK pathway with the parallel PI3K–AKT–mTOR branch; KRAS G12C inhibitors trap KRAS in the GDP-bound state, which relieves ERK-mediated negative feedback (dashed line). Right, acquired resistance alterations reported in 38 patients treated with adagrasib monotherapy \[50\], grouped as upstream reactivation, on-target *KRAS* alterations, downstream or parallel bypass and histological transformation; adaptive EGFR feedback in colorectal cancer is from \[23\]. Left, strategies discussed in Section 5.3, linked to the pathway node on which they act.
+Centre, the RTK–SHP2–SOS1–KRAS–RAF–MEK–ERK pathway with the parallel PI3K–AKT–mTOR branch; KRAS G12C inhibitors trap KRAS in the GDP-bound state, which relieves ERK-mediated negative feedback (dashed line). Right, acquired resistance alterations reported in 38 patients treated with adagrasib monotherapy \[50\], grouped as upstream reactivation, on-target *KRAS* alterations, downstream or parallel bypass and histological transformation; adaptive EGFR feedback in colorectal cancer is from \[23\]. Left, countermeasures discussed in Section 5.3, linked to the pathway node on which they act.
 
 CRC, colorectal cancer; EGFR, epidermal growth factor receptor; GEF, guanine nucleotide exchange factor; P, phosphorylation; RAS(ON), active GTP-bound RAS; RTK, receptor tyrosine kinase; SHP2, Src homology 2 domain-containing protein tyrosine phosphatase 2; SOS1, son of sevenless homolog 1; TKI, tyrosine kinase inhibitor.
 
@@ -387,10 +387,6 @@ During the preparation of this work, the authors used Gemini (Google) and Claude
 **Funding**
 
 This work was supported by the Scientific Research Project of Anhui Provincial Health Commission \[grant number AHWJ:2025BAd20016\].
-
-**Declaration of Competing Interests**
-
-The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
 
 **Author Contributions**
 
@@ -448,7 +444,7 @@ All data supporting the findings of this review, including curated clinical tria
 
 **23.** Amodio V, Yaeger R, Arcella P, Cancelliere C, Lamba S, Lorenzato A, et al. EGFR blockade reverts resistance to KRASG12C inhibition in colorectal cancer. Cancer Discov. 2020;10(8):1129-1139. https://doi.org/10.1158/2159-8290.CD-20-0187
 
-**24. Canon J, Rex K, Saiki AY, Mohr C, Cooke K, Bagal D, et al. The clinical KRAS(G12C) inhibitor AMG 510 drives anti-tumour immunity. Nature. 2019;575(7781):217-223. https://doi.org/10.1038/s41586-019-1694-1**
+**24.** Canon J, Rex K, Saiki AY, Mohr C, Cooke K, Bagal D, et al. The clinical KRAS(G12C) inhibitor AMG 510 drives anti-tumour immunity. Nature. 2019;575(7781):217-223. https://doi.org/10.1038/s41586-019-1694-1
 
 **25.** Hoadley KA, Yau C, Hinoue T, Wolf DM, Lazar AJ, Drill E, et al. Cell-of-origin patterns dominate the molecular classification of 10,000 tumors from 33 types of cancer. Cell. 2018;173(2):291-304.e6. https://doi.org/10.1016/j.cell.2018.03.022
 
@@ -546,7 +542,7 @@ All data supporting the findings of this review, including curated clinical tria
 
 **72.** Kuboki Y, Fakih M, Strickler J, Yaeger R, Masuishi T, Kim EJ, et al. Sotorasib with panitumumab in chemotherapy-refractory KRASG12C-mutated colorectal cancer: a phase 1b trial. Nat Med. 2024;30(1):265-270. https://doi.org/10.1038/s41591-023-02717-6
 
-**73.** US Food and Drug Administration. Supplement approval letter, NDA 216340/S-011 (Krazati \[adagrasib\]): voluntary withdrawal of the accelerated approval indication of adagrasib in combination with cetuximab for KRAS G12C-mutated colorectal cancer. Silver Spring (MD): FDA; 1 September 2026. Available at: https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/216340Orig1s011ltr.pdf (accessed 20 November 2026).
+**73.** US Food and Drug Administration. Supplement approval letter, NDA 216340/S-011 (Krazati \[adagrasib\]): voluntary withdrawal of the accelerated approval indication of adagrasib in combination with cetuximab for KRAS G12C-mutated colorectal cancer. Silver Spring (MD): FDA; 1 September 2026. Available at: https://www.accessdata.fda.gov/drugsatfda\_docs/appletter/2026/216340Orig1s011ltr.pdf (accessed 20 November 2026).
 
 **74.** Wu YL, Herzberg B, Manji GA. Current landscape of RAS-targeted therapy for pancreatic cancer. Oncologist. 2026;31(11):oyag379. https://doi.org/10.1093/oncolo/oyag379
 
@@ -560,7 +556,7 @@ All data supporting the findings of this review, including curated clinical tria
 
 **79.** Burns TF, Ammakkanavar NR, Hollebecque A, Lee DH, Koyama T, Cassier PA, et al. Efficacy and safety of olomorasib in combination with pembrolizumab in treatment of patients with KRAS G12C-mutant advanced NSCLC. J Thorac Oncol. 2026;21(4):103528. https://doi.org/10.1016/j.jtho.2025.11.018
 
-**80.** European Medicines Agency. Lumykras (sotorasib): procedural steps taken and scientific information after authorisation (archive). Amsterdam: EMA. Available at: https://www.ema.europa.eu/en/documents/procedural-steps-after/lumykras-epar-procedural-steps-taken-scientific-information-after-authorisation-archive_en.pdf (accessed 20 November 2026).
+**80.** European Medicines Agency. Lumykras (sotorasib): procedural steps taken and scientific information after authorisation (archive). Amsterdam: EMA. Available at: https://www.ema.europa.eu/en/documents/procedural-steps-after/lumykras-epar-procedural-steps-taken-scientific-information-after-authorisation-archive\_en.pdf (accessed 20 November 2026).
 
 **81.** Li Z, Dang X, Huang D, Jin S, Li W, Shi J, et al. Garsorasib in patients with KRASG12C-mutated non-small-cell lung cancer in China: an open-label, multicentre, single-arm, phase 2 trial. Lancet Respir Med. 2024;12(8):589-598. https://doi.org/10.1016/S2213-2600(24)00110-3
 
