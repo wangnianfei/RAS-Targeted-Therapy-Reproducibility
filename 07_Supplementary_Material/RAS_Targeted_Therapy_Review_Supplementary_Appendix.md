@@ -188,7 +188,7 @@
 <p>PMDA (2022-01-20)</p></td>
 <td><p>Accelerated / conditional approval (single-arm phase II CodeBreaK 100, ORR 37.1% [8])</p></td>
 <td><p>Phase III CodeBreaK 200: PFS HR 0.66 (P=0.0017); OS HR 1.01 (95% CI 0.77-1.33; confounded by crossover) [60,66]</p></td>
-<td><p>FDA ODAC 10:2 vote (2023-10) [S1,S2] and CRL (2023-12) rejecting regular approval [S3]; EMA conditional marketing authorisation renewed (2024-11); PMDA maintained approval [66,80]</p></td>
+<td><p>FDA ODAC 10:2 vote (2023-10) [S1,S2] and CRL (2023-12) rejecting regular approval [S3]; EMA conditional marketing authorisation renewed (2024-11) [80]</p></td>
 </tr>
 <tr>
 <td><p><strong>adagrasib</strong></p>
@@ -232,7 +232,7 @@
 <td><p>Advanced <em>KRAS</em> G12C NSCLC, ≥2L</p></td>
 <td><p>NMPA (China, 2025-05)</p></td>
 <td><p>Conditional approval (priority review)</p></td>
-<td><p>Pivotal single-arm phase IIb (n=117): IRC ORR 47.9% [11]</p></td>
+<td><p>Pivotal single-arm phase IIb (n=119): IRC ORR 47.9% (56/117) [11]</p></td>
 <td><p>Active conditional approval; confirmatory randomised phase III trial ongoing</p></td>
 </tr>
 <tr>
@@ -241,7 +241,7 @@
 <td><p>Recurrent <em>KRAS</em>-mutant low-grade serous ovarian cancer, ≥2L</p></td>
 <td><p>FDA (2025-05-08)</p></td>
 <td><p>Accelerated approval (RAF/MEK clamp + FAK inhibitor)</p></td>
-<td><p>Single-arm phase II RAMP 201: ORR 44% in <em>KRAS</em>-mutant cohort [S4]</p></td>
+<td><p>Phase II RAMP 201 (randomised regimen selection, then expansion): ORR 44% with avutometinib plus defactinib in <em>KRAS</em>-mutant cohort [S4]</p></td>
 <td><p>Active accelerated approval; confirmatory phase III RAMP 301 ongoing</p></td>
 </tr>
 <tr>
@@ -276,7 +276,7 @@
 | On-target *KRAS* alterations | Switch-II pocket: R68S, H95D/Q/R, Y96C; second-site G12D/R/V/W, G13D, Q61H; *KRAS* G12C amplification \[50\] | Block drug binding or increase the GTP-bound fraction of KRAS \[50\] | After adagrasib: switch-II pocket 4/38 (11%); acquired *KRAS* mutation or amplification 9/38 \[50\] | Switch to a RAS(ON) inhibitor \[87\]; H95 mutants remain sensitive to sotorasib in vitro \[50\] | Elironrasib ± daraxonrasib (NCT05462717, NCT06128551) |
 | Upstream reactivation | *MET* amplification; *ALK, RET and FGFR3 fusions \[50\]*; *EGFR* and *FGFR2* alterations \[84\]; adaptive EGFR feedback in CRC \[23\]; *NF1* loss-of-function mutations \[50\] | Restores RAS-GTP loading upstream of KRAS | *MET* amplification as sole mechanism 2/38; fusions in 3/10 CRC \[50\] | Add an EGFR antibody (CRC) or an RTK inhibitor | Sotorasib + panitumumab (CodeBreaK 300) \[63\]; adagrasib + cetuximab (KRYSTAL-10) \[64\] |
 | SHP2/SOS1-mediated nucleotide exchange | No genomic alteration; adaptive reactivation of wild-type and G12C KRAS | Renewed GDP-to-GTP exchange \[15,16\] | Adaptive; no genomic frequency | Add an SHP2 or SOS1 inhibitor | Sotorasib + RMC-4630 (NCT05054725); adagrasib + TNO155 (NCT04330664); JDQ443 + TNO155 (NCT04699188); adagrasib + BI 1701963 (NCT04975256, terminated) |
-| Downstream MAPK bypass | *NRAS* Q61K, *BRAF* V600E and *MAP2K1* mutations; *BRAF* and *RAF1* fusions \[50\]; *NRAS*, *BRAF* and *MRAS* hotspot mutations \[84\] | ERK reactivation independent of KRAS G12C | RTK–RAS pathway alterations other than *KRAS* (rows 2 and 4): 14/38 (37%) \[50\]; any treatment-emergent alteration after sotorasib 27/43 \[84\] | Add a RAF, MEK or ERK inhibitor \[84\] | Sotorasib + trametinib (CodeBreaK 101, NCT04185883); sotorasib + avutometinib ± defactinib (NCT05074810) |
+| Downstream MAPK bypass | *NRAS* Q61K, *BRAF* V600E and *MAP2K1* mutations; *BRAF* and *RAF1* fusions \[50\]; *NRAS* and *BRAF* hotspot mutations in patients and *MRAS* Q71R in preclinical models \[84\] | ERK reactivation independent of KRAS G12C | RTK–RAS pathway alterations other than *KRAS* (rows 2 and 4): 14/38 (37%) \[50\]; any treatment-emergent alteration after sotorasib 27/43 \[84\] | Add a RAF, MEK or ERK inhibitor \[84\] | Sotorasib + trametinib (CodeBreaK 101, NCT04185883); sotorasib + avutometinib ± defactinib (NCT05074810) |
 | PI3K–AKT bypass | *PTEN* loss-of-function mutations \[50\] | PI3K–AKT–mTOR survival signalling | Reported; not quantified separately \[50\] | Add a PI3K, AKT or mTOR inhibitor (preclinical rationale) | Sotorasib + everolimus (CodeBreaK 101 platform, NCT04185883) |
 | *STK11* / *KEAP1* co-mutation | Baseline co-mutations, not acquired alterations \[35,36\] | Immunosuppressive tumour microenvironment; NRF2 activation (*KEAP1*) \[35,36\] | Baseline; prevalence in *KRAS*-mutant NSCLC given in Section 2.2 \[35,36\] | Direct RAS inhibitor + PD-1 antibody ± chemotherapy | Divarasib + pembrolizumab (Krascendo 2, NCT06793215); olomorasib + pembrolizumab ± chemotherapy (SUNRAY-01, NCT06119581); not restricted to co-mutated disease |
 | Lineage plasticity | Adenocarcinoma-to-squamous cell carcinoma transformation \[50\] | Reduced dependence on KRAS | 2/10 patients with a repeat tissue biopsy (9 with NSCLC) \[50\] | Histology-directed chemotherapy ± immunotherapy | No RAS-specific trial identified |
@@ -307,14 +307,14 @@ RAS(ON), active GTP-bound RAS; SHP2, Src homology 2 domain-containing protein ty
 
 **Supplementary references**
 
-S1. US Food and Drug Administration. Sotorasib for KRAS G12C mutated locally advanced or metastatic nonsquamous non-small cell lung cancer: FDA presentation to the Oncologic Drugs Advisory Committee, 5 October 2023. Silver Spring (MD): FDA; 2023. Available at: https://www.fda.gov/media/172756/download (accessed 20 November 2026)
+S1. US Food and Drug Administration. Sotorasib for KRAS G12C mutated locally advanced or metastatic nonsquamous non-small cell lung cancer: FDA presentation to the Oncologic Drugs Advisory Committee, 5 October 2023. Silver Spring (MD): FDA; 2023. Available at: https://www.fda.gov/media/172756/download (accessed 20 November 2026).
 
-S2. Ryan C. FDA panel votes that phase 3 PFS data for sotorasib in KRAS G12C+ advanced NSCLC cannot be reliably interpreted. OncLive. 5 October 2023. Available at: https://www.onclive.com/view/fda-panel-votes-that-phase-3-pfs-data-for-sotorasib-in-kras-g12c-advanced-nsclc-cannot-be-reliably-interpreted (accessed 20 November 2026)
+S2. Ryan C. FDA panel votes that phase 3 PFS data for sotorasib in KRAS G12C+ advanced NSCLC cannot be reliably interpreted. OncLive. 5 October 2023. Available at: https://www.onclive.com/view/fda-panel-votes-that-phase-3-pfs-data-for-sotorasib-in-kras-g12c-advanced-nsclc-cannot-be-reliably-interpreted (accessed 20 November 2026).
 
-S3. Amgen. Amgen provides regulatory update on status of LUMAKRAS (sotorasib) \[press release\]. Thousand Oaks (CA): Amgen; 26 December 2023. Available at: https://www.biospace.com/amgen-provides-regulatory-update-on-status-of-lumakras-sotorasib (accessed 20 November 2026)
+S3. Amgen. Amgen provides regulatory update on status of LUMAKRAS (sotorasib) \[press release\]. Thousand Oaks (CA): Amgen; 26 December 2023. Available at: https://www.biospace.com/amgen-provides-regulatory-update-on-status-of-lumakras-sotorasib (accessed 20 November 2026).
 
 S4. Banerjee SN, Van Nieuwenhuysen E, Aghajanian C, D'Hondt V, Monk BJ, Clamp A, et al. Efficacy and safety of avutometinib ± defactinib in recurrent low-grade serous ovarian cancer: primary analysis of ENGOT-OV60/GOG-3052/RAMP 201. J Clin Oncol. 2025;43(25):2782-2792. https://doi.org/10.1200/JCO-25-00112
 
-S5. European Medicines Agency. Rasonque (daraxonrasib): CHMP positive opinion, 15 October 2026. Amsterdam: EMA; 2026. Available at: https://www.ema.europa.eu/en/medicines/human/EPAR/rasonque (accessed 20 November 2026)
+S5. European Medicines Agency. Rasonque (daraxonrasib): CHMP positive opinion, 15 October 2026. Amsterdam: EMA; 2026. Available at: https://www.ema.europa.eu/en/medicines/human/EPAR/rasonque (accessed 20 November 2026).
 
-S6. Kret R. Daraxonrasib gains EC approval in previously treated metastatic pancreatic cancer. OncLive. 16 November 2026. Available at: https://www.onclive.com/view/daraxonrasib-gains-ec-approval-in-previously-treated-metastatic-pancreatic-cancer (accessed 20 November 2026)
+S6. Kret R. Daraxonrasib gains EC approval in previously treated metastatic pancreatic cancer. OncLive. 16 November 2026. Available at: https://www.onclive.com/view/daraxonrasib-gains-ec-approval-in-previously-treated-metastatic-pancreatic-cancer (accessed 20 November 2026).

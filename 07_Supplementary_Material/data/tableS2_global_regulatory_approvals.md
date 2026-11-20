@@ -31,7 +31,7 @@
 <p>PMDA (2022-01-20)</p></td>
 <td><p>Accelerated / conditional approval (single-arm phase II CodeBreaK 100, ORR 37.1% [8])</p></td>
 <td><p>Phase III CodeBreaK 200: PFS HR 0.66 (P=0.0017); OS HR 1.01 (95% CI 0.77-1.33; confounded by crossover) [60,66]</p></td>
-<td><p>FDA ODAC 10:2 vote (2023-10) [S1,S2] and CRL (2023-12) rejecting regular approval [S3]; EMA conditional marketing authorisation renewed (2024-11); PMDA maintained approval [66,80]</p></td>
+<td><p>FDA ODAC 10:2 vote (2023-10) [S1,S2] and CRL (2023-12) rejecting regular approval [S3]; EMA conditional marketing authorisation renewed (2024-11) [80]</p></td>
 </tr>
 <tr>
 <td><p><strong>adagrasib</strong></p>
@@ -75,7 +75,7 @@
 <td><p>Advanced <em>KRAS</em> G12C NSCLC, ≥2L</p></td>
 <td><p>NMPA (China, 2025-05)</p></td>
 <td><p>Conditional approval (priority review)</p></td>
-<td><p>Pivotal single-arm phase IIb (n=117): IRC ORR 47.9% [11]</p></td>
+<td><p>Pivotal single-arm phase IIb (n=119): IRC ORR 47.9% (56/117) [11]</p></td>
 <td><p>Active conditional approval; confirmatory randomised phase III trial ongoing</p></td>
 </tr>
 <tr>
@@ -84,7 +84,7 @@
 <td><p>Recurrent <em>KRAS</em>-mutant low-grade serous ovarian cancer, ≥2L</p></td>
 <td><p>FDA (2025-05-08)</p></td>
 <td><p>Accelerated approval (RAF/MEK clamp + FAK inhibitor)</p></td>
-<td><p>Single-arm phase II RAMP 201: ORR 44% in <em>KRAS</em>-mutant cohort [S4]</p></td>
+<td><p>Phase II RAMP 201 (randomised regimen selection, then expansion): ORR 44% with avutometinib plus defactinib in <em>KRAS</em>-mutant cohort [S4]</p></td>
 <td><p>Active accelerated approval; confirmatory phase III RAMP 301 ongoing</p></td>
 </tr>
 <tr>
