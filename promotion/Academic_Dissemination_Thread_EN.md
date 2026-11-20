@@ -20,7 +20,7 @@ Replace `[DOI]` with the article link once published. All numbers below are from
 
 **6/8** Of 1,151 RAS-related interventional oncology trials on ClinicalTrials.gov (after record-level review), 367 test a directly RAS-targeted agent in solid tumours: 201 involve KRAS G12C inhibitors, 60 G12D inhibitors, 57 vaccines/TCR-T, 35 multi-RAS(ON) or pan-RAS inhibitors. [Fig 4]
 
-**7/8** Resistance is diverse. After adagrasib, 17/38 patients had a putative mechanism: secondary KRAS mutations, RTK and MAPK bypass, and squamous transformation (2/9 lung adenocarcinomas with paired biopsies). [Fig 5]
+**7/8** Resistance is diverse. After adagrasib, 17/38 patients had a putative mechanism: secondary KRAS mutations, RTK and MAPK bypass, and squamous transformation (2 of 10 patients with a repeat tissue biopsy). [Fig 5]
 
 **8/8** Next steps: inhibitors for non-G12C alleles, first-line and perioperative trials, combinations matched to resistance, and trials that pre-specify how crossover will be handled. Every figure is reproducible from our repository. #OpenScience
 

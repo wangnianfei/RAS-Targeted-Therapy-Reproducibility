@@ -32,14 +32,14 @@
 <td><p>Class I</p>
 <p>(OFF-state, covalent G12C)</p></td>
 <td><p>Covalent binding to mutant Cys12 in the switch-II pocket of GDP-bound KRAS G12C, trapping the inactive state</p></td>
-<td><p><em>KRAS</em> G12C</p>
-<p><em>KRAS</em> G12C</p>
-<p><em>KRAS</em> G12C</p>
-<p><em>KRAS</em> G12C</p>
-<p><em>KRAS</em> G12C</p>
-<p><em>KRAS</em> G12C</p>
-<p><em>KRAS</em> G12C</p>
-<p><em>KRAS</em> G12C</p></td>
+<td><p>KRAS G12C</p>
+<p>KRAS G12C</p>
+<p>KRAS G12C</p>
+<p>KRAS G12C</p>
+<p>KRAS G12C</p>
+<p>KRAS G12C</p>
+<p>KRAS G12C</p>
+<p>KRAS G12C</p></td>
 <td><p>Sotorasib (AMG 510)</p>
 <p>Adagrasib (MRTX849)</p>
 <p>Divarasib (GDC-6036)</p>
@@ -73,8 +73,8 @@
 <td><p>Class II</p>
 <p>(non-covalent pocket binders)</p></td>
 <td><p>Reversible binding to the switch-II pocket (allele-selective) or to a pocket between switch I and switch II (not allele-selective), without covalent tethering</p></td>
-<td><p><em>KRAS</em> G12D</p>
-<p><em>KRAS</em> (switch I/II pocket)</p>
+<td><p>KRAS G12D</p>
+<p>KRAS (switch I/II pocket)</p>
 <p>Pan-KRAS</p></td>
 <td><p>MRTX1133</p>
 <p>BI-2852</p>
@@ -85,7 +85,7 @@
 <td><p>Phase I (terminated; formulation challenges)</p>
 <p>Preclinical</p>
 <p>Phase I (completed)</p></td>
-<td><p>• Sub-nanomolar affinity for GDP-bound KRAS G12D; efficacy in a KRAS G12D-mutant xenograft model [12]</p>
+<td><p>• Sub-nanomolar affinity for GDP-bound KRAS G12D; efficacy in a <em>KRAS</em> G12D-mutant xenograft model [12]</p>
 <p>• BI-2852 binds a switch I/II pocket and is not allele-selective [53]</p>
 <p>• Target occupancy depends on sustained drug exposure</p></td>
 </tr>
@@ -95,8 +95,8 @@
 <td><p>Drug binds cyclophilin A (CYPA); the drug–CYPA complex binds GTP-bound RAS next to switch I and switch II and blocks effector binding</p></td>
 <td><p>Multi-RAS(ON)</p>
 <p>RAS(ON), multiple isoforms</p>
-<p><em>KRAS</em> G12C(ON)</p>
-<p><em>KRAS</em> G12D(ON)</p></td>
+<p>KRAS G12C(ON)</p>
+<p>KRAS G12D(ON)</p></td>
 <td><p>Daraxonrasib (RMC-6236)</p>
 <p>RMC-7977</p>
 <p>Elironrasib (RMC-6291)</p>
@@ -118,9 +118,9 @@
 <td><p>Class IV</p>
 <p>(targeted degraders)</p></td>
 <td><p>Heterobifunctional molecules that bind KRAS and recruit an E3 ubiquitin ligase, inducing proteasomal degradation of KRAS</p></td>
-<td><p><em>KRAS</em> G12D</p>
-<p><em>KRAS</em> G12D</p>
-<p><em>KRAS</em> G12C</p>
+<td><p>KRAS G12D</p>
+<p>KRAS G12D</p>
+<p>KRAS G12C</p>
 <p>Pan-KRAS</p></td>
 <td><p>Setidegrasib (ASP3082)</p>
 <p>ARV-806</p>
@@ -155,7 +155,7 @@
 </tbody>
 </table>
 
-*Numbers in square brackets refer to the reference list of the main article. Clinical status is from ClinicalTrials.gov and regulatory records as of 18 November 2026. Abbreviations: CYPA, cyclophilin A; EMA, European Medicines Agency; FDA, US Food and Drug Administration; GEF, guanine nucleotide exchange factor; NMPA, National Medical Products Administration; SOS1, Son of Sevenless homologue 1; VHL, von Hippel–Lindau.*
+*Numbers in square brackets refer to the reference list of the main article. Clinical status is from ClinicalTrials.gov and regulatory records as of 18 November 2026. Abbreviations: CYPA, cyclophilin A; EMA, European Medicines Agency; FDA, US Food and Drug Administration; GEF, guanine nucleotide exchange factor; NMPA, National Medical Products Administration;* SOS1*, Son of Sevenless homologue 1; VHL, von Hippel–Lindau.*
 
 **Supplementary Table S2 \| Global regulatory approvals, indications, and post-marketing confirmatory trial trajectories for RAS-directed therapies**
 
@@ -182,7 +182,7 @@
 <tr>
 <td><p><strong>sotorasib</strong></p>
 <p>(AMG 510)</p></td>
-<td><p>Advanced <em>KRAS</em> G12C NSCLC, &gt;=2L (after prior systemic therapy)</p></td>
+<td><p>Advanced <em>KRAS</em> G12C NSCLC, ≥2L (after prior systemic therapy)</p></td>
 <td><p>FDA (2021-05-28);</p>
 <p>EMA (2022-01-06);</p>
 <p>PMDA (2022-01-20)</p></td>
@@ -193,7 +193,7 @@
 <tr>
 <td><p><strong>adagrasib</strong></p>
 <p>(MRTX849)</p></td>
-<td><p>Advanced <em>KRAS</em> G12C NSCLC, &gt;=2L (after prior systemic therapy)</p></td>
+<td><p>Advanced <em>KRAS</em> G12C NSCLC, ≥2L (after prior systemic therapy)</p></td>
 <td><p>FDA (2022-12-12);</p>
 <p>EMA (2024-01-05)</p></td>
 <td><p>Accelerated / conditional approval (single-arm phase II KRYSTAL-1, ORR 42.9%)</p></td>
@@ -202,7 +202,7 @@
 </tr>
 <tr>
 <td><p><strong>sotorasib + panitumumab</strong></p></td>
-<td><p>Advanced KRAS G12C metastatic colorectal cancer, &gt;=2L (chemorefractory)</p></td>
+<td><p>Advanced <em>KRAS</em> G12C metastatic colorectal cancer, ≥2L (chemorefractory)</p></td>
 <td><p>FDA (2025-01-16)</p></td>
 <td><p>Regular approval (first regular approval in colorectal cancer)</p></td>
 <td><p>Phase III CodeBreaK 300: 960 mg PFS HR 0.49 (P=0.006); final OS HR 0.70 (did not cross pre-specified multiplicity boundary)</p></td>
@@ -211,7 +211,7 @@
 <tr>
 <td><p><strong>fulzerasib</strong></p>
 <p>(IBI351 / GFH925)</p></td>
-<td><p>Advanced <em>KRAS</em> G12C NSCLC, &gt;=2L</p></td>
+<td><p>Advanced <em>KRAS</em> G12C NSCLC, ≥2L</p></td>
 <td><p>NMPA (China, 2024-08)</p></td>
 <td><p>Conditional approval (priority review)</p></td>
 <td><p>Pivotal single-arm phase II (n=116): IRRC ORR 49.1%, median PFS 9.7 mo</p></td>
@@ -220,7 +220,7 @@
 <tr>
 <td><p><strong>garsorasib</strong></p>
 <p>(D-1553)</p></td>
-<td><p>Advanced <em>KRAS</em> G12C NSCLC, &gt;=2L</p></td>
+<td><p>Advanced <em>KRAS</em> G12C NSCLC, ≥2L</p></td>
 <td><p>NMPA (China, 2024-11-08)</p></td>
 <td><p>Conditional approval (priority review)</p></td>
 <td><p>Pivotal single-arm phase II (n=123): IRC ORR 50.0%, median PFS 9.1 mo</p></td>
@@ -229,7 +229,7 @@
 <tr>
 <td><p><strong>glecirasib</strong></p>
 <p>(JAB-21822)</p></td>
-<td><p>Advanced <em>KRAS</em> G12C NSCLC, &gt;=2L</p></td>
+<td><p>Advanced <em>KRAS</em> G12C NSCLC, ≥2L</p></td>
 <td><p>NMPA (China, 2025-05)</p></td>
 <td><p>Conditional approval (priority review)</p></td>
 <td><p>Pivotal single-arm phase IIb (n=117): IRC ORR 47.9%</p></td>
@@ -238,7 +238,7 @@
 <tr>
 <td><p><strong>sosimerasib</strong></p>
 <p>(HBI-2438 / JMKX001899)</p></td>
-<td><p>Advanced <em>KRAS</em> G12C NSCLC, &gt;=2L</p></td>
+<td><p>Advanced <em>KRAS</em> G12C NSCLC, ≥2L</p></td>
 <td><p>NMPA (China, 2026-02-25)</p></td>
 <td><p>Conditional approval (priority review)</p></td>
 <td><p>Pivotal single-arm phase II (n=145): ORR 52.4%</p></td>
@@ -247,7 +247,7 @@
 <tr>
 <td><p><strong>avutometinib + defactinib</strong></p>
 <p>(VS-6766 / VS-6063)</p></td>
-<td><p>Recurrent <em>KRAS</em>-mutant low-grade serous ovarian cancer, &gt;=2L</p></td>
+<td><p>Recurrent <em>KRAS</em>-mutant low-grade serous ovarian cancer, ≥2L</p></td>
 <td><p>FDA (2025-05-08)</p></td>
 <td><p>Accelerated approval (RAF/MEK clamp + FAK inhibitor)</p></td>
 <td><p>Single-arm phase II RAMP 201: ORR 45% in <em>KRAS</em>-mutant cohort</p></td>
@@ -256,11 +256,11 @@
 <tr>
 <td><p><strong>daraxonrasib</strong></p>
 <p>(RMC-6236)</p></td>
-<td><p>Metastatic PDAC, &gt;=2L or chemotherapy-unfit</p></td>
+<td><p>Metastatic PDAC, ≥2L or chemotherapy-unfit</p></td>
 <td><p>FDA (2026-08-26, regular);</p>
 <p>EMA CHMP (2026-10-15)</p></td>
 <td><p>Regular approval (first regular approval for multi-RAS inhibitor)</p></td>
-<td><p>Pivotal phase III RASolute 302 (N=500; 248 vs 252), first interim analysis: median OS 13.2 vs 6.7 mo (HR 0.40, 95% CI 0.30–0.53, P&lt;0.001; RAS G12 population 13.2 vs 6.6 mo, HR 0.40); median PFS 7.2 vs 3.6 mo (HR 0.49, 95% CI 0.38–0.64, P&lt;0.001; RAS G12 population HR 0.45); ORR 31.6% vs 11.2%</p></td>
+<td><p>Pivotal phase III RASolute 302 (N=500; 248 vs 252), first interim analysis: median OS 13.2 vs 6.7 mo (HR 0.40, 95% CI 0.30–0.53, P&lt;0.001; <em>RAS</em> G12 population 13.2 vs 6.6 mo, HR 0.40); median PFS 7.2 vs 3.6 mo (HR 0.49, 95% CI 0.38–0.64, P&lt;0.001; <em>RAS</em> G12 population HR 0.45); ORR 31.6% vs 11.2%</p></td>
 <td><p>Active regular approval (FDA) and positive CHMP opinion (EMA); establishes multi-RAS tri-complex inhibition as standard of care in PDAC</p></td>
 </tr>
 <tr>
@@ -282,13 +282,13 @@
 
 | **Resistance class** | **Alterations reported \[main-text reference\]** | **Effect on signalling** | **Frequency in clinical cohorts** | **Strategy** | **Registered regimens with a direct RAS inhibitor (examples)** |
 |------------|------------|------------|------------|------------|------------|
-| On-target *KRAS* alterations | Switch-II pocket: R68S, H95D/Q/R, Y96C; second-site G12D/R/V/W, G13D, Q61H; *KRAS* G12C amplification \[49\] | Block drug binding or increase the GTP-bound fraction of KRAS \[49\] | After adagrasib: switch-II pocket 4/38 (11%); any acquired *KRAS* alteration 7/38 \[49\] | Switch to a RAS(ON) inhibitor \[86\]; H95 mutants remain sensitive to sotorasib in vitro \[49\] | Elironrasib ± daraxonrasib (NCT05462717, NCT06128551) |
+| On-target *KRAS* alterations | Switch-II pocket: R68S, H95D/Q/R, Y96C; second-site G12D/R/V/W, G13D, Q61H; *KRAS* G12C amplification \[49\] | Block drug binding or increase the GTP-bound fraction of KRAS \[49\] | After adagrasib: switch-II pocket 4/38 (11%); acquired *KRAS* mutation or amplification 9/38 \[49\] | Switch to a RAS(ON) inhibitor \[86\]; H95 mutants remain sensitive to sotorasib in vitro \[49\] | Elironrasib ± daraxonrasib (NCT05462717, NCT06128551) |
 | Upstream RTK reactivation | *MET* amplification; *ALK*, *RET*, *BRAF*, *RAF1* and *FGFR3* fusions \[49\]; *EGFR* and *FGFR2* alterations \[83\]; adaptive EGFR feedback in CRC \[23\] | Restores RAS-GTP loading upstream of KRAS | *MET* amplification as sole mechanism 2/38; fusions in 3/10 CRC \[49\] | Add an EGFR antibody (CRC) or an RTK inhibitor | Sotorasib + panitumumab (CodeBreaK 300) \[62\]; adagrasib + cetuximab (KRYSTAL-10) \[63\] |
 | SHP2/SOS1-mediated nucleotide exchange | No genomic alteration; adaptive reactivation of wild-type and G12C KRAS | Renewed GDP-to-GTP exchange \[15,16\] | Adaptive; no genomic frequency | Add an SHP2 or SOS1 inhibitor | Sotorasib + RMC-4630 (NCT05054725); adagrasib + TNO155 (NCT04330664); JDQ443 + TNO155 (NCT04699188); adagrasib + BI 1701963 (NCT04975256, terminated) |
 | Downstream MAPK bypass | *NRAS* Q61K, *BRAF* V600E and *MAP2K1* mutations; *BRAF* and *RAF1* fusions \[49\]; *NRAS*, *BRAF* and *MRAS* hotspot mutations \[83\] | ERK reactivation independent of KRAS G12C | RTK–RAS pathway alterations other than *KRAS* (rows 2 and 4): 14/38 (37%) \[49\]; any treatment-emergent alteration after sotorasib 27/43 \[83\] | Add a RAF, MEK or ERK inhibitor \[83\] | Sotorasib + trametinib (CodeBreaK 101, NCT04185883); sotorasib + avutometinib ± defactinib (NCT05074810) |
 | PI3K–AKT bypass | *PTEN* loss-of-function mutations \[49\] | PI3K–AKT–mTOR survival signalling | Reported; not quantified separately \[49\] | Add a PI3K, AKT or mTOR inhibitor (preclinical rationale) | Sotorasib + everolimus (CodeBreaK 101 platform, NCT04185883) |
 | *STK11* / *KEAP1* co-mutation | Baseline co-mutations, not acquired alterations \[34,35\] | Immunosuppressive tumour microenvironment; NRF2 activation (*KEAP1*) \[34,35\] | Baseline; prevalence in *KRAS*-mutant NSCLC given in Section 2.2 \[34,35\] | Direct RAS inhibitor + PD-1 antibody ± chemotherapy | Divarasib + pembrolizumab ± chemotherapy (NCT06793215, NCT07541170); olomorasib + pembrolizumab ± chemotherapy (NCT06119581, NCT06890598); not restricted to co-mutated disease |
-| Lineage plasticity | Adenocarcinoma-to-squamous cell carcinoma transformation \[49\] | Reduced dependence on KRAS | 2/9 lung adenocarcinomas with paired biopsies \[49\] | Histology-directed chemotherapy ± immunotherapy | No RAS-specific trial identified |
+| Lineage plasticity | Adenocarcinoma-to-squamous cell carcinoma transformation \[49\] | Reduced dependence on KRAS | 2/10 patients with a repeat tissue biopsy (9 with NSCLC) \[49\] | Histology-directed chemotherapy ± immunotherapy | No RAS-specific trial identified |
 
 *Frequencies come from 38 patients with acquired resistance to adagrasib (27 NSCLC, 10 CRC, 1 appendiceal cancer) \[49\] and 43 patients treated with sotorasib \[83\]; a patient can have several mechanisms. Registered regimens are examples from ClinicalTrials.gov (cut-off 18 November 2026) and are not restricted to patients with the listed resistance mechanism. Numbers in square brackets refer to the reference list of the main article. Abbreviations: CRC, colorectal cancer; MAPK, mitogen-activated protein kinase; NSCLC, non-small cell lung cancer; RTK, receptor tyrosine kinase.*
 
@@ -296,4 +296,4 @@
 
 <img src="media/image1.png" style="width:5.7in;height:3.32379in" />
 
-a, Qualitative matrix linking the seven resistance classes of Supplementary Table S3 (rows) to six combination or switching strategies (columns). Dark cells show the strategy listed for each class in Supplementary Table S3; the hatched cell shows an additional strategy discussed in Section 5.3 of the main text. The matrix summarises the review and does not represent new data. b, Patients with putative resistance mechanisms after adagrasib monotherapy (n = 38; 27 NSCLC, 10 colorectal and 1 appendiceal cancer): at least one mechanism, 17/38 (45%); multiple coincident mechanisms, 7/38 (18%); squamous transformation, 2 of 9 lung adenocarcinomas with paired biopsies (Awad et al., N Engl J Med 2021;384:2382–2393).
+a, Qualitative matrix linking the seven resistance classes of Supplementary Table S3 (rows) to six combination or switching strategies (columns). Dark cells show the strategy listed for each class in Supplementary Table S3; the hatched cell shows an additional strategy discussed in Section 5.3 of the main text. The matrix summarises the review and does not represent new data. b, Patients with putative resistance mechanisms after adagrasib monotherapy (n = 38; 27 NSCLC, 10 colorectal and 1 appendiceal cancer): at least one mechanism, 17/38 (45%); multiple coincident mechanisms, 7/38 (18%); squamous transformation, 2 of 10 patients with a repeat tissue biopsy at progression, 9 of whom had NSCLC (Awad et al., N Engl J Med 2021;384:2382–2393).

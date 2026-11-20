@@ -7,8 +7,8 @@ a, Qualitative matrix linking the seven acquired-resistance classes of Supplemen
    Section 5.3 ("secondary"). The matrix is a summary of the review, not new data.
 b, Frequency of putative resistance mechanisms after adagrasib monotherapy in the cohort of
    Awad et al., N Engl J Med 2021;384:2382-93 (doi:10.1056/NEJMoa2105281): 17/38 patients with >=1
-   mechanism; 7/38 with multiple coincident mechanisms; histologic (squamous) transformation in 2/9
-   lung adenocarcinomas with paired biopsies.
+   mechanism; 7/38 with multiple coincident mechanisms; histologic (squamous) transformation in 2 of the
+   10 patients with a repeat tissue biopsy at progression (9 NSCLC, 1 colorectal cancer).
 Outputs: ../figures/FigS1.{pdf,png,tif}
 """
 import os, subprocess
@@ -58,8 +58,8 @@ lg.text(0.553, 0.5, 'Additional strategy discussed in Section 5.3', va='center',
 
 bx = fig.add_axes([0.25, 0.075, 0.47, 0.13])
 labels = ['≥1 putative mechanism (17/38)', 'Multiple coincident mechanisms (7/38)',
-          'Squamous transformation\n(2/9 LUAD with paired biopsies)']
-vals = [17 / 38 * 100, 7 / 38 * 100, 2 / 9 * 100]
+          'Squamous transformation\n(2/10 repeat tissue biopsies)']
+vals = [17 / 38 * 100, 7 / 38 * 100, 2 / 10 * 100]
 bx.barh(range(3)[::-1], vals, color='#2A6F6F', height=0.6)
 for k, v in enumerate(vals): bx.text(v + 1, 2 - k, f'{v:.0f}%', va='center', fontsize=6)
 bx.set_yticks(range(3)[::-1]); bx.set_yticklabels(labels, fontsize=6)
@@ -71,6 +71,6 @@ fig.text(0.75, 0.14, 'Adagrasib monotherapy\n(27 NSCLC, 10 CRC,\n1 appendiceal c
 
 for ext in ('pdf', 'png'):
     fig.savefig(os.path.join(FIG, f'FigS1.{ext}'), dpi=500)
-subprocess.run(['magick', os.path.join(FIG, 'FigS1.png'), '-density', '500', '-units', 'PixelsPerInch',
+subprocess.run(['magick', os.path.join(FIG, 'FigS1.png'), '-units', 'PixelsPerInch', '-density', '500',
                 '-compress', 'LZW', os.path.join(FIG, 'FigS1.tif')], check=True)
 print('Figure S1 written to', FIG)

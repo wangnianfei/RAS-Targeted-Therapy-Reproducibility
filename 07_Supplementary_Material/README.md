@@ -2,7 +2,7 @@
 
 | Item | Content | Source file |
 |:---|:---|:---|
-| Figure S1 | **a,** seven resistance classes of Table S3 × six strategies (qualitative summary); **b,** 17/38 patients with ≥1 putative mechanism, 7/38 with multiple, 2/9 lung adenocarcinomas with squamous transformation after adagrasib (Awad et al. 2021) | `code/run_figureS1_resistance_matrix.py` → `figures/FigS1.*` |
+| Figure S1 | **a,** seven resistance classes of Table S3 × six strategies (qualitative summary); **b,** 17/38 patients with ≥1 putative mechanism, 7/38 with multiple, 2/10 patients with a repeat tissue biopsy showing squamous transformation after adagrasib (Awad et al. 2021) | `code/run_figureS1_resistance_matrix.py` → `figures/FigS1.*` |
 | Table S1 | Direct RAS inhibitors by mechanistic class (Section 3.2) and targeted degraders: target, developer, status on 18 November 2026 | `data/tableS1_direct_ras_inhibitors.csv` |
 | Table S2 | Regulatory approvals and confirmatory-trial outcomes | `data/tableS2_global_regulatory_approvals.md` |
 | Table S3 | Resistance mechanisms with frequencies from Awad 2021 and Zhao 2021, and registered combination regimens (NCT numbers) | `data/tableS3_resistance_mechanisms.csv` |

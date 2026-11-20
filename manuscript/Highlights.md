@@ -4,10 +4,10 @@
 
 - Direct RAS inhibitors now target both inactive (OFF) and active (ON) RAS.
 
-- Divarasib improved OS over sotorasib or adagrasib in pretreated KRAS G12C NSCLC.
+- Divarasib improved OS over sotorasib or adagrasib in pretreated *KRAS* G12C-mutant NSCLC.
 
 - Daraxonrasib roughly doubled median OS versus chemotherapy in pancreatic cancer.
 
-- Crossover may have diluted OS differences in pretreated KRAS G12C NSCLC trials.
+- Crossover may have diluted OS differences in pretreated *KRAS* G12C-mutant NSCLC trials.
 
-- Resistance: secondary KRAS mutations, RTK/MAPK bypass, histological transformation.
+- Resistance: secondary *KRAS* mutations, RTK/MAPK bypass, histological transformation.
