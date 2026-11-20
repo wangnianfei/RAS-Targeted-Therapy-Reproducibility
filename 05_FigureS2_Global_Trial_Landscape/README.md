@@ -1,4 +1,4 @@
-# Figure 4 — Registered interventional trials of directly RAS-targeted agents
+# Supplementary Figure S2 — Registered interventional trials of directly RAS-targeted agents
 
 `data/trials_1182.csv` is the rule-based output of `code/curate_trials.py`: 1,182 RAS-related interventional oncology trials from ClinicalTrials.gov (cut-off 18 November 2026), each classified by its relation to RAS. A record-level review (`code/apply_classification_corrections.py`, decisions and reasons in `data/classification_corrections.csv`) removed 31 records that were not oncology trials in patients with cancer and corrected the classification of 57 trials. The resulting `data/trials_curated.csv` holds 1,151 trials: RAS-targeted 369, RAS-regulator-targeted 130 (e.g. SHP2 or SOS1), RAS-biomarker-selected 607 and RAS-mentioned 45. The figure shows the 367 RAS-targeted trials in solid tumours (two trials restricted to haematological malignancies excluded):
 
@@ -10,11 +10,11 @@
 |:---|:---|
 | `data/trials_1182.csv` | Rule-based trial table (one row per NCT number), unchanged after curation |
 | `data/classification_corrections.csv` | Record-level corrections with reasons (exclusions, tier and class changes) |
-| `data/trials_curated.csv` | Analysis corpus (1,151 trials) used for Figure 4 and Section 5.1 |
+| `data/trials_curated.csv` | Analysis corpus (1,151 trials) used for Supplementary Figure S2, Section 5.1 and the Supplementary Methods |
 | `data/trials_excluded_on_review.csv` | The 31 records removed on review, with reasons |
 | `code/apply_classification_corrections.py` | Applies the corrections; re-derives tumour types from the condition list |
-| `code/summarise_trials.py` | Prints every number reported in Section 5.1 and the Figure 4 legend |
-| `code/run_figure4_trial_landscape.R` | Figure 4 → `figures/Fig4.*` and `figures/Figure4_Global_Clinical_Trial_Atlas_and_Geography.*` |
+| `code/summarise_trials.py` | Prints every number reported in Section 5.1, the Supplementary Methods and the Supplementary Figure S2 legend |
+| `code/run_figureS2_trial_landscape.R` | Supplementary Figure S2 → `figures/FigS2.*` and `figures/FigureS2_Global_Clinical_Trial_Atlas_and_Geography.*` |
 | `code/fetch_ctgov.py` | Harvest from the ClinicalTrials.gov API v2 (gene/biomarker sweep plus agent sweep) |
 | `code/curate_trials.py` | Rule-based inclusion and classification; writes excluded records with reasons |
 

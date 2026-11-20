@@ -8,7 +8,7 @@ On behalf of all authors, I am pleased to submit our Review Article entitled "Ta
 
 **Why this review now**
 
-Over the past two years, direct RAS inhibition has moved from early-phase trials to phase III evidence across several tumour types. Earlier reviews were written before most of these randomised data were available and focused mainly on pretreated non-small cell lung cancer. Since then, the multi-RAS(ON) inhibitor daraxonrasib has roughly doubled median overall survival compared with chemotherapy in previously treated pancreatic cancer, divarasib has improved overall survival over first-generation KRAS G12C inhibitors in non-small cell lung cancer, and adagrasib plus cetuximab failed to improve survival over chemotherapy in colorectal cancer, after which its US accelerated approval was withdrawn at the sponsor\'s request.
+Over the past two years, direct RAS inhibition has moved from early-phase trials to phase III evidence across several tumour types. Earlier reviews were written before most of these randomised data were available and focused mainly on pretreated non-small cell lung cancer. Since then, the multi-RAS(ON) inhibitor daraxonrasib has roughly doubled median overall survival compared with chemotherapy in previously treated pancreatic cancer, divarasib has improved overall survival over first-generation KRAS G12C inhibitors in non-small cell lung cancer, and adagrasib plus cetuximab failed to improve survival over chemotherapy in colorectal cancer, after which its US accelerated approval was withdrawn at the sponsor's request.
 
 **What the review contributes**
 
@@ -22,13 +22,13 @@ The review offers three things beyond a summary of trial endpoints:
 
 **Declarations**
 
-This manuscript is original, has not been published previously and is not under consideration elsewhere. All five authors contributed to the work and approved the submission. The authors declare no competing interests. The work was supported by the Scientific Research Project of Anhui Provincial Health Commission (Grant No. AHWJ:2025BAd20016). The use of generative AI tools (DeepSeek, Gemini and Claude) for reference checking, analysis code, editing of the Figure 5 schematic and language editing is disclosed in the manuscript. All analysis code and curated trial data (search cut-off 18 November 2026) are available at https://github.com/wangnianfei/RAS-Targeted-Therapy-Reproducibility.
+This manuscript is original, has not been published previously and is not under consideration elsewhere. All five authors contributed to the work and approved the submission. The authors declare no competing interests. The work was supported by the Scientific Research Project of Anhui Provincial Health Commission (Grant No. AHWJ:2025BAd20016). The use of generative AI tools (DeepSeek, Gemini and Claude) for reference checking, analysis code, editing of the Figure 4 schematic and language editing is disclosed in the manuscript. All analysis code and curated trial data (search cut-off 18 November 2026) are available at https://github.com/wangnianfei/RAS-Targeted-Therapy-Reproducibility.
 
 Thank you very much for your time, consideration, and editorial guidance. We look forward to your assessment.
 
 **Sincerely yours,**
 
-Shanghu Wang, MD, PhD\
-Department of Radiation Therapy, Anhui Chest Hospital\
-No. 397 Jixi Road, Hefei, Anhui 230026, China\
+Shanghu Wang, MD, PhD  
+Department of Radiation Therapy, Anhui Chest Hospital  
+No. 397 Jixi Road, Hefei, Anhui 230026, China  
 Email: wangshanghu@mail.ustc.edu.cn

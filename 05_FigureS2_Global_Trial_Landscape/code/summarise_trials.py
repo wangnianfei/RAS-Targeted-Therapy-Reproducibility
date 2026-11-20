@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Print every number reported in Section 5.1 and the Figure 4 legend.
+"""Print every number reported in Section 5.1, the Supplementary Methods and the Supplementary Figure S2 legend.
 
 Usage: python3 summarise_trials.py [csv] [--all-targeted]
   default csv: ../data/trials_curated.csv

@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript
 # ==============================================================================
-# Figure 4: Global Clinical Trial Landscape of RAS-Targeted Therapies
+# Supplementary Figure S2 (Figure 4 in the first submission): Global Clinical Trial Landscape of RAS-Targeted Therapies
 # Production Script for ESMO Open
 # Strictly 180.0 mm double-column width, 125.0 mm height, TrueType Arial font
 # Panel tags (A, B, C). All panels computed from trials_curated.csv (output of
@@ -125,9 +125,9 @@ cat("Panel B modality x strategy:\n"); print(modality_counts)
 top_row <- (p_phase | p_modality) + plot_layout(widths = c(1, 1.25))
 fig4_combined <- (top_row / (p_geo_combined | plot_spacer() + theme_void()) + plot_layout(heights = c(1, 0.8))) 
 
-out_pdf <- file.path(fig_dir, "Figure4_Global_Clinical_Trial_Atlas_and_Geography.pdf")
-out_png <- file.path(fig_dir, "Figure4_Global_Clinical_Trial_Atlas_and_Geography.png")
-out_eps <- file.path(fig_dir, "Figure4_Global_Clinical_Trial_Atlas_and_Geography.eps")
+out_pdf <- file.path(fig_dir, "FigureS2_Global_Clinical_Trial_Atlas_and_Geography.pdf")
+out_png <- file.path(fig_dir, "FigureS2_Global_Clinical_Trial_Atlas_and_Geography.png")
+out_eps <- file.path(fig_dir, "FigureS2_Global_Clinical_Trial_Atlas_and_Geography.eps")
 
 cairo_pdf(out_pdf, width = 180 / 25.4, height = 125 / 25.4, family = "Arial")
 print(fig4_combined)
@@ -141,4 +141,4 @@ ragg::agg_png(out_png, width = 180, height = 125, units = "mm", res = 500)
 print(fig4_combined)
 dev.off()
 
-cat("Successfully generated Figure 4 in:", fig_dir, "\n")
+cat("Successfully generated Supplementary Figure S2 in:", fig_dir, "\n")

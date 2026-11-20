@@ -31,10 +31,10 @@ echo "[3/7] Table 1: export the seven phase III trials to Markdown"
 echo "[4/7] Figure 3: PFS and OS forest plots"
 Rscript 04_Figure3_Phase3_Efficacy_Discordance/code/run_figure3_forest.R
 
-echo "[5/7] Figure 4: registered trials of directly RAS-targeted agents"
-"$PY" 05_Figure4_Global_Trial_Landscape/code/apply_classification_corrections.py
-"$PY" 05_Figure4_Global_Trial_Landscape/code/summarise_trials.py >/dev/null
-Rscript 05_Figure4_Global_Trial_Landscape/code/run_figure4_trial_landscape.R
+echo "[5/7] Supplementary Figure S2: registered trials of directly RAS-targeted agents"
+"$PY" 05_FigureS2_Global_Trial_Landscape/code/apply_classification_corrections.py
+"$PY" 05_FigureS2_Global_Trial_Landscape/code/summarise_trials.py >/dev/null
+Rscript 05_FigureS2_Global_Trial_Landscape/code/run_figureS2_trial_landscape.R
 
 echo "[6/7] Supplementary Figure S1"
 "$PY" 07_Supplementary_Material/code/run_figureS1_resistance_matrix.py
