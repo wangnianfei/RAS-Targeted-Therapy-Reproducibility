@@ -1,6 +1,6 @@
 # Figure 3 — PFS and OS hazard ratios in seven phase III trials
 
-Descriptive forest plots (log scale) of PFS (**a**) and OS (**b**) hazard ratios with 95% CIs; each row names its comparator. KRYSTAL-12 OS is shown as immature at the primary report. No pooled estimate or regression is calculated.
+Descriptive forest plots (log scale) of PFS (**a**) and OS (**b**) hazard ratios with 95% CIs; each row names its comparator. KRYSTAL-12 OS is shown as immature at the primary report. No pooled estimate or regression is calculated. Layout: one table-forest with PFS and OS side by side; colour = tumour type, filled square = 95% CI excludes 1, open = includes 1, square area proportional to n.
 
 | File | Role |
 |:---|:---|

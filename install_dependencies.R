@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript
 # Install the R packages used by the figure scripts (Figures 2-4).
-packages <- c("ggplot2", "patchwork", "dplyr", "tidyr", "scales", "ggtext", "ragg")
+packages <- c("ggplot2", "patchwork", "dplyr", "tidyr", "scales", "ggtext", "ragg", "maps")
 missing <- packages[!(packages %in% installed.packages()[, "Package"])]
 if (length(missing)) {
   message("Installing: ", paste(missing, collapse = ", "))

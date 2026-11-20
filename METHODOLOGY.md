@@ -41,7 +41,7 @@ This file describes how each figure and table of the review was produced. Every 
 | Tool | Used for |
 |:---|:---|
 | Python ≥ 3.10, matplotlib ≥ 3.8 | Figures 1 (composition), 5 and S1; data derivation for Figure 2; Table 1 export |
-| R ≥ 4.3: ggplot2, patchwork, dplyr, tidyr, scales, ggtext, ragg | Figures 2, 3 and 4 |
+| R ≥ 4.3: ggplot2, patchwork, dplyr, tidyr, scales, ggtext, ragg, maps | Figures 2, 3 and 4 |
 | PyMOL (open-source) ≥ 2.5 | Figure 1 structure renders |
 | ImageMagick ≥ 7.1 | Trimming renders; 500-dpi LZW TIFF export |
 

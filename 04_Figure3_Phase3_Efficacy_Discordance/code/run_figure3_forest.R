@@ -1,155 +1,107 @@
 #!/usr/bin/env Rscript
 # ==============================================================================
 # Figure 3: PFS and OS hazard ratios across seven phase III RCTs (descriptive forest plots)
-# Production Script for ESMO Open
-# 180.0 mm double-column width, 100.0 mm height, Arial
-# Panel tags (a, b; lower case as in all figures and legends). The former crossover-vs-OS regression panel (c) was removed in revision:
-# n = 6 heterogeneous trials, an active-comparator trial, and unsourced crossover values.
+# Production Script for ESMO Open. 180 mm x 92 mm, Arial, smallest text 6.5 pt.
+# Round 18 redesign: one table-forest. Each trial is one row; a (PFS) and b (OS) sit side by side and share the
+# trial, setting and n columns. Colour = tumour type; filled square = 95% CI excludes 1, open = includes 1;
+# square area proportional to n. No pooled estimate. Drawn in a single coordinate system (x in mm) so that
+# row bands and columns line up exactly.
 # ==============================================================================
 
 suppressPackageStartupMessages({
   library(ggplot2)
-  library(patchwork)
   library(dplyr)
-  library(scales)
-  })
+})
 
 initial_options <- commandArgs(trailingOnly = FALSE)
 file_arg <- grep("--file=", initial_options, value = TRUE)
-if (length(file_arg) > 0) {
-  script_dir <- dirname(normalizePath(sub("--file=", "", file_arg)))
-} else {
-  script_dir <- getwd()
-}
+script_dir <- if (length(file_arg) > 0) dirname(normalizePath(sub("--file=", "", file_arg))) else getwd()
 data_dir <- file.path(dirname(script_dir), "data")
 fig_dir <- file.path(dirname(script_dir), "figures")
 dir.create(fig_dir, showWarnings = FALSE, recursive = TRUE)
 
-trials_df <- read.csv(file.path(data_dir, "phase3_rct_outcomes.csv"), stringsAsFactors = FALSE)
-trials_df$row_id <- rev(seq_len(nrow(trials_df)))
-trials_df$os_status <- ifelse(!is.na(trials_df$os_high) & trials_df$os_high < 1.0, "Significant OS Benefit", "No Significant OS Benefit")
-trials_df$os_note[is.na(trials_df$os_note)] <- ""
+ink <- "#1A1A1A"; grey <- "#6B6B6B"
+pt <- function(x) x / .pt                       # font size in pt -> ggplot size
+d <- read.csv(file.path(data_dir, "phase3_rct_outcomes.csv"), stringsAsFactors = FALSE)
+d$y <- rev(seq_len(nrow(d)))
+d$tumour <- sub(",.*", "", d$setting)
+d$comparator <- sub(".*\\(vs ", "vs ", sub("\\)$", "", d$setting))
+d$line <- trimws(sub("^[^,]*, *([^ ]*).*", "\\1", d$setting))
+d$sub <- sprintf("%s, %s, %s", d$tumour, d$line, d$comparator)
+tum_col <- c(NSCLC = "#1F4E8C", mCRC = "#1B7F5C", mPDAC = "#B2182B", Melanoma = "#7A4E9C")
 
-make_info_panel <- function(tag_label = "a") {
-  ggplot(trials_df, aes(y = row_id)) +
-    geom_text(aes(x = 0, label = trial_id), hjust = 0, size = 2.2, fontface = "bold", family = "Arial", color = "#111111") +
-    geom_text(aes(x = 2.9, label = setting), hjust = 0, size = 1.95, family = "Arial", color = "#333333") +
-    geom_text(aes(x = 8.6, label = paste0("n=", n_pts)), hjust = 0, size = 1.95, family = "Arial", color = "#555555") +
-    annotate("text", x = 0, y = 8.1, label = "Trial", hjust = 0, size = 2.3, fontface = "bold", family = "Arial", color = "#111111") +
-    annotate("text", x = 2.9, y = 8.1, label = "Setting (comparator)", hjust = 0, size = 2.3, fontface = "bold", family = "Arial", color = "#111111") +
-    annotate("text", x = 8.6, y = 8.1, label = "n", hjust = 0, size = 2.3, fontface = "bold", family = "Arial", color = "#111111") +
-    geom_hline(yintercept = 7.45, linewidth = 0.35, color = "#333333") +
-    scale_x_continuous(limits = c(0, 9.6), expand = c(0, 0)) +
-    scale_y_continuous(limits = c(0.2, 8.6), expand = c(0, 0)) +
-    labs(tag = tag_label) +
-    theme_void(base_family = "Arial") +
-    theme(
-      plot.tag = element_text(face = "bold", size = 8.5, family = "Arial", color = "#111111"),
-      plot.tag.position = c(0.0, 1.0),
-      plot.margin = margin(t = 9, r = 2, b = 2, l = 8)
-    )
-}
+# ---- x layout (mm) ----
+X <- list(trial = 3.2, n = 59.5, f1 = c(63, 98), t1 = 99.5, f2 = c(121, 156), t2 = 157.5)
+lo <- log(0.25); hi <- log(1.6)
+mapx <- function(hr, f) f[1] + (log(hr) - lo) / (hi - lo) * (f[2] - f[1])
+brks <- c(0.25, 0.5, 1, 1.5)
 
-p_pfs_forest <- ggplot(trials_df, aes(y = row_id, x = pfs_hr)) +
-  geom_vline(xintercept = 1.0, linetype = "dashed", color = "#888888", linewidth = 0.35) +
-  geom_errorbar(aes(xmin = pfs_low, xmax = pfs_high), orientation = "y", width = 0.25, color = "#1B4F72", linewidth = 0.5) +
-  geom_point(aes(size = sqrt(n_pts)), shape = 22, fill = "#2980B9", color = "#1B4F72", stroke = 0.4) +
-  scale_size_continuous(range = c(2.0, 4.0), guide = "none") +
-  scale_x_continuous(
-    trans = "log10",
-    breaks = c(0.3, 0.5, 0.7, 1.0, 1.5),
-    limits = c(0.25, 1.6),
-    labels = c("0.3", "0.5", "0.7", "1.0", "1.5")
-  ) +
-  scale_y_continuous(limits = c(0.2, 8.6), expand = c(0, 0)) +
-  labs(x = "PFS Hazard Ratio (95% CI)", y = "") +
-  theme_classic(base_size = 7.0, base_family = "Arial") %+replace%
-  theme(
-    axis.line.x = element_line(colour = "#333333", linewidth = 0.35),
-    axis.ticks.x = element_line(colour = "#333333", linewidth = 0.35),
-    axis.line.y = element_blank(),
-    axis.ticks.y = element_blank(),
-    axis.text.y = element_blank(),
-    axis.text.x = element_text(colour = "#222222", size = 6.2),
-    axis.title.x = element_text(colour = "#111111", face = "bold", size = 6.8, margin = margin(t = 2, b = 1)),
-    plot.margin = margin(t = 9, r = 2, b = 2, l = 2)
-  ) +
-  geom_hline(yintercept = 7.45, linewidth = 0.35, color = "#333333") +
-  annotate("text", x = 0.62, y = 0.5, label = "◄ Favours Targeted", size = 1.85, color = "#2980B9", fontface = "bold", family = "Arial") +
-  annotate("text", x = 1.33, y = 0.5, label = "Favours Control ►", size = 1.85, color = "#777777", family = "Arial")
+ci_txt <- function(h, l, u) ifelse(is.na(h), "", sprintf("%.2f (%.2f–%.2f)", h, l, u))
+mk <- function(h, l, u, f, ep) data.frame(trial = d$trial_id, y = d$y, tumour = d$tumour, n = d$n_pts, ep = ep,
+  x = mapx(h, f), xl = mapx(l, f), xu = mapx(u, f), sig = !is.na(u) & u < 1, txt = ci_txt(h, l, u), ok = !is.na(h))
+pts <- rbind(mk(d$pfs_hr, d$pfs_low, d$pfs_high, X$f1, "PFS"), mk(d$os_hr, d$os_low, d$os_high, X$f2, "OS"))
+pts$tx <- ifelse(pts$ep == "PFS", X$t1, X$t2)
+pts$fill <- ifelse(pts$sig, tum_col[pts$tumour], "white")
 
-pfs_stat_labels <- sprintf("%.2f (%.2f-%.2f)", trials_df$pfs_hr, trials_df$pfs_low, trials_df$pfs_high)
-p_pfs_stats <- ggplot(trials_df, aes(y = row_id)) +
-  geom_text(aes(x = 0, label = pfs_stat_labels), hjust = 0, size = 2.1, color = "#111111", family = "Arial") +
-  annotate("text", x = 0, y = 8.1, label = "HR (95% CI)", hjust = 0, size = 2.3, fontface = "bold", family = "Arial", color = "#111111") +
-  geom_hline(yintercept = 7.45, linewidth = 0.35, color = "#333333") +
-  scale_x_continuous(limits = c(0, 5.8), expand = c(0, 0)) +
-  scale_y_continuous(limits = c(0.2, 8.6), expand = c(0, 0)) +
-  theme_void(base_family = "Arial") +
-  theme(plot.margin = margin(t = 9, r = 4, b = 2, l = 2))
+top <- nrow(d) + 0.5
+axis_y <- 0.35
+axes <- rbind(data.frame(f = "a", hr = brks, x = mapx(brks, X$f1)), data.frame(f = "b", hr = brks, x = mapx(brks, X$f2)))
+grp_breaks <- c(4.5, 2.5, 1.5)   # NSCLC | mCRC | mPDAC | melanoma
 
-panel_a <- (make_info_panel("a") | p_pfs_forest | p_pfs_stats) + plot_layout(widths = c(1.9, 1.4, 0.9))
+p <- ggplot() +
+  # row bands
+  geom_rect(data = d, aes(xmin = 0, xmax = 180, ymin = y - 0.5, ymax = y + 0.5),
+            fill = ifelse(d$y %% 2 == 0, "#F4F1EC", "white"), colour = NA) +
+  geom_segment(aes(x = 0, xend = 180, y = grp_breaks, yend = grp_breaks), colour = "#BFB8AC", linewidth = 0.3) +
+  # tumour colour bar
+  geom_rect(data = d, aes(xmin = 0, xmax = 1.3, ymin = y - 0.44, ymax = y + 0.44, fill = I(tum_col[tumour]))) +
+  # null lines
+  annotate("segment", x = mapx(1, X$f1), xend = mapx(1, X$f1), y = axis_y, yend = top, colour = grey, linewidth = 0.35, linetype = "22") +
+  annotate("segment", x = mapx(1, X$f2), xend = mapx(1, X$f2), y = axis_y, yend = top, colour = grey, linewidth = 0.35, linetype = "22") +
+  # CIs and squares
+  geom_segment(data = subset(pts, ok), aes(x = xl, xend = xu, y = y, yend = y, colour = I(tum_col[tumour])), linewidth = 0.7, lineend = "butt") +
+  geom_point(data = subset(pts, ok), aes(x = x, y = y, size = n, fill = I(fill), colour = I(tum_col[tumour])), shape = 22, stroke = 0.8) +
+  scale_size_area(max_size = 4.2, guide = "none") +
+  # HR text
+  geom_text(data = subset(pts, ok), aes(x = tx, y = y, label = txt, fontface = ifelse(sig, "bold", "plain")),
+            hjust = 0, size = pt(7), family = "Arial", colour = ink) +
+  annotate("text", x = X$t2, y = d$y[is.na(d$os_hr)], label = "OS immature", hjust = 0, size = pt(6.5), family = "Arial",
+           colour = grey, fontface = "italic") +
+  # trial and setting columns
+  geom_text(data = d, aes(x = X$trial, y = y + 0.17, label = trial_id), hjust = 0, size = pt(7.2), family = "Arial", fontface = "bold", colour = ink) +
+  geom_text(data = d, aes(x = X$trial, y = y - 0.21, label = sub), hjust = 0, size = pt(6.5), family = "Arial", colour = grey) +
+  geom_text(data = d, aes(x = X$n, y = y, label = n_pts), hjust = 1, size = pt(7), family = "Arial", colour = ink) +
+  # headers
+  annotate("text", x = c(X$trial, X$n), y = top + 0.42, label = c("Trial and setting", "n"), hjust = c(0, 1),
+           size = pt(7), family = "Arial", fontface = "bold", colour = ink) +
+  annotate("text", x = c(X$f1[1] - 3.5, X$f2[1] - 3.5), y = top + 0.95, label = c("a", "b"), hjust = 0, size = pt(9),
+           family = "Arial", fontface = "bold", colour = ink) +
+  annotate("text", x = c(X$f1[1], X$f2[1]), y = top + 0.95, label = c("Progression-free survival", "Overall survival"),
+           hjust = 0, size = pt(7.5), family = "Arial", fontface = "bold", colour = ink) +
+  annotate("text", x = c(X$t1, X$t2), y = top + 0.42, label = "HR (95% CI)", hjust = 0, size = pt(7), family = "Arial",
+           fontface = "bold", colour = ink) +
+  annotate("segment", x = 0, xend = 180, y = top, yend = top, colour = ink, linewidth = 0.45) +
+  # x axes
+  annotate("segment", x = c(X$f1[1], X$f2[1]), xend = c(X$f1[2], X$f2[2]), y = axis_y, yend = axis_y, colour = ink, linewidth = 0.4) +
+  geom_segment(data = axes, aes(x = x, xend = x, y = axis_y, yend = axis_y - 0.12), colour = ink, linewidth = 0.4) +
+  geom_text(data = axes, aes(x = x, y = axis_y - 0.32, label = c("0.25", "0.5", "1", "1.5")[match(hr, brks)]), size = pt(6.8), family = "Arial", colour = ink) +
+  annotate("text", x = c(mapx(1, X$f1) - 1.2, mapx(1, X$f2) - 1.2), y = axis_y - 0.72, label = "← Favours RAS-pathway inhibitor",
+           hjust = 1, size = pt(6.5), family = "Arial", colour = ink) +
+  annotate("text", x = c(mapx(1, X$f1) + 1.2, mapx(1, X$f2) + 1.2), y = axis_y - 0.72, label = "Control →",
+           hjust = 0, size = pt(6.5), family = "Arial", colour = grey) +
+  # key
+  annotate("point", x = c(3.5, 31), y = axis_y - 0.32, shape = 22, size = 2.6, stroke = 0.8, colour = ink, fill = c(ink, "white")) +
+  annotate("text", x = c(5.5, 33), y = axis_y - 0.32, label = c("95% CI excludes 1", "includes 1"), hjust = 0,
+           size = pt(6.5), family = "Arial", colour = ink) +
+  annotate("text", x = 3.2, y = axis_y - 0.72, label = "Square area proportional to n; HR on log scale", hjust = 0,
+           size = pt(6.5), family = "Arial", colour = grey) +
+  scale_x_continuous(limits = c(0, 180), expand = c(0, 0)) +
+  scale_y_continuous(limits = c(axis_y - 0.95, top + 1.25), expand = c(0, 0)) +
+  theme_void(base_family = "Arial") + theme(plot.margin = margin(2, 2, 2, 2))
 
-os_colors <- c("Significant OS Benefit" = "#C0392B", "No Significant OS Benefit" = "#7F8C8D")
-p_os_forest <- ggplot(trials_df, aes(y = row_id, x = os_hr)) +
-  geom_vline(xintercept = 1.0, linetype = "dashed", color = "#888888", linewidth = 0.35) +
-  geom_errorbar(aes(xmin = os_low, xmax = os_high, color = os_status), orientation = "y", width = 0.25, linewidth = 0.5) +
-  geom_point(aes(size = sqrt(n_pts), fill = os_status, color = os_status), shape = 22, stroke = 0.4) +
-  scale_color_manual(values = os_colors, guide = "none") +
-  scale_fill_manual(values = os_colors, guide = "none") +
-  scale_size_continuous(range = c(2.0, 4.0), guide = "none") +
-  scale_x_continuous(
-    trans = "log10",
-    breaks = c(0.3, 0.5, 0.7, 1.0, 1.5),
-    limits = c(0.25, 1.6),
-    labels = c("0.3", "0.5", "0.7", "1.0", "1.5")
-  ) +
-  scale_y_continuous(limits = c(0.2, 8.6), expand = c(0, 0)) +
-  labs(x = "OS Hazard Ratio (95% CI)", y = "") +
-  theme_classic(base_size = 7.0, base_family = "Arial") %+replace%
-  theme(
-    axis.line.x = element_line(colour = "#333333", linewidth = 0.35),
-    axis.ticks.x = element_line(colour = "#333333", linewidth = 0.35),
-    axis.line.y = element_blank(),
-    axis.ticks.y = element_blank(),
-    axis.text.y = element_blank(),
-    axis.text.x = element_text(colour = "#222222", size = 6.2),
-    axis.title.x = element_text(colour = "#111111", face = "bold", size = 6.8, margin = margin(t = 2, b = 1)),
-    plot.margin = margin(t = 9, r = 2, b = 2, l = 2)
-  ) +
-  geom_hline(yintercept = 7.45, linewidth = 0.35, color = "#333333") +
-  annotate("text", x = 0.62, y = 0.5, label = "◄ Favours Targeted", size = 1.85, color = "#C0392B", fontface = "bold", family = "Arial") +
-  annotate("text", x = 1.33, y = 0.5, label = "Favours Control ►", size = 1.85, color = "#777777", family = "Arial")
-
-os_stat_labels <- ifelse(is.na(trials_df$os_hr), trials_df$os_note, sprintf("%.2f (%.2f-%.2f)", trials_df$os_hr, trials_df$os_low, trials_df$os_high))
-p_os_stats <- ggplot(trials_df, aes(y = row_id)) +
-  geom_text(aes(x = 0, label = os_stat_labels), hjust = 0, size = 2.1, color = "#111111", family = "Arial") +
-  scale_color_manual(values = os_colors, guide = "none") +
-  annotate("text", x = 0, y = 8.1, label = "HR (95% CI)", hjust = 0, size = 2.3, fontface = "bold", family = "Arial", color = "#111111") +
-  geom_hline(yintercept = 7.45, linewidth = 0.35, color = "#333333") +
-  scale_x_continuous(limits = c(0, 5.8), expand = c(0, 0)) +
-  scale_y_continuous(limits = c(0.2, 8.6), expand = c(0, 0)) +
-  theme_void(base_family = "Arial") +
-  theme(plot.margin = margin(t = 9, r = 4, b = 2, l = 2))
-
-panel_b <- (make_info_panel("b") | p_os_forest | p_os_stats) + plot_layout(widths = c(1.9, 1.4, 0.9))
-
-fig3_combined <- (panel_a / panel_b) + plot_layout(heights = c(1, 1))
-
-out_pdf <- file.path(fig_dir, "Figure3_Phase3_RCT_PFS_OS_Forest.pdf")
-out_png <- file.path(fig_dir, "Figure3_Phase3_RCT_PFS_OS_Forest.png")
-out_eps <- file.path(fig_dir, "Figure3_Phase3_RCT_PFS_OS_Forest.eps")
-
-cairo_pdf(out_pdf, width = 180 / 25.4, height = 100 / 25.4, family = "Arial")
-print(fig3_combined)
-dev.off()
-
-cairo_ps(out_eps, width = 180 / 25.4, height = 100 / 25.4, family = "Arial")
-print(fig3_combined)
-dev.off()
-
-ragg::agg_png(out_png, width = 180, height = 100, units = "mm", res = 500)
-print(fig3_combined)
-dev.off()
-
+base <- file.path(fig_dir, "Figure3_Phase3_RCT_PFS_OS_Forest")
+w <- 180; h <- 92
+cairo_pdf(paste0(base, ".pdf"), width = w / 25.4, height = h / 25.4, family = "Arial"); print(p); invisible(dev.off())
+cairo_ps(paste0(base, ".eps"), width = w / 25.4, height = h / 25.4, family = "Arial"); print(p); invisible(dev.off())
+ragg::agg_png(paste0(base, ".png"), width = w, height = h, units = "mm", res = 500); print(p); invisible(dev.off())
 cat("Successfully generated Figure 3 in:", fig_dir, "\n")

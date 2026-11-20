@@ -78,11 +78,11 @@ Allele spectra differ across tumour types (Figure 2b). In pancreatic ductal aden
 
 Co-occurring alterations add heterogeneity. In *KRAS*-mutant NSCLC, co-mutations in *TP53* (about 40%), *STK11* (about 30%) and *KEAP1* (20%–25%) define distinct subgroups \[34,35\]. Tumours with co-mutated *KRAS* and *TP53* (KP) tend to have a high tumour mutational burden, immune infiltration and sensitivity to immune checkpoint inhibitors \[34,36\], whereas tumours with co-mutated *KRAS* and *STK11* (KL) show STING silencing, an immune-cold microenvironment and primary resistance to anti-PD-(L)1 monotherapy \[35,37,38\]. *KEAP1* loss, which often co-occurs with *STK11* loss, activates NRF2 and is associated with shorter benefit from KRAS G12C inhibitors \[39,40\].
 
-<img src="media/image2.png" style="width:6.4in;height:3.12865in" />
+<img src="media/image2.png" style="width:6.4in;height:2.9155in" />
 
 **Figure 2. *RAS* mutation prevalence and *KRAS* allele spectrum in a clinical sequencing cohort.**
 
-MSK-IMPACT cohort of 10,945 tumour samples from patients with advanced cancer \[26\], accessed through cBioPortal; missense mutations only. **a,** Samples with a *KRAS*, *NRAS* or *HRAS* missense mutation in seven tumour types (samples: pancreatic adenocarcinoma 384, colorectal 1,007, NSCLC 1,668, endometrial 218, melanoma 365, thyroid 231, bladder 423). **b,** *KRAS* missense mutations by allele in pancreatic adenocarcinoma (351 mutations), colorectal cancer (443) and NSCLC (456); Q61X includes all codon-61 substitutions.
+MSK-IMPACT cohort of 10,945 tumour samples from patients with advanced cancer \[26\], accessed through cBioPortal; missense mutations only. **a,** Samples with a *KRAS*, *NRAS* or *HRAS* missense mutation in seven tumour types (circle area proportional to the percentage shown; n, samples). **b,** *KRAS* missense mutations by allele (percentages shown for shares of 6% or more; n, mutations); Q61X includes all codon-61 substitutions.
 
 CRC, colorectal cancer; NSCLC, non-small cell lung cancer; PDAC, pancreatic ductal adenocarcinoma.
 
@@ -313,11 +313,11 @@ In KRYSTAL-12, adagrasib also improved PFS over docetaxel in 453 patients (media
 
 Krascendo 1 provided the first head-to-head comparison between direct RAS inhibitors: 338 patients with previously treated *KRAS* G12C-mutant advanced NSCLC were randomised to divarasib or to investigator's choice of sotorasib (156 control patients) or adagrasib (15) (Table 1, Figure 3) \[61\]. Divarasib improved PFS by BICR (median 9.8 versus 5.7 months; HR 0.58, 95% CI 0.44–0.76) and the confirmed ORR (58.4% versus 32.3%) and, at the first interim analysis, OS (median 17.7 versus 12.0 months; HR 0.56, 95% CI 0.41–0.78), with fewer grade 3 or 4 treatment-related adverse events (24.6% versus 34.5%) \[61\]. These results are consistent with the hypothesis that deeper and more sustained target inhibition improves outcomes, although the trial was not designed to test this mechanism. Because the control arm received an active KRAS G12C inhibitor rather than docetaxel, the survival advantage cannot be extrapolated to a comparison with chemotherapy.
 
-<img src="media/image3.png" style="width:6.4in;height:3.55495in" />
+<img src="media/image3.png" style="width:6.4in;height:3.27135in" />
 
 **Figure 3. Progression-free and overall survival hazard ratios across seven phase III randomised controlled trials.**
 
-Forest plots of hazard ratios (HRs, log scale) with 95% confidence intervals. **a,** Progression-free survival (PFS), assessed by blinded independent central review in all trials. **b,** Overall survival (OS); red boxes denote trials in which the 95% CI excludes 1. Box size is proportional to sample size. CodeBreaK 300: sotorasib 960 mg plus panitumumab. RASolute 302: overall population at the first interim analysis (*RAS* G12 population: PFS HR 0.45, OS HR 0.40). Krascendo 1: OS at the first interim analysis versus an active KRAS G12C inhibitor. NEMO (MEK inhibitor) is shown as a pathway-inhibition benchmark. KRYSTAL-12 OS data were immature and are not plotted. No pooled estimate is calculated; sources are given in Table 1.
+Forest plots of hazard ratios (HRs, log scale) with 95% confidence intervals. **a,** Progression-free survival (PFS), assessed by blinded independent central review in all trials. **b,** Overall survival (OS). Colour denotes tumour type; filled squares, 95% CI excludes 1; open squares, 95% CI includes 1; square area is proportional to sample size. CodeBreaK 300: sotorasib 960 mg plus panitumumab. RASolute 302: overall population at the first interim analysis (*RAS* G12 population: PFS HR 0.45, OS HR 0.40). Krascendo 1: OS at the first interim analysis versus an active KRAS G12C inhibitor. NEMO (MEK inhibitor) is shown as a pathway-inhibition benchmark. KRYSTAL-12 OS data were immature and are not plotted. No pooled estimate is calculated; sources are given in Table 1.
 
 1L/2L, first/second line; CI, confidence interval; HR, hazard ratio; mCRC, metastatic colorectal cancer; MEKi, MEK inhibitor; mPDAC, metastatic pancreatic ductal adenocarcinoma; NSCLC, non-small cell lung cancer; OS, overall survival; PFS, progression-free survival; TAS-102, trifluridine–tipiracil. Data cut-off: 18 November 2026.
 
@@ -357,7 +357,7 @@ Acquired resistance limits the duration of direct RAS inhibition, with median re
 
 Off-target mechanisms restore signalling through parallel or downstream pathways (Figure 4) \[49,82,83\]. After adagrasib, they included *MET* amplification, the only identified mechanism in 2 of 38 patients, oncogenic fusions involving *ALK*, *RET*, *BRAF*, *RAF1* and *FGFR3*, and acquired *BRAF* V600E, *NRAS* Q61K and *MAP2K1* mutations that reactivate ERK signalling independently of KRAS G12C \[49\]; *EGFR* and *FGFR2* alterations and *NRAS*, *BRAF* and *MRAS* hotspot mutations emerged after sotorasib \[83\]. Overall, RTK–RAS pathway alterations other than in *KRAS* were found in 14 of 38 patients (37%) after adagrasib \[49\]. In addition, 2 of the 10 patients with a repeat tissue biopsy at progression (9 of whom had NSCLC) showed transformation from adenocarcinoma to squamous cell carcinoma without an identifiable genomic mechanism, suggesting that non-genetic lineage changes can reduce dependence on KRAS \[49\].
 
-<img src="media/image5.png" style="width:6.4in;height:4.26667in" />
+<img src="media/image4.png" style="width:6.4in;height:4.26667in" />
 
 **Figure 4. Acquired resistance to KRAS G12C inhibitors and corresponding combination or switching strategies.**
 

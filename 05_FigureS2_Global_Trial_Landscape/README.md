@@ -10,7 +10,7 @@ The resulting `data/trials_curated.csv` holds 1,151 trials: RAS-targeted 355, RA
 
 - **a,** by phase: phase 1, 136 (incl. four early phase 1); phase 1/2, 88; phase 2, 86; phase 2/3 or 3, 43.
 - **b,** by principal drug class (KRAS G12C 201, KRAS G12D 60, vaccine/TCR-T 40, multi-RAS(ON)/pan-RAS 39; 13 other trials not shown), split by whether more than one intervention is registered (registered interventions include control-arm agents).
-- **c,** trials with at least one site in each region: North America 202, East Asia 188, Europe 93, other 80 (a trial counts in every region where it has a site).
+- **c,** world map of trials with at least one site in each country or region (65 countries and regions; a trial counts once in every country with a site; map polygons from the R `maps` package) with the 12 countries and regions with most trials, and regional totals: North America 202, East Asia 188, Europe 93, other 80 (a trial counts in every region where it has a site).
 
 Panel letters are lower case (a, b, c), as in all figures and legends of the manuscript.
 

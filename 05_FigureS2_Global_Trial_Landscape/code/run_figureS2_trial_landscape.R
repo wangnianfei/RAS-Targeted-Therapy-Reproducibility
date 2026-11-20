@@ -2,7 +2,8 @@
 # ==============================================================================
 # Supplementary Figure S2 (Figure 4 in the first submission): Global Clinical Trial Landscape of RAS-Targeted Therapies
 # Production Script for ESMO Open
-# Strictly 180.0 mm double-column width, 125.0 mm height, TrueType Arial font
+# 180 mm x 150 mm, Arial, smallest text 6.5 pt. Round 18 redesign: a, b compact bars on top; c, world map of
+# trial counts by country (a trial counts once in every country where it has a site) with region totals.
 # Panel tags (a, b, c; lower case as in all figures and legends). All panels computed from trials_curated.csv (output of
 # apply_classification_corrections.py): ras_tier == "RAS-targeted", excluding trials that enrol
 # patients with haematological malignancies (n = 353);
@@ -14,7 +15,8 @@ suppressPackageStartupMessages({
   library(patchwork)
   library(dplyr)
   library(scales)
-})
+  library(maps)
+  })
 
 initial_options <- commandArgs(trailingOnly = FALSE)
 file_arg <- grep("--file=", initial_options, value = TRUE)
@@ -65,31 +67,6 @@ targeted <- targeted %>%
   ), strategy = ifelse(grepl("\\|", interventions), "Combination Regimen", "Monotherapy"))
 # strategy = number of registered interventions (>= 2 vs 1); control-arm agents count as interventions
 
-phase_counts <- targeted %>% count(phase_clean) %>% mutate(pct = n / sum(n) * 100, pct_label = sprintf("%d (%.1f%%)", n, pct))
-phase_counts$phase_clean <- factor(phase_counts$phase_clean, levels = rev(c("Phase 1", "Phase 1/2", "Phase 2", "Phase 2/3 or 3")))
-
-p_phase <- ggplot(phase_counts, aes(y = phase_clean, x = n, fill = phase_clean)) +
-  geom_bar(stat = "identity", width = 0.62, color = "#FFFFFF", linewidth = 0.25) +
-  geom_text(aes(label = pct_label), hjust = -0.1, size = 2.1, color = "#222222", family = "Arial", fontface = "bold") +
-  scale_fill_manual(values = c("Phase 1" = "#2C3E50", "Phase 1/2" = "#16A085", "Phase 2" = "#2980B9", "Phase 2/3 or 3" = "#C0392B"), guide = "none") +
-  scale_x_continuous(limits = c(0, max(phase_counts$n) * 1.45), breaks = seq(0, 200, by = 50)) +
-  labs(tag = "a", x = "Number of trials (all statuses)", y = "") +
-  theme_esmo_tight()
-
-modality_counts <- targeted %>%
-  filter(modality %in% c("KRAS(G12C) Inhibitor", "KRAS(G12D) Inhibitor", "Multi-RAS(ON) / Pan-RAS", "RAS Vaccine / TCR-T")) %>%
-  count(modality, strategy) %>% group_by(modality) %>% mutate(total = sum(n)) %>% ungroup() %>% arrange(total)
-modality_counts$modality <- factor(modality_counts$modality, levels = unique(modality_counts$modality))
-modality_counts$strategy <- factor(modality_counts$strategy, levels = c("Combination Regimen", "Monotherapy"))
-
-p_modality <- ggplot(modality_counts, aes(y = modality, x = n, fill = strategy)) +
-  geom_bar(stat = "identity", position = "stack", width = 0.62, color = "#FFFFFF", linewidth = 0.25) +
-  scale_fill_manual(values = c("Combination Regimen" = "#E67E22", "Monotherapy" = "#2980B9"), labels = c("\u2265 2 registered interventions", "Single registered intervention")) +
-  scale_x_continuous(limits = c(0, 220), breaks = seq(0, 200, by = 50)) +
-  labs(tag = "b", x = "Number of trials", y = "") +
-  theme_esmo_tight() +
-  theme(legend.position = "top", legend.justification = "right", legend.margin = margin(b = -6, t = 0))
-
 region_of <- function(cc) {
   dplyr::case_when(
     cc %in% c("United States", "Canada", "Puerto Rico") ~ "North America",
@@ -97,7 +74,7 @@ region_of <- function(cc) {
     cc %in% c("Spain", "Italy", "France", "Germany", "United Kingdom", "Belgium", "Poland", "Netherlands", "Greece",
               "Denmark", "Switzerland", "Austria", "Hungary", "Portugal", "Romania", "Sweden", "Finland", "Norway",
               "Ukraine", "Czechia", "Ireland", "Bulgaria", "Russia", "Serbia", "Croatia", "Slovakia", "Estonia",
-              "Latvia", "Slovenia", "Iceland", "Georgia", "Turkey (T\u00fcrkiye)") ~ "Europe",
+              "Latvia", "Lithuania", "Slovenia", "Iceland", "Georgia", "Turkey (T\u00fcrkiye)") ~ "Europe",
     TRUE ~ "Other regions"
   )
 }
@@ -112,33 +89,118 @@ n_nosite <- sum(is.na(targeted$countries) | targeted$countries == "")
 geo_summary <- site_rows %>% count(region, name = "trials")
 geo_summary$region <- factor(geo_summary$region, levels = rev(c("North America", "East Asia", "Europe", "Other regions")))
 
-p_geo_combined <- ggplot(geo_summary, aes(y = region, x = trials)) +
-  geom_bar(stat = "identity", fill = "#34495E", width = 0.62) +
-  geom_text(aes(label = trials), hjust = -0.2, size = 2.1, color = "#222222", fontface = "bold", family = "Arial") +
-  scale_x_continuous(limits = c(0, max(geo_summary$trials) * 1.25), breaks = seq(0, 250, by = 50)) +
-  labs(tag = "c", x = "Trials with \u2265 1 site in region", y = "") +
-  theme_esmo_tight()
-cat("Panel C region counts:\n"); print(geo_summary); cat("multi-region:", n_multi, " no-site:", n_nosite, "\n")
-cat("Panel A phases:\n"); print(phase_counts)
-cat("Panel B modality x strategy:\n"); print(modality_counts)
+cat("Panel c region counts:\n"); print(geo_summary); cat("multi-region:", n_multi, " no-site:", n_nosite, "\n")
 
-top_row <- (p_phase | p_modality) + plot_layout(widths = c(1, 1.25))
-fig4_combined <- (top_row / (p_geo_combined | plot_spacer() + theme_void()) + plot_layout(heights = c(1, 0.8))) 
+ink <- "#1A1A1A"; grey <- "#6B6B6B"
+pt <- function(x) x / .pt
+theme_bar <- function() {
+  theme_minimal(base_size = 7, base_family = "Arial") %+replace%
+    theme(panel.grid = element_blank(),
+          axis.text.y = element_text(colour = ink, size = 7, hjust = 1),
+          axis.text.x = element_blank(), axis.title = element_blank(),
+          plot.tag = element_text(colour = ink, face = "bold", size = 9), plot.tag.position = c(0, 1),
+          plot.title = element_text(colour = ink, face = "bold", size = 7.5, hjust = 0, margin = margin(b = 3, l = 9)),
+          plot.title.position = "plot",
+          legend.text = element_text(size = 7, colour = ink), legend.title = element_blank(),
+          plot.margin = margin(t = 4, r = 6, b = 2, l = 4))
+}
 
-out_pdf <- file.path(fig_dir, "FigureS2_Global_Clinical_Trial_Atlas_and_Geography.pdf")
-out_png <- file.path(fig_dir, "FigureS2_Global_Clinical_Trial_Atlas_and_Geography.png")
-out_eps <- file.path(fig_dir, "FigureS2_Global_Clinical_Trial_Atlas_and_Geography.eps")
+# ---- a: phase ----
+phase_counts <- targeted %>% count(phase_clean) %>% mutate(pct = n / sum(n) * 100, lab = sprintf("%d (%.1f%%)", n, pct))
+phase_counts$phase_clean <- factor(phase_counts$phase_clean, levels = rev(c("Phase 1", "Phase 1/2", "Phase 2", "Phase 2/3 or 3")))
+cat("Panel a phases:\n"); print(phase_counts)
+phase_col <- c("Phase 1" = "#C6D7EE", "Phase 1/2" = "#8FB3DE", "Phase 2" = "#4A7CC0", "Phase 2/3 or 3" = "#1F3F73")
+p_a <- ggplot(phase_counts, aes(y = phase_clean, x = n, fill = phase_clean)) +
+  geom_col(width = 0.72) +
+  geom_text(aes(label = lab), hjust = -0.08, size = pt(7), family = "Arial", colour = ink) +
+  scale_fill_manual(values = phase_col, guide = "none") +
+  scale_x_continuous(limits = c(0, 205), expand = c(0, 0)) +
+  labs(tag = "a", title = "Trials by phase (n = 353)") + theme_bar()
 
-cairo_pdf(out_pdf, width = 180 / 25.4, height = 125 / 25.4, family = "Arial")
-print(fig4_combined)
-dev.off()
+# ---- b: drug class ----
+modality_counts <- targeted %>%
+  filter(modality %in% c("KRAS(G12C) Inhibitor", "KRAS(G12D) Inhibitor", "Multi-RAS(ON) / Pan-RAS", "RAS Vaccine / TCR-T")) %>%
+  count(modality, strategy) %>% group_by(modality) %>% mutate(total = sum(n)) %>% ungroup() %>% arrange(total)
+cat("Panel b modality x strategy:\n"); print(modality_counts)
+lab_mod <- c("KRAS(G12C) Inhibitor" = "KRAS G12C inhibitor", "KRAS(G12D) Inhibitor" = "KRAS G12D inhibitor",
+             "Multi-RAS(ON) / Pan-RAS" = "Multi-RAS(ON) / pan-RAS", "RAS Vaccine / TCR-T" = "Vaccine / TCR-T / engager")
+modality_counts$modality <- factor(modality_counts$modality, levels = unique(modality_counts$modality))
+modality_counts$strategy <- factor(modality_counts$strategy, levels = c("Combination Regimen", "Monotherapy"))
+tot <- modality_counts %>% distinct(modality, total)
+p_b <- ggplot(modality_counts, aes(y = modality, x = n, fill = strategy)) +
+  geom_col(width = 0.72, position = position_stack(reverse = TRUE)) +
+  geom_text(data = tot, aes(y = modality, x = total, label = total), inherit.aes = FALSE, hjust = -0.25, size = pt(7),
+            family = "Arial", colour = ink, fontface = "bold") +
+  scale_fill_manual(values = c("Monotherapy" = "#1F3F73", "Combination Regimen" = "#8FB3DE"),
+                    breaks = c("Monotherapy", "Combination Regimen"),
+                    labels = c("1 registered intervention", "≥ 2 registered interventions")) +
+  scale_y_discrete(labels = lab_mod) +
+  scale_x_continuous(limits = c(0, 225), expand = c(0, 0)) +
+  guides(fill = guide_legend(nrow = 1, keywidth = unit(3, "mm"), keyheight = unit(3, "mm"))) +
+  labs(tag = "b", title = "Trials by principal drug class") + theme_bar() +
+  theme(legend.position = "bottom", legend.justification = c(0, 0), legend.location = "plot",
+        legend.margin = margin(t = 0, l = 0), legend.box.spacing = unit(1, "mm"))
 
-cairo_ps(out_eps, width = 180 / 25.4, height = 125 / 25.4, family = "Arial")
-print(fig4_combined)
-dev.off()
+# ---- c: world map ----
+map_name <- c("United States" = "USA", "United Kingdom" = "UK", "Czechia" = "Czech Republic", "Turkey (Türkiye)" = "Turkey")
+by_country <- targeted %>%
+  mutate(country = strsplit(ifelse(is.na(countries), "", countries), "; ")) %>% tidyr::unnest(country) %>%
+  filter(country != "") %>% distinct(nct_id, country) %>% count(country, name = "trials") %>% arrange(desc(trials))
+by_country$map_region <- ifelse(by_country$country %in% names(map_name), map_name[by_country$country], by_country$country)
+cat("Countries with >= 1 site:", nrow(by_country), "\n")
+world <- map_data("world", wrap = c(-180, 180)) %>% filter(region != "Antarctica")
+# Hong Kong is drawn as a sub-region of China in the map data; colour it by its own count
+world$key <- ifelse(world$region == "China" & !is.na(world$subregion) & world$subregion == "Hong Kong", "Hong Kong", world$region)
+world <- world %>% left_join(by_country %>% select(key = map_region, trials), by = "key")
+cuts <- c(0, 4, 9, 24, 49, 99, Inf)
+bins <- c("1–4", "5–9", "10–24", "25–49", "50–99", "≥100")
+world$bin <- cut(world$trials, cuts, labels = bins)
+map_col <- setNames(c("#FCE9D4", "#F7C99B", "#EF9A62", "#DC5F3C", "#B32B2E", "#6E1023"), bins)
+unmatched <- setdiff(by_country$map_region, unique(world$key)); if (length(unmatched)) cat("Not drawn on map:", unmatched, "\n")
 
-ragg::agg_png(out_png, width = 180, height = 125, units = "mm", res = 500)
-print(fig4_combined)
-dev.off()
+gs <- setNames(geo_summary$trials, as.character(geo_summary$region))
+reg_lab <- data.frame(
+  lon = c(-145, -36, 160, 75),
+  lat = c(20, 44, 22, -38),
+  lab = c(sprintf("North America\n%d trials", gs["North America"]), sprintf("Europe\n%d trials", gs["Europe"]),
+          sprintf("East Asia\n%d trials", gs["East Asia"]), sprintf("Other regions\n%d trials", gs["Other regions"])))
 
+top <- head(by_country, 12)
+top$lab <- ifelse(top$country == "Turkey (Türkiye)", "Türkiye", top$country)
+
+p_map <- ggplot(world, aes(long, lat, group = group)) +
+  geom_polygon(aes(fill = bin), colour = "white", linewidth = 0.08) +
+  scale_fill_manual(values = map_col, na.value = "#E4E1DB", breaks = bins, drop = FALSE,
+                    name = "Trials with ≥ 1 site") +
+  geom_text(data = reg_lab, aes(lon, lat, label = lab), inherit.aes = FALSE, size = pt(7), family = "Arial",
+            colour = ink, fontface = "bold", lineheight = 0.95) +
+  coord_quickmap(xlim = c(-168, 180), ylim = c(-56, 80), expand = FALSE, clip = "off") +
+  guides(fill = guide_legend(nrow = 1, title.position = "left", keywidth = unit(5, "mm"), keyheight = unit(2.6, "mm"),
+                             label.position = "bottom")) +
+  labs(tag = "c", title = sprintf("Trial sites by country or region (%d countries and regions; %d trials multinational)", nrow(by_country), sum(targeted$is_multinational == "yes"))) +
+  theme_void(base_family = "Arial") +
+  theme(plot.tag = element_text(colour = ink, face = "bold", size = 9), plot.tag.position = c(0, 1),
+        plot.title = element_text(colour = ink, face = "bold", size = 7.5, hjust = 0, margin = margin(b = 2, l = 9)),
+        legend.position = "bottom", legend.title = element_text(size = 7, colour = ink, margin = margin(r = 4)),
+        legend.text = element_text(size = 6.5, colour = ink), legend.spacing.x = unit(0, "mm"),
+        plot.margin = margin(t = 4, r = 2, b = 2, l = 4))
+
+top$country_f <- factor(top$lab, levels = rev(top$lab))
+top$bin <- cut(top$trials, cuts, labels = bins)
+p_top <- ggplot(top, aes(y = country_f, x = trials, fill = bin)) +
+  geom_col(width = 0.72) +
+  geom_text(aes(label = trials), hjust = -0.2, size = pt(7), family = "Arial", colour = ink) +
+  scale_fill_manual(values = map_col, guide = "none") +
+  scale_x_continuous(limits = c(0, 235), expand = c(0, 0)) +
+  labs(title = "Top 12 countries and regions") + theme_bar() +
+  theme(plot.margin = margin(t = 6, r = 4, b = 14, l = 2))
+
+fig <- wrap_plots(wrap_plots(p_a, p_b, widths = c(1, 1.15)), wrap_plots(p_map, p_top, widths = c(3.3, 1)),
+                  ncol = 1, heights = c(0.5, 1))
+
+base <- file.path(fig_dir, "FigureS2_Global_Clinical_Trial_Atlas_and_Geography")
+w <- 180; h <- 112
+cairo_pdf(paste0(base, ".pdf"), width = w / 25.4, height = h / 25.4, family = "Arial"); print(fig); invisible(dev.off())
+cairo_ps(paste0(base, ".eps"), width = w / 25.4, height = h / 25.4, family = "Arial"); print(fig); invisible(dev.off())
+ragg::agg_png(paste0(base, ".png"), width = w, height = h, units = "mm", res = 500); print(fig); invisible(dev.off())
 cat("Successfully generated Supplementary Figure S2 in:", fig_dir, "\n")

@@ -5,6 +5,8 @@ Data: MSK-IMPACT cohort (Zehir et al., *Nat Med* 2017; 10,945 samples), exported
 **a,** Percentage of samples with a *KRAS*, *NRAS* or *HRAS* missense mutation: pancreatic adenocarcinoma (n = 384) *KRAS* 90.4%; colorectal (1,007) *KRAS* 43.1%; NSCLC (1,668) *KRAS* 26.9%; endometrial (218) *KRAS* 19.3%; melanoma (365) *NRAS* 21.4%; thyroid (231) *NRAS* 16.0%; bladder (423) *KRAS* 6.6%, *HRAS* 4.3%.
 **b,** KRAS missense mutations by allele: pancreatic adenocarcinoma (351 mutations) G12D 41.3%, G12V 32.8%, G12R 13.4%, G12C 2.0%; colorectal (443) G12D 27.5%, G12V 19.6%, G13D 17.2%; NSCLC (456) G12C 43.0%, G12V 14.7%, G12D 13.4%.
 
+Layout: **a** is a bubble matrix (circle area proportional to the percentage, value printed in every cell, n = samples); **b** uses 100% bars with the share printed in each segment of 6% or more (n = mutations).
+
 | File | Role |
 |:---|:---|
 | `data/cbioportal_mutations.json`, `data/cbioportal_sample_cancertype.json`, `data/cbioportal_sample_cancertype_detailed.json` | cBioPortal export |

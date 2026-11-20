@@ -5,7 +5,7 @@
 #  networks to randomised clinical trial landscapes" (submitted to ESMO Open)
 #
 # Requirements: Python >= 3.10 with matplotlib; R >= 4.3 with ggplot2, patchwork,
-# dplyr, tidyr, scales, ggtext, ragg; PyMOL (open-source, `pymol` on PATH);
+# dplyr, tidyr, scales, ggtext, ragg, maps; PyMOL (open-source, `pymol` on PATH);
 # ImageMagick 7 (`magick` on PATH). Data cut-off: 18 November 2026.
 # ==============================================================================
 set -euo pipefail

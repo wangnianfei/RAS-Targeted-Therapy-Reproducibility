@@ -31,7 +31,7 @@
 
 ## 复现
 
-依赖：Python ≥ 3.10（matplotlib）；R ≥ 4.3（ggplot2、patchwork、dplyr、tidyr、scales、ggtext、ragg）；PyMOL 开源版；ImageMagick 7。
+依赖：Python ≥ 3.10（matplotlib）；R ≥ 4.3（ggplot2、patchwork、dplyr、tidyr、scales、ggtext、ragg、maps）；PyMOL 开源版；ImageMagick 7。
 
 ```bash
 pip install -r requirements.txt

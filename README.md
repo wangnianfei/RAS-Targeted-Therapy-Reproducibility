@@ -35,7 +35,7 @@ Figures 1–3 and Supplementary Figures S1 and S2 are drawn from data or structu
 
 ## Reproduce
 
-Requirements: Python ≥ 3.10 with matplotlib; R ≥ 4.3 with ggplot2, patchwork, dplyr, tidyr, scales, ggtext and ragg; PyMOL (open-source); ImageMagick 7.
+Requirements: Python ≥ 3.10 with matplotlib; R ≥ 4.3 with ggplot2, patchwork, dplyr, tidyr, scales, ggtext, ragg and maps; PyMOL (open-source); ImageMagick 7.
 
 ```bash
 git clone https://github.com/wangnianfei/RAS-Targeted-Therapy-Reproducibility.git
