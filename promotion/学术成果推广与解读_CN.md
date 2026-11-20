@@ -25,7 +25,7 @@ RAS 曾被认为"不可成药"。2013 年开关 II 口袋（switch-II pocket）�
 - **未见 OS 获益或尚不成熟**：CodeBreaK 200 中 sotorasib 对比多西他赛 OS 无差异（HR 1.01），多西他赛组 26% 交叉至 sotorasib；KRYSTAL-12 中 adagrasib 的 OS 在首次报告时尚不成熟。
 - **结直肠癌**：单药疗效有限，需联合抗 EGFR。sotorasib 联合帕尼单抗在化疗难治人群中延长 PFS（CodeBreaK 300）；adagrasib 联合西妥昔单抗在二线未优于化疗（KRYSTAL-10），该加速批准适应证于 2026 年 9 月 1 日应申办方请求撤回。
 
-## 三、1,151 项注册试验（附图 S2）
+## 三、1,151 项注册试验（附图 S1）
 
 ClinicalTrials.gov 中经逐条复核保留的 1,151 项 RAS 相关干预性肿瘤试验里，353 项在实体瘤中检验直接靶向 RAS 的药物：KRAS G12C 抑制剂 201 项、G12D 抑制剂 60 项、疫苗/TCR-T 40 项、multi-RAS(ON)/pan-RAS 抑制剂 39 项。其中 198 项在美国、152 项在中国设有中心；行业资助 241 项，并主导全部 43 项 II/III 或 III 期试验。
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript
 # ==============================================================================
-# Supplementary Figure S2 (Figure 4 in the first submission): Global Clinical Trial Landscape of RAS-Targeted Therapies
+# Supplementary Figure S1 (Figure 4 in the first submission): Global Clinical Trial Landscape of RAS-Targeted Therapies
 # Production Script for ESMO Open
 # 180 mm x 150 mm, Arial, smallest text 6.5 pt. Round 18 redesign: a, b compact bars on top; c, world map of
 # trial counts by country (a trial counts once in every country where it has a site) with region totals.
@@ -200,9 +200,9 @@ p_top <- ggplot(top, aes(y = country_f, x = trials, fill = bin)) +
 fig <- wrap_plots(wrap_plots(p_a, p_b, widths = c(1, 1.15)), wrap_plots(p_map, p_top, widths = c(3.3, 1)),
                   ncol = 1, heights = c(0.5, 1))
 
-base <- file.path(fig_dir, "FigureS2_Global_Clinical_Trial_Atlas_and_Geography")
+base <- file.path(fig_dir, "FigureS1_Global_Clinical_Trial_Atlas_and_Geography")
 w <- 180; h <- 112
 cairo_pdf(paste0(base, ".pdf"), width = w / 25.4, height = h / 25.4, family = "Arial"); print(fig); invisible(dev.off())
 cairo_ps(paste0(base, ".eps"), width = w / 25.4, height = h / 25.4, family = "Arial"); print(fig); invisible(dev.off())
 ragg::agg_png(paste0(base, ".png"), width = w, height = h, units = "mm", res = 500); print(fig); invisible(dev.off())
-cat("Successfully generated Supplementary Figure S2 in:", fig_dir, "\n")
+cat("Successfully generated Supplementary Figure S1 in:", fig_dir, "\n")

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Supplementary Figure S1 (revised).
+"""Supplementary Figure S2 (revised).
 
 a, Qualitative matrix linking the seven acquired-resistance classes of Supplementary Table S3 (rows)
    to six combination or switching strategies (columns). Filled cells reproduce the strategy listed for
@@ -9,7 +9,7 @@ b, Frequency of putative resistance mechanisms after adagrasib monotherapy in th
    Awad et al., N Engl J Med 2021;384:2382-93 (doi:10.1056/NEJMoa2105281): 17/38 patients with >=1
    mechanism; 7/38 with multiple coincident mechanisms; histologic (squamous) transformation in 2 of the
    10 patients with a repeat tissue biopsy at progression (9 NSCLC, 1 colorectal cancer).
-Outputs: ../figures/FigS1.{pdf,png,tif}
+Outputs: ../figures/FigS2.{pdf,png,tif}
 """
 import os, subprocess
 import matplotlib
@@ -30,7 +30,7 @@ COLS = ['Switch to a\nRAS(ON) inhibitor', 'RTK antibody\nor TKI', 'SHP2 or SOS1\
         'RAF, MEK or ERK\ninhibitor', 'PI3K, AKT or\nmTOR inhibitor', 'Immunotherapy and/or\nchemotherapy']
 # In-cell notes so that each filled cell reads exactly as the strategy in Supplementary Table S3 (round 20)
 NOTES = {(5, 5): 'with a direct\nRAS inhibitor', (6, 5): 'histology-\ndirected'}
-# One palette for both panels, shared with Supplementary Figure S2: navy = filled cells and bars
+# One palette for both panels, shared with Supplementary Figure S1: navy = filled cells and bars
 NAVY, LIGHT, EMPTY = '#1F3F73', '#C6D7EE', '#F1F3F6'
 PRIMARY = {(0, 0), (1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (6, 5)}
 SECONDARY = {(1, 2)}
@@ -76,7 +76,7 @@ fig.text(0.01, 0.21, 'b', fontsize=9, fontweight='bold', va='top')
 fig.text(0.75, 0.14, 'Adagrasib monotherapy\n(27 NSCLC, 10 CRC,\n1 appendiceal cancer;\nAwad et al. 2021)', fontsize=5.8, va='center', color='#333333')
 
 for ext in ('pdf', 'png'):
-    fig.savefig(os.path.join(FIG, f'FigS1.{ext}'), dpi=500)
-subprocess.run(['magick', os.path.join(FIG, 'FigS1.png'), '-units', 'PixelsPerInch', '-density', '500',
-                '-compress', 'LZW', os.path.join(FIG, 'FigS1.tif')], check=True)
-print('Figure S1 written to', FIG)
+    fig.savefig(os.path.join(FIG, f'FigS2.{ext}'), dpi=500)
+subprocess.run(['magick', os.path.join(FIG, 'FigS2.png'), '-units', 'PixelsPerInch', '-density', '500',
+                '-compress', 'LZW', os.path.join(FIG, 'FigS2.tif')], check=True)
+print('Figure S2 written to', FIG)

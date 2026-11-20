@@ -42,14 +42,14 @@ echo "[4/7] Figure 3: PFS and OS forest plots"
 Rscript 04_Figure3_Phase3_Efficacy_Discordance/code/run_figure3_forest.R
 r_exports 04_Figure3_Phase3_Efficacy_Discordance Figure3_Phase3_RCT_PFS_OS_Forest Fig3
 
-echo "[5/7] Supplementary Figure S2: registered trials of directly RAS-targeted agents"
-"$PY" 05_FigureS2_Global_Trial_Landscape/code/apply_classification_corrections.py
-"$PY" 05_FigureS2_Global_Trial_Landscape/code/summarise_trials.py >/dev/null
-Rscript 05_FigureS2_Global_Trial_Landscape/code/run_figureS2_trial_landscape.R
-r_exports 05_FigureS2_Global_Trial_Landscape FigureS2_Global_Clinical_Trial_Atlas_and_Geography FigS2
+echo "[5/7] Supplementary Figure S1: registered trials of directly RAS-targeted agents"
+"$PY" 05_FigureS1_Global_Trial_Landscape/code/apply_classification_corrections.py
+"$PY" 05_FigureS1_Global_Trial_Landscape/code/summarise_trials.py >/dev/null
+Rscript 05_FigureS1_Global_Trial_Landscape/code/run_figureS1_trial_landscape.R
+r_exports 05_FigureS1_Global_Trial_Landscape FigureS1_Global_Clinical_Trial_Atlas_and_Geography FigS1
 
-echo "[6/7] Supplementary Figure S1"
-"$PY" 07_Supplementary_Material/code/run_figureS1_resistance_matrix.py
+echo "[6/7] Supplementary Figure S2"
+"$PY" 07_Supplementary_Material/code/run_figureS2_resistance_matrix.py
 
 echo "[7/7] Supplementary Tables S1 and S3 (print from data files)"
 "$PY" 07_Supplementary_Material/code/build_supplementary_tables.py >/dev/null

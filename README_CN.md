@@ -24,8 +24,8 @@
 | 表 1 | 七项 III 期试验设计与结局 | `03_Table1_Pivotal_Phase3_RCTs` |
 | 图 3 | 七项试验 PFS 与 OS 风险比森林图 | `04_Figure3_Phase3_Efficacy_Discordance` |
 | 图 4 | KRAS G12C 抑制剂获得性耐药与对应策略示意图 | `06_Figure4_Resistance_Networks` |
-| 附图 S2 | 353 项实体瘤直接靶向 RAS 试验的分期、药物类别与地区分布（首投稿中的图 4） | `05_FigureS2_Global_Trial_Landscape` |
-| 附图 S1、附表 S1–S3 | 耐药类别×策略矩阵；抑制剂一览；监管审批；耐药机制 | `07_Supplementary_Material` |
+| 附图 S1 | 353 项实体瘤直接靶向 RAS 试验的分期、药物类别与地区分布（首投稿中的图 4） | `05_FigureS1_Global_Trial_Landscape` |
+| 附图 S2、附表 S1–S3 | 耐药类别×策略矩阵；抑制剂一览；监管审批；耐药机制 | `07_Supplementary_Material` |
 
 图 1–3 与附图 S1、S2 由脚本根据数据或结构坐标绘制；图 4 为作者用绘图软件绘制、借助 AI 工具修改的示意图，不由代码生成。各目录 README 写明数据来源与细节，方法见 [`METHODOLOGY.md`](./METHODOLOGY.md)。
 

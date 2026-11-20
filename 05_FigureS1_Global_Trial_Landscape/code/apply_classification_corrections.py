@@ -3,7 +3,7 @@
 
 Input   data/trials_1182.csv                 output of curate_trials.py (left unchanged)
         data/classification_corrections.csv  one row per verified correction, with reason
-Output  data/trials_curated.csv              analysis corpus used for Supplementary Figure S2, Section 5.1 and the Supplementary Methods
+Output  data/trials_curated.csv              analysis corpus used for Supplementary Figure S1, Section 5.1 and the Supplementary Methods
         data/trials_excluded_on_review.csv   records removed from the corpus, with reason
 
 Why a second step: curate_trials.py flags a trial as RAS-targeted when a RAS-directed
