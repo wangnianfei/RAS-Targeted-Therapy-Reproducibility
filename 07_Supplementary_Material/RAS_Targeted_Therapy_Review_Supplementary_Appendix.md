@@ -247,7 +247,7 @@
 <tr>
 <td><p><strong>daraxonrasib</strong></p>
 <p>(RMC-6236)</p></td>
-<td><p>Metastatic PDAC, ≥2L or chemotherapy-unfit</p></td>
+<td><p>Metastatic PDAC, ≥2L (FDA, EC) or unfit for multi-agent chemotherapy (FDA)</p></td>
 <td><p>FDA (2026-08-26, regular);</p>
 <p>EC (November 2026) [S2,S3]</p></td>
 <td><p>Regular approval (first regular approval for multi-RAS inhibitor)</p></td>
@@ -274,7 +274,7 @@
 | **Resistance class** | **Alterations reported \[main-text reference\]** | **Effect on signalling** | **Frequency in clinical cohorts** | **Strategy** | **Registered regimens with a direct RAS inhibitor (examples)** |
 |----|----|----|----|----|----|
 | On-target *KRAS* alterations | Switch-II pocket: R68S, H95D/Q/R, Y96C; second-site G12D/R/V/W, G13D, Q61H; *KRAS* G12C amplification \[50\] | Block drug binding or increase the GTP-bound fraction of KRAS \[50\] | After adagrasib: switch-II pocket 4/38 (11%); acquired *KRAS* mutation or amplification 9/38 \[50\] | Switch to a RAS(ON) inhibitor \[87\]; H95 mutants remain sensitive to sotorasib in vitro \[50\] | Elironrasib ± daraxonrasib (NCT05462717, NCT06128551) |
-| Upstream reactivation | *MET* amplification; *ALK*, *RET*, *BRAF*, *RAF1* and *FGFR3* fusions \[50\]; *EGFR* and *FGFR2* alterations \[84\]; adaptive EGFR feedback in CRC \[24\]; *NF1* loss-of-function mutations \[50\] | Restores RAS-GTP loading upstream of KRAS | *MET* amplification as sole mechanism 2/38; fusions in 3/10 CRC \[50\] | Add an EGFR antibody (CRC) or an RTK inhibitor | Sotorasib + panitumumab (CodeBreaK 300) \[63\]; adagrasib + cetuximab (KRYSTAL-10) \[64\] |
+| Upstream reactivation | *MET* amplification; *ALK, RET and FGFR3 fusions \[50\]*; *EGFR* and *FGFR2* alterations \[84\]; adaptive EGFR feedback in CRC \[23\]; *NF1* loss-of-function mutations \[50\] | Restores RAS-GTP loading upstream of KRAS | *MET* amplification as sole mechanism 2/38; fusions in 3/10 CRC \[50\] | Add an EGFR antibody (CRC) or an RTK inhibitor | Sotorasib + panitumumab (CodeBreaK 300) \[63\]; adagrasib + cetuximab (KRYSTAL-10) \[64\] |
 | SHP2/SOS1-mediated nucleotide exchange | No genomic alteration; adaptive reactivation of wild-type and G12C KRAS | Renewed GDP-to-GTP exchange \[15,16\] | Adaptive; no genomic frequency | Add an SHP2 or SOS1 inhibitor | Sotorasib + RMC-4630 (NCT05054725); adagrasib + TNO155 (NCT04330664); JDQ443 + TNO155 (NCT04699188); adagrasib + BI 1701963 (NCT04975256, terminated) |
 | Downstream MAPK bypass | *NRAS* Q61K, *BRAF* V600E and *MAP2K1* mutations; *BRAF* and *RAF1* fusions \[50\]; *NRAS*, *BRAF* and *MRAS* hotspot mutations \[84\] | ERK reactivation independent of KRAS G12C | RTK–RAS pathway alterations other than *KRAS* (rows 2 and 4): 14/38 (37%) \[50\]; any treatment-emergent alteration after sotorasib 27/43 \[84\] | Add a RAF, MEK or ERK inhibitor \[84\] | Sotorasib + trametinib (CodeBreaK 101, NCT04185883); sotorasib + avutometinib ± defactinib (NCT05074810) |
 | PI3K–AKT bypass | *PTEN* loss-of-function mutations \[50\] | PI3K–AKT–mTOR survival signalling | Reported; not quantified separately \[50\] | Add a PI3K, AKT or mTOR inhibitor (preclinical rationale) | Sotorasib + everolimus (CodeBreaK 101 platform, NCT04185883) |
@@ -309,6 +309,6 @@ RAS(ON), active GTP-bound RAS; SHP2, Src homology region 2 domain-containing pho
 
 S1. Banerjee SN, Van Nieuwenhuysen E, Aghajanian C, D'Hondt V, Monk BJ, Clamp A, et al. Efficacy and safety of avutometinib ± defactinib in recurrent low-grade serous ovarian cancer: primary analysis of ENGOT-OV60/GOG-3052/RAMP 201. J Clin Oncol. 2025;43(25):2782-2792. https://doi.org/10.1200/JCO-25-00112
 
-S2. European Medicines Agency. Rasonque (daraxonrasib): European public assessment report. Amsterdam: EMA; 2026. Available at: https://www.ema.europa.eu/en/medicines/human/EPAR/rasonque
+S2. European Medicines Agency. Rasonque (daraxonrasib): CHMP positive opinion, 15 October 2026. Amsterdam: EMA; 2026. Available at: https://www.ema.europa.eu/en/medicines/human/EPAR/rasonque (accessed 20 November 2026)
 
-S3. Revolution Medicines. European Commission approves Revolution Medicines’ RASONQUE (daraxonrasib), the first broad RAS-targeted medicine in metastatic pancreatic cancer \[press release\]. 16 November 2026. Available at: https://www.globenewswire.com/news-release/2026/11/16/3404001/0/en/european-commission-approves-revolution-medicines-rasonque-daraxonrasib-the-first-broad-ras-targeted-medicine-in-metastatic-pancreatic-cancer.html
+S3. Kret R. Daraxonrasib gains EC approval in previously treated metastatic pancreatic cancer. OncLive. 16 November 2026. Available at: https://www.onclive.com/view/daraxonrasib-gains-ec-approval-in-previously-treated-metastatic-pancreatic-cancer (accessed 20 November 2026)

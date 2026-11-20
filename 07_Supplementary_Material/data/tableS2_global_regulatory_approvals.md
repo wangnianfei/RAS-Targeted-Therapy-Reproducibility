@@ -90,7 +90,7 @@
 <tr>
 <td><p><strong>daraxonrasib</strong></p>
 <p>(RMC-6236)</p></td>
-<td><p>Metastatic PDAC, ≥2L or chemotherapy-unfit</p></td>
+<td><p>Metastatic PDAC, ≥2L (FDA, EC) or unfit for multi-agent chemotherapy (FDA)</p></td>
 <td><p>FDA (2026-08-26, regular);</p>
 <p>EC (November 2026) [S2,S3]</p></td>
 <td><p>Regular approval (first regular approval for multi-RAS inhibitor)</p></td>

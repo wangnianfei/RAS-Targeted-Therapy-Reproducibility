@@ -16,7 +16,7 @@
   },
   {
     "id": 4,
-    "text": "Cox AD, Der CJ. “Undruggable KRAS”: druggable after all. Genes Dev. 2025;39(1-2):132-162. https://doi.org/10.1101/gad.352081.124",
+    "text": "Cox AD, Der CJ. \"Undruggable KRAS\": druggable after all. Genes Dev. 2025;39(1-2):132-162. https://doi.org/10.1101/gad.352081.124",
     "doi": "10.1101/gad.352081.124"
   },
   {
@@ -101,23 +101,23 @@
   },
   {
     "id": 21,
-    "text": "Canon J, Rex K, Saiki AY, Mohr C, Cooke K, Bagal D, et al. The clinical KRAS(G12C) inhibitor AMG 510 drives anti-tumour immunity. Nature. 2019;575(7781):217-223. https://doi.org/10.1038/s41586-019-1694-1",
-    "doi": "10.1038/s41586-019-1694-1"
-  },
-  {
-    "id": 22,
     "text": "Perurena N, Situ L, Cichowski K. Combinatorial strategies to target RAS-driven cancers. Nat Rev Cancer. 2024;24(5):316-337. https://doi.org/10.1038/s41568-024-00679-6",
     "doi": "10.1038/s41568-024-00679-6"
   },
   {
-    "id": 23,
+    "id": 22,
     "text": "Ebright RY, Dilly J, Shaw AT, Aguirre AJ. Response and resistance to RAS inhibition in cancer. Cancer Discov. 2025;15(7):1325-1349. https://doi.org/10.1158/2159-8290.CD-25-0349",
     "doi": "10.1158/2159-8290.CD-25-0349"
   },
   {
-    "id": 24,
+    "id": 23,
     "text": "Amodio V, Yaeger R, Arcella P, Cancelliere C, Lamba S, Lorenzato A, et al. EGFR blockade reverts resistance to KRASG12C inhibition in colorectal cancer. Cancer Discov. 2020;10(8):1129-1139. https://doi.org/10.1158/2159-8290.CD-20-0187",
     "doi": "10.1158/2159-8290.CD-20-0187"
+  },
+  {
+    "id": 24,
+    "text": "Canon J, Rex K, Saiki AY, Mohr C, Cooke K, Bagal D, et al. The clinical KRAS(G12C) inhibitor AMG 510 drives anti-tumour immunity. Nature. 2019;575(7781):217-223. https://doi.org/10.1038/s41586-019-1694-1",
+    "doi": "10.1038/s41586-019-1694-1"
   },
   {
     "id": 25,
@@ -241,7 +241,7 @@
   },
   {
     "id": 49,
-    "text": "Singhal A, Li BT, O’Reilly EM. Targeting KRAS in cancer. Nat Med. 2024;30(4):969-983. https://doi.org/10.1038/s41591-024-02903-0",
+    "text": "Singhal A, Li BT, O'Reilly EM. Targeting KRAS in cancer. Nat Med. 2024;30(4):969-983. https://doi.org/10.1038/s41591-024-02903-0",
     "doi": "10.1038/s41591-024-02903-0"
   },
   {
@@ -291,7 +291,7 @@
   },
   {
     "id": 59,
-    "text": "O’Reilly EM, Wainberg ZA, Hendifar AE, Borad MJ, Pietrantonio F, Pant S, et al. Daraxonrasib or chemotherapy in previously treated metastatic pancreatic cancer. N Engl J Med. 2026;395(4):325-337. https://doi.org/10.1056/NEJMoa2605555",
+    "text": "O'Reilly EM, Wainberg ZA, Hendifar AE, Borad MJ, Pietrantonio F, Pant S, et al. Daraxonrasib or chemotherapy in previously treated metastatic pancreatic cancer. N Engl J Med. 2026;395(4):325-337. https://doi.org/10.1056/NEJMoa2605555",
     "doi": "10.1056/NEJMoa2605555"
   },
   {

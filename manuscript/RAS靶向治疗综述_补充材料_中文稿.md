@@ -247,7 +247,7 @@
 <tr>
 <td><p><strong>daraxonrasib</strong></p>
 <p>(RMC-6236)</p></td>
-<td><p>转移性 PDAC，≥2L 或不适合化疗</p></td>
+<td><p>转移性 PDAC，≥2L（FDA、EC）或不适合多药联合化疗（FDA）</p></td>
 <td><p>FDA（2026-08-26，常规批准）；</p>
 <p>EC（2026 年 11 月）[S2,S3]</p></td>
 <td><p>常规批准（multi-RAS 抑制剂的首个常规批准）</p></td>
@@ -274,7 +274,7 @@
 | **耐药类别** | **已报告的改变 \[正文参考文献\]** | **对信号转导的影响** | **临床队列中的频率** | **策略** | **含直接 RAS 抑制剂的注册方案（示例）** |
 |----|----|----|----|----|----|
 | *KRAS* 靶点内改变 | 开关 II 口袋：R68S、H95D/Q/R、Y96C；第二位点 G12D/R/V/W、G13D、Q61H；*KRAS* G12C 扩增 \[50\] | 阻碍药物结合或增加 KRAS 的 GTP 结合比例 \[50\] | adagrasib 治疗后：开关 II 口袋突变 4/38（11%）；获得性 *KRAS* 突变或扩增 9/38 \[50\] | 换用 RAS(ON) 抑制剂 \[87\]；体外 H95 突变体对 sotorasib 仍敏感 \[50\] | elironrasib ± daraxonrasib（NCT05462717、NCT06128551） |
-| 上游再激活 | *MET* 扩增；*ALK*、*RET*、*BRAF*、*RAF1* 与 *FGFR3* 融合 \[50\]；*EGFR* 与 *FGFR2* 改变 \[84\]；结直肠癌中的适应性 EGFR 反馈 \[24\]；*NF1* 功能缺失突变 \[50\] | 在 KRAS 上游恢复 RAS-GTP 负载 | *MET* 扩增为唯一机制 2/38；结直肠癌中融合 3/10 \[50\] | 加用 EGFR 抗体（结直肠癌）或 RTK 抑制剂 | sotorasib + 帕尼单抗（CodeBreaK 300）\[63\]；adagrasib + 西妥昔单抗（KRYSTAL-10）\[64\] |
+| 上游再激活 | *MET* 扩增；*ALK、RET 与 FGFR3 融合 \[50\]*；*EGFR* 与 *FGFR2* 改变 \[84\]；结直肠癌中的适应性 EGFR 反馈 \[23\]；*NF1* 功能缺失突变 \[50\] | 在 KRAS 上游恢复 RAS-GTP 负载 | *MET* 扩增为唯一机制 2/38；结直肠癌中融合 3/10 \[50\] | 加用 EGFR 抗体（结直肠癌）或 RTK 抑制剂 | sotorasib + 帕尼单抗（CodeBreaK 300）\[63\]；adagrasib + 西妥昔单抗（KRYSTAL-10）\[64\] |
 | SHP2/SOS1 介导的核苷酸交换 | 无基因组改变；野生型与 G12C KRAS 的适应性再激活 | GDP 向 GTP 交换重新启动 \[15,16\] | 适应性；无基因组频率 | 加用 SHP2 或 SOS1 抑制剂 | sotorasib + RMC-4630（NCT05054725）；adagrasib + TNO155（NCT04330664）；JDQ443 + TNO155（NCT04699188）；adagrasib + BI 1701963（NCT04975256，已终止） |
 | 下游 MAPK 旁路 | *NRAS* Q61K、*BRAF* V600E 与 *MAP2K1* 突变；*BRAF* 与 *RAF1* 融合 \[50\]；*NRAS*、*BRAF* 与 *MRAS* 热点突变 \[84\] | 不依赖 KRAS G12C 的 ERK 再激活 | *KRAS* 以外的 RTK–RAS 通路改变（第 2 与第 4 行）：14/38（37%）\[50\]；sotorasib 治疗后任何治疗中出现的改变 27/43 \[84\] | 加用 RAF、MEK 或 ERK 抑制剂 \[84\] | sotorasib + 曲美替尼（CodeBreaK 101，NCT04185883）；sotorasib + avutometinib ± defactinib（NCT05074810） |
 | PI3K–AKT 旁路 | *PTEN* 功能缺失突变 \[50\] | PI3K–AKT–mTOR 生存信号 | 有报告；未单独量化 \[50\] | 加用 PI3K、AKT 或 mTOR 抑制剂（临床前依据） | sotorasib + 依维莫司（CodeBreaK 101 平台，NCT04185883） |
@@ -309,6 +309,6 @@ RAS(ON)，GTP 结合的活性 RAS；SHP2，含 Src 同源区 2 结构域的磷�
 
 S1. Banerjee SN, Van Nieuwenhuysen E, Aghajanian C, D'Hondt V, Monk BJ, Clamp A, et al. Efficacy and safety of avutometinib ± defactinib in recurrent low-grade serous ovarian cancer: primary analysis of ENGOT-OV60/GOG-3052/RAMP 201. J Clin Oncol. 2025;43(25):2782-2792. https://doi.org/10.1200/JCO-25-00112
 
-S2. European Medicines Agency. Rasonque (daraxonrasib): European public assessment report. Amsterdam: EMA; 2026. Available at: https://www.ema.europa.eu/en/medicines/human/EPAR/rasonque
+S2. European Medicines Agency. Rasonque (daraxonrasib): CHMP positive opinion, 15 October 2026. Amsterdam: EMA; 2026. Available at: https://www.ema.europa.eu/en/medicines/human/EPAR/rasonque (accessed 20 November 2026)
 
-S3. Revolution Medicines. European Commission approves Revolution Medicines’ RASONQUE (daraxonrasib), the first broad RAS-targeted medicine in metastatic pancreatic cancer \[press release\]. 16 November 2026. Available at: https://www.globenewswire.com/news-release/2026/11/16/3404001/0/en/european-commission-approves-revolution-medicines-rasonque-daraxonrasib-the-first-broad-ras-targeted-medicine-in-metastatic-pancreatic-cancer.html
+S3. Kret R. Daraxonrasib gains EC approval in previously treated metastatic pancreatic cancer. OncLive. 16 November 2026. Available at: https://www.onclive.com/view/daraxonrasib-gains-ec-approval-in-previously-treated-metastatic-pancreatic-cancer (accessed 20 November 2026)

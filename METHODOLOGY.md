@@ -4,8 +4,8 @@ This file describes how each figure and table of the review was produced. Every 
 
 ## Figure 1 — crystal structures
 
-- **Data:** RCSB Protein Data Bank entries 6OIM (KRAS G12C covalently bound to sotorasib, GDP) and 9BG6 (daraxonrasib–cyclophilin A–KRAS G12V tri-complex with GMPPNP; Cregg et al., *J Med Chem* 2025). Coordinates are in `01_Figure1_Structural_Mechanisms/data/`.
-- **Method:** PyMOL (`code/render_figure1_pymol.py`) renders both structures. In 9BG6, chains B and D (the second copy of the complex) are removed and KRAS chain A is superposed onto KRAS in 6OIM so that both panels share one orientation. `code/run_figure1.py` trims the renders with ImageMagick and composes the figure with matplotlib.
+- **Data:** RCSB Protein Data Bank entries 6OIM (KRAS G12C covalently bound to sotorasib, GDP; Canon et al., *Nature* 2019) and 9BG6 (daraxonrasib–cyclophilin A–KRAS G12V tri-complex with GMPPNP; Cregg et al., *J Med Chem* 2025). Coordinates are in `01_Figure1_Structural_Mechanisms/data/`.
+- **Method:** PyMOL (`code/render_figure1_pymol.py`) renders both structures. In 9BG6, chains B (KRAS) and C (cyclophilin A) of the second tri-complex are removed, keeping KRAS chain A with cyclophilin A chain D, and KRAS chain A is superposed onto KRAS in 6OIM so that both panels share one orientation. `code/run_figure1.py` trims the renders with ImageMagick and composes the figure with matplotlib.
 
 ## Figure 2 — RAS mutation prevalence and KRAS alleles
 
@@ -15,8 +15,8 @@ This file describes how each figure and table of the review was produced. Every 
 
 ## Table 1 — seven phase III trials
 
-- **Data:** CodeBreaK 200 (de Langen, *Lancet* 2023), KRYSTAL-12 (Barlesi, *Lancet* 2025), Krascendo 1 (Skoulidis, *N Engl J Med* 2026), CodeBreaK 300 (Fakih, *N Engl J Med* 2023), KRYSTAL-10 (Tabernero, *Ann Oncol* 2026, LBA1), RASolute 302 (O'Reilly, *N Engl J Med* 2026) and NEMO (Dummer, *Lancet Oncol* 2017). Values were extracted from the primary publications.
-- **Files:** `data/table1_pivotal_phase3_trials.csv` is extracted from the submitted manuscript; `code/build_table1.py` writes the Markdown version. Discontinuation values for Krascendo 1 and KRYSTAL-10 (treatment-related) come from conference coverage of the primary presentations.
+- **Data:** CodeBreaK 200 (de Langen, *Lancet* 2023), KRYSTAL-12 (Barlesi, *Lancet* 2025), Krascendo 1 (Skoulidis, *N Engl J Med* 2026), CodeBreaK 300 (Fakih, *N Engl J Med* 2023; final OS, Pietrantonio, *J Clin Oncol* 2025), KRYSTAL-10 (Tabernero, *Ann Oncol* 2026, LBA1), RASolute 302 (O'Reilly, *N Engl J Med* 2026) and NEMO (Dummer, *Lancet Oncol* 2017). Values were extracted from the primary publications.
+- **Files:** `data/table1_pivotal_phase3_trials.csv` is extracted from the submitted manuscript; `code/build_table1.py` writes the Markdown version. KRYSTAL-10 values come from the congress abstract; all other values come from the full publications. NEMO did not report an overall grade ≥3 adverse-event rate, so the table shows grade 3–4 events in at least 5% of patients.
 
 ## Figure 3 — forest plots
 
@@ -40,8 +40,8 @@ This file describes how each figure and table of the review was produced. Every 
 
 | Tool | Used for |
 |:---|:---|
-| Python ≥ 3.10, matplotlib ≥ 3.8 | Figures 1 (composition), 5 and S1; data derivation for Figure 2; Table 1 export |
-| R ≥ 4.3: ggplot2, patchwork, dplyr, tidyr, scales, ggtext, ragg, maps | Figures 2, 3 and 4 |
+| Python ≥ 3.10, matplotlib ≥ 3.8 | Figures 1 (composition) and S1; data derivation for Figure 2; Table 1 export |
+| R ≥ 4.3: ggplot2, patchwork, dplyr, tidyr, scales, ggtext, ragg, maps | Figures 2, 3 and S2 |
 | PyMOL (open-source) ≥ 2.5 | Figure 1 structure renders |
 | ImageMagick ≥ 7.1 | Trimming renders; 500-dpi LZW TIFF export |
 

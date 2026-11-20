@@ -179,7 +179,7 @@ p_map <- ggplot(world, aes(long, lat, group = group)) +
   coord_quickmap(xlim = c(-168, 180), ylim = c(-56, 80), expand = FALSE, clip = "off") +
   guides(fill = guide_legend(nrow = 1, title.position = "left", keywidth = unit(5, "mm"), keyheight = unit(2.6, "mm"),
                              label.position = "bottom")) +
-  labs(tag = "c", title = sprintf("Trial sites by country or region (%d countries and regions; %d trials multinational)", nrow(by_country), sum(targeted$is_multinational == "yes"))) +
+  labs(tag = "c", title = sprintf("Trial sites (%d countries and regions; %d multinational trials)", nrow(by_country), sum(targeted$is_multinational == "yes"))) +
   theme_void(base_family = "Arial") +
   theme(plot.tag = element_text(colour = ink, face = "bold", size = 9), plot.tag.position = c(0, 1),
         plot.title = element_text(colour = ink, face = "bold", size = 7.5, hjust = 0, margin = margin(b = 2, l = 9)),

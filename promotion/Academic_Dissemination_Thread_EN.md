@@ -22,7 +22,7 @@ Replace `[DOI]` with the article link once published. All numbers below are from
 
 **7/8** Resistance is diverse. After adagrasib, 17/38 patients had a putative mechanism: secondary KRAS mutations, RTK and MAPK bypass, and squamous transformation (2 of 10 patients with a repeat tissue biopsy). [Fig 4]
 
-**8/8** Next steps: inhibitors for non-G12C alleles, first-line and perioperative trials, combinations matched to resistance, and trials that pre-specify how crossover will be handled. Every figure is reproducible from our repository. #OpenScience
+**8/8** Next steps: inhibitors for non-G12C alleles, first-line and perioperative trials, combinations matched to resistance, and trials that pre-specify how crossover will be handled. Every data figure can be regenerated from our repository (Fig 4 is a schematic). #OpenScience
 
 ---
 
