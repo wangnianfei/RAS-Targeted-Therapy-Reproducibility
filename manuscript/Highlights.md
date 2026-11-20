@@ -4,9 +4,9 @@
 
 - Direct RAS inhibitors now target both inactive (OFF) and active (ON) RAS.
 
-- Divarasib improved OS over sotorasib or adagrasib in pretreated *KRAS* G12C-mutant NSCLC.
+- Phase III trials show OS gains with RAS inhibitors in pretreated *KRAS* G12C-mutant NSCLC and in pancreatic cancer.
 
-- Daraxonrasib roughly doubled median OS versus chemotherapy in pancreatic cancer.
+- Phase III trials are now moving RAS inhibitors into first-line and adjuvant treatment.
 
 - Crossover may have diluted OS differences in pretreated *KRAS* G12C-mutant NSCLC trials.
 

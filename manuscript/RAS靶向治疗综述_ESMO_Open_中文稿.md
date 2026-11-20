@@ -17,9 +17,9 @@ Word Count: Abstract 262 words \| Main Text 4,465 words; figure legends 503 word
 
 - 直接 RAS 抑制剂现已可靶向失活（OFF）与活性（ON）两种状态的 RAS。
 
-- 在经治 *KRAS* G12C 非小细胞肺癌中，divarasib 较 sotorasib 或 adagrasib 改善总生存。
+- III 期试验显示，RAS 抑制剂可改善经治 *KRAS* G12C 突变非小细胞肺癌及胰腺癌的总生存。
 
-- 在胰腺癌中，daraxonrasib 较化疗使中位总生存约提高一倍。
+- III 期试验正将 RAS 抑制剂推进至一线与辅助治疗。
 
 - 在经治 *KRAS* G12C 非小细胞肺癌试验中，交叉用药可能稀释了总生存差异。
 
@@ -186,7 +186,7 @@ Ostrem 与 Shokat 解析的 GDP 结合态 KRAS(G12C) 晶体结构揭示了 S-IIP
 <p>[59]</p>
 <p>[A 级：直接 RAS]</p></td>
 <td><p>晚期 NSCLC</p>
-<p><em>KRAS</em> G12C, &gt;=2L</p></td>
+<p><em>KRAS</em> G12C, ≥2L</p></td>
 <td><p>III 期，开放标签</p>
 <p>1:1 随机</p></td>
 <td><p>N=345</p>
@@ -194,12 +194,12 @@ Ostrem 与 Shokat 解析的 GDP 结合态 KRAS(G12C) 晶体结构揭示了 S-IIP
 <p>多西他赛：174</p></td>
 <td><p>BICR 评估 PFS</p></td>
 <td><p>5.6 vs 4.5</p>
-<p>HR 0.66 (0.51-0.86)</p>
+<p>HR 0.66 (0.51–0.86)</p>
 <p>P=0.0017</p></td>
 <td><p>28.1% vs 13.2%</p>
 <p>P&lt;0.001</p></td>
 <td><p>10.6 vs 11.3</p>
-<p>HR 1.01 (0.77-1.33)</p>
+<p>HR 1.01 (0.77–1.33)</p>
 <p>P=0.53</p></td>
 <td><p>33.1% vs 40.4%</p></td>
 <td><p>9.8% vs 11.0%</p></td>
@@ -210,7 +210,7 @@ Ostrem 与 Shokat 解析的 GDP 结合态 KRAS(G12C) 晶体结构揭示了 S-IIP
 <p>[60]</p>
 <p>[A 级：直接 RAS]</p></td>
 <td><p>晚期 NSCLC</p>
-<p><em>KRAS</em> G12C, &gt;=2L</p></td>
+<p><em>KRAS</em> G12C, ≥2L</p></td>
 <td><p>III 期，开放标签</p>
 <p>2:1 随机</p></td>
 <td><p>N=453</p>
@@ -218,7 +218,7 @@ Ostrem 与 Shokat 解析的 GDP 结合态 KRAS(G12C) 晶体结构揭示了 S-IIP
 <p>多西他赛：152</p></td>
 <td><p>BICR 评估 PFS</p></td>
 <td><p>5.5 vs 3.8</p>
-<p>HR 0.58 (0.45-0.76)</p>
+<p>HR 0.58 (0.45–0.76)</p>
 <p>P&lt;0.0001</p></td>
 <td><p>31.9% vs 9.2%</p>
 <p>OR 4.68</p>
@@ -254,7 +254,7 @@ Ostrem 与 Shokat 解析的 GDP 结合态 KRAS(G12C) 晶体结构揭示了 S-IIP
 <p>[62,67]</p>
 <p>[A 级：直接 RAS]</p></td>
 <td><p>难治性 mCRC</p>
-<p><em>KRAS G12C, &gt;=2L</em></p></td>
+<p><em>KRAS G12C, ≥2L</em></p></td>
 <td><p>III 期，开放标签</p>
 <p>1:1:1 随机</p></td>
 <td><p>N=160</p>
@@ -266,7 +266,7 @@ Ostrem 与 Shokat 解析的 GDP 结合态 KRAS(G12C) 晶体结构揭示了 S-IIP
 <td><p>26.4% vs 5.7% vs 0%</p>
 <p>P&lt;0.001</p></td>
 <td><p>NR vs 10.3（960 mg）</p>
-<p>HR 0.70 (0.41-1.18)</p>
+<p>HR 0.70 (0.41–1.18)</p>
 <p>P=0.20</p></td>
 <td><p>35.8% vs 43.1%</p></td>
 <td><p>2.0% vs 5.6%</p></td>
@@ -294,7 +294,7 @@ Ostrem 与 Shokat 解析的 GDP 结合态 KRAS(G12C) 晶体结构揭示了 S-IIP
 <p>[58]</p>
 <p>[A 级：直接 RAS]</p></td>
 <td><p>转移性 PDAC</p>
-<p><em>RAS-mutant (91.8% G12), &gt;=2L</em></p></td>
+<p><em>RAS-mutant (91.8% G12), ≥2L</em></p></td>
 <td><p>III 期，开放标签</p>
 <p>1:1 随机</p></td>
 <td><p>N=500</p>
@@ -321,12 +321,12 @@ Ostrem 与 Shokat 解析的 GDP 结合态 KRAS(G12C) 晶体结构揭示了 S-IIP
 <p>达卡巴嗪：133</p></td>
 <td><p>BICR 评估 PFS</p></td>
 <td><p>2.8 vs 1.5</p>
-<p>HR 0.62 (0.47-0.80)</p>
+<p>HR 0.62 (0.47–0.80)</p>
 <p>P&lt;0.001</p></td>
 <td><p>15.0% vs 7.0%</p>
 <p>P=0.015</p></td>
 <td><p>11.0 vs 10.1</p>
-<p>HR 1.00 (0.75-1.33)</p>
+<p>HR 1.00 (0.75–1.33)</p>
 <p>P=0.999</p></td>
 <td><p>48.0% vs 23.0%（TRAE）</p>
 <p>[TEAE 68% vs 46%]</p></td>
@@ -336,7 +336,7 @@ Ostrem 与 Shokat 解析的 GDP 结合态 KRAS(G12C) 晶体结构揭示了 S-IIP
 </tbody>
 </table>
 
-\*≥3 级不良事件（AE）在直接 RAS 抑制剂试验中为治疗相关不良事件（TRAE）（A 级证据；Krascendo 1 为 3–4 级 TRAE；RASolute 302 为全因 AE；KRYSTAL-10 为 3–5 级 TRAE），NEMO 同时列出 TRAE 与全因治疗中出现的不良事件（TEAE）（B 级）。文献与临床试验数据检索截止日期：2026 年 11 月 18 日。缩略语：2L，二线；AE，不良事件；BICR，盲态独立中心评审；CI，置信区间；CTLA-4，细胞毒性 T 淋巴细胞相关蛋白 4；Discont.，因不良事件停药；EGFR，表皮生长因子受体；FOLFIRI，亚叶酸、氟尿嘧啶与伊立替康；Gr，分级；HR，风险比；mCRC，转移性结直肠癌；MEK，丝裂原活化蛋白激酶激酶；mOS，中位总生存期；mFOLFOX6，改良亚叶酸、氟尿嘧啶与奥沙利铂；mPFS，中位无进展生存期；NR，未达到；NSCLC，非小细胞肺癌；ODAC，肿瘤药物咨询委员会（美国 FDA）；OR，比值比；ORR，客观缓解率；OS，总生存期；Pani，帕尼单抗；PD-1，程序性细胞死亡蛋白 1；PDAC，胰腺导管腺癌；PFS，无进展生存期；Soto，sotorasib；TEAE，治疗中出现的不良事件；TRAE，治疗相关不良事件；VEGF，血管内皮生长因子；VEGFR，VEGF 受体。
+\*≥3 级 AE：A 级试验为 TRAE（Krascendo 1 为 3–4 级；KRYSTAL-10 为 3–5 级），RASolute 302 为全因 AE；NEMO（B 级）为 TRAE 与 TEAE。A 级，直接 RAS 抑制剂；B 级，下游（MEK）抑制剂。数据截止：2026 年 11 月 18 日。2L，二线；AE，不良事件；BICR，盲态独立中心评审；CI，置信区间；(m)CRC，（转移性）结直肠癌；CTLA-4，细胞毒性 T 淋巴细胞相关蛋白 4；EGFR，表皮生长因子受体；FOLFIRI，亚叶酸–氟尿嘧啶–伊立替康；HR，风险比；MEK，丝裂原活化蛋白激酶激酶；mFOLFOX6，改良亚叶酸–氟尿嘧啶–奥沙利铂；mOS/mPFS，中位 OS/PFS；NR，未达到；NSCLC，非小细胞肺癌；ODAC，美国 FDA 肿瘤药物咨询委员会；OR，比值比；ORR，客观缓解率；OS，总生存期；Pani，帕尼单抗；PD-1，程序性细胞死亡蛋白 1；PDAC，胰腺导管腺癌；PFS，无进展生存期；Soto，sotorasib；TEAE，治疗中出现的 AE；TRAE，治疗相关 AE；VEGF(R)，血管内皮生长因子（受体）。
 
 **4.2 非小细胞肺癌二线单药治疗：CodeBreaK 200、KRYSTAL-12 与 Krascendo 1**
 

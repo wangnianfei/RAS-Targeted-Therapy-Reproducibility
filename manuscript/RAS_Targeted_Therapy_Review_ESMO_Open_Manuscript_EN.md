@@ -18,9 +18,9 @@
 
 - Direct RAS inhibitors now target both inactive (OFF) and active (ON) RAS.
 
-- Divarasib improved OS over sotorasib or adagrasib in pretreated *KRAS* G12C-mutant NSCLC.
+- Phase III trials show OS gains with RAS inhibitors in pretreated *KRAS* G12C-mutant NSCLC and in pancreatic cancer.
 
-- Daraxonrasib roughly doubled median OS versus chemotherapy in pancreatic cancer.
+- Phase III trials are now moving RAS inhibitors into first-line and adjuvant treatment.
 
 - Crossover may have diluted OS differences in pretreated *KRAS* G12C-mutant NSCLC trials.
 
@@ -159,12 +159,12 @@ Seven phase III randomised controlled trials define the comparative evidence for
 <p>Docetaxel: 174</p></td>
 <td><p>PFS by BICR</p></td>
 <td><p>5.6 vs 4.5</p>
-<p>HR 0.66 (0.51-0.86)</p>
+<p>HR 0.66 (0.51–0.86)</p>
 <p>P=0.0017</p></td>
 <td><p>28.1% vs 13.2%</p>
 <p>P&lt;0.001</p></td>
 <td><p>10.6 vs 11.3</p>
-<p>HR 1.01 (0.77-1.33)</p>
+<p>HR 1.01 (0.77–1.33)</p>
 <p>P=0.53</p></td>
 <td><p>33.1% vs 40.4%</p></td>
 <td><p>9.8% vs 11.0%</p></td>
@@ -183,7 +183,7 @@ Seven phase III randomised controlled trials define the comparative evidence for
 <p>Docetaxel: 152</p></td>
 <td><p>PFS by BICR</p></td>
 <td><p>5.5 vs 3.8</p>
-<p>HR 0.58 (0.45-0.76)</p>
+<p>HR 0.58 (0.45–0.76)</p>
 <p>P&lt;0.0001</p></td>
 <td><p>31.9% vs 9.2%</p>
 <p>OR 4.68</p>
@@ -231,7 +231,7 @@ Seven phase III randomised controlled trials define the comparative evidence for
 <td><p>26.4% vs 5.7% vs 0%</p>
 <p>P&lt;0.001</p></td>
 <td><p>NR vs 10.3 (960 mg)</p>
-<p>HR 0.70 (0.41-1.18)</p>
+<p>HR 0.70 (0.41–1.18)</p>
 <p>P=0.20</p></td>
 <td><p>35.8% vs 43.1%</p></td>
 <td><p>2.0% vs 5.6%</p></td>
@@ -286,12 +286,12 @@ Seven phase III randomised controlled trials define the comparative evidence for
 <p>Dacarbazine: 133</p></td>
 <td><p>PFS by BICR</p></td>
 <td><p>2.8 vs 1.5</p>
-<p>HR 0.62 (0.47-0.80)</p>
+<p>HR 0.62 (0.47–0.80)</p>
 <p>P&lt;0.001</p></td>
 <td><p>15.0% vs 7.0%</p>
 <p>P=0.015</p></td>
 <td><p>11.0 vs 10.1</p>
-<p>HR 1.00 (0.75-1.33)</p>
+<p>HR 1.00 (0.75–1.33)</p>
 <p>P=0.999</p></td>
 <td><p>48.0% vs 23.0% (TRAE)</p>
 <p>[68% vs 46% TEAE]</p></td>
@@ -301,7 +301,7 @@ Seven phase III randomised controlled trials define the comparative evidence for
 </tbody>
 </table>
 
-\*Grade ≥3 adverse events (AEs) reflect treatment-related adverse events (TRAEs) for direct RAS inhibitor trials (Tier A; grade 3–4 TRAEs for Krascendo 1; all-cause AEs for RASolute 302; grade 3–5 TRAEs for KRYSTAL-10) and both TRAEs and all-cause treatment-emergent adverse events (TEAEs) for NEMO (Tier B). Literature and clinical trial data retrieval cut-off date: 18 November 2026. Abbreviations: 2L, second-line; AE, adverse event; BICR, blinded independent central review; CI, confidence interval; CTLA-4, cytotoxic T-lymphocyte associated protein 4; Discont., treatment discontinuation due to adverse events; EGFR, epidermal growth factor receptor; FOLFIRI, folinic acid, fluorouracil and irinotecan; Gr, grade; HR, hazard ratio; mCRC, metastatic colorectal cancer; MEK, mitogen-activated protein kinase kinase; mOS, median overall survival; mFOLFOX6, modified folinic acid, fluorouracil and oxaliplatin; mPFS, median progression-free survival; NR, not reached; NSCLC, non-small cell lung cancer; ODAC, Oncologic Drugs Advisory Committee (US FDA); OR, odds ratio; ORR, objective response rate; OS, overall survival; Pani, panitumumab; PD-1, programmed cell death protein 1; PDAC, pancreatic ductal adenocarcinoma; PFS, progression-free survival; Soto, sotorasib; TEAE, treatment-emergent adverse event; TRAE, treatment-related adverse event; VEGF, vascular endothelial growth factor; VEGFR, VEGF receptor.\*
+\*Grade ≥3 AEs: TRAEs in Tier A trials (grade 3–4, Krascendo 1; grade 3–5, KRYSTAL-10), except all-cause AEs in RASolute 302; TRAEs and TEAEs in NEMO (Tier B). Tier A, direct RAS inhibitor; Tier B, downstream (MEK) inhibitor. Data cut-off: 18 November 2026. 2L, second-line; AE, adverse event; BICR, blinded independent central review; CI, confidence interval; (m)CRC, (metastatic) colorectal cancer; CTLA-4, cytotoxic T-lymphocyte-associated protein 4; Discont., discontinuation due to AEs; EGFR, epidermal growth factor receptor; FOLFIRI, folinic acid–fluorouracil–irinotecan; HR, hazard ratio; MEK, mitogen-activated protein kinase kinase; mFOLFOX6, modified folinic acid–fluorouracil–oxaliplatin; mo, months; mOS/mPFS, median OS/PFS; NR, not reached; NSCLC, non-small cell lung cancer; ODAC, FDA Oncologic Drugs Advisory Committee; OR, odds ratio; ORR, objective response rate; OS, overall survival; Pani, panitumumab; PD-1, programmed cell death protein 1; PDAC, pancreatic ductal adenocarcinoma; PFS, progression-free survival; Soto, sotorasib; TEAE, treatment-emergent AE; TRAE, treatment-related AE; VEGF(R), vascular endothelial growth factor (receptor).
 
 **4.2 Second-line monotherapy in non-small cell lung cancer: CodeBreaK 200, KRYSTAL-12, and Krascendo 1**
 
