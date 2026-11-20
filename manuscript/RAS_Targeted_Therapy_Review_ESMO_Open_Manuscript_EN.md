@@ -36,7 +36,7 @@
 
 **Conclusions:** Priorities include inhibitors for non-G12C alleles, first-line and perioperative trials, combinations matched to resistance mechanisms, and trial designs that pre-specify how crossover will be handled in the analysis of OS.
 
-**Keywords:** RAS-targeted therapy; KRAS inhibitor; randomized controlled trial; drug resistance; precision oncology
+**Keywords:** RAS inhibitor; non-small cell lung cancer; colorectal cancer; pancreatic cancer; drug resistance
 
 **Abbreviations**
 
