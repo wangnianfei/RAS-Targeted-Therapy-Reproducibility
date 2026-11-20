@@ -58,7 +58,7 @@ p_isoform <- ggplot(isoform_long, aes(y = cancer_type, x = Freq, fill = Gene)) +
   scale_fill_manual(values = c("KRAS" = "#2C3E50", "NRAS" = "#16A085", "HRAS" = "#E67E22"), breaks = c("KRAS", "NRAS", "HRAS")) +
   guides(fill = guide_legend(keywidth = unit(3, "mm"), keyheight = unit(2.5, "mm"))) +
   scale_x_continuous(limits = c(0, 100), breaks = seq(0, 100, by = 25), labels = paste0(seq(0, 100, by = 25), "%")) +
-  labs(tag = "A", x = "Samples with missense mutation (%)", y = "") +
+  labs(tag = "a", x = "Samples with missense mutation (%)", y = "") +
   theme_esmo_tight() +
   theme(legend.position = "bottom", legend.justification = "center", legend.margin = margin(t = -4, b = 0))
 
@@ -67,7 +67,7 @@ p_allele <- ggplot(allele_df, aes(y = cancer_type, x = pct, fill = allele)) +
   scale_fill_manual(values = c("G12C" = "#C0392B", "G12D" = "#2980B9", "G12V" = "#27AE60", "G12R" = "#8E44AD", "G13D" = "#E84393", "Q61X" = "#F1C40F", "Other" = "#BDC3C7"), breaks = c("G12C", "G12D", "G12V", "G12R", "G13D", "Q61X", "Other")) +
   guides(fill = guide_legend(nrow = 1, keywidth = unit(3, "mm"), keyheight = unit(2.5, "mm"))) +
   scale_x_continuous(labels = scales::percent_format(), breaks = seq(0, 1, by = 0.25)) +
-  labs(tag = "B", x = "Share of <i>KRAS</i> missense mutations", y = "") +
+  labs(tag = "b", x = "Share of <i>KRAS</i> missense mutations", y = "") +
   theme_esmo_tight() +
   theme(
     axis.title.x = element_markdown(colour = "#111111", face = "bold", size = 6.8),

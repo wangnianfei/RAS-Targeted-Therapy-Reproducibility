@@ -4,14 +4,14 @@
 
 **Authors: Nianfei Wang, MD, PhD^1, Chiyu Sheng, MD^1, Jian Qi, PhD^2,3, Shumin Shen, PhD^4, Shanghu Wang, MD, PhD^5,\***
 
-^1 Department of Oncology, The Second Affiliated Hospital of Anhui Medical University, Hefei, China  
-^2 Hefei Cancer Hospital of CAS, Hefei Institutes of Physical Science, CAS, Hefei, China  
-^3 Science Island Branch, Graduate School of USTC, Hefei, China  
-^4 School of Life Sciences, Fudan University, Shanghai, China  
+^1 Department of Oncology, The Second Affiliated Hospital of Anhui Medical University, Hefei, China\
+^2 Hefei Cancer Hospital of CAS, Hefei Institutes of Physical Science, CAS, Hefei, China\
+^3 Science Island Branch, Graduate School of USTC, Hefei, China\
+^4 School of Life Sciences, Fudan University, Shanghai, China\
 ^5 Department of Radiation Therapy, Anhui Chest Hospital, Hefei, China
 
-*\*Correspondence: Shanghu Wang, MD, PhD. Email: wangshanghu@mail.ustc.edu.cn  
-Word Count: Abstract 262 words \| Main Text 4,439 words; figure legends 515 words (English version) \| 4 Figures, 1 Table, 103 References*
+*\*Correspondence: Shanghu Wang, MD, PhD. Email: wangshanghu@mail.ustc.edu.cn\
+Word Count: Abstract 262 words \| Main Text 4,465 words; figure legends 503 words (English version) \| 4 Figures, 1 Table, 103 References*
 
 **要点**
 
@@ -29,7 +29,7 @@ Word Count: Abstract 262 words \| Main Text 4,439 words; figure legends 515 word
 
 **背景：** RAS 癌蛋白长期被认为难以直接抑制，如今已通过两类药物实现：与失活态 KRAS G12C 开关 II 口袋共价结合的抑制剂，以及与亲环素 A 共同结合活性 RAS 的三元复合物抑制剂。
 
-**方法与证据综合：** 本文综述上述药物类别的结构基础，以及在非小细胞肺癌（NSCLC）、结直肠癌、胰腺导管腺癌和黑色素瘤中开展的七项 III 期随机试验的结果；并分析 ClinicalTrials.gov 中 1,151 项 RAS 相关干预性肿瘤试验，其中 367 项在实体瘤中检验直接靶向 RAS 的药物。
+**方法与证据综合：** 本文综述上述药物类别的结构基础，以及在非小细胞肺癌（NSCLC）、结直肠癌、胰腺导管腺癌和黑色素瘤中开展的七项 III 期随机试验的结果；并分析 ClinicalTrials.gov 中 1,151 项 RAS 相关干预性肿瘤试验，其中 353 项在实体瘤中检验直接靶向 RAS 的药物。
 
 **主要发现：** RAS 通路抑制剂在全部七项试验中提高了客观缓解率，在六项中延长了无进展生存期（PFS）。总生存期（OS）获益见于两项：divarasib 在经治 NSCLC 中优于第一代 KRAS G12C 抑制剂；multi-RAS(ON) 抑制剂 daraxonrasib 在胰腺癌中优于化疗（中位 13.2 vs 6.7 个月）。sotorasib 未较多西他赛改善 OS，且该比较受交叉用药影响；adagrasib 的 OS 数据尚不成熟。在结直肠癌中，KRAS G12C 抑制剂需联合 EGFR 阻断：sotorasib 联合帕尼单抗在难治性疾病中延长 PFS，而 adagrasib 联合西妥昔单抗在二线未能较化疗改善 PFS 或 OS，其美国加速批准已应申办方请求撤回。获得性耐药涉及 *KRAS* 二次改变、受体酪氨酸激酶与 MAPK 通路旁路激活以及组织学转化；*STK11* 与 *KEAP1* 共突变与较差结局相关。
 
@@ -40,7 +40,7 @@ Word Count: Abstract 262 words \| Main Text 4,439 words; figure legends 515 word
 **缩略语表**
 
 | **缩写** | **全称** | **缩写** | **全称** |
-|----------|--------------------------|----------|--------------------------|
+|----|----|----|----|
 | **2L** | 二线治疗 | **NCT** | 美国国家临床试验编号 |
 | **MSK-IMPACT** | 纪念斯隆–凯特琳癌症中心可干预靶点整合突变谱检测 | **VEGFR** | 血管内皮生长因子受体 |
 | **AE** | 不良事件 | **NF1** | 神经纤维瘤蛋白 1 |
@@ -85,7 +85,7 @@ Word Count: Abstract 262 words \| Main Text 4,439 words; figure legends 515 word
 
 这一局面在 2013 年发生改变：Ostrem 等在 GDP 结合态 KRAS(G12C) 中发现了开关 II 下方的诱导性口袋（开关 II 口袋，S-IIP）\[5\]。结合该口袋的共价抑制剂可将 KRAS(G12C) 锁定于失活状态而不影响野生型 RAS \[5,6\]。sotorasib 与 adagrasib 分别于 2021 年和 2022 年获加速批准，用于经治的 *KRAS* G12C 突变晚期非小细胞肺癌（NSCLC），证明了在患者体内直接抑制 RAS 的可行性 \[7–9\]。此后该领域扩展至第二代共价 G12C 抑制剂（divarasib、olomorasib、glecirasib）、针对 KRAS G12D 等其他等位基因的非共价抑制剂（MRTX1133）、与亲环素 A 协同作用的活性 RAS 三元复合物抑制剂（daraxonrasib）\[10–14\]，以及交换因子 SOS1 的变构抑制剂 \[15,16\]。
 
-本文先概述 RAS 生物学、等位基因流行病学与药物作用机制（图 1），再比较 III 期证据（表 1、图 3），并评述注册试验、获得性耐药（图 4）与未来方向，同时区分随机试验已证实的结论与尚待证实的问题。
+本文先概述 RAS 生物学、等位基因流行病学与药物作用机制，再比较 III 期证据，并评述注册试验、获得性耐药与未来方向，同时区分随机试验已证实的结论与尚待证实的问题。
 
 **2. 实体瘤 RAS 通路的生物学与流行病学**
 
@@ -352,7 +352,7 @@ Krascendo 1 首次对直接 RAS 抑制剂进行了头对头比较：338 例经�
 
 **图 3. 七项 III 期随机对照试验的无进展生存期与总生存期风险比。**
 
-\(a\) 无进展生存期（PFS，所有试验均经盲态独立中心评审）与 (b) 总生存期（OS）风险比（HR，对数刻度）及 95% 置信区间森林图。方块大小与样本量成正比；(b) 中红色方块表示 95% CI 不包含 1 的试验。CodeBreaK 300：sotorasib 960 mg 联合帕尼单抗。RASolute 302：首次期中分析的总体人群（*RAS* G12 人群：PFS HR 0.45，OS HR 0.40）。Krascendo 1：首次期中分析的 OS，对照为有效的 KRAS G12C 抑制剂。NEMO（MEK 抑制剂）作为通路抑制的参照。KRYSTAL-12 的 OS 数据尚不成熟，未予绘制。未计算合并估计值；数据来源见表 1。
+风险比（HR，对数刻度）及 95% 置信区间森林图。**a，** 无进展生存期（PFS），所有试验均经盲态独立中心评审。**b，** 总生存期（OS）；红色方块表示 95% CI 不包含 1 的试验。方块大小与样本量成正比。CodeBreaK 300：sotorasib 960 mg 联合帕尼单抗。RASolute 302：首次期中分析的总体人群（*RAS* G12 人群：PFS HR 0.45，OS HR 0.40）。Krascendo 1：首次期中分析的 OS，对照为有效的 KRAS G12C 抑制剂。NEMO（MEK 抑制剂）作为通路抑制的参照。KRYSTAL-12 的 OS 数据尚不成熟，未予绘制。未计算合并估计值；数据来源见表 1。
 
 1L/2L，一线/二线；CI，置信区间；HR，风险比；mCRC，转移性结直肠癌；MEKi，MEK 抑制剂；mPDAC，转移性胰腺导管腺癌；NSCLC，非小细胞肺癌；OS，总生存期；PFS，无进展生存期；TAS-102，曲氟尿苷–替匹嘧啶。数据截止：2026 年 11 月 18 日。
 
@@ -382,7 +382,7 @@ III 期 NEMO 试验在 402 例晚期 *NRAS* 突变皮肤黑色素瘤患者中比
 
 **5.1 直接靶向 RAS 药物的注册临床试验**
 
-在 ClinicalTrials.gov 登记的 1,151 项 RAS 相关干预性肿瘤试验中（检索截止日期：2026 年 11 月 18 日），367 项在实体瘤患者中检验直接靶向 RAS 的药物；检索、逐条复核及完整结果见补充方法与附图 S2。这 367 项试验中，43 项（11.7%）为 2/3 期或 3 期，316 项（86.1%）首次登记于 2021 年或之后。KRAS G12C 抑制剂是最常见的药物类别（201 项），其次为 KRAS G12D 抑制剂（60 项）、RAS 疫苗、T 细胞受体疗法或 T 细胞衔接器（57 项）以及 multi-RAS(ON) 或 pan-RAS 抑制剂（35 项）。美国有至少一个中心的试验 206 项（56.1%），中国大陆 152 项（41.4%）；产业界为 256 项（69.8%）的主要申办方，包括全部 43 项 2/3 期或 3 期试验。
+在 ClinicalTrials.gov 登记的 1,151 项 RAS 相关干预性肿瘤试验中（检索截止日期：2026 年 11 月 18 日），353 项在实体瘤患者中检验直接靶向 RAS 的药物。作用于 RAS 上游或下游的药物（如 SHP2、SOS1、RAF 或 MEK 抑制剂）的试验、仅按 *RAS* 状态筛选患者的试验以及血液系统恶性肿瘤试验均未计入；检索与逐条复核方法见补充方法。这 353 项试验中，43 项（12.2%）为 2/3 期或 3 期，319 项（90.4%）首次登记于 2021 年或之后。KRAS G12C 抑制剂是最常见的药物类别（201 项），其次为 KRAS G12D 抑制剂（60 项）、RAS 疫苗、T 细胞受体疗法或 T 细胞衔接器（40 项）以及 multi-RAS(ON) 或 pan-RAS 抑制剂（39 项）。美国有至少一个中心的试验 198 项（56.1%），中国大陆 152 项（43.1%）；产业界为 241 项（68.3%）的主要申办方，包括全部 43 项 2/3 期或 3 期试验。
 
 各地监管路径出现分歧（附表 S2）。sotorasib 和 adagrasib 先后获得美国 FDA 加速批准和欧洲药品管理局有条件上市许可；2023 年 10 月咨询委员会会议后，FDA 未授予 sotorasib 完全批准，而其欧盟有条件上市许可于 2024 年 11 月获续期，并在产品信息中加入 CodeBreaK 200 结果 \[79\]。在中国，国家药品监督管理局附条件批准了 garsorasib、fulzerasib 和 glecirasib，各自以经治 NSCLC 中的单臂 II 期试验为依据 \[11,80,81\]。
 
@@ -600,7 +600,7 @@ N.W.：构思、方法学、形式分析、数据整理、可视化、初稿撰�
 
 **71.** Kuboki Y, Fakih M, Strickler J, Yaeger R, Masuishi T, Kim EJ, et al. Sotorasib with panitumumab in chemotherapy-refractory KRASG12C-mutated colorectal cancer: a phase 1b trial. Nat Med. 2024;30(1):265-270. https://doi.org/10.1038/s41591-023-02717-6
 
-**72.** US Food and Drug Administration. Supplement approval letter, NDA 216340/S-011 (Krazati \[adagrasib\]): voluntary withdrawal of the accelerated approval indication of adagrasib in combination with cetuximab for KRAS G12C-mutated colorectal cancer. Silver Spring (MD): FDA; 1 September 2026. Available at: https://www.accessdata.fda.gov/drugsatfda\_docs/appletter/2026/216340Orig1s011ltr.pdf (accessed 19 November 2026).
+**72.** US Food and Drug Administration. Supplement approval letter, NDA 216340/S-011 (Krazati \[adagrasib\]): voluntary withdrawal of the accelerated approval indication of adagrasib in combination with cetuximab for KRAS G12C-mutated colorectal cancer. Silver Spring (MD): FDA; 1 September 2026. Available at: https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/216340Orig1s011ltr.pdf (accessed 19 November 2026).
 
 **73.** Wu YL, Herzberg B, Manji GA. Current landscape of RAS-targeted therapy for pancreatic cancer. Oncologist. 2026;31(11):oyag379. https://doi.org/10.1093/oncolo/oyag379
 
@@ -614,7 +614,7 @@ N.W.：构思、方法学、形式分析、数据整理、可视化、初稿撰�
 
 **78.** Burns TF, Ammakkanavar NR, Hollebecque A, Lee DH, Koyama T, Cassier PA, et al. Efficacy and safety of olomorasib in combination with pembrolizumab in treatment of patients with KRAS G12C-mutant advanced NSCLC. J Thorac Oncol. 2026;21(4):103528. https://doi.org/10.1016/j.jtho.2025.11.018
 
-**79.** European Medicines Agency. Lumykras (sotorasib): procedural steps taken and scientific information after authorisation (archive). Amsterdam: EMA. Available at: https://www.ema.europa.eu/en/documents/procedural-steps-after/lumykras-epar-procedural-steps-taken-scientific-information-after-authorisation-archive\_en.pdf (accessed 20 November 2026).
+**79.** European Medicines Agency. Lumykras (sotorasib): procedural steps taken and scientific information after authorisation (archive). Amsterdam: EMA. Available at: https://www.ema.europa.eu/en/documents/procedural-steps-after/lumykras-epar-procedural-steps-taken-scientific-information-after-authorisation-archive_en.pdf (accessed 20 November 2026).
 
 **80.** Li Z, Dang X, Huang D, Jin S, Li W, Shi J, et al. Garsorasib in patients with KRASG12C-mutated non-small-cell lung cancer in China: an open-label, multicentre, single-arm, phase 2 trial. Lancet Respir Med. 2024;12(8):589-598. https://doi.org/10.1016/S2213-2600(24)00110-3
 

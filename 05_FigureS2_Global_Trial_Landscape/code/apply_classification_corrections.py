@@ -19,6 +19,12 @@ sponsor or NCI Drug Dictionary descriptions; 20 November 2026) found:
   * pharmacology studies in healthy volunteers or participants with organ impairment, and
     non-oncology studies, that had passed the oncology filter through text outside the
     condition list.
+A second round (20 November 2026) re-checked the mechanism of every agent in the RAS-targeted
+tier and swept all other tiers for unlisted RAS inhibitors (corrections whose reason starts
+'Round-2 screen'). Counted as RAS-targeted: an intervention that acts on the RAS protein or its
+transcript. Not counted: upstream (SHP2, SOS1, farnesyltransferase) or downstream (RAF, MEK, ERK)
+inhibitors unless combined with a direct RAS inhibitor, and multi-antigen vaccine regimens in
+which RAS is one of several antigens and patients are not RAS-selected.
 An agent with an undisclosed mechanism is counted as RAS-directed only if its first-in-human
 trial is restricted to a single KRAS allele; otherwise it stays in its machine-assigned tier.
 

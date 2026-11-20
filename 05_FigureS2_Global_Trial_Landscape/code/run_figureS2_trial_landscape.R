@@ -3,10 +3,10 @@
 # Supplementary Figure S2 (Figure 4 in the first submission): Global Clinical Trial Landscape of RAS-Targeted Therapies
 # Production Script for ESMO Open
 # Strictly 180.0 mm double-column width, 125.0 mm height, TrueType Arial font
-# Panel tags (A, B, C). All panels computed from trials_curated.csv (output of
-# apply_classification_corrections.py): ras_tier == "RAS-targeted", excluding trials that enrol only
-# patients with haematological malignancies (n = 367);
-# panel C region counts derived from site countries (a trial counts once in each region with >=1 site).
+# Panel tags (a, b, c; lower case as in all figures and legends). All panels computed from trials_curated.csv (output of
+# apply_classification_corrections.py): ras_tier == "RAS-targeted", excluding trials that enrol
+# patients with haematological malignancies (n = 353);
+# panel c region counts derived from site countries (a trial counts once in each region with >=1 site).
 # ==============================================================================
 
 suppressPackageStartupMessages({
@@ -46,7 +46,7 @@ theme_esmo_tight <- function(base_size = 7.0) {
 
 data_file <- file.path(data_dir, "trials_curated.csv")
 trials <- read.csv(data_file, stringsAsFactors = FALSE)
-targeted <- trials %>% filter(ras_tier == "RAS-targeted", tumour_group != "Haematologic malignancy")
+targeted <- trials %>% filter(ras_tier == "RAS-targeted", !grepl("Haematologic", tumour_group))
 cat("Analysis set n =", nrow(targeted), "\n")
 targeted <- targeted %>%
   mutate(phase_clean = case_when(
@@ -73,7 +73,7 @@ p_phase <- ggplot(phase_counts, aes(y = phase_clean, x = n, fill = phase_clean))
   geom_text(aes(label = pct_label), hjust = -0.1, size = 2.1, color = "#222222", family = "Arial", fontface = "bold") +
   scale_fill_manual(values = c("Phase 1" = "#2C3E50", "Phase 1/2" = "#16A085", "Phase 2" = "#2980B9", "Phase 2/3 or 3" = "#C0392B"), guide = "none") +
   scale_x_continuous(limits = c(0, max(phase_counts$n) * 1.45), breaks = seq(0, 200, by = 50)) +
-  labs(tag = "A", x = "Number of trials (all statuses)", y = "") +
+  labs(tag = "a", x = "Number of trials (all statuses)", y = "") +
   theme_esmo_tight()
 
 modality_counts <- targeted %>%
@@ -86,7 +86,7 @@ p_modality <- ggplot(modality_counts, aes(y = modality, x = n, fill = strategy))
   geom_bar(stat = "identity", position = "stack", width = 0.62, color = "#FFFFFF", linewidth = 0.25) +
   scale_fill_manual(values = c("Combination Regimen" = "#E67E22", "Monotherapy" = "#2980B9"), labels = c("\u2265 2 registered interventions", "Single registered intervention")) +
   scale_x_continuous(limits = c(0, 220), breaks = seq(0, 200, by = 50)) +
-  labs(tag = "B", x = "Number of trials", y = "") +
+  labs(tag = "b", x = "Number of trials", y = "") +
   theme_esmo_tight() +
   theme(legend.position = "top", legend.justification = "right", legend.margin = margin(b = -6, t = 0))
 
@@ -116,7 +116,7 @@ p_geo_combined <- ggplot(geo_summary, aes(y = region, x = trials)) +
   geom_bar(stat = "identity", fill = "#34495E", width = 0.62) +
   geom_text(aes(label = trials), hjust = -0.2, size = 2.1, color = "#222222", fontface = "bold", family = "Arial") +
   scale_x_continuous(limits = c(0, max(geo_summary$trials) * 1.25), breaks = seq(0, 250, by = 50)) +
-  labs(tag = "C", x = "Trials with \u2265 1 site in region", y = "") +
+  labs(tag = "c", x = "Trials with \u2265 1 site in region", y = "") +
   theme_esmo_tight()
 cat("Panel C region counts:\n"); print(geo_summary); cat("multi-region:", n_multi, " no-site:", n_nosite, "\n")
 cat("Panel A phases:\n"); print(phase_counts)

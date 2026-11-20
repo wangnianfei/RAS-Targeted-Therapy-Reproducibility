@@ -25,11 +25,11 @@ RAS 曾被认为"不可成药"。2013 年开关 II 口袋（switch-II pocket）�
 - **未见 OS 获益或尚不成熟**：CodeBreaK 200 中 sotorasib 对比多西他赛 OS 无差异（HR 1.01），多西他赛组 26% 交叉至 sotorasib；KRYSTAL-12 中 adagrasib 的 OS 在首次报告时尚不成熟。
 - **结直肠癌**：单药疗效有限，需联合抗 EGFR。sotorasib 联合帕尼单抗在化疗难治人群中延长 PFS（CodeBreaK 300）；adagrasib 联合西妥昔单抗在二线未优于化疗（KRYSTAL-10），该加速批准适应证于 2026 年 9 月 1 日应申办方请求撤回。
 
-## 三、1,151 项注册试验（图 4）
+## 三、1,151 项注册试验（附图 S2）
 
-ClinicalTrials.gov 中经逐条复核保留的 1,151 项 RAS 相关干预性肿瘤试验里，367 项在实体瘤中检验直接靶向 RAS 的药物：KRAS G12C 抑制剂 201 项、G12D 抑制剂 60 项、疫苗/TCR-T 57 项、multi-RAS(ON)/pan-RAS 抑制剂 35 项。其中 206 项在美国、152 项在中国设有中心；行业资助 256 项，并主导全部 43 项 II/III 或 III 期试验。
+ClinicalTrials.gov 中经逐条复核保留的 1,151 项 RAS 相关干预性肿瘤试验里，353 项在实体瘤中检验直接靶向 RAS 的药物：KRAS G12C 抑制剂 201 项、G12D 抑制剂 60 项、疫苗/TCR-T 40 项、multi-RAS(ON)/pan-RAS 抑制剂 39 项。其中 198 项在美国、152 项在中国设有中心；行业资助 241 项，并主导全部 43 项 II/III 或 III 期试验。
 
-## 四、获得性耐药（图 5、附表 S3）
+## 四、获得性耐药（图 4、附表 S3）
 
 adagrasib 耐药的 38 例患者中，17 例检出可能机制：开关 II 口袋二次突变（R68S、H95D/Q/R、Y96C，4 例）、其他 KRAS 改变、*MET* 扩增与致癌融合、NRAS/BRAF/MAP2K1 突变，以及 9 例配对活检肺腺癌中 2 例鳞癌转化。H95 突变体外对 sotorasib 仍敏感，但临床上均伴随其他交叉耐药改变，因此不能据此直接换药。
 
@@ -39,4 +39,4 @@ adagrasib 耐药的 38 例患者中，17 例检出可能机制：开关 II 口�
 
 ---
 
-**开源复现**：图 1 由 PDB 结构经 PyMOL 渲染，图 2 来自 MSK-IMPACT 数据，图 3、图 4 与附图 S1 由脚本生成，`reproduce_all.sh` 一键复现；图 5 为作者绘制的示意图，借助 AI 工具修改。
+**开源复现**：图 1 由 PDB 结构经 PyMOL 渲染，图 2 来自 MSK-IMPACT 数据，图 3 与附图 S1、S2 由脚本生成，`reproduce_all.sh` 一键复现；图 4 为作者绘制的示意图，借助 AI 工具修改。

@@ -12,7 +12,7 @@
 
 **\*Corresponding author:** Shanghu Wang, MD, PhD, Department of Radiation Therapy, Anhui Chest Hospital, No. 397 Jixi Road, Hefei, Anhui 230026, China. E-mail: wangshanghu@mail.ustc.edu.cn
 
-**Word count:** abstract 262 words; main text 4,439 words (Introduction to Conclusions, excluding title page, abstract, tables, declarations and references); figure legends 515 words. Display items: 4 figures and 1 table. References: 103.
+**Word count:** abstract 262 words; main text 4,465 words (Introduction to Conclusions, excluding title page, abstract, tables, declarations and references); figure legends 503 words. Display items: 4 figures and 1 table. References: 103.
 
 **Highlights**
 
@@ -30,7 +30,7 @@
 
 **Background:** Direct inhibition of RAS oncoproteins, long considered intractable, has been achieved with covalent inhibitors that bind the switch-II pocket of inactive KRAS G12C and with tri-complex inhibitors that bind active RAS together with cyclophilin A.
 
-**Methods & Evidence Synthesis:** We review the structural basis of these drug classes and the results of seven phase III randomised trials in non-small cell lung cancer (NSCLC), colorectal cancer, pancreatic ductal adenocarcinoma and melanoma. We also analyse 1,151 RAS-related interventional oncology trials in ClinicalTrials.gov, 367 of which test a directly RAS-targeted agent in solid tumours.
+**Methods & Evidence Synthesis:** We review the structural basis of these drug classes and the results of seven phase III randomised trials in non-small cell lung cancer (NSCLC), colorectal cancer, pancreatic ductal adenocarcinoma and melanoma. We also analyse 1,151 RAS-related interventional oncology trials in ClinicalTrials.gov, 353 of which test a directly RAS-targeted agent in solid tumours.
 
 **Key Findings:** RAS-pathway inhibitors improved the objective response rate in all seven trials and progression-free survival (PFS) in six. Overall survival (OS) was improved by divarasib over first-generation KRAS G12C inhibitors in pretreated NSCLC and by the multi-RAS(ON) inhibitor daraxonrasib over chemotherapy in pancreatic cancer (median 13.2 versus 6.7 months). Sotorasib did not improve OS over docetaxel, a comparison complicated by crossover, and OS data for adagrasib remain immature. In colorectal cancer, KRAS G12C inhibitors need EGFR co-blockade: sotorasib plus panitumumab improved PFS in refractory disease, whereas adagrasib plus cetuximab did not improve PFS or OS over second-line chemotherapy, and its US accelerated approval was withdrawn at the sponsor's request. Acquired resistance involves secondary *KRAS* alterations, receptor tyrosine kinase and mitogen-activated protein kinase (MAPK) pathway bypass and histological transformation, and *STK11* and *KEAP1* co-mutations are associated with poorer outcomes.
 
@@ -50,7 +50,7 @@ Activating mutations in *RAS* genes are among the most common oncogenic drivers 
 
 This changed in 2013, when Ostrem and colleagues described an inducible pocket beneath switch II (the switch-II pocket, S-IIP) in GDP-bound KRAS(G12C) \[5\]. Covalent inhibitors that bind this pocket trap KRAS(G12C) in its inactive state without affecting wild-type RAS \[5,6\]. Accelerated approvals of sotorasib in 2021 and adagrasib in 2022 for previously treated *KRAS* G12C-mutant advanced non-small cell lung cancer (NSCLC) showed that RAS can be inhibited directly in patients \[7–9\]. The field has since expanded to second-generation covalent G12C inhibitors (divarasib, olomorasib, glecirasib), non-covalent inhibitors of other alleles such as KRAS G12D (MRTX1133), and tri-complex inhibitors of active RAS that act together with cyclophilin A (daraxonrasib) \[10–14\], as well as allosteric inhibitors of the exchange factor SOS1 \[15,16\].
 
-After summarising RAS biology, allele epidemiology and drug mechanisms (Figure 1), we compare the phase III evidence (Table 1, Figure 3) and review registered trials, acquired resistance (Figure 4) and future directions, distinguishing what randomised trials have shown from what remains to be confirmed.
+After summarising RAS biology, allele epidemiology and drug mechanisms, we compare the phase III evidence and review registered trials, acquired resistance and future directions, distinguishing what randomised trials have shown from what remains to be confirmed.
 
 **2. Biology and epidemiology of the RAS pathway in solid tumours**
 
@@ -317,7 +317,7 @@ Krascendo 1 provided the first head-to-head comparison between direct RAS inhibi
 
 **Figure 3. Progression-free and overall survival hazard ratios across seven phase III randomised controlled trials.**
 
-Forest plots of hazard ratios (HRs, log scale) with 95% confidence intervals for (a) progression-free survival (PFS), assessed by blinded independent central review in all trials, and (b) overall survival (OS). Box size is proportional to sample size; in (b), red boxes denote trials in which the 95% CI excludes 1. CodeBreaK 300: sotorasib 960 mg plus panitumumab. RASolute 302: overall population at the first interim analysis (*RAS* G12 population: PFS HR 0.45, OS HR 0.40). Krascendo 1: OS at the first interim analysis versus an active KRAS G12C inhibitor. NEMO (MEK inhibitor) is shown as a pathway-inhibition benchmark. KRYSTAL-12 OS data were immature and are not plotted. No pooled estimate is calculated; sources are given in Table 1.
+Forest plots of hazard ratios (HRs, log scale) with 95% confidence intervals. **a,** Progression-free survival (PFS), assessed by blinded independent central review in all trials. **b,** Overall survival (OS); red boxes denote trials in which the 95% CI excludes 1. Box size is proportional to sample size. CodeBreaK 300: sotorasib 960 mg plus panitumumab. RASolute 302: overall population at the first interim analysis (*RAS* G12 population: PFS HR 0.45, OS HR 0.40). Krascendo 1: OS at the first interim analysis versus an active KRAS G12C inhibitor. NEMO (MEK inhibitor) is shown as a pathway-inhibition benchmark. KRYSTAL-12 OS data were immature and are not plotted. No pooled estimate is calculated; sources are given in Table 1.
 
 1L/2L, first/second line; CI, confidence interval; HR, hazard ratio; mCRC, metastatic colorectal cancer; MEKi, MEK inhibitor; mPDAC, metastatic pancreatic ductal adenocarcinoma; NSCLC, non-small cell lung cancer; OS, overall survival; PFS, progression-free survival; TAS-102, trifluridine–tipiracil. Data cut-off: 18 November 2026.
 
@@ -347,7 +347,7 @@ Combinations change the toxicity profile. In CodeBreaK 300, grade 3 or higher TR
 
 **5.1 Registered clinical trials of directly RAS-targeted agents**
 
-Of 1,151 RAS-related interventional oncology trials registered in ClinicalTrials.gov (search cut-off date: 18 November 2026), 367 test a directly RAS-targeted agent in patients with solid tumours; the search, the record-level review and the full results are given in the Supplementary Methods and Supplementary Figure S2. Of these 367 trials, 43 (11.7%) are phase 2/3 or 3, and 316 (86.1%) were first posted in 2021 or later. KRAS G12C inhibitors are the most common drug class (201 trials), followed by KRAS G12D inhibitors (60), RAS vaccines, T-cell receptor therapies or T-cell engagers (57) and multi-RAS(ON) or pan-RAS inhibitors (35). The United States hosts at least one site in 206 trials (56.1%) and mainland China in 152 (41.4%), and industry is the lead sponsor of 256 trials (69.8%), including all 43 phase 2/3 or 3 trials.
+Of 1,151 RAS-related interventional oncology trials registered in ClinicalTrials.gov (search cut-off date: 18 November 2026), 353 test a directly RAS-targeted agent in patients with solid tumours. Trials of agents acting upstream or downstream of RAS (such as SHP2, SOS1, RAF or MEK inhibitors), trials that only select patients by *RAS* status and trials in haematological malignancies are not counted; the search and the record-level review are described in the Supplementary Methods. Of these 353 trials, 43 (12.2%) are phase 2/3 or 3, and 319 (90.4%) were first posted in 2021 or later. KRAS G12C inhibitors are the most common drug class (201 trials), followed by KRAS G12D inhibitors (60), RAS vaccines, T-cell receptor therapies or T-cell engagers (40) and multi-RAS(ON) or pan-RAS inhibitors (39). The United States hosts at least one site in 198 trials (56.1%) and mainland China in 152 (43.1%), and industry is the lead sponsor of 241 trials (68.3%), including all 43 phase 2/3 or 3 trials.
 
 Regulatory pathways have diverged (Supplementary Table S2). Sotorasib and adagrasib received accelerated approval from the US FDA and conditional marketing authorisation from the European Medicines Agency; after the October 2023 advisory committee meeting, the FDA did not grant sotorasib full approval, whereas its European conditional marketing authorisation was renewed in November 2024 with CodeBreaK 200 results added to the product information \[79\]. In China, the National Medical Products Administration granted conditional approval to garsorasib, fulzerasib and glecirasib, each supported by a single-arm phase II trial in previously treated NSCLC \[11,80,81\].
 
@@ -565,7 +565,7 @@ All data supporting the findings of this review, including curated clinical tria
 
 **71.** Kuboki Y, Fakih M, Strickler J, Yaeger R, Masuishi T, Kim EJ, et al. Sotorasib with panitumumab in chemotherapy-refractory KRASG12C-mutated colorectal cancer: a phase 1b trial. Nat Med. 2024;30(1):265-270. https://doi.org/10.1038/s41591-023-02717-6
 
-**72.** US Food and Drug Administration. Supplement approval letter, NDA 216340/S-011 (Krazati \[adagrasib\]): voluntary withdrawal of the accelerated approval indication of adagrasib in combination with cetuximab for KRAS G12C-mutated colorectal cancer. Silver Spring (MD): FDA; 1 September 2026. Available at: https://www.accessdata.fda.gov/drugsatfda\_docs/appletter/2026/216340Orig1s011ltr.pdf (accessed 19 November 2026).
+**72.** US Food and Drug Administration. Supplement approval letter, NDA 216340/S-011 (Krazati \[adagrasib\]): voluntary withdrawal of the accelerated approval indication of adagrasib in combination with cetuximab for KRAS G12C-mutated colorectal cancer. Silver Spring (MD): FDA; 1 September 2026. Available at: https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/216340Orig1s011ltr.pdf (accessed 19 November 2026).
 
 **73.** Wu YL, Herzberg B, Manji GA. Current landscape of RAS-targeted therapy for pancreatic cancer. Oncologist. 2026;31(11):oyag379. https://doi.org/10.1093/oncolo/oyag379
 
@@ -579,7 +579,7 @@ All data supporting the findings of this review, including curated clinical tria
 
 **78.** Burns TF, Ammakkanavar NR, Hollebecque A, Lee DH, Koyama T, Cassier PA, et al. Efficacy and safety of olomorasib in combination with pembrolizumab in treatment of patients with KRAS G12C-mutant advanced NSCLC. J Thorac Oncol. 2026;21(4):103528. https://doi.org/10.1016/j.jtho.2025.11.018
 
-**79.** European Medicines Agency. Lumykras (sotorasib): procedural steps taken and scientific information after authorisation (archive). Amsterdam: EMA. Available at: https://www.ema.europa.eu/en/documents/procedural-steps-after/lumykras-epar-procedural-steps-taken-scientific-information-after-authorisation-archive\_en.pdf (accessed 20 November 2026).
+**79.** European Medicines Agency. Lumykras (sotorasib): procedural steps taken and scientific information after authorisation (archive). Amsterdam: EMA. Available at: https://www.ema.europa.eu/en/documents/procedural-steps-after/lumykras-epar-procedural-steps-taken-scientific-information-after-authorisation-archive_en.pdf (accessed 20 November 2026).
 
 **80.** Li Z, Dang X, Huang D, Jin S, Li W, Shi J, et al. Garsorasib in patients with KRASG12C-mutated non-small-cell lung cancer in China: an open-label, multicentre, single-arm, phase 2 trial. Lancet Respir Med. 2024;12(8):589-598. https://doi.org/10.1016/S2213-2600(24)00110-3
 

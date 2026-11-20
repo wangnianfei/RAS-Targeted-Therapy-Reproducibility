@@ -137,3 +137,47 @@ NCT07650357,ras_tier,RAS-biomarker-selected,RAS-targeted,"RAS-directed agent not
 NCT07650357,target_class,Not RAS-directed,RAS vaccine / immunotherapy,follows tier correction
 NCT05954871,ras_tier,RAS-mentioned,RAS-regulator-targeted,GDC-1971 (migoprotafib) is a SHP2 inhibitor
 NCT05954871,target_class,Not RAS-directed,SHP2,follows tier correction
+NCT07458347,ras_tier,RAS-biomarker-selected,RAS-targeted,Round-2 screen: KST-6051 is a pan-KRAS inhibitor acting on GTP- and GDP-bound KRAS (sponsor and FDA fast-track descriptions)
+NCT07458347,target_class,Not RAS-directed,pan-RAS / multi-selective RAS(ON),follows tier correction
+NCT06895031,ras_tier,RAS-biomarker-selected,RAS-targeted,"Round-2 screen: JYP0015 is a pan-RAS(ON) inhibitor of KRAS, NRAS and HRAS (registry intervention description)"
+NCT06895031,target_class,Not RAS-directed,pan-RAS / multi-selective RAS(ON),follows tier correction
+NCT06704724,ras_tier,RAS-regulator-targeted,RAS-targeted,Round-2 screen: PF-07985045 is a KRAS inhibitor (registry intervention description)
+NCT06704724,target_class,SHP2,pan-RAS / multi-selective RAS(ON),follows tier correction
+NCT06447662,ras_tier,RAS-regulator-targeted,RAS-targeted,Round-2 screen: PF-07934040 is a pan-KRAS inhibitor (registry intervention description)
+NCT06447662,target_class,SHP2,pan-RAS / multi-selective RAS(ON),follows tier correction
+NCT06237413,ras_tier,RAS-targeted,RAS-regulator-targeted,"Round-2 screen: ZG2001 is a SOS1 inhibitor acting upstream of RAS (NCI Drug Dictionary), not a direct RAS inhibitor"
+NCT00531401,target_class,farnesyl-transferase (HRAS),"RAS-directed, allele not specified","Round-2 screen: salirasib is a farnesylcysteine mimetic that dislodges RAS from the membrane, not a farnesyltransferase inhibitor"
+NCT03586869,ras_tier,RAS-targeted,RAS-mentioned,"Round-2 screen: GI-4000 (mutant-Ras yeast vaccine) is one of several antigen-directed agents in a multi-antigen NANT regimen; patients not selected for RAS mutation, so not a RAS-focused trial"
+NCT03586869,target_class,RAS vaccine / immunotherapy,Not RAS-directed,follows tier correction
+NCT03574649,ras_tier,RAS-targeted,RAS-mentioned,"Round-2 screen: GI-4000 (mutant-Ras yeast vaccine) is one of several antigen-directed agents in a multi-antigen NANT regimen; patients not selected for RAS mutation, so not a RAS-focused trial"
+NCT03574649,target_class,RAS vaccine / immunotherapy,Not RAS-directed,follows tier correction
+NCT03563170,ras_tier,RAS-targeted,RAS-mentioned,"Round-2 screen: GI-4000 (mutant-Ras yeast vaccine) is one of several antigen-directed agents in a multi-antigen NANT regimen; patients not selected for RAS mutation, so not a RAS-focused trial"
+NCT03563170,target_class,RAS vaccine / immunotherapy,Not RAS-directed,follows tier correction
+NCT03563157,ras_tier,RAS-targeted,RAS-mentioned,"Round-2 screen: GI-4000 (mutant-Ras yeast vaccine) is one of several antigen-directed agents in a multi-antigen NANT regimen; patients not selected for RAS mutation, so not a RAS-focused trial"
+NCT03563157,target_class,RAS vaccine / immunotherapy,Not RAS-directed,follows tier correction
+NCT03563144,ras_tier,RAS-targeted,RAS-mentioned,"Round-2 screen: GI-4000 (mutant-Ras yeast vaccine) is one of several antigen-directed agents in a multi-antigen NANT regimen; patients not selected for RAS mutation, so not a RAS-focused trial"
+NCT03563144,target_class,RAS vaccine / immunotherapy,Not RAS-directed,follows tier correction
+NCT03554109,ras_tier,RAS-targeted,RAS-mentioned,"Round-2 screen: GI-4000 (mutant-Ras yeast vaccine) is one of several antigen-directed agents in a multi-antigen NANT regimen; patients not selected for RAS mutation, so not a RAS-focused trial"
+NCT03554109,target_class,RAS vaccine / immunotherapy,Not RAS-directed,follows tier correction
+NCT03387111,ras_tier,RAS-targeted,RAS-mentioned,"Round-2 screen: GI-4000 (mutant-Ras yeast vaccine) is one of several antigen-directed agents in a multi-antigen NANT regimen; patients not selected for RAS mutation, so not a RAS-focused trial"
+NCT03387111,target_class,RAS vaccine / immunotherapy,Not RAS-directed,follows tier correction
+NCT03387098,ras_tier,RAS-targeted,RAS-mentioned,"Round-2 screen: GI-4000 (mutant-Ras yeast vaccine) is one of several antigen-directed agents in a multi-antigen NANT regimen; patients not selected for RAS mutation, so not a RAS-focused trial"
+NCT03387098,target_class,RAS vaccine / immunotherapy,Not RAS-directed,follows tier correction
+NCT03387085,ras_tier,RAS-targeted,RAS-mentioned,"Round-2 screen: GI-4000 (mutant-Ras yeast vaccine) is one of several antigen-directed agents in a multi-antigen NANT regimen; patients not selected for RAS mutation, so not a RAS-focused trial"
+NCT03387085,target_class,RAS vaccine / immunotherapy,Not RAS-directed,follows tier correction
+NCT03329248,ras_tier,RAS-targeted,RAS-mentioned,"Round-2 screen: GI-4000 (mutant-Ras yeast vaccine) is one of several antigen-directed agents in a multi-antigen NANT regimen; patients not selected for RAS mutation, so not a RAS-focused trial"
+NCT03329248,target_class,RAS vaccine / immunotherapy,Not RAS-directed,follows tier correction
+NCT03197584,ras_tier,RAS-targeted,RAS-mentioned,"Round-2 screen: GI-4000 (mutant-Ras yeast vaccine) is one of several antigen-directed agents in a multi-antigen NANT regimen; patients not selected for RAS mutation, so not a RAS-focused trial"
+NCT03197584,target_class,RAS vaccine / immunotherapy,Not RAS-directed,follows tier correction
+NCT03197571,ras_tier,RAS-targeted,RAS-mentioned,"Round-2 screen: GI-4000 (mutant-Ras yeast vaccine) is one of several antigen-directed agents in a multi-antigen NANT regimen; patients not selected for RAS mutation, so not a RAS-focused trial"
+NCT03197571,target_class,RAS vaccine / immunotherapy,Not RAS-directed,follows tier correction
+NCT03175666,ras_tier,RAS-targeted,RAS-mentioned,"Round-2 screen: GI-4000 (mutant-Ras yeast vaccine) is one of several antigen-directed agents in a multi-antigen NANT regimen; patients not selected for RAS mutation, so not a RAS-focused trial"
+NCT03175666,target_class,RAS vaccine / immunotherapy,Not RAS-directed,follows tier correction
+NCT03169777,ras_tier,RAS-targeted,RAS-mentioned,"Round-2 screen: GI-4000 (mutant-Ras yeast vaccine) is one of several antigen-directed agents in a multi-antigen NANT regimen; patients not selected for RAS mutation, so not a RAS-focused trial"
+NCT03169777,target_class,RAS vaccine / immunotherapy,Not RAS-directed,follows tier correction
+NCT03169764,ras_tier,RAS-targeted,RAS-mentioned,"Round-2 screen: GI-4000 (mutant-Ras yeast vaccine) is one of several antigen-directed agents in a multi-antigen NANT regimen; patients not selected for RAS mutation, so not a RAS-focused trial"
+NCT03169764,target_class,RAS vaccine / immunotherapy,Not RAS-directed,follows tier correction
+NCT03169738,ras_tier,RAS-targeted,RAS-mentioned,"Round-2 screen: GI-4000 (mutant-Ras yeast vaccine) is one of several antigen-directed agents in a multi-antigen NANT regimen; patients not selected for RAS mutation, so not a RAS-focused trial"
+NCT03169738,target_class,RAS vaccine / immunotherapy,Not RAS-directed,follows tier correction
+NCT03136406,ras_tier,RAS-targeted,RAS-mentioned,"Round-2 screen: GI-4000 (mutant-Ras yeast vaccine) is one of several antigen-directed agents in a multi-antigen NANT regimen; patients not selected for RAS mutation, so not a RAS-focused trial"
+NCT03136406,target_class,RAS vaccine / immunotherapy,Not RAS-directed,follows tier correction

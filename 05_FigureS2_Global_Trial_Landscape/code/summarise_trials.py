@@ -3,7 +3,7 @@
 
 Usage: python3 summarise_trials.py [csv] [--all-targeted]
   default csv: ../data/trials_curated.csv
-  The analysis set is the RAS-targeted trials, excluding trials that enrol only
+  The analysis set is the RAS-targeted trials, excluding trials that enrol
   patients with haematological malignancies (the review covers solid tumours);
   --all-targeted keeps them (used to check the legacy counts).
 """
@@ -19,7 +19,7 @@ print('corpus records:', len(rows), '| first posted', min(r['first_posted_year']
 tiers = Counter(r['ras_tier'] for r in rows)
 for k, v in tiers.most_common(): print('  tier', k, P(v, len(rows)))
 targ = [r for r in rows if r['ras_tier'] == 'RAS-targeted']
-haem = [r for r in targ if r['tumour_group'] == 'Haematologic malignancy']
+haem = [r for r in targ if 'Haematologic' in r['tumour_group']]
 print('RAS-targeted:', len(targ), '| haematological-only:', [r['nct_id'] for r in haem])
 T = targ if '--all-targeted' in sys.argv else [r for r in targ if r not in haem]
 n = len(T); print('ANALYSIS SET n =', n)

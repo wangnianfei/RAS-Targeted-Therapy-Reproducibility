@@ -3,7 +3,7 @@
 # Figure 3: PFS and OS hazard ratios across seven phase III RCTs (descriptive forest plots)
 # Production Script for ESMO Open
 # 180.0 mm double-column width, 100.0 mm height, Arial
-# Panel tags (A, B). The former crossover-vs-OS regression panel (C) was removed in revision:
+# Panel tags (a, b; lower case as in all figures and legends). The former crossover-vs-OS regression panel (c) was removed in revision:
 # n = 6 heterogeneous trials, an active-comparator trial, and unsourced crossover values.
 # ==============================================================================
 
@@ -30,7 +30,7 @@ trials_df$row_id <- rev(seq_len(nrow(trials_df)))
 trials_df$os_status <- ifelse(!is.na(trials_df$os_high) & trials_df$os_high < 1.0, "Significant OS Benefit", "No Significant OS Benefit")
 trials_df$os_note[is.na(trials_df$os_note)] <- ""
 
-make_info_panel <- function(tag_label = "A") {
+make_info_panel <- function(tag_label = "a") {
   ggplot(trials_df, aes(y = row_id)) +
     geom_text(aes(x = 0, label = trial_id), hjust = 0, size = 2.2, fontface = "bold", family = "Arial", color = "#111111") +
     geom_text(aes(x = 2.9, label = setting), hjust = 0, size = 1.95, family = "Arial", color = "#333333") +
@@ -88,7 +88,7 @@ p_pfs_stats <- ggplot(trials_df, aes(y = row_id)) +
   theme_void(base_family = "Arial") +
   theme(plot.margin = margin(t = 9, r = 4, b = 2, l = 2))
 
-panel_a <- (make_info_panel("A") | p_pfs_forest | p_pfs_stats) + plot_layout(widths = c(1.9, 1.4, 0.9))
+panel_a <- (make_info_panel("a") | p_pfs_forest | p_pfs_stats) + plot_layout(widths = c(1.9, 1.4, 0.9))
 
 os_colors <- c("Significant OS Benefit" = "#C0392B", "No Significant OS Benefit" = "#7F8C8D")
 p_os_forest <- ggplot(trials_df, aes(y = row_id, x = os_hr)) +
@@ -132,7 +132,7 @@ p_os_stats <- ggplot(trials_df, aes(y = row_id)) +
   theme_void(base_family = "Arial") +
   theme(plot.margin = margin(t = 9, r = 4, b = 2, l = 2))
 
-panel_b <- (make_info_panel("B") | p_os_forest | p_os_stats) + plot_layout(widths = c(1.9, 1.4, 0.9))
+panel_b <- (make_info_panel("b") | p_os_forest | p_os_stats) + plot_layout(widths = c(1.9, 1.4, 0.9))
 
 fig3_combined <- (panel_a / panel_b) + plot_layout(heights = c(1, 1))
 

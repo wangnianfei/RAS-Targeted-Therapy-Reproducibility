@@ -18,7 +18,7 @@ The review offers three things beyond a summary of trial endpoints:
 >
 > 2\. Biology behind the clinical results: we relate trial outcomes to mechanism (EGFR feedback in colorectal cancer, STK11 and KEAP1 co-mutations, and the acquired resistance alterations documented in patients) and point out where published data are easily over-interpreted.
 >
-> 3\. A reproducible trial landscape and outlook: we classify 1,182 ClinicalTrials.gov records and, after record-level review, identify 367 trials of directly RAS-targeted agents in solid tumours, with data and code in a public repository, and outline priorities: inhibitors for non-G12C alleles, first-line and perioperative trials, and combinations matched to resistance mechanisms.
+> 3\. A reproducible trial landscape and outlook: we classify 1,182 ClinicalTrials.gov records and, after record-level review, identify 353 trials of directly RAS-targeted agents in solid tumours, with data and code in a public repository, and outline priorities: inhibitors for non-G12C alleles, first-line and perioperative trials, and combinations matched to resistance mechanisms.
 
 **Declarations**
 
