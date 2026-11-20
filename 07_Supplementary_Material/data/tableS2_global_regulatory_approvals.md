@@ -30,7 +30,7 @@
 <p>EMA (2022-01-06);</p>
 <p>PMDA (2022-01-20)</p></td>
 <td><p>Accelerated / conditional approval (single-arm phase II CodeBreaK 100, ORR 37.1% [8])</p></td>
-<td><p>Phase III CodeBreaK 200: PFS HR 0.66 (P=0.0017); OS HR 1.01 (95% CI 0.77-1.33; confounded by crossover) [60,66]</p></td>
+<td><p>Phase III CodeBreaK 200: PFS HR 0.66 (P = 0.0017); OS HR 1.01 (95% CI 0.77–1.33; confounded by crossover) [60,66]</p></td>
 <td><p>FDA ODAC 10:2 vote (2023-10) [S1,S2] and CRL (2023-12) rejecting regular approval [S3]; EMA conditional marketing authorisation renewed (2024-11) [80]</p></td>
 </tr>
 <tr>
@@ -40,7 +40,7 @@
 <td><p>FDA (2022-12-12);</p>
 <p>EMA (2024-01-05)</p></td>
 <td><p>Accelerated / conditional approval (single-arm phase II KRYSTAL-1, ORR 42.9% [9])</p></td>
-<td><p>Phase III KRYSTAL-12: PFS 5.5 vs 3.8 mo (HR 0.58, P&lt;0.0001); intracranial ORR 24% vs 11%; OS immature [61]</p></td>
+<td><p>Phase III KRYSTAL-12: PFS 5.5 vs 3.8 mo (HR 0.58, P &lt; 0.0001); intracranial ORR 24% vs 11%; OS immature [61]</p></td>
 <td><p>Active conditional approval; confirmatory OS follow-up ongoing; first G12C inhibitor with prospective intracranial activity on US label</p></td>
 </tr>
 <tr>
@@ -48,7 +48,7 @@
 <td><p>Advanced <em>KRAS</em> G12C metastatic colorectal cancer, ≥2L (chemorefractory)</p></td>
 <td><p>FDA (2025-01-16)</p></td>
 <td><p>Regular approval (first regular approval in colorectal cancer)</p></td>
-<td><p>Phase III CodeBreaK 300: 960 mg PFS HR 0.49 (P=0.006); final OS HR 0.70 (did not cross pre-specified multiplicity boundary) [63,68]</p></td>
+<td><p>Phase III CodeBreaK 300: 960 mg PFS HR 0.49 (P = 0.006); final OS HR 0.70 (did not cross pre-specified multiplicity boundary) [63,68]</p></td>
 <td><p>Active regular approval; established EGFR plus KRAS G12C co-blockade as a standard option in chemorefractory disease</p></td>
 </tr>
 <tr>
@@ -57,7 +57,7 @@
 <td><p>Advanced <em>KRAS</em> G12C NSCLC, ≥2L</p></td>
 <td><p>NMPA (China, 2024-08)</p></td>
 <td><p>Conditional approval (priority review)</p></td>
-<td><p>Pivotal single-arm phase II (n=116): IRRC ORR 49.1%, median PFS 9.7 mo [82]</p></td>
+<td><p>Pivotal single-arm phase II (n = 116): IRRC ORR 49.1%, median PFS 9.7 mo [82]</p></td>
 <td><p>Active conditional approval; confirmatory randomised phase III trial ongoing</p></td>
 </tr>
 <tr>
@@ -66,7 +66,7 @@
 <td><p>Advanced <em>KRAS</em> G12C NSCLC, ≥2L</p></td>
 <td><p>NMPA (China, 2024-11-08)</p></td>
 <td><p>Conditional approval (priority review)</p></td>
-<td><p>Pivotal single-arm phase II (n=123): IRC ORR 50% (61/123) [81]</p></td>
+<td><p>Pivotal single-arm phase II (n = 123): IRC ORR 50% (61/123) [81]</p></td>
 <td><p>Active conditional approval; confirmatory randomised phase III trial ongoing</p></td>
 </tr>
 <tr>
@@ -75,7 +75,7 @@
 <td><p>Advanced <em>KRAS</em> G12C NSCLC, ≥2L</p></td>
 <td><p>NMPA (China, 2025-05)</p></td>
 <td><p>Conditional approval (priority review)</p></td>
-<td><p>Pivotal single-arm phase IIb (n=119): IRC ORR 47.9% (56/117) [11]</p></td>
+<td><p>Pivotal single-arm phase IIb (n = 119): IRC ORR 47.9% (56/117) [11]</p></td>
 <td><p>Active conditional approval; confirmatory randomised phase III trial ongoing</p></td>
 </tr>
 <tr>
@@ -94,7 +94,7 @@
 <td><p>FDA (2026-08-26, regular);</p>
 <p>EC (November 2026) [S5,S6]</p></td>
 <td><p>Regular approval (first regular approval for multi-RAS inhibitor)</p></td>
-<td><p>Pivotal phase III RASolute 302 (N=500; 248 vs 252), first interim analysis: median OS 13.2 vs 6.7 mo (HR 0.40, 95% CI 0.30–0.53, P&lt;0.001; <em>RAS</em> G12 population 13.2 vs 6.6 mo, HR 0.40); median PFS 7.2 vs 3.6 mo (HR 0.49, 95% CI 0.38–0.64, P&lt;0.001; <em>RAS</em> G12 population HR 0.45); ORR 31.6% vs 11.2% [59]</p></td>
+<td><p>Pivotal phase III RASolute 302 (N = 500; 248 vs 252), first interim analysis: median OS 13.2 vs 6.7 mo (HR 0.40, 95% CI 0.30–0.53, P &lt; 0.001; <em>RAS</em> G12 population 13.2 vs 6.6 mo, HR 0.40); median PFS 7.2 vs 3.6 mo (HR 0.49, 95% CI 0.38–0.64, P &lt; 0.001; <em>RAS</em> G12 population HR 0.45); ORR 31.6% vs 11.2% [59]</p></td>
 <td><p>Active regular approval (FDA); EU marketing authorisation (EC, November 2026) after a positive CHMP opinion (October 2026); establishes multi-RAS tri-complex inhibition as standard of care in PDAC</p></td>
 </tr>
 <tr>
@@ -104,7 +104,7 @@
 <td><p>FDA (Accelerated approval 2024-06-21;</p>
 <p><strong>Withdrawn 2026-09-01</strong>)</p></td>
 <td><p>Accelerated approval based on single-arm ORR (KRYSTAL-1, 34.0%)</p></td>
-<td><p>Confirmatory phase III KRYSTAL-10 (N=461; 231 vs 230): median PFS by BICR 7.5 vs 8.1 mo (HR 0.89, 95% CI 0.71–1.13, P=0.32); median OS 21.6 vs 21.7 mo (HR 0.83, 95% CI 0.67–1.03, P=0.09); ORR 47% vs 16%; neither dual primary endpoint met [64]</p></td>
+<td><p>Confirmatory phase III KRYSTAL-10 (N = 461; 231 vs 230): median PFS by BICR 7.5 vs 8.1 mo (HR 0.89, 95% CI 0.71–1.13, P = 0.32); median OS 21.6 vs 21.7 mo (HR 0.83, 95% CI 0.67–1.03, P = 0.09); ORR 47% vs 16%; neither dual primary endpoint met [64]</p></td>
 <td><p><strong>Accelerated-approval indication withdrawn at the sponsor's request; confirmatory study</strong> failed to demonstrate superiority over second-line FOLFIRI or mFOLFOX6 with or without a VEGF/VEGFR inhibitor [73]</p></td>
 </tr>
 </tbody>

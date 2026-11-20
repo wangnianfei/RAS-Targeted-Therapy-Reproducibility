@@ -6,12 +6,12 @@
 
 ^1 Department of Oncology, The Second Affiliated Hospital of Anhui Medical University, Hefei, China\
 ^2 Hefei Cancer Hospital of CAS, Hefei Institutes of Physical Science, CAS, Hefei, China\
-^3 Science Island Branch, Graduate School of USTC, Hefei, China\
+^3 Science Island Branch, Graduate School of USTC, Hefei, Anhui 230031, China\
 ^4 School of Life Sciences, Fudan University, Shanghai, China\
 ^5 Department of Radiation Therapy, Anhui Chest Hospital, Hefei, China
 
 *\*Correspondence: Shanghu Wang, MD, PhD. Email: wangshanghu@mail.ustc.edu.cn\
-Word Count: Abstract 262 words \| Main Text 4,489 words; figure legends 500 words (English version) \| 4 Figures, 1 Table, 104 References*
+Word Count: Abstract 266 words \| Main Text 4,497 words; figure legends 502 words (English version) \| 4 Figures, 1 Table, 104 References*
 
 **要点**
 
@@ -31,7 +31,7 @@ Word Count: Abstract 262 words \| Main Text 4,489 words; figure legends 500 word
 
 **方法与证据综合：** 本文综述上述药物类别的结构基础，以及在非小细胞肺癌（NSCLC）、结直肠癌、胰腺导管腺癌和黑色素瘤中开展的七项 III 期随机试验的结果；并分析 ClinicalTrials.gov 中 1,151 项 RAS 相关干预性肿瘤试验，其中 353 项在实体瘤中检验直接靶向 RAS 的药物。
 
-**主要发现：** RAS 通路抑制剂在全部七项试验中提高了客观缓解率，在六项中延长了无进展生存期（PFS）。总生存期（OS）获益见于两项：divarasib 在经治 NSCLC 中优于第一代 KRAS G12C 抑制剂；multi-RAS(ON) 抑制剂 daraxonrasib 在胰腺癌中优于化疗（中位 13.2 vs 6.7 个月）。sotorasib 未较多西他赛改善 OS，且该比较受交叉用药影响；adagrasib 的 OS 数据尚不成熟。在结直肠癌中，KRAS G12C 抑制剂需联合 EGFR 阻断：sotorasib 联合帕尼单抗在难治性疾病中延长 PFS，而 adagrasib 联合西妥昔单抗在二线未能较化疗改善 PFS 或 OS，其美国加速批准已应申办方请求撤回。获得性耐药涉及 *KRAS* 二次改变、受体酪氨酸激酶与 MAPK 通路旁路激活以及组织学转化；*STK11* 与 *KEAP1* 共突变与较差结局相关。
+**主要发现：** RAS 通路抑制剂在全部七项试验中提高了客观缓解率，在六项中延长了无进展生存期（PFS）。总生存期（OS）获益见于两项：divarasib 在经治 NSCLC 中优于第一代 KRAS G12C 抑制剂；multi-RAS(ON) 抑制剂 daraxonrasib 在胰腺癌中优于化疗（中位 13.2 vs 6.7 个月）。sotorasib 未较多西他赛改善 OS，且该比较受交叉用药影响；adagrasib 的 OS 数据尚不成熟。在结直肠癌中，KRAS G12C 抑制剂需联合表皮生长因子受体（EGFR）阻断：sotorasib 联合帕尼单抗在难治性疾病中延长 PFS，而 adagrasib 联合西妥昔单抗在二线未能较化疗改善 PFS 或 OS，其美国加速批准已应申办方请求撤回。获得性耐药涉及 *KRAS* 二次改变、受体酪氨酸激酶与 MAPK 通路旁路激活以及组织学转化；*STK11* 与 *KEAP1* 共突变与较差结局相关。
 
 **结论：** 今后的重点包括：针对非 G12C 等位基因的抑制剂、一线及围手术期试验、与耐药机制相匹配的联合方案，以及预先规定 OS 分析中交叉用药处理方法的试验设计。
 
@@ -91,7 +91,7 @@ Word Count: Abstract 262 words \| Main Text 4,489 words; figure legends 500 word
 
 **2.1 GTP 酶二元循环与激活的结构基础**
 
-RAS 蛋白是受鸟嘌呤核苷酸交换因子（GEF）和 GTP 酶激活蛋白（GAP）调控的二元分子开关。人类三个 *RAS* 基因（*KRAS*、*NRAS* 和 *HRAS*）编码高度保守的 21 kDa 小 GTP 酶 \[2\]，均含催化 G 结构域（第 1–166 位残基）及经 CAAX 介导的法尼基化与羧甲基化锚定于膜的 C 端高变区 \[2,4\]。G 结构域的两个环区，即开关 I（第 30–38 位残基）和开关 II（第 60–76 位残基），决定核苷酸结合与效应蛋白结合（图 1a）\[3,17\]。SOS1 与 SOS2 催化 GDP 释放，使胞内丰富的 GTP 结合并诱导出与效应蛋白结合的闭合构象 \[2,18,19\]。NF1 等 GAP 通过将"精氨酸指"插入催化位点，使内在 GTP 水解加速约 10<sup>5</sup> 倍，恢复失活的 GDP 结合态 \[20\]。第 12、13 或 61 位密码子的致癌错义突变损害 GAP 介导的 GTP 水解，使突变蛋白累积于活性 GTP 结合态 \[20\]。
+RAS 蛋白是受鸟嘌呤核苷酸交换因子（GEF）和 GTP 酶激活蛋白（GAP）调控的二元分子开关。人类三个 *RAS* 基因（*KRAS*、*NRAS* 和 *HRAS*）编码高度保守的 21 kDa 小 GTP 酶 \[2\]，均含催化 G 结构域（第 1–166 位残基）及经 CAAX 介导的法尼基化与羧甲基化锚定于膜的 C 端高变区 \[2,4\]。G 结构域的两个环区，即开关 I（第 30–38 位残基）和开关 II（第 60–76 位残基），决定核苷酸结合与效应蛋白结合（图 1a）\[3,17\]。SOS1 与 SOS2 催化 GDP 释放，使胞内丰富的 GTP 结合并诱导出与效应蛋白结合的闭合构象 \[2,18,19\]。NF1 等 GAP 通过将"精氨酸指"插入催化位点，使内在 GTP 水解加速约 10<sup>5</sup> 倍，恢复失活的 GDP 结合态 \[2,20\]。第 12、13 或 61 位密码子的致癌错义突变损害 GAP 介导的 GTP 水解，使突变蛋白累积于活性 GTP 结合态 \[2,20\]。
 
 活性 RAS 主要经 RAF–MEK–ERK（MAPK）和 PI3K–AKT–mTOR 级联传递信号 \[2,3,21\]。ERK 磷酸化上游受体酪氨酸激酶、SOS1 和 CRAF，形成抑制通路活性的负反馈 \[21,22\]；抑制 RAS 或其效应蛋白会解除这一反馈，使 EGFR、MET 和 HER2 等受体酪氨酸激酶（RTK）再激活，进而促进耐药（见 5.2 节）\[22,23\]。
 
@@ -103,7 +103,7 @@ RAS 蛋白是受鸟嘌呤核苷酸交换因子（GEF）和 GTP 酶激活蛋白�
 
 CYPA，亲环素 A；GDP，鸟苷二磷酸；GMPPNP，鸟苷 5′-\[β,γ-亚氨基\]三磷酸（不可水解的 GTP 类似物）；PDB，蛋白质数据库；S-IIP，开关 II 口袋。
 
-**2.2 实体瘤中 RAS 突变频率与等位基因分布**
+**2.2 实体瘤中 *RAS* 突变频率与等位基因分布**
 
 *RAS* 突变频率因队列而异。在 TCGA 泛癌图谱中，来自 32 项研究、以未经治疗原发肿瘤为主的 10,967 份样本中有 10.7% 携带 *KRAS*、*NRAS* 或 *HRAS* 突变（基于泛癌图谱数据的 cBioPortal 查询 \[25\]）。汇总多个突变数据库的估计更高，约为 19%–25% 的肿瘤 \[1,26\]；在 MSK-IMPACT 晚期肿瘤临床测序队列的 10,945 份样本中，17.8% 携带 *RAS* 错义突变 \[27\]。这些估计的差异主要源于各数据集所含的瘤种构成 \[1\]。*KRAS* 约占 *RAS* 突变肿瘤的 75%，*NRAS* 占 17%，*HRAS* 占 7% \[1\]。
 
@@ -115,7 +115,7 @@ CYPA，亲环素 A；GDP，鸟苷二磷酸；GMPPNP，鸟苷 5′-\[β,γ-亚氨
 
 <img src="media/image2.png" style="width:6.4in;height:2.9155in" />
 
-**图 2. 临床测序队列中的 RAS 突变率与 KRAS 等位基因谱。**
+**图 2. 临床测序队列中的 *RAS* 突变率与 *KRAS* 等位基因谱。**
 
 MSK-IMPACT 队列（10,945 份晚期肿瘤患者样本）\[27\]，经 cBioPortal 获取，仅统计错义突变。**a，** 七种肿瘤中携带 *KRAS*、*NRAS* 或 *HRAS* 错义突变的样本比例（圆面积与所示百分比成正比；n 为样本数）。**b，** 胰腺导管腺癌、结直肠癌和 NSCLC 中 *KRAS* 错义突变的等位基因分布（占比 ≥6% 时标注百分数；n 为突变数）；Q61X 包括所有第 61 位密码子置换。
 
@@ -195,9 +195,9 @@ Ostrem 与 Shokat 解析的 GDP 结合态 KRAS(G12C) 晶体结构揭示了 S-IIP
 <p>sotorasib：171</p>
 <p>多西他赛：174</p></td>
 <td><p>BICR 评估 PFS</p></td>
-<td><p>5.6 vs 4.5，HR 0.66 (0.51–0.86)，P = 0.0017</p></td>
-<td><p>28.1% vs 13.2%，P &lt; 0.001</p></td>
-<td><p>10.6 vs 11.3，HR 1.01 (0.77–1.33)，P = 0.53</p></td>
+<td><p>5.6 vs 4.5，HR 0.66 (0.51–0.86)，<em>P</em> = 0.0017</p></td>
+<td><p>28.1% vs 13.2%，<em>P</em> &lt; 0.001</p></td>
+<td><p>10.6 vs 11.3，HR 1.01 (0.77–1.33)，<em>P</em> = 0.53</p></td>
 <td><p>33.1% vs 40.4%</p></td>
 <td><p>9.5% vs 11.3%（TRAE）</p></td>
 <td><p>多西他赛组 26% 交叉至 sotorasib（34% 曾接受 KRAS G12C 抑制剂）[60,66]；随机后未接受治疗者 1% vs 13%；ODAC 质疑 PFS 结果的可靠性</p></td>
@@ -213,36 +213,36 @@ Ostrem 与 Shokat 解析的 GDP 结合态 KRAS(G12C) 晶体结构揭示了 S-IIP
 <p>adagrasib：301</p>
 <p>多西他赛：152</p></td>
 <td><p>BICR 评估 PFS</p></td>
-<td><p>5.5 vs 3.8，HR 0.58 (0.45–0.76)，P &lt; 0.0001</p></td>
-<td><p>31.9% vs 9.2%，OR 4.68，P &lt; 0.0001</p></td>
+<td><p>5.5 vs 3.8，HR 0.58 (0.45–0.76)，<em>P</em> &lt; 0.0001</p></td>
+<td><p>31.9% vs 9.2%，OR 4.68，<em>P</em> &lt; 0.0001</p></td>
 <td><p>首次报告时尚不成熟</p></td>
 <td><p>47.0% vs 45.7%</p></td>
-<td><p>7.7% vs 14.3%</p></td>
-<td><p>应 FDA 要求修订方案后允许进展时交叉至 adagrasib（多西他赛组 29%）[67]；OS 尚不成熟；颅内 ORR 24% vs 11%</p></td>
+<td><p>7.7% vs 14.3%（TRAE）</p></td>
+<td><p>应 FDA 要求修订方案后允许进展时交叉至 adagrasib（多西他赛组 29%）[61,67]；OS 尚不成熟；颅内 ORR 24% vs 11%</p></td>
 </tr>
 <tr>
 <td><p>Krascendo 1</p>
 <p>[62]</p></td>
 <td><p>晚期 NSCLC</p>
-<p>KRAS G12C，既往 1–3 线</p></td>
+<p><em>KRAS</em> G12C，既往 1–3 线</p></td>
 <td><p>III 期，开放标签</p>
 <p>1:1 有效药物对照</p></td>
 <td><p>N=338</p>
 <p>divarasib：167</p>
 <p>sotorasib/adagrasib：171</p></td>
 <td><p>BICR 评估 PFS</p></td>
-<td><p>9.8 vs 5.7，HR 0.58（0.44–0.76），P &lt; 0.001</p></td>
+<td><p>9.8 vs 5.7，HR 0.58（0.44–0.76），<em>P</em> &lt; 0.001</p></td>
 <td><p>58.4% vs 32.3%</p></td>
-<td><p>17.7 vs 12.0，HR 0.56（0.41–0.78），P &lt; 0.001（期中）</p></td>
+<td><p>17.7 vs 12.0，HR 0.56（0.41–0.78），<em>P</em> &lt; 0.001（期中）</p></td>
 <td><p>24.6% vs 34.5%</p></td>
 <td><p>4.8% vs 11.7%（TRAE）</p></td>
-<td><p>对照为有效的 G12C 抑制剂（sotorasib 156 例；adagrasib 15 例）；首次期中分析显示显著 OS 获益；不能外推至与多西他赛的比较</p></td>
+<td><p>对照为有效的 G12C 抑制剂（sotorasib 156 例；adagrasib 15 例）；预设期中分析显示显著 OS 获益；不能外推至与多西他赛的比较</p></td>
 </tr>
 <tr>
 <td><p>CodeBreaK 300</p>
 <p>[63,68]</p></td>
 <td><p>难治性 mCRC</p>
-<p><em>KRAS G12C, ≥2L</em></p></td>
+<p><em>KRAS</em> G12C, ≥2L</p></td>
 <td><p>III 期，开放标签</p>
 <p>1:1:1 随机</p></td>
 <td><p>N=160</p>
@@ -250,9 +250,9 @@ Ostrem 与 Shokat 解析的 GDP 结合态 KRAS(G12C) 晶体结构揭示了 S-IIP
 <p>Soto240+Pani: 53</p>
 <p>标准治疗：54</p></td>
 <td><p>BICR 评估 PFS</p></td>
-<td><p>5.6 vs 3.9 vs 2.2，HR 0.49（0.30–0.80），P = 0.006（960 mg）</p></td>
+<td><p>5.6 vs 3.9 vs 2.2，HR 0.49（0.30–0.80），<em>P</em> = 0.006（960 mg）</p></td>
 <td><p>26.4% vs 5.7% vs 0%</p></td>
-<td><p>NR vs 10.3（960 mg），HR 0.70 (0.41–1.18)，P = 0.20</p></td>
+<td><p>NR vs 10.3（960 mg），HR 0.70 (0.41–1.18)，<em>P</em> = 0.20</p></td>
 <td><p>35.8% vs 43.1%</p></td>
 <td><p>3.8% vs 2.0%（TRAE）</p></td>
 <td><p>EGFR 联合阻断针对适应性通路再激活；试验（n = 160）未按 OS 设计把握度；OS 差异无统计学意义（HR 0.70）</p></td>
@@ -266,9 +266,9 @@ Ostrem 与 Shokat 解析的 GDP 结合态 KRAS(G12C) 晶体结构揭示了 S-IIP
 <p>1:1 随机</p></td>
 <td><p>N=461 (231 vs 230)</p></td>
 <td><p>PFS 与 OS 双主要终点</p></td>
-<td><p>7.5 vs 8.1，HR 0.89（0.71–1.13），P = 0.32（BICR）</p></td>
+<td><p>7.5 vs 8.1，HR 0.89（0.71–1.13），<em>P</em> = 0.32（BICR）</p></td>
 <td><p>47% vs 16%</p></td>
-<td><p>21.6 vs 21.7，HR 0.83（0.67–1.03），P = 0.09</p></td>
+<td><p>21.6 vs 21.7，HR 0.83（0.67–1.03），<em>P</em> = 0.09</p></td>
 <td><p>46% vs 55%</p></td>
 <td><p>3% vs 2%（TRAE）</p></td>
 <td><p>ORR 虽更高，两个主要终点均未达到；对照为 FOLFIRI 或 mFOLFOX6 ± VEGF/VEGFR 抑制剂；结直肠癌加速批准适应证应申办方请求撤回（FDA 函，2026 年 9 月 1 日）</p></td>
@@ -277,19 +277,19 @@ Ostrem 与 Shokat 解析的 GDP 结合态 KRAS(G12C) 晶体结构揭示了 S-IIP
 <td><p>RASolute 302</p>
 <p>[59]</p></td>
 <td><p>转移性 PDAC</p>
-<p><em>RAS-mutant (91.8% G12), ≥2L</em></p></td>
+<p><em>RAS</em> 突变（91.8% 为 G12），≥2L</p></td>
 <td><p>III 期，开放标签</p>
 <p>1:1 随机</p></td>
 <td><p>N=500</p>
 <p>daraxonrasib：248</p>
 <p>化疗：252</p></td>
 <td><p>PFS 与 OS 双主要终点（RAS G12）</p></td>
-<td><p>7.2 vs 3.6，HR 0.49（0.38–0.64），P &lt; 0.001（总体；G12 HR 0.45）</p></td>
+<td><p>7.2 vs 3.6，HR 0.49（0.38–0.64），<em>P</em> &lt; 0.001（总体；G12 HR 0.45）</p></td>
 <td><p>31.6% vs 11.2%（总体）</p></td>
-<td><p>13.2 vs 6.7，HR 0.40（0.30–0.53），P &lt; 0.001（期中；G12 HR 0.40）</p></td>
+<td><p>13.2 vs 6.7，HR 0.40（0.30–0.53），<em>P</em> &lt; 0.001（期中；G12 HR 0.40）</p></td>
 <td><p>61.8% vs 69.6%（全因）</p></td>
-<td><p>1.2% vs 11.2%</p></td>
-<td><p>不允许交叉；首次期中分析显示 OS 获益，各 RAS 突变亚组一致；分别有 97.2% 与 84.9% 的患者接受了分配的治疗</p></td>
+<td><p>1.2% vs 11.2%（TRAE）</p></td>
+<td><p>不允许交叉；首次期中分析显示 OS 获益，各 <em>RAS</em> 突变亚组一致；分别有 97.2% 与 84.9% 的患者接受了分配的治疗</p></td>
 </tr>
 <tr>
 <td colspan="11"><p><em>下游 MEK 抑制剂参照</em></p></td>
@@ -298,24 +298,24 @@ Ostrem 与 Shokat 解析的 GDP 结合态 KRAS(G12C) 晶体结构揭示了 S-IIP
 <td><p>NEMO</p>
 <p>[65]</p></td>
 <td><p>晚期黑色素瘤</p>
-<p>NRAS 突变</p></td>
+<p><em>NRAS</em> 突变，1–2L</p></td>
 <td><p>III 期，开放标签</p>
 <p>2:1 随机</p></td>
 <td><p>N=402</p>
 <p>binimetinib：269</p>
 <p>达卡巴嗪：133</p></td>
 <td><p>BICR 评估 PFS</p></td>
-<td><p>2.8 vs 1.5，HR 0.62 (0.47–0.80)，P &lt; 0.001</p></td>
-<td><p>15% vs 7%，P = 0.015</p></td>
-<td><p>11.0 vs 10.1，HR 1.00 (0.75–1.33)，P = 0.499</p></td>
+<td><p>2.8 vs 1.5，HR 0.62 (0.47–0.80)，<em>P</em> &lt; 0.001</p></td>
+<td><p>15% vs 7%，<em>P</em> = 0.015</p></td>
+<td><p>11.0 vs 10.1，HR 1.00 (0.75–1.33)，<em>P</em> = 0.50</p></td>
 <td><p>CPK 升高 19% vs 0%；高血压 7% vs 2%（3–4 级）</p></td>
-<td><p>25% vs 8%</p></td>
+<td><p>25% vs 8%（全因）</p></td>
 <td><p>历史性通路参照；PFS 获益未转化为 OS 获益，可能受后续免疫治疗（抗 PD-1/CTLA-4）稀释；MEK 治疗窗窄</p></td>
 </tr>
 </tbody>
 </table>
 
-\*≥3 级 AE：均为 TRAE（Krascendo 1 为 3–4 级；KRYSTAL-10 为 3–5 级），RASolute 302 为全因 AE；NEMO 未报告总发生率，故列出发生率 ≥5% 的 3–4 级事件。P 值均按原始文献报告，部分为单侧检验（如 CodeBreaK 200 与 NEMO 的 OS）。KRYSTAL-10 结果来自会议摘要 \[64\]。文献与注册库截止：2026 年 11 月 18 日；监管网页最后访问：2026 年 11 月 20 日。2L，二线；AE，不良事件；BICR，盲态独立中心评审；CI，置信区间；CPK，肌酸磷酸激酶；(m)CRC，（转移性）结直肠癌；CTLA-4，细胞毒性 T 淋巴细胞相关蛋白 4；EGFR，表皮生长因子受体；FOLFIRI，亚叶酸–氟尿嘧啶–伊立替康；HR，风险比；MEK，丝裂原活化蛋白激酶激酶；mFOLFOX6，改良亚叶酸–氟尿嘧啶–奥沙利铂；mOS/mPFS，中位 OS/PFS；NR，未达到；NSCLC，非小细胞肺癌；ODAC，美国 FDA 肿瘤药物咨询委员会；OR，比值比；ORR，客观缓解率；OS，总生存期；Pani，帕尼单抗；PD-1，程序性细胞死亡蛋白 1；PDAC，胰腺导管腺癌；PFS，无进展生存期；Soto，sotorasib；TRAE，治疗相关 AE；VEGF(R)，血管内皮生长因子（受体）。
+\*≥3 级 AE：均为 TRAE（Krascendo 1 为 3–4 级；KRYSTAL-10 为 3–5 级），RASolute 302 为全因 AE；NEMO 未报告总发生率，故列出发生率 ≥5% 的 3–4 级事件。停药率均为 TRAE 所致，NEMO 为全因 AE。P 值均按原始文献报告，部分为单侧检验（如 CodeBreaK 200 与 NEMO 的 OS）。KRYSTAL-10 结果来自会议摘要 \[64\]。文献与注册库截止：2026 年 11 月 18 日；监管网页最后访问：2026 年 11 月 20 日。2L，二线；AE，不良事件；BICR，盲态独立中心评审；CI，置信区间；CPK，肌酸磷酸激酶；(m)CRC，（转移性）结直肠癌；CTLA-4，细胞毒性 T 淋巴细胞相关蛋白 4；EGFR，表皮生长因子受体；FOLFIRI，亚叶酸–氟尿嘧啶–伊立替康；HR，风险比；MEK，丝裂原活化蛋白激酶激酶；mFOLFOX6，改良亚叶酸–氟尿嘧啶–奥沙利铂；mOS/mPFS，中位 OS/PFS；NR，未达到；NSCLC，非小细胞肺癌；ODAC，美国 FDA 肿瘤药物咨询委员会；OR，比值比；ORR，客观缓解率；OS，总生存期；Pani，帕尼单抗；PD-1，程序性细胞死亡蛋白 1；PDAC，胰腺导管腺癌；PFS，无进展生存期；Soto，sotorasib；TRAE，治疗相关 AE；VEGF(R)，血管内皮生长因子（受体）。
 
 **4.2 非小细胞肺癌二线单药治疗：CodeBreaK 200、KRYSTAL-12 与 Krascendo 1**
 
@@ -323,15 +323,15 @@ Ostrem 与 Shokat 解析的 GDP 结合态 KRAS(G12C) 晶体结构揭示了 S-IIP
 
 总生存期（OS）无差异（中位 10.6 vs 11.3 个月；HR 1.01，95% CI 0.77–1.33；图 3）\[60\]。交叉用药可能是原因之一：多西他赛组 26% 的患者在进展后交叉接受 sotorasib，34% 曾接受 KRAS G12C 抑制剂 \[60,66\]。开放标签设计是另一局限：分配至多西他赛组的患者中 13%（23/174）从未接受治疗，sotorasib 组为 1%（2/171）\[60\]。加之中位 PFS 仅延长约五周，美国 FDA 肿瘤药物咨询委员会于 2023 年 10 月质疑 PFS 结果能否可靠解读 \[66\]；sotorasib 未获完全批准（附表 S2）。
 
-在 KRYSTAL-12 中，adagrasib 在 453 例患者中同样较多西他赛改善了 PFS（中位 5.5 vs 3.8 个月；HR 0.58，95% CI 0.45–0.76）并提高了 ORR（31.9% vs 9.2%）\[61\]。OS 数据在首次报告时尚不成熟 \[61\]，截至本综述检索截止日期仍未发表最终分析；应 FDA 要求修订方案后，多西他赛组约 29% 的患者交叉接受 adagrasib \[67\]，这可能削弱最终的生存差异。adagrasib 的颅内活性对脑转移的处理具有参考价值（见 6.1 节）\[51,69\]。
+在 KRYSTAL-12 中，adagrasib 在 453 例患者中同样较多西他赛改善了 PFS（中位 5.5 vs 3.8 个月；HR 0.58，95% CI 0.45–0.76）并提高了 ORR（31.9% vs 9.2%）\[61\]。OS 数据在首次报告时尚不成熟 \[61\]，截至本综述检索截止日期仍未发表最终分析；应 FDA 要求修订方案后，多西他赛组约 29% 的患者交叉接受 adagrasib \[61,67\]，这可能削弱最终的生存差异。adagrasib 的颅内活性对脑转移的处理具有参考价值（见 6.1 节）\[51,69\]。
 
-Krascendo 1 首次对直接 RAS 抑制剂进行了头对头比较：338 例经治 *KRAS* G12C 突变晚期 NSCLC 患者被随机分配至 divarasib 或研究者选择的 sotorasib（对照组 156 例）或 adagrasib（15 例）（表 1、图 3）\[62\]。divarasib 改善了经 BICR 评估的 PFS（中位 9.8 vs 5.7 个月；HR 0.58，95% CI 0.44–0.76）和确认的 ORR（58.4% vs 32.3%），首次期中分析时还改善了 OS（中位 17.7 vs 12.0 个月；HR 0.56，95% CI 0.41–0.78），3–4 级治疗相关不良事件更少（24.6% vs 34.5%）\[62\]。这些结果与"更深、更持久的靶点抑制改善临床结局"的假说一致，但该试验并非为检验此机制而设计。由于对照组接受的是有效的 KRAS G12C 抑制剂而非多西他赛，其生存获益不能外推至与化疗的比较。
+Krascendo 1 首次对直接 RAS 抑制剂进行了头对头比较：338 例经治 *KRAS* G12C 突变晚期 NSCLC 患者被随机分配至 divarasib 或研究者选择的 sotorasib（对照组 156 例）或 adagrasib（15 例）（表 1、图 3）\[62\]。divarasib 改善了经 BICR 评估的 PFS（中位 9.8 vs 5.7 个月；HR 0.58，95% CI 0.44–0.76）和确认的 ORR（58.4% vs 32.3%），预设期中分析时还改善了 OS（中位 17.7 vs 12.0 个月；HR 0.56，95% CI 0.41–0.78），3–4 级治疗相关不良事件更少（24.6% vs 34.5%）\[62\]。这些结果与"更深、更持久的靶点抑制改善临床结局"的假说一致，但该试验并非为检验此机制而设计。由于对照组接受的是有效的 KRAS G12C 抑制剂而非多西他赛，其生存获益不能外推至与化疗的比较。
 
 <img src="media/image3.png" style="width:6.4in;height:3.27135in" />
 
 **图 3. 七项 III 期随机对照试验的无进展生存期与总生存期风险比。**
 
-无进展生存期（PFS，左；所有试验均经盲态独立中心评审）与总生存期（OS，右）风险比（HR，对数刻度）及 95% 置信区间森林图。颜色表示肿瘤类型；实心方块表示 95% CI 不包含 1，空心方块表示包含 1；方块面积与样本量成正比。CodeBreaK 300：sotorasib 960 mg 联合帕尼单抗。RASolute 302：首次期中分析的总体人群（*RAS* G12 人群：PFS HR 0.45，OS HR 0.40）。Krascendo 1：首次期中分析的 OS，对照为有效的 KRAS G12C 抑制剂。NEMO（MEK 抑制剂）作为通路抑制的参照。KRYSTAL-12 的 OS 数据尚不成熟，未予绘制。未计算合并估计值；数据来源见表 1。
+无进展生存期（PFS，左；所有试验均经盲态独立中心评审）与总生存期（OS，右）风险比（HR，对数刻度）及 95% 置信区间森林图。颜色表示肿瘤类型；实心方块表示 95% CI 不包含 1，空心方块表示包含 1；方块面积与样本量成正比。CodeBreaK 300：sotorasib 960 mg 联合帕尼单抗。KRYSTAL-10：对照为 FOLFIRI/mFOLFOX6 ± VEGF/VEGFRi。RASolute 302：首次期中分析的总体人群（*RAS* G12 人群：PFS HR 0.45，OS HR 0.40）。Krascendo 1：预设期中分析的 OS，对照为有效的 KRAS G12C 抑制剂。NEMO（MEK 抑制剂）作为通路抑制的参照。KRYSTAL-12 的 OS 数据尚不成熟，未予绘制。未计算合并估计值；数据来源见表 1。
 
 1L/2L/2L+，一线/二线/二线及以后；CI，置信区间；HR，风险比；mCRC，转移性结直肠癌；MEKi，MEK 抑制剂；mPDAC，转移性胰腺导管腺癌；NSCLC，非小细胞肺癌；OS，总生存期；PFS，无进展生存期；TAS-102，曲氟尿苷–替匹嘧啶。数据截止：2026 年 11 月 18 日。
 
@@ -347,7 +347,7 @@ KRYSTAL-10 检验了靶向双重阻断能否替代二线双药化疗。在 461 �
 
 RASolute 302 在转移性胰腺导管腺癌中检验了 multi-RAS(ON) 抑制；该病 90% 以上的肿瘤携带致癌性 *KRAS* 改变（以 G12D、G12V 和 G12R 为主），无法被 G12C 抑制剂靶向（表 1、图 3）\[59,74,75\]。试验将 500 例经治患者随机分配至 daraxonrasib（300 mg 每日一次）或研究者选择的化疗，不允许交叉；双主要终点为 *RAS* G12 突变患者（459 例，91.8%）的 OS 和 PFS \[59\]。首次期中分析时，daraxonrasib 延长了该人群的 OS（中位 13.2 vs 6.6 个月；HR 0.40，95% CI 0.30–0.54）和总体人群的 OS（中位 13.2 vs 6.7 个月；HR 0.40，95% CI 0.30–0.53；图 3）。daraxonrasib 还使 PFS 约延长一倍（总体人群：中位 7.2 vs 3.6 个月；HR 0.49，95% CI 0.38–0.64；图 3），并提高了 ORR（31.6% vs 11.2%）\[59\]。因治疗相关不良事件停药的比例为 1.2% vs 11.2% \[59\]。不允许交叉以及胰腺癌后线有效治疗稀少，可能有助于 PFS 获益转化为 OS 获益；值得注意的是，分配至化疗组的患者中 84.9% 接受了试验治疗，daraxonrasib 组为 97.2% \[59\]。
 
-**4.5 皮肤黑色素瘤与 NRAS 突变疾病：NEMO 试验的启示**
+**4.5 皮肤黑色素瘤与 *NRAS* 突变疾病：NEMO 试验的启示**
 
 III 期 NEMO 试验在 402 例晚期 *NRAS* 突变皮肤黑色素瘤患者中比较了 MEK 抑制剂 binimetinib 与达卡巴嗪（表 1、图 3）\[65\]。binimetinib 改善了 PFS（中位 2.8 vs 1.5 个月；HR 0.62，95% CI 0.47–0.80）和 ORR（15% vs 7%），但未延长 OS（中位 11.0 vs 10.1 个月；HR 1.00，95% CI 0.75–1.33）\[65\]。试验不允许交叉，但两组后续的免疫治疗可能稀释了生存差异。1.3 个月的有限 PFS 获益与 MEK 抑制剂单药疗效持续时间有限相符（见 3.1 节）。
 
@@ -405,15 +405,19 @@ CNS 活性在 NSCLC 中尤为重要：27%–42% 的 *KRAS* G12C 突变患者在�
 
 **6.3 全球实施与转化展望**
 
-在证实 *KRAS* 和 *NRAS* 突变预示抗 EGFR 抗体无效之后，扩展 *RAS* 检测成为转移性结直肠癌的标准 \[96,97\]；ESMO 指南推荐在胰腺癌 \[98\] 和 NSCLC（包括可切除疾病）\[99\] 中进行分子检测。广泛的二代测序 panel 还可检出 *STK11*、*KEAP1* 和 *TP53* 等共存改变，这些改变与 KRAS G12C 抑制剂的疗效相关 \[40,41\]；在组织测序之外加做血浆 ctDNA 检测可能反映肿瘤异质性 \[90\]。随着等位基因特异性和 pan-RAS 抑制剂增多，检测报告需注明具体等位基因及相关共突变，而不仅是 *KRAS* 突变状态。
+在证实 *KRAS* 和 *NRAS* 突变预示抗 EGFR 抗体无效之后，扩展 *RAS* 检测成为转移性结直肠癌的标准 \[96,97\]；泛亚本土化 ESMO 指南推荐在胰腺癌 \[98\] 中进行分子检测，ESMO 指南亦推荐在早期（可切除）及局部晚期 NSCLC \[99\] 中进行分子检测。广泛的二代测序 panel 还可检出 *STK11*、*KEAP1* 和 *TP53* 等共存改变，这些改变与 KRAS G12C 抑制剂的疗效相关 \[40,41\]；在组织测序之外加做血浆 ctDNA 检测可能反映肿瘤异质性 \[90\]。随着等位基因特异性和 pan-RAS 抑制剂增多，检测报告需注明具体等位基因及相关共突变，而不仅是 *KRAS* 突变状态。
 
 可及性仍不均衡。与高收入国家相比，新型靶向抗肿瘤药物在低收入和中低收入国家的可获得性低得多，且更多依赖自付 \[100\]；直接靶向 RAS 药物的注册试验也集中在北美、东亚和欧洲（附图 S1c）。分级定价、许可协议、针对常见等位基因的更简便检测以及在代表性不足地区开展试验，有助于改善可及性。
 
 针对致癌 RAS 的其他治疗模式也在发展之中：在根治性治疗后存在微小残留病灶的患者中可诱导突变 KRAS 特异性 T 细胞应答的淋巴结靶向两亲性突变 KRAS 多肽疫苗（如 AMPLIFY 平台）\[101\]；针对突变 KRAS 新表位的 T 细胞受体基因与细胞疗法 \[102,103\]；以及 RFdiffusion 等可从头设计结合困难蛋白表面的结合蛋白的生成式蛋白质设计方法 \[104\]。
 
+**伦理声明**
+
+本综述及基于已发表临床试验数据与公开 ClinicalTrials.gov 注册记录的二次分析无需伦理审批及知情同意。
+
 **写作过程中生成式人工智能及人工智能辅助技术的声明**
 
-在本研究准备过程中，作者使用 Gemini（Google）和 Claude（Anthropic）协助编写分析与绘图代码、修改图 4 示意图以及英文语言润色。图 1–3 及附图 S1、S2 由研究仓库中公开的代码根据数据或蛋白质数据库坐标生成；图 4 为作者使用绘图软件绘制、并在人工智能辅助下修改的示意图，其内容已由作者对照所引文献核实。使用上述工具后，作者根据需要审阅和修改了内容，对照原始来源核实了数据、参考文献与输出结果，并对出版内容承担全部责任。根据 COPE 指南，人工智能工具未列为作者。
+在本研究准备过程中，作者使用 Gemini（Google）和 Claude（Anthropic）完成两类工作：一是辅助数据分析与可视化，包括协助编写生成图 1–3、附图 S1 和 S2 的代码以及图 4 示意图的可缩放矢量图形（SVG）代码（未使用 AI 图像生成）；二是对文稿进行翻译、语言润色和语法修改。使用上述工具后，作者根据需要审阅和修改了全部内容，对照原始来源独立核实了所有数据、参考文献、代码输出及图件元素，并对出版内容承担全部责任。根据 COPE 指南，人工智能工具未列为作者。
 
 **基金资助**
 
