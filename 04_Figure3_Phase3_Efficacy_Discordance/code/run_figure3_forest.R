@@ -2,7 +2,8 @@
 # ==============================================================================
 # Figure 3: PFS and OS hazard ratios across seven phase III RCTs (descriptive forest plots)
 # Production Script for ESMO Open. 180 mm x 92 mm, Arial, smallest text 6.5 pt.
-# Round 18 redesign: one table-forest. Each trial is one row; a (PFS) and b (OS) sit side by side and share the
+# Round 19: no panel letters; each block is headed by its endpoint.
+# Round 18 redesign: one table-forest. Each trial is one row; the PFS and OS blocks sit side by side and share the
 # trial, setting and n columns. Colour = tumour type; filled square = 95% CI excludes 1, open = includes 1;
 # square area proportional to n. No pooled estimate. Drawn in a single coordinate system (x in mm) so that
 # row bands and columns line up exactly.
@@ -74,10 +75,11 @@ p <- ggplot() +
   # headers
   annotate("text", x = c(X$trial, X$n), y = top + 0.42, label = c("Trial and setting", "n"), hjust = c(0, 1),
            size = pt(7), family = "Arial", fontface = "bold", colour = ink) +
-  annotate("text", x = c(X$f1[1] - 3.5, X$f2[1] - 3.5), y = top + 0.95, label = c("a", "b"), hjust = 0, size = pt(9),
-           family = "Arial", fontface = "bold", colour = ink) +
-  annotate("text", x = c(X$f1[1], X$f2[1]), y = top + 0.95, label = c("Progression-free survival", "Overall survival"),
-           hjust = 0, size = pt(7.5), family = "Arial", fontface = "bold", colour = ink) +
+  # endpoint headers: each spans its forest and HR columns, with a coloured rule underneath
+  annotate("text", x = c(X$f1[1], X$f2[1]), y = top + 1.05, label = c("Progression-free survival (PFS)", "Overall survival (OS)"),
+           hjust = 0, size = pt(8), family = "Arial", fontface = "bold", colour = ink) +
+  annotate("segment", x = c(X$f1[1], X$f2[1]), xend = c(X$t1 + 20, X$t2 + 20), y = top + 0.74, yend = top + 0.74,
+           colour = ink, linewidth = 0.35) +
   annotate("text", x = c(X$t1, X$t2), y = top + 0.42, label = "HR (95% CI)", hjust = 0, size = pt(7), family = "Arial",
            fontface = "bold", colour = ink) +
   annotate("segment", x = 0, xend = 180, y = top, yend = top, colour = ink, linewidth = 0.45) +
@@ -96,7 +98,7 @@ p <- ggplot() +
   annotate("text", x = 3.2, y = axis_y - 0.72, label = "Square area proportional to n; HR on log scale", hjust = 0,
            size = pt(6.5), family = "Arial", colour = grey) +
   scale_x_continuous(limits = c(0, 180), expand = c(0, 0)) +
-  scale_y_continuous(limits = c(axis_y - 0.95, top + 1.25), expand = c(0, 0)) +
+  scale_y_continuous(limits = c(axis_y - 0.95, top + 1.4), expand = c(0, 0)) +
   theme_void(base_family = "Arial") + theme(plot.margin = margin(2, 2, 2, 2))
 
 base <- file.path(fig_dir, "Figure3_Phase3_RCT_PFS_OS_Forest")

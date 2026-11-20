@@ -155,7 +155,8 @@ world <- world %>% left_join(by_country %>% select(key = map_region, trials), by
 cuts <- c(0, 4, 9, 24, 49, 99, Inf)
 bins <- c("1–4", "5–9", "10–24", "25–49", "50–99", "≥100")
 world$bin <- cut(world$trials, cuts, labels = bins)
-map_col <- setNames(c("#FCE9D4", "#F7C99B", "#EF9A62", "#DC5F3C", "#B32B2E", "#6E1023"), bins)
+# blue sequential scale that continues the phase palette of panel a (#C6D7EE, #8FB3DE, #4A7CC0, #1F3F73)
+map_col <- setNames(c("#E1EAF6", "#C6D7EE", "#8FB3DE", "#4A7CC0", "#2A5596", "#13284D"), bins)
 unmatched <- setdiff(by_country$map_region, unique(world$key)); if (length(unmatched)) cat("Not drawn on map:", unmatched, "\n")
 
 gs <- setNames(geo_summary$trials, as.character(geo_summary$region))
@@ -170,7 +171,7 @@ top$lab <- ifelse(top$country == "Turkey (Türkiye)", "Türkiye", top$country)
 
 p_map <- ggplot(world, aes(long, lat, group = group)) +
   geom_polygon(aes(fill = bin), colour = "white", linewidth = 0.08) +
-  scale_fill_manual(values = map_col, na.value = "#E4E1DB", breaks = bins, drop = FALSE,
+  scale_fill_manual(values = map_col, na.value = "#E6E7E9", breaks = bins, drop = FALSE,
                     name = "Trials with ≥ 1 site") +
   geom_text(data = reg_lab, aes(lon, lat, label = lab), inherit.aes = FALSE, size = pt(7), family = "Arial",
             colour = ink, fontface = "bold", lineheight = 0.95) +
