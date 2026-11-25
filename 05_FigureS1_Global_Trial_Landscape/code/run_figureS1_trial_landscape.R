@@ -109,7 +109,7 @@ theme_bar <- function() {
 phase_counts <- targeted %>% count(phase_clean) %>% mutate(pct = n / sum(n) * 100, lab = sprintf("%d (%.1f%%)", n, pct))
 phase_counts$phase_clean <- factor(phase_counts$phase_clean, levels = rev(c("Phase 1", "Phase 1/2", "Phase 2", "Phase 2/3 or 3")))
 cat("Panel a phases:\n"); print(phase_counts)
-phase_col <- c("Phase 1" = "#C6D7EE", "Phase 1/2" = "#8FB3DE", "Phase 2" = "#4A7CC0", "Phase 2/3 or 3" = "#1F3F73")
+phase_col <- c("Phase 1" = "#C7D7EC", "Phase 1/2" = "#93B3DA", "Phase 2" = "#4D81C2", "Phase 2/3 or 3" = "#274162")
 p_a <- ggplot(phase_counts, aes(y = phase_clean, x = n, fill = phase_clean)) +
   geom_col(width = 0.72) +
   geom_text(aes(label = lab), hjust = -0.08, size = pt(7), family = "Arial", colour = ink) +
@@ -131,7 +131,7 @@ p_b <- ggplot(modality_counts, aes(y = modality, x = n, fill = strategy)) +
   geom_col(width = 0.72, position = position_stack(reverse = TRUE)) +
   geom_text(data = tot, aes(y = modality, x = total, label = total), inherit.aes = FALSE, hjust = -0.25, size = pt(7),
             family = "Arial", colour = ink, fontface = "bold") +
-  scale_fill_manual(values = c("Monotherapy" = "#1F3F73", "Combination Regimen" = "#8FB3DE"),
+  scale_fill_manual(values = c("Monotherapy" = "#274162", "Combination Regimen" = "#93B3DA"),
                     breaks = c("Combination Regimen", "Monotherapy"),   # legend order = stacking order (left to right)
                     labels = c("≥ 2 registered interventions", "1 registered intervention")) +
   scale_y_discrete(labels = lab_mod) +
@@ -155,8 +155,9 @@ world <- world %>% left_join(by_country %>% select(key = map_region, trials), by
 cuts <- c(0, 4, 9, 24, 49, 99, Inf)
 bins <- c("1–4", "5–9", "10–24", "25–49", "50–99", "≥100")
 world$bin <- cut(world$trials, cuts, labels = bins)
-# blue sequential scale that continues the phase palette of panel a (#C6D7EE, #8FB3DE, #4A7CC0, #1F3F73)
-map_col <- setNames(c("#E1EAF6", "#C6D7EE", "#8FB3DE", "#4A7CC0", "#2A5596", "#13284D"), bins)
+# palette blue #4D81C2 with L*-matched tints/shades (2026-11-25)
+# blue sequential scale that continues the phase palette of panel a (#C7D7EC, #93B3DA, #4D81C2, #274162)
+map_col <- setNames(c("#E1EAF5", "#C7D7EC", "#93B3DA", "#4D81C2", "#345784", "#19293E"), bins)
 unmatched <- setdiff(by_country$map_region, unique(world$key)); if (length(unmatched)) cat("Not drawn on map:", unmatched, "\n")
 
 gs <- setNames(geo_summary$trials, as.character(geo_summary$region))

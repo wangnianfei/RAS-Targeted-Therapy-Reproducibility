@@ -44,7 +44,8 @@ iso <- read.csv(file.path(data_dir, "pancancer_isoform_frequencies.csv"), string
 short <- c("Pancreatic (PDAC)" = "Pancreatic", "Colorectal (CRC)" = "Colorectal")
 iso$name <- ifelse(iso$cancer_type %in% names(short), short[iso$cancer_type], iso$cancer_type)
 genes <- c("KRAS", "NRAS", "HRAS")
-gene_col <- c(KRAS = "#B2182B", NRAS = "#2166AC", HRAS = "#E08214")
+# colour palette (2026-11-25): #4D81C2 #20928A #F28025 #7E237E #999420 #CAB0DE #999999 #D0EBE7
+gene_col <- c(KRAS = "#4D81C2", NRAS = "#20928A", HRAS = "#F28025")
 col_x <- c(KRAS = 1, NRAS = 3, HRAS = 5)            # columns two units apart, rows one unit apart
 iso$y <- rev(seq_len(nrow(iso)))
 iso_long <- pivot_longer(iso, all_of(genes), names_to = "gene", values_to = "pct") %>%
@@ -77,8 +78,8 @@ p_a <- ggplot() +
 # ---- b: 100% allele bars ------------------------------------------------------------------------
 al <- read.csv(file.path(data_dir, "kras_allele_frequencies.csv"), stringsAsFactors = FALSE)
 lev <- c("G12C", "G12D", "G12V", "G12R", "G13D", "Q61X", "Other")
-al_col <- c(G12C = "#B2182B", G12D = "#2166AC", G12V = "#1B7837", G12R = "#762A83",
-            G13D = "#E08214", Q61X = "#8C6D31", Other = "#BDBDBD")
+al_col <- c(G12C = "#4D81C2", G12D = "#20928A", G12V = "#999420", G12R = "#7E237E",
+            G13D = "#F28025", Q61X = "#CAB0DE", Other = "#999999")
 tum <- c(PDAC = "Pancreatic", CRC = "Colorectal", NSCLC = "NSCLC")
 al <- al %>% mutate(
   allele = factor(allele, levels = lev),
@@ -87,7 +88,7 @@ al <- al %>% mutate(
   mutate(xmax = cumsum(pct), xmin = xmax - pct, mid = (xmin + xmax) / 2) %>% ungroup()
 al$row <- factor(al$row, levels = rev(unique(al$row[match(names(tum), al$cancer_type)])))
 al <- al %>% mutate(lab = ifelse(pct >= 0.055, sprintf("%.0f", pct * 100), ""),
-                    lab_col = ifelse(allele == "Other", ink, "white"))
+                    lab_col = ifelse(allele %in% c("Q61X", "Other"), ink, "white"))
 
 p_b <- ggplot(al) +
   geom_rect(aes(xmin = xmin, xmax = xmax, ymin = as.numeric(row) - 0.36, ymax = as.numeric(row) + 0.36, fill = allele),

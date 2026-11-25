@@ -31,7 +31,8 @@ COLS = ['RAS(ON) inhibition\n(alone or combined)', 'RTK antibody\nor TKI', 'SHP2
 # In-cell notes so that each filled cell reads exactly as the strategy in Supplementary Table S3 (round 20)
 NOTES = {(5, 5): 'with a direct\nRAS inhibitor', (6, 5): 'histology-\ndirected'}
 # One palette for both panels, shared with Supplementary Figure S1: navy = filled cells and bars
-NAVY, LIGHT, EMPTY = '#1F3F73', '#C6D7EE', '#F1F3F6'
+# colour palette (2026-11-25): #4D81C2 #20928A #F28025 #7E237E #999420 #CAB0DE #999999 #D0EBE7
+NAVY, LIGHT, EMPTY = '#4D81C2', '#CAB0DE', '#F1F3F6'
 PRIMARY = {(0, 0), (1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (6, 5)}
 SECONDARY = {(1, 2)}
 

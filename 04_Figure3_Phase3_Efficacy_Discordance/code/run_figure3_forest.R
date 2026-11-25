@@ -30,7 +30,8 @@ d$tumour <- sub(",.*", "", d$setting)
 d$comparator <- sub(".*\\(vs ", "vs ", sub("\\)$", "", d$setting))
 d$line <- trimws(sub("^[^,]*, *([^ ]*).*", "\\1", d$setting))
 d$sub <- sprintf("%s, %s, %s", d$tumour, d$line, d$comparator)
-tum_col <- c(NSCLC = "#1F4E8C", mCRC = "#1B7F5C", mPDAC = "#B2182B", Melanoma = "#7A4E9C")
+# colour palette (2026-11-25): #4D81C2 #20928A #F28025 #7E237E #999420 #CAB0DE #999999 #D0EBE7
+tum_col <- c(NSCLC = "#4D81C2", mCRC = "#20928A", mPDAC = "#F28025", Melanoma = "#7E237E")
 
 # ---- x layout (mm) ----
 X <- list(trial = 3.2, n = 59.5, f1 = c(63, 98), t1 = 99.5, f2 = c(121, 156), t2 = 157.5)
