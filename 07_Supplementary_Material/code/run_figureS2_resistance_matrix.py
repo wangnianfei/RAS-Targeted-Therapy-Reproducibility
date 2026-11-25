@@ -26,7 +26,7 @@ ROWS = ['On-target KRAS\nalterations', 'Upstream reactivation\n(MET, EGFR, fusio
         'SHP2/SOS1-mediated\nnucleotide exchange', 'Downstream MAPK bypass\n(NRAS, BRAF, MAP2K1)',
         'PI3K-AKT bypass\n(PTEN loss of function)', 'STK11 / KEAP1\nco-mutation (baseline)',
         'Lineage plasticity\n(squamous transformation)']
-COLS = ['Switch to a\nRAS(ON) inhibitor', 'RTK antibody\nor TKI', 'SHP2 or SOS1\ninhibitor',
+COLS = ['RAS(ON) inhibition\n(alone or combined)', 'RTK antibody\nor TKI', 'SHP2 or SOS1\ninhibitor',
         'RAF, MEK or ERK\ninhibitor', 'PI3K, AKT or\nmTOR inhibitor', 'Immunotherapy and/or\nchemotherapy']
 # In-cell notes so that each filled cell reads exactly as the strategy in Supplementary Table S3 (round 20)
 NOTES = {(5, 5): 'with a direct\nRAS inhibitor', (6, 5): 'histology-\ndirected'}
